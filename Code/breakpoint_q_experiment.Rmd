@@ -1,0 +1,183 @@
+---
+title: "Breakpoint q Experiments"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r core functions}
+source("case_patching.R")
+```
+
+```{r data}
+train <- read.csv('../Data Lake/Players/2019-2021_atp_individual.csv')
+test <- read.csv('../Data Lake/Experiments/2022_atp_testing.csv')
+bpq.raw <- read.csv('../Data Lake/Players/2019-2021_bpq.csv')
+atp.bpq <- read.csv('../Data Lake/Players/2019-2021_atp_bpq.csv')
+ic.match <- function(score) grep("[A-Za-z]",score)
+ic <- ic.match(test$score)
+test <- test[-ic,]
+```
+
+```{r obtaining q's through pbp grand slam data}
+# ONLY RUN ONE OF THE FOLLOWING TWO BLOCKS (INCLUDING THIS ONE)
+
+# 3 helper functions
+get.unique.players <- function(testset){
+  # takes the players in the test set and returns vector
+  # containing unique players in the test set
+  names <- c(testset$winner_name,testset$loser_name)
+  names <- unique(names)
+  return(names)
+}
+
+get.equiv.names <- function(fullname){
+  # returns vector of equivalent names in different formats
+  # according to the fullname given
+  # fullname ideally from get.unique.players output
+  # More special examples:
+  #   Alejandro Davidovich Fokina -> A Davidovich Fokina & A. Davidovich Fokina
+  #   Pierre Hugues Herbert -> P Herbert & Ph Herbert & P. Herbert
+  #   Alex De Minaur -> A. De Minaur & Alex de Minaur & A De Minaur
+  #   Karolina Pliskova -> K. Pliskova & Ka. Pliskova & Ka Pliskova
+  #   Kristyna Pliskova -> K. Pliskova & Kr. Pliskova & Kr Pliskova
+  #   some cases manually remediated (see misc. google doc)
+  #   but quick manual remediation can't help if player in test set has middle name
+  #   and full name isn't in pbp training set.
+  #   Function tries to account for this as follows.
+  
+  # Alex Bee Caine -> c("A. Caine", "A Caine", "A. Bee Caine", "A Bee Caine",
+  #                     "Ab Caine", "A Bee-Caine", "A. Bee-Caine")
+  
+  # This method risks picking up on players with same last name and first letter
+  # But this is unlikely as the pbp training set only 1 case of this - Kr&Ka Pliskova
+  # And this was picked up since there were 2 characters before the space
+  
+  parts <- strsplit(fullname,split=" ")[[1]]
+  n <- length(parts)
+  first.letter <- substr(parts[1],1,1)
+  equiv <- c(fullname,
+             paste(first.letter," ",parts[n],sep=""),
+             paste(first.letter,"."," ",parts[n],sep=""))
+  if (n > 2){
+    rest <- ""
+    rest.dash <- ""
+    for (i in 1:(n-1)){
+      rest <- paste(rest," ",parts[i+1],sep="")
+      rest.dash <- paste(rest.dash,parts[i+1],sep="-")
+    }
+    rest.dash <- substr(rest.dash,2,nchar(rest.dash)) # get rid of first dash
+    first.middle.name.letter <- tolower(substr(parts[2],1,1))
+    rest.more <- "" # for if the name has four or more parts
+    for (i in 1:(n-2)){
+      rest.more <- paste(rest.more," ",parts[i+2],sep="")
+    }
+    # rest contains the first space, rest.dash doesn't
+    equiv <- c(equiv, paste(first.letter,rest,sep=""),
+               paste(first.letter,".",rest,sep=""),
+               paste(first.letter," ",rest.dash,sep=""),
+               paste(first.letter,"."," ",rest.dash,sep=""),
+               paste(first.letter,first.middle.name.letter,rest.more,sep=""))
+  }
+  return(equiv)
+}
+
+names <- get.unique.players(test)
+n <- length(names)
+m <- nrow(bpq.raw)
+names.raw <- bpq.raw$name
+bpq <- matrix(0,nrow=n,ncol=3)
+for (i in 1:n){
+  names.equiv <- get.equiv.names(names[i])
+  p <- length(names.equiv)
+  for (j in 1:p){
+    for (l in 1:m){
+      if (names.equiv[j]==names.raw[l]){
+        bpq[i,2] <- bpq[i,2] + sum(bpq.raw[l,seq(3,115,by=2)])
+        bpq[i,3] <- bpq[i,3] + sum(bpq.raw[l,seq(2,115,by=2)])
+      }
+    }
+  }
+}
+bpq[,2] <- bpq[,2]/bpq[,3]
+bpq <- data.frame(bpq)
+bpq[,1] <- names
+bpq[which(is.na(bpq[,2])),2] <- mean(bpq[-which(is.na(bpq[,2])),2])
+colnames(bpq) <- c("Player","BPQ","Ignore")
+```
+
+```{r obtaining q's through scraping ultimatetennisstatistics data}
+# NORMALLY DON'T RUN IF RAN PREVIOUS BLOCK
+# RUN BOTH FOR ATP DATA TO SEE DISCREPANCY
+atp.bpq[which(is.na(atp.bpq[,2])),2] <- mean(atp.bpq[-which(is.na(atp.bpq[,2])),2])
+# plot(atp.bpq$BPQ-bpq$BPQ)
+# summary(atp.bpq$BPQ-bpq$BPQ)
+bpq <- atp.bpq
+```
+
+```{r}
+bpq$delta.q <- bpq[,2]-mean(bpq[,2])
+# p estimates
+train$total_pts_served <- train$grass_pts_served +
+  train$clay_pts_served + train$hard_pts_served
+train$total_service_pts_won <- train$grass_service_pts_won +
+  train$clay_service_pts_won + train$hard_service_pts_won
+train$p.estimate <- train$total_service_pts_won / 
+  train$total_pts_served
+train$p.estimate[which(is.na(train$p.estimate))] <- 
+  mean(train$p.estimate[-which(is.na(train$p.estimate))])
+
+# get q estimates as well
+train$total_pts_received <- train$grass_pts_received +
+  train$hard_pts_received + train$clay_pts_received
+train$total_receiving_pts_won <- train$grass_receiving_pts_won +
+  train$hard_receiving_pts_won + train$clay_receiving_pts_won
+train$q.estimate <- train$total_receiving_pts_won /
+  train$total_pts_received
+train$q.estimate[which(is.na(train$q.estimate))] <- 
+  mean(train$q.estimate[-which(is.na(train$q.estimate))])
+train$delta.q <- train$q.estimate-mean(train$q.estimate)
+```
+
+```{r}
+# experiment (CHANGE FORMAT CODES BASED ON TESTING YEAR!!!)
+n <- nrow(test)
+results <- rep(0,n)
+baseline <- rep(0,n)
+breakpt.states <- c(10,13,15,18)
+grand.slams <- c("Australian Open","Roland Garros","Wimbledon","US Open","Us Open")
+for (i in 1:n){
+  winner <- test$winner_name[i]
+  loser <- test  $loser_name[i]
+  winner.idx <- which(train$name==winner)
+  loser.idx <- which(train$name==loser)
+  winner.p <- rep(train$p.estimate[winner.idx],19)
+  winner.p[-breakpt.states] <- winner.p[-breakpt.states] - train$delta.q[loser.idx]
+  winner.p[breakpt.states] <- winner.p[breakpt.states] - bpq$delta.q[loser.idx]
+  loser.p <- rep(train$p.estimate[loser.idx],19)
+  loser.p[-breakpt.states] <- loser.p[-breakpt.states] - train$delta.q[winner.idx]
+  loser.p[breakpt.states] <- loser.p[breakpt.states] - bpq$delta.q[winner.idx]
+  if (test$tourney_name[i] %in% grand.slams){
+    if (test$tourney_name[i]=="US Open" | test$tourney_name[i]=="Us Open"){
+      results[i] <- match.win.prob(p1=winner.p,p2=loser.p,format=3) > 0.5
+    } else {
+      results[i] <- match.win.prob(p1=winner.p,p2=loser.p,format=3) > 0.5
+    }
+  } else {
+    results[i] <- match.win.prob(p1=winner.p,p2=loser.p,format=0) > 0.5
+  }
+  # for examination later
+  baseline[i] <- train$p.estimate[winner.idx] - train$delta.q[loser.idx]> 
+    train$p.estimate[loser.idx] - train$delta.q[winner.idx]
+}
+mean(results)
+```
+
+```{r closer examination}
+test$pred.baseline <- baseline
+test$pred.results <- results
+examine.c <- test[which(!test$pred.baseline&test$pred.results),c(5,6,28,29)]
+examine.inc <- test[which(test$pred.baseline&!test$pred.results),c(5,6,28,29)]
+```

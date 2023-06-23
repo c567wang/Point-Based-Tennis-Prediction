@@ -1,0 +1,316 @@
+tourney_name,surface,tourney_date,match_num,winner_name,loser_name,score,round,minutes,w_ace,w_df,w_svpt,w_1stIn,w_1stWon,w_2ndWon,w_SvGms,w_bpSaved,w_bpFaced,l_ace,l_df,l_svpt,l_1stIn,l_1stWon,l_2ndWon,l_SvGms,l_bpSaved,l_bpFaced,match_ic
+Adelaide 1,Hard,20220103,300,Ashleigh Barty,Elena Rybakina,6-3 6-2,F,64,6,2,52,28,21,18,9,2,2,6,2,45,19,16,11,8,0,3,0
+Adelaide 1,Hard,20220103,299,Ashleigh Barty,Iga Swiatek,6-2 6-4,SF,87,5,1,56,38,29,12,9,2,2,7,4,63,39,27,9,9,2,5,0
+Adelaide 1,Hard,20220103,298,Elena Rybakina,Misaki Doi,6-4 6-3,SF,83,9,2,48,28,21,14,9,1,2,1,3,76,45,29,12,10,7,11,0
+Adelaide 1,Hard,20220103,297,Ashleigh Barty,Sofia Kenin,6-3 6-4,QF,68,17,2,48,32,31,9,10,0,0,2,0,70,54,34,7,9,7,9,0
+Adelaide 1,Hard,20220103,296,Iga Swiatek,Victoria Azarenka,6-3 2-6 6-1,QF,117,4,1,73,45,27,16,12,1,4,2,3,78,45,30,12,12,6,11,0
+Adelaide 1,Hard,20220103,295,Elena Rybakina,Shelby Rogers,3-6 6-3 6-2,QF,120,9,3,76,40,29,24,13,3,4,4,3,93,58,38,20,13,10,13,0
+Adelaide 1,Hard,20220103,294,Misaki Doi,Kaja Juvan,6-3 4-6 7-6(5),QF,168,0,7,133,82,53,27,16,16,19,9,3,96,57,39,22,15,2,5,0
+Adelaide 1,Hard,20220103,293,Ashleigh Barty,Cori Gauff,4-6 7-5 6-1,R16,132,4,2,116,76,50,19,15,12,15,6,1,88,55,32,17,14,4,9,0
+Adelaide 1,Hard,20220103,292,Sofia Kenin,Ajla Tomljanovic,3-6 7-6(5) 6-3,R16,150,5,7,121,80,44,20,16,10,16,10,7,104,59,38,17,14,4,9,0
+Adelaide 1,Hard,20220103,291,Victoria Azarenka,Priscilla Hon,6-3 7-5,R16,87,5,3,54,41,31,6,10,0,1,5,5,68,41,24,11,11,4,8,0
+Adelaide 1,Hard,20220103,290,Iga Swiatek,Leylah Fernandez,6-1 6-2,R16,74,2,0,44,32,27,7,8,0,0,1,5,59,36,21,6,7,5,9,0
+Adelaide 1,Hard,20220103,289,Elena Rybakina,Marie Bouzkova,6-3 6-4,R16,94,4,2,50,27,23,15,10,1,2,1,0,69,49,26,12,9,5,8,0
+Adelaide 1,Hard,20220103,288,Shelby Rogers,Maria Sakkari,7-6(5) 2-6 6-4,R16,138,5,2,100,66,42,13,15,8,13,9,0,87,67,43,11,15,1,5,0
+Adelaide 1,Hard,20220103,287,Misaki Doi,Anastasia Gasanova,7-6(4) 6-3,R16,122,3,3,74,50,32,10,10,9,13,1,13,87,54,30,11,11,6,12,0
+Adelaide 1,Hard,20220103,286,Kaja Juvan,Aryna Sabalenka,7-6(6) 6-1,R16,89,4,0,60,36,24,14,9,2,5,5,18,66,32,19,9,10,2,8,0
+Sydney,Hard,20220110,300,Paula Badosa,Barbora Krejcikova,6-3 4-6 7-6(4),F,142,12,4,101,53,39,19,15,0,4,6,2,95,69,43,12,16,3,8,0
+Sydney,Hard,20220110,299,Barbora Krejcikova,Anett Kontaveit,0-6 6-4 7-6(12),SF,150,5,4,99,63,41,20,14,3,7,5,3,109,69,44,25,14,9,11,0
+Sydney,Hard,20220110,298,Paula Badosa,Daria Kasatkina,6-2 6-2,SF,75,3,0,49,37,25,7,8,2,4,2,1,59,42,20,5,8,6,12,0
+Sydney,Hard,20220110,297,Barbora Krejcikova,Caroline Garcia,6-0 6-2,QF,70,2,3,43,26,22,9,7,1,1,2,7,53,30,16,6,7,7,12,0
+Sydney,Hard,20220110,296,Anett Kontaveit,Ons Jabeur,6-4 RET,QF,51,0,3,35,19,14,7,5,3,4,1,0,32,15,9,8,5,2,4,1
+Sydney,Hard,20220110,295,Paula Badosa,Belinda Bencic,7-6(6) 3-6 6-3,QF,155,11,8,96,59,39,14,15,6,10,4,7,121,71,47,20,15,11,15,0
+Sydney,Hard,20220110,294,Daria Kasatkina,Garbine Muguruza,6-4 6-4,QF,86,4,4,57,35,27,10,10,0,2,0,0,61,42,26,7,10,6,10,0
+Sydney,Hard,20220110,293,Barbora Krejcikova,Jaqueline Cristian,6-1 7-5,R16,95,8,6,75,49,34,9,9,3,5,1,3,54,27,11,12,10,1,7,0
+Sydney,Hard,20220110,292,Caroline Garcia,Elena Rybakina,W/O,R16,1,,,,,,,,,,,,,,,,,,,1
+Sydney,Hard,20220110,291,Anett Kontaveit,Elena Gabriela Ruse,6-3 6-1,R16,76,3,2,54,37,27,6,8,2,4,2,7,60,30,13,13,8,7,13,0
+Sydney,Hard,20220110,290,Ons Jabeur,Petra Kvitova,6-4 6-4,R16,82,5,3,56,29,22,12,10,3,6,1,3,69,46,28,7,10,5,10,0
+Sydney,Hard,20220110,289,Paula Badosa,Ajla Tomljanovic,6-3 6-4,R16,89,4,2,50,27,15,8,9,3,8,1,7,67,41,19,6,10,5,13,0
+Sydney,Hard,20220110,288,Belinda Bencic,Oceane Dodin,2-6 7-5 6-3,R16,147,6,5,85,53,38,16,14,2,5,8,6,116,61,42,23,15,10,14,0
+Sydney,Hard,20220110,287,Daria Kasatkina,Elise Mertens,6-3 6-4,R16,71,3,2,54,40,28,8,10,2,4,3,5,59,38,22,8,9,6,10,0
+Sydney,Hard,20220110,286,Garbine Muguruza,Ekaterina Alexandrova,6-1 7-6(4),R16,86,3,2,69,41,31,17,10,6,7,7,4,50,35,24,6,9,0,3,0
+Australian Open,Hard,20220117,212,Ashleigh Barty,Amanda Anisimova,6-4 6-3,R16,74,7,3,54,36,28,9,10,4,5,4,1,73,49,30,9,9,7,11,0
+Australian Open,Hard,20220117,213,Jessica Pegula,Maria Sakkari,7-6(0) 6-3,R16,95,6,2,65,37,28,18,11,4,6,4,5,71,39,28,11,10,2,5,0
+Australian Open,Hard,20220117,214,Barbora Krejcikova,Victoria Azarenka,6-2 6-2,R16,84,6,2,48,30,26,8,8,3,4,1,6,54,30,19,7,8,5,10,0
+Australian Open,Hard,20220117,215,Madison Keys,Paula Badosa,6-3 6-1,R16,69,3,1,49,33,25,8,8,0,1,1,10,68,40,23,9,8,11,16,0
+Australian Open,Hard,20220117,216,Danielle Collins,Elise Mertens,4-6 6-4 6-4,R16,171,1,7,99,52,33,25,15,5,9,8,9,115,67,45,18,15,13,18,0
+Australian Open,Hard,20220117,217,Alize Cornet,Simona Halep,6-4 3-6 6-4,R16,153,1,9,94,62,35,13,15,5,11,0,1,87,58,32,15,14,6,12,0
+Australian Open,Hard,20220117,218,Iga Swiatek,Sorana Cirstea,5-7 6-3 6-3,R16,147,2,5,106,68,52,9,15,8,12,2,2,94,60,35,15,15,8,14,0
+Australian Open,Hard,20220117,219,Kaia Kanepi,Aryna Sabalenka,5-7 6-2 7-6(7),R16,139,5,4,106,52,38,32,16,5,8,7,15,107,68,48,18,16,9,13,0
+Australian Open,Hard,20220117,220,Ashleigh Barty,Jessica Pegula,6-2 6-0,QF,63,6,2,45,27,22,10,7,1,1,1,3,56,30,17,8,7,4,9,0
+Australian Open,Hard,20220117,221,Madison Keys,Barbora Krejcikova,6-3 6-2,QF,85,11,1,65,47,36,6,9,7,8,2,4,66,37,18,14,8,8,12,0
+Australian Open,Hard,20220117,222,Danielle Collins,Alize Cornet,7-5 6-1,QF,88,5,4,57,31,28,11,10,2,3,2,0,66,39,20,15,9,5,9,0
+Australian Open,Hard,20220117,223,Iga Swiatek,Kaia Kanepi,4-6 7-6(2) 6-3,QF,181,5,12,113,72,49,15,16,8,13,5,4,124,73,42,25,15,7,13,0
+Australian Open,Hard,20220117,224,Ashleigh Barty,Madison Keys,6-1 6-3,SF,62,5,0,46,28,24,12,8,2,2,1,1,58,41,20,9,8,2,6,0
+Australian Open,Hard,20220117,225,Danielle Collins,Iga Swiatek,6-4 6-1,SF,78,7,4,50,32,25,7,9,1,3,1,4,53,32,19,3,8,4,10,0
+Australian Open,Hard,20220117,226,Ashleigh Barty,Danielle Collins,6-3 7-6(2),F,87,10,3,67,38,31,13,11,2,4,1,2,64,40,25,12,10,2,5,0
+St. Petersburg,Hard,20220207,300,Anett Kontaveit,Maria Sakkari,5-7 7-6(4) 7-5,F,177,3,3,120,74,51,22,18,7,11,3,0,125,80,55,22,18,10,14,0
+St. Petersburg,Hard,20220207,299,Maria Sakkari,Irina Camelia Begu,6-4 6-7(4) 6-4,SF,184,2,3,110,59,40,23,16,7,12,3,4,111,70,42,18,16,6,13,0
+St. Petersburg,Hard,20220207,298,Anett Kontaveit,Jelena Ostapenko,6-3 6-4,SF,71,4,2,50,35,24,5,9,1,4,2,2,64,44,21,10,10,5,11,0
+St. Petersburg,Hard,20220207,297,Maria Sakkari,Elise Mertens,7-6(7) 6-2,QF,127,6,2,89,51,34,15,10,13,17,3,11,79,46,28,8,10,5,11,0
+St. Petersburg,Hard,20220207,296,Irina Camelia Begu,Tereza Martincova,6-4 6-2,QF,85,6,4,65,39,28,15,9,4,4,1,1,44,33,23,4,9,1,4,0
+St. Petersburg,Hard,20220207,295,Jelena Ostapenko,Aliaksandra Sasnovich,7-6(5) 4-6 6-3,QF,147,5,9,129,78,46,24,15,16,21,7,10,105,58,39,20,16,3,9,0
+St. Petersburg,Hard,20220207,294,Anett Kontaveit,Belinda Bencic,7-6(7) 6-2,QF,102,4,5,74,43,29,17,10,4,7,2,5,78,49,30,9,10,6,11,0
+St. Petersburg,Hard,20220207,293,Maria Sakkari,Ekaterina Alexandrova,6-2 6-4,R16,75,3,0,48,29,23,14,9,0,0,7,6,57,31,20,14,9,4,7,0
+St. Petersburg,Hard,20220207,292,Elise Mertens,Petra Martic,6-4 3-6 6-2,R16,134,6,6,80,49,34,16,13,4,7,4,6,86,47,29,19,14,7,12,0
+St. Petersburg,Hard,20220207,291,Tereza Martincova,Elena Rybakina,W/O,R16,1,,,,,,,,,,,,,,,,,,,1
+St. Petersburg,Hard,20220207,290,Irina Camelia Begu,Petra Kvitova,6-4 6-0,R16,69,4,3,51,26,19,14,8,0,1,2,3,45,30,15,7,8,1,6,0
+St. Petersburg,Hard,20220207,289,Jelena Ostapenko,Andrea Petkovic,6-1 6-2,R16,58,4,1,50,34,29,7,8,5,5,1,1,42,27,14,6,7,3,7,0
+St. Petersburg,Hard,20220207,288,Aliaksandra Sasnovich,Jaqueline Cristian,6-2 6-3,R16,71,4,3,49,35,25,4,8,4,6,2,7,58,32,18,9,9,2,8,0
+St. Petersburg,Hard,20220207,287,Belinda Bencic,Kaja Juvan,6-1 7-6(2),R16,80,4,4,58,37,30,9,9,2,3,2,4,61,38,21,12,10,1,5,0
+St. Petersburg,Hard,20220207,286,Anett Kontaveit,Sorana Cirstea,6-4 7-5,R16,91,1,2,69,46,32,14,11,4,6,1,2,64,39,27,12,11,3,7,0
+Dubai,Hard,20220214,300,Jelena Ostapenko,Veronika Kudermetova,6-0 6-4,F,65,0,0,46,22,14,14,8,0,2,3,2,53,23,11,11,8,3,9,0
+Dubai,Hard,20220214,299,Jelena Ostapenko,Simona Halep,2-6 7-6(0) 6-0,SF,96,3,5,84,57,42,10,13,2,5,5,8,80,48,31,14,13,3,7,0
+Dubai,Hard,20220214,298,Veronika Kudermetova,Marketa Vondrousova,W/O,SF,1,,,,,,,,,,,,,,,,,,,1
+Dubai,Hard,20220214,297,Jelena Ostapenko,Petra Kvitova,5-7 7-5 7-6(9),QF,159,2,2,126,77,48,25,18,6,12,11,7,114,69,46,22,18,4,10,0
+Dubai,Hard,20220214,296,Simona Halep,Ons Jabeur,6-4 6-3,QF,80,0,4,64,40,26,10,10,2,5,1,3,68,36,19,13,9,3,8,0
+Dubai,Hard,20220214,295,Veronika Kudermetova,Jil Teichmann,6-2 5-7 6-4,QF,143,5,6,102,68,46,14,15,6,10,1,2,90,52,30,17,15,6,12,0
+Dubai,Hard,20220214,294,Marketa Vondrousova,Dayana Yastremska,7-5 6-4,QF,101,0,7,76,37,29,18,11,5,7,2,3,66,39,26,11,11,2,6,0
+Dubai,Hard,20220214,293,Petra Kvitova,Aryna Sabalenka,6-4 6-4,R16,85,7,6,63,39,29,11,10,3,5,0,6,57,39,26,7,10,4,8,0
+Dubai,Hard,20220214,292,Jelena Ostapenko,Iga Swiatek,4-6 6-1 7-6(4),R16,149,5,9,97,61,33,17,14,7,14,4,4,118,71,31,25,15,13,22,0
+Dubai,Hard,20220214,291,Simona Halep,Elena Gabriela Ruse,6-3 6-2,R16,69,6,2,51,29,20,12,8,1,2,0,1,49,26,14,8,9,2,7,0
+Dubai,Hard,20220214,290,Ons Jabeur,Jessica Pegula,6-3 6-1,R16,67,3,3,64,32,22,17,8,5,6,0,6,54,31,17,7,8,4,9,0
+Dubai,Hard,20220214,289,Jil Teichmann,Elina Svitolina,7-6(0) 6-2,R16,102,6,6,67,37,30,19,10,5,5,3,6,83,46,31,16,10,5,7,0
+Dubai,Hard,20220214,288,Veronika Kudermetova,Garbine Muguruza,3-6 6-4 6-4,R16,137,4,2,79,42,33,23,14,3,5,5,6,93,64,48,12,15,5,8,0
+Dubai,Hard,20220214,287,Marketa Vondrousova,Varvara Gracheva,6-2 6-0,R16,53,1,3,41,24,19,9,7,2,3,0,0,39,30,8,3,7,4,10,0
+Dubai,Hard,20220214,286,Dayana Yastremska,Barbora Krejcikova,6-3 7-6(3),R16,91,2,2,74,53,40,12,11,4,5,4,5,60,38,28,12,10,0,2,0
+Doha,Hard,20220221,300,Iga Swiatek,Maria Sakkari,6-4 6-3,SF,88,0,1,66,50,30,7,10,5,8,2,3,54,33,18,8,9,3,8,0
+Doha,Hard,20220221,299,Anett Kontaveit,Jelena Ostapenko,6-1 6-4,SF,68,4,1,60,37,25,14,9,3,4,1,2,44,19,10,11,8,2,6,0
+Doha,Hard,20220221,298,Iga Swiatek,Aryna Sabalenka,6-2 6-3,QF,74,0,2,42,28,19,5,8,1,4,1,3,60,44,18,7,9,1,8,0
+Doha,Hard,20220221,297,Maria Sakkari,Cori Gauff,6-3 6-3,QF,85,3,1,57,36,26,13,9,2,3,5,2,73,49,27,10,9,8,12,0
+Doha,Hard,20220221,296,Anett Kontaveit,Ons Jabeur,6-4 6-1,QF,71,0,2,49,32,24,13,9,1,1,3,2,72,38,21,15,8,5,8,0
+Doha,Hard,20220221,295,Jelena Ostapenko,Garbine Muguruza,6-2 6-2,QF,66,2,0,44,28,19,9,8,0,2,1,1,64,46,25,3,8,4,10,0
+Doha,Hard,20220221,294,Aryna Sabalenka,Jil Teichmann,6-2 6-1,R16,63,1,0,38,28,19,7,7,1,2,2,0,60,42,18,6,8,5,11,0
+Doha,Hard,20220221,293,Iga Swiatek,Daria Kasatkina,6-3 6-0,R16,64,0,2,51,39,26,8,8,3,4,0,2,37,23,10,5,7,0,5,0
+Doha,Hard,20220221,292,Cori Gauff,Paula Badosa,6-2 6-3,R16,77,4,7,50,35,27,6,8,2,3,2,0,69,43,26,8,9,5,10,0
+Doha,Hard,20220221,291,Maria Sakkari,Jessica Pegula,6-4 7-5,R16,104,4,2,66,42,32,11,11,5,7,1,3,80,46,30,11,11,8,12,0
+Doha,Hard,20220221,290,Ons Jabeur,Tereza Martincova,6-1 3-6 6-3,R16,96,1,2,70,47,36,10,12,1,4,1,1,78,57,34,8,13,3,9,0
+Doha,Hard,20220221,289,Anett Kontaveit,Elise Mertens,6-3 0-6 6-2,R16,108,3,2,73,41,28,17,12,7,10,1,4,70,39,27,17,11,5,8,0
+Doha,Hard,20220221,288,Garbine Muguruza,Madison Brengle,6-0 6-2,R16,63,2,2,48,33,24,9,7,3,3,0,2,41,29,13,4,7,4,9,0
+Doha,Hard,20220221,287,Jelena Ostapenko,Barbora Krejcikova,6-3 6-2,R16,73,2,2,56,40,27,7,9,5,7,2,7,62,35,23,6,8,4,9,0
+Doha,Hard,20220221,238,Iga Swiatek,Anett Kontaveit,6-2 6-0,F,66,5,0,44,34,25,4,7,6,7,0,0,44,33,14,2,7,5,11,0
+Indian Wells,Hard,20220307,300,Iga Swiatek,Maria Sakkari,6-4 6-1,F,80,2,7,51,34,22,7,9,1,4,0,7,60,35,21,5,8,5,11,0
+Indian Wells,Hard,20220307,299,Iga Swiatek,Simona Halep,7-6(6) 6-4,SF,109,2,3,74,43,23,20,11,2,6,2,2,70,49,30,7,11,5,10,0
+Indian Wells,Hard,20220307,298,Maria Sakkari,Paula Badosa,6-2 4-6 6-1,SF,108,3,3,68,41,26,15,13,5,9,0,7,81,57,32,6,12,4,11,0
+Indian Wells,Hard,20220307,297,Simona Halep,Petra Martic,6-1 6-1,QF,53,1,1,44,33,27,6,7,3,3,1,3,32,22,8,2,7,0,5,0
+Indian Wells,Hard,20220307,296,Iga Swiatek,Madison Keys,6-1 6-0,QF,56,0,2,45,25,21,11,7,1,1,1,0,36,22,9,3,6,2,7,0
+Indian Wells,Hard,20220307,295,Paula Badosa,Veronika Kudermetova,6-3 6-2,QF,83,5,0,55,36,27,13,9,1,1,3,1,57,36,26,6,8,5,8,0
+Indian Wells,Hard,20220307,294,Maria Sakkari,Elena Rybakina,7-5 6-4,QF,98,6,4,70,38,29,19,11,4,5,4,3,68,34,26,16,11,3,6,0
+Indian Wells,Hard,20220307,293,Simona Halep,Sorana Cirstea,6-1 6-4,R16,82,0,4,59,28,22,15,8,4,5,0,1,57,40,20,6,9,1,6,0
+Indian Wells,Hard,20220307,292,Petra Martic,Liudmila Samsonova,7-6(6) 6-4,R16,114,5,3,63,35,28,19,11,1,2,5,4,81,44,31,18,11,4,6,0
+Indian Wells,Hard,20220307,291,Iga Swiatek,Angelique Kerber,4-6 6-2 6-3,R16,128,4,5,92,61,37,15,14,9,15,1,7,81,48,23,13,13,4,12,0
+Indian Wells,Hard,20220307,290,Madison Keys,Harriet Dart,6-1 6-4,R16,68,3,4,48,21,17,20,9,1,1,1,6,56,31,18,10,8,3,6,0
+Indian Wells,Hard,20220307,289,Paula Badosa,Leylah Fernandez,6-4 6-4,R16,102,4,7,75,47,37,13,10,5,6,2,2,72,47,29,13,10,9,12,0
+Indian Wells,Hard,20220307,288,Veronika Kudermetova,Marketa Vondrousova,7-6(5) 6-7(5) 7-5,R16,172,8,1,125,78,59,25,18,5,6,4,6,119,63,46,30,18,2,4,0
+Indian Wells,Hard,20220307,287,Maria Sakkari,Daria Saville,4-1 RET,R16,41,1,0,29,17,13,6,3,3,3,0,0,19,13,9,1,2,2,3,1
+Indian Wells,Hard,20220307,286,Elena Rybakina,Viktorija Golubic,7-6(5) 6-2,R16,92,5,1,57,31,23,17,10,1,2,0,3,66,40,23,13,10,0,3,0
+Miami,Hard,20220321,300,Iga Swiatek,Naomi Osaka,6-4 6-0,F,79,3,1,46,25,19,14,8,0,0,7,3,61,31,20,10,8,6,10,0
+Miami,Hard,20220321,299,Naomi Osaka,Belinda Bencic,4-6 6-3 6-4,SF,126,18,3,97,58,46,15,15,10,14,7,8,84,52,35,13,14,7,12,0
+Miami,Hard,20220321,298,Iga Swiatek,Jessica Pegula,6-2 7-5,SF,108,3,2,69,46,32,9,10,4,7,1,2,76,49,27,9,10,10,16,0
+Miami,Hard,20220321,297,Belinda Bencic,Daria Saville,6-1 6-2,QF,69,1,2,48,33,21,10,7,7,8,2,3,47,24,12,5,8,5,11,0
+Miami,Hard,20220321,296,Naomi Osaka,Danielle Collins,6-2 6-1,QF,60,13,0,38,24,21,7,7,0,0,5,7,45,17,10,9,8,2,7,0
+Miami,Hard,20220321,295,Jessica Pegula,Paula Badosa,4-1 RET,QF,18,1,1,16,10,9,1,3,0,1,0,1,9,0,0,1,2,0,2,1
+Miami,Hard,20220321,294,Iga Swiatek,Petra Kvitova,6-3 6-3,QF,77,2,2,52,37,28,10,9,0,0,4,1,57,39,27,5,9,4,7,0
+Miami,Hard,20220321,293,Belinda Bencic,Aliaksandra Sasnovich,6-2 6-3,R16,78,4,2,55,40,29,5,9,3,5,1,4,61,41,21,7,8,3,8,0
+Miami,Hard,20220321,292,Daria Saville,Lucia Bronzetti,5-7 6-4 7-5,R16,179,4,6,110,74,48,16,17,3,8,2,0,108,73,38,23,17,5,11,0
+Miami,Hard,20220321,291,Naomi Osaka,Alison Riske Amritraj,6-3 6-4,R16,92,7,1,73,44,31,15,10,7,8,8,3,71,48,28,11,9,9,12,0
+Miami,Hard,20220321,290,Danielle Collins,Ons Jabeur,6-2 6-4,R16,66,3,1,48,33,24,11,9,1,2,2,1,56,30,23,8,9,3,7,0
+Miami,Hard,20220321,289,Paula Badosa,Linda Fruhvirtova,6-2 6-3,R16,82,4,3,58,43,29,7,8,5,6,0,2,48,37,23,2,9,1,6,0
+Miami,Hard,20220321,288,Jessica Pegula,Anhelina Kalinina,6-0 RET,R16,26,1,1,20,9,8,6,3,1,1,0,0,18,10,2,3,3,3,6,1
+Miami,Hard,20220321,287,Petra Kvitova,Veronika Kudermetova,7-6(5) 6-4,R16,112,3,3,77,48,27,12,11,9,14,4,4,78,45,28,12,11,2,8,0
+Miami,Hard,20220321,286,Iga Swiatek,Cori Gauff,6-3 6-1,R16,76,1,2,50,33,26,10,8,2,2,4,4,60,38,20,9,8,6,10,0
+Charleston,Clay,20220404,300,Belinda Bencic,Ons Jabeur,6-1 5-7 6-4,F,155,1,5,86,55,39,12,15,2,7,4,4,135,91,48,19,14,12,19,0
+Charleston,Clay,20220404,299,Ons Jabeur,Amanda Anisimova,2-6 6-1 6-4,SF,106,1,2,94,46,31,21,12,11,15,1,5,74,48,29,9,13,7,13,0
+Charleston,Clay,20220404,298,Belinda Bencic,Ekaterina Alexandrova,6-4 6-3,SF,78,5,1,55,36,27,13,10,2,3,2,4,53,36,25,6,9,3,6,0
+Charleston,Clay,20220404,297,Amanda Anisimova,Coco Vandeweghe,6-1 6-2,QF,64,3,3,60,38,28,12,8,5,5,2,4,35,15,10,6,7,2,6,0
+Charleston,Clay,20220404,296,Ons Jabeur,Anhelina Kalinina,6-3 6-2,QF,63,4,3,57,36,29,7,9,1,2,0,1,46,28,15,9,8,4,8,0
+Charleston,Clay,20220404,295,Ekaterina Alexandrova,Magda Linette,6-0 6-2,QF,62,5,5,45,22,19,9,7,2,3,0,2,42,24,10,6,7,5,11,0
+Charleston,Clay,20220404,294,Belinda Bencic,Paula Badosa,2-6 7-6(2) 6-4,QF,167,3,6,106,62,43,22,15,10,14,6,5,110,66,41,24,15,7,10,0
+Charleston,Clay,20220404,293,Amanda Anisimova,Aryna Sabalenka,3-6 6-4 6-3,R16,113,6,5,83,52,37,14,14,2,6,10,10,78,47,33,12,14,1,6,0
+Charleston,Clay,20220404,292,Coco Vandeweghe,Jessica Pegula,6-4 3-6 6-4,R16,136,9,7,100,53,36,24,14,7,10,7,3,80,44,32,18,15,1,5,0
+Charleston,Clay,20220404,291,Ons Jabeur,Irina Camelia Begu,6-3 6-2,R16,69,2,0,51,34,25,10,9,3,4,1,5,54,36,19,7,8,2,6,0
+Charleston,Clay,20220404,290,Anhelina Kalinina,Alize Cornet,7-6(5) 7-5,R16,126,1,3,90,59,38,14,12,5,9,1,3,80,47,29,12,12,7,12,0
+Charleston,Clay,20220404,289,Magda Linette,Kaia Kanepi,6-3 4-6 6-2,R16,121,5,1,94,64,42,15,14,6,9,4,2,74,48,32,11,13,4,9,0
+Charleston,Clay,20220404,288,Ekaterina Alexandrova,Karolina Pliskova,6-3 6-1,R16,62,6,1,46,26,23,12,8,0,0,4,2,61,49,25,5,8,4,8,0
+Charleston,Clay,20220404,287,Belinda Bencic,Madison Keys,6-4 6-4,R16,94,2,3,66,41,30,14,10,3,4,9,0,67,41,29,11,10,2,5,0
+Charleston,Clay,20220404,286,Paula Badosa,Claire Liu,3-6 7-6(8) 6-1,R16,150,2,2,81,45,32,19,13,4,7,5,5,110,69,43,17,15,3,8,0
+Stuttgart,Clay,20220418,300,Iga Swiatek,Aryna Sabalenka,6-2 6-2,F,84,0,2,54,36,28,8,8,2,2,0,6,51,26,16,10,8,4,8,0
+Stuttgart,Clay,20220418,299,Iga Swiatek,Liudmila Samsonova,6-7(4) 6-4 7-5,SF,183,5,4,112,80,52,19,17,5,8,5,3,138,100,58,21,17,10,15,0
+Stuttgart,Clay,20220418,298,Aryna Sabalenka,Paula Badosa,7-6(5) 6-4,SF,100,9,7,74,39,30,19,11,6,8,2,7,70,42,30,12,11,3,6,0
+Stuttgart,Clay,20220418,297,Iga Swiatek,Emma Raducanu,6-4 6-4,QF,105,1,1,57,37,26,14,10,4,5,3,0,64,49,30,7,10,1,4,0
+Stuttgart,Clay,20220418,296,Liudmila Samsonova,Laura Siegemund,7-5 6-3,QF,108,4,3,60,39,30,10,10,4,5,0,5,71,53,33,6,11,8,12,0
+Stuttgart,Clay,20220418,295,Aryna Sabalenka,Anett Kontaveit,6-4 3-6 6-1,QF,105,10,6,71,53,40,7,13,4,7,5,2,86,56,35,13,13,5,10,0
+Stuttgart,Clay,20220418,294,Paula Badosa,Ons Jabeur,7-6(9) 1-6 6-3,QF,131,3,3,106,68,36,22,14,7,14,7,3,99,53,41,15,14,4,10,0
+Stuttgart,Clay,20220418,293,Iga Swiatek,Eva Lys,6-1 6-1,R16,62,2,0,41,27,18,10,7,0,1,0,3,54,37,15,6,7,3,9,0
+Stuttgart,Clay,20220418,292,Emma Raducanu,Tamara Korpatsch,6-0 2-6 6-1,R16,99,5,4,64,47,35,6,11,1,3,1,1,60,37,20,9,10,3,8,0
+Stuttgart,Clay,20220418,291,Laura Siegemund,Maria Sakkari,6-4 3-1 RET,R16,74,0,1,50,40,24,5,7,2,4,3,3,41,20,9,11,7,6,10,1
+Stuttgart,Clay,20220418,290,Liudmila Samsonova,Karolina Pliskova,6-4 6-4,R16,79,2,1,63,48,34,11,10,4,4,6,8,62,39,28,10,10,1,3,0
+Stuttgart,Clay,20220418,289,Anett Kontaveit,Ekaterina Alexandrova,2-6 6-3 7-6(5),R16,134,9,2,93,59,42,17,15,1,4,8,5,107,61,45,20,14,4,6,0
+Stuttgart,Clay,20220418,288,Aryna Sabalenka,Bianca Andreescu,6-1 3-6 6-2,R16,112,5,7,72,47,33,14,12,4,6,4,2,83,54,29,14,12,3,8,0
+Stuttgart,Clay,20220418,287,Ons Jabeur,Daria Kasatkina,6-3 6-3,R16,84,0,1,51,24,15,14,9,0,3,0,3,80,51,27,10,9,8,14,0
+Stuttgart,Clay,20220418,286,Paula Badosa,Elena Rybakina,6-2 4-6 7-6(4),R16,150,7,8,92,59,36,17,15,1,6,5,4,104,57,35,21,15,8,14,0
+Madrid,Clay,20220428,300,Ons Jabeur,Jessica Pegula,7-5 0-6 6-2,F,114,5,3,85,50,28,18,13,2,7,1,3,90,51,32,14,13,7,12,0
+Madrid,Clay,20220428,299,Jessica Pegula,Jil Teichmann,6-3 6-4,SF,81,0,1,58,35,22,16,10,2,4,0,1,56,34,19,11,9,4,8,0
+Madrid,Clay,20220428,298,Ons Jabeur,Ekaterina Alexandrova,6-2 6-3,SF,61,5,1,54,32,26,13,9,2,3,1,4,45,27,17,8,8,1,5,0
+Madrid,Clay,20220428,297,Jil Teichmann,Anhelina Kalinina,6-3 6-4,QF,90,4,2,61,40,26,10,10,2,5,1,2,52,32,15,10,9,2,7,0
+Madrid,Clay,20220428,296,Jessica Pegula,Sara Sorribes Tormo,6-4 6-2,QF,107,3,2,67,36,17,16,9,4,9,0,3,64,50,18,5,9,5,13,0
+Madrid,Clay,20220428,295,Ekaterina Alexandrova,Amanda Anisimova,6-4 6-3,QF,90,3,1,58,32,24,10,9,8,11,1,8,78,52,28,8,10,7,13,0
+Madrid,Clay,20220428,294,Ons Jabeur,Simona Halep,6-3 6-2,QF,67,2,1,67,36,28,16,9,3,4,1,1,44,28,16,6,8,1,5,0
+Madrid,Clay,20220428,293,Jil Teichmann,Elena Rybakina,6-3 6-1,R16,77,4,5,56,33,26,11,8,6,6,6,2,48,27,17,7,8,3,7,0
+Madrid,Clay,20220428,292,Anhelina Kalinina,Emma Raducanu,6-2 2-6 6-4,R16,139,1,1,80,57,33,13,13,1,5,1,1,80,61,38,8,13,7,12,0
+Madrid,Clay,20220428,291,Sara Sorribes Tormo,Daria Kasatkina,6-4 1-6 6-3,R16,151,1,5,88,66,29,9,13,5,14,0,5,90,62,28,11,13,8,17,0
+Madrid,Clay,20220428,290,Jessica Pegula,Bianca Andreescu,7-5 6-1,R16,110,2,3,84,48,36,12,10,12,15,1,3,73,47,24,8,9,15,21,0
+Madrid,Clay,20220428,289,Ekaterina Alexandrova,Marie Bouzkova,6-7(4) 6-0 7-5,R16,184,4,7,115,68,43,27,15,7,10,0,3,122,78,42,20,15,15,22,0
+Madrid,Clay,20220428,288,Amanda Anisimova,Victoria Azarenka,6-1 6-4,R16,81,5,3,55,37,24,9,9,1,3,4,1,63,35,22,8,8,8,13,0
+Madrid,Clay,20220428,287,Ons Jabeur,Belinda Bencic,6-2 3-6 6-2,R16,118,9,5,80,50,41,13,12,5,6,2,3,94,65,39,15,13,7,11,0
+Madrid,Clay,20220428,286,Simona Halep,Cori Gauff,6-4 6-4,R16,77,1,0,52,37,31,8,10,0,1,3,6,64,39,24,12,10,2,5,0
+Rome,Clay,20220509,300,Iga Swiatek,Ons Jabeur,6-2 6-2,F,82,1,1,57,32,22,13,8,6,7,3,2,54,27,15,11,8,4,9,0
+Rome,Clay,20220509,299,Iga Swiatek,Aryna Sabalenka,6-2 6-1,SF,79,0,2,44,26,19,10,7,4,5,0,3,55,31,9,12,8,9,15,0
+Rome,Clay,20220509,298,Ons Jabeur,Daria Kasatkina,6-4 1-6 7-5,SF,115,5,2,82,49,27,17,14,3,9,0,6,108,68,37,20,15,9,15,0
+Rome,Clay,20220509,297,Iga Swiatek,Bianca Andreescu,7-6(2) 6-0,QF,104,2,4,69,42,27,14,9,2,5,1,0,55,30,15,10,9,0,6,0
+Rome,Clay,20220509,296,Aryna Sabalenka,Amanda Anisimova,4-6 6-3 6-2,QF,111,1,8,77,44,27,14,14,0,5,0,7,84,54,30,10,13,3,10,0
+Rome,Clay,20220509,295,Ons Jabeur,Maria Sakkari,1-6 7-5 6-1,QF,121,4,3,89,49,34,15,13,4,9,2,6,91,47,30,18,13,6,12,0
+Rome,Clay,20220509,294,Daria Kasatkina,Jil Teichmann,6-4 3-2 RET,QF,82,0,4,49,37,25,2,7,5,8,1,2,57,35,17,7,8,6,11,1
+Rome,Clay,20220509,293,Iga Swiatek,Victoria Azarenka,6-4 6-1,R16,115,2,3,98,60,31,21,9,10,14,2,6,47,25,13,3,8,3,10,0
+Rome,Clay,20220509,292,Bianca Andreescu,Petra Martic,6-4 6-4,R16,103,4,3,82,59,40,12,10,6,7,2,6,52,26,21,11,10,1,4,0
+Rome,Clay,20220509,291,Aryna Sabalenka,Jessica Pegula,6-1 6-4,R16,67,9,6,56,32,23,10,8,2,4,0,6,47,28,13,6,9,2,8,0
+Rome,Clay,20220509,290,Amanda Anisimova,Danielle Collins,6-2 6-2,R16,59,4,6,43,27,22,9,8,1,2,1,6,48,25,12,10,8,2,7,0
+Rome,Clay,20220509,289,Ons Jabeur,Yulia Putintseva,6-3 6-2,R16,61,2,0,48,21,15,20,8,1,1,0,4,50,36,24,4,9,3,7,0
+Rome,Clay,20220509,288,Maria Sakkari,Cori Gauff,6-4 7-5,R16,109,2,1,70,39,26,19,11,4,6,4,5,74,39,24,16,11,8,12,0
+Rome,Clay,20220509,287,Jil Teichmann,Elena Rybakina,6-7(3) 6-3 7-5,R16,182,5,1,115,74,42,19,16,11,17,2,6,116,67,40,19,17,11,20,0
+Rome,Clay,20220509,286,Daria Kasatkina,Paula Badosa,6-4 6-4,R16,106,0,4,62,45,27,6,10,6,11,3,4,88,56,32,9,10,10,17,0
+Roland Garros,Clay,20220523,212,Iga Swiatek,Qinwen Zheng,6-7(5) 6-0 6-2,R16,,,,,,,,,,,,,,,,,,,,0
+Roland Garros,Clay,20220523,213,Jessica Pegula,Irina Camelia Begu,4-6 6-2 6-3,R16,,,,,,,,,,,,,,,,,,,,0
+Roland Garros,Clay,20220523,214,Veronika Kudermetova,Madison Keys,1-6 6-3 6-1,R16,,,,,,,,,,,,,,,,,,,,0
+Roland Garros,Clay,20220523,215,Daria Kasatkina,Camila Giorgi,6-2 6-2,R16,,,,,,,,,,,,,,,,,,,,0
+Roland Garros,Clay,20220523,216,Martina Trevisan,Aliaksandra Sasnovich,7-6(10) 7-5,R16,,,,,,,,,,,,,,,,,,,,0
+Roland Garros,Clay,20220523,217,Leylah Fernandez,Amanda Anisimova,6-3 4-6 6-3,R16,,,,,,,,,,,,,,,,,,,,0
+Roland Garros,Clay,20220523,218,Cori Gauff,Elise Mertens,6-4 6-0,R16,,,,,,,,,,,,,,,,,,,,0
+Roland Garros,Clay,20220523,219,Sloane Stephens,Jil Teichmann,6-2 6-0,R16,,,,,,,,,,,,,,,,,,,,0
+Roland Garros,Clay,20220523,220,Iga Swiatek,Jessica Pegula,6-3 6-2,QF,,,,,,,,,,,,,,,,,,,,0
+Roland Garros,Clay,20220523,221,Daria Kasatkina,Veronika Kudermetova,6-4 7-6(5),QF,,,,,,,,,,,,,,,,,,,,0
+Roland Garros,Clay,20220523,222,Martina Trevisan,Leylah Fernandez,6-2 6-7(3) 6-3,QF,,,,,,,,,,,,,,,,,,,,0
+Roland Garros,Clay,20220523,223,Cori Gauff,Sloane Stephens,7-5 6-2,QF,,,,,,,,,,,,,,,,,,,,0
+Roland Garros,Clay,20220523,224,Iga Swiatek,Daria Kasatkina,6-2 6-1,SF,,,,,,,,,,,,,,,,,,,,0
+Roland Garros,Clay,20220523,225,Cori Gauff,Martina Trevisan,6-3 6-1,SF,,,,,,,,,,,,,,,,,,,,0
+Roland Garros,Clay,20220523,226,Iga Swiatek,Cori Gauff,6-1 6-3,F,,,,,,,,,,,,,,,,,,,,0
+Berlin,Grass,20220613,300,Ons Jabeur,Belinda Bencic,6-3 2-1 RET,F,54,6,0,40,26,20,6,6,4,5,1,3,33,15,8,8,6,1,4,1
+Berlin,Grass,20220613,299,Ons Jabeur,Cori Gauff,7-6(4) 6-2,SF,77,2,0,56,37,28,12,10,0,2,3,2,70,45,29,8,10,1,5,0
+Berlin,Grass,20220613,298,Belinda Bencic,Maria Sakkari,6-7(6) 6-4 6-4,SF,187,4,2,101,71,52,17,16,6,8,9,8,134,70,50,32,16,15,19,0
+Berlin,Grass,20220613,297,Ons Jabeur,Aliaksandra Sasnovich,6-7(3) 6-2 6-2,QF,116,8,3,93,60,43,14,14,7,10,1,3,86,50,29,15,14,5,12,0
+Berlin,Grass,20220613,296,Cori Gauff,Karolina Pliskova,7-5 6-4,QF,97,5,5,69,47,35,9,11,5,7,0,5,80,43,27,17,11,5,9,0
+Berlin,Grass,20220613,295,Belinda Bencic,Veronika Kudermetova,3-6 6-3 6-3,QF,135,2,7,86,59,37,14,13,4,8,6,3,90,51,34,13,14,5,11,0
+Berlin,Grass,20220613,294,Maria Sakkari,Daria Kasatkina,6-0 6-3,QF,72,3,1,46,27,19,8,7,2,4,1,5,61,33,16,9,8,9,16,0
+Berlin,Grass,20220613,293,Ons Jabeur,Alycia Parks,6-2 7-6(8),R16,91,2,1,68,43,28,15,10,3,5,4,6,73,44,26,11,10,5,9,0
+Berlin,Grass,20220613,292,Aliaksandra Sasnovich,Andrea Petkovic,6-4 6-4,R16,97,3,6,70,45,29,11,10,8,11,0,5,65,29,18,14,10,4,9,0
+Berlin,Grass,20220613,291,Karolina Pliskova,Bianca Andreescu,6-4 2-6 7-6(7),R16,131,12,2,106,71,50,15,15,7,11,2,3,92,50,33,26,15,3,6,0
+Berlin,Grass,20220613,290,Cori Gauff,Xin Yu Wang,6-0 6-4,R16,63,3,1,41,28,23,7,8,1,2,2,1,59,41,24,4,8,9,14,0
+Berlin,Grass,20220613,289,Belinda Bencic,Anna Kalinskaya,6-4 1-6 6-1,R16,115,4,3,72,43,34,13,12,2,4,1,3,83,52,37,13,12,8,11,0
+Berlin,Grass,20220613,288,Veronika Kudermetova,Liudmila Samsonova,6-3 6-7(5) 6-1,R16,129,7,1,94,71,46,13,15,5,8,8,8,80,35,25,18,13,1,7,0
+Berlin,Grass,20220613,287,Daria Kasatkina,Ekaterina Alexandrova,5-7 6-1 6-1,R16,114,4,6,98,63,42,11,13,5,10,4,7,84,51,27,11,13,5,14,0
+Berlin,Grass,20220613,286,Maria Sakkari,Daria Saville,6-1 7-5,R16,90,4,1,48,21,17,21,10,0,1,5,5,73,46,24,13,9,10,14,0
+Birmingham,Grass,20220613,300,Beatriz Haddad Maia,Shuai Zhang,5-4 RET,F,37,1,1,21,12,8,5,4,0,1,3,0,42,32,17,5,5,3,5,1
+Birmingham,Grass,20220613,299,Shuai Zhang,Sorana Cirstea,4-6 6-1 7-6(5),SF,130,4,3,99,76,46,13,14,5,8,7,3,102,70,46,15,15,4,9,0
+Birmingham,Grass,20220613,298,Beatriz Haddad Maia,Simona Halep,6-3 2-6 6-4,SF,134,3,7,91,61,36,11,14,2,8,5,3,84,53,33,11,13,5,11,0
+Birmingham,Grass,20220613,297,Shuai Zhang,Dayana Yastremska,7-5 6-4,QF,76,3,1,55,39,29,10,11,0,2,11,7,69,34,22,17,11,5,9,0
+Birmingham,Grass,20220613,296,Sorana Cirstea,Donna Vekic,5-7 6-3 6-4,QF,149,5,11,100,56,37,21,16,5,10,5,11,88,45,34,15,15,3,9,0
+Birmingham,Grass,20220613,295,Beatriz Haddad Maia,Camila Giorgi,6-3 6-2,QF,84,1,2,58,35,21,16,8,5,6,2,6,52,26,15,10,9,5,10,0
+Birmingham,Grass,20220613,294,Simona Halep,Katie Boulter,6-4 6-1,QF,75,3,2,56,25,14,21,8,3,4,0,5,57,33,20,9,9,5,10,0
+Birmingham,Grass,20220613,293,Dayana Yastremska,Jelena Ostapenko,3-6 7-5 7-5,R16,135,14,9,106,56,44,21,16,5,9,3,4,95,46,35,25,17,3,8,0
+Birmingham,Grass,20220613,292,Shuai Zhang,Elena Gabriela Ruse,6-2 2-6 7-5,R16,118,2,3,82,54,38,9,14,5,10,12,17,89,41,33,14,14,4,10,0
+Birmingham,Grass,20220613,291,Donna Vekic,Caty Mcnally,7-5 6-3,R16,100,3,4,66,35,24,18,10,4,6,3,3,78,54,32,9,11,6,11,0
+Birmingham,Grass,20220613,290,Sorana Cirstea,Aleksandra Krunic,6-1 6-1,R16,72,2,2,43,21,19,11,7,1,1,1,4,63,36,18,11,7,9,14,0
+Birmingham,Grass,20220613,289,Beatriz Haddad Maia,Magdalena Frech,6-1 5-7 7-6(3),R16,164,3,7,102,70,47,18,15,7,11,3,10,114,66,45,17,16,9,15,0
+Birmingham,Grass,20220613,288,Camila Giorgi,Lauren Davis,3-6 7-5 6-2,R16,144,1,13,104,46,32,26,15,9,13,12,9,89,48,32,19,14,4,9,0
+Birmingham,Grass,20220613,287,Katie Boulter,Caroline Garcia,7-6(5) 6-1,R16,91,6,6,75,44,32,16,10,2,3,5,6,53,27,22,10,9,0,3,0
+Birmingham,Grass,20220613,286,Simona Halep,Harriet Dart,6-3 6-2,R16,62,4,1,42,25,21,13,9,1,2,1,5,46,26,16,7,8,1,5,0
+Eastbourne,Grass,20220620,300,Petra Kvitova,Jelena Ostapenko,6-3 6-2,F,77,7,1,60,41,33,10,9,5,5,5,4,63,34,24,10,8,8,11,0
+Eastbourne,Grass,20220620,299,Petra Kvitova,Beatriz Haddad Maia,7-6(5) 6-4,SF,117,6,2,69,46,33,17,11,1,1,5,3,85,53,36,18,11,5,6,0
+Eastbourne,Grass,20220620,298,Jelena Ostapenko,Camila Giorgi,6-2 6-2,SF,68,3,2,49,32,25,10,8,2,2,5,5,53,33,19,9,8,5,9,0
+Eastbourne,Grass,20220620,297,Beatriz Haddad Maia,Lesia Tsurenko,W/O,QF,1,,,,,,,,,,,,,,,,,,,1
+Eastbourne,Grass,20220620,296,Petra Kvitova,Harriet Dart,6-3 6-4,QF,85,8,1,60,45,33,10,10,1,1,1,4,65,39,26,12,9,6,8,0
+Eastbourne,Grass,20220620,295,Jelena Ostapenko,Anhelina Kalinina,6-3 6-2,QF,69,8,3,61,38,28,11,9,4,5,4,6,50,27,18,6,8,7,11,0
+Eastbourne,Grass,20220620,294,Camila Giorgi,Viktoriya Tomova,6-2 6-1,QF,64,5,3,44,22,18,12,8,1,2,1,1,47,29,14,6,7,4,9,0
+Eastbourne,Grass,20220620,293,Beatriz Haddad Maia,Jodie Burrage,6-1 6-2,R16,70,5,4,46,26,23,12,8,2,2,0,0,46,27,16,7,7,1,5,0
+Eastbourne,Grass,20220620,292,Lesia Tsurenko,Magda Linette,7-5 3-6 7-5,R16,149,0,5,98,66,46,13,16,2,6,4,3,104,67,41,21,17,3,8,0
+Eastbourne,Grass,20220620,291,Petra Kvitova,Katie Boulter,5-7 6-0 7-5,R16,143,2,8,90,57,42,20,15,4,6,3,8,113,72,44,17,15,12,17,0
+Eastbourne,Grass,20220620,290,Harriet Dart,Marta Kostyuk,6-4 2-6 6-4,R16,134,0,4,82,51,27,13,14,5,13,1,5,101,53,25,23,14,5,13,0
+Eastbourne,Grass,20220620,289,Jelena Ostapenko,Madison Keys,6-3 RET,R16,51,0,6,39,21,16,6,4,3,4,2,2,45,24,14,7,5,3,6,1
+Eastbourne,Grass,20220620,288,Anhelina Kalinina,Yulia Putintseva,6-3 2-6 6-3,R16,118,2,5,93,53,35,18,13,7,12,0,2,72,49,28,6,13,1,7,0
+Eastbourne,Grass,20220620,287,Camila Giorgi,Garbine Muguruza,7-5 6-3,R16,113,3,7,71,39,29,16,11,6,8,1,6,69,36,22,14,10,1,5,0
+Eastbourne,Grass,20220620,286,Viktoriya Tomova,Kirsten Flipkens,3-6 6-3 6-4,R16,120,0,2,80,49,29,20,14,3,7,0,1,92,61,37,16,14,8,13,0
+Wimbledon,Grass,20220627,212,Ajla Tomljanovic,Alize Cornet,4-6 6-4 6-3,R16,155,3,4,106,69,40,13,14,9,16,0,7,94,49,30,16,15,6,15,0
+Wimbledon,Grass,20220627,213,Elena Rybakina,Petra Martic,7-5 6-3,R16,80,6,0,57,33,25,16,11,1,3,1,4,57,27,19,15,10,3,7,0
+Wimbledon,Grass,20220627,214,Simona Halep,Paula Badosa,6-1 6-2,R16,60,3,2,38,19,17,13,7,1,1,1,1,55,41,19,6,8,6,11,0
+Wimbledon,Grass,20220627,215,Amanda Anisimova,Harmony Tan,6-2 6-3,R16,74,3,2,50,35,28,7,8,2,2,2,1,75,44,28,10,9,7,11,0
+Wimbledon,Grass,20220627,216,Marie Bouzkova,Caroline Garcia,7-5 6-2,R16,83,1,1,52,37,29,9,10,2,3,2,2,58,36,23,8,10,7,11,0
+Wimbledon,Grass,20220627,217,Ons Jabeur,Elise Mertens,7-6(9) 6-4,R16,106,5,0,82,51,34,16,11,4,7,2,1,87,60,34,16,12,3,7,0
+Wimbledon,Grass,20220627,218,Tatjana Maria,Jelena Ostapenko,5-7 7-5 7-5,R16,128,9,4,95,55,43,18,18,3,8,3,5,122,74,45,23,18,4,10,0
+Wimbledon,Grass,20220627,219,Jule Niemeier,Heather Watson,6-2 6-4,R16,77,4,1,54,36,25,12,9,1,2,1,4,53,38,23,4,9,3,7,0
+Wimbledon,Grass,20220627,220,Elena Rybakina,Ajla Tomljanovic,4-6 6-2 6-3,QF,111,15,1,81,50,38,16,14,6,9,1,1,80,51,29,14,13,4,9,0
+Wimbledon,Grass,20220627,221,Simona Halep,Amanda Anisimova,6-2 6-4,QF,63,3,1,54,32,20,17,9,7,8,0,1,49,36,22,5,9,2,6,0
+Wimbledon,Grass,20220627,222,Ons Jabeur,Marie Bouzkova,3-6 6-1 6-1,QF,107,0,2,71,42,28,16,12,2,5,0,1,73,56,25,9,11,3,9,0
+Wimbledon,Grass,20220627,223,Tatjana Maria,Jule Niemeier,4-6 6-2 7-5,QF,138,4,7,106,52,35,30,15,6,9,3,11,100,60,40,16,15,2,7,0
+Wimbledon,Grass,20220627,224,Elena Rybakina,Simona Halep,6-3 6-3,SF,76,5,0,48,33,24,8,9,0,1,0,9,67,35,24,12,9,5,9,0
+Wimbledon,Grass,20220627,225,Ons Jabeur,Tatjana Maria,6-2 3-6 6-1,SF,103,4,2,74,36,25,26,12,1,2,0,5,99,54,31,24,12,7,11,0
+Wimbledon,Grass,20220627,226,Elena Rybakina,Ons Jabeur,3-6 6-2 6-2,F,108,4,3,94,56,35,22,13,9,11,4,1,72,39,27,16,12,2,6,0
+San Jose,Hard,20220801,300,Daria Kasatkina,Shelby Rogers,6-7(2) 6-1 6-2,F,152,1,9,96,60,46,14,14,4,6,1,2,97,71,39,13,13,5,11,0
+San Jose,Hard,20220801,299,Shelby Rogers,Veronika Kudermetova,6-3 6-4,SF,80,1,1,49,32,23,9,9,2,4,5,4,57,31,17,13,10,2,7,0
+San Jose,Hard,20220801,298,Daria Kasatkina,Paula Badosa,6-2 6-4,SF,82,1,1,52,33,23,10,9,5,7,0,2,52,32,16,10,9,4,9,0
+San Jose,Hard,20220801,297,Shelby Rogers,Amanda Anisimova,6-4 6-4,QF,81,5,1,54,36,32,8,10,0,1,3,2,72,50,31,9,10,6,9,0
+San Jose,Hard,20220801,296,Veronika Kudermetova,Ons Jabeur,7-6(5) 6-2,QF,101,6,5,78,44,29,18,10,4,6,2,4,69,40,24,14,10,6,10,0
+San Jose,Hard,20220801,295,Daria Kasatkina,Aryna Sabalenka,4-6 7-5 6-0,QF,143,2,13,98,58,33,19,14,11,17,1,20,89,46,27,14,14,7,16,0
+San Jose,Hard,20220801,294,Paula Badosa,Cori Gauff,7-6(4) 6-2,QF,86,2,2,67,44,29,12,10,2,4,5,6,59,37,23,11,10,4,8,0
+San Jose,Hard,20220801,293,Shelby Rogers,Maria Sakkari,6-1 6-3,R16,72,10,1,50,34,26,10,8,3,3,3,4,51,23,12,14,8,6,10,0
+San Jose,Hard,20220801,292,Amanda Anisimova,Karolina Pliskova,3-6 7-5 6-1,R16,97,2,7,87,57,39,17,14,1,3,7,5,75,46,32,14,14,2,6,0
+San Jose,Hard,20220801,291,Ons Jabeur,Madison Keys,7-5 6-1,R16,82,1,2,54,30,20,12,9,0,2,0,5,62,32,18,12,10,3,9,0
+San Jose,Hard,20220801,290,Veronika Kudermetova,Claire Liu,6-2 7-5,R16,103,3,2,68,45,33,12,10,6,7,2,2,67,51,31,6,10,5,9,0
+San Jose,Hard,20220801,289,Daria Kasatkina,Taylor Townsend,6-4 6-0,R16,70,4,2,56,44,31,4,8,2,3,0,3,45,26,14,6,8,4,9,0
+San Jose,Hard,20220801,288,Aryna Sabalenka,Caroline Dolehide,5-7 6-1 7-5,R16,157,5,23,122,62,46,22,16,9,14,0,11,97,61,37,14,15,10,17,0
+San Jose,Hard,20220801,287,Cori Gauff,Naomi Osaka,6-4 6-4,R16,88,7,8,57,33,28,11,10,0,1,3,1,71,39,27,15,10,9,12,0
+San Jose,Hard,20220801,286,Paula Badosa,Elizabeth Mandlik,6-2 5-7 7-6(5),R16,151,7,7,102,63,39,19,16,1,6,3,9,118,61,35,30,16,9,15,0
+Toronto,Hard,20220808,300,Simona Halep,Beatriz Haddad Maia,6-3 2-6 6-3,F,136,2,9,85,54,35,15,13,5,9,1,2,83,46,28,18,13,5,10,0
+Toronto,Hard,20220808,299,Beatriz Haddad Maia,Karolina Pliskova,6-4 7-6(7),SF,122,1,5,89,54,36,19,11,4,6,9,6,76,50,35,12,11,4,7,0
+Toronto,Hard,20220808,298,Simona Halep,Jessica Pegula,2-6 6-3 6-4,SF,132,1,10,102,61,36,18,14,12,17,3,2,85,55,29,15,13,8,13,0
+Toronto,Hard,20220808,297,Beatriz Haddad Maia,Belinda Bencic,2-6 6-3 6-3,QF,131,2,3,82,53,40,10,13,4,7,0,5,75,50,32,12,13,2,6,0
+Toronto,Hard,20220808,296,Karolina Pliskova,Qinwen Zheng,4-6 6-4 6-4,QF,154,10,8,112,72,51,14,15,6,10,6,8,95,48,32,24,15,3,8,0
+Toronto,Hard,20220808,295,Jessica Pegula,Yulia Putintseva,6-3 6-3,QF,81,2,2,56,38,31,9,9,1,1,0,3,73,53,31,10,9,7,10,0
+Toronto,Hard,20220808,294,Simona Halep,Cori Gauff,6-4 7-6(2),QF,107,3,8,82,50,30,12,11,7,12,3,5,79,51,24,13,11,5,11,0
+Toronto,Hard,20220808,293,Beatriz Haddad Maia,Iga Swiatek,6-4 3-6 7-5,R16,180,4,1,88,57,40,18,15,6,9,4,9,142,91,58,23,16,15,19,0
+Toronto,Hard,20220808,292,Belinda Bencic,Garbine Muguruza,6-1 6-3,R16,63,3,4,50,32,27,9,8,4,4,3,2,40,27,16,4,8,0,4,0
+Toronto,Hard,20220808,291,Karolina Pliskova,Maria Sakkari,6-1 6-7(9) 6-3,R16,147,10,8,112,71,52,20,15,7,9,5,9,107,59,35,22,13,12,17,0
+Toronto,Hard,20220808,290,Qinwen Zheng,Bianca Andreescu,7-5 5-7 6-2,R16,178,8,7,96,42,31,29,16,6,10,1,2,102,64,34,22,16,5,11,0
+Toronto,Hard,20220808,289,Jessica Pegula,Camila Giorgi,3-6 6-0 7-5,R16,117,1,6,81,51,40,11,14,3,7,1,6,87,50,30,16,13,3,9,0
+Toronto,Hard,20220808,288,Yulia Putintseva,Alison Riske Amritraj,6-3 7-5,R16,97,0,2,85,63,36,10,11,6,10,2,3,59,42,20,7,10,2,8,0
+Toronto,Hard,20220808,287,Cori Gauff,Aryna Sabalenka,7-5 4-6 7-6(4),R16,191,9,15,131,82,57,20,17,10,14,7,18,131,68,50,27,17,8,12,0
+Toronto,Hard,20220808,286,Simona Halep,Jil Teichmann,6-2 7-5,R16,90,2,4,56,39,32,8,10,2,3,0,3,70,49,29,9,10,5,9,0
+Cincinnati,Hard,20220815,300,Caroline Garcia,Petra Kvitova,6-2 6-4,F,102,11,4,77,50,41,8,9,8,8,2,4,55,34,23,11,9,1,4,0
+Cincinnati,Hard,20220815,299,Petra Kvitova,Madison Keys,6-7(6) 6-4 6-3,SF,138,4,10,96,54,44,19,15,6,8,8,2,109,70,45,22,16,7,12,0
+Cincinnati,Hard,20220815,298,Caroline Garcia,Aryna Sabalenka,6-2 4-6 6-1,SF,125,8,1,78,48,39,10,13,7,10,4,7,79,47,30,10,12,7,13,0
+Cincinnati,Hard,20220815,297,Madison Keys,Elena Rybakina,6-2 6-4,QF,91,2,1,54,39,26,9,9,3,5,1,4,82,34,26,15,9,8,13,0
+Cincinnati,Hard,20220815,296,Petra Kvitova,Ajla Tomljanovic,6-2 6-3,QF,73,12,4,56,34,25,11,9,6,8,1,6,53,34,18,7,8,1,6,0
+Cincinnati,Hard,20220815,295,Caroline Garcia,Jessica Pegula,6-1 7-5,QF,72,4,2,64,40,32,13,10,2,2,2,1,47,27,17,11,9,1,4,0
+Cincinnati,Hard,20220815,294,Aryna Sabalenka,Shuai Zhang,6-4 7-6(1),QF,109,7,12,93,55,38,11,11,6,11,3,2,79,60,31,4,11,6,12,0
+Cincinnati,Hard,20220815,293,Madison Keys,Iga Swiatek,6-3 6-4,R16,85,2,1,56,35,23,12,9,1,3,0,2,63,34,22,10,10,9,14,0
+Cincinnati,Hard,20220815,292,Elena Rybakina,Alison Riske Amritraj,6-2 6-4,R16,88,9,1,46,33,29,6,9,0,1,1,2,75,53,30,8,9,9,13,0
+Cincinnati,Hard,20220815,291,Ajla Tomljanovic,Veronika Kudermetova,3-6 7-6(4) 6-3,R16,177,4,5,133,86,58,22,16,8,11,12,6,106,62,47,22,14,5,7,0
+Cincinnati,Hard,20220815,290,Petra Kvitova,Ons Jabeur,6-1 4-6 6-0,R16,107,5,3,86,59,42,12,12,5,7,1,6,79,49,25,13,11,5,11,0
+Cincinnati,Hard,20220815,289,Jessica Pegula,Emma Raducanu,7-5 6-4,R16,102,3,0,63,36,29,17,11,2,3,7,3,72,49,30,13,11,6,9,0
+Cincinnati,Hard,20220815,288,Caroline Garcia,Elise Mertens,6-4 7-5,R16,106,6,1,75,47,32,14,11,7,9,4,7,70,35,26,13,11,5,9,0
+Cincinnati,Hard,20220815,287,Aryna Sabalenka,Shelby Rogers,6-4 6-7(2) 6-4,R16,155,10,6,107,63,46,20,16,7,10,13,4,106,63,44,19,16,4,9,0
+Cincinnati,Hard,20220815,286,Shuai Zhang,Anett Kontaveit,2-6 6-4 6-4,R16,119,3,4,87,62,36,11,14,2,7,5,3,101,66,38,16,14,4,9,0
+Us Open,Hard,20220829,212,Iga Swiatek,Jule Niemeier,2-6 6-4 6-0,R16,143,2,2,81,54,28,16,12,7,12,5,13,97,47,23,22,12,6,13,0
+Us Open,Hard,20220829,213,Jessica Pegula,Petra Kvitova,6-3 6-2,R16,73,3,0,53,40,27,4,8,4,6,3,5,44,32,15,2,9,1,7,0
+Us Open,Hard,20220829,214,Karolina Pliskova,Victoria Azarenka,7-5 6-7(5) 6-2,R16,182,8,7,129,91,60,15,17,11,14,4,8,119,78,48,17,16,8,14,0
+Us Open,Hard,20220829,215,Aryna Sabalenka,Danielle Collins,3-6 6-3 6-2,R16,149,8,8,94,57,34,19,13,6,10,3,12,91,35,20,25,13,9,15,0
+Us Open,Hard,20220829,216,Cori Gauff,Shuai Zhang,7-5 7-5,R16,116,5,8,83,60,37,11,12,6,9,2,5,93,57,32,18,12,6,11,0
+Us Open,Hard,20220829,217,Caroline Garcia,Alison Riske Amritraj,6-4 6-1,R16,82,8,3,71,44,33,13,9,4,4,0,2,46,30,19,7,8,1,4,0
+Us Open,Hard,20220829,218,Ons Jabeur,Veronika Kudermetova,7-6(1) 6-4,R16,93,11,0,78,47,34,15,11,2,4,4,5,58,37,25,8,12,0,3,0
+Us Open,Hard,20220829,219,Ajla Tomljanovic,Liudmila Samsonova,7-6(8) 6-1,R16,117,1,3,87,48,31,23,11,8,10,1,4,70,40,25,12,9,1,5,0
+Us Open,Hard,20220829,220,Iga Swiatek,Jessica Pegula,6-3 7-6(4),QF,113,1,3,72,48,24,12,12,4,10,1,3,71,42,22,6,10,4,11,0
+Us Open,Hard,20220829,221,Aryna Sabalenka,Karolina Pliskova,6-1 7-6(4),QF,82,7,3,62,43,31,12,9,0,0,1,6,64,45,29,8,11,4,7,0
+Us Open,Hard,20220829,222,Caroline Garcia,Cori Gauff,6-3 6-4,QF,97,4,4,71,37,29,15,10,2,3,5,6,68,53,34,4,9,5,8,0
+Us Open,Hard,20220829,223,Ons Jabeur,Ajla Tomljanovic,6-4 7-6(4),QF,101,4,2,77,31,22,22,12,2,6,1,9,67,38,24,10,11,1,6,0
+Us Open,Hard,20220829,224,Iga Swiatek,Aryna Sabalenka,3-6 6-1 6-4,SF,131,2,3,78,57,37,6,13,5,10,4,7,89,48,32,10,13,3,10,0
+Us Open,Hard,20220829,225,Ons Jabeur,Caroline Garcia,6-1 6-3,SF,66,8,2,53,23,19,17,8,0,0,2,0,46,33,16,7,8,0,4,0
+Us Open,Hard,20220829,226,Iga Swiatek,Ons Jabeur,6-2 7-6(5),F,111,1,2,72,57,33,7,11,6,9,0,4,75,47,25,9,10,7,12,0

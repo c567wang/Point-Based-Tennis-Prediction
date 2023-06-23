@@ -1,0 +1,674 @@
+---
+title: "Notebook 5"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+MATCH.WIN.PROB OUTDATED IN THIS FILE, WILL UPDATE IN THE FUTURE. NOT EXPECTING RESULTS TO CHANGE TOO MUCH.
+
+Like notebook 4 was a continuation of book 1, notebook 5 is a continuation of 2, first focusing on exactly which matchups get flipped on the plateau.
+
+# From Notebook 2
+
+```{r}
+source("matrices/game_matrices_pointwise.R")
+source("matrices/tiebreak_matrices.R")
+source("matrices/set_matrices.R")
+source("matrices/match_matrices.R")
+match.win.prob <- function(p1,p2,format=0){
+  # under the iid assumptions, calculates player 1 (P1)'s probability of winning a match
+  # with player 2 (P2), where P1 is the player who serves the first game of the first set
+  # input:
+  #   p1(p2): probability of P1(P2) winning a point in their serving game
+  #   format: acceptable values are 0,1,2
+  #     0 - best of 3 sets, all tiebreaks to 7
+  #     1 - best of 3 sets, final tiebreak to 10
+  #     2 - best of 5 sets, final tiebreak to 10
+  # output:
+  #   p: probability model gives of P1 winning the match
+  
+  # !MODIFICATION! p1,p2 now should be vectors of length 19 (1-18 states + tiebreak)
+  # important that the tiebreak probability is placed is the last/19th entry
+  # if vector longer than 19, only first 19 elements are used
+  # identically distributed assumption may be dropped now depending on p1/p2 composition
+  
+  # get probs of P1,P2 holding their serve
+  m.p2g.p1 <- point.to.game.matrices.pw(p=p1)
+  p1.g <- (solve(diag(18)-m.p2g.p1$Q)%*%m.p2g.p1$R)[1,1]
+  m.p2g.p2 <- point.to.game.matrices.pw(p=p2)
+  p2.g <- (solve(diag(18)-m.p2g.p2$Q)%*%m.p2g.p2$R)[1,1]
+  
+  # get probs of P1,P2 winning sets
+  # in this block of code, probs correspond to sets where P1 serves the 1st game 
+  m.g2s.p1 <- game.to.set.matrices(p=p1.g,q=p2.g)
+  m.g2s.p1.w <- (solve(diag(38)-m.g2s.p1$Q)%*%m.g2s.p1$R)[1,]
+  p.s1.t <- m.g2s.p1.w[1] # prob of going to tiebreak in such a set
+  p1.s1.h <- m.g2s.p1.w[2] # prob of P1 winning by holding in such a set
+  p1.s1.b <- m.g2s.p1.w[3] # prob of P1 winning by breaking P2's serve
+  p2.s1.h <- m.g2s.p1.w[4] # prob of P2 winning by holding in such a set
+  p2.s1.b <- m.g2s.p1.w[5] # prob of P2 winning by breaking P1's serve
+  
+  # in this block of code, probs correspond to sets where P2 serves the 1st game 
+  m.g2s.p2 <- game.to.set.matrices(p=p2.g,q=p1.g)
+  m.g2s.p2.w <- (solve(diag(38)-m.g2s.p2$Q)%*%m.g2s.p2$R)[1,]
+  p.s2.t <- m.g2s.p2.w[1] # prob of going to tiebreak in such a set
+  p2.s2.h <- m.g2s.p2.w[2] # prob of P2 winning by holding in such a set
+  p2.s2.b <- m.g2s.p2.w[3] # prob of P2 winning by breaking P1's serve
+  p1.s2.h <- m.g2s.p2.w[4] # prob of P1 winning by holding in such a set
+  p1.s2.b <- m.g2s.p2.w[5] # prob of P1 winning by breaking P2's serve
+  
+  # get probs for players winning tiebreak games
+  m.tb.p1 <- tb.to.7.matrices(p=p1[19],q=p2[19]) # to 7, P1 serves first
+  m.tb.p1.w <- (solve(diag(48)-m.tb.p1$Q)%*%m.tb.p1$R)[1,]
+  p.tb1.to7 <- m.tb.p1.w[1] # prob of the tiebreak needing more than 12 pts played
+  p1.tb1.to7 <- m.tb.p1.w[2] # prob of P1 winning tiebreak when serving first
+  p2.tb1.to7 <- m.tb.p1.w[3] # prob of P2 winning tiebreak when receiving first
+  
+  m.tb.p2 <- tb.to.7.matrices(p=p2[19],q=p1[19]) # to 7, P2 serves first
+  m.tb.p2.w <- (solve(diag(48)-m.tb.p2$Q)%*%m.tb.p2$R)[1,]
+  p.tb2.to7 <- m.tb.p2.w[1] # prob of the tiebreak needing more than 12 pts played
+  p2.tb2.to7 <- m.tb.p2.w[2] # prob of P2 winning tiebreak when serving first
+  p1.tb2.to7 <- m.tb.p2.w[3] # prob of P1 winning tiebreak when receiving first
+  
+  if (format!=0){
+    m.tbd.p1 <- tb.to.10.matrices(p=p1[19],q=p2[19]) # to 10, P1 serves first
+    m.tbd.p1.w <- (solve(diag(99)-m.tbd.p1$Q)%*%m.tbd.p1$R)[1,]
+    p.tb1.to10 <- m.tbd.p1.w[1] # prob of the tiebreak needing more than 18 pts played
+    p1.tb1.to10 <- m.tbd.p1.w[2] # prob of P1 winning tiebreak when serving first
+    p2.tb1.to10 <- m.tbd.p1.w[3] # prob of P2 winning tiebreak when receiving first
+  
+    m.tbd.p2 <- tb.to.10.matrices(p=p2[19],q=p1[19]) # to 10, P2 serves first
+    m.tbd.p2.w <- (solve(diag(99)-m.tbd.p2$Q)%*%m.tbd.p2$R)[1,]
+    p.tb2.to10 <- m.tbd.p2.w[1] # prob of the tiebreak needing more than 18 pts played
+    p2.tb2.to10 <- m.tbd.p2.w[2] # prob of P2 winning tiebreak when serving first
+    p1.tb2.to10 <- m.tbd.p2.w[3] # prob of P1 winning tiebreak when receiving first
+  }
+  
+  # probs for if a tiebreak needs more than 7(10) points to win
+  # for non-deciding sets (to 7), chain starts at (T,A2) which is the first row
+  # for deciding sets (to 10), chain starts at (T,B2) which is the second row
+  # results in this block for when P1 served first in the tiebreak
+  # note the player who serves first in the tiebreak served first in the set
+  m.tbe.p1 <- tb.extra.matrices(p=p1[19],q=p2[19])
+  m.tbe.p1.w <- solve(diag(6)-m.tbe.p1$Q)%*%m.tbe.p1$R
+  p1.tbe.to7 <- m.tbe.p1.w[1,1] # P1 win prob once extra pts are played in the tiebreak
+  p1.tbe.to10 <- m.tbe.p1.w[2,1] # for P2's probs, need only subtract this from 1
+  
+  # results in this block for when P2 served first in the tiebreak
+  m.tbe.p2 <- tb.extra.matrices(p=p2[19],q=p1[19])
+  m.tbe.p2.w <- solve(diag(6)-m.tbe.p2$Q)%*%m.tbe.p2$R
+  p2.tbe.to7 <- m.tbe.p2.w[1,1] # P2 win prob once extra pts are played in the tiebreak
+  p2.tbe.to10 <- m.tbe.p2.w[2,1] # for P1's probs, need only subtract this from 1
+  
+  # now that the individual pieces are established, start calculating overall set
+  # winning probabilities to plug into set.to.match functions
+  # since P1 was designated as serving the 1st game of the entire match
+  # A(B) will be synonymous with P1(P2) in variable naming from here on in
+  p.b.A <- p1.s1.b
+  p.h.A <- p1.s1.h+p.s1.t*(p1.tb1.to7+p.tb1.to7*p1.tbe.to7)
+  q.b.A <- p2.s1.b+p.s1.t*(p2.tb1.to7+p.tb1.to7*(1-p1.tbe.to7))
+  q.h.A <- p2.s1.h
+  p.b.B <- p1.s2.b+p.s2.t*(p1.tb2.to7+p.tb2.to7*(1-p2.tbe.to7))
+  p.h.B <- p1.s2.h
+  q.b.B <- p2.s2.b
+  q.h.B <- p2.s2.h+p.s2.t*(p2.tb2.to7+p.tb2.to7*p2.tbe.to7)
+  
+  if (format==0){
+    # using set.to.match for final results
+    m.s2m <- set.to.match.womens(p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B,
+                                 p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B)
+    p <- (solve(diag(7)-m.s2m$Q)%*%m.s2m$R)[1,1]
+  } else {
+    p.b.A.d <- p1.s1.b
+    p.h.A.d <- p1.s1.h+p.s1.t*(p1.tb1.to10+p.tb1.to10*p1.tbe.to10)
+    q.b.A.d <- p2.s1.b+p.s1.t*(p2.tb1.to10+p.tb1.to10*(1-p1.tbe.to10))
+    q.h.A.d <- p2.s1.h
+    p.b.B.d <- p1.s2.b+p.s2.t*(p1.tb2.to10+p.tb2.to10*(1-p2.tbe.to10))
+    p.h.B.d <- p1.s2.h
+    q.b.B.d <- p2.s2.b
+    q.h.B.d <- p2.s2.h+p.s2.t*(p2.tb2.to10+p.tb2.to10*p2.tbe.to10)
+    
+    if (format==1){
+      m.s2m <- set.to.match.womens(p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B,
+                                   p.b.A.d,p.h.A.d,q.b.A.d,q.h.A.d,
+                                   p.b.B.d,p.h.B.d,q.b.B.d,q.h.B.d)
+      p <- (solve(diag(7)-m.s2m$Q)%*%m.s2m$R)[1,1]
+    } else if (format==2){
+      m.s2m <- set.to.match.mens(p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B,
+                                 p.b.A.d,p.h.A.d,q.b.A.d,q.h.A.d,
+                                 p.b.B.d,p.h.B.d,q.b.B.d,q.h.B.d)
+      p <- (solve(diag(17)-m.s2m$Q)%*%m.s2m$R)[1,1]
+    } else {
+      p <- -1 # marks invalid format value
+    }
+  }
+  return(p)
+}
+# testing data
+atp.test.2022 <- read.csv('../Data Lake/Experiments/2022_atp_testing.csv')
+wta.test.2022 <- read.csv('../Data Lake/Experiments/2022_wta_testing.csv')
+# following function highlights matches that were incomplete
+# this is determined by if the score has letters ("W/O","Def.","RET" etc.)
+# takes as input the score column of a dataset and returns indexes
+ic.match <- function(score) grep("[A-Za-z]",score)
+# remove incomplete matches for test sets
+atp.test.2022 <- atp.test.2022[-ic.match(atp.test.2022$score),]
+wta.test.2022 <- wta.test.2022[-ic.match(wta.test.2022$score),]
+# point-by-point data by player
+pbp.3yrs <- read.csv('../Data Lake/Players/2019-2021_pbp_individual.csv')
+get.unique.players <- function(testset){
+  # takes the players in the test set and returns vector
+  # containing unique players in the test set
+  names <- c(testset$winner_name,testset$loser_name)
+  names <- unique(names)
+  return(names)
+}
+
+get.equiv.names <- function(fullname){
+  # returns vector of equivalent names in different formats
+  # according to the fullname given
+  # fullname ideally from get.unique.players output
+  # More special examples:
+  #   Alejandro Davidovich Fokina -> A Davidovich Fokina & A. Davidovich Fokina
+  #   Pierre Hugues Herbert -> P Herbert & Ph Herbert & P. Herbert
+  #   Alex De Minaur -> A. De Minaur & Alex de Minaur & A De Minaur
+  #   Karolina Pliskova -> K. Pliskova & Ka. Pliskova & Ka Pliskova
+  #   Kristyna Pliskova -> K. Pliskova & Kr. Pliskova & Kr Pliskova
+  #   some cases manually remediated (see misc. google doc)
+  #   but quick manual remediation can't help if player in test set has middle name
+  #   and full name isn't in pbp training set.
+  #   Function tries to account for this as follows.
+  
+  # Alex Bee Caine -> c("A. Caine", "A Caine", "A. Bee Caine", "A Bee Caine",
+  #                     ""A Bee-Caine", "A. Bee-Caine", Ab Caine")
+  
+  # This method risks picking up on players with same last name and first letter
+  # But this is unlikely as the pbp training set only 1 case of this - Kr&Ka Pliskova
+  # And this was picked up since there were 2 characters before the space
+  
+  parts <- strsplit(fullname,split=" ")[[1]]
+  n <- length(parts)
+  first.letter <- substr(parts[1],1,1)
+  equiv <- c(fullname,
+             paste(first.letter," ",parts[n],sep=""),
+             paste(first.letter,"."," ",parts[n],sep=""))
+  if (n > 2){
+    rest <- ""
+    rest.dash <- ""
+    for (i in 1:(n-1)){
+      rest <- paste(rest," ",parts[i+1],sep="")
+      rest.dash <- paste(rest.dash,parts[i+1],sep="-")
+    }
+    rest.dash <- substr(rest.dash,2,nchar(rest.dash)) # get rid of first dash
+    first.middle.name.letter <- tolower(substr(parts[2],1,1))
+    rest.more <- "" # for if the name has four or more parts
+    for (i in 1:(n-2)){
+      rest.more <- paste(rest.more," ",parts[i+2],sep="")
+    }
+    # rest contains the first space, rest.dash doesn't
+    equiv <- c(equiv, paste(first.letter,rest,sep=""),
+               paste(first.letter,".",rest,sep=""),
+               paste(first.letter," ",rest.dash,sep=""),
+               paste(first.letter,"."," ",rest.dash,sep=""),
+               paste(first.letter,first.middle.name.letter,rest.more,sep=""))
+  }
+  return(equiv)
+}
+
+get.aggr.by.state <- function(entry){
+  # extract serve won & serve total fields for a player
+  # without surface distinction
+  ret <- rep(0,38)
+  for (i in 1:18){
+    # odd indices for pts won, even for total
+    ret[2*i-1] <- entry[[3+12*i]]+entry[[7+12*i]]+entry[[11+12*i]]
+    ret[2*i] <- entry[[2+12*i]]+entry[[6+12*i]]+entry[[10+12*i]]
+  }
+  ret[37] <- entry[[3]]+entry[[7]]+entry[[11]]
+  ret[38] <- entry[[2]]+entry[[6]]+entry[[10]]
+  return(ret)
+}
+create.p.vector <- function(tst.names,pbp){
+  # returns a dataframe with the rows in the order of names,
+  # the columns being p's for states 1-18 and then t (tiebreak)
+  # final column is overall p regardless of state by taking total won / total serve
+  # names usually from get.unique.players on test data set
+  # pbp is the point-by-point data given
+  # note p-vectors not surface specific
+  
+  n <- length(tst.names)
+  m <- nrow(pbp)
+  pbp.name <- pbp$name
+  aggr <- matrix(0,nrow=n,ncol=38) # 38=2x19, taking won & total to divide later
+  for (i in 1:n){
+    equiv <- get.equiv.names(tst.names[i])
+    p <- length(equiv)
+    for (j in 1:p){
+      for (l in 1:m){
+        # check 1 by 1 since pbp has non-unique names after manual remediation
+        if (equiv[j]==pbp.name[l]){
+          more.aggr <- get.aggr.by.state(pbp[l,])
+          aggr[i,] <- aggr[i,]+more.aggr
+        }
+      }
+    }
+  }
+  # now divide odd cols by even cols to obtain p's
+  output <- matrix(0,nrow=n,ncol=20)
+  output <- data.frame(output, row.names=tst.names)
+  for (i in 1:n){
+    for (j in 1:19){
+      output[i,j] <- aggr[i,2*j-1]/aggr[i,2*j]
+    } # note below first seq() output will end at 37
+    output[i,20] <- sum(aggr[i,seq(1,38,by=2)])/sum(aggr[i,seq(2,38,by=2)])
+  }
+  return(output)
+}
+atp.names <- get.unique.players(atp.test.2022)
+atp.P <- create.p.vector(atp.names,pbp.3yrs)
+wta.names <- get.unique.players(wta.test.2022)
+wta.P <- create.p.vector(wta.names,pbp.3yrs)
+for (i in 1:ncol(atp.P)){
+  atp.P[which(is.na(atp.P[,i])),i] <- mean(atp.P[-which(is.na(atp.P[,i])),i])
+}
+for (i in 1:ncol(wta.P)){
+  wta.P[which(is.na(wta.P[,i])),i] <- mean(wta.P[-which(is.na(wta.P[,i])),i])
+}
+# list of grand slams as their Men's singles are played to best 3 of 5 sets
+# naming convention following that found in the test sets
+grand.slams <- c("Australian Open","Roland Garros","Wimbledon","US Open")
+
+# overall function to do experiments with
+conduct.experiment <- function(inactive.states, P, test.set, atp=TRUE){
+  # inactive.states:
+  #   vector containing states (19 for tiebreak) to deactivate, i.e. 
+  #   replace the state's unique p with the player's overall p
+  # P:
+  #   data.frame containing players' individual p vectors
+  #   usually obtained via create.p.vector output
+  # test.set:
+  #   data set used to test accuracy of prediction
+  # atp:
+  #   boolean defaulted to true if test.set is ATP data
+  
+  # make copy of P and change copy to align with specified inactive.states
+  cP <- P[,1:19]
+  cP[,inactive.states] <- P[,20]
+  
+  # record exact probability values from model
+  # so we can examine closer if we want
+  n <- nrow(test.set)
+  exact <- rep(0,n)
+  
+  # experiment begins
+  pbp.names <- rownames(cP)
+  for (i in 1:n){
+    matchup <- test.set[i,]
+    winner <- matchup$winner_name
+    loser <- matchup$loser_name
+    inds <- match(c(winner,loser),pbp.names)
+    winner.P <- unname(unlist(cP[inds[1],]))
+    loser.P <- unname(unlist(cP[inds[2],]))
+    if (matchup$tourney_name %in% grand.slams){
+      if (atp){
+        exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=2)
+      } else {
+        exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=1)
+      }
+    } else {
+      exact[i] <- match.win.prob(p1=winner.P,p2=loser.P)
+    }
+  }
+  res <- exact > 0.5
+  return(list("score"=mean(res),"result"=res,"exact"=exact))
+}
+# testing data
+atp.test.2018 <- read.csv('../Data Lake/Experiments/2018_atp_testing.csv')
+wta.test.2018 <- read.csv('../Data Lake/Experiments/2018_wta_testing.csv')
+atp.test.2014 <- read.csv('../Data Lake/Experiments/2014_atp_testing.csv')
+wta.test.2014 <- read.csv('../Data Lake/Experiments/2014_wta_testing.csv')
+# remove incomplete matches for test sets
+atp.test.2018 <- atp.test.2018[-ic.match(atp.test.2018$score),]
+wta.test.2018 <- wta.test.2018[-ic.match(wta.test.2018$score),]
+atp.test.2014 <- atp.test.2014[-ic.match(atp.test.2014$score),]
+wta.test.2014 <- wta.test.2014[-ic.match(wta.test.2014$score),]
+# similar to how 2019-21 data was brought in and processed into P's
+pbp.567 <- read.csv('../Data Lake/Players/2015-2017_pbp_individual.csv')
+pbp.123 <- read.csv('../Data Lake/Players/2011-2013_pbp_individual.csv')
+atp.names.2018 <- get.unique.players(atp.test.2018)
+atp.names.2014 <- get.unique.players(atp.test.2014)
+atp.P.567 <- create.p.vector(atp.names.2018,pbp.567)
+atp.P.123 <- create.p.vector(atp.names.2014,pbp.123)
+wta.names.2018 <- get.unique.players(wta.test.2018)
+wta.names.2014 <- get.unique.players(wta.test.2014)
+wta.P.567 <- create.p.vector(wta.names.2018,pbp.567)
+wta.P.123 <- create.p.vector(wta.names.2014,pbp.123)
+for (i in 1:ncol(atp.P.567)){
+  atp.P.567[which(is.na(atp.P.567[,i])),i] <- 
+    mean(atp.P.567[-which(is.na(atp.P.567[,i])),i])
+}
+for (i in 1:ncol(atp.P.123)){
+  atp.P.123[which(is.na(atp.P.123[,i])),i] <- 
+    mean(atp.P.123[-which(is.na(atp.P.123[,i])),i])
+}
+for (i in 1:ncol(wta.P.567)){
+  wta.P.567[which(is.na(wta.P.567[,i])),i] <- 
+    mean(wta.P.567[-which(is.na(wta.P.567[,i])),i])
+}
+for (i in 1:ncol(wta.P.123)){
+  wta.P.123[which(is.na(wta.P.123[,i])),i] <- 
+    mean(wta.P.123[-which(is.na(wta.P.123[,i])),i])
+}
+```
+
+# Function(s)
+
+```{r}
+plot.path <- function(n,dat,type=1,ylim.lower=0.55,ylim.upper=0.7){
+  # n - length of path given
+  # dat - data saved containing paths
+  # type - 1 for scores; 2 for paths taken
+  # ylim.lower(upper) - ylim for plot, set to around 0(20) for type=2
+  plot(1:n,dat[[1]][[type]],'l', ylim=c(ylim.lower,ylim.upper)) 
+  for (i in 2:length(dat)){
+    lines(1:n,dat[[i]][[type]])
+  }
+}
+```
+
+
+# ATP 2022 [1]
+
+```{r}
+ld7.atp.2022 <- readRDS("ld7_atp_2022.rds")
+lu7.atp.2022 <- readRDS("lu7_atp_2022.rds")
+```
+```{r}
+plot.path(6,ld7.atp.2022) # baseline in 0.59's
+plot.path(7,ld7.atp.2022,type=2,ylim.lower=0,ylim.upper=20)
+plot.path(6,lu7.atp.2022) # baseline same as above
+plot.path(7,lu7.atp.2022,type=2,ylim.lower=0,ylim.upper=20)
+```
+
+Clearly here the plateau favours {13,18} and opposes {15,16,19}. 
+
+```{r}
+examine.1 <- atp.test.2022[,c(2,4,5)]
+examine.1$all.act <- conduct.experiment(c(),atp.P,atp.test.2022)$result
+examine.1$all.deact <- conduct.experiment(1:19,atp.P,atp.test.2022)$result
+examine.1$plat.down <- conduct.experiment(c(15,16,19),atp.P,atp.test.2022)$result
+examine.1$plat.up <- conduct.experiment((1:19)[-c(13,18)],atp.P,atp.test.2022)$result
+examine.1$plat <- examine.1$plat.down & examine.1$plat.up
+```
+
+```{r}
+mean(examine.1$plat)
+```
+
+The plateau values are all a bit over 0.65 so the beginnings of the plateau from both ends agreeing on 64.968% make sense. Now we will see will matchups account for this jump in score.
+
+```{r}
+examine.1[which(examine.1$all.act!=examine.1$plat),c(1,2,3,4,8)]
+```
+
+The plateau flipped the match correct in all 9 cases. The states the plateau deactivated are 15(30-40), 16(Deuce), 19(Tiebreak). Frequency-wise FAA appears in 1/3 of the matchups, all as the loser, while Borna Coric appears in 2/9 as the winner. 2/3 are hard surface matchups, but that isn't too out-of-the-ordinary as 55.414% of the matchups are hard surface.
+
+```{r}
+examine.1[which(examine.1$all.deact!=examine.1$plat),c(1,2,3,5,8)]
+```
+
+The difference here is that states 13(15-40) and 18(B Adv) are activated. Again, the different predictions are all in the plateau's favour. Frequency-wise 4/9 are Casper Ruud winners. Alcaraz-Kecmanovic, Ruud-Cilic, and Coric-Tsitsipas were also flipped going downwards. There still isn't any apparent pattern with respect to surface.
+
+Since the Casper Ruud pattern was so strong above, we will also take a quick look at the prediction outcomes of all his matches in the testset.
+
+```{r}
+examine.1[c(which(examine.1$winner_name=="Casper Ruud"),
+            which(examine.1$loser_name=="Casper Ruud")),c(1,2,3,4,5,8)]
+```
+
+There are no matchups here where the ends performed better than the plateau. By far the worst performance (9/19~=47.368%) is all.deact, while the other 2 are in the 60s.
+
+
+
+# ATP 2018 [2]
+
+```{r}
+ld7.atp.2018 <- readRDS("ld7_atp_2018.rds")
+lu7.atp.2018 <- readRDS("lu7_atp_2018.rds")
+```
+```{r}
+plot.path(7,ld7.atp.2018) # baseline 61.376%
+plot.path(7,ld7.atp.2018,type=2,ylim.lower=0,ylim.upper=20)
+plot.path(7,lu7.atp.2018) # baseline 61.9%
+plot.path(7,lu7.atp.2018,type=2,ylim.lower=0,ylim.upper=20)
+```
+
+We interpret that the plateau favours {3,12,15,16} and opposes {9,18,19}.
+
+```{r}
+examine.2 <- atp.test.2018[,c(2,5,6)]
+examine.2$all.act <- conduct.experiment(c(),atp.P.567,atp.test.2018)$result
+examine.2$all.deact <- conduct.experiment(1:19,atp.P.567,atp.test.2018)$result
+examine.2$plat.down <- conduct.experiment(c(9,18,19),atp.P.567,atp.test.2018)$result
+examine.2$plat.up <- conduct.experiment((1:19)[-c(3,12,15,16)],
+                                        atp.P.567,atp.test.2018)$result
+examine.2$plat <- examine.2$plat.down & examine.2$plat.up
+mean(examine.2$plat)
+```
+
+Again, the agreements from the two ends of the plateau match the overall plateau score.
+
+```{r}
+examine.2[which(examine.2$all.act!=examine.2$plat),c(1,2,3,4,8)]
+```
+
+This time, 4 out of the 18 discrepancies (2/9) are flipped wrong instead, but even for these patterns are present - the deactivations seem to have worked against Karen Khachanov, underestimating his ability and flipping two of his wins to losses. The stronger pattern is that of Alexander Zverev (6/18=1/3), Rafael Nadal (4/18=2/9), and Dominic Thiem (2/18=1/9) getting stronger and their wins getting flipped correctly. We find that all three of their tiebreak probabilities (state 19) lie well below the first quartile of the dataset's ('15-'18) probabilties. Khachanov's 2 incorrect flips here were also against Zverev and Thiem. We further look at if just deactivating 19 would be sufficient to flip them here.
+
+```{r}
+examine.2[which(examine.2$all.act
+                !=conduct.experiment(19,atp.P.567,atp.test.2018)$result),c(1,2,3,4,8)]
+```
+
+Just getting rid of the majority of the tiebreak influence flips 4/6 for Zverev, 2/5 for Nadal, and 1/2 for Thiem (as well as his wrong flip against Khachanov), but not all of them. We will quickly take 18 and 9 separatedly. Later on, we will take all three, but for the other cycles and see how predictions for these 3 players improve.
+
+```{r}
+examine.2[which(examine.2$all.act
+                !=conduct.experiment(c(18,19),atp.P.567,atp.test.2018)$result),
+          c(1,2,3,4,8)]
+```
+
+With regards to the 3 players we are keeping track of, 1 more for Zverev (and a false one against Khachanov), 2 more for Nadal, 1 more for Thiem.
+
+```{r}
+examine.2[which(examine.2$all.act
+                !=conduct.experiment(c(9,19),atp.P.567,atp.test.2018)$result),
+          c(1,2,3,4,8)]
+```
+
+This time almost same results, 1 more for Zverev and Thiem, 2 more for Nadal. The deactivation of these states for the other cycles will be done in a later section. Now for comparing with the other end.
+
+```{r}
+examine.2[which(examine.2$all.deact!=examine.2$plat),c(1,2,3,5,8)]
+```
+
+Many of the matches are the same from the other end, 5 are different (rows 79,81,149,156,189, all correct flips). Zverev (4/13 + 1 wrong), Nadal (1/13 + 1 wrong) continue to be beneficiaries, and this time we also have Nishikori and Djokovic, though their multiple correct flips are actually just the same matchup 'duplicated' in the test set.
+
+# ATP 2014 [3]
+
+```{r}
+ld5.atp.2014 <- readRDS("ld5_atp_2014.rds")
+lu7.atp.2014 <- readRDS("lu7_atp_2014.rds")
+```
+```{r}
+plot.path(5,ld5.atp.2014) # baseline 62.632%
+plot.path(5,ld5.atp.2014,type=2,ylim.lower=0,ylim.upper=20)
+plot.path(7,lu7.atp.2014) # baseline 65.263%
+plot.path(7,lu7.atp.2014,type=2,ylim.lower=0,ylim.upper=20)
+```
+
+We interpret that the plateau favours {1,8,11,17} and opposes {13,19}.
+
+```{r}
+examine.3 <- atp.test.2014[,c(2,5,6)]
+examine.3$all.act <- conduct.experiment(c(),atp.P.123,atp.test.2014)$result
+examine.3$all.deact <- conduct.experiment(1:19,atp.P.123,atp.test.2014)$result
+examine.3$plat.down <- conduct.experiment(c(13,19),atp.P.123,atp.test.2014)$result
+examine.3$plat.up <- conduct.experiment((1:19)[-c(1,8,11,17)],
+                                        atp.P.123,atp.test.2014)$result
+examine.3$plat <- examine.3$plat.down & examine.3$plat.up
+mean(examine.3$plat)
+```
+
+This time the consensus of the plateau's two ends lean more towards the lower of the two, which makes sense. It is good the score is still around the plateau's height (0.66~0.68), though this time the baselines were pretty high to start with (to the consensus of 0.66, the all activated baseline was 0.62 while the all deactivated was 0.65).
+
+```{r}
+examine.3[which(examine.3$all.act!=examine.3$plat),c(1,2,3,4,8)]
+```
+
+If we don't count duplicates (Djokovic/Kohlschreiber, Ferrer/Gulbis, Federer/Raonic, Wawrinka/Robredo), we can see that relative strength-wise, Gulbis was disadvantaged, Federer and Wawrinka (though there was a corrected loss to Dolgopolov) were beneficiaries.
+
+```{r}
+examine.3[which(examine.3$all.deact!=examine.3$plat),c(1,2,3,5,8)]
+```
+
+There were less different entries this time but we can see Robredo is the loser in 3 of the 4 (1 pair being duplicates). We also note that Ferrer's win over Gulbis was flipped correctly from the downwards/all-activated end.
+
+# ATP Cross [4]
+
+Casper Ruud is not present in the other cycles. So for looking at if state-player results from 2022 are consistent with the past, we look at Borna Coric and Alexander Zverev first. These two are not in the 2014 cycle so we only take the 2018 cycle.
+
+```{r}
+data.4a <- 
+  atp.test.2018[which(atp.test.2018$winner_name=="Borna Coric"
+                      #|atp.test.2018$loser_name=="Borna Coric"
+                      |atp.test.2018$winner_name=="Alexander Zverev"),]
+                      #|atp.test.2018$loser_name=="Alexander Zverev"),]
+examine.4a <- data.4a[,c(2,5,6)]
+# 2 baselines
+examine.4a$all.act <- conduct.experiment(c(),atp.P.567,data.4a)$result
+examine.4a$all.deact <- conduct.experiment(1:19,atp.P.567,data.4a)$result
+# states identified in 2022 cycle to be beneficial to them when disabled:
+# 15,16,19
+examine.4a$plat <- conduct.experiment(c(15,16,19),atp.P.567,data.4a)$result
+mean(examine.4a$all.act)
+mean(examine.4a$all.deact)
+mean(examine.4a$plat)
+```
+
+We look at the matches where the two players actually won, and see that deactivating the chosen states fail to boost their performance nor correspondingly the prediction accuracy for the 2018 cycle. This is a clear setback, though one could say that these aren't entirely conclusive since it is possible for the two players' playstyles to undergo change in the span of 4-8 years.
+
+Next we'll look at the 2018 cycle results, first on the activation/upwards front we had Zverev and Nadal, and to a lesser extent Djokovic, Nishikori, and Carreno Busta benefiting from the activation of 3,12,15,16.
+
+```{r}
+data.4b1 <-
+  atp.test.2014[which(atp.test.2014$winner_name=="Rafael Nadal"
+                      |atp.test.2014$winner_name=="Alexander Zverev"
+                      |atp.test.2014$winner_name=="Novak Djokovic"
+                      |atp.test.2014$winner_name=="Kei Nishikori"
+                      |atp.test.2014$winner_name=="Pablo Carreno Busta"),]
+data.4b2 <- 
+  atp.test.2022[which(atp.test.2022$winner_name=="Rafael Nadal"
+                      |atp.test.2022$winner_name=="Alexander Zverev"
+                      |atp.test.2022$winner_name=="Novak Djokovic"
+                      |atp.test.2022$winner_name=="Kei Nishikori"
+                      |atp.test.2022$winner_name=="Pablo Carreno Busta"),]
+examine.4b <- rbind(data.4b1[,c(2,5,6)],data.4b2[,c(2,4,5)])
+# 2 baselines
+examine.4b$all.act <- c(
+  conduct.experiment(c(),atp.P.123,data.4b1)$result,
+  conduct.experiment(c(),atp.P,data.4b2)$result
+)
+examine.4b$all.deact <- c(
+  conduct.experiment(1:19,atp.P.123,data.4b1)$result,
+  conduct.experiment(1:19,atp.P,data.4b2)$result
+)
+# states identified in 2022 cycle to be beneficial to them when activated:
+# 3,12,15,16
+examine.4b$plat <- c(
+  conduct.experiment((1:19)[-c(3,12,15,16)],atp.P.123,data.4b1)$result,
+  conduct.experiment((1:19)[-c(3,12,15,16)],atp.P,data.4b2)$result
+)
+mean(examine.4b$all.act)
+mean(examine.4b$all.deact)
+mean(examine.4b$plat)
+```
+
+On the other side We have Nadal, Zverev, Thiem, and to a certain extent Carreno Busta benefiting from 9,18,19's deactivation.
+
+```{r}
+data.4c1 <-
+  atp.test.2014[which(atp.test.2014$winner_name=="Rafael Nadal"
+                      |atp.test.2014$winner_name=="Alexander Zverev"
+                      |atp.test.2014$winner_name=="Dominic Thiem"
+                      |atp.test.2014$winner_name=="Pablo Carreno Busta"),]
+data.4c2 <-
+  atp.test.2022[which(atp.test.2022$winner_name=="Rafael Nadal"
+                      |atp.test.2022$winner_name=="Alexander Zverev"
+                      |atp.test.2022$winner_name=="Dominic Thiem"
+                      |atp.test.2022$winner_name=="Pablo Carreno Busta"),]
+examine.4c <- rbind(data.4c1[,c(2,5,6)],data.4c2[,c(2,4,5)])
+# 2 baselines
+examine.4c$plat <- c(
+  conduct.experiment(c(9,18,19),atp.P.123,data.4c1)$result,
+  conduct.experiment(c(9,18,19),atp.P,data.4c2)$result
+)
+examine.4c$all.act <- c(
+  conduct.experiment(c(),atp.P.123,data.4c1)$result,
+  conduct.experiment(c(),atp.P,data.4c2)$result
+)
+examine.4c$all.deact <- c(
+  conduct.experiment(1:19,atp.P.123,data.4c1)$result,
+  conduct.experiment(1:19,atp.P,data.4c2)$result
+)
+mean(examine.4c$all.act)
+mean(examine.4c$all.deact)
+mean(examine.4c$plat)
+```
+
+For both we see results are between the two extremes, with all deactivated states performing best every time.
+
+Finally, we look at the 2014 cycle results across 2018 and 2022 test sets. From the downward/undesired/deactivation direction, Federer and to certain extents Wawrinka and Dolgopolov were beneficiaries of deactivating 13 and 19. And Gulbis being disadvantaged. However, we find Dolgopolov absent from the 2018,2022 test sets, and Federer and Gulbis are absent from the 2022 set, since these test sets take the grand slam and ATP master's matches of the year from round16 up. Additionally Wawrinka's only appearance in 2022's set was a R16 loss to Djokovic. Since we are testing if these players remain beneficiaries, we will separately see if this match's predictions are flipped from correct to incorrect first.
+
+```{r}
+conduct.experiment(c(),atp.P,
+                   atp.test.2022[which(atp.test.2022$loser_name=="Stan Wawrinka"),])$result
+conduct.experiment(c(),atp.P,
+                   atp.test.2022[which(atp.test.2022$loser_name=="Stan Wawrinka"),])$exact
+conduct.experiment(1:19,atp.P,
+                   atp.test.2022[which(atp.test.2022$loser_name=="Stan Wawrinka"),])$result
+conduct.experiment(1:19,atp.P,
+                   atp.test.2022[which(atp.test.2022$loser_name=="Stan Wawrinka"),])$exact
+conduct.experiment(c(13,19),atp.P,
+                   atp.test.2022[which(atp.test.2022$loser_name=="Stan Wawrinka"),])$result
+conduct.experiment(c(13,19),atp.P,
+                   atp.test.2022[which(atp.test.2022$loser_name=="Stan Wawrinka"),])$exact
+```
+Wasn't flipped, and we can see from the exact probabilities that the all activated prediction is the closest to being wrong, so deactivating 13,18 did not result in Wawrinka's performance being valued more by the model.
+
+```{r}
+data.4d <- atp.test.2018[which(atp.test.2018$winner_name=="Roger Federer"
+                               |atp.test.2018$winner_name=="Stan Wawrinka"
+                               |atp.test.2018$loser_name=="Ernests Gulbis"),]
+examine.4d <- data.4d[,c(2,5,6)]
+examine.4d$all.deact <- conduct.experiment(c(),atp.P.567,data.4d)$result
+examine.4d$all.act <- conduct.experiment(1:19,atp.P.567,data.4d)$result
+examine.4d$plat <- conduct.experiment(c(13,19),atp.P.567,data.4d)$result
+mean(examine.4d$all.act)
+mean(examine.4d$all.deact)
+mean(examine.4d$plat)
+```
+
+We see that nothing can be gained from these matches as they are all correctly predicted regardless. Lastly we will quickly note the activate/upwards/favoured direction, which activates 1,8,11,17 and has Tommy Robredo disadvantaged as the only pattern. Unfortunately, Robredo is not present in the 2018 and 2022 testing sets.
+
+# Next (only for ATP for now)
+
+After these frankly not great results, notebook 6 will separate the point by point data into years from 2011 to 2021, and make new expanded yearly testing sets from 2012 to 2022. 
+
+For each triple of consecutive years, the first year's pbp data will serve as the training set and the second year's test data as the test set. These two will produce favoured/opposed states, as well as their beneficiaries/disadvantaged corresponding to training year, which we can then compare year to year, both directly and using the methods in [4] above. More specifically for the latter, the training year's identified states can be used for the testing set, now used for training, and results can be examined on a subset of the third set, dubbed the validation set, which contains only the identified players in the training year's test set. (Pretty sure this is very confusing to read, may benefit from a diagram.) This is all to see if certain player-state connections hold from year-to-year, identifying groups of playstyles and common IID deviations if successful.
+
+The validation set's results will also be predicted using the training data, using all-active/all-deactive/plateau states to see if the plateau exercise can at least still be used to enhance a fixed data set for prediction purposes.

@@ -1,0 +1,209 @@
+---
+title: "Figure 5 Code"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Data
+
+```{r}
+pbp.only5th <- read.csv('../Data Lake/Players/set5/pbp_5th_set.csv')
+pbp.no5th <- read.csv('../Data Lake/Players/set5/pbp_no_5th_set.csv')
+```
+
+# Prep Functions
+
+```{r}
+get.equiv.names <- function(fullname){
+  # returns vector of equivalent names in different formats
+  # according to the fullname given
+  # fullname ideally from get.unique.players output
+  # More special examples:
+  #   Alejandro Davidovich Fokina -> A Davidovich Fokina & A. Davidovich Fokina
+  #   Pierre Hugues Herbert -> P Herbert & Ph Herbert & P. Herbert
+  #   Alex De Minaur -> A. De Minaur & Alex de Minaur & A De Minaur
+  #   Karolina Pliskova -> K. Pliskova & Ka. Pliskova & Ka Pliskova
+  #   Kristyna Pliskova -> K. Pliskova & Kr. Pliskova & Kr Pliskova
+  #   some cases manually remediated (see misc. google doc)
+  #   but quick manual remediation can't help if player in test set has middle name
+  #   and full name isn't in pbp training set.
+  #   Function tries to account for this as follows.
+  
+  # Alex Bee Caine -> c("A. Caine", "A Caine", "A. Bee Caine", "A Bee Caine",
+  #                     "Ab Caine", "A Bee-Caine", "A. Bee-Caine")
+  
+  # This method risks picking up on players with same last name and first letter
+  # But this is unlikely as the pbp training set only 1 case of this - Kr&Ka Pliskova
+  # And this was picked up since there were 2 characters before the space
+  
+  parts <- strsplit(fullname,split=" ")[[1]]
+  n <- length(parts)
+  first.letter <- substr(parts[1],1,1)
+  equiv <- c(fullname,
+             paste(first.letter," ",parts[n],sep=""),
+             paste(first.letter,"."," ",parts[n],sep=""))
+  if (n > 2){
+    rest <- ""
+    rest.dash <- ""
+    for (i in 1:(n-1)){
+      rest <- paste(rest," ",parts[i+1],sep="")
+      rest.dash <- paste(rest.dash,parts[i+1],sep="-")
+    }
+    rest.dash <- substr(rest.dash,2,nchar(rest.dash)) # get rid of first dash
+    first.middle.name.letter <- tolower(substr(parts[2],1,1))
+    rest.more <- "" # for if the name has four or more parts
+    for (i in 1:(n-2)){
+      rest.more <- paste(rest.more," ",parts[i+2],sep="")
+    }
+    # rest contains the first space, rest.dash doesn't
+    equiv <- c(equiv, paste(first.letter,rest,sep=""),
+               paste(first.letter,".",rest,sep=""),
+               paste(first.letter," ",rest.dash,sep=""),
+               paste(first.letter,"."," ",rest.dash,sep=""),
+               paste(first.letter,first.middle.name.letter,rest.more,sep=""))
+  }
+  return(equiv)
+}
+
+get.aggr.by.state <- function(entry){
+  # extract serve won & serve total fields for a player
+  # without surface distinction
+  ret <- rep(0,38)
+  for (i in 1:18){
+    # odd indices for pts won, even for total
+    ret[2*i-1] <- entry[[3+12*i]]+entry[[7+12*i]]+entry[[11+12*i]]
+    ret[2*i] <- entry[[2+12*i]]+entry[[6+12*i]]+entry[[10+12*i]]
+  }
+  ret[37] <- entry[[3]]+entry[[7]]+entry[[11]]
+  ret[38] <- entry[[2]]+entry[[6]]+entry[[10]]
+  return(ret)
+}
+
+create.p.vector <- function(tst.names,pbp){
+  # returns a dataframe with the rows in the order of names,
+  # the columns being p's for states 1-18 and then t (tiebreak)
+  # final column is overall p regardless of state by taking total won / total serve
+  # names usually from get.unique.players on test data set
+  # pbp is the point-by-point data given
+  # note p-vectors not surface specific
+  
+  n <- length(tst.names)
+  m <- nrow(pbp)
+  pbp.name <- pbp$name
+  aggr <- matrix(0,nrow=n,ncol=38) # 38=2x19, taking won & total to divide later
+  for (i in 1:n){
+    equiv <- get.equiv.names(tst.names[i])
+    p <- length(equiv)
+    for (j in 1:p){
+      for (l in 1:m){
+        # check 1 by 1 since pbp has non-unique names after manual remediation
+        if (equiv[j]==pbp.name[l]){
+          more.aggr <- get.aggr.by.state(pbp[l,])
+          aggr[i,] <- aggr[i,]+more.aggr
+        }
+      }
+    }
+  }
+  # now divide odd cols by even cols to obtain p's
+  output <- matrix(0,nrow=n,ncol=20)
+  output <- data.frame(output, row.names=tst.names)
+  for (i in 1:n){
+    for (j in 1:19){
+      output[i,j] <- aggr[i,2*j-1]/aggr[i,2*j]
+    } # note below first seq() output will end at 37
+    output[i,20] <- sum(aggr[i,seq(1,38,by=2)])/sum(aggr[i,seq(2,38,by=2)])
+  }
+  return(output)
+}
+```
+
+# Plotting
+
+```{r}
+library(ggplot2)
+```
+```{r}
+# get.equiv.names must start with the full name
+# therefore it is unable to work with list containing abbreviations
+# names original length in pbp.only5th is 506,
+# short enough to fill in full names manually
+# that is done before running this block
+names <- unique(pbp.only5th$name)
+p.vec.o <- create.p.vector(names,pbp.only5th)[,20]
+p.vec.n <- create.p.vector(names,pbp.no5th)[,20]
+```
+```{r}
+n <- length(names)
+df <- matrix(0,nrow=2*n,ncol=3)
+df[,1] <- 1:(2*n)
+df[seq(1,2*n,by=2),2] <- p.vec.n
+df[seq(2,2*n,by=2),2] <- p.vec.o
+df[,3] <- rep(c(1,2),n)
+df <- data.frame(df)
+```
+```{r}
+gg1 <- ggplot(data=df,aes(x=X1,y=X2,shape=as.factor(X3),color=as.factor(X3))) + 
+  geom_point(show.legend=FALSE,size=1.5) +
+  scale_color_manual(values=c('#010101','#FF0000')) +
+  scale_shape_manual(values=c(16,19)) +
+  xlab("Player") + ylab(expression(italic(p)))
+gg1
+```
+
+```{r}
+df2 <- matrix(0,nrow=n,ncol=2)
+df2[,1] <- p.vec.n
+df2[,2] <- p.vec.o
+df2 <- data.frame(df2)
+```
+```{r}
+gg2 <- ggplot(data=df2,aes(x=X1,y=X2)) + geom_point(size=2,col="black",shape=1) +
+  geom_abline(intercept=0,slope=1,linetype="dashed",color="red") +
+  xlab(expression(italic(p)~without~"5th-set"~data)) +
+  ylab(expression(italic(p)~with~only~"5th-set"~data))
+gg2
+```
+
+```{r}
+library(patchwork)
+gg <- gg1+gg2
+gg
+```
+
+```{r}
+ggsave('ad-hoc/fig5s.png', gg, width=10, height=5, dpi=300)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

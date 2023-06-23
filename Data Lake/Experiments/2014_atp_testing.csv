@@ -1,0 +1,211 @@
+tourney_id,tourney_name,surface,tourney_date,winner_name,loser_name,score,round,minutes,w_ace,w_df,w_svpt,w_1stIn,w_1stWon,w_2ndWon,w_SvGms,w_bpSaved,w_bpFaced,l_ace,l_df,l_svpt,l_1stIn,l_1stWon,l_2ndWon,l_SvGms,l_bpSaved,l_bpFaced
+2014-580,Australian Open,Hard,20140113,Rafael Nadal,Kei Nishikori,7-6(3) 7-5 7-6(3),R16,197,12,1,124,88,67,14,18,6,10,3,1,115,76,51,16,18,3,8
+2014-580,Australian Open,Hard,20140113,Grigor Dimitrov,Roberto Bautista Agut,6-3 3-6 6-2 6-4,R16,144,11,3,112,67,57,21,18,4,5,5,1,102,65,44,22,18,1,5
+2014-580,Australian Open,Hard,20140113,Andy Murray,Stephane Robert,6-1 6-2 6-7(6) 6-2,R16,162,7,3,126,77,58,26,18,5,6,3,8,114,59,40,21,17,7,14
+2014-580,Australian Open,Hard,20140113,Roger Federer,Jo-Wilfried Tsonga,6-3 7-5 6-4,R16,112,7,1,84,48,42,25,16,1,1,8,1,88,46,32,23,15,4,7
+2014-580,Australian Open,Hard,20140113,Tomas Berdych,Kevin Anderson,6-2 6-2 6-3,R16,118,7,3,71,37,33,21,13,0,0,17,1,87,62,39,10,12,12,17
+2014-580,Australian Open,Hard,20140113,David Ferrer,Florian Mayer,6-7(5) 7-5 6-2 6-1,R16,175,3,1,118,76,56,23,19,8,11,4,3,153,94,52,27,20,10,19
+2014-580,Australian Open,Hard,20140113,Stan Wawrinka,Tommy Robredo,6-3 7-6(3) 7-6(5),R16,143,14,3,107,62,54,24,17,3,4,1,0,107,76,53,14,16,3,5
+2014-580,Australian Open,Hard,20140113,Novak Djokovic,Fabio Fognini,6-3 6-0 6-2,R16,93,8,2,60,43,38,12,12,0,0,3,7,91,54,32,13,11,16,22
+2014-580,Australian Open,Hard,20140113,Rafael Nadal,Grigor Dimitrov,3-6 7-6(3) 7-6(7) 6-2,QF,217,3,7,124,91,66,22,20,3,6,18,5,155,90,64,32,21,7,11
+2014-580,Australian Open,Hard,20140113,Roger Federer,Andy Murray,6-3 6-4 6-7(6) 6-3,QF,200,10,0,122,78,60,29,21,1,2,9,1,146,89,60,28,19,13,17
+2014-580,Australian Open,Hard,20140113,Tomas Berdych,David Ferrer,6-1 6-4 2-6 6-4,QF,184,10,4,129,67,52,27,18,9,12,2,1,118,72,46,23,17,8,13
+2014-580,Australian Open,Hard,20140113,Stan Wawrinka,Novak Djokovic,2-6 6-4 6-2 3-6 9-7,QF,240,17,5,170,98,71,36,25,3,7,7,1,144,105,75,23,26,5,10
+2014-580,Australian Open,Hard,20140113,Rafael Nadal,Roger Federer,7-6(4) 6-3 6-3,SF,144,3,1,86,56,41,22,15,1,2,8,1,105,69,45,18,15,10,14
+2014-580,Australian Open,Hard,20140113,Stan Wawrinka,Tomas Berdych,6-3 6-7(1) 7-6(3) 7-6(4),SF,211,18,4,145,88,72,32,23,1,1,21,7,140,87,71,30,22,3,4
+2014-580,Australian Open,Hard,20140113,Stan Wawrinka,Rafael Nadal,6-3 6-2 3-6 6-3,F,141,19,2,96,53,46,22,18,4,6,1,3,108,84,50,10,17,10,15
+2014-404,Indian Wells Masters,Hard,20140306,Alexandr Dolgopolov,Fabio Fognini,6-2 6-4,R16,76,6,1,56,28,23,17,9,3,3,4,6,65,36,26,11,9,3,6
+2014-404,Indian Wells Masters,Hard,20140306,Milos Raonic,Andy Murray,4-6 7-5 6-3,R16,130,15,3,80,53,44,14,16,0,2,4,3,90,60,43,13,15,4,7
+2014-404,Indian Wells Masters,Hard,20140306,Kevin Anderson,Stan Wawrinka,7-6(1) 4-6 6-1,R16,140,12,8,105,67,48,16,14,10,13,5,2,89,38,28,23,15,5,10
+2014-404,Indian Wells Masters,Hard,20140306,Roger Federer,Tommy Haas,6-4 6-4,R16,84,7,1,62,40,33,10,10,4,5,3,3,69,45,31,10,10,8,11
+2014-404,Indian Wells Masters,Hard,20140306,John Isner,Fernando Verdasco,7-6(3) 3-6 6-3,R16,112,10,0,88,62,46,19,15,0,1,4,3,85,57,44,16,15,2,3
+2014-404,Indian Wells Masters,Hard,20140306,Ernests Gulbis,Roberto Bautista Agut,7-6(0) 4-6 6-2,R16,145,7,6,99,52,39,23,15,4,7,1,4,108,63,43,17,15,8,12
+2014-404,Indian Wells Masters,Hard,20140306,Julien Benneteau,Feliciano Lopez,6-3 7-6(4),R16,92,13,2,62,40,35,15,11,1,1,8,3,80,47,36,14,10,4,5
+2014-404,Indian Wells Masters,Hard,20140306,Novak Djokovic,Marin Cilic,1-6 6-2 6-3,R16,105,2,3,72,40,29,18,12,2,4,13,2,70,41,32,13,12,4,7
+2014-404,Indian Wells Masters,Hard,20140306,Alexandr Dolgopolov,Milos Raonic,6-3 6-4,QF,79,6,5,54,29,26,13,10,0,1,4,3,62,38,27,11,9,6,9
+2014-404,Indian Wells Masters,Hard,20140306,Roger Federer,Kevin Anderson,7-5 6-1,QF,69,3,0,51,33,26,16,10,1,1,3,1,54,32,23,7,9,4,7
+2014-404,Indian Wells Masters,Hard,20140306,John Isner,Ernests Gulbis,7-6(4) 7-6(3),QF,109,13,3,80,59,48,9,12,3,4,7,7,90,49,37,22,12,5,6
+2014-404,Indian Wells Masters,Hard,20140306,Novak Djokovic,Julien Benneteau,6-1 6-3,QF,69,7,3,41,27,25,8,8,0,0,2,2,64,34,22,9,8,11,15
+2014-404,Indian Wells Masters,Hard,20140306,Roger Federer,Alexandr Dolgopolov,6-3 6-1,SF,62,7,1,43,31,23,10,8,0,0,2,3,61,24,16,14,8,5,9
+2014-404,Indian Wells Masters,Hard,20140306,Novak Djokovic,John Isner,7-5 6-7(2) 6-1,SF,144,7,2,92,63,47,15,16,4,6,8,2,114,78,49,16,15,7,12
+2014-404,Indian Wells Masters,Hard,20140306,Novak Djokovic,Roger Federer,3-6 6-3 7-6(3),F,132,6,5,96,62,47,17,15,1,3,6,4,101,64,45,21,15,4,6
+2014-403,Miami Masters,Hard,20140319,Rafael Nadal,Fabio Fognini,6-2 6-2,R16,62,3,1,35,23,22,10,8,0,0,2,1,48,27,17,9,8,4,8
+2014-403,Miami Masters,Hard,20140319,Milos Raonic,Benjamin Becker,6-3 6-4,R16,90,15,3,67,41,35,14,10,8,8,0,3,60,32,23,13,9,4,6
+2014-403,Miami Masters,Hard,20140319,Alexandr Dolgopolov,Stan Wawrinka,6-4 3-6 6-1,R16,105,5,2,68,30,24,23,13,2,4,4,7,94,43,28,26,13,2,6
+2014-403,Miami Masters,Hard,20140319,Tomas Berdych,John Isner,6-3 7-5,R16,91,7,3,59,34,30,15,11,2,2,9,1,73,47,30,13,10,6,8
+2014-403,Miami Masters,Hard,20140319,Roger Federer,Richard Gasquet,6-1 6-2,R16,49,6,0,37,25,22,7,7,1,1,0,4,43,26,14,6,8,1,6
+2014-403,Miami Masters,Hard,20140319,Kei Nishikori,David Ferrer,7-6(7) 2-6 7-6(9),R16,185,4,3,114,64,43,20,16,7,14,2,5,123,72,45,26,16,8,13
+2014-403,Miami Masters,Hard,20140319,Andy Murray,Jo-Wilfried Tsonga,6-4 6-1,R16,74,2,1,38,27,24,8,8,0,0,3,3,68,37,17,17,9,8,12
+2014-403,Miami Masters,Hard,20140319,Novak Djokovic,Tommy Robredo,6-3 7-5,R16,82,5,2,60,39,32,14,11,1,1,2,1,58,44,31,6,10,0,2
+2014-403,Miami Masters,Hard,20140319,Rafael Nadal,Milos Raonic,4-6 6-2 6-4,QF,156,2,2,84,63,47,12,14,2,3,8,5,103,57,43,18,14,6,9
+2014-403,Miami Masters,Hard,20140319,Tomas Berdych,Alexandr Dolgopolov,6-4 7-6(3),QF,105,11,2,64,44,36,10,11,1,3,9,3,83,40,33,15,11,6,9
+2014-403,Miami Masters,Hard,20140319,Kei Nishikori,Roger Federer,3-6 7-5 6-4,QF,129,6,5,108,71,46,18,15,5,9,7,3,88,47,33,20,16,7,12
+2014-403,Miami Masters,Hard,20140319,Novak Djokovic,Andy Murray,7-5 6-3,QF,90,7,3,66,48,35,10,11,1,2,1,5,60,39,25,10,10,3,6
+2014-403,Miami Masters,Hard,20140319,Rafael Nadal,Tomas Berdych,W/O,SF,,,,,,,,,,,,,,,,,,,
+2014-403,Miami Masters,Hard,20140319,Novak Djokovic,Kei Nishikori,W/O,SF,,,,,,,,,,,,,,,,,,,
+2014-403,Miami Masters,Hard,20140319,Novak Djokovic,Rafael Nadal,6-3 6-3,F,84,5,0,49,35,30,8,9,1,1,2,1,52,37,22,7,9,1,4
+2014-410,Monte Carlo Masters,Clay,20140413,Rafael Nadal,Andreas Seppi,6-1 6-3,R16,74,2,2,45,29,24,7,8,5,6,1,0,49,27,15,7,8,0,5
+2014-410,Monte Carlo Masters,Clay,20140413,David Ferrer,Grigor Dimitrov,6-4 6-2,R16,96,0,0,58,36,21,14,9,2,4,1,1,70,35,21,15,9,8,13
+2014-410,Monte Carlo Masters,Clay,20140413,Stan Wawrinka,Nicolas Almagro,W/O,R16,,,,,,,,,,,,,,,,,,,
+2014-410,Monte Carlo Masters,Clay,20140413,Milos Raonic,Tommy Robredo,6-4 6-3,R16,73,7,2,53,29,27,14,10,0,0,1,1,49,33,18,14,9,4,6
+2014-410,Monte Carlo Masters,Clay,20140413,Jo-Wilfried Tsonga,Fabio Fognini,5-7 6-3 6-0,R16,116,6,2,86,49,36,19,14,7,10,1,3,75,51,30,9,13,2,8
+2014-410,Monte Carlo Masters,Clay,20140413,Roger Federer,Lukas Rosol,6-4 6-1,R16,58,6,1,53,31,28,9,9,3,4,0,1,43,25,14,6,8,0,4
+2014-410,Monte Carlo Masters,Clay,20140413,Guillermo Garcia Lopez,Tomas Berdych,4-6 6-3 6-1,R16,126,0,1,77,59,41,7,13,2,5,6,2,85,42,28,16,13,4,10
+2014-410,Monte Carlo Masters,Clay,20140413,Novak Djokovic,Pablo Carreno Busta,6-0 6-1,R16,48,2,0,34,25,19,9,7,0,0,0,0,38,22,8,6,6,2,7
+2014-410,Monte Carlo Masters,Clay,20140413,David Ferrer,Rafael Nadal,7-6(1) 6-4,QF,134,1,1,90,55,33,20,11,7,10,1,2,80,49,29,14,11,6,10
+2014-410,Monte Carlo Masters,Clay,20140413,Stan Wawrinka,Milos Raonic,7-6(5) 6-2,QF,91,5,3,63,30,24,22,10,0,0,6,0,62,38,28,14,10,1,3
+2014-410,Monte Carlo Masters,Clay,20140413,Roger Federer,Jo-Wilfried Tsonga,2-6 7-6(6) 6-1,QF,146,4,0,92,61,42,18,14,2,4,3,2,139,93,57,22,13,17,19
+2014-410,Monte Carlo Masters,Clay,20140413,Novak Djokovic,Guillermo Garcia Lopez,4-6 6-3 6-1,QF,132,6,1,87,55,41,16,13,3,5,0,1,93,55,33,18,13,6,11
+2014-410,Monte Carlo Masters,Clay,20140413,Stan Wawrinka,David Ferrer,6-1 7-6(3),SF,90,6,1,66,34,29,18,10,2,2,1,2,65,39,27,13,9,4,6
+2014-410,Monte Carlo Masters,Clay,20140413,Roger Federer,Novak Djokovic,7-5 6-2,SF,75,3,1,57,40,33,10,10,2,2,2,0,59,40,24,12,10,2,5
+2014-410,Monte Carlo Masters,Clay,20140413,Stan Wawrinka,Roger Federer,4-6 7-6(5) 6-2,F,134,5,2,93,54,43,22,15,1,3,3,1,103,69,51,15,15,4,7
+2014-1536,Madrid Masters,Clay,20140504,Rafael Nadal,Jarkko Nieminen,6-1 6-4,R16,80,2,0,51,38,25,8,8,3,4,2,0,52,41,23,2,9,6,11
+2014-1536,Madrid Masters,Clay,20140504,Tomas Berdych,Grigor Dimitrov,3-6 6-3 6-2,R16,110,7,1,78,46,34,19,13,3,4,12,2,74,46,33,16,13,4,7
+2014-1536,Madrid Masters,Clay,20140504,Roberto Bautista Agut,Lukasz Kubot,6-4 6-2,R16,75,3,0,61,49,34,8,9,7,8,3,1,46,31,21,5,9,2,6
+2014-1536,Madrid Masters,Clay,20140504,Santiago Giraldo,Andy Murray,6-3 6-2,R16,70,3,0,54,35,31,9,9,1,1,6,1,48,27,19,9,8,4,7
+2014-1536,Madrid Masters,Clay,20140504,Kei Nishikori,Milos Raonic,7-6(5) 7-6(5),R16,126,9,1,91,60,44,20,12,6,7,12,3,84,52,40,18,12,5,6
+2014-1536,Madrid Masters,Clay,20140504,Feliciano Lopez,Dominic Thiem,W/O,R16,,,,,,,,,,,,,,,,,,,
+2014-1536,Madrid Masters,Clay,20140504,David Ferrer,John Isner,6-4 6-4,R16,78,2,1,52,37,33,9,10,2,2,6,0,64,50,30,9,10,5,7
+2014-1536,Madrid Masters,Clay,20140504,Ernests Gulbis,Marin Cilic,6-3 6-4,R16,87,11,3,64,45,38,7,10,1,1,9,3,59,22,19,17,9,3,5
+2014-1536,Madrid Masters,Clay,20140504,Rafael Nadal,Tomas Berdych,6-4 6-2,QF,88,4,0,54,41,32,7,9,1,1,0,1,55,39,23,9,9,2,5
+2014-1536,Madrid Masters,Clay,20140504,Roberto Bautista Agut,Santiago Giraldo,6-3 6-4,QF,87,5,1,65,40,31,14,10,6,6,5,0,54,32,22,13,9,3,5
+2014-1536,Madrid Masters,Clay,20140504,Kei Nishikori,Feliciano Lopez,6-4 6-4,QF,91,1,0,62,35,25,20,10,3,3,9,1,68,51,36,4,10,7,9
+2014-1536,Madrid Masters,Clay,20140504,David Ferrer,Ernests Gulbis,7-6(3) 6-3,QF,101,1,1,73,48,35,16,11,0,1,5,2,65,41,30,11,10,3,5
+2014-1536,Madrid Masters,Clay,20140504,Rafael Nadal,Roberto Bautista Agut,6-4 6-3,SF,103,2,3,51,35,25,9,9,2,4,0,1,77,55,33,6,10,8,13
+2014-1536,Madrid Masters,Clay,20140504,Kei Nishikori,David Ferrer,7-6(5) 5-7 6-3,SF,176,5,3,137,88,62,24,17,12,15,9,2,96,62,42,23,16,4,7
+2014-1536,Madrid Masters,Clay,20140504,Rafael Nadal,Kei Nishikori,2-6 6-4 3-0 RET,F,103,4,2,55,43,31,7,11,3,6,2,3,65,38,25,13,10,6,9
+2014-416,Rome Masters,Clay,20140511,Rafael Nadal,Mikhail Youzhny,6-7(4) 6-2 6-1,R16,164,1,4,99,75,55,7,14,7,9,0,2,102,73,38,15,13,9,15
+2014-416,Rome Masters,Clay,20140511,Andy Murray,Jurgen Melzer,7-6(1) 6-4,R16,102,6,1,80,49,33,18,11,8,10,4,1,64,47,28,8,11,2,5
+2014-416,Rome Masters,Clay,20140511,Tommy Haas,Stan Wawrinka,5-7 6-2 6-3,R16,120,7,0,81,54,41,16,15,0,3,8,4,93,47,29,22,14,9,14
+2014-416,Rome Masters,Clay,20140511,Grigor Dimitrov,Tomas Berdych,6-7(3) 6-2 6-2,R16,145,8,2,89,58,48,15,14,2,3,7,3,99,62,42,17,14,8,13
+2014-416,Rome Masters,Clay,20140511,Milos Raonic,Jo-Wilfried Tsonga,7-6(5) 6-4,R16,108,7,3,80,50,38,19,11,5,5,6,1,64,40,30,17,11,3,4
+2014-416,Rome Masters,Clay,20140511,Jeremy Chardy,Ivan Dodig,6-3 6-2,R16,72,3,3,46,30,25,9,8,0,0,2,2,50,35,21,5,9,2,6
+2014-416,Rome Masters,Clay,20140511,David Ferrer,Ernests Gulbis,6-2 6-3,R16,71,3,1,51,36,27,8,8,5,6,7,4,54,34,22,3,9,1,6
+2014-416,Rome Masters,Clay,20140511,Novak Djokovic,Philipp Kohlschreiber,4-6 6-2 6-1,R16,96,2,1,72,54,38,9,13,1,4,2,0,70,42,27,8,12,4,10
+2014-416,Rome Masters,Clay,20140511,Rafael Nadal,Andy Murray,1-6 6-3 7-5,QF,161,6,1,86,61,41,13,14,6,10,5,4,98,63,44,11,14,8,12
+2014-416,Rome Masters,Clay,20140511,Grigor Dimitrov,Tommy Haas,6-2 RET,QF,36,2,0,24,15,11,8,4,2,2,0,0,32,23,11,5,4,6,8
+2014-416,Rome Masters,Clay,20140511,Milos Raonic,Jeremy Chardy,6-3 5-7 6-2,QF,122,14,2,85,54,47,12,15,5,7,8,3,88,54,40,14,14,5,9
+2014-416,Rome Masters,Clay,20140511,Novak Djokovic,David Ferrer,7-5 4-6 6-3,QF,152,3,2,97,60,41,20,16,3,6,2,0,92,59,38,17,15,8,12
+2014-416,Rome Masters,Clay,20140511,Rafael Nadal,Grigor Dimitrov,6-2 6-2,SF,83,1,0,55,44,29,8,8,3,3,2,3,46,29,17,4,8,3,7
+2014-416,Rome Masters,Clay,20140511,Novak Djokovic,Milos Raonic,6-7(5) 7-6(4) 6-3,SF,181,3,1,114,82,58,21,16,7,8,17,3,121,81,61,18,17,7,10
+2014-416,Rome Masters,Clay,20140511,Novak Djokovic,Rafael Nadal,4-6 6-3 6-3,F,139,7,0,72,45,32,15,14,2,6,0,2,93,70,38,10,14,8,14
+2014-520,Roland Garros,Clay,20140526,Rafael Nadal,Dusan Lajovic,6-1 6-2 6-1,R16,93,0,1,59,37,30,14,11,3,4,3,3,57,28,14,4,11,2,10
+2014-520,Roland Garros,Clay,20140526,David Ferrer,Kevin Anderson,6-3 6-3 6-7(5) 6-1,R16,171,2,4,123,89,66,16,19,5,7,9,4,126,81,52,18,18,9,16
+2014-520,Roland Garros,Clay,20140526,Gael Monfils,Guillermo Garcia Lopez,6-0 6-2 7-5,R16,118,4,6,77,45,34,18,13,2,4,0,0,82,42,21,16,13,9,17
+2014-520,Roland Garros,Clay,20140526,Andy Murray,Fernando Verdasco,6-4 7-5 7-6(3),R16,174,4,3,112,69,52,24,17,4,6,1,2,138,104,61,18,17,15,19
+2014-520,Roland Garros,Clay,20140526,Tomas Berdych,John Isner,6-4 6-4 6-4,R16,111,11,1,83,53,44,19,15,2,2,7,1,86,54,38,16,15,5,8
+2014-520,Roland Garros,Clay,20140526,Ernests Gulbis,Roger Federer,6-7(5) 7-6(3) 6-2 4-6 6-3,R16,222,13,4,154,93,65,37,26,2,7,7,3,161,102,70,30,25,5,12
+2014-520,Roland Garros,Clay,20140526,Milos Raonic,Marcel Granollers,6-3 6-3 6-3,R16,114,6,2,98,62,49,17,14,2,2,3,0,75,53,36,9,13,1,5
+2014-520,Roland Garros,Clay,20140526,Novak Djokovic,Jo-Wilfried Tsonga,6-1 6-4 6-1,R16,89,1,1,66,44,31,17,12,1,2,5,2,71,40,22,11,12,2,9
+2014-520,Roland Garros,Clay,20140526,Rafael Nadal,David Ferrer,4-6 6-4 6-0 6-1,QF,154,1,1,102,63,43,22,16,11,14,2,1,95,60,32,15,17,5,14
+2014-520,Roland Garros,Clay,20140526,Andy Murray,Gael Monfils,6-4 6-1 4-6 1-6 6-0,QF,195,1,2,135,84,55,31,20,9,13,4,5,139,105,63,14,20,11,18
+2014-520,Roland Garros,Clay,20140526,Ernests Gulbis,Tomas Berdych,6-3 6-2 6-4,QF,119,10,1,79,47,38,19,14,2,3,3,2,78,39,27,17,13,3,8
+2014-520,Roland Garros,Clay,20140526,Novak Djokovic,Milos Raonic,7-5 7-6(5) 6-4,QF,142,4,1,98,67,50,23,17,1,2,21,4,114,80,63,10,17,6,9
+2014-520,Roland Garros,Clay,20140526,Rafael Nadal,Andy Murray,6-3 6-2 6-1,SF,100,2,2,59,45,41,8,12,0,0,2,3,67,35,22,11,12,0,6
+2014-520,Roland Garros,Clay,20140526,Novak Djokovic,Ernests Gulbis,6-3 6-3 3-6 6-3,SF,154,9,1,111,74,59,16,18,5,7,13,5,105,60,42,24,18,5,10
+2014-520,Roland Garros,Clay,20140526,Rafael Nadal,Novak Djokovic,3-6 7-5 6-2 6-4,F,211,3,4,120,84,61,18,19,6,9,11,3,126,82,59,16,20,4,10
+2014-540,Wimbledon,Grass,20140623,Novak Djokovic,Jo-Wilfried Tsonga,6-3 6-4 7-6(5),R16,112,14,0,96,68,55,19,16,2,2,19,2,89,59,46,18,15,7,9
+2014-540,Wimbledon,Grass,20140623,Marin Cilic,Jeremy Chardy,7-6(8) 6-4 6-4,R16,129,33,3,108,69,61,17,16,4,4,17,7,110,72,58,14,16,4,6
+2014-540,Wimbledon,Grass,20140623,Andy Murray,Kevin Anderson,6-4 6-3 7-6(6),R16,152,11,2,93,68,55,11,15,2,3,9,0,125,81,52,22,16,15,19
+2014-540,Wimbledon,Grass,20140623,Grigor Dimitrov,Leonardo Mayer,6-4 7-6(6) 6-2,R16,129,10,3,97,66,52,19,15,3,3,11,2,98,61,41,19,15,2,5
+2014-540,Wimbledon,Grass,20140623,Stan Wawrinka,Feliciano Lopez,7-6(5) 7-6(7) 6-3,R16,118,31,2,95,63,56,25,17,0,0,11,5,101,63,53,22,16,1,2
+2014-540,Wimbledon,Grass,20140623,Roger Federer,Tommy Robredo,6-1 6-4 6-4,R16,94,11,0,75,42,37,24,14,1,1,3,1,87,61,36,13,13,9,13
+2014-540,Wimbledon,Grass,20140623,Milos Raonic,Kei Nishikori,4-6 6-1 7-6(4) 6-3,R16,147,35,2,114,75,64,23,20,6,7,11,1,113,72,52,23,18,4,7
+2014-540,Wimbledon,Grass,20140623,Nick Kyrgios,Rafael Nadal,7-6(5) 5-7 7-6(5) 6-3,R16,178,37,4,144,98,81,25,23,2,3,11,3,137,100,77,22,22,3,4
+2014-540,Wimbledon,Grass,20140623,Novak Djokovic,Marin Cilic,6-1 3-6 6-7(4) 6-2 6-2,QF,198,10,3,132,92,68,23,22,2,4,10,6,160,89,61,29,22,12,19
+2014-540,Wimbledon,Grass,20140623,Grigor Dimitrov,Andy Murray,6-1 7-6(4) 6-2,QF,121,10,3,91,57,44,20,14,1,2,5,5,82,50,36,10,13,4,9
+2014-540,Wimbledon,Grass,20140623,Roger Federer,Stan Wawrinka,3-6 7-6(5) 6-4 6-4,QF,153,10,1,119,77,61,29,20,3,4,9,1,124,74,57,31,21,5,7
+2014-540,Wimbledon,Grass,20140623,Milos Raonic,Nick Kyrgios,6-7(4) 6-2 6-4 7-6(4),QF,144,39,2,111,78,69,22,21,0,1,15,1,144,103,69,22,21,5,9
+2014-540,Wimbledon,Grass,20140623,Novak Djokovic,Grigor Dimitrov,6-4 3-6 7-6(2) 7-6(7),SF,182,17,2,145,102,74,24,21,8,11,15,8,131,82,67,22,22,3,6
+2014-540,Wimbledon,Grass,20140623,Roger Federer,Milos Raonic,6-4 6-4 6-4,SF,101,6,1,80,52,42,19,15,1,1,17,4,84,46,37,19,15,4,7
+2014-540,Wimbledon,Grass,20140623,Novak Djokovic,Roger Federer,6-7(7) 6-4 7-6(4) 5-7 6-4,F,236,13,3,174,108,79,43,28,4,7,29,5,192,133,102,26,28,11,15
+2014-421,Canada Masters,Hard,20140804,Jo-Wilfried Tsonga,Novak Djokovic,6-2 6-2,R16,64,8,2,49,26,21,13,8,1,1,2,1,49,30,17,9,8,0,4
+2014-421,Canada Masters,Hard,20140804,Andy Murray,Richard Gasquet,W/O,R16,,,,,,,,,,,,,,,,,,,
+2014-421,Canada Masters,Hard,20140804,Kevin Anderson,Stan Wawrinka,7-6(8) 7-5,R16,105,11,0,73,50,42,13,12,1,2,1,3,74,32,25,26,12,3,5
+2014-421,Canada Masters,Hard,20140804,Grigor Dimitrov,Tommy Robredo,7-5 5-7 6-4,R16,124,6,4,87,46,37,24,17,0,2,4,1,102,80,56,13,17,5,8
+2014-421,Canada Masters,Hard,20140804,Milos Raonic,Julien Benneteau,6-3 4-6 6-4,R16,107,15,3,77,52,44,12,15,0,2,8,1,81,50,38,15,14,6,9
+2014-421,Canada Masters,Hard,20140804,Feliciano Lopez,Tomas Berdych,3-6 6-3 6-4,R16,116,11,6,85,54,43,14,14,5,6,11,4,86,46,38,19,14,2,4
+2014-421,Canada Masters,Hard,20140804,David Ferrer,Ivan Dodig,1-6 6-3 6-3,R16,115,6,4,89,51,37,18,12,12,14,6,7,85,45,34,20,13,4,7
+2014-421,Canada Masters,Hard,20140804,Roger Federer,Marin Cilic,7-6(5) 6-7(3) 6-4,R16,159,11,4,106,67,55,23,17,2,2,12,1,145,83,60,36,17,9,10
+2014-421,Canada Masters,Hard,20140804,Jo-Wilfried Tsonga,Andy Murray,7-6(5) 4-6 6-4,QF,139,18,4,91,59,49,13,16,1,4,7,3,93,60,44,20,16,6,9
+2014-421,Canada Masters,Hard,20140804,Grigor Dimitrov,Kevin Anderson,5-7 7-5 7-6(6),QF,179,10,3,113,64,50,22,18,2,5,15,5,128,79,57,21,18,6,9
+2014-421,Canada Masters,Hard,20140804,Feliciano Lopez,Milos Raonic,6-4 6-7(5) 6-3,QF,117,9,4,104,65,56,21,16,9,9,18,1,79,55,44,14,15,2,4
+2014-421,Canada Masters,Hard,20140804,Roger Federer,David Ferrer,6-3 4-6 6-3,QF,114,7,3,87,50,40,15,14,3,6,0,3,92,56,32,18,14,4,9
+2014-421,Canada Masters,Hard,20140804,Jo-Wilfried Tsonga,Grigor Dimitrov,6-4 6-3,SF,84,7,4,53,26,23,17,9,4,4,5,2,70,39,25,13,10,7,10
+2014-421,Canada Masters,Hard,20140804,Roger Federer,Feliciano Lopez,6-3 6-4,SF,82,13,1,53,29,25,16,10,0,0,8,9,77,29,24,21,9,9,11
+2014-421,Canada Masters,Hard,20140804,Jo-Wilfried Tsonga,Roger Federer,7-5 7-6(3),F,108,11,2,70,35,33,22,12,0,0,7,4,100,64,45,18,12,6,7
+2014-422,Cincinnati Masters,Hard,20140810,Tommy Robredo,Novak Djokovic,7-6(6) 7-5,R16,105,5,1,69,45,34,17,12,0,1,10,3,78,51,36,12,12,4,6
+2014-422,Cincinnati Masters,Hard,20140810,David Ferrer,Mikhail Youzhny,7-5 6-0,R16,82,2,5,61,38,27,14,9,4,5,1,0,62,32,18,13,9,5,10
+2014-422,Cincinnati Masters,Hard,20140810,Stan Wawrinka,Marin Cilic,3-6 6-0 6-1,R16,83,7,5,67,31,26,20,11,3,4,2,1,62,40,29,6,11,3,8
+2014-422,Cincinnati Masters,Hard,20140810,Julien Benneteau,Jerzy Janowicz,7-5 6-1,R16,74,5,0,66,51,40,6,10,3,3,9,4,48,27,19,11,9,1,4
+2014-422,Cincinnati Masters,Hard,20140810,Milos Raonic,Steve Johnson,6-7(7) 6-3 7-6(4),R16,134,30,8,98,60,56,20,17,1,2,4,4,119,75,55,22,16,6,8
+2014-422,Cincinnati Masters,Hard,20140810,Fabio Fognini,Yen Hsun Lu,3-6 6-3 6-3,R16,105,6,4,90,43,36,23,13,9,10,7,1,82,56,42,10,14,5,8
+2014-422,Cincinnati Masters,Hard,20140810,Andy Murray,John Isner,6-7(3) 6-4 7-6(2),R16,143,14,4,103,62,57,22,17,3,3,21,2,100,63,52,23,17,4,5
+2014-422,Cincinnati Masters,Hard,20140810,Roger Federer,Gael Monfils,6-4 4-6 6-3,R16,109,4,5,87,52,37,18,15,3,6,7,8,91,45,29,22,14,5,9
+2014-422,Cincinnati Masters,Hard,20140810,David Ferrer,Tommy Robredo,6-4 3-6 6-3,QF,126,5,5,91,54,40,16,14,4,7,4,2,109,72,45,18,14,7,11
+2014-422,Cincinnati Masters,Hard,20140810,Julien Benneteau,Stan Wawrinka,1-6 6-1 6-2,QF,81,9,4,60,41,34,7,11,1,3,8,0,69,36,25,15,11,5,9
+2014-422,Cincinnati Masters,Hard,20140810,Milos Raonic,Fabio Fognini,6-1 6-0,QF,57,7,3,45,23,19,12,6,7,7,2,4,40,17,7,7,7,0,6
+2014-422,Cincinnati Masters,Hard,20140810,Roger Federer,Andy Murray,6-3 7-5,QF,93,3,3,63,38,27,13,10,4,6,6,2,73,35,21,17,11,8,13
+2014-422,Cincinnati Masters,Hard,20140810,David Ferrer,Julien Benneteau,6-3 6-2,SF,72,3,0,46,32,24,10,8,1,1,3,5,66,44,28,7,9,6,10
+2014-422,Cincinnati Masters,Hard,20140810,Roger Federer,Milos Raonic,6-2 6-3,SF,69,2,0,52,33,29,10,9,1,1,6,3,57,25,17,16,8,2,5
+2014-422,Cincinnati Masters,Hard,20140810,Roger Federer,David Ferrer,6-3 1-6 6-2,F,102,6,2,74,47,36,13,12,9,11,3,3,88,54,38,14,12,11,14
+2014-560,US Open,Hard,20140825,Novak Djokovic,Philipp Kohlschreiber,6-1 7-5 6-4,R16,123,6,0,85,55,42,21,15,2,2,6,3,85,44,32,19,14,5,9
+2014-560,US Open,Hard,20140825,Andy Murray,Jo-Wilfried Tsonga,7-5 7-5 6-4,R16,155,11,3,99,49,41,29,17,3,5,5,6,113,67,43,24,17,8,13
+2014-560,US Open,Hard,20140825,Stan Wawrinka,Tommy Robredo,7-5 4-6 7-6(7) 6-2,R16,181,18,6,133,73,58,35,21,6,8,4,2,120,77,53,26,21,2,6
+2014-560,US Open,Hard,20140825,Kei Nishikori,Milos Raonic,4-6 7-6(4) 6-7(6) 7-5 6-4,R16,259,8,7,164,92,68,48,28,5,9,35,10,192,106,87,40,28,14,19
+2014-560,US Open,Hard,20140825,Tomas Berdych,Dominic Thiem,6-1 6-2 6-4,R16,98,9,3,81,46,39,20,13,7,7,4,4,71,39,30,10,12,4,9
+2014-560,US Open,Hard,20140825,Marin Cilic,Gilles Simon,5-7 7-6(3) 6-4 3-6 6-3,R16,253,22,4,157,84,67,42,26,7,10,17,3,180,102,72,42,26,10,13
+2014-560,US Open,Hard,20140825,Gael Monfils,Grigor Dimitrov,7-5 7-6(6) 7-5,R16,144,14,6,111,73,57,22,18,6,7,11,4,103,59,43,26,18,1,4
+2014-560,US Open,Hard,20140825,Roger Federer,Roberto Bautista Agut,6-4 6-3 6-2,R16,116,8,5,87,51,39,19,13,6,7,2,4,102,65,38,15,14,7,13
+2014-560,US Open,Hard,20140825,Novak Djokovic,Andy Murray,7-6(1) 6-7(1) 6-2 6-4,QF,212,8,3,152,96,64,29,21,12,16,9,4,133,75,48,28,21,3,10
+2014-560,US Open,Hard,20140825,Kei Nishikori,Stan Wawrinka,3-6 7-5 7-6(7) 6-7(5) 6-4,QF,255,3,6,184,108,82,41,27,8,10,18,8,174,97,81,39,28,7,10
+2014-560,US Open,Hard,20140825,Marin Cilic,Tomas Berdych,6-2 6-4 7-6(4),QF,132,19,5,90,57,48,15,15,2,4,4,5,92,46,33,19,15,3,8
+2014-560,US Open,Hard,20140825,Roger Federer,Gael Monfils,4-6 3-6 6-4 7-5 6-2,QF,200,5,2,151,86,65,37,25,10,15,6,9,157,99,65,29,24,7,13
+2014-560,US Open,Hard,20140825,Kei Nishikori,Novak Djokovic,6-4 1-6 7-6(4) 6-3,SF,172,5,4,125,73,49,26,18,9,13,15,4,112,66,53,17,20,2,7
+2014-560,US Open,Hard,20140825,Marin Cilic,Roger Federer,6-3 6-4 6-4,SF,105,13,1,81,45,39,20,15,1,2,12,1,84,52,36,16,14,4,8
+2014-560,US Open,Hard,20140825,Marin Cilic,Kei Nishikori,6-3 6-3 6-3,F,114,18,3,86,45,36,25,14,8,9,2,1,75,39,22,21,13,6,11
+2014-5014,Shanghai Masters,Hard,20141005,Novak Djokovic,Mikhail Kukushkin,6-3 4-6 6-4,R16,126,13,2,95,65,49,14,15,3,5,9,0,84,60,40,14,14,5,8
+2014-5014,Shanghai Masters,Hard,20141005,David Ferrer,Andy Murray,2-6 6-1 6-2,R16,115,0,0,80,51,37,12,12,4,6,8,0,70,47,35,6,11,3,7
+2014-5014,Shanghai Masters,Hard,20141005,Roger Federer,Roberto Bautista Agut,6-4 6-2,R16,73,8,0,53,37,32,8,9,1,1,0,0,60,38,25,9,9,6,9
+2014-5014,Shanghai Masters,Hard,20141005,Julien Benneteau,Jack Sock,6-3 6-4,R16,71,5,1,62,50,40,5,10,3,3,1,3,49,31,23,9,9,2,4
+2014-5014,Shanghai Masters,Hard,20141005,Tomas Berdych,Ivo Karlovic,6-3 6-4,R16,65,10,0,46,29,26,14,10,0,0,19,1,52,34,26,6,9,4,6
+2014-5014,Shanghai Masters,Hard,20141005,Gilles Simon,Malek Jaziri,6-2 6-3,R16,73,2,1,56,37,28,12,9,3,3,2,1,54,31,19,10,8,5,8
+2014-5014,Shanghai Masters,Hard,20141005,Mikhail Youzhny,Juan Monaco,5-7 6-3 6-2,R16,130,5,1,87,56,41,16,15,6,9,5,2,84,53,33,14,14,6,11
+2014-5014,Shanghai Masters,Hard,20141005,Feliciano Lopez,John Isner,6-3 6-4,R16,60,8,1,51,34,30,11,10,1,1,14,3,57,37,25,10,9,2,4
+2014-5014,Shanghai Masters,Hard,20141005,Novak Djokovic,David Ferrer,6-4 6-2,QF,95,4,0,53,38,32,9,9,2,2,2,1,74,42,31,10,9,4,7
+2014-5014,Shanghai Masters,Hard,20141005,Roger Federer,Julien Benneteau,7-6(4) 6-0,QF,70,11,0,48,37,34,4,9,0,0,5,1,64,48,25,8,9,1,4
+2014-5014,Shanghai Masters,Hard,20141005,Gilles Simon,Tomas Berdych,7-6(4) 4-6 6-0,QF,148,8,1,97,64,51,15,14,3,5,18,4,111,63,50,15,14,8,12
+2014-5014,Shanghai Masters,Hard,20141005,Feliciano Lopez,Mikhail Youzhny,5-7 6-4 6-4,QF,123,12,5,87,46,40,20,16,6,10,4,0,97,67,41,16,16,3,8
+2014-5014,Shanghai Masters,Hard,20141005,Roger Federer,Novak Djokovic,6-4 6-4,SF,96,8,1,72,51,35,13,10,1,1,5,0,77,53,32,13,10,8,10
+2014-5014,Shanghai Masters,Hard,20141005,Gilles Simon,Feliciano Lopez,6-2 7-6(1),SF,80,5,0,51,34,32,12,10,0,0,7,2,75,47,35,8,10,2,4
+2014-5014,Shanghai Masters,Hard,20141005,Roger Federer,Gilles Simon,7-6(6) 7-6(2),F,113,4,0,71,50,39,15,12,2,3,3,1,90,46,28,28,12,6,7
+2014-352,Paris Masters,Hard,20141027,Novak Djokovic,Gael Monfils,6-3 7-6(2),R16,92,1,5,70,39,32,16,11,2,3,12,4,60,38,27,10,10,4,6
+2014-352,Paris Masters,Hard,20141027,Andy Murray,Grigor Dimitrov,6-3 6-3,R16,70,7,2,44,29,27,9,9,0,0,0,2,53,33,21,10,9,1,4
+2014-352,Paris Masters,Hard,20141027,David Ferrer,Fernando Verdasco,6-1 6-2,R16,55,0,0,42,28,21,9,8,0,1,1,5,39,22,10,4,7,2,7
+2014-352,Paris Masters,Hard,20141027,Kei Nishikori,Jo-Wilfried Tsonga,6-1 4-6 6-4,R16,129,1,3,87,47,33,24,13,5,6,10,5,101,51,38,21,14,8,12
+2014-352,Paris Masters,Hard,20141027,Tomas Berdych,Feliciano Lopez,7-5 6-3,R16,94,8,2,77,45,32,16,11,6,8,5,3,59,30,22,10,10,2,6
+2014-352,Paris Masters,Hard,20141027,Kevin Anderson,Stan Wawrinka,6-7(2) 7-5 7-6(3),R16,170,18,3,125,84,63,23,18,4,5,8,3,114,59,48,31,18,6,8
+2014-352,Paris Masters,Hard,20141027,Milos Raonic,Roberto Bautista Agut,7-5 7-6(7),R16,104,23,2,84,48,38,17,12,2,4,1,5,80,57,37,14,12,3,6
+2014-352,Paris Masters,Hard,20141027,Roger Federer,Lucas Pouille,6-4 6-4,R16,75,4,1,54,29,27,15,10,0,0,7,3,77,47,37,10,10,8,10
+2014-352,Paris Masters,Hard,20141027,Novak Djokovic,Andy Murray,7-5 6-2,QF,101,1,1,55,35,28,12,10,1,2,5,3,67,34,23,14,10,9,13
+2014-352,Paris Masters,Hard,20141027,Kei Nishikori,David Ferrer,3-6 7-6(5) 6-4,QF,164,3,3,105,63,43,13,15,3,9,1,4,116,59,40,24,16,10,16
+2014-352,Paris Masters,Hard,20141027,Tomas Berdych,Kevin Anderson,6-7(4) 6-4 6-4,QF,154,16,7,103,54,48,22,16,0,2,12,2,101,69,52,13,16,5,9
+2014-352,Paris Masters,Hard,20141027,Milos Raonic,Roger Federer,7-6(5) 7-5,QF,93,21,1,70,47,40,15,12,1,1,8,1,69,43,38,14,12,1,2
+2014-352,Paris Masters,Hard,20141027,Novak Djokovic,Kei Nishikori,6-2 6-3,SF,62,8,0,48,36,29,6,9,3,4,1,4,48,32,21,2,8,3,7
+2014-352,Paris Masters,Hard,20141027,Milos Raonic,Tomas Berdych,6-3 3-6 7-5,SF,129,12,3,90,51,46,17,15,3,4,7,4,88,51,37,21,15,1,3
+2014-352,Paris Masters,Hard,20141027,Novak Djokovic,Milos Raonic,6-2 6-3,F,83,4,0,56,42,34,7,9,4,4,9,2,56,37,24,7,8,6,9
+2014-605,Tour Finals,Hard,20141109,Novak Djokovic,Stan Wawrinka,6-3 6-0,RR,65,3,0,48,34,26,7,8,2,3,2,3,45,22,10,6,7,4,9
+2014-605,Tour Finals,Hard,20141109,Novak Djokovic,Tomas Berdych,6-2 6-2,RR,69,3,1,41,24,20,12,8,0,0,2,2,52,22,16,9,8,2,6
+2014-605,Tour Finals,Hard,20141109,Novak Djokovic,Marin Cilic,6-1 6-1,RR,57,4,1,37,23,18,8,7,0,1,1,2,46,25,13,5,7,3,9
+2014-605,Tour Finals,Hard,20141109,Stan Wawrinka,Tomas Berdych,6-1 6-1,RR,58,5,0,33,22,21,7,7,0,0,3,3,55,31,19,5,7,4,9
+2014-605,Tour Finals,Hard,20141109,Stan Wawrinka,Marin Cilic,6-3 4-6 6-3,RR,106,7,4,78,38,28,25,14,1,3,7,4,86,54,42,10,14,4,8
+2014-605,Tour Finals,Hard,20141109,Tomas Berdych,Marin Cilic,6-3 6-1,RR,75,5,1,51,28,20,16,8,6,6,3,0,55,28,17,11,8,7,11
+2014-605,Tour Finals,Hard,20141109,Roger Federer,Kei Nishikori,6-3 6-2,RR,69,7,1,59,34,27,14,9,3,3,1,5,52,28,19,11,8,4,7
+2014-605,Tour Finals,Hard,20141109,Roger Federer,Andy Murray,6-0 6-1,RR,56,0,1,36,14,14,14,7,0,0,3,4,42,19,7,9,6,1,6
+2014-605,Tour Finals,Hard,20141109,Kei Nishikori,Andy Murray,6-4 6-4,RR,95,1,8,67,31,22,18,10,4,6,7,3,62,36,27,7,10,4,8
+2014-605,Tour Finals,Hard,20141109,Kei Nishikori,David Ferrer,4-6 6-4 6-1,RR,117,5,6,84,49,39,15,13,7,9,2,3,88,48,30,20,14,4,9
+2014-605,Tour Finals,Hard,20141109,Roger Federer,Milos Raonic,6-1 7-6(0),RR,89,5,2,75,42,32,20,10,4,4,10,2,60,28,22,15,9,4,6
+2014-605,Tour Finals,Hard,20141109,Andy Murray,Milos Raonic,6-3 7-5,RR,92,4,2,66,36,28,16,11,0,1,4,2,62,33,23,14,10,2,5
+2014-605,Tour Finals,Hard,20141109,Roger Federer,Stan Wawrinka,4-6 7-5 7-6(6),SF,168,4,0,108,57,41,29,17,3,6,10,4,123,47,38,36,17,6,9
+2014-605,Tour Finals,Hard,20141109,Novak Djokovic,Kei Nishikori,6-1 3-6 6-0,SF,88,3,2,58,34,28,13,11,2,4,3,6,67,38,29,5,11,3,9
+2014-605,Tour Finals,Hard,20141109,Novak Djokovic,Roger Federer,W/O,F,,,,,,,,,,,,,,,,,,,

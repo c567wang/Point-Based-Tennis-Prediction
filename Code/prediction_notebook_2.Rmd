@@ -1,0 +1,1331 @@
+---
+title: "Notebook 2"
+subtitle: "To organize into Latex"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+MATCH.WIN.PROB OUTDATED IN THIS FILE, WILL UPDATE IN THE FUTURE. NOT EXPECTING RESULTS TO CHANGE TOO MUCH.
+
+### Different Probabilities for the Point-to-Game DTMC
+
+The plan in this section, which kicks off the methodologies in category 2 outlined above, is to start with probabilities for all different states of the Point-to-Game DTMC. Then we can 'deactivate' (switch out with overall p) states in a step-wise manner and hopefully see changes in prediction ability. As a side-goal, we hope to identify edges, and thus points in a game, that are especially important. 
+One decision to make is what estimating method to use for p when beginning this experiment. (This is the primary question in category 1 experiments above.) 
+
+### Core Functions (From Notebook 1 with modification)
+
+```{r}
+source("matrices/game_matrices_pointwise.R")
+source("matrices/tiebreak_matrices.R")
+source("matrices/set_matrices.R")
+source("matrices/match_matrices.R")
+library(expm)
+```
+
+```{r}
+match.win.prob <- function(p1,p2,format=0){
+  # under the iid assumptions, calculates player 1 (P1)'s probability of winning a match
+  # with player 2 (P2), where P1 is the player who serves the first game of the first set
+  # input:
+  #   p1(p2): probability of P1(P2) winning a point in their serving game
+  #   format: acceptable values are 0,1,2
+  #     0 - best of 3 sets, all tiebreaks to 7
+  #     1 - best of 3 sets, final tiebreak to 10
+  #     2 - best of 5 sets, final tiebreak to 10
+  # output:
+  #   p: probability model gives of P1 winning the match
+  
+  # !MODIFICATION! p1,p2 now should be vectors of length 19 (1-18 states + tiebreak)
+  # important that the tiebreak probability is placed is the last/19th entry
+  # if vector longer than 19, only first 19 elements are used
+  # identically distributed assumption may be dropped now depending on p1/p2 composition
+  
+  # get probs of P1,P2 holding their serve
+  m.p2g.p1 <- point.to.game.matrices.pw(p=p1)
+  p1.g <- (solve(diag(18)-m.p2g.p1$Q)%*%m.p2g.p1$R)[1,1]
+  m.p2g.p2 <- point.to.game.matrices.pw(p=p2)
+  p2.g <- (solve(diag(18)-m.p2g.p2$Q)%*%m.p2g.p2$R)[1,1]
+  
+  # get probs of P1,P2 winning sets
+  # in this block of code, probs correspond to sets where P1 serves the 1st game 
+  m.g2s.p1 <- game.to.set.matrices(p=p1.g,q=p2.g)
+  m.g2s.p1.w <- (solve(diag(38)-m.g2s.p1$Q)%*%m.g2s.p1$R)[1,]
+  p.s1.t <- m.g2s.p1.w[1] # prob of going to tiebreak in such a set
+  p1.s1.h <- m.g2s.p1.w[2] # prob of P1 winning by holding in such a set
+  p1.s1.b <- m.g2s.p1.w[3] # prob of P1 winning by breaking P2's serve
+  p2.s1.h <- m.g2s.p1.w[4] # prob of P2 winning by holding in such a set
+  p2.s1.b <- m.g2s.p1.w[5] # prob of P2 winning by breaking P1's serve
+  
+  # in this block of code, probs correspond to sets where P2 serves the 1st game 
+  m.g2s.p2 <- game.to.set.matrices(p=p2.g,q=p1.g)
+  m.g2s.p2.w <- (solve(diag(38)-m.g2s.p2$Q)%*%m.g2s.p2$R)[1,]
+  p.s2.t <- m.g2s.p2.w[1] # prob of going to tiebreak in such a set
+  p2.s2.h <- m.g2s.p2.w[2] # prob of P2 winning by holding in such a set
+  p2.s2.b <- m.g2s.p2.w[3] # prob of P2 winning by breaking P1's serve
+  p1.s2.h <- m.g2s.p2.w[4] # prob of P1 winning by holding in such a set
+  p1.s2.b <- m.g2s.p2.w[5] # prob of P1 winning by breaking P2's serve
+  
+  # get probs for players winning tiebreak games
+  m.tb.p1 <- tb.to.7.matrices(p=p1[19],q=p2[19]) # to 7, P1 serves first
+  m.tb.p1.w <- (solve(diag(48)-m.tb.p1$Q)%*%m.tb.p1$R)[1,]
+  p.tb1.to7 <- m.tb.p1.w[1] # prob of the tiebreak needing more than 12 pts played
+  p1.tb1.to7 <- m.tb.p1.w[2] # prob of P1 winning tiebreak when serving first
+  p2.tb1.to7 <- m.tb.p1.w[3] # prob of P2 winning tiebreak when receiving first
+  
+  m.tb.p2 <- tb.to.7.matrices(p=p2[19],q=p1[19]) # to 7, P2 serves first
+  m.tb.p2.w <- (solve(diag(48)-m.tb.p2$Q)%*%m.tb.p2$R)[1,]
+  p.tb2.to7 <- m.tb.p2.w[1] # prob of the tiebreak needing more than 12 pts played
+  p2.tb2.to7 <- m.tb.p2.w[2] # prob of P2 winning tiebreak when serving first
+  p1.tb2.to7 <- m.tb.p2.w[3] # prob of P1 winning tiebreak when receiving first
+  
+  if (format!=0){
+    m.tbd.p1 <- tb.to.10.matrices(p=p1[19],q=p2[19]) # to 10, P1 serves first
+    m.tbd.p1.w <- (solve(diag(99)-m.tbd.p1$Q)%*%m.tbd.p1$R)[1,]
+    p.tb1.to10 <- m.tbd.p1.w[1] # prob of the tiebreak needing more than 18 pts played
+    p1.tb1.to10 <- m.tbd.p1.w[2] # prob of P1 winning tiebreak when serving first
+    p2.tb1.to10 <- m.tbd.p1.w[3] # prob of P2 winning tiebreak when receiving first
+  
+    m.tbd.p2 <- tb.to.10.matrices(p=p2[19],q=p1[19]) # to 10, P2 serves first
+    m.tbd.p2.w <- (solve(diag(99)-m.tbd.p2$Q)%*%m.tbd.p2$R)[1,]
+    p.tb2.to10 <- m.tbd.p2.w[1] # prob of the tiebreak needing more than 18 pts played
+    p2.tb2.to10 <- m.tbd.p2.w[2] # prob of P2 winning tiebreak when serving first
+    p1.tb2.to10 <- m.tbd.p2.w[3] # prob of P1 winning tiebreak when receiving first
+  }
+  
+  # probs for if a tiebreak needs more than 7(10) points to win
+  # for non-deciding sets (to 7), chain starts at (T,A2) which is the first row
+  # for deciding sets (to 10), chain starts at (T,B2) which is the second row
+  # results in this block for when P1 served first in the tiebreak
+  # note the player who serves first in the tiebreak served first in the set
+  m.tbe.p1 <- tb.extra.matrices(p=p1[19],q=p2[19])
+  m.tbe.p1.w <- solve(diag(6)-m.tbe.p1$Q)%*%m.tbe.p1$R
+  p1.tbe.to7 <- m.tbe.p1.w[1,1] # P1 win prob once extra pts are played in the tiebreak
+  p1.tbe.to10 <- m.tbe.p1.w[2,1] # for P2's probs, need only subtract this from 1
+  
+  # results in this block for when P2 served first in the tiebreak
+  m.tbe.p2 <- tb.extra.matrices(p=p2[19],q=p1[19])
+  m.tbe.p2.w <- solve(diag(6)-m.tbe.p2$Q)%*%m.tbe.p2$R
+  p2.tbe.to7 <- m.tbe.p2.w[1,1] # P2 win prob once extra pts are played in the tiebreak
+  p2.tbe.to10 <- m.tbe.p2.w[2,1] # for P1's probs, need only subtract this from 1
+  
+  # now that the individual pieces are established, start calculating overall set
+  # winning probabilities to plug into set.to.match functions
+  # since P1 was designated as serving the 1st game of the entire match
+  # A(B) will be synonymous with P1(P2) in variable naming from here on in
+  p.b.A <- p1.s1.b
+  p.h.A <- p1.s1.h+p.s1.t*(p1.tb1.to7+p.tb1.to7*p1.tbe.to7)
+  q.b.A <- p2.s1.b+p.s1.t*(p2.tb1.to7+p.tb1.to7*(1-p1.tbe.to7))
+  q.h.A <- p2.s1.h
+  p.b.B <- p1.s2.b+p.s2.t*(p1.tb2.to7+p.tb2.to7*(1-p2.tbe.to7))
+  p.h.B <- p1.s2.h
+  q.b.B <- p2.s2.b
+  q.h.B <- p2.s2.h+p.s2.t*(p2.tb2.to7+p.tb2.to7*p2.tbe.to7)
+  
+  if (format==0){
+    # using set.to.match for final results
+    m.s2m <- set.to.match.womens(p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B,
+                                 p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B)
+    p <- (solve(diag(7)-m.s2m$Q)%*%m.s2m$R)[1,1]
+  } else {
+    p.b.A.d <- p1.s1.b
+    p.h.A.d <- p1.s1.h+p.s1.t*(p1.tb1.to10+p.tb1.to10*p1.tbe.to10)
+    q.b.A.d <- p2.s1.b+p.s1.t*(p2.tb1.to10+p.tb1.to10*(1-p1.tbe.to10))
+    q.h.A.d <- p2.s1.h
+    p.b.B.d <- p1.s2.b+p.s2.t*(p1.tb2.to10+p.tb2.to10*(1-p2.tbe.to10))
+    p.h.B.d <- p1.s2.h
+    q.b.B.d <- p2.s2.b
+    q.h.B.d <- p2.s2.h+p.s2.t*(p2.tb2.to10+p.tb2.to10*p2.tbe.to10)
+    
+    if (format==1){
+      m.s2m <- set.to.match.womens(p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B,
+                                   p.b.A.d,p.h.A.d,q.b.A.d,q.h.A.d,
+                                   p.b.B.d,p.h.B.d,q.b.B.d,q.h.B.d)
+      p <- (solve(diag(7)-m.s2m$Q)%*%m.s2m$R)[1,1]
+    } else if (format==2){
+      m.s2m <- set.to.match.mens(p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B,
+                                 p.b.A.d,p.h.A.d,q.b.A.d,q.h.A.d,
+                                 p.b.B.d,p.h.B.d,q.b.B.d,q.h.B.d)
+      p <- (solve(diag(17)-m.s2m$Q)%*%m.s2m$R)[1,1]
+    } else {
+      p <- -1 # marks invalid format value
+    }
+  }
+  return(p)
+}
+```
+
+### Data
+
+One important thing to deal with regarding the compiled point-by-point data is the different name recording formats. For example, "Novak Djokovic", "N Djokovic", and "N. Djokovic" are all present in the dataset. (Examples of other special cases in the get.equiv.names function below.) This was not remedied during the compiling/extration since there was no convenient way to fill in names for players that were only represented using the latter 2 formats. Instead, since the test set uses complete names, stats for the same player can be aggregated going by players present in the test set. Like in category 1, players that do not have pre-2022 data will be filled in using average data, in this case the average of p's corresponding to individual states.
+```{r}
+# testing data
+atp.test.2022 <- read.csv('../Data Lake/Experiments/2022_atp_testing.csv')
+wta.test.2022 <- read.csv('../Data Lake/Experiments/2022_wta_testing.csv')
+```
+```{r}
+# following function highlights matches that were incomplete
+# this is determined by if the score has letters ("W/O","Def.","RET" etc.)
+# takes as input the score column of a dataset and returns indexes
+ic.match <- function(score) grep("[A-Za-z]",score)
+# remove incomplete matches for test sets
+atp.test.2022 <- atp.test.2022[-ic.match(atp.test.2022$score),]
+wta.test.2022 <- wta.test.2022[-ic.match(wta.test.2022$score),]
+```
+
+```{r}
+# point-by-point data by player
+pbp.3yrs <- read.csv('../Data Lake/Players/2019-2021_pbp_individual.csv')
+```
+
+### Player p Vectors
+
+```{r}
+# 3 helper functions
+
+get.unique.players <- function(testset){
+  # takes the players in the test set and returns vector
+  # containing unique players in the test set
+  names <- c(testset$winner_name,testset$loser_name)
+  names <- unique(names)
+  return(names)
+}
+
+get.equiv.names <- function(fullname){
+  # returns vector of equivalent names in different formats
+  # according to the fullname given
+  # fullname ideally from get.unique.players output
+  # More special examples:
+  #   Alejandro Davidovich Fokina -> A Davidovich Fokina & A. Davidovich Fokina
+  #   Pierre Hugues Herbert -> P Herbert & Ph Herbert & P. Herbert
+  #   Alex De Minaur -> A. De Minaur & Alex de Minaur & A De Minaur
+  #   Karolina Pliskova -> K. Pliskova & Ka. Pliskova & Ka Pliskova
+  #   Kristyna Pliskova -> K. Pliskova & Kr. Pliskova & Kr Pliskova
+  #   some cases manually remediated (see misc. google doc)
+  #   but quick manual remediation can't help if player in test set has middle name
+  #   and full name isn't in pbp training set.
+  #   Function tries to account for this as follows.
+  
+  # Alex Bee Caine -> c("A. Caine", "A Caine", "A. Bee Caine", "A Bee Caine",
+  #                     "Ab Caine", "A Bee-Caine", "A. Bee-Caine")
+  
+  # This method risks picking up on players with same last name and first letter
+  # But this is unlikely as the pbp training set only 1 case of this - Kr&Ka Pliskova
+  # And this was picked up since there were 2 characters before the space
+  
+  parts <- strsplit(fullname,split=" ")[[1]]
+  n <- length(parts)
+  first.letter <- substr(parts[1],1,1)
+  equiv <- c(fullname,
+             paste(first.letter," ",parts[n],sep=""),
+             paste(first.letter,"."," ",parts[n],sep=""))
+  if (n > 2){
+    rest <- ""
+    rest.dash <- ""
+    for (i in 1:(n-1)){
+      rest <- paste(rest," ",parts[i+1],sep="")
+      rest.dash <- paste(rest.dash,parts[i+1],sep="-")
+    }
+    rest.dash <- substr(rest.dash,2,nchar(rest.dash)) # get rid of first dash
+    first.middle.name.letter <- tolower(substr(parts[2],1,1))
+    rest.more <- "" # for if the name has four or more parts
+    for (i in 1:(n-2)){
+      rest.more <- paste(rest.more," ",parts[i+2],sep="")
+    }
+    # rest contains the first space, rest.dash doesn't
+    equiv <- c(equiv, paste(first.letter,rest,sep=""),
+               paste(first.letter,".",rest,sep=""),
+               paste(first.letter," ",rest.dash,sep=""),
+               paste(first.letter,"."," ",rest.dash,sep=""),
+               paste(first.letter,first.middle.name.letter,rest.more,sep=""))
+  }
+  return(equiv)
+}
+
+get.aggr.by.state <- function(entry){
+  # extract serve won & serve total fields for a player
+  # without surface distinction
+  ret <- rep(0,38)
+  for (i in 1:18){
+    # odd indices for pts won, even for total
+    ret[2*i-1] <- entry[[3+12*i]]+entry[[7+12*i]]+entry[[11+12*i]]
+    ret[2*i] <- entry[[2+12*i]]+entry[[6+12*i]]+entry[[10+12*i]]
+  }
+  ret[37] <- entry[[3]]+entry[[7]]+entry[[11]]
+  ret[38] <- entry[[2]]+entry[[6]]+entry[[10]]
+  return(ret)
+}
+```
+
+```{r}
+create.p.vector <- function(tst.names,pbp){
+  # returns a dataframe with the rows in the order of names,
+  # the columns being p's for states 1-18 and then t (tiebreak)
+  # final column is overall p regardless of state by taking total won / total serve
+  # names usually from get.unique.players on test data set
+  # pbp is the point-by-point data given
+  # note p-vectors not surface specific
+  
+  n <- length(tst.names)
+  m <- nrow(pbp)
+  pbp.name <- pbp$name
+  aggr <- matrix(0,nrow=n,ncol=38) # 38=2x19, taking won & total to divide later
+  for (i in 1:n){
+    equiv <- get.equiv.names(tst.names[i])
+    p <- length(equiv)
+    for (j in 1:p){
+      for (l in 1:m){
+        # check 1 by 1 since pbp has non-unique names after manual remediation
+        if (equiv[j]==pbp.name[l]){
+          more.aggr <- get.aggr.by.state(pbp[l,])
+          aggr[i,] <- aggr[i,]+more.aggr
+        }
+      }
+    }
+  }
+  # now divide odd cols by even cols to obtain p's
+  output <- matrix(0,nrow=n,ncol=20)
+  output <- data.frame(output, row.names=tst.names)
+  for (i in 1:n){
+    for (j in 1:19){
+      output[i,j] <- aggr[i,2*j-1]/aggr[i,2*j]
+    } # note below first seq() output will end at 37
+    output[i,20] <- sum(aggr[i,seq(1,38,by=2)])/sum(aggr[i,seq(2,38,by=2)])
+  }
+  return(output)
+}
+```
+
+```{r}
+atp.names <- get.unique.players(atp.test.2022)
+atp.P <- create.p.vector(atp.names,pbp.3yrs)
+wta.names <- get.unique.players(wta.test.2022)
+wta.P <- create.p.vector(wta.names,pbp.3yrs)
+```
+
+Like in previous experiments, some players, e.g. Ben Shelton, do not have data from previous years. For these entries, we continue to plug in the mean of the other players. Specifically here, the means will be state-specific, so 20 means, 1 per column, will be used for plug-in purposes.
+
+```{r}
+for (i in 1:ncol(atp.P)){
+  atp.P[which(is.na(atp.P[,i])),i] <- mean(atp.P[-which(is.na(atp.P[,i])),i])
+}
+for (i in 1:ncol(wta.P)){
+  wta.P[which(is.na(wta.P[,i])),i] <- mean(wta.P[-which(is.na(wta.P[,i])),i])
+}
+```
+
+## Experiments
+
+```{r}
+# list of grand slams as their Men's singles are played to best 3 of 5 sets
+# naming convention following that found in the test sets
+grand.slams <- c("Australian Open","Roland Garros","Wimbledon","US Open")
+
+# overall function to do experiments with
+conduct.experiment <- function(inactive.states, P, test.set, atp=TRUE){
+  # inactive.states:
+  #   vector containing states (19 for tiebreak) to deactivate, i.e. 
+  #   replace the state's unique p with the player's overall p
+  # P:
+  #   data.frame containing players' individual p vectors
+  #   usually obtained via create.p.vector output
+  # test.set:
+  #   data set used to test accuracy of prediction
+  # atp:
+  #   boolean defaulted to true if test.set is ATP data
+  
+  # make copy of P and change copy to align with specified inactive.states
+  cP <- P[,1:19]
+  cP[,inactive.states] <- P[,20]
+  
+  # record exact probability values from model
+  # so we can examine closer if we want
+  n <- nrow(test.set)
+  exact <- rep(0,n)
+  
+  # experiment begins
+  pbp.names <- rownames(cP)
+  for (i in 1:n){
+    matchup <- test.set[i,]
+    winner <- matchup$winner_name
+    loser <- matchup$loser_name
+    inds <- match(c(winner,loser),pbp.names)
+    winner.P <- unname(unlist(cP[inds[1],]))
+    loser.P <- unname(unlist(cP[inds[2],]))
+    if (matchup$tourney_name %in% grand.slams){
+      if (atp){
+        exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=2)
+      } else {
+        exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=1)
+      }
+    } else {
+      exact[i] <- match.win.prob(p1=winner.P,p2=loser.P)
+    }
+  }
+  res <- exact > 0.5
+  return(list("score"=mean(res),"result"=res,"exact"=exact))
+}
+```
+
+
+### 1 - All States Active
+
+On the whole, judging by category 1 results, we are not expecting this score to be to high. What we are looking for is differences with later experiments.
+
+```{r}
+atp.r1 <- conduct.experiment(inactive.states=c(),atp.P,atp.test.2022,atp=TRUE)
+atp.r1$score
+wta.r1 <- conduct.experiment(inactive.states=c(),wta.P,wta.test.2022,atp=FALSE)
+wta.r1$score
+```
+
+### 2 - All States Inactive
+
+Not only can this baseline be used for comparison with all other experiments in this category, it can also be compared with results from category 1's experiment 3 (58.86%, one of the worst scores), as it is the same approach and data time range, just restricted to only grand slam data.
+
+```{r}
+atp.r2 <- conduct.experiment(inactive.states=1:19,atp.P,atp.test.2022,atp=TRUE)
+atp.r2$score
+wta.r2 <- conduct.experiment(inactive.states=1:19,wta.P,wta.test.2022,atp=FALSE)
+wta.r2$score
+```
+
+The ATP score being exactly the same as in #1 is a bit of a depressing result. It may be worth looking into the probabilities outputted by the model and how they change, if on the whole results continue to not offer changes. A slight silver lining below, the exact predictions (ATP) of #1 and #2 are different for 10 different matchups. Their mistakes over the other balance out in the score.
+
+```{r}
+# TRUE means a correct prediction
+atp.r1$result[which(atp.r1$result!=atp.r2$result)]
+atp.r2$result[which(atp.r1$result!=atp.r2$result)]
+```
+
+As mentioned above, we also quickly examine the change in exact probability values predicted with the plot below.
+
+```{r}
+plot(atp.r1$exact,atp.r2$exact,
+     xlab="All States Active",ylab="All States Inactive",
+     xlim=c(0,1),ylim=c(0,1),main="ATP")
+abline(a=0,b=1,v=0.5,h=0.5,lty=2,col=c("red","blue","blue"))
+```
+
+```{r}
+plot(wta.r1$exact,wta.r2$exact,
+     xlab="All States Active",ylab="All States Inactive",
+     xlim=c(0,1),ylim=c(0,1),main="WTA")
+abline(a=0,b=1,v=0.5,h=0.5,lty=2,col=c("red","blue","blue"))
+```
+
+For both plots:
+
+  - Points above the red dotted line are ones that #2, having all states deactivated, got "better" than #1, better in the sense that the actual winner's probability is higher. A bit more on this in code below.
+  
+  - Points in the upper-left and lower-right quadrants are matches that #2 corrected #1 for and #1 corrected #2 for respectively.
+  
+  - As the linear trend along the red dotted line is clear and without any extreme outliers, we can say the 2 models overall always agree.
+
+```{r}
+# last point, addendum to point above, the ATP and WTA proportion of points #2 
+# got "better" (strictly in the previously stated sense) are both around 60%.
+# the models without specific state probabilities on average got a little bit
+# surer on who the winner was
+sum(atp.r2$exact>atp.r1$exact)/nrow(atp.test.2022)
+sum(wta.r2$exact>wta.r1$exact)/nrow(wta.test.2022)
+```
+
+So on the whole, having all states deactivated is preferable to having them all activated. It means that activating a state aiming to increase accuracy for that state of the game, introduces some noise to the DTMC as a whole.
+
+### 3 - 1 State Inactive
+
+In total, if we were to try all combinations of active/inactive states, we would have $2^{19}=524288$ total combinations to test out. This will not be done explicitly, but for cases where only 1 state is inactive, all 19 will tested. Near the end of this category, an optional r block will be included to brute force the optimal state combination with respect to each test set.
+
+```{r}
+# since every state taken out 1 by 1, r3 will be a list of lists 
+atp.r3 <- list("score"=rep(0,19),"result"=list(),"exact"=list())
+wta.r3 <- list("score"=rep(0,19),"result"=list(),"exact"=list())
+for (i in 1:19){
+  a <- conduct.experiment(inactive.states=c(i),atp.P,atp.test.2022,atp=TRUE)
+  w <- conduct.experiment(inactive.states=c(i),wta.P,wta.test.2022,atp=FALSE)
+  atp.r3$score[i] <- a$score
+  wta.r3$score[i] <- w$score
+  atp.r3$result[[i]] <- a$result
+  wta.r3$result[[i]] <- w$result
+  atp.r3$exact[[i]] <- a$exact
+  wta.r3$exact[[i]] <- w$exact
+}
+```
+
+```{r}
+plot(1:19,atp.r3$score,xlab="State Inactive",ylab="Score",main="ATP",'l')
+text(1:19,atp.r3$score,labels=1:19)
+abline(h=atp.r1$score,lty=2,col='red')
+```
+
+```{r}
+plot(1:19,wta.r3$score,xlab="State Inactive",ylab="Score",main="WTA",'l')
+text(1:19,wta.r3$score,labels=1:19)
+abline(h=wta.r1$score,lty=2,col='red')
+```
+
+Starting now we will try to trace paths between when all states are active in #1 and when all are inactive in #2. Including #3, the next 2 experiments (1 for ATP/WTA each) will be going from #1 to #2 (defined to be the downward direction) and then we will start from #1 and see if a new path can connect to previous paths traced. Going by combined results above, deactivating states 8 (30-15 for server) and/or 16 (deuce) would be the next step, but since differences in trends have been noted between the ATP and WTA matches, we will not trace paths based on combined input. #4, focusing on ATP's downward paths will start with deactivating states 19 (possibly also 12 and 16 if 19 only results in one path). #5, focusing on WTA's downward paths will start with 9 (and possibly also 16 for the same reasons stated before).
+
+### 3.5 - 1 State Active
+
+This section was added later on once upward experiments had to be done as well.
+```{r}
+# since every state taken out 1 by 1, r3 will be a list of lists 
+atp.r3.5 <- list("score"=rep(0,19),"result"=list(),"exact"=list())
+wta.r3.5 <- list("score"=rep(0,19),"result"=list(),"exact"=list())
+for (i in 1:19){
+  a <- conduct.experiment(inactive.states=(1:19)[-i],atp.P,atp.test.2022,atp=TRUE)
+  w <- conduct.experiment(inactive.states=(1:19)[-i],wta.P,wta.test.2022,atp=FALSE)
+  atp.r3.5$score[i] <- a$score
+  wta.r3.5$score[i] <- w$score
+  atp.r3.5$result[[i]] <- a$result
+  wta.r3.5$result[[i]] <- w$result
+  atp.r3.5$exact[[i]] <- a$exact
+  wta.r3.5$exact[[i]] <- w$exact
+}
+```
+```{r}
+plot(1:19,atp.r3.5$score,xlab="State Active",ylab="Score",main="ATP",'l')
+text(1:19,atp.r3.5$score,labels=1:19)
+abline(h=atp.r2$score,lty=2,col='red')
+```
+```{r}
+plot(1:19,wta.r3.5$score,xlab="State Active",ylab="Score",main="WTA",'l')
+text(1:19,wta.r3.5$score,labels=1:19)
+abline(h=wta.r2$score,lty=2,col='red')
+```
+
+This time there are more similarities to the ATP and WTA plots in overall shape, but they don't follow the exact same pattern, particularly at states 3, 10, 11. What may be more interesting is seeing the 2 ATP(WTA) plots plotted together.
+
+```{r}
+plot(1:19,atp.r3$score,ylab="Score",main="ATP",'l',col="blue",
+     ylim=c(0.55,0.63))
+text(1:19,atp.r3$score,labels=1:19)
+lines(1:19,atp.r3.5$score,'l',col="red")
+text(1:19,atp.r3.5$score,labels=1:19)
+abline(h=c(atp.r1$score,atp.r2$score),lty=2,col=c('orange','darkgreen')) # same value
+```
+
+```{r}
+plot(1:19,wta.r3$score,ylab="Score",main="WTA",'l',col="blue",
+     ylim=c(0.55,0.63))
+text(1:19,wta.r3$score,labels=1:19)
+lines(1:19,wta.r3.5$score,'l',col="red")
+text(1:19,wta.r3.5$score,labels=1:19)
+abline(h=c(wta.r1$score,wta.r2$score),lty=2,col=c('orange','darkgreen'))
+```
+
+Though not completely, there is an unmistakable symmetry here. For both, the score when all states are active fit nicely as the line of symmetry. This is definitely worth looking forward in the future with more data and observations of different depth.
+
+### 4 - ATP Paths
+
+```{r}
+downwards.wrapper <- function(deactivate,P,testset,atp){
+  # atp is boolean for if testset is for ATP
+  scores <- rep(0,19)
+  if (length(deactivate)==0){
+    options <- 1:19
+  } else {
+    options <- (1:19)[-deactivate]
+  }
+  for (i in options){
+    scores[i] <- conduct.experiment(c(i,deactivate),P,testset,atp)$score
+    # so deactivated state's indices will have 0
+  }
+  return(list("max"=max(scores),"candidates"=which(scores==max(scores))))
+}
+upwards.wrapper <- function(activate,P,testset,atp){
+  # atp is boolean for if testset is for ATP
+  if (length(activate)==0){
+    deactivate <- 1:19
+  } else {
+    deactivate <- (1:19)[-activate]
+  }
+  scores <- rep(0,19)
+  for (i in deactivate){
+    deactivate.no.i <- (1:19)[-c(activate,i)]
+    scores[i] <- conduct.experiment(deactivate.no.i,P,testset,atp)$score
+    # activated state's indices will have 0
+  }
+  return(list("max"=max(scores),"candidates"=which(scores==max(scores))))
+}
+```
+
+Because the number of states identified for deactivation at each step is not set, we are not sure ahead of time how many paths we will end up with. The whole experiment should be able to be completed with a function and recursion concepts, but in the interest of time and at the sacrifice of length and readability of the notebook, the following will be completed manually instead.
+
+```{r}
+downwards.wrapper(c(19),atp.P,atp.test.2022,TRUE)
+```
+```{r}
+downwards.wrapper(c(16,19),atp.P,atp.test.2022,TRUE)
+```
+```{r}
+downwards.wrapper(c(15,16,19),atp.P,atp.test.2022,TRUE)
+```
+
+First instance of diverging paths. Additionally, for all 4 candidates, the max score achieved is unchanged from the previous step.
+
+```{r eval=FALSE, include=TRUE}
+# see message below, this block is not evaluated for knitting
+downwards.wrapper(c(1,15,16,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(1,4,15,16,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(1,7,15,16,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(1,7,11,15,16,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(1,5,15,16,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(1,5,15,16,17,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(1,4,7,15,16,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(7,15,16,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(1,7,15,16,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(4,7,15,16,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(4,7,10,15,16,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(4,7,11,15,16,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(4,7,12,15,16,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(1,5,7,15,16,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(1,5,7,17,15,16,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(1,5,11,17,15,16,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(1,4,5,7,15,16,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(1,7,11,12,15,16,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(1,7,11,17,15,16,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(4,7,10,11,15,16,19),atp.P,atp.test.2022,TRUE)
+downwards.wrapper(c(4,7,10,12,15,16,19),atp.P,atp.test.2022,TRUE)
+```
+
+This is getting very tedious. As of now, we have 15 open paths and that number will only grow. The 2 best paths up to now have been deactivating states (3,4,7,12,15,16,19) and (3,4,7,10,12), which both yield the high score of 0.66242. By the common ideal of picking the simplest model among equally effective ones, we should be aiming to deactivate as many states as possible. What is both interesting and exasperating is that after the first divergence at (15,16,19), apart from the aforementioned two, the best performance at each path has been stuck at exactly 0.65605. The recursion function (or its functional equivalent) will have to be written after all.
+
+```{r}
+# can be further optimized in the future by combining equivalent paths
+downwards.experiment <- function(starting.states,P,testset,atp,previous.scores,depth=18){
+  
+  diverge.lists <- c()
+  deactivate <- starting.states
+  
+  # through recursion, aim to combine all ovr.lists produced
+  ovr.list <- list() # to contain lists containing state & score vectors
+  path <- list()
+  # if no previous scores, can initialize NULL list element for scores:
+  # https://stackoverflow.com/questions/45666451/r-adding-an-empty-vector-to-a-list
+  if (length(previous.scores)==0){
+    path[1] <- list(NULL)
+  } else {
+    path[[1]] <- previous.scores # to record best scores of this path
+  }
+  # path[[2]] to record states deactivated, but does not need initialization
+  
+  while(length(deactivate) < depth){
+    
+    res <- downwards.wrapper(deactivate,P,testset,atp)
+    score <- res$max
+    cands <- res$candidates
+    scores.sofar <- c(path[[1]],score)
+    
+    l <- length(cands)
+    if (l>1){
+      # recursion call
+      for (i in 2:l){
+        diverge.lists <- c(
+          diverge.lists,
+          downwards.experiment(c(deactivate,cands[i]),P,testset,atp,scores.sofar,depth))
+      }
+    }
+    path[[1]] <- scores.sofar
+    deactivate <- c(deactivate,cands[1])
+    path[[2]] <- deactivate
+  }
+  path[[2]] <- deactivate
+  ovr.list[[1]] <- path
+  ovr.list <- c(ovr.list,diverge.lists)
+  
+  return(ovr.list)
+}
+```
+
+```{r eval=FALSE, include=TRUE}
+# expected to take quite a lot of time
+# time taken: stopped after an hour, see notes for time estimate
+# optimization needed
+atp.r4 <- downwards.experiment(c(19),atp.P,atp.test.2022,TRUE,c())
+```
+
+What I've learned regarding calculating time now that I've given this more thought: With the algorithm not recognizing equivalent paths, there are a total of ${18 \choose 17} \times 17!=18!=6 \times10^{15}$ possible paths. If we say on average each path diverges into 2 each time a downward step is taken (an assumption that may be too small based on the manual experiments), then there would be $2^{18}=262144$ paths. If each took 0.5 seconds (again based on manual experiments, should be an underestimation), then the algorithm would need 131072 seconds or 36.4 hours, something not realistic at this stage, and only for 1 test set.
+
+Doing similar rough calculations for a brute force approach trying all $\sum_{k=1}^{18}{19 \choose k}=524286$ combinations, and with an estimate of 0.1 seconds per combination, would take 14.5 hours. Better than the abysmal first version of the downward experiment, but still not something to commit to at this stage. And again, this would be just for one train-test pair.
+
+```{r eval=FALSE, include=TRUE}
+# version 2 stops persuing a path once a decrease in best value is sensed
+downwards.experiment.v2 <- function(starting.states,P,testset,atp,previous.scores){
+  
+  diverge.lists <- c()
+  deactivate <- starting.states
+  
+  # through recursion, aim to combine all ovr.lists produced
+  ovr.list <- list() # to contain lists containing state & score vectors
+  path <- list()
+  # if no previous scores, can initialize NULL list element for scores:
+  # https://stackoverflow.com/questions/45666451/r-adding-an-empty-vector-to-a-list
+  if (length(previous.scores)==0){
+    path[1] <- list(NULL)
+  } else {
+    path[[1]] <- previous.scores # to record best scores of this path
+  }
+  # path[[2]] to record states deactivated, but does not need initialization
+  
+  while(length(deactivate) < 18){
+    
+    res <- downwards.wrapper(deactivate,P,testset,atp)
+    score <- res$max
+    cands <- res$candidates
+    path.len <- length(path[[1]])
+    # difference from v1
+    if (path.len!=0){
+      # nested ifs instead of and since R evaluates both
+      if (path[[1]][path.len] > score) break
+    }
+    scores.sofar <- c(path[[1]],score)
+    
+    l <- length(cands)
+    if (l>1){
+      # recursion call
+      for (i in 2:l){
+        diverge.lists <- c(
+          diverge.lists,
+          downwards.experiment(c(deactivate,cands[i]),P,testset,atp,scores.sofar))
+      }
+    }
+    path[[1]] <- scores.sofar
+    deactivate <- c(deactivate,cands[1])
+    path[[2]] <- deactivate
+  }
+  path[[2]] <- deactivate
+  ovr.list[[1]] <- path
+  ovr.list <- c(ovr.list,diverge.lists)
+  
+  return(ovr.list)
+}
+```
+```{r eval=FALSE, include=TRUE}
+# time: Stopped after half an hour
+atp.r4 <- downwards.experiment.v2(c(19),atp.P,atp.test.2022,TRUE,c())
+```
+
+If v3 is to be able to notice when its current path deactivates the same states as a past path and stop, the order of evaluation needs to be level-wise instead of the current one resulting from recursion. But before trying that, I want to use v2's approach for an upwards experiment. Hopefully that will be better. Will start with 18, as we saw in the last section its removal lowered the score the most.
+
+```{r}
+upwards.experiment <- function(starting.states,P,testset,atp,previous.scores,depth=18){
+  
+  diverge.lists <- c()
+  activate <- starting.states
+  
+  # through recursion, aim to combine all ovr.lists produced
+  ovr.list <- list() # to contain lists containing state & score vectors
+  path <- list()
+  # if no previous scores, can initialize NULL list element for scores:
+  # https://stackoverflow.com/questions/45666451/r-adding-an-empty-vector-to-a-list
+  if (length(previous.scores)==0){
+    path[1] <- list(NULL)
+  } else {
+    path[[1]] <- previous.scores # to record best scores of this path
+  }
+  # path[[2]] to record states deactivated, but does not need initialization
+  
+  while(length(activate) < depth){
+    
+    res <- upwards.wrapper(activate,P,testset,atp)
+    score <- res$max
+    cands <- res$candidates
+    scores.sofar <- c(path[[1]],score)
+    
+    l <- length(cands)
+    if (l>1){
+      # recursion call
+      for (i in 2:l){
+        diverge.lists <- c(
+          diverge.lists,
+          upwards.experiment(c(activate,cands[i]),P,testset,atp,scores.sofar,depth))
+      }
+    }
+    path[[1]] <- scores.sofar
+    activate <- c(activate,cands[1])
+    path[[2]] <- activate
+  }
+  path[[2]] <- activate
+  ovr.list[[1]] <- path
+  ovr.list <- c(ovr.list,diverge.lists)
+  
+  return(ovr.list)
+}
+```
+```{r eval=FALSE, include=TRUE}
+# when going up, only need to take the complement of deactivate to pass
+# to the downwards.wrapper
+upwards.experiment.v2 <- function(starting.states,P,testset,atp,previous.scores){
+  
+  diverge.lists <- c()
+  activate <- starting.states
+  
+  # through recursion, aim to combine all ovr.lists produced
+  ovr.list <- list() # to contain lists containing state & score vectors
+  path <- list()
+  # if no previous scores, can initialize NULL list element for scores:
+  # https://stackoverflow.com/questions/45666451/r-adding-an-empty-vector-to-a-list
+  if (length(previous.scores)==0){
+    path[1] <- list(NULL)
+  } else {
+    path[[1]] <- previous.scores # to record best scores of this path
+  }
+  # path[[2]] to record states deactivated, but does not need initialization
+  
+  while(length(activate) < 18){
+    
+    res <- upwards.wrapper(activate,P,testset,atp)
+    score <- res$max
+    cands <- res$candidates
+    path.len <- length(path[[1]])
+    # difference from v1
+    if (path.len!=0){
+      # nested ifs instead of and since R evaluates both
+      if (path[[1]][path.len] > score) break
+    }
+    scores.sofar <- c(path[[1]],score)
+    
+    l <- length(cands)
+    if (l>1){
+      # recursion call
+      for (i in 2:l){
+        diverge.lists <- c(
+          diverge.lists,
+          upwards.experiment(c(activate,cands[i]),P,testset,atp,scores.sofar))
+      }
+    }
+    path[[1]] <- scores.sofar
+    activate <- c(activate,cands[1])
+    path[[2]] <- activate
+  }
+  path[[2]] <- activate
+  ovr.list[[1]] <- path
+  ovr.list <- c(ovr.list,diverge.lists)
+  
+  return(ovr.list)
+}
+```
+
+```{r eval=FALSE, include=TRUE}
+# time: stopped after half an hour
+atp.r4.up <- upwards.experiment.v2(c(18),atp.P,atp.test.2022,TRUE,c())
+```
+
+So 1. No matter if we're going up or down the best combination values do not decrease anytime soon. 2. We have seen going down 7 levels that though the values do not decrease, they are largely just the same. Even the 2 that did increase from 65.605 to 66.242 in reality only performs better by 1 matchup ((66.242-65.605)*157=1.00009). 3. We see in section 1 & 2 that scores at both ends of the spectrum are significantly lower than the abundant 65.605-scored combinations. This suggests there may be some sort of plateau case going on here.
+
+Taking these 3 points into account, I will make another detour before trying for an algorithm that doesn't traverse redundant paths.
+
+### 5 - Limited Depth
+  
+#### Some Examination Into Previous Results
+
+```{r}
+atp.r4.5a <- conduct.experiment(c(1,4,15,16,19),atp.P,atp.test.2022,TRUE)
+atp.r4.5b <- conduct.experiment(c(7,11,15,16,19),atp.P,atp.test.2022,TRUE)
+atp.r4.5c <- conduct.experiment(c(4,7,12,15,16,19),atp.P,atp.test.2022,TRUE)
+```
+```{r}
+which(atp.r4.5a$result!=atp.r4.5b$result)
+which(atp.r4.5a$result!=atp.r4.5c$result)
+which(atp.r4.5c$result!=atp.r4.5b$result)
+```
+
+if we furthermore look at the actual calculated probabilities, we can see there are indeed differences, but that they are not enough when the probabilities are put through a "larger than 0.5" indicator function.
+
+```{r}
+head(atp.r4.5a$exact,5)
+head(atp.r4.5b$exact,5)
+head(atp.r4.5c$exact,5)
+```
+
+We can see the earlier steps, from {19} to {16,19} and then to {15,16,19}. What this hints is at least to this test set, these 3 states benefit from being treated differently. It would be interesting to see the performance when only they are active.
+
+```{r}
+conduct.experiment((1:19)[-c(19)],atp.P,atp.test.2022)$score
+conduct.experiment((1:19)[-c(16,19)],atp.P,atp.test.2022)$score
+conduct.experiment((1:19)[-c(15,16,19)],atp.P,atp.test.2022)$score
+```
+
+All quite bad, worse than either baseline. So these states standing out, as well as the symmetry from before, point to their associated data being particularly noisy.
+
+#### Limited-Depth Pincer Paths
+
+Now some limited more individual experiments will be conducted at deeper levels to see if we still we still get scores around 65.605%~66.242%, hopefully providing more confidence in the "pitted plateau" hypothesis. First we will go to a limited depth from both directions (tentatively 7, will change if takes too long) and save the results so we don't have to run them again
+
+```{r eval=FALSE, include=TRUE}
+# limited, downwards, depth=7
+# took around 5 minutes
+ld7 <- downwards.experiment(19,atp.P,atp.test.2022,TRUE,c(),depth=7)
+```
+```{r eval=FALSE, include=TRUE}
+saveRDS(ld7, file="ld7_atp_2022.rds")
+```
+```{r}
+ld7.atp.2022 <- readRDS("ld7_atp_2022.rds")
+```
+```{r}
+for (i in 1:length(ld7.atp.2022)){ # length is 94
+  if (ld7.atp.2022[[i]][[1]][6]>0.66) print(i)
+}
+```
+```{r}
+ld7.atp.2022[[8]]
+ld7.atp.2022[[79]]
+```
+
+Of the 94 7-depth downward paths, only 2 have values larger than 0.66. Upon examination, they are both 0.662, and only differ by 1 state, one with 7 and the other 11. We quickly look at the score for the union of these 2 states (of depth 8).
+
+```{r}
+conduct.experiment(inactive.states=c(19,16,15,7,11,4,12,3),
+                   atp.P, atp.test.2022, TRUE)$score
+downwards.wrapper(deactivate=c(19,16,15,7,11,4,12,3),
+                  atp.P, atp.test.2022, TRUE)
+```
+
+So the union of depth 8 performs the same, but its next step, including 17 and of depth 17 performs better by 1 match-up and is the best numerical result so far. Now we do what we just did but upwards.
+
+```{r eval=FALSE, include=TRUE}
+# limited, upwards, depth=7
+# took 12 minutes
+lu7 <- upwards.experiment(18,atp.P,atp.test.2022,TRUE,c(),depth=7)
+```
+```{r eval=FALSE, include=TRUE}
+saveRDS(lu7, file="lu7_atp_2022.rds")
+```
+```{r}
+lu7.atp.2022 <- readRDS("lu7_atp_2022.rds")
+```
+
+Upon manual inspection in R, most paths stay flat throughout at 0.6496815, while some eventually make gradual increments up to 0.6751592. The first three paths are quite representative of this.
+
+```{r}
+lu7.atp.2022[[1]][[1]]
+lu7.atp.2022[[2]][[1]]
+lu7.atp.2022[[3]][[1]]
+```
+
+```{r}
+for (i in 1:length(lu7.atp.2022)){ # length is 122
+  if (lu7.atp.2022[[i]][[1]][6]>0.67) print(i)
+}
+```
+```{r}
+lu7.atp.2022[[1]]
+lu7.atp.2022[[122]]
+```
+
+With the exception of state 4 (30-0) which is included in both quasi-optimal limited depth paths, the paths seem to complement each other quite well and to be joining up. The values all being in the same range supports the pitted plateau hypothesis. We will take note of these states and see if they are consistent across WTA data and other train-test time periods (the same ones used for category 1, 2011-2014 & 2015-2018).
+
+```{r eval=FALSE, include=TRUE}
+# only around 3 minutes
+ld7 <- downwards.experiment(9,wta.P,wta.test.2022,FALSE,c(),depth=7)
+```
+```{r eval=FALSE, include=TRUE}
+saveRDS(ld7, file="ld7_wta_2022.rds")
+```
+```{r}
+ld7.wta.2022 <- readRDS("ld7_wta_2022.rds")
+```
+
+The list of paths this time around is extremely short, only 2, with the only divergence at depth 5.
+
+```{r}
+ld7.wta.2022
+```
+
+Not extremely encouraging thus far as to the similarity in states identified for deactivation. For now, ones that were identified for ATP as well are 7,11,15,16.
+
+```{r eval=FALSE, include=TRUE}
+# again, around 3 minutes
+lu7 <- upwards.experiment(3,wta.P,wta.test.2022,FALSE,c(),depth=7)
+```
+```{r eval=FALSE, include=TRUE}
+saveRDS(lu7, file="lu7_wta_2022.rds")
+```
+```{r}
+lu7.wta.2022 <- readRDS("lu7_wta_2022.rds")
+```
+
+Inspecting results, most paths peak at 0.646 before falling to 0.642, with only path 9 incrementing to 0.652.
+
+```{r}
+lu7.wta.2022[[1]][[1]]
+lu7.wta.2022[[2]][[1]]
+lu7.wta.2022[[3]][[1]]
+lu7.wta.2022[[9]]
+```
+
+Like in the ATP paths, we have one state (11) included in both upward and downward paths. Again, the quasi-optimal state combination found complements the quasi-optimal downward combination well, which is not much of a surprise, but nice to know results are consistent and the steepness/rate of increase remains small from both ends.
+
+We will take the 9th path and conduct one more step upwards, just to see if the score can get higher, before using the other 2 train-test time frames to see if identified states are consistent within the boundaries of ATP/WTA respectively.
+
+```{r}
+upwards.wrapper(c(1,3,4,5,11,18,19),wta.P,wta.test.2022,FALSE)
+```
+
+Not only a fall, but to exactly the best values achieved from the downwards depth-7 paths. 
+
+### Moving Back Train-Test Time Frame
+
+#### Data Prep
+
+```{r}
+# testing data
+atp.test.2018 <- read.csv('../Data Lake/Experiments/2018_atp_testing.csv')
+wta.test.2018 <- read.csv('../Data Lake/Experiments/2018_wta_testing.csv')
+atp.test.2014 <- read.csv('../Data Lake/Experiments/2014_atp_testing.csv')
+wta.test.2014 <- read.csv('../Data Lake/Experiments/2014_wta_testing.csv')
+# remove incomplete matches for test sets
+atp.test.2018 <- atp.test.2018[-ic.match(atp.test.2018$score),]
+wta.test.2018 <- wta.test.2018[-ic.match(wta.test.2018$score),]
+atp.test.2014 <- atp.test.2014[-ic.match(atp.test.2014$score),]
+wta.test.2014 <- wta.test.2014[-ic.match(wta.test.2014$score),]
+# similar to how 2019-21 data was brought in and processed into P's
+pbp.567 <- read.csv('../Data Lake/Players/2015-2017_pbp_individual.csv')
+pbp.123 <- read.csv('../Data Lake/Players/2011-2013_pbp_individual.csv')
+atp.names.2018 <- get.unique.players(atp.test.2018)
+atp.names.2014 <- get.unique.players(atp.test.2014)
+atp.P.567 <- create.p.vector(atp.names.2018,pbp.567)
+atp.P.123 <- create.p.vector(atp.names.2014,pbp.123)
+wta.names.2018 <- get.unique.players(wta.test.2018)
+wta.names.2014 <- get.unique.players(wta.test.2014)
+wta.P.567 <- create.p.vector(wta.names.2018,pbp.567)
+wta.P.123 <- create.p.vector(wta.names.2014,pbp.123)
+for (i in 1:ncol(atp.P.567)){
+  atp.P.567[which(is.na(atp.P.567[,i])),i] <- 
+    mean(atp.P.567[-which(is.na(atp.P.567[,i])),i])
+}
+for (i in 1:ncol(atp.P.123)){
+  atp.P.123[which(is.na(atp.P.123[,i])),i] <- 
+    mean(atp.P.123[-which(is.na(atp.P.123[,i])),i])
+}
+for (i in 1:ncol(wta.P.567)){
+  wta.P.567[which(is.na(wta.P.567[,i])),i] <- 
+    mean(wta.P.567[-which(is.na(wta.P.567[,i])),i])
+}
+for (i in 1:ncol(wta.P.123)){
+  wta.P.123[which(is.na(wta.P.123[,i])),i] <- 
+    mean(wta.P.123[-which(is.na(wta.P.123[,i])),i])
+}
+```
+
+#### ATP 2014
+
+```{r}
+# downwards baseline (all states active)
+conduct.experiment(c(),atp.P.123,atp.test.2014,TRUE)$score
+```
+
+```{r eval=FALSE, include=TRUE}
+# time: exceeded 30 minutes for depth 6&7 and hasn't stopped, adjusting to depth 5
+# new time: 5 min (so 5 to 6 is where the # paths again blow up)
+# descending one depth at a time, the # of divergent paths is as follows
+# 1 -> 1 -> 6 -> 25 -> 104
+# ld7 variable name is temp anyways, so not running again just to change it
+ld7 <- downwards.experiment(c(),atp.P.123,atp.test.2014,TRUE,c(),depth=5)
+```
+```{r eval=FALSE, include=TRUE}
+saveRDS(ld7, file="ld5_atp_2014.rds")
+```
+```{r}
+ld5.atp.2014 <- readRDS("ld5_atp_2014.rds")
+```
+
+A quick overview of the 5 depth results show that the first state deactivated is 19, the same as the 2022 cycle. With 19's deactivation, the score increases from 0.626 to 0.658, and with the next unanimous deactivation of 13, the score is bumped up further to 0.668. The paths rapidly diverge after that however, most with scores staying at 0.66842.
+
+```{r}
+for (i in 1:length(ld5.atp.2014)){ # length is 104
+  if (ld5.atp.2014[[i]][[1]][5]>0.6685) print(i)
+}
+```
+
+```{r}
+ld5.atp.2014[[10]]
+ld5.atp.2014[[28]]
+ld5.atp.2014[[47]]
+ld5.atp.2014[[84]]
+ld5.atp.2014[[85]]
+ld5.atp.2014[[86]]
+ld5.atp.2014[[97]]
+ld5.atp.2014[[98]]
+```
+
+Aside from the shared 19 and 13, 6 and 16 are deactivated most frequently among the paths that did climb above 0.66842 (5 out of 8 each), with one path, containing both 6 and 16 as well as 15 climbing even higher to 0.684. We will go a little further down with that one.
+
+```{r}
+downwards.wrapper(c(19,13,16,6,15),atp.P.123,atp.test.2014,TRUE)
+```
+```{r}
+downwards.wrapper(c(19,13,16,6,15,10),atp.P.123,atp.test.2014,TRUE)
+```
+```{r}
+downwards.wrapper(c(19,13,16,6,15,10,14),atp.P.123,atp.test.2014,TRUE)
+```
+
+More tests done in the console and not included here show including 5 still results in 0.7. And going further along some of the other promising paths above mostly all yield 0.6842105-0.6947368 at depths 7/8.
+
+```{r}
+# upwards baseline (all states inactive)
+conduct.experiment(1:19,atp.P.123,atp.test.2014,TRUE)$score
+```
+
+```{r eval=FALSE, include=TRUE}
+# time: 7 min
+lu7 <- upwards.experiment(c(),atp.P.123,atp.test.2014,TRUE,c(),depth=7)
+```
+```{r eval=FALSE, include=TRUE}
+saveRDS(lu7, file="lu7_atp_2014.rds")
+```
+```{r}
+lu7.atp.2014 <- readRDS("lu7_atp_2014.rds")
+```
+
+All paths inspected at random follow the same trajectory: 0.674 -> 0.684 -> 0.695 -> 0.689, and then plataeuing there for the next 4 steps. In other words, all paths inspected peak at 0.695 (with states 1,8,11 or 1,8,17) and then follow very clearly the pleateau pattern. This would be it, if we hadn't found from the downwards paths that some combinations of depth 8 (downwards, counting upwards this would be depth 19-8=11), just 3 steps down, yield scores 0.7. It is slightly comforting that these 2 peaks are very close and thus do not break the overall plataeu shape.
+
+```{r}
+for (i in 1:length(lu7.atp.2014)){ # length is 70
+  if (lu7.atp.2014[[i]][[1]][7]>0.6895) print(i)
+}
+```
+```{r}
+lu7.atp.2014[[9]]
+lu7.atp.2014[[23]]
+lu7.atp.2014[[28]]
+lu7.atp.2014[[29]]
+lu7.atp.2014[[30]]
+lu7.atp.2014[[31]]
+lu7.atp.2014[[40]]
+```
+
+Indeed we find the first 6 of the 7 paths that did climb higher get to 0.7. Just going down one of the paths, it does continue at 0.7 for 3 steps before falling to 0.697368.
+
+A small summary for ATP 2014, the plateau persists and is around 0.68-0.7. It can be roughly achieved by activating states 1,(5),8,(9),12,17, up to deactivating 6,(10),13,(14),15,16,19.
+
+#### ATP 2018
+
+```{r}
+# downwards baseline (all states active)
+conduct.experiment(c(),atp.P.567,atp.test.2018,TRUE)$score
+```
+```{r eval=FALSE, include=TRUE}
+ld7 <- downwards.experiment(c(),atp.P.567,atp.test.2018,TRUE,c(),depth=7)
+```
+```{r eval=FALSE, include=TRUE}
+saveRDS(ld7, file="ld7_atp_2018.rds")
+```
+```{r}
+ld7.atp.2018 <- readRDS("ld7_atp_2018.rds")
+```
+
+Random sampling shows most paths climbing to 0.683 early and plateauing there for 3 steps before dropping to 0.677 and plateauing there.
+
+```{r}
+for (i in 1:length(ld7.atp.2018)){ # length is 68
+  if (ld7.atp.2018[[i]][[1]][7]>0.6773) print(i)
+}
+```
+
+A quick inspection shows most of these are climbs back to the 0.6825397 plateau value achieved before.
+
+```{r}
+for (i in 1:length(ld7.atp.2018)){ # length is 68
+  if (ld7.atp.2018[[i]][[1]][7]>0.683) print(i)
+}
+```
+
+So this time around we have no standout path that stands slight above the rest. Instead, many paths display the pitted phenomenon of falling to another level for a few steps before going back to a higher value from before.
+
+```{r}
+# upwards baseline (all states inactive)
+conduct.experiment(1:19,atp.P.567,atp.test.2018,TRUE)$score
+```
+
+```{r}
+lu7 <- upwards.experiment(c(),atp.P.567,atp.test.2018,TRUE,c(),depth=7)
+```
+```{r eval=FALSE, include=TRUE}
+saveRDS(lu7, file="lu7_atp_2018.rds")
+```
+```{r}
+lu7.atp.2018 <- readRDS("lu7_atp_2018.rds")
+```
+
+Random inspection shows the exact sample score progression for the paths: 0.656 -> 0.661 -> 0.667 -> 0.672 -> 0.677 -> 0.677 -> 0.677. Now we will see if any path rises above 0.677(2487 to be more accurate):
+
+```{r}
+for (i in 1:length(lu7.atp.2018)){ # length is 52
+  if (lu7.atp.2018[[i]][[1]][7]>0.67725) print(i)
+}
+```
+```{r}
+for (i in 1:length(lu7.atp.2018)){ # length is 52
+  if (lu7.atp.2018[[i]][[1]][7]>0.67725){
+    print(lu7.atp.2018[[i]][[1]][7])
+  }
+}
+```
+
+Indeed, for the ones that do climb further, we see they achieve the exact value all the promising downward paths plateaued very early at. Not included here is a traversal of the plateau using the second path of the results (1st path above). At each step the optimal state with the smallest index was taken. The results was a dip to 0.677 at depth 10, and a rise to 0.68783 at depth 11. Depth 12 from the upwards direction would complete the traversal, and that yielded 0.678307 as well, before depth 13 took us back to 0.6825397. The plateau shape is thus especially clear for ATP 2018.
+
+A small summary for ATP 2018, the plateau comes very early relative to other train-test pairs, having a value of exactly 0.6825397 and small pits/mounds. The plateau can be reached by activating 3,8,10,12,15,16 or deactivating 9,18,19.
+
+A final small ad-hoc inspection that came to mind - are there matchups where the baselines got it right and the plateau got it wrong? I.e. is reaching the plateau a pure improvement?
+
+```{r}
+res.ad1 <- conduct.experiment(c(),atp.P.567,atp.test.2018,TRUE)$result
+res.ad2 <- conduct.experiment(1:19,atp.P.567,atp.test.2018,TRUE)$result
+res.ad3 <- conduct.experiment(c(9,18,19),atp.P.567,atp.test.2018,TRUE)$result
+which(res.ad1&!res.ad3)
+which(res.ad2&!res.ad3)
+```
+
+So not a pure improvement, but close to being one. I.e. not many that the plateau (at least for this randomly selected combination) flipped wrong.
+
+#### WTA 2014
+
+```{r}
+# downwards baseline (all states active)
+conduct.experiment(c(),wta.P.123,wta.test.2014,FALSE)$score
+```
+```{r eval=FALSE, include=TRUE}
+ld7 <- downwards.experiment(c(),wta.P.123,wta.test.2014,FALSE,c(),depth=7)
+```
+```{r eval=FALSE, include=TRUE}
+saveRDS(ld7, file="ld7_wta_2014.rds")
+```
+```{r}
+ld7.wta.2014 <- readRDS("ld7_wta_2014.rds")
+```
+
+```{r}
+plot(1:7,ld7.wta.2014[[1]][[1]],'l',ylim=c(0.6,0.7)) # adjust ylim on ad-hoc basis
+for (i in 2:length(ld7.wta.2014)){
+  lines(1:7,ld7.wta.2014[[i]][[1]])
+}
+```
+
+All the quasi-optimal paths deactivated state 18 first, and then chose one of 2,7,or 11. The paths that clearly rise above (to 0.648855) after the third step are all of combination 1,2,16,18.
+
+```{r}
+# downwards baseline (all states active)
+conduct.experiment(1:19,wta.P.123,wta.test.2014,FALSE)$score
+```
+
+```{r eval=FALSE, include=TRUE}
+lu7 <- upwards.experiment(c(),wta.P.123,wta.test.2014,FALSE,c(),depth=7)
+```
+```{r eval=FALSE, include=TRUE}
+saveRDS(lu7, file="lu7_wta_2014.rds")
+```
+```{r}
+lu7.wta.2014 <- readRDS("lu7_wta_2014.rds")
+```
+
+Random inspection shows that unlike previous tests, this time there are an assortment of values at depth 7 (upwards).
+
+```{r}
+plot(1:7,lu7.wta.2014[[1]][[1]],'l')
+for (i in 2:length(lu7.wta.2014)){ # length is 122
+  lines(1:7,lu7.wta.2014[[i]][[1]])
+}
+```
+
+Now that we have a clearer view, we see all the paths followed the exact same score progression up until depth 5, and then split into 4 distinct scores at depth 7. Not included for length considerations, we will next take 4 paths containing these 4 values and go a little further to see if there is any more increase. The 4 paths all climbed to the 2 higher values within 5 steps (with no new scores being produced). We know that around there, 12-deep upwards which is 7-deep downwards, there exists combinations which get a slightly higher score - 0.6564885. On the whole though, starting from depth 3 onwards, we see from both directions that the higher values are all 0.64 - 0.65, much higher than the 0.57's on both ends, forming still the plateau shape.
+
+So a short summary for WTA 2014, the plateau height is in the 0.64-0.65 range and can roughly be achieved downwards by deactivating 1,2,16,18 or upwards by activating 7,9,14,15.
+
+#### WTA 2018
+
+```{r}
+# downwards baseline (all states active)
+conduct.experiment(c(),wta.P.567,wta.test.2018,FALSE)$score # very low this time
+```
+```{r eval=FALSE, include=TRUE}
+ld7 <- downwards.experiment(c(),wta.P.567,wta.test.2018,FALSE,c(),depth=7)
+```
+```{r eval=FALSE, include=TRUE}
+saveRDS(ld7, file="ld7_wta_2018.rds")
+```
+```{r}
+ld7.wta.2018 <- readRDS("ld7_wta_2018.rds")
+```
+```{r}
+plot(1:7,ld7.wta.2018[[1]][[1]],'l',ylim=c(0.54,0.6))
+for (i in 2:length(ld7.wta.2018)){
+  lines(1:7,ld7.wta.2018[[i]][[1]])
+}
+abline(h=c(0.586,0.574,0.58),lty=c(2,3,3))
+```
+
+Climbing rapidly from the 0.532 baseline to a little under 0.56, and with the same score progression during the first 2 steps, the paths begin to diverge after that, with depth 7 downwards having 6 distinct values, and few paths achieving the highest one.
+
+```{r}
+for (i in 1:length(ld7.wta.2018)){
+  if(ld7.wta.2018[[i]][[1]][7]>0.586) print(i)
+}
+```
+```{r}
+ld7.wta.2018[[11]]
+ld7.wta.2018[[14]]
+```
+
+```{r}
+# upwards baseline (all states active)
+conduct.experiment(1:19,wta.P.567,wta.test.2018,FALSE)$score # even lower
+```
+```{r eval=FALSE, include=TRUE}
+lu7 <- upwards.experiment(c(),wta.P.567,wta.test.2018,FALSE,c(),depth=7)
+```
+```{r eval=FALSE, include=TRUE}
+saveRDS(lu7, file="lu7_wta_2018.rds")
+```
+```{r}
+lu7.wta.2018 <- readRDS("lu7_wta_2018.rds")
+```
+```{r}
+plot(1:7,lu7.wta.2018[[1]][[1]],'l',ylim=c(0.54,0.6))
+for (i in 2:length(lu7.wta.2018)){
+  lines(1:7,lu7.wta.2018[[i]][[1]])
+}
+```
+
+So from the upwards direction a plateau quickly comes into sight after 3 steps, with the height being in the 0.574~0.58 range. Looking at the raw paths, there was no divergence for the first 3 steps, the 3 states being activated first being 16,17,19. We saw that the downward paths, though roughly still around this range, were way more divergent, and had plateauing values that are centered around, but outside this range. This isn't exactly a dealbreaker as all paths we are working with are quasi-optimal and through this method we are sketching a shape of how the scores change with depth, but it is worth going down the previous best downward path to see how high it goes before connecting to the upward paths' range.
+
+```{r eval=FALSE, include=TRUE}
+downwards.wrapper(c(3,7,8,9,10,13,15),wta.P.567,wta.test.2018,FALSE) # falls in range
+downwards.wrapper(c(1,3,7,8,9,10,13,15),wta.P.567,wta.test.2018,FALSE) # flat
+downwards.wrapper(c(1,2,3,7,8,9,10,13,15),wta.P.567,wta.test.2018,FALSE) # slight rise
+downwards.wrapper(c(1,2,3,4,7,8,9,10,13,15),wta.P.567,wta.test.2018,FALSE) # flat
+downwards.wrapper(c(1,2,3,4,7,8,9,10,11,13,15),wta.P.567,wta.test.2018,FALSE)
+# back in range
+```
+
+We see 0.59 was indeed the highest, and probably the highest, any combination achieved.The 0.01 difference with the upper bound of the 7-depth upward paths, 0.58,is small compared to jump from the 0.52/0.53 baselines, so the overall plateau shape still holds.
+
+Overall for WTA 2018, the downward quasi-optimal paths are pretty divergent, but overall still hold a plateau shape consistent with the better-behaved upward paths. Upwards, activating 16,17,19 is enough. Downwards, the paths diverge pretty early (starting at depth 2), and resulting from that many paths pursued may turn out to be pretty far from optimal. This is normal under the plateau hypothesis, which pertains to high-scoring combinations roughly staying flat at deeper levels, while the pitted part of the hypothesis pertains to the paths whose traversed combinations are quite low (example below which is depth 3 counting downwards). Deactivating 3,7,8,15 roughly reaches the plateau downwards for WTA 2018.
+
+```{r}
+# note for example:
+# conduct.experiment(c(16,17,19),wta.P.567,wta.test.2018,FALSE)$score # 0.52659
+```
+
+
+### More Conclusions and Asides
+
+Overall, get XX% increase once on the plateau, on par with OAF and h2h/?
+
+What does the plateau phenomenon tell us? I think that there is noise that is unevenly distributed in the various states, and this exercise isolates those. Whether there is a pattern in where the noise builds up may need more player-specific or playstyle-type-specific analysis.
+
+The ATP results across the 3 cycles only agree on first deactivating 19, the tiebreak state, which points to that state containing an above-average amount of noise. Results apart from that differ significantly, e.g. while '14 and '22 cycles also opt for deactivating 15 and 16 early, they are activated in most quasi-optimal upward paths in the '18 cycle.
+
+Examining the WTA results across the 3 cycles yields even less promising similarities than the ATP side. Even when factoring in category 1 results that the pandemic may have statistically effected performance during the 2019-2022 cycle, the first 2 cycles don't have any states in common neither from states activated nor deactivated.
+
+These ATP and WTA results taken collectively should be strong evidence that for the game of tennis as a whole, certain fixed states can not be emphasized for prediction purposes. However, this does not mean this is the case for particular players or particular play styles. If certain players or groups of players were singled out for this study, results may be more promising.
+
+As long as the data collected has the granularity to support this sort of exercise, even if we don't find a fixed set of states deemed to be important, influential, for prediction purposes the above greedy quasi-optimal limited depth exercise can be done in hopes of boosting accuracy. As we have seen, "traversing the plateau" in both ATP and WTA cases boosted test accuracy by 4~7%. If effective, could be seen as a way of eliminating noise / extracting important states/scores as presented in the training data.
+

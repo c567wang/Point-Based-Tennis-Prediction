@@ -1,0 +1,196 @@
+surface,name1,pts_served1,service_pts_won1,pts_received1,receiving_pts_won1,aces1,name2,pts_served2,service_pts_won2,pts_received2,receiving_pts_won2,aces2,sample_size
+Hard,Gael Monfils,399,257,409,158,52,Miomir Kecmanovic,318,177,289,94,15,9
+Hard,Matteo Berrettini,645,421,579,192,94,Pablo Carreno Busta,400,240,390,111,17,15
+Hard,Denis Shapovalov,979,642,973,315,88,Alexander Zverev,1296,888,1399,475,200,30
+Hard,Rafael Nadal,233,169,240,80,22,Adrian Mannarino,175,100,167,48,7,4
+Hard,Jannik Sinner,1095,720,1148,465,63,Alex De Minaur,906,540,814,298,43,25
+Hard,Stefanos Tsitsipas,961,643,982,359,87,Taylor Fritz,1254,857,1238,407,164,27
+Hard,Felix Auger Aliassime,663,439,752,285,81,Marin Cilic,746,483,761,283,105,19
+Hard,Daniil Medvedev,586,395,608,244,74,Maxime Cressy,464,311,463,144,88,13
+Hard,Matteo Berrettini,565,383,505,154,85,Gael Monfils,183,115,172,73,22,11
+Hard,Rafael Nadal,163,115,185,75,15,Denis Shapovalov,246,147,248,75,18,5
+Hard,Stefanos Tsitsipas,1464,983,1518,569,129,Jannik Sinner,1536,994,1520,568,100,38
+Hard,Daniil Medvedev,1450,1006,1557,642,194,Felix Auger Aliassime,1439,963,1491,525,193,41
+Hard,Rafael Nadal,151,108,136,34,15,Matteo Berrettini,0,0,0,0,0,2
+Hard,Daniil Medvedev,1684,1157,1775,696,212,Stefanos Tsitsipas,1581,1077,1575,567,149,47
+Hard,Rafael Nadal,223,161,236,80,21,Daniil Medvedev,82,61,101,45,17,4
+Hard,Taylor Fritz,214,135,188,62,24,Rafael Nadal,82,61,104,46,7,4
+Hard,Rafael Nadal,233,169,240,80,22,Carlos Alcaraz,244,154,252,99,8,4
+Hard,Taylor Fritz,1154,743,1100,395,134,Andrey Rublev,855,561,883,335,103,27
+Hard,Carlos Alcaraz,683,460,691,262,33,Cameron Norrie,711,467,773,306,38,19
+Hard,Rafael Nadal,233,169,240,80,22,Nick Kyrgios,41,24,50,12,8,4
+Hard,Taylor Fritz,267,184,324,135,29,Miomir Kecmanovic,382,234,376,141,17,8
+Hard,Andrey Rublev,1288,846,1383,523,126,Grigor Dimitrov,1230,786,1250,463,87,36
+Hard,Carlos Alcaraz,418,276,455,168,15,Gael Monfils,539,317,577,216,49,12
+Hard,Cameron Norrie,648,421,667,279,41,Jenson Brooksby,565,355,592,222,16,17
+Hard,Rafael Nadal,314,223,321,109,30,Reilly Opelka,437,282,368,91,71,7
+Hard,Nick Kyrgios,241,151,231,63,37,Jannik Sinner,243,162,221,80,22,7
+Hard,Miomir Kecmanovic,244,159,242,70,7,Matteo Berrettini,193,130,206,80,18,6
+Hard,Taylor Fritz,998,659,1005,369,119,Alex De Minaur,784,473,790,288,35,25
+Hard,Andrey Rublev,1109,702,1167,439,118,Hubert Hurkacz,1354,909,1380,497,193,35
+Hard,Grigor Dimitrov,594,385,599,222,48,John Isner,336,227,310,69,78,14
+Hard,Carlos Alcaraz,804,500,851,335,24,Casper Ruud,710,455,714,262,41,22
+Hard,Carlos Alcaraz,1001,613,1017,402,39,Hubert Hurkacz,918,598,985,363,119,23
+Hard,Casper Ruud,0,0,0,0,0,Francisco Cerundolo,0,0,0,0,0,0
+Hard,Hubert Hurkacz,1530,1014,1576,583,197,Daniil Medvedev,1805,1219,1974,822,241,48
+Hard,Carlos Alcaraz,282,216,313,111,18,Miomir Kecmanovic,306,199,332,111,25,6
+Hard,Francisco Cerundolo,0,0,0,0,0,Jannik Sinner,0,0,0,0,0,0
+Hard,Casper Ruud,962,610,899,327,60,Alexander Zverev,1769,1196,1903,683,251,36
+Hard,Daniil Medvedev,1142,771,1212,483,144,Jenson Brooksby,643,399,659,256,13,24
+Hard,Hubert Hurkacz,794,514,829,321,84,Lloyd Harris,964,638,956,324,136,25
+Hard,Carlos Alcaraz,931,586,981,357,37,Stefanos Tsitsipas,896,608,916,340,71,24
+Hard,Miomir Kecmanovic,382,234,376,141,17,Taylor Fritz,267,184,324,135,29,8
+Hard,Jannik Sinner,243,162,221,80,22,Nick Kyrgios,241,151,231,63,37,7
+Hard,Francisco Cerundolo,0,0,0,0,0,Frances Tiafoe,0,0,0,0,0,0
+Hard,Casper Ruud,714,457,670,237,75,Cameron Norrie,629,390,633,274,43,19
+Hard,Alexander Zverev,178,110,195,81,19,Thanasi Kokkinakis,207,129,147,37,23,3
+Clay,Stefanos Tsitsipas,890,594,820,297,55,Alejandro Davidovich Fokina,659,380,602,243,5,17
+Clay,Alejandro Davidovich Fokina,87,55,107,46,3,Grigor Dimitrov,135,91,138,58,3,4
+Clay,Stefanos Tsitsipas,257,175,281,115,10,Alexander Zverev,343,228,383,161,25,9
+Clay,Alejandro Davidovich Fokina,100,43,106,36,2,Taylor Fritz,154,97,192,67,10,4
+Clay,Grigor Dimitrov,0,0,0,0,0,Hubert Hurkacz,0,0,0,0,0,0
+Clay,Stefanos Tsitsipas,437,303,427,168,23,Diego Schwartzman,411,235,417,138,8,12
+Clay,Alexander Zverev,261,164,273,97,21,Jannik Sinner,208,103,205,71,2,6
+Clay,Alejandro Davidovich Fokina,356,220,381,151,4,David Goffin,218,135,218,76,11,8
+Clay,Taylor Fritz,164,91,141,62,11,Sebastian Korda,187,121,161,65,3,4
+Clay,Grigor Dimitrov,136,89,139,39,7,Casper Ruud,212,139,247,108,10,4
+Clay,Hubert Hurkacz,0,0,0,0,0,Albert Ramos,0,0,0,0,0,0
+Clay,Diego Schwartzman,272,162,254,108,5,Lorenzo Musetti,461,276,450,165,11,9
+Clay,Stefanos Tsitsipas,394,262,357,137,31,Laslo Djere,372,206,292,97,11,8
+Clay,Jannik Sinner,354,197,327,125,12,Andrey Rublev,422,254,411,167,19,10
+Clay,Alexander Zverev,575,368,625,273,42,Pablo Carreno Busta,214,129,239,83,7,11
+Clay,Carlos Alcaraz,38,14,45,13,0,Alexander Zverev,119,73,135,53,10,3
+Clay,Carlos Alcaraz,90,46,93,41,1,Novak Djokovic,301,181,301,141,12,5
+Clay,Alexander Zverev,343,228,383,161,25,Stefanos Tsitsipas,257,175,281,115,10,9
+Clay,Novak Djokovic,197,125,216,101,14,Hubert Hurkacz,100,54,78,17,6,4
+Clay,Carlos Alcaraz,49,34,55,26,0,Rafael Nadal,77,53,91,46,3,2
+Clay,Stefanos Tsitsipas,411,292,409,144,25,Andrey Rublev,417,264,429,178,9,10
+Clay,Alexander Zverev,142,91,138,44,11,Felix Auger Aliassime,46,28,55,15,1,2
+Clay,Novak Djokovic,0,0,0,0,0,Andy Murray,0,0,0,0,0,0
+Clay,Hubert Hurkacz,161,100,137,37,15,Dusan Lajovic,167,100,190,67,4,4
+Clay,Rafael Nadal,320,207,304,141,10,David Goffin,171,99,162,50,6,8
+Clay,Carlos Alcaraz,203,107,207,88,2,Cameron Norrie,325,188,308,106,13,7
+Clay,Andrey Rublev,54,32,47,10,1,Daniel Evans,54,23,41,11,1,2
+Clay,Stefanos Tsitsipas,249,163,253,104,11,Grigor Dimitrov,187,113,188,61,9,6
+Clay,Felix Auger Aliassime,46,28,55,15,1,Jannik Sinner,54,31,61,19,1,2
+Clay,Alexander Zverev,362,245,391,147,27,Lorenzo Musetti,343,208,362,144,4,8
+Clay,Novak Djokovic,780,491,851,384,41,Stefanos Tsitsipas,452,312,452,187,22,15
+Clay,Novak Djokovic,627,438,727,327,40,Casper Ruud,447,306,482,189,20,13
+Clay,Stefanos Tsitsipas,257,175,281,115,10,Alexander Zverev,343,228,383,161,25,9
+Clay,Novak Djokovic,378,254,439,194,20,Felix Auger Aliassime,233,146,235,93,10,6
+Clay,Casper Ruud,281,205,322,152,21,Denis Shapovalov,355,214,345,133,28,10
+Clay,Stefanos Tsitsipas,547,338,474,169,31,Jannik Sinner,385,201,359,142,9,10
+Clay,Alexander Zverev,469,304,494,209,33,Cristian Garin,254,141,260,95,7,8
+Clay,Novak Djokovic,0,0,0,0,0,Stan Wawrinka,0,0,0,0,0,0
+Clay,Felix Auger Aliassime,73,41,70,21,1,Marcos Giron,114,58,105,38,6,2
+Clay,Denis Shapovalov,0,0,0,0,0,Rafael Nadal,0,0,0,0,0,0
+Clay,Casper Ruud,0,0,0,0,0,Jenson Brooksby,0,0,0,0,0,0
+Clay,Jannik Sinner,162,95,163,54,7,Filip Krajinovic,119,74,141,53,2,4
+Clay,Stefanos Tsitsipas,144,103,137,59,13,Karen Khachanov,187,104,176,54,10,5
+Clay,Cristian Garin,178,102,144,45,5,Marin Cilic,150,93,138,37,18,4
+Clay,Alexander Zverev,260,172,281,116,20,Alex De Minaur,192,114,223,78,2,6
+Clay,Novak Djokovic,399,237,415,188,16,Diego Schwartzman,226,131,214,76,8,7
+Clay,Rafael Nadal,384,248,377,165,12,Felix Auger Aliassime,200,130,214,86,9,8
+Clay,Alexander Zverev,0,0,0,0,0,Bernabe Zapata Miralles,0,0,0,0,0,0
+Clay,Carlos Alcaraz,49,34,55,26,0,Karen Khachanov,66,43,47,21,5,2
+Clay,Casper Ruud,61,41,55,24,3,Hubert Hurkacz,99,68,98,30,11,2
+Clay,Holger Rune,138,70,149,53,2,Stefanos Tsitsipas,107,78,110,43,9,5
+Clay,Andrey Rublev,422,254,411,167,19,Jannik Sinner,354,197,327,125,12,10
+Clay,Marin Cilic,155,101,134,42,20,Daniil Medvedev,197,123,202,77,12,4
+Clay,Rafael Nadal,266,170,274,127,6,Novak Djokovic,303,198,391,172,9,6
+Clay,Alexander Zverev,119,73,135,53,10,Carlos Alcaraz,38,14,45,13,0,3
+Clay,Casper Ruud,283,198,292,116,18,Holger Rune,152,100,152,57,4,5
+Clay,Marin Cilic,71,42,59,14,2,Andrey Rublev,54,32,47,10,1,2
+Clay,Rafael Nadal,285,183,279,114,5,Alexander Zverev,467,296,486,202,33,8
+Clay,Casper Ruud,246,170,245,84,11,Marin Cilic,314,203,349,142,34,8
+Clay,Rafael Nadal,521,327,517,230,15,Casper Ruud,393,262,407,137,21,12
+Grass,Novak Djokovic,0,0,0,0,0,Tim Van Rijthoven,0,0,0,0,0,0
+Grass,Jannik Sinner,0,0,0,0,0,Carlos Alcaraz,0,0,0,0,0,0
+Grass,David Goffin,0,0,0,0,0,Frances Tiafoe,0,0,0,0,0,0
+Grass,Cameron Norrie,0,0,0,0,0,Tommy Paul,0,0,0,0,0,0
+Grass,Cristian Garin,0,0,0,0,0,Alex De Minaur,0,0,0,0,0,0
+Grass,Nick Kyrgios,0,0,0,0,0,Brandon Nakashima,0,0,0,0,0,0
+Grass,Taylor Fritz,0,0,0,0,0,Jason Kubler,0,0,0,0,0,0
+Grass,Rafael Nadal,0,0,0,0,0,Botic Van De Zandschulp,0,0,0,0,0,0
+Grass,Novak Djokovic,174,131,207,90,29,Jannik Sinner,226,129,218,81,10,4
+Grass,Cameron Norrie,0,0,0,0,0,David Goffin,0,0,0,0,0,0
+Grass,Nick Kyrgios,0,0,0,0,0,Cristian Garin,0,0,0,0,0,0
+Grass,Rafael Nadal,0,0,0,0,0,Taylor Fritz,0,0,0,0,0,0
+Grass,Novak Djokovic,315,231,368,143,38,Cameron Norrie,217,153,209,68,8,6
+Grass,Nick Kyrgios,0,0,0,0,0,Rafael Nadal,0,0,0,0,0,0
+Grass,Novak Djokovic,0,0,0,0,0,Nick Kyrgios,0,0,0,0,0,0
+Hard,Pablo Carreno Busta,530,328,498,187,38,Hubert Hurkacz,730,493,777,269,106,19
+Hard,Hubert Hurkacz,1182,778,1174,400,156,Casper Ruud,859,520,779,258,57,28
+Hard,Pablo Carreno Busta,224,127,203,73,13,Daniel Evans,175,106,174,56,4,6
+Hard,Hubert Hurkacz,187,119,178,58,23,Nick Kyrgios,0,0,0,0,0,3
+Hard,Casper Ruud,680,450,669,225,60,Felix Auger Aliassime,631,414,658,204,85,20
+Hard,Pablo Carreno Busta,0,0,0,0,0,Jack Draper,0,0,0,0,0,0
+Hard,Daniel Evans,992,622,974,347,49,Tommy Paul,507,324,547,209,36,17
+Hard,Nick Kyrgios,128,84,136,39,27,Alex De Minaur,343,205,324,116,15,7
+Hard,Hubert Hurkacz,349,233,409,152,60,Albert Ramos,356,209,387,136,19,8
+Hard,Casper Ruud,1312,861,1284,458,100,Roberto Bautista Agut,1082,687,1162,443,45,33
+Hard,Felix Auger Aliassime,1077,720,1180,450,128,Cameron Norrie,1244,775,1320,513,83,30
+Hard,Pablo Carreno Busta,525,326,541,188,22,Jannik Sinner,993,639,990,397,44,23
+Hard,Jack Draper,0,0,0,0,0,Gael Monfils,0,0,0,0,0,0
+Hard,Daniel Evans,776,493,739,262,39,Taylor Fritz,443,287,456,171,40,16
+Hard,Tommy Paul,776,464,827,316,43,Marin Cilic,929,580,872,296,118,23
+Hard,Borna Coric,127,95,138,52,22,Stefanos Tsitsipas,65,51,87,36,12,4
+Hard,Stefanos Tsitsipas,1581,1077,1575,567,149,Daniil Medvedev,1684,1157,1775,696,212,47
+Hard,Borna Coric,329,221,330,114,36,Cameron Norrie,455,296,456,176,35,11
+Hard,Daniil Medvedev,1365,941,1421,546,174,Taylor Fritz,1563,1027,1527,523,188,38
+Hard,Stefanos Tsitsipas,777,502,763,279,63,John Isner,489,321,472,128,94,17
+Hard,Cameron Norrie,711,467,773,306,38,Carlos Alcaraz,683,460,691,262,33,19
+Hard,Borna Coric,325,218,338,116,26,Felix Auger Aliassime,313,195,330,118,32,10
+Hard,Daniil Medvedev,1413,978,1436,554,188,Denis Shapovalov,1117,741,1129,402,97,33
+Hard,Taylor Fritz,1154,743,1100,395,134,Andrey Rublev,855,561,883,335,103,27
+Hard,Stefanos Tsitsipas,1175,796,1210,458,139,Diego Schwartzman,1040,628,1041,433,22,32
+Hard,John Isner,766,510,678,150,153,Sebastian Korda,538,324,484,162,32,18
+Hard,Cameron Norrie,0,0,0,0,0,Ben Shelton,0,0,0,0,0,0
+Hard,Carlos Alcaraz,316,229,340,133,16,Marin Cilic,367,217,349,121,34,9
+Hard,Felix Auger Aliassime,1268,863,1335,475,164,Jannik Sinner,1779,1147,1800,663,123,37
+Hard,Borna Coric,367,252,393,137,58,Roberto Bautista Agut,361,233,352,160,21,10
+Hard,Nick Kyrgios,241,151,231,63,37,Daniil Medvedev,369,259,405,173,52,10
+Hard,Karen Khachanov,433,266,423,154,48,Pablo Carreno Busta,235,152,251,98,22,10
+Hard,Matteo Berrettini,296,197,259,80,52,Alejandro Davidovich Fokina,182,114,186,81,12,6
+Hard,Casper Ruud,179,123,185,66,24,Corentin Moutet,151,107,154,50,6,5
+Hard,Jannik Sinner,932,601,941,357,41,Ilya Ivashka,631,391,635,246,50,22
+Hard,Carlos Alcaraz,316,229,340,133,16,Marin Cilic,367,217,349,121,34,9
+Hard,Andrey Rublev,1700,1152,1858,763,187,Cameron Norrie,1822,1127,1901,774,124,54
+Hard,Frances Tiafoe,178,112,158,54,9,Rafael Nadal,233,169,240,80,22,5
+Hard,Karen Khachanov,600,394,618,247,41,Nick Kyrgios,406,282,429,128,84,15
+Hard,Casper Ruud,343,201,311,92,19,Matteo Berrettini,348,203,295,86,33,12
+Hard,Carlos Alcaraz,588,359,605,222,22,Jannik Sinner,509,345,510,203,33,16
+Hard,Frances Tiafoe,1707,1098,1659,585,150,Andrey Rublev,1553,1014,1611,643,157,44
+Hard,Casper Ruud,925,594,901,298,46,Karen Khachanov,987,613,953,347,68,26
+Hard,Carlos Alcaraz,1125,700,1153,438,53,Frances Tiafoe,1294,834,1241,444,108,30
+Hard,Carlos Alcaraz,804,500,851,335,24,Casper Ruud,710,455,714,262,41,22
+Hard,Holger Rune,94,60,86,29,8,Novak Djokovic,0,0,0,0,0,2
+Hard,Holger Rune,90,57,97,44,6,Felix Auger Aliassime,137,94,139,57,20,4
+Hard,Novak Djokovic,1301,889,1364,531,158,Stefanos Tsitsipas,812,521,793,274,76,27
+Hard,Holger Rune,221,149,241,90,19,Carlos Alcaraz,204,134,190,69,13,6
+Hard,Felix Auger Aliassime,861,547,866,282,78,Frances Tiafoe,913,579,888,328,59,25
+Hard,Novak Djokovic,180,131,214,86,30,Lorenzo Musetti,235,139,220,74,9,6
+Hard,Stefanos Tsitsipas,1091,751,1182,441,118,Tommy Paul,1159,717,1221,469,73,30
+Hard,Carlos Alcaraz,539,342,527,188,16,Grigor Dimitrov,601,388,601,200,36,13
+Hard,Holger Rune,166,91,166,50,10,Andrey Rublev,99,56,100,44,11,4
+Hard,Frances Tiafoe,439,282,400,117,31,Alex De Minaur,547,316,520,174,14,13
+Hard,Felix Auger Aliassime,378,242,372,114,42,Gilles Simon,135,64,99,24,3,7
+Hard,Novak Djokovic,852,593,862,346,108,Karen Khachanov,692,450,697,262,66,21
+Hard,Lorenzo Musetti,443,270,429,135,27,Casper Ruud,479,313,489,163,40,14
+Hard,Stefanos Tsitsipas,419,302,414,129,37,Corentin Moutet,414,269,425,137,19,12
+Hard,Tommy Paul,425,248,399,159,21,Pablo Carreno Busta,390,259,434,147,29,11
+Hard,Novak Djokovic,1026,698,1019,401,116,Casper Ruud,688,443,654,220,54,24
+Hard,Casper Ruud,951,609,914,316,63,Andrey Rublev,1020,646,1009,379,92,30
+Hard,Novak Djokovic,1092,770,1166,471,128,Taylor Fritz,1153,739,1112,386,114,29
+Hard,Rafael Nadal,314,223,321,109,30,Casper Ruud,358,241,331,111,20,8
+Hard,Felix Auger Aliassime,252,158,271,80,30,Rafael Nadal,233,169,240,80,22,5
+Hard,Taylor Fritz,214,135,188,62,24,Rafael Nadal,82,61,104,46,7,4
+Hard,Casper Ruud,680,450,669,225,60,Felix Auger Aliassime,631,414,658,204,85,20
+Hard,Casper Ruud,1083,701,1034,374,99,Taylor Fritz,1565,1023,1499,523,167,35
+Hard,Taylor Fritz,1249,812,1146,391,138,Felix Auger Aliassime,862,584,925,315,107,26
+Hard,Stefanos Tsitsipas,1581,1077,1575,567,149,Daniil Medvedev,1684,1157,1775,696,212,47
+Hard,Andrey Rublev,1239,816,1377,524,157,Stefanos Tsitsipas,1288,877,1342,513,146,34
+Hard,Novak Djokovic,1301,889,1364,531,158,Stefanos Tsitsipas,812,521,793,274,76,27
+Hard,Andrey Rublev,1364,901,1445,561,175,Daniil Medvedev,1667,1157,1793,700,228,47
+Hard,Novak Djokovic,1273,896,1387,546,161,Daniil Medvedev,1223,861,1246,470,168,38
+Hard,Novak Djokovic,1708,1176,1794,722,202,Andrey Rublev,1457,957,1603,624,162,44

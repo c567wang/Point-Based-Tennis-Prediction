@@ -1,0 +1,804 @@
+---
+title: "Notebook 7"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Player Season Specific Game Point Plateaus
+
+# General Code
+
+```{r}
+source("matrices/game_matrices_pointwise.R")
+source("matrices/tiebreak_matrices.R")
+source("matrices/set_matrices.R")
+source("matrices/match_matrices.R")
+library(expm)
+match.win.prob <- function(p1,p2,format=0){
+  # function accounts for match formats from 2011 onwards!
+  # under the iid assumptions, calculates player 1 (P1)'s probability of winning a match
+  # with player 2 (P2), where P1 is the player who serves the first game of the first set
+  # input:
+  #   p1(p2): probability of P1(P2) winning a point in their serving game
+  #   format: acceptable values are 0,1,2
+  #     0 - best of 3 sets, all tiebreaks to 7
+  #       for all non-grand-slams, WTA USO up to 2021
+  #     1 - best of 5 sets, all tiebreaks to 7
+  #       for ATP USO up to 2021
+  #     2 - best of 3 sets, deciding tiebreak to 10
+  #       for WTA all 2022 grand-slams + WTA AUS 2019-2021
+  #     3 - best of 5 sets, deciding tiebreak to 10
+  #       for ATP all 2022 grand-slams, ATP AUS 2019-2021
+  #     4 - best of 3 sets, deciding set advantage set
+  #       for WTA WBD up to 2018, WTA RG up to 2021, WTA AUS up to 2018
+  #     5 - best of 5 sets, deciding set advantage set
+  #       for ATP WBD up to 2018, ATP RG up to 2021, ATP AUS up to 2018
+  #     6 - best of 3 sets, deciding set to 7 only if set is tied at 12-12
+  #       for WTA WBD 2019 & 2021
+  #     7 - best of 5 sets, deciding set to 7 only if set is tied at 12-12
+  #       for ATP WBD 2019 & 2021
+  #   p: probability model gives of P1 winning the match
+  
+  # !MODIFICATION! p1,p2 now should be vectors of length 19 (1-18 states + tiebreak)
+  # important that the tiebreak probability is placed is the last/19th entry
+  # if vector longer than 19, only first 19 elements are used
+  # identically distributed assumption may be dropped now depending on p1/p2 composition
+  
+  # get probs of P1,P2 holding their serve
+  m.p2g.p1 <- point.to.game.matrices.pw(p=p1)
+  p1.g <- (solve(diag(18)-m.p2g.p1$Q)%*%m.p2g.p1$R)[1,1]
+  m.p2g.p2 <- point.to.game.matrices.pw(p=p2)
+  p2.g <- (solve(diag(18)-m.p2g.p2$Q)%*%m.p2g.p2$R)[1,1]
+  
+  # get probs of P1,P2 winning sets
+  # in this block of code, probs correspond to sets where P1 serves the 1st game 
+  m.g2s.p1 <- game.to.set.matrices(p=p1.g,q=p2.g)
+  m.g2s.p1.w <- (solve(diag(38)-m.g2s.p1$Q)%*%m.g2s.p1$R)[1,]
+  p.s1.t <- m.g2s.p1.w[1] # prob of going to tiebreak in such a set
+  p1.s1.h <- m.g2s.p1.w[2] # prob of P1 winning by holding in such a set
+  p1.s1.b <- m.g2s.p1.w[3] # prob of P1 winning by breaking P2's serve
+  p2.s1.h <- m.g2s.p1.w[4] # prob of P2 winning by holding in such a set
+  p2.s1.b <- m.g2s.p1.w[5] # prob of P2 winning by breaking P1's serve
+  
+  # in this block of code, probs correspond to sets where P2 serves the 1st game 
+  m.g2s.p2 <- game.to.set.matrices(p=p2.g,q=p1.g)
+  m.g2s.p2.w <- (solve(diag(38)-m.g2s.p2$Q)%*%m.g2s.p2$R)[1,]
+  p.s2.t <- m.g2s.p2.w[1] # prob of going to tiebreak in such a set
+  p2.s2.h <- m.g2s.p2.w[2] # prob of P2 winning by holding in such a set
+  p2.s2.b <- m.g2s.p2.w[3] # prob of P2 winning by breaking P1's serve
+  p1.s2.h <- m.g2s.p2.w[4] # prob of P1 winning by holding in such a set
+  p1.s2.b <- m.g2s.p2.w[5] # prob of P1 winning by breaking P2's serve
+  
+  # get probs for players winning tiebreak games
+  m.tb.p1 <- tb.to.7.matrices(p=p1[19],q=p2[19]) # to 7, P1 serves first
+  m.tb.p1.w <- (solve(diag(48)-m.tb.p1$Q)%*%m.tb.p1$R)[1,]
+  p.tb1.to7 <- m.tb.p1.w[1] # prob of the tiebreak needing more than 12 pts played
+  p1.tb1.to7 <- m.tb.p1.w[2] # prob of P1 winning tiebreak when serving first
+  p2.tb1.to7 <- m.tb.p1.w[3] # prob of P2 winning tiebreak when receiving first
+  
+  m.tb.p2 <- tb.to.7.matrices(p=p2[19],q=p1[19]) # to 7, P2 serves first
+  m.tb.p2.w <- (solve(diag(48)-m.tb.p2$Q)%*%m.tb.p2$R)[1,]
+  p.tb2.to7 <- m.tb.p2.w[1] # prob of the tiebreak needing more than 12 pts played
+  p2.tb2.to7 <- m.tb.p2.w[2] # prob of P2 winning tiebreak when serving first
+  p1.tb2.to7 <- m.tb.p2.w[3] # prob of P1 winning tiebreak when receiving first
+  
+  if (format==2|format==3){ # will only need to 10 prob if format is 2 or 3
+    m.tbd.p1 <- tb.to.10.matrices(p=p1[19],q=p2[19]) # to 10, P1 serves first
+    m.tbd.p1.w <- (solve(diag(99)-m.tbd.p1$Q)%*%m.tbd.p1$R)[1,]
+    p.tb1.to10 <- m.tbd.p1.w[1] # prob of the tiebreak needing more than 18 pts played
+    p1.tb1.to10 <- m.tbd.p1.w[2] # prob of P1 winning tiebreak when serving first
+    p2.tb1.to10 <- m.tbd.p1.w[3] # prob of P2 winning tiebreak when receiving first
+    
+    m.tbd.p2 <- tb.to.10.matrices(p=p2[19],q=p1[19]) # to 10, P2 serves first
+    m.tbd.p2.w <- (solve(diag(99)-m.tbd.p2$Q)%*%m.tbd.p2$R)[1,]
+    p.tb2.to10 <- m.tbd.p2.w[1] # prob of the tiebreak needing more than 18 pts played
+    p2.tb2.to10 <- m.tbd.p2.w[2] # prob of P2 winning tiebreak when serving first
+    p1.tb2.to10 <- m.tbd.p2.w[3] # prob of P1 winning tiebreak when receiving first
+  }
+  
+  # probs for if a tiebreak needs more than 7(10) points to win
+  # for non-deciding sets (to 7), chain starts at (T,A2) which is the first row
+  # for deciding sets (to 10), chain starts at (T,B2) which is the second row
+  # results in this block for when P1 served first in the tiebreak
+  # note the player who serves first in the tiebreak served first in the set
+  m.tbe.p1 <- tb.extra.matrices(p=p1[19],q=p2[19])
+  m.tbe.p1.w <- solve(diag(6)-m.tbe.p1$Q)%*%m.tbe.p1$R
+  p1.tbe.to7 <- m.tbe.p1.w[1,1] # P1 win prob once extra pts are played in the tiebreak
+  p1.tbe.to10 <- m.tbe.p1.w[2,1] # for P2's probs, need only subtract this from 1
+  
+  # results in this block for when P2 served first in the tiebreak
+  m.tbe.p2 <- tb.extra.matrices(p=p2[19],q=p1[19])
+  m.tbe.p2.w <- solve(diag(6)-m.tbe.p2$Q)%*%m.tbe.p2$R
+  p2.tbe.to7 <- m.tbe.p2.w[1,1] # P2 win prob once extra pts are played in the tiebreak
+  p2.tbe.to10 <- m.tbe.p2.w[2,1] # for P1's probs, need only subtract this from 1
+  
+  # now that the individual pieces are established, start calculating overall set
+  # winning probabilities to plug into set.to.match functions
+  # since P1 was designated as serving the 1st game of the entire match
+  # A(B) will be synonymous with P1(P2) in variable naming from here on in
+  p.b.A <- p1.s1.b
+  p.h.A <- p1.s1.h+p.s1.t*(p1.tb1.to7+p.tb1.to7*p1.tbe.to7)
+  q.b.A <- p2.s1.b+p.s1.t*(p2.tb1.to7+p.tb1.to7*(1-p1.tbe.to7))
+  q.h.A <- p2.s1.h
+  p.b.B <- p1.s2.b+p.s2.t*(p1.tb2.to7+p.tb2.to7*(1-p2.tbe.to7))
+  p.h.B <- p1.s2.h
+  q.b.B <- p2.s2.b
+  q.h.B <- p2.s2.h+p.s2.t*(p2.tb2.to7+p.tb2.to7*p2.tbe.to7)
+  
+  # sacrificing some succinctness for readability below so cases are clear
+  if (format==0){
+    # 0 - best of 3 sets, all tiebreaks to 7
+    # for all non-grand-slams, WTA USO up to 2021
+    m.s2m <- set.to.match.of3(p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B,
+                              p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B)
+    p <- (solve(diag(7)-m.s2m$Q)%*%m.s2m$R)[1,1]
+  } else if (format==1) {
+    # 1 - best of 5 sets, all tiebreaks to 7
+    # for ATP USO up to 2021
+    m.s2m <- set.to.match.of5(p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B,
+                              p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B)
+    p <- (solve(diag(17)-m.s2m$Q)%*%m.s2m$R)[1,1]
+  } else if (format==2) {
+    # 2 - best of 3 sets, deciding tiebreak to 10
+    # for WTA all 2022 grand-slams + WTA AUS 2019-2021
+    p.b.A.d <- p1.s1.b
+    p.h.A.d <- p1.s1.h+p.s1.t*(p1.tb1.to10+p.tb1.to10*p1.tbe.to10)
+    q.b.A.d <- p2.s1.b+p.s1.t*(p2.tb1.to10+p.tb1.to10*(1-p1.tbe.to10))
+    q.h.A.d <- p2.s1.h
+    p.b.B.d <- p1.s2.b+p.s2.t*(p1.tb2.to10+p.tb2.to10*(1-p2.tbe.to10))
+    p.h.B.d <- p1.s2.h
+    q.b.B.d <- p2.s2.b
+    q.h.B.d <- p2.s2.h+p.s2.t*(p2.tb2.to10+p.tb2.to10*p2.tbe.to10)
+    m.s2m <- set.to.match.of3(p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B,
+                              p.b.A.d,p.h.A.d,q.b.A.d,q.h.A.d,
+                              p.b.B.d,p.h.B.d,q.b.B.d,q.h.B.d)
+    p <- (solve(diag(7)-m.s2m$Q)%*%m.s2m$R)[1,1]
+  } else if (format==3) {
+    # 3 - best of 5 sets, deciding tiebreak to 10
+    # for ATP all 2022 grand-slams, ATP AUS 2019-2021
+    p.b.A.d <- p1.s1.b
+    p.h.A.d <- p1.s1.h+p.s1.t*(p1.tb1.to10+p.tb1.to10*p1.tbe.to10)
+    q.b.A.d <- p2.s1.b+p.s1.t*(p2.tb1.to10+p.tb1.to10*(1-p1.tbe.to10))
+    q.h.A.d <- p2.s1.h
+    p.b.B.d <- p1.s2.b+p.s2.t*(p1.tb2.to10+p.tb2.to10*(1-p2.tbe.to10))
+    p.h.B.d <- p1.s2.h
+    q.b.B.d <- p2.s2.b
+    q.h.B.d <- p2.s2.h+p.s2.t*(p2.tb2.to10+p.tb2.to10*p2.tbe.to10)
+    m.s2m <- set.to.match.of5(p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B,
+                              p.b.A.d,p.h.A.d,q.b.A.d,q.h.A.d,
+                              p.b.B.d,p.h.B.d,q.b.B.d,q.h.B.d)
+    p <- (solve(diag(17)-m.s2m$Q)%*%m.s2m$R)[1,1]
+  } else if (format==4) {
+    # 4 - best of 3 sets, deciding set advantage set
+    # for WTA WBD up to 2018, WTA RG up to 2021, WTA AUS up to 2018
+    
+    # this block for probs of P1,2 winning the advantage set
+    # when extra games are played and with P1 serving the first extra game
+    # (this means P1 also served the first game of the set)
+    m.advse.p1 <- special.set.matrices(p1.g,p2.g)
+    p1.advse <- (solve(diag(3)-m.advse.p1$Q)%*%m.advse.p1$R)[1,1] 
+    # take complement wrt 1 for prob of P2 winning advantage set once extra games
+    # and when P1 serves the first extra game (the 13th game of the set)
+    
+    # this block for probs of P1,2 winning the advantage set
+    # when extra games are played and with P1 serving the first extra game
+    # similar to explanation above, complement wrt 1 will be used as well
+    m.advse.p2 <- special.set.matrices(p2.g,p1.g)
+    p2.advse <- (solve(diag(3)-m.advse.p2$Q)%*%m.advse.p2$R)[1,1]
+    
+    # doesn't really matter which part to add the extra game probs to
+    # since they're summed in the final set-to-match function
+    p.b.A.d <- p1.s1.b
+    p.h.A.d <- p1.s1.h+p.s1.t*p1.advse
+    q.b.A.d <- p2.s1.b+p.s1.t*(1-p1.advse)
+    q.h.A.d <- p2.s1.h
+    p.b.B.d <- p1.s2.b+p.s2.t*(1-p2.advse)
+    p.h.B.d <- p1.s2.h
+    q.b.B.d <- p2.s2.b
+    q.h.B.d <- p2.s2.h+p.s2.t*p2.advse
+    m.s2m <- set.to.match.of3(p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B,
+                              p.b.A.d,p.h.A.d,q.b.A.d,q.h.A.d,
+                              p.b.B.d,p.h.B.d,q.b.B.d,q.h.B.d)
+    p <- (solve(diag(7)-m.s2m$Q)%*%m.s2m$R)[1,1]
+  } else if (format==5) {
+    # 5 - best of 5 sets, deciding set advantage set
+    # for ATP WBD up to 2018, ATP RG up to 2021, ATP AUS up to 2018
+    
+    # this block for probs of P1,2 winning the advantage set
+    # when extra games are played and with P1 serving the first extra game
+    # (this means P1 also served the first game of the set)
+    m.advse.p1 <- special.set.matrices(p1.g,p2.g)
+    p1.advse <- (solve(diag(3)-m.advse.p1$Q)%*%m.advse.p1$R)[1,1] 
+    # take complement wrt 1 for prob of P2 winning advantage set once extra games
+    # and when P1 serves the first extra game (the 13th game of the set)
+    
+    # this block for probs of P1,2 winning the advantage set
+    # when extra games are played and with P1 serving the first extra game
+    # similar to explanation above, complement wrt 1 will be used as well
+    m.advse.p2 <- special.set.matrices(p2.g,p1.g)
+    p2.advse <- (solve(diag(3)-m.advse.p2$Q)%*%m.advse.p2$R)[1,1]
+    
+    # doesn't really matter which part to add the extra game probs to
+    # since they're summed in the final set-to-match function
+    p.b.A.d <- p1.s1.b
+    p.h.A.d <- p1.s1.h+p.s1.t*p1.advse
+    q.b.A.d <- p2.s1.b+p.s1.t*(1-p1.advse)
+    q.h.A.d <- p2.s1.h
+    p.b.B.d <- p1.s2.b+p.s2.t*(1-p2.advse)
+    p.h.B.d <- p1.s2.h
+    q.b.B.d <- p2.s2.b
+    q.h.B.d <- p2.s2.h+p.s2.t*p2.advse
+    m.s2m <- set.to.match.of5(p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B,
+                              p.b.A.d,p.h.A.d,q.b.A.d,q.h.A.d,
+                              p.b.B.d,p.h.B.d,q.b.B.d,q.h.B.d)
+    p <- (solve(diag(17)-m.s2m$Q)%*%m.s2m$R)[1,1]
+  } else if (format==6) {
+    # 6 - best of 3 sets, deciding set to 7 only if set is tied at 12-12
+    # for WTA WBD 2019 & 2021
+    
+    # following two code blocks for probs re: deciding set goes to extra games
+    # the first block's probs are for when P1 serves the first extra game
+    m.wbdsp.p1 <- special.set.matrices(p1.g,p2.g)$P #wbdsp - wimbledon special
+    # expm package needs to be installed for line below
+    m.wbdsp.p1.w <- (m.wbdsp.p1%^%12)[1,] # 12=6+6 from 6-6 to 12-12
+    p1.wbdsp.s1 <- m.wbdsp.p1.w[4] # prob P1 wins deciding set after it goes to extra games
+    p2.wbdsp.s1 <- m.wbdsp.p1.w[5] # prob P2 wins in same scenario
+    t.wbdsp.s1 <- m.wbdsp.p1.w[1] # prob goes to 12-12 and tiebreak happens
+    
+    # the second block's probs are for when P2 serves the first extra game
+    m.wbdsp.p2 <- special.set.matrices(p2.g,p1.g)$P
+    m.wbdsp.p2.w <- (m.wbdsp.p2%^%12)[1,]
+    p1.wbdsp.s2 <- m.wbdsp.p2.w[5] # prob P1 wins deciding set after it goes to extra games
+    p2.wbdsp.s2 <- m.wbdsp.p2.w[4] # prob P2 wins in same scenario
+    t.wbdsp.s2 <- m.wbdsp.p2.w[1] # prob goes to 12-12 for tiebreak
+    
+    p.b.A.d <- p1.s1.b 
+    # in 12-12 to7 tiebreak, same player serves first in the tiebreak
+    p.h.A.d <- p1.s1.h+p.s1.t*(p1.wbdsp.s1+t.wbdsp.s1*(p1.tb1.to7+p.tb1.to7*p1.tbe.to7))
+    q.b.A.d <- p2.s1.b+p.s1.t*(p2.wbdsp.s1+t.wbdsp.s1*(p2.tb1.to7+p.tb1.to7*(1-p1.tbe.to7)))
+    q.h.A.d <- p2.s1.h
+    p.b.B.d <- p1.s2.b+p.s2.t*(p1.wbdsp.s2+t.wbdsp.s2*(p1.tb2.to7+p.tb2.to7*(1-p2.tbe.to7)))
+    p.h.B.d <- p1.s2.h
+    q.b.B.d <- p2.s2.b
+    q.h.B.d <- p2.s2.h+p.s2.t*(p2.wbdsp.s2+t.wbdsp.s2*(p2.tb2.to7+p.tb2.to7*p2.tbe.to7))
+    m.s2m <- set.to.match.of3(p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B,
+                              p.b.A.d,p.h.A.d,q.b.A.d,q.h.A.d,
+                              p.b.B.d,p.h.B.d,q.b.B.d,q.h.B.d)
+    p <- (solve(diag(7)-m.s2m$Q)%*%m.s2m$R)[1,1]
+  } else if (format==7) {
+    # 7 - best of 5 sets, deciding set to 7 only if set is tied at 12-12
+    # for ATP WBD 2019 & 2021
+    
+    # following two code blocks for probs re: deciding set goes to extra games
+    # the first block's probs are for when P1 serves the first extra game
+    m.wbdsp.p1 <- special.set.matrices(p1.g,p2.g)$P #wbdsp - wimbledon special
+    m.wbdsp.p1.w <- (m.wbdsp.p1%^%12)[1,] # expm package needs to be installed
+    p1.wbdsp.s1 <- m.wbdsp.p1.w[4] # prob P1 wins deciding set after it goes to extra games
+    p2.wbdsp.s1 <- m.wbdsp.p1.w[5] # prob P2 wins in same scenario
+    t.wbdsp.s1 <- m.wbdsp.p1.w[1] # prob goes to 12-12 and tiebreak happens
+    
+    # the second block's probs are for when P2 serves the first extra game
+    m.wbdsp.p2 <- special.set.matrices(p2.g,p1.g)$P
+    m.wbdsp.p2.w <- (m.wbdsp.p2%^%12)[1,]
+    p1.wbdsp.s2 <- m.wbdsp.p2.w[5] # prob P1 wins deciding set after it goes to extra games
+    p2.wbdsp.s2 <- m.wbdsp.p2.w[4] # prob P2 wins in same scenario
+    t.wbdsp.s2 <- m.wbdsp.p2.w[1] # prob goes to 12-12 for tiebreak
+    
+    p.b.A.d <- p1.s1.b 
+    # in 12-12 to7 tiebreak, same player serves first in the tiebreak
+    p.h.A.d <- p1.s1.h+p.s1.t*(p1.wbdsp.s1+t.wbdsp.s1*(p1.tb1.to7+p.tb1.to7*p1.tbe.to7))
+    q.b.A.d <- p2.s1.b+p.s1.t*(p2.wbdsp.s1+t.wbdsp.s1*(p2.tb1.to7+p.tb1.to7*(1-p1.tbe.to7)))
+    q.h.A.d <- p2.s1.h
+    p.b.B.d <- p1.s2.b+p.s2.t*(p1.wbdsp.s2+t.wbdsp.s2*(p1.tb2.to7+p.tb2.to7*(1-p2.tbe.to7)))
+    p.h.B.d <- p1.s2.h
+    q.b.B.d <- p2.s2.b
+    q.h.B.d <- p2.s2.h+p.s2.t*(p2.wbdsp.s2+t.wbdsp.s2*(p2.tb2.to7+p.tb2.to7*p2.tbe.to7))
+    m.s2m <- set.to.match.of5(p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B,
+                              p.b.A.d,p.h.A.d,q.b.A.d,q.h.A.d,
+                              p.b.B.d,p.h.B.d,q.b.B.d,q.h.B.d)
+    p <- (solve(diag(17)-m.s2m$Q)%*%m.s2m$R)[1,1]
+  } else {
+    p <- -1 # invalid format value
+  }
+  return(p)
+}
+
+# following function highlights matches that were incomplete
+# this is determined by if the score has letters ("W/O","Def.","RET" etc.)
+# takes as input the score column of a dataset and returns indexes
+ic.match <- function(score) grep("[A-Za-z]",score)
+
+get.unique.players <- function(testset){
+  # takes the players in the test set and returns vector
+  # containing unique players in the test set
+  names <- c(testset$winner_name,testset$loser_name)
+  names <- unique(names)
+  return(names)
+}
+
+get.equiv.names <- function(fullname){
+  # returns vector of equivalent names in different formats
+  # according to the fullname given
+  # fullname ideally from get.unique.players output
+  # More special examples:
+  #   Alejandro Davidovich Fokina -> A Davidovich Fokina & A. Davidovich Fokina
+  #   Pierre Hugues Herbert -> P Herbert & Ph Herbert & P. Herbert
+  #   Alex De Minaur -> A. De Minaur & Alex de Minaur & A De Minaur
+  #   Karolina Pliskova -> K. Pliskova & Ka. Pliskova & Ka Pliskova
+  #   Kristyna Pliskova -> K. Pliskova & Kr. Pliskova & Kr Pliskova
+  #   some cases manually remediated (see misc. google doc)
+  #   but quick manual remediation can't help if player in test set has middle name
+  #   and full name isn't in pbp training set.
+  #   Function tries to account for this as follows.
+  
+  # Alex Bee Caine -> c("A. Caine", "A Caine", "A. Bee Caine", "A Bee Caine",
+  #                     ""A Bee-Caine", "A. Bee-Caine", Ab Caine")
+  
+  # This method risks picking up on players with same last name and first letter
+  # But this is unlikely as the pbp training set only 1 case of this - Kr&Ka Pliskova
+  # And this was picked up since there were 2 characters before the space
+  
+  parts <- strsplit(fullname,split=" ")[[1]]
+  n <- length(parts)
+  first.letter <- substr(parts[1],1,1)
+  equiv <- c(fullname,
+             paste(first.letter," ",parts[n],sep=""),
+             paste(first.letter,"."," ",parts[n],sep=""))
+  if (n > 2){
+    rest <- ""
+    rest.dash <- ""
+    for (i in 1:(n-1)){
+      rest <- paste(rest," ",parts[i+1],sep="")
+      rest.dash <- paste(rest.dash,parts[i+1],sep="-")
+    }
+    rest.dash <- substr(rest.dash,2,nchar(rest.dash)) # get rid of first dash
+    first.middle.name.letter <- tolower(substr(parts[2],1,1))
+    rest.more <- "" # for if the name has four or more parts
+    for (i in 1:(n-2)){
+      rest.more <- paste(rest.more," ",parts[i+2],sep="")
+    }
+    # rest contains the first space, rest.dash doesn't
+    equiv <- c(equiv, paste(first.letter,rest,sep=""),
+               paste(first.letter,".",rest,sep=""),
+               paste(first.letter," ",rest.dash,sep=""),
+               paste(first.letter,"."," ",rest.dash,sep=""),
+               paste(first.letter,first.middle.name.letter,rest.more,sep=""))
+  }
+  return(equiv)
+}
+
+get.aggr.by.state <- function(entry){
+  # extract serve won & serve total fields for a player
+  # without surface distinction
+  ret <- rep(0,38)
+  for (i in 1:18){
+    # odd indices for pts won, even for total
+    ret[2*i-1] <- entry[[3+12*i]]+entry[[7+12*i]]+entry[[11+12*i]]
+    ret[2*i] <- entry[[2+12*i]]+entry[[6+12*i]]+entry[[10+12*i]]
+  }
+  ret[37] <- entry[[3]]+entry[[7]]+entry[[11]]
+  ret[38] <- entry[[2]]+entry[[6]]+entry[[10]]
+  return(ret)
+}
+
+create.p.vector <- function(tst.names,pbp){
+  # returns a dataframe with the rows in the order of names,
+  # the columns being p's for states 1-18 and then t (tiebreak)
+  # final column is overall p regardless of state by taking total won / total serve
+  # names usually from get.unique.players on test data set
+  # pbp is the point-by-point data given
+  # note p-vectors not surface specific
+  # prints percentage of NA players (as determined by state 1 being NA)
+  # percentage not stored to not produce too many unnecessary variables
+  
+  n <- length(tst.names)
+  m <- nrow(pbp)
+  pbp.name <- pbp$name
+  aggr <- matrix(0,nrow=n,ncol=38) # 38=2x19, taking won & total to divide later
+  for (i in 1:n){
+    equiv <- get.equiv.names(tst.names[i])
+    p <- length(equiv)
+    for (j in 1:p){
+      for (l in 1:m){
+        # check 1 by 1 since pbp has non-unique names after manual remediation
+        if (equiv[j]==pbp.name[l]){
+          more.aggr <- get.aggr.by.state(pbp[l,])
+          aggr[i,] <- aggr[i,]+more.aggr
+        }
+      }
+    }
+  }
+  # now divide odd cols by even cols to obtain p's
+  output <- matrix(0,nrow=n,ncol=20)
+  output <- data.frame(output, row.names=tst.names)
+  for (i in 1:n){
+    for (j in 1:19){
+      output[i,j] <- aggr[i,2*j-1]/aggr[i,2*j]
+    } # note below first seq() output will end at 37
+    output[i,20] <- sum(aggr[i,seq(1,38,by=2)])/sum(aggr[i,seq(2,38,by=2)])
+  }
+  # get and print percentage of NAs
+  cat("Percentage of NAs:",sum(is.na(output$X1))/n,"\n")
+  # fill in NAs with column averages
+  for (i in 1:20){
+    output[which(is.na(output[,i])),i] <- mean(output[-which(is.na(output[,i])),i])
+  }
+  return(output)
+}
+
+# list of grand slams as their Men's singles are played to best 3 of 5 sets
+# naming convention following that found in the test sets
+grand.slams <- c("Australian Open","Roland Garros","Wimbledon","US Open")
+
+# overall function to do experiments with
+conduct.experiment <- function(inactive.states, P, test.set, atp=TRUE, test.year=0){
+  # inactive.states:
+  #   vector containing states (19 for tiebreak) to deactivate, i.e. 
+  #   replace the state's unique p with the player's overall p
+  # P:
+  #   data.frame containing players' individual p vectors
+  #   usually obtained via create.p.vector output
+  # test.set:
+  #   data set used to test accuracy of prediction
+  # atp:
+  #   boolean defaulted to true if test.set is ATP data
+  # test.year:
+  #   three valid values: 0,1,2
+  #   0 for up to 2018, 1 for 2019 to 2021 inclusive, 2 for 2022 beyond
+  
+  # make copy of P and change copy to align with specified inactive.states
+  cP <- P[,1:19]
+  cP[,inactive.states] <- P[,20]
+  
+  # record exact probability values from model
+  # so we can examine closer if we want
+  n <- nrow(test.set)
+  exact <- rep(0,n)
+  
+  # experiment begins
+  pbp.names <- rownames(cP)
+  for (i in 1:n){
+    matchup <- test.set[i,]
+    winner <- matchup$winner_name
+    loser <- matchup$loser_name
+    inds <- match(c(winner,loser),pbp.names)
+    winner.P <- unname(unlist(cP[inds[1],]))
+    loser.P <- unname(unlist(cP[inds[2],]))
+    if (matchup$tourney_name %in% grand.slams){
+      if (test.year==0){
+        if (matchup$tourney_name=="US Open"){
+          # here we do something that many cases below will also do
+          # atp is TRUE if the match is an ATP match, x+ATP is a numeric value
+          # so x+ATP can be directly used for format without if-conditioning 
+          # this also works because the format codes were wta/atp alternating
+          # with the wta/atp code pairs only differing in playing to 3 or 5 sets
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=0+atp)
+        } else {
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=4+atp)
+        }
+      } else if (test.year==1){
+        # no overlap of rules from 2019 to 2021, so we have to code all cases
+        if (matchup$tourney_name=="Australian Open"){
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=2+atp)
+        } else if (matchup$tourney_name=="US Open"){
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=0+atp)
+        } else if (matchup$tourney_name=="Wimbledon"){
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=6+atp)
+        } else { # matchup is from Roland Garros
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=4+atp)
+        }
+      } else{ # test.year is 2, all grand slams formats standardized in 2022
+        exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=2+atp)
+      }
+    } else {
+      exact[i] <- match.win.prob(p1=winner.P,p2=loser.P)
+    }
+  }
+  res <- exact > 0.5
+  return(list("score"=mean(res),"result"=res,"exact"=exact))
+}
+
+downwards.wrapper <- function(deactivate,P,testset,atp,test.year=0){
+  # atp is boolean for if testset is for ATP
+  # test.year for input for conduct.experiment
+  scores <- rep(0,19)
+  if (length(deactivate)==0){
+    options <- 1:19
+  } else {
+    options <- (1:19)[-deactivate]
+  }
+  for (i in options){
+    scores[i] <- conduct.experiment(c(i,deactivate),P,testset,atp,test.year)$score
+    # so deactivated state's indices will have 0
+  }
+  return(list("max"=max(scores),"candidates"=which(scores==max(scores))))
+}
+
+upwards.wrapper <- function(activate,P,testset,atp,test.year=0){
+  # atp is boolean for if testset is for ATP
+  # test.year for input for conduct.experiment
+  if (length(activate)==0){
+    deactivate <- 1:19
+  } else {
+    deactivate <- (1:19)[-activate]
+  }
+  scores <- rep(0,19)
+  for (i in deactivate){
+    deactivate.no.i <- (1:19)[-c(activate,i)]
+    scores[i] <- conduct.experiment(deactivate.no.i,P,testset,atp,test.year)$score
+    # activated state's indices will have 0
+  }
+  return(list("max"=max(scores),"candidates"=which(scores==max(scores))))
+}
+
+# can be further optimized in the future by combining equivalent paths
+downwards.experiment <- function(starting.states,P,testset,
+                                 atp,previous.scores,depth=18,test.year=0){
+  
+  diverge.lists <- c()
+  deactivate <- starting.states
+  
+  # through recursion, aim to combine all ovr.lists produced
+  ovr.list <- list() # to contain lists containing state & score vectors
+  path <- list()
+  # if no previous scores, can initialize NULL list element for scores:
+  # https://stackoverflow.com/questions/45666451/r-adding-an-empty-vector-to-a-list
+  if (length(previous.scores)==0){
+    path[1] <- list(NULL)
+  } else {
+    path[[1]] <- previous.scores # to record best scores of this path
+  }
+  # path[[2]] to record states deactivated, but does not need initialization
+  
+  while(length(deactivate) < depth){
+    
+    res <- downwards.wrapper(deactivate,P,testset,atp,test.year)
+    score <- res$max
+    cands <- res$candidates
+    scores.sofar <- c(path[[1]],score)
+    
+    l <- length(cands)
+    if (l>1){
+      # recursion call
+      for (i in 2:l){
+        diverge.lists <- c(
+          diverge.lists,
+          downwards.experiment(c(deactivate,cands[i]),P,testset,
+                               atp,scores.sofar,depth,test.year))
+      }
+    }
+    path[[1]] <- scores.sofar
+    deactivate <- c(deactivate,cands[1])
+    path[[2]] <- deactivate
+  }
+  path[[2]] <- deactivate
+  ovr.list[[1]] <- path
+  ovr.list <- c(ovr.list,diverge.lists)
+  
+  return(ovr.list)
+}
+
+upwards.experiment <- function(starting.states,P,testset,
+                               atp,previous.scores,depth=18,test.year){
+  
+  diverge.lists <- c()
+  activate <- starting.states
+  
+  # through recursion, aim to combine all ovr.lists produced
+  ovr.list <- list() # to contain lists containing state & score vectors
+  path <- list()
+  # if no previous scores, can initialize NULL list element for scores:
+  # https://stackoverflow.com/questions/45666451/r-adding-an-empty-vector-to-a-list
+  if (length(previous.scores)==0){
+    path[1] <- list(NULL)
+  } else {
+    path[[1]] <- previous.scores # to record best scores of this path
+  }
+  # path[[2]] to record states deactivated, but does not need initialization
+  
+  while(length(activate) < depth){
+    
+    res <- upwards.wrapper(activate,P,testset,atp,test.year)
+    score <- res$max
+    cands <- res$candidates
+    scores.sofar <- c(path[[1]],score)
+    
+    l <- length(cands)
+    if (l>1){
+      # recursion call
+      for (i in 2:l){
+        diverge.lists <- c(
+          diverge.lists,
+          upwards.experiment(c(activate,cands[i]),P,testset,
+                             atp,scores.sofar,depth,test.year))
+      }
+    }
+    path[[1]] <- scores.sofar
+    activate <- c(activate,cands[1])
+    path[[2]] <- activate
+  }
+  path[[2]] <- activate
+  ovr.list[[1]] <- path
+  ovr.list <- c(ovr.list,diverge.lists)
+  
+  return(ovr.list)
+}
+
+plot.path.score <- function(n.down,dat.down,n.up,dat.up,
+                      P, test.set, atp=TRUE,
+                      ylim.lower=0.55,ylim.upper=0.7){
+  # n - length of path given
+  # dat - data saved containing paths
+  # ylim.lower(upper) - ylim for plot, set to around 0(20) for type=2
+  
+  baseline.down <- conduct.experiment(c(),P,test.set,atp)$score
+  baseline.up <- conduct.experiment(1:19,P,test.set,atp)$score
+  
+  plot(0:n.up,c(baseline.up,dat.up[[1]][[1]]),'l',
+       xlim=c(0,20),ylim=c(ylim.lower,ylim.upper),main="Scores")
+  for (i in 2:length(dat.up)){
+    lines(0:n.up,c(baseline.up,dat.up[[i]][[1]]))
+  }
+  for (i in 1:length(dat.down)){
+    lines(20:(20-n.down),c(baseline.down,dat.down[[i]][[1]]))
+  }
+}
+
+plot.path.state <- function(n.down,dat.down,n.up,dat.up,ylim.lower=0,ylim.upper=20){
+  # n - length of path given
+  # dat - data saved containing paths
+  # ylim.lower(upper) - ylim for plot, set to around 0(20) for state
+  
+  plot(1:n.up,dat.up[[1]][[2]],'l',
+       xlim=c(1,19),ylim=c(ylim.lower,ylim.upper),main="States")
+  for (i in 2:length(dat.up)){
+    lines(1:n.up,dat.up[[i]][[2]])
+  }
+  for (i in 1:length(dat.down)){
+    lines(19:(20-n.down),dat.down[[i]][[2]])
+  }
+}
+```
+
+
+# Denis Shapovalov 2021 (Seed=11)
+
+## Data Preparation
+
+```{r}
+# testing and validation data
+ds.all.matches <- read.csv("2021_d_shapovalov_matches.csv")
+ds.all.matches <- ds.all.matches[-ic.match(ds.all.matches$score),]
+ds.n <- nrow(ds.all.matches)
+# remove grand slam matches since those are for training
+ds.grand.slam.idx <- c()
+for (i in 1:ds.n){
+  if (ds.all.matches$tourney_name[i]%in%grand.slams){
+    ds.grand.slam.idx <- c(ds.grand.slam.idx,i)
+  }
+}
+ds.all.matches <- ds.all.matches[-ds.grand.slam.idx,]
+ds.n <- nrow(ds.all.matches)
+set.seed(11)
+ds.test.idx <- sample(1:ds.n,round(0.7*ds.n))
+ds.test.matches <- ds.all.matches[ds.test.idx,]
+ds.val.matches <- ds.all.matches[-ds.test.idx,]
+```
+```{r}
+# training point by point data
+ds.pbp <- read.csv("2021_pbp_individual.csv")
+```
+```{r}
+ds.names <- get.unique.players(ds.all.matches)
+ds.P <- create.p.vector(ds.names,ds.pbp)
+```
+
+## Testing and Fitting
+
+```{r eval=FALSE, include=TRUE}
+res <- downwards.experiment(c(),ds.P,ds.test.matches,atp=TRUE,c(),depth=5,test.year=1)
+saveRDS(res,file="2021_d_shapovalov_down5_s11.rds")
+```
+```{r}
+ds.down5 <- readRDS("2021_d_shapovalov_down5_s11.rds")
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),ds.P,ds.test.matches,atp=TRUE,c(),depth=5,test.year=1)
+saveRDS(res,file="2021_d_shapovalov_up5_s11.rds")
+```
+```{r}
+ds.up5 <- readRDS("2021_d_shapovalov_up5_s11.rds")
+```
+```{r}
+plot.path.score(5,ds.down5,5,ds.up5,ds.P,ds.test.matches,ylim.lower=0.57,ylim.upper=0.72)
+```
+```{r}
+plot.path.state(5,ds.down5,5,ds.up5)
+```
+
+Deactivate {15} in the down direction, activate {19} in the up direction.
+
+```{r}
+ds.examine <- ds.val.matches[,c(4,5)]
+ds.examine$all.deact <- conduct.experiment(1:19,ds.P,ds.val.matches,TRUE,1)$result
+ds.examine$all.act <- conduct.experiment(c(),ds.P,ds.val.matches,TRUE,1)$result
+ds.examine$up <- conduct.experiment(1:18,ds.P,ds.val.matches,TRUE,1)$result
+ds.examine$down <- conduct.experiment(15,ds.P,ds.val.matches,TRUE,1)$result
+sapply(list(ds.examine$all.deact,ds.examine$all.act,ds.examine$up,ds.examine$down),mean)
+```
+
+We do not see too much difference apart from the down direction where deactivating 15 helped with the prediction of one more matchup. Indeed, Shapovalov had the highest $p_{15}$ in the training set, and 15's deactivation flipped one of his losses correctly below. Similarly on from the up direction, 19's activation also weakened Shapovalov in the model, and we see that results in 2 correct flips and 2 wrong ones.
+
+```{r}
+ds.examine[which(ds.examine$all.act!=ds.examine$down),c(1,2,4,6)]
+ds.examine[which(ds.examine$all.deact!=ds.examine$up),c(1,2,3,5)]
+```
+
+# Denis Shapovalov 2021 (Seed=12)
+
+```{r}
+# testing and validation data
+ds.all.matches <- read.csv("2021_d_shapovalov_matches.csv")
+ds.all.matches <- ds.all.matches[-ic.match(ds.all.matches$score),]
+ds.n <- nrow(ds.all.matches)
+# remove grand slam matches since those are for training
+ds.grand.slam.idx <- c()
+for (i in 1:ds.n){
+  if (ds.all.matches$tourney_name[i]%in%grand.slams){
+    ds.grand.slam.idx <- c(ds.grand.slam.idx,i)
+  }
+}
+ds.all.matches <- ds.all.matches[-ds.grand.slam.idx,]
+ds.n <- nrow(ds.all.matches)
+set.seed(12)
+ds.test.idx <- sample(1:ds.n,round(0.7*ds.n))
+ds.test.matches <- ds.all.matches[ds.test.idx,]
+ds.val.matches <- ds.all.matches[-ds.test.idx,]
+```
+```{r eval=FALSE, include=TRUE}
+res <- downwards.experiment(c(),ds.P,ds.test.matches,atp=TRUE,c(),depth=5,test.year=1)
+saveRDS(res,file="2021_d_shapovalov_down5_s12.rds")
+```
+```{r}
+ds.down5 <- readRDS("2021_d_shapovalov_down5_s12.rds")
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),ds.P,ds.test.matches,atp=TRUE,c(),depth=5,test.year=1)
+saveRDS(res,file="2021_d_shapovalov_up5_s12.rds")
+```
+```{r}
+ds.up5 <- readRDS("2021_d_shapovalov_up5_s12.rds")
+```
+```{r}
+plot.path.score(5,ds.down5,5,ds.up5,ds.P,ds.test.matches,ylim.lower=0.57,ylim.upper=0.72)
+```
+```{r}
+plot.path.state(5,ds.down5,5,ds.up5)
+```
+
+On the activation/up front, the first choice is still clearly {19}. On the deactivation/down front, 15 remains one of the choices, but going by number of divergent paths, 13's case is stronger. We shall look at both below.
+
+```{r}
+ds.examine <- ds.val.matches[,c(4,5)]
+ds.examine$all.deact <- conduct.experiment(1:19,ds.P,ds.val.matches,TRUE,1)$result
+ds.examine$all.act <- conduct.experiment(c(),ds.P,ds.val.matches,TRUE,1)$result
+ds.examine$up <- conduct.experiment(1:18,ds.P,ds.val.matches,TRUE,1)$result
+ds.examine$down1 <- conduct.experiment(15,ds.P,ds.val.matches,TRUE,1)$result
+ds.examine$down2 <- conduct.experiment(13,ds.P,ds.val.matches,TRUE,1)$result
+sapply(list(ds.examine$all.deact,ds.examine$all.act,
+            ds.examine$up,ds.examine$down1,ds.examine$down2),mean)
+```
+
+Noting that as before for 2021 Shapovalov, the possible units of change in the score are multiples of 1/13 ~ 0.0769, the up direction this time has 1 less correct prediction, while both downwards paths do not yield change.
+
+```{r}
+ds.examine[which(ds.examine$all.deact!=ds.examine$up),c(1,2,3,5)]
+```
+
+Regarding the decrease in the upwards direction, we see activating 19, as before, weakens Shapovalov in the predictions. This time the matches in the validation set that were flipped contain more of his victories than losses, so on the whole we saw the decrease in score.
+
+
+

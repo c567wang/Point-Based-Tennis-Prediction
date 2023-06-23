@@ -1,0 +1,694 @@
+---
+title: "Notebook 4"
+subtitle: "To organize into Latex"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This notebook contains further experiments from category 1, so content-wise it continues from there starting with a focus on common opponent (co) data.
+
+From the 2nd Jupyter notebook for co data: [Previously] the order of operations was to first obtain a list of common opponents for a match-up between A and B, and then extract surface-specific stats for matches between A/B and their common opponents. This file instead follows more closely the approach originally proposed by Knottenbelt et al.'s in their 2012 paper. Now the surface of the target match-up is introduced earlier when the common opponent list is being compiled, and when stats are being extracted, entries are only used if they fit the surface in question. So the amount of data used is restricted during list compilation and data extraction such that the aggregated data is purely based on the surface. Therefore we should expect results from this file to be of a smaller volume.
+
+## Data
+
+Unlike notebook 1 with 1m, 1n variants for the other data cycles, all 3 data cycles will use this notebook. The variable for the test sets will be non-specific for years and datasets can be switched out here.
+
+```{r}
+# testing data (switch out file name for each experiment)
+atp.test <- read.csv('../Data Lake/Experiments/2022_atp_testing.csv')
+wta.test <- read.csv('../Data Lake/Experiments/2022_wta_testing.csv')
+```
+```{r}
+# following function highlights matches that were incomplete
+# this is determined by if the score has letters ("W/O","Def.","RET" etc.)
+# takes as input the score column of a dataset and returns indexes
+ic.match <- function(score) grep("[A-Za-z]",score)
+ic.atp <- ic.match(atp.test$score)
+ic.wta <- ic.match(wta.test$score)
+```
+```{r}
+# training data
+atp.train.1yr <- read.csv('../Data Lake/Players/2021_atp_individual.csv')
+atp.train.3yrs <- read.csv('../Data Lake/Players/2019-2021_atp_individual.csv')
+wta.train.1yr <- read.csv('../Data Lake/Players/2021_wta_individual.csv')
+wta.train.3yrs <- read.csv('../Data Lake/Players/2019-2021_wta_individual.csv')
+atp.h2h.1yr <- read.csv('../Data Lake/Players/2021_atp_h2h.csv')
+atp.h2h.3yrs <- read.csv('../Data Lake/Players/2019-2021_atp_h2h.csv')
+atp.co.1yr <- read.csv('../Data Lake/Players/2021_atp_co.csv')
+atp.co.3yrs <- read.csv('../Data Lake/Players/2019-2021_atp_co.csv')
+atp.co2.1yr <- read.csv('../Data Lake/Players/2021_atp_co2.csv')
+atp.co2.3yrs <- read.csv('../Data Lake/Players/2019-2021_atp_co2.csv')
+wta.h2h.1yr <- read.csv('../Data Lake/Players/2021_wta_h2h.csv')
+wta.h2h.3yrs <- read.csv('../Data Lake/Players/2019-2021_wta_h2h.csv')
+wta.co.1yr <- read.csv('../Data Lake/Players/2021_wta_co.csv')
+wta.co.3yrs <- read.csv('../Data Lake/Players/2019-2021_wta_co.csv')
+wta.co2.1yr <- read.csv('../Data Lake/Players/2021_wta_co2.csv')
+wta.co2.3yrs <- read.csv('../Data Lake/Players/2019-2021_wta_co2.csv')
+```
+```{r}
+# remove incomplete matches
+atp.h2h.1yr <- atp.h2h.1yr[-ic.atp,]
+atp.h2h.3yrs <- atp.h2h.3yrs[-ic.atp,]
+atp.co.1yr <- atp.co.1yr[-ic.atp,]
+atp.co.3yrs <- atp.co.3yrs[-ic.atp,]
+atp.co2.1yr <- atp.co2.1yr[-ic.atp,]
+atp.co2.3yrs <- atp.co2.3yrs[-ic.atp,]
+wta.h2h.1yr <- wta.h2h.1yr[-ic.wta,]
+wta.h2h.3yrs <- wta.h2h.3yrs[-ic.wta,]
+wta.co.1yr <- wta.co.1yr[-ic.wta,]
+wta.co.3yrs <- wta.co.3yrs[-ic.wta,]
+wta.co2.1yr <- wta.co2.1yr[-ic.wta,]
+wta.co2.3yrs <- wta.co2.3yrs[-ic.wta,]
+atp.test <- atp.test[-ic.atp,]
+wta.test <- wta.test[-ic.wta,]
+# reset indices after row removals
+# for clarity when viewing dataframes in R
+row.names(atp.h2h.1yr) <- NULL
+row.names(atp.h2h.3yrs) <- NULL
+row.names(atp.co.1yr) <- NULL
+row.names(atp.co.3yrs) <- NULL
+row.names(atp.co2.1yr) <- NULL
+row.names(atp.co2.3yrs) <- NULL
+row.names(wta.h2h.1yr) <- NULL
+row.names(wta.h2h.3yrs) <- NULL
+row.names(wta.co.1yr) <- NULL
+row.names(wta.co.3yrs) <- NULL
+row.names(wta.co2.1yr) <- NULL
+row.names(wta.co2.3yrs) <- NULL
+row.names(atp.test) <- NULL
+row.names(wta.test) <- NULL
+```
+
+## Narrowed-Down CO Data
+
+```{r}
+co2.experiment <- function(h2h,co2,g,test){
+  # returns metrics for h2h(no surface)/co2/g(surface), h2h(surface)/co2/g(surface),
+  # co2 score, and N for co2
+  
+  dat <- co2
+  # initialize columns that need to check for surface in loop below
+  dat$h2h <- NA
+  dat$g <- NA
+  # get p's for individual players in general data
+  gp <- g
+  gp$grass.p <- gp$grass_service_pts_won/gp$grass_pts_served
+  gp$hard.p <- gp$hard_service_pts_won/gp$hard_pts_served
+  gp$clay.p <- gp$clay_service_pts_won/gp$clay_pts_served
+  # fill in missing entries with surface average
+  gp$grass.p[which(is.na(gp$grass.p))] <- mean(gp$grass.p[-which(is.na(gp$grass.p))])
+  gp$hard.p[which(is.na(gp$hard.p))] <- mean(gp$hard.p[-which(is.na(gp$hard.p))])
+  gp$clay.p[which(is.na(gp$clay.p))] <- mean(gp$clay.p[-which(is.na(gp$clay.p))])
+  
+  # get p's for non-surface distinction h2h
+  dat$h2h.ns <- (h2h$grass_service_pts_won1
+                 +h2h$hard_service_pts_won1
+                 +h2h$clay_service_pts_won1)/
+    (h2h$grass_pts_served1+h2h$hard_pts_served1+h2h$clay_pts_served1) >
+    (h2h$grass_service_pts_won2
+     +h2h$hard_service_pts_won2
+     +h2h$clay_service_pts_won2)/
+    (h2h$grass_pts_served2+h2h$hard_pts_served2+h2h$clay_pts_served2)
+  
+  # get p's for co2 that is already surface specific
+  dat$co2 <- dat$service_pts_won1/dat$pts_served1 > 
+    dat$service_pts_won2/dat$pts_served2
+  
+  # get remaining p's
+  for (i in 1:nrow(dat)){
+    surface <- dat$surface[i]
+    winner <- dat$name1[i]
+    loser <- dat$name2[i]
+    winner.idx <- which(gp$name==winner)
+    loser.idx <- which(gp$name==loser)
+    if (surface=="Grass"){
+      dat$h2h[i] <- h2h$grass_service_pts_won1[i]/h2h$grass_pts_served1[i] >
+        h2h$grass_service_pts_won2[i]/h2h$grass_pts_served2[i]
+      dat$g[i] <- gp$grass.p[winner.idx] > gp$grass.p[loser.idx]
+    } else if (surface=="Hard"){
+      dat$h2h[i] <- h2h$hard_service_pts_won1[i]/h2h$hard_pts_served1[i] >
+        h2h$hard_service_pts_won2[i]/h2h$hard_pts_served2[i]
+      dat$g[i] <- gp$hard.p[winner.idx] > gp$hard.p[loser.idx]
+    } else if (surface=="Clay"){
+      dat$h2h[i] <- h2h$clay_service_pts_won1[i]/h2h$clay_pts_served1[i] >
+        h2h$clay_service_pts_won2[i]/h2h$clay_pts_served2[i]
+      dat$g[i] <- gp$clay.p[winner.idx] > gp$clay.p[loser.idx]
+    }
+  }
+  
+  h2h.ns.idx <- which(!is.na(dat$h2h.ns))
+  h2h.idx <- which(!is.na(dat$h2h))
+  co2.idx <- which(!is.na(dat$co2))
+  # start with general layer
+  res <- dat$g
+  # add co2 layer
+  res[co2.idx] <- dat$co2[co2.idx]
+  # add h2h.ns layer and h2h layer respectively
+  res.ns <- res
+  res.ns[h2h.ns.idx] <- dat$h2h.ns[h2h.ns.idx]
+  res[h2h.idx] <- dat$h2h[h2h.idx]
+  
+  return(list(#"raw"=dat,
+              "score.ns"=mean(res.ns),
+              "score.s"=mean(res),
+              "CO2"=mean(dat$co2[co2.idx]),
+              "N"=length(co2.idx)))
+}
+```
+
+### 1 - ATP 1 Year - H2H/CO2/G
+
+```{r}
+(res1 <- co2.experiment(atp.h2h.1yr,atp.co2.1yr,atp.train.1yr,atp.test))
+```
+
+Recording results: 
+
+  - 2022 cycle: 
+    
+    -- [H2H no surface] 70.701% => 67.516%
+    
+    -- [H2H surface] 65.605% => 63.694% 
+    
+    -- [Just CO] 60%(N=140) => 57.895%(N=133)
+    
+  - 2018 cycle:
+  
+    -- [H2H no surface] 70.370% => 68.159%
+    
+    -- [H2H surface] 68.254% => 62.687% 
+    
+    -- [Just CO] 63.429%(N=175) => 56.647%(N=173)
+    
+  - 2014 cycle:
+  
+    -- [H2H no surface] 77.368% => 74.752%
+    
+    -- [H2H surface] 68.947% => 65.842% 
+    
+    -- [Just CO] 64.835%(N=182) => 56.989%(N=186)
+  
+### 2 - WTA 1 Year - H2H/CO2/G
+
+```{r}
+(res2 <- co2.experiment(wta.h2h.1yr,wta.co2.1yr,wta.train.1yr,wta.test))
+```
+
+Recording results: 
+
+  - 2022 cycle: 
+    
+    -- [H2H no surface] 65.894% => 65.563% 
+    
+    -- [H2H surface] 62.583% => 64.238% 
+    
+    -- [Just CO] 60.504%(N=238) => 60.396%(N=202)
+    
+  - 2018 cycle:
+  
+    -- [H2H no surface] 64.362% => 63.830% xxx
+    
+    -- [H2H surface] 63.830% => 59.574% 
+    
+    -- [Just CO] 59.236%(N=157) => 52.414%(N=145)
+    
+  - 2014 cycle:
+  
+    -- [H2H no surface] 70.229% => 67.939% xxx
+    
+    -- [H2H surface] 66.412% => 69.154% 
+    
+    -- [Just CO] 62.931%(N=116) => 61.850%(N=173)
+
+### 3 - ATP 3 Years - H2H/CO2/G
+
+```{r}
+(res3 <- co2.experiment(atp.h2h.3yrs,atp.co2.3yrs,atp.train.3yrs,atp.test))
+```
+
+Recording results: 
+
+  - 2022 cycle:
+    
+    -- [H2H no surface] 75.159% => 76.433% 
+    
+    -- [H2H surface] 71.338% => 71.975% 
+    
+    -- [Just CO] 64.430%(N=155) => 62.069%(N=145)
+    
+  - 2018 cycle:
+  
+    -- [H2H no surface] 81.481% => 79.894% 
+    
+    -- [H2H surface] 75.661% => 72.487% 
+    
+    -- [Just CO] 66.667%(N=183) => 59.563%(N=183)
+    
+  - 2014 cycle:
+  
+    -- [H2H no surface] 87.895% => 84.211% xxx
+    
+    -- [H2H surface] 78.421% => 74.257%
+    
+    -- [Just CO] 64.894%(N=188) => 59.296%(N=199)
+  
+### 4 - WTA 3 Years - H2H/CO2/G
+
+```{r}
+(res4 <- co2.experiment(wta.h2h.3yrs,wta.co2.3yrs,wta.train.3yrs,wta.test))
+```
+
+Recording results: 
+
+  - 2022 cycle: 
+  
+    -- [H2H no surface] 70.861% => 67.550% 
+    
+    -- [H2H surface] 64.309% => 63.907% 
+    
+    -- [Just CO] 59.790%(N=286) => 57.143%(N=259)
+    
+  - 2018 cycle:
+  
+    -- [H2H no surface] 72.872% => 73.404% 
+    
+    -- [H2H surface] 67.021% => 66.489% 
+    
+    -- [Just CO] 57.143%(N=182) => 54.802%(N=177)
+  
+  - 2014 cycle:
+  
+    -- [H2H no surface] 77.863% => 76.336% xxx
+    
+    -- [H2H surface] 70.229% => 70.149% 
+    
+    -- [Just CO] 60.630%(N=127) => 62.176%(N=193)
+    
+The "H2H surface" comparisons are more direct comparisons compared to the "H2H no surface" ones, as there the only difference is in how the CO data was collected. With the latter, the two metrics additionally differ in that the G and CO layers in the new versions are surface separated while they are not in the old ones. This comparison was drawn more because there is strong evidence that H2H is better when not surface-separated, so it was more to see how high the accuracy in the new versions can go. As we can see, these indeed do consistently yield the best performances among the same batch of CO2 data, but only 2 were higher than their CO1 counterparts. Additionally 8 of the other 10 that were lower were lower by >1.5% while the 2 higher ones outperformed by 0.532% and 1.274% respectively.
+
+Similarly for the more direct "H2H surface" comparisons, 2 were increases of 0.617% and 1.655% respectively, but the rest were decreases of on average 2.0665%.
+
+Finally, in 12 comparisons between purely how CO1 and CO2 performed within match-ups where they were available, CO2 was outperformed every time. Overall, results are clearly in favour of CO1, which comes from the non-surface-separated approach to compiling the list of common opponents. Therefore for the next section where the opponent-adjusted formula is applied to CO and H2H data, we will proceed with the CO1 data.
+
+## Opponent-Adjusted Formula For CO Data
+
+```{r}
+oaf.on.layers <- function(h2h,co,g,test){
+  dat <- test
+  
+  # get p's for non-surface distinction h2h
+  dat$h2h.ns <- (h2h$grass_service_pts_won1
+                 +h2h$hard_service_pts_won1
+                 +h2h$clay_service_pts_won1)/
+    (h2h$grass_pts_served1+h2h$hard_pts_served1+h2h$clay_pts_served1) >
+    (h2h$grass_service_pts_won2
+     +h2h$hard_service_pts_won2
+     +h2h$clay_service_pts_won2)/
+    (h2h$grass_pts_served2+h2h$hard_pts_served2+h2h$clay_pts_served2)
+  
+  # p's and q's for oaf applied to co
+  dat$co.w.p <- (co$grass_service_pts_won1
+                  +co$hard_service_pts_won1
+                  +co$clay_service_pts_won1)/
+    (co$grass_pts_served1+co$hard_pts_served1+co$clay_pts_served1)
+  dat$co.l.p <- (co$grass_service_pts_won2
+                  +co$hard_service_pts_won2
+                  +co$clay_service_pts_won2)/
+    (co$grass_pts_served2+co$hard_pts_served2+co$clay_pts_served2)
+  dat$co.w.q <- (co$grass_receiving_pts_won1
+                 +co$hard_receiving_pts_won1
+                 +co$clay_receiving_pts_won1)/
+    (co$grass_pts_received1+co$hard_pts_received1+co$clay_pts_received1)
+  dat$co.l.q <- (co$grass_receiving_pts_won2
+                 +co$hard_receiving_pts_won2
+                 +co$clay_receiving_pts_won2)/
+    (co$grass_pts_received2+co$hard_pts_received2+co$clay_pts_received2)
+  # with the average q of all the testset players
+  # we can now calculate the non-surface co results
+  # won't use the combined index above where both winner and loser has data
+  # for the q average, instead will use all the q's available 
+  co.avg.q <- mean(c(dat$co.w.q[which(!is.na(dat$co.w.q))],
+                     dat$co.l.q[which(!is.na(dat$co.l.q))]))
+  dat$co.ns <- dat$co.w.p - (dat$co.l.q - co.avg.q) > 
+    dat$co.l.p - (dat$co.w.q - co.avg.q)
+  
+  # surface separated p's and q's for the co data
+  dat$co.w.grass.p <- co$grass_service_pts_won1/co$grass_pts_served1
+  dat$co.w.hard.p <- co$hard_service_pts_won1/co$hard_pts_served1
+  dat$co.w.clay.p <- co$clay_service_pts_won1/co$clay_pts_served1
+  dat$co.l.grass.p <- co$grass_service_pts_won2/co$grass_pts_served2
+  dat$co.l.hard.p <- co$hard_service_pts_won2/co$hard_pts_served2
+  dat$co.l.clay.p <- co$clay_service_pts_won2/co$clay_pts_served2
+  dat$co.w.grass.q <- co$grass_receiving_pts_won1/co$grass_pts_received1
+  dat$co.w.hard.q <- co$hard_receiving_pts_won1/co$hard_pts_received1
+  dat$co.w.clay.q <- co$clay_receiving_pts_won1/co$clay_pts_received1
+  dat$co.l.grass.q <- co$grass_receiving_pts_won2/co$grass_pts_received2
+  dat$co.l.hard.q <- co$hard_receiving_pts_won2/co$hard_pts_received2
+  dat$co.l.clay.q <- co$clay_receiving_pts_won2/co$clay_pts_received2
+  # get oaf co results by surface
+  co.avg.grass.q <- mean(c(dat$co.w.grass.q[which(!is.na(dat$co.w.grass.q))],
+                           dat$co.l.grass.q[which(!is.na(dat$co.l.grass.q))]))
+  co.avg.hard.q <- mean(c(dat$co.w.hard.q[which(!is.na(dat$co.w.hard.q))],
+                          dat$co.l.hard.q[which(!is.na(dat$co.l.hard.q))]))
+  co.avg.clay.q <- mean(c(dat$co.w.clay.q[which(!is.na(dat$co.w.clay.q))],
+                          dat$co.l.clay.q[which(!is.na(dat$co.l.clay.q))]))
+  
+  # get p's for individual players in general data
+  gp <- g
+  gp$grass.p <- gp$grass_service_pts_won/gp$grass_pts_served
+  gp$hard.p <- gp$hard_service_pts_won/gp$hard_pts_served
+  gp$clay.p <- gp$clay_service_pts_won/gp$clay_pts_served
+  gp$p <- (gp$grass_service_pts_won+gp$hard_service_pts_won+gp$clay_service_pts_won)/
+    (gp$grass_pts_served+gp$hard_pts_served+gp$clay_pts_served)
+  # fill in missing entries with surface average
+  gp$grass.p[which(is.na(gp$grass.p))] <- mean(gp$grass.p[-which(is.na(gp$grass.p))])
+  gp$hard.p[which(is.na(gp$hard.p))] <- mean(gp$hard.p[-which(is.na(gp$hard.p))])
+  gp$clay.p[which(is.na(gp$clay.p))] <- mean(gp$clay.p[-which(is.na(gp$clay.p))])
+  gp$p[which(is.na(gp$p))] <- mean(gp$p[-which(is.na(gp$p))])
+  
+  # get remaining p's that need to distinguish surface (h2h.s,co.s)
+  dat$g.s <- NA
+  dat$co.s <- NA
+  dat$h2h.s <- NA
+  for (i in 1:nrow(dat)){
+    surface <- dat$surface[i]
+    winner <- dat$winner_name[i]
+    loser <- dat$loser_name[i]
+    winner.idx <- which(gp$name==winner)
+    loser.idx <- which(gp$name==loser)
+    dat$g.ns[i] <- gp$p[winner.idx]>gp$p[loser.idx]
+    if (surface=="Grass"){
+      dat$h2h.s[i] <- h2h$grass_service_pts_won1[i]/h2h$grass_pts_served1[i] >
+        h2h$grass_service_pts_won2[i]/h2h$grass_pts_served2[i]
+      dat$g.s[i] <- gp$grass.p[winner.idx] > gp$grass.p[loser.idx]
+      dat$co.s[i] <- dat$co.w.grass.p[i] - (dat$co.l.grass.q[i] - co.avg.grass.q) >
+        dat$co.l.grass.p[i] - (dat$co.w.grass.q[i] - co.avg.grass.q)
+    } else if (surface=="Hard"){
+      dat$h2h.s[i] <- h2h$hard_service_pts_won1[i]/h2h$hard_pts_served1[i] >
+        h2h$hard_service_pts_won2[i]/h2h$hard_pts_served2[i]
+      dat$g.s[i] <- gp$hard.p[winner.idx] > gp$hard.p[loser.idx]
+      dat$co.s[i] <- dat$co.w.hard.p[i] - (dat$co.l.hard.q[i] - co.avg.hard.q) >
+        dat$co.l.hard.p[i] - (dat$co.w.hard.q[i] - co.avg.hard.q)
+    } else if (surface=="Clay"){
+      dat$h2h.s[i] <- h2h$clay_service_pts_won1[i]/h2h$clay_pts_served1[i] >
+        h2h$clay_service_pts_won2[i]/h2h$clay_pts_served2[i]
+      dat$g.s[i] <- gp$clay.p[winner.idx] > gp$clay.p[loser.idx]
+      dat$co.s[i] <- dat$co.w.clay.p[i] - (dat$co.l.clay.q[i] - co.avg.clay.q) >
+        dat$co.l.clay.p[i] - (dat$co.w.clay.q[i] - co.avg.clay.q)
+    }
+  }
+  
+  # layer results
+  h2h.ns.idx <- which(!is.na(dat$h2h.ns))
+  h2h.s.idx <- which(!is.na(dat$h2h.s))
+  co.ns.idx <- which(!is.na(dat$co.ns))
+  co.s.idx <- which(!is.na(dat$co.s))
+  # no surface
+  res.ns <- dat$g.ns
+  res.ns[co.ns.idx] <- dat$co.ns[co.ns.idx]
+  res.ns[h2h.ns.idx] <- dat$h2h.ns[h2h.ns.idx]
+  # with surface
+  res.s <- dat$g.s
+  res.s[co.s.idx] <- dat$co.s[co.s.idx]
+  res.s[h2h.s.idx] <- dat$h2h.s[h2h.s.idx]
+  
+  return(list("res.ns"=mean(res.ns),"res.s"=mean(res.s)))
+}
+```
+
+### 1 - ATP 1 Year - H2H/CO(oaf)/G
+
+```{r}
+oaf.on.layers(atp.h2h.1yr,atp.co.1yr,atp.train.1yr,atp.test)
+```
+
+  - 2022 cycle:
+  
+    -- [No Surface] 70.064%
+    
+    -- [Surface] 68.790%
+  
+  - 2018 cycle: 
+  
+    -- [No Surface] 76.190%
+    
+    -- [Surface] 69.841%
+    
+  - 2014 cycle:
+  
+    -- [No Surface] 78.218%
+    
+    -- [Surface] 72.772%
+    
+### 2 - WTA 1 Year - H2H/CO(oaf)/G
+
+```{r}
+oaf.on.layers(wta.h2h.1yr,wta.co.1yr,wta.train.1yr,wta.test)
+```
+
+  - 2022 cycle:
+  
+    -- [No Surface] 63.907%
+    
+    -- [Surface] 62.583%
+  
+  - 2018 cycle: 
+  
+    -- [No Surface] 63.830%
+    
+    -- [Surface] 61.702%
+    
+  - 2014 cycle:
+  
+    -- [No Surface] 78.607%
+    
+    -- [Surface] 76.119%
+
+### 3 - ATP 3 Years - H2H/CO(oaf)/G
+
+```{r}
+oaf.on.layers(atp.h2h.3yrs,atp.co.3yrs,atp.train.3yrs,atp.test)
+```
+
+  - 2022 cycle:
+  
+    -- [No Surface] 72.611%
+    
+    -- [Surface] 70.701%
+  
+  - 2018 cycle: 
+  
+    -- [No Surface] 82.011%
+    
+    -- [Surface] 77.249%
+    
+  - 2014 cycle:
+  
+    -- [No Surface] 86.634%
+    
+    -- [Surface] 81.188%
+
+### 4 - WTA 3 Years - H2H/CO(oaf)/G
+
+```{r}
+oaf.on.layers(wta.h2h.3yrs,wta.co.3yrs,wta.train.3yrs,wta.test)
+```
+
+Entries for this section slightly off, see Excel file for corrected results.
+
+## H2H/CO(OAF)/OAF
+
+This section of the notebook was purely used to extract results. The code and writing are therefore all very rough and not meant to be read. Please see Excel results sheet for results obtained here.
+
+```{r}
+co.oaf.on.oaf <- function(h2h,co,oaf.res.ns,oaf.res.s,test){
+  dat <- test
+  
+  # get p's for non-surface distinction h2h
+  dat$h2h.ns <- (h2h$grass_service_pts_won1
+                 +h2h$hard_service_pts_won1
+                 +h2h$clay_service_pts_won1)/
+    (h2h$grass_pts_served1+h2h$hard_pts_served1+h2h$clay_pts_served1) >
+    (h2h$grass_service_pts_won2
+     +h2h$hard_service_pts_won2
+     +h2h$clay_service_pts_won2)/
+    (h2h$grass_pts_served2+h2h$hard_pts_served2+h2h$clay_pts_served2)
+  
+  # p's and q's for oaf applied to co
+  dat$co.w.p <- (co$grass_service_pts_won1
+                  +co$hard_service_pts_won1
+                  +co$clay_service_pts_won1)/
+    (co$grass_pts_served1+co$hard_pts_served1+co$clay_pts_served1)
+  dat$co.l.p <- (co$grass_service_pts_won2
+                  +co$hard_service_pts_won2
+                  +co$clay_service_pts_won2)/
+    (co$grass_pts_served2+co$hard_pts_served2+co$clay_pts_served2)
+  dat$co.w.q <- (co$grass_receiving_pts_won1
+                 +co$hard_receiving_pts_won1
+                 +co$clay_receiving_pts_won1)/
+    (co$grass_pts_received1+co$hard_pts_received1+co$clay_pts_received1)
+  dat$co.l.q <- (co$grass_receiving_pts_won2
+                 +co$hard_receiving_pts_won2
+                 +co$clay_receiving_pts_won2)/
+    (co$grass_pts_received2+co$hard_pts_received2+co$clay_pts_received2)
+  # with the average q of all the testset players
+  # we can now calculate the non-surface co results
+  # won't use the combined index above where both winner and loser has data
+  # for the q average, instead will use all the q's available 
+  co.avg.q <- mean(c(dat$co.w.q[which(!is.na(dat$co.w.q))],
+                     dat$co.l.q[which(!is.na(dat$co.l.q))]))
+  dat$co.ns <- dat$co.w.p - (dat$co.l.q - co.avg.q) > 
+    dat$co.l.p - (dat$co.w.q - co.avg.q)
+  
+  # surface separated p's and q's for the co data
+  dat$co.w.grass.p <- co$grass_service_pts_won1/co$grass_pts_served1
+  dat$co.w.hard.p <- co$hard_service_pts_won1/co$hard_pts_served1
+  dat$co.w.clay.p <- co$clay_service_pts_won1/co$clay_pts_served1
+  dat$co.l.grass.p <- co$grass_service_pts_won2/co$grass_pts_served2
+  dat$co.l.hard.p <- co$hard_service_pts_won2/co$hard_pts_served2
+  dat$co.l.clay.p <- co$clay_service_pts_won2/co$clay_pts_served2
+  dat$co.w.grass.q <- co$grass_receiving_pts_won1/co$grass_pts_received1
+  dat$co.w.hard.q <- co$hard_receiving_pts_won1/co$hard_pts_received1
+  dat$co.w.clay.q <- co$clay_receiving_pts_won1/co$clay_pts_received1
+  dat$co.l.grass.q <- co$grass_receiving_pts_won2/co$grass_pts_received2
+  dat$co.l.hard.q <- co$hard_receiving_pts_won2/co$hard_pts_received2
+  dat$co.l.clay.q <- co$clay_receiving_pts_won2/co$clay_pts_received2
+  # get oaf co results by surface
+  co.avg.grass.q <- mean(c(dat$co.w.grass.q[which(!is.na(dat$co.w.grass.q))],
+                           dat$co.l.grass.q[which(!is.na(dat$co.l.grass.q))]))
+  co.avg.hard.q <- mean(c(dat$co.w.hard.q[which(!is.na(dat$co.w.hard.q))],
+                          dat$co.l.hard.q[which(!is.na(dat$co.l.hard.q))]))
+  co.avg.clay.q <- mean(c(dat$co.w.clay.q[which(!is.na(dat$co.w.clay.q))],
+                          dat$co.l.clay.q[which(!is.na(dat$co.l.clay.q))]))
+  
+  # get remaining p's that need to distinguish surface (h2h.s,co.s)
+  dat$co.s <- NA
+  dat$h2h.s <- NA
+  for (i in 1:nrow(dat)){
+    surface <- dat$surface[i]
+    winner <- dat$winner_name[i]
+    loser <- dat$loser_name[i]
+    if (surface=="Grass"){
+      dat$h2h.s[i] <- h2h$grass_service_pts_won1[i]/h2h$grass_pts_served1[i] >
+        h2h$grass_service_pts_won2[i]/h2h$grass_pts_served2[i]
+      dat$co.s[i] <- dat$co.w.grass.p[i] - (dat$co.l.grass.q[i] - co.avg.grass.q) >
+        dat$co.l.grass.p[i] - (dat$co.w.grass.q[i] - co.avg.grass.q)
+    } else if (surface=="Hard"){
+      dat$h2h.s[i] <- h2h$hard_service_pts_won1[i]/h2h$hard_pts_served1[i] >
+        h2h$hard_service_pts_won2[i]/h2h$hard_pts_served2[i]
+      dat$co.s[i] <- dat$co.w.hard.p[i] - (dat$co.l.hard.q[i] - co.avg.hard.q) >
+        dat$co.l.hard.p[i] - (dat$co.w.hard.q[i] - co.avg.hard.q)
+    } else if (surface=="Clay"){
+      dat$h2h.s[i] <- h2h$clay_service_pts_won1[i]/h2h$clay_pts_served1[i] >
+        h2h$clay_service_pts_won2[i]/h2h$clay_pts_served2[i]
+      dat$co.s[i] <- dat$co.w.clay.p[i] - (dat$co.l.clay.q[i] - co.avg.clay.q) >
+        dat$co.l.clay.p[i] - (dat$co.w.clay.q[i] - co.avg.clay.q)
+    }
+  }
+  
+  # layer results
+  h2h.ns.idx <- which(!is.na(dat$h2h.ns))
+  h2h.s.idx <- which(!is.na(dat$h2h.s))
+  co.ns.idx <- which(!is.na(dat$co.ns))
+  co.s.idx <- which(!is.na(dat$co.s))
+  # no surface
+  res.ns <- oaf.res.ns
+  res.ns[co.ns.idx] <- dat$co.ns[co.ns.idx]
+  res.ns[h2h.ns.idx] <- dat$h2h.ns[h2h.ns.idx]
+  # with surface
+  res.s <- oaf.res.s
+  res.s[co.s.idx] <- dat$co.s[co.s.idx]
+  res.s[h2h.s.idx] <- dat$h2h.s[h2h.s.idx]
+  
+  return(list("res.ns"=mean(res.ns),"res.s"=mean(res.s)))
+}
+```
+
+```{r}
+res14atp.1yr.oaf.ns <- readRDS("res14atp_1yr_oaf_ns.rds")
+res14atp.1yr.oaf.s <- readRDS("res14atp_1yr_oaf_s.rds")
+res14atp.3yr.oaf.ns <- readRDS("res14atp_3yr_oaf_ns.rds")
+res14atp.3yr.oaf.s <- readRDS("res14atp_3yr_oaf_s.rds")
+res14wta.1yr.oaf.ns <- readRDS("res14wta_1yr_oaf_ns.rds")
+res14wta.1yr.oaf.s <- readRDS("res14wta_1yr_oaf_s.rds")
+res14wta.3yr.oaf.ns <- readRDS("res14wta_3yr_oaf_ns.rds")
+res14wta.3yr.oaf.s <- readRDS("res14wta_3yr_oaf_s.rds")
+```
+```{r}
+co.oaf.on.oaf(wta.h2h.3yrs,wta.co.3yrs,
+              res14wta.3yr.oaf.ns,
+              res14wta.3yr.oaf.s,
+              wta.test)
+```
+
+## H2H/OAF + H2H/CO/OAF (From scrap_paper)
+
+These functions can actually be used for all kinds of 2/3 layer overlays
+
+```{r}
+res14atp.1yr.h2h.ns <- readRDS("res14atp_1yr_h2h_ns.rds")
+res14atp.1yr.h2h.s <- readRDS("res14atp_1yr_h2h_s.rds")
+res14atp.3yr.h2h.ns <- readRDS("res14atp_3yr_h2h_ns.rds")
+res14atp.3yr.h2h.s <- readRDS("res14atp_3yr_h2h_s.rds")
+res14atp.1yr.co.ns <- readRDS("res14atp_1yr_co_ns.rds")
+res14atp.1yr.co.s <- readRDS("res14atp_1yr_co_s.rds")
+res14atp.3yr.co.ns <- readRDS("res14atp_3yr_co_ns.rds")
+res14atp.3yr.co.s <- readRDS("res14atp_3yr_co_s.rds")
+res14atp.1yr.oaf.ns <- readRDS("res14atp_1yr_oaf_ns.rds")
+res14atp.1yr.oaf.s <- readRDS("res14atp_1yr_oaf_s.rds")
+res14atp.3yr.oaf.ns <- readRDS("res14atp_3yr_oaf_ns.rds")
+res14atp.3yr.oaf.s <- readRDS("res14atp_3yr_oaf_s.rds")
+res14wta.1yr.h2h.ns <- readRDS("res14wta_1yr_h2h_ns.rds")
+res14wta.1yr.h2h.s <- readRDS("res14wta_1yr_h2h_s.rds")
+res14wta.3yr.h2h.ns <- readRDS("res14wta_3yr_h2h_ns.rds")
+res14wta.3yr.h2h.s <- readRDS("res14wta_3yr_h2h_s.rds")
+res14wta.1yr.co.ns <- readRDS("res14wta_1yr_co_ns.rds")
+res14wta.1yr.co.s <- readRDS("res14wta_1yr_co_s.rds")
+res14wta.3yr.co.ns <- readRDS("res14wta_3yr_co_ns.rds")
+res14wta.3yr.co.s <- readRDS("res14wta_3yr_co_s.rds")
+res14wta.1yr.oaf.ns <- readRDS("res14wta_1yr_oaf_ns.rds")
+res14wta.1yr.oaf.s <- readRDS("res14wta_1yr_oaf_s.rds")
+res14wta.3yr.oaf.ns <- readRDS("res14wta_3yr_oaf_ns.rds")
+res14wta.3yr.oaf.s <- readRDS("res14wta_3yr_oaf_s.rds")
+```
+```{r}
+overlay.h2h.oaf <- function(h2h,oaf){
+  h2h.valid <- which(!(h2h==-1))
+  res <- oaf
+  res[h2h.valid] <- h2h[h2h.valid]
+  mean(res)
+}
+```
+```{r}
+overlay.h2h.oaf(res14atp.1yr.h2h.ns,res14atp.1yr.oaf.ns)
+overlay.h2h.oaf(res14atp.1yr.h2h.s,res14atp.1yr.oaf.s)
+overlay.h2h.oaf(res14atp.3yr.h2h.ns,res14atp.3yr.oaf.ns)
+overlay.h2h.oaf(res14atp.3yr.h2h.s,res14atp.3yr.oaf.s)
+overlay.h2h.oaf(res14wta.1yr.h2h.ns,res14wta.1yr.oaf.ns)
+overlay.h2h.oaf(res14wta.1yr.h2h.s,res14wta.1yr.oaf.s)
+overlay.h2h.oaf(res14wta.3yr.h2h.ns,res14wta.3yr.oaf.ns)
+overlay.h2h.oaf(res14wta.3yr.h2h.s,res14wta.3yr.oaf.s)
+```
+```{r}
+overlay.h2h.co.oaf <- function(h2h,co,oaf){
+  h2h.valid <- which(!(h2h==-1))
+  co.valid <- which(!(co==-1))
+  res <- oaf
+  res[co.valid] <- co[co.valid]
+  res[h2h.valid] <- h2h[h2h.valid]
+  mean(res)
+}
+```
+```{r}
+overlay.h2h.co.oaf(res14atp.1yr.h2h.ns,res14atp.1yr.co.ns,res14atp.1yr.oaf.ns)
+overlay.h2h.co.oaf(res14atp.1yr.h2h.s,res14atp.1yr.co.s,res14atp.1yr.oaf.s)
+overlay.h2h.co.oaf(res14atp.3yr.h2h.ns,res14atp.3yr.co.ns,res14atp.3yr.oaf.ns)
+overlay.h2h.co.oaf(res14atp.3yr.h2h.s,res14atp.3yr.co.s,res14atp.3yr.oaf.s)
+overlay.h2h.co.oaf(res14wta.1yr.h2h.ns,res14wta.1yr.co.ns,res14wta.1yr.oaf.ns)
+overlay.h2h.co.oaf(res14wta.1yr.h2h.s,res14wta.1yr.co.s,res14wta.1yr.oaf.s)
+overlay.h2h.co.oaf(res14wta.3yr.h2h.ns,res14wta.3yr.co.ns,res14wta.3yr.oaf.ns)
+overlay.h2h.co.oaf(res14wta.3yr.h2h.s,res14wta.3yr.co.s,res14wta.3yr.oaf.s)
+```

@@ -1,0 +1,1343 @@
+---
+title: "Year-by-Year Paper Results"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Mostly from Notebook 6.
+
+## Functions
+
+```{r}
+source("../case_patching.R")
+ic.match <- function(score) grep("[A-Za-z]",score)
+
+get.unique.players <- function(testset){
+  # takes the players in the test set and returns vector
+  # containing unique players in the test set
+  names <- c(testset$winner_name,testset$loser_name)
+  names <- unique(names)
+  return(names)
+}
+
+get.equiv.names <- function(fullname){
+  # returns vector of equivalent names in different formats
+  # according to the fullname given
+  # fullname ideally from get.unique.players output
+  # More special examples:
+  #   Alejandro Davidovich Fokina -> A Davidovich Fokina & A. Davidovich Fokina
+  #   Pierre Hugues Herbert -> P Herbert & Ph Herbert & P. Herbert
+  #   Alex De Minaur -> A. De Minaur & Alex de Minaur & A De Minaur
+  #   Karolina Pliskova -> K. Pliskova & Ka. Pliskova & Ka Pliskova
+  #   Kristyna Pliskova -> K. Pliskova & Kr. Pliskova & Kr Pliskova
+  #   some cases manually remediated (see misc. google doc)
+  #   but quick manual remediation can't help if player in test set has middle name
+  #   and full name isn't in pbp training set.
+  #   Function tries to account for this as follows.
+  
+  # Alex Bee Caine -> c("A. Caine", "A Caine", "A. Bee Caine", "A Bee Caine",
+  #                     ""A Bee-Caine", "A. Bee-Caine", Ab Caine")
+  
+  # This method risks picking up on players with same last name and first letter
+  # But this is unlikely as the pbp training set only 1 case of this - Kr&Ka Pliskova
+  # And this was picked up since there were 2 characters before the space
+  
+  parts <- strsplit(fullname,split=" ")[[1]]
+  n <- length(parts)
+  first.letter <- substr(parts[1],1,1)
+  equiv <- c(fullname,
+             paste(first.letter," ",parts[n],sep=""),
+             paste(first.letter,"."," ",parts[n],sep=""))
+  if (n > 2){
+    rest <- ""
+    rest.dash <- ""
+    for (i in 1:(n-1)){
+      rest <- paste(rest," ",parts[i+1],sep="")
+      rest.dash <- paste(rest.dash,parts[i+1],sep="-")
+    }
+    rest.dash <- substr(rest.dash,2,nchar(rest.dash)) # get rid of first dash
+    first.middle.name.letter <- tolower(substr(parts[2],1,1))
+    rest.more <- "" # for if the name has four or more parts
+    for (i in 1:(n-2)){
+      rest.more <- paste(rest.more," ",parts[i+2],sep="")
+    }
+    # rest contains the first space, rest.dash doesn't
+    equiv <- c(equiv, paste(first.letter,rest,sep=""),
+               paste(first.letter,".",rest,sep=""),
+               paste(first.letter," ",rest.dash,sep=""),
+               paste(first.letter,"."," ",rest.dash,sep=""),
+               paste(first.letter,first.middle.name.letter,rest.more,sep=""))
+  }
+  return(equiv)
+}
+
+get.aggr.by.state <- function(entry){
+  # extract serve won & serve total fields for a player
+  # without surface distinction
+  ret <- rep(0,38)
+  for (i in 1:18){
+    # odd indices for pts won, even for total
+    ret[2*i-1] <- entry[[3+12*i]]+entry[[7+12*i]]+entry[[11+12*i]]
+    ret[2*i] <- entry[[2+12*i]]+entry[[6+12*i]]+entry[[10+12*i]]
+  }
+  ret[37] <- entry[[3]]+entry[[7]]+entry[[11]]
+  ret[38] <- entry[[2]]+entry[[6]]+entry[[10]]
+  return(ret)
+}
+
+create.p.vector <- function(tst.names,pbp){
+  # returns a dataframe with the rows in the order of names,
+  # the columns being p's for states 1-18 and then t (tiebreak)
+  # final column is overall p regardless of state by taking total won / total serve
+  # names usually from get.unique.players on test data set
+  # pbp is the point-by-point data given
+  # note p-vectors not surface specific
+  # prints percentage of NA players (as determined by state 1 being NA)
+  # percentage not stored to not produce too many unnecessary variables
+  
+  n <- length(tst.names)
+  m <- nrow(pbp)
+  pbp.name <- pbp$name
+  aggr <- matrix(0,nrow=n,ncol=38) # 38=2x19, taking won & total to divide later
+  for (i in 1:n){
+    equiv <- get.equiv.names(tst.names[i])
+    p <- length(equiv)
+    for (j in 1:p){
+      for (l in 1:m){
+        # check 1 by 1 since pbp has non-unique names after manual remediation
+        if (equiv[j]==pbp.name[l]){
+          more.aggr <- get.aggr.by.state(pbp[l,])
+          aggr[i,] <- aggr[i,]+more.aggr
+        }
+      }
+    }
+  }
+  # now divide odd cols by even cols to obtain p's
+  output <- matrix(0,nrow=n,ncol=20)
+  output <- data.frame(output, row.names=tst.names)
+  for (i in 1:n){
+    for (j in 1:19){
+      output[i,j] <- aggr[i,2*j-1]/aggr[i,2*j]
+    } # note below first seq() output will end at 37
+    output[i,20] <- sum(aggr[i,seq(1,38,by=2)])/sum(aggr[i,seq(2,38,by=2)])
+  }
+  # get and print percentage of NAs
+  cat("Percentage of NAs:",sum(is.na(output$X1))/n,"\n")
+  # fill in NAs with column averages
+  for (i in 1:20){
+    output[which(is.na(output[,i])),i] <- mean(output[-which(is.na(output[,i])),i])
+  }
+  return(output)
+}
+
+grand.slams <- c("Australian Open","Roland Garros","Wimbledon","US Open","Us Open")
+# overall function to do experiments with
+conduct.experiment <- function(inactive.states, P, test.set, atp=TRUE, test.year=0){
+  # inactive.states:
+  #   vector containing states (19 for tiebreak) to deactivate, i.e. 
+  #   replace the state's unique p with the player's overall p
+  # P:
+  #   data.frame containing players' individual p vectors
+  #   usually obtained via create.p.vector output
+  # test.set:
+  #   data set used to test accuracy of prediction
+  # atp:
+  #   boolean defaulted to true if test.set is ATP data
+  # test.year:
+  #   three valid values: 0,1,2
+  #   0 for up to 2018, 1 for 2019 to 2021 inclusive, 2 for 2022 beyond
+  
+  # make copy of P and change copy to align with specified inactive.states
+  cP <- P[,1:19]
+  cP[,inactive.states] <- P[,20]
+  
+  # record exact probability values from model
+  # so we can examine closer if we want
+  n <- nrow(test.set)
+  exact <- rep(0,n)
+  
+  # experiment begins
+  pbp.names <- rownames(cP)
+  for (i in 1:n){
+    matchup <- test.set[i,]
+    winner <- matchup$winner_name
+    loser <- matchup$loser_name
+    inds <- match(c(winner,loser),pbp.names)
+    winner.P <- unname(unlist(cP[inds[1],]))
+    loser.P <- unname(unlist(cP[inds[2],]))
+    if (matchup$tourney_name %in% grand.slams){
+      if (test.year==0){
+        if (matchup$tourney_name=="US Open"){
+          # here we do something that many cases below will also do
+          # atp is TRUE if the match is an ATP match, x+ATP is a numeric value
+          # so x+ATP can be directly used for format without if-statements 
+          # this also works because the format codes were wta/atp alternating
+          # with the wta/atp code pairs only differing in playing to 3 or 5 sets
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=0+atp)
+        } else {
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=4+atp)
+        }
+      } else if (test.year==1){
+        # no overlap of rules from 2019 to 2021, so we have to code all cases
+        if (matchup$tourney_name=="Australian Open"){
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=2+atp)
+        } else if (matchup$tourney_name=="Roland Garros"){
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=4+atp)
+        } else if (matchup$tourney_name=="Wimbledon"){
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=6+atp)
+        } else { # matchup is from US Open
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=0+atp)
+        }
+      } else{ # test.year is 2, all grand slams formats standardized in 2022
+        exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=2+atp)
+      }
+    } else {
+      exact[i] <- match.win.prob(p1=winner.P,p2=loser.P)
+    }
+  }
+  res <- exact > 0.5
+  return(list("score"=mean(res),"result"=res,"exact"=exact))
+}
+
+downwards.wrapper <- function(deactivate,P,testset,atp,test.year){
+  # atp is boolean for if testset is for ATP
+  scores <- rep(0,19)
+  if (length(deactivate)==0){
+    options <- 1:19
+  } else {
+    options <- (1:19)[-deactivate]
+  }
+  for (i in options){
+    scores[i] <- conduct.experiment(c(i,deactivate),P,testset,atp,test.year)$score
+    # so deactivated state's indices will have 0
+  }
+  return(list("max"=max(scores),"candidates"=which(scores==max(scores))))
+}
+upwards.wrapper <- function(activate,P,testset,atp,test.year){
+  # atp is boolean for if testset is for ATP
+  if (length(activate)==0){
+    deactivate <- 1:19
+  } else {
+    deactivate <- (1:19)[-activate]
+  }
+  scores <- rep(0,19)
+  for (i in deactivate){
+    deactivate.no.i <- (1:19)[-c(activate,i)]
+    scores[i] <- conduct.experiment(deactivate.no.i,P,testset,atp,test.year)$score
+    # activated state's indices will have 0
+  }
+  return(list("max"=max(scores),"candidates"=which(scores==max(scores))))
+}
+
+downwards.experiment <- function(starting.states,P,testset,atp,previous.scores,
+                                 depth=18,test.year=2){
+  
+  diverge.lists <- c()
+  deactivate <- starting.states
+  
+  # through recursion, aim to combine all ovr.lists produced
+  ovr.list <- list() # to contain lists containing state & score vectors
+  path <- list()
+  # if no previous scores, can initialize NULL list element for scores:
+  # https://stackoverflow.com/questions/45666451/r-adding-an-empty-vector-to-a-list
+  if (length(previous.scores)==0){
+    path[1] <- list(NULL)
+  } else {
+    path[[1]] <- previous.scores # to record best scores of this path
+  }
+  # path[[2]] to record states deactivated, but does not need initialization
+  
+  while(length(deactivate) < depth){
+    
+    res <- downwards.wrapper(deactivate,P,testset,atp,test.year)
+    score <- res$max
+    cands <- res$candidates
+    scores.sofar <- c(path[[1]],score)
+    
+    l <- length(cands)
+    if (l>1){
+      # recursion call
+      for (i in 2:l){
+        diverge.lists <- c(
+          diverge.lists,
+          downwards.experiment(c(deactivate,cands[i]),P,testset,atp,scores.sofar,
+                               depth,test.year))
+      }
+    }
+    path[[1]] <- scores.sofar
+    deactivate <- c(deactivate,cands[1])
+    path[[2]] <- deactivate
+  }
+  path[[2]] <- deactivate
+  ovr.list[[1]] <- path
+  ovr.list <- c(ovr.list,diverge.lists)
+  
+  return(ovr.list)
+}
+
+upwards.experiment <- function(starting.states,P,testset,atp,previous.scores,
+                               depth=18,test.year=2){
+  
+  diverge.lists <- c()
+  activate <- starting.states
+  
+  # through recursion, aim to combine all ovr.lists produced
+  ovr.list <- list() # to contain lists containing state & score vectors
+  path <- list()
+  # if no previous scores, can initialize NULL list element for scores:
+  # https://stackoverflow.com/questions/45666451/r-adding-an-empty-vector-to-a-list
+  if (length(previous.scores)==0){
+    path[1] <- list(NULL)
+  } else {
+    path[[1]] <- previous.scores # to record best scores of this path
+  }
+  # path[[2]] to record states deactivated, but does not need initialization
+  
+  while(length(activate) < depth){
+    
+    res <- upwards.wrapper(activate,P,testset,atp,test.year)
+    score <- res$max
+    cands <- res$candidates
+    scores.sofar <- c(path[[1]],score)
+    
+    l <- length(cands)
+    if (l>1){
+      # recursion call
+      for (i in 2:l){
+        diverge.lists <- c(
+          diverge.lists,
+          upwards.experiment(c(activate,cands[i]),P,testset,atp,scores.sofar,
+                             depth,test.year))
+      }
+    }
+    path[[1]] <- scores.sofar
+    activate <- c(activate,cands[1])
+    path[[2]] <- activate
+  }
+  path[[2]] <- activate
+  ovr.list[[1]] <- path
+  ovr.list <- c(ovr.list,diverge.lists)
+  
+  return(ovr.list)
+}
+
+# old plotting functions still useful for exploration
+plot.path.score <- function(n.down,dat.down,n.up,dat.up,
+                      P, test.set, atp=TRUE,
+                      ylim.lower=0.55,ylim.upper=0.7){
+  # n - length of path given
+  # dat - data saved containing paths
+  # ylim.lower(upper) - ylim for plot, set to around 0(20) for type=2
+  
+  baseline.down <- conduct.experiment(c(),P,test.set,atp)$score
+  baseline.up <- conduct.experiment(1:19,P,test.set,atp)$score
+  
+  plot(0:n.up,c(baseline.up,dat.up[[1]][[1]]),'l',
+       xlim=c(0,20),ylim=c(ylim.lower,ylim.upper),main="Scores")
+  for (i in 2:length(dat.up)){
+    lines(0:n.up,c(baseline.up,dat.up[[i]][[1]]))
+  }
+  for (i in 1:length(dat.down)){
+    lines(20:(20-n.down),c(baseline.down,dat.down[[i]][[1]]))
+  }
+}
+
+plot.path.state <- function(n.down,dat.down,n.up,dat.up,ylim.lower=0,ylim.upper=20){
+  # n - length of path given
+  # dat - data saved containing paths
+  # ylim.lower(upper) - ylim for plot, set to around 0(20) for state
+  
+  plot(1:n.up,dat.up[[1]][[2]],'l',
+       xlim=c(1,19),ylim=c(ylim.lower,ylim.upper),main="States")
+  for (i in 2:length(dat.up)){
+    lines(1:n.up,dat.up[[i]][[2]])
+  }
+  for (i in 1:length(dat.down)){
+    lines(19:(20-n.down),dat.down[[i]][[2]])
+  }
+}
+
+examine.player.function <- function(dat,direction,player){
+  # dat is the dataset containing Xb experiment results
+  # direction is either "up" or "down"
+  # player is the player to be examined
+  
+  if (direction=="up"){
+    dat[which((dat$winner_name==player
+             |dat$loser_name==player)
+            &(dat$all.deact!=dat$plat.up)),c(3,4,5,7,9)]
+  } else if (direction=="down"){
+    dat[which((dat$winner_name==player
+             |dat$loser_name==player)
+            &(dat$all.act!=dat$plat.down)),c(3,4,5,8,10)]
+  }
+}
+```
+
+## Data
+
+```{r}
+# match/test data
+load.match.csv <- function(file.name){
+  m <- read.csv(file.name)
+  # remove R128,64 entries since resulted in too many players 
+  # which we had no point by point data on
+  rm <- which(m$round=="R128"|m$round=="R64"|m$round=="R32")
+  if (length(rm)!=0){
+    m <- m[-which(m$round=="R128"|m$round=="R64"|m$round=="R32"),]
+  }
+  # removing incomplete matches (ret,def,w/o)
+  ic <- ic.match(m$score)
+  if (length(ic)!=0){
+    m <- m[-ic.match(m$score),]
+  }
+  return(m)
+}
+m.2012 <- load.match.csv("2012_match.csv")
+m.2013 <- load.match.csv("2013_match.csv")
+m.2014 <- load.match.csv("2014_match.csv")
+m.2015 <- load.match.csv("2015_match.csv")
+m.2016 <- load.match.csv("2016_match.csv")
+m.2017 <- load.match.csv("2017_match.csv")
+m.2018 <- load.match.csv("2018_match.csv")
+m.2019 <- load.match.csv("2019_match.csv")
+m.2020 <- load.match.csv("2020_match.csv")
+m.2021 <- load.match.csv("2021_match.csv")
+m.2022 <- load.match.csv("2022_match.csv")
+# unique names of match players to generate P matrices later
+names.2012 <- get.unique.players(m.2012)
+names.2013 <- get.unique.players(m.2013)
+names.2014 <- get.unique.players(m.2014)
+names.2015 <- get.unique.players(m.2015)
+names.2016 <- get.unique.players(m.2016)
+names.2017 <- get.unique.players(m.2017)
+names.2018 <- get.unique.players(m.2018)
+names.2019 <- get.unique.players(m.2019)
+names.2020 <- get.unique.players(m.2020)
+names.2021 <- get.unique.players(m.2021)
+names.2022 <- get.unique.players(m.2022)
+# point-by-point data
+pbp.2011 <- read.csv("2011_pbp.csv")
+pbp.2012 <- read.csv("2012_pbp.csv")
+pbp.2013 <- read.csv("2013_pbp.csv")
+pbp.2014 <- read.csv("2014_pbp.csv")
+pbp.2015 <- read.csv("2015_pbp.csv")
+pbp.2016 <- read.csv("2016_pbp.csv")
+pbp.2017 <- read.csv("2017_pbp.csv")
+pbp.2018 <- read.csv("2018_pbp.csv")
+pbp.2019 <- read.csv("2019_pbp.csv")
+pbp.2020 <- read.csv("2020_pbp.csv")
+pbp.2021 <- read.csv("2021_pbp.csv")
+```
+```{r}
+# creating all the P matrices that will be used
+# naming convention for all P matrices - P.xx.yy
+# xx being the year the pbp data is from, yy the year for the match/test data
+print("11=>12")
+P.11.12 <- create.p.vector(names.2012,pbp.2011)
+print("12=>13")
+P.12.13 <- create.p.vector(names.2013,pbp.2012)
+print("13=>14")
+P.13.14 <- create.p.vector(names.2014,pbp.2013)
+print("14=>15")
+P.14.15 <- create.p.vector(names.2015,pbp.2014)
+print("15=>16")
+P.15.16 <- create.p.vector(names.2016,pbp.2015)
+print("16=>17")
+P.16.17 <- create.p.vector(names.2017,pbp.2016)
+print("17=>18")
+P.17.18 <- create.p.vector(names.2018,pbp.2017)
+print("18=>19")
+P.18.19 <- create.p.vector(names.2019,pbp.2018)
+print("19=>20")
+P.19.20 <- create.p.vector(names.2020,pbp.2019)
+print("20=>21")
+P.20.21 <- create.p.vector(names.2021,pbp.2020)
+print("21=>22")
+P.21.22 <- create.p.vector(names.2022,pbp.2021)
+print("11=>13")
+P.11.13 <- create.p.vector(names.2013,pbp.2011)
+print("12=>14")
+P.12.14 <- create.p.vector(names.2014,pbp.2012)
+print("13=>15")
+P.13.15 <- create.p.vector(names.2015,pbp.2013)
+print("14=>16")
+P.14.16 <- create.p.vector(names.2016,pbp.2014)
+print("15=>17")
+P.15.17 <- create.p.vector(names.2017,pbp.2015)
+print("16=>18")
+P.16.18 <- create.p.vector(names.2018,pbp.2016)
+print("17=>19")
+P.17.19 <- create.p.vector(names.2019,pbp.2017)
+print("18=>20")
+P.18.20 <- create.p.vector(names.2020,pbp.2018)
+print("19=>21")
+P.19.21 <- create.p.vector(names.2021,pbp.2019)
+print("20=>22")
+P.20.22 <- create.p.vector(names.2022,pbp.2020)
+```
+
+## [1] 2011 - 2013
+
+Table entry: 1,9; 1 / (0/0); (0/0) / -0.976; -0.488
+
+```{r eval=FALSE, include=FALSE}
+res <- downwards.experiment(c(),P.11.12,m.2012,atp=TRUE,c(),depth=5,test.year=0)
+saveRDS(res, file="paper_res/down5-11-12.rds")
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.11.12,m.2012,atp=TRUE,c(),depth=7,test.year=0)
+saveRDS(res, file="paper_res/up7-11-12.rds")
+```
+```{r}
+down.11.12 <- readRDS("paper_res/down5-11-12.rds")
+up.11.12 <- readRDS("paper_res/up7-11-12.rds")
+```
+```{r}
+plot.path.score(5,down.11.12,7,up.11.12,P.11.12,m.2012,ylim.lower=0.67,ylim.upper=0.75)
+```
+```{r}
+plot.path.state(5,down.11.12,7,up.11.12)
+```
+Act: 1,9; Deact: 1
+
+```{r eval=FALSE, include=FALSE}
+tally <- rep(0,63)
+for (i in 1:63){
+  tally[i] <- down.11.12[[i]][[2]][1]
+}
+hist(tally,breaks=seq(0.5,19.5,1))
+```
+
+```{r}
+act <- c(1,9)
+deact <- c(1)
+examine.1a <- m.2012[,c(3,4)]
+examine.1a$all.deact <- conduct.experiment(1:19,P.11.12,m.2012,test.year=0)$result
+examine.1a$all.act <- conduct.experiment(c(),P.11.12,m.2012,test.year=0)$result
+examine.1a$plat.up <- conduct.experiment((1:19)[-act],P.11.12,m.2012,test.year=0)$result
+examine.1a$plat.down <- conduct.experiment(deact,P.11.12,m.2012,test.year=0)$result
+```
+```{r}
+# ex <- examine.1a[which(examine.1a$all.deact!=examine.1a$plat.up),c(1,2,3,5)]
+ex <- examine.1a[which(examine.1a$all.act!=examine.1a$plat.down),c(1,2,4,6)]
+```
+
+Act: Nicolas Almagro weakened; Deact: Roger Federer weakened
+
+```{r}
+examine.1b <- m.2013
+examine.1b$all.deact <- conduct.experiment(1:19,P.12.13,m.2013,test.year=0)$result
+examine.1b$all.act <- conduct.experiment(c(),P.12.13,m.2013,test.year=0)$result
+examine.1b$plat.up <- conduct.experiment((1:19)[-act],P.12.13,m.2013,test.year=0)$result
+examine.1b$plat.down <- conduct.experiment(deact,P.12.13,m.2013,test.year=0)$result
+```
+```{r}
+examine.player.function(examine.1b,"up","Nicolas Almagro")
+```
+```{r}
+examine.player.function(examine.1b,"down","Roger Federer")
+```
+```{r}
+(a <- conduct.experiment(1:19,P.11.13,m.2013,test.year=0)$score)
+(b <- conduct.experiment((1:19)[-act],P.11.13,m.2013,test.year=0)$score)
+(b-a)*100
+(c <- conduct.experiment(c(),P.11.13,m.2013,test.year=0)$score)
+(d <- conduct.experiment(deact,P.11.13,m.2013,test.year=0)$score)
+(d-c)*100
+```
+
+## [2] 2012 - 2014
+
+Table entry: 2; 7,15 / (0/0); (0/1) / 0.000; 0.990 
+(Sample: 1,9; 1 / (0/0); (0/0) / -0.976; -0.488)
+
+```{r}
+# Easier to go from iteration to iteration
+P.y1.y2 <- P.12.13
+P.y2.y3 <- P.13.14
+P.y1.y3 <- P.12.14
+m.y2 <- m.2013
+m.y3 <- m.2014
+y1 <- "12"
+y2 <- "13"
+y3 <- "14"
+# test.year: 0 for up to 2018, 1 for 2019 to 2021 inclusive, 2 for 2022 beyond
+t.y2 <- 0
+t.y3 <- 0
+```
+```{r eval=FALSE, include=FALSE}
+res <- downwards.experiment(c(),P.y1.y2,m.y2,atp=TRUE,c(),depth=5,test.year=t.y2)
+saveRDS(res, file=paste("paper_res/down5-",y1,"-",y2,".rds",sep=""))
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.y1.y2,m.y2,atp=TRUE,c(),depth=5,test.year=t.y2)
+saveRDS(res, file=paste("paper_res/up5-",y1,"-",y2,".rds",sep=""))
+```
+```{r}
+down.y1.y2 <- readRDS(paste("paper_res/down5-",y1,"-",y2,".rds",sep=""))
+up.y1.y2 <- readRDS(paste("paper_res/up5-",y1,"-",y2,".rds",sep=""))
+```
+```{r}
+plot.path.score(5,down.y1.y2,5,up.y1.y2,P.y1.y2,m.y2,ylim.lower=0.6,ylim.upper=0.72)
+```
+```{r}
+plot.path.state(5,down.y1.y2,5,up.y1.y2)
+```
+Act: 2; Deact: 7,15
+
+```{r eval=FALSE, include=FALSE}
+tally <- rep(0,55)
+for (i in 1:55){
+  tally[i] <- up.y1.y2[[i]][[2]][1]
+}
+hist(tally,breaks=seq(0.5,19.5,1))
+```
+
+```{r}
+act <- c(2)
+deact <- c(7,15)
+(a <- conduct.experiment(1:19,P.y1.y3,m.y3,test.year=t.y3)$score)
+(b <- conduct.experiment((1:19)[-act],P.y1.y3,m.y3,test.year=t.y3)$score)
+(b-a)*100
+(c <- conduct.experiment(c(),P.y1.y3,m.y3,test.year=t.y3)$score)
+(d <- conduct.experiment(deact,P.y1.y3,m.y3,test.year=t.y3)$score)
+(d-c)*100
+```
+
+```{r}
+examine.a <- m.y2[,c(3,4)]
+examine.a$all.deact <- conduct.experiment(1:19,P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$all.act <- conduct.experiment(c(),P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$plat.up <- conduct.experiment((1:19)[-act],P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$plat.down <- conduct.experiment(deact,P.y1.y2,m.y2,test.year=t.y2)$result
+```
+
+```{r}
+# ex <- examine.a[which(examine.a$all.deact!=examine.a$plat.up),c(1,2,3,5)]
+ex <- examine.a[which(examine.a$all.act!=examine.a$plat.down),c(1,2,4,6)]
+```
+
+Act: -; 
+Deact: Dmitry Tursunov/Milos Raonic/Novak Djokovic strengthened, Andy Murray/Jo-Wilfried Tsonga/Ernests Gulbis weakened
+
+```{r}
+examine.b <- m.y3
+examine.b$all.deact <- conduct.experiment(1:19,P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$all.act <- conduct.experiment(c(),P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$plat.up <- conduct.experiment((1:19)[-act],P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$plat.down <- conduct.experiment(deact,P.y2.y3,m.y3,test.year=t.y3)$result
+```
+```{r}
+examine.player.function(examine.b,"down","Ernests Gulbis")
+```
+
+## [3] 2013 - 2015
+
+Table entry: 16; 6,10 / (1/0); (1/0) / 0.488; 0
+(Sample: 1,9; 1 / (0/0); (0/0) / -0.976; -0.488)
+
+```{r}
+# Easier to go from iteration to iteration
+y1 <- "13"
+y2 <- "14"
+y3 <- "15"
+P.y1.y2 <- P.13.14
+P.y2.y3 <- P.14.15
+P.y1.y3 <- P.13.15
+m.y2 <- m.2014
+m.y3 <- m.2015
+# test.year: 0 for up to 2018, 1 for 2019 to 2021 inclusive, 2 for 2022 beyond
+t.y2 <- 0
+t.y3 <- 0
+```
+```{r eval=FALSE, include=FALSE}
+res <- downwards.experiment(c(),P.y1.y2,m.y2,atp=TRUE,c(),depth=5,test.year=t.y2)
+saveRDS(res, file=paste("paper_res/down5-",y1,"-",y2,".rds",sep=""))
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.y1.y2,m.y2,atp=TRUE,c(),depth=5,test.year=t.y2)
+saveRDS(res, file=paste("paper_res/up5-",y1,"-",y2,".rds",sep=""))
+```
+```{r}
+down.y1.y2 <- readRDS(paste("paper_res/down5-",y1,"-",y2,".rds",sep=""))
+up.y1.y2 <- readRDS(paste("paper_res/up5-",y1,"-",y2,".rds",sep=""))
+```
+```{r}
+plot.path.score(5,down.y1.y2,5,up.y1.y2,P.y1.y2,m.y2,ylim.lower=0.6,ylim.upper=0.7)
+```
+```{r}
+plot.path.state(5,down.y1.y2,5,up.y1.y2)
+```
+Act: 16; Deact: 10,6
+
+```{r eval=FALSE, include=FALSE}
+tally <- rep(0,4)
+for (i in 1:55){
+  tally[i] <- up.y1.y2[[i]][[2]][1]
+}
+hist(tally,breaks=seq(0.5,19.5,1))
+```
+
+```{r}
+act <- c(16)
+deact <- c(6,10)
+(a <- conduct.experiment(1:19,P.y1.y3,m.y3,test.year=t.y3)$score)
+(b <- conduct.experiment((1:19)[-act],P.y1.y3,m.y3,test.year=t.y3)$score)
+(b-a)*100
+(c <- conduct.experiment(c(),P.y1.y3,m.y3,test.year=t.y3)$score)
+(d <- conduct.experiment(deact,P.y1.y3,m.y3,test.year=t.y3)$score)
+(d-c)*100
+```
+
+```{r}
+examine.a <- m.y2[,c(3,4)]
+examine.a$all.deact <- conduct.experiment(1:19,P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$all.act <- conduct.experiment(c(),P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$plat.up <- conduct.experiment((1:19)[-act],P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$plat.down <- conduct.experiment(deact,P.y1.y2,m.y2,test.year=t.y2)$result
+```
+
+```{r}
+ex <- examine.a[which(examine.a$all.deact!=examine.a$plat.up),c(1,2,3,5)]
+# ex <- examine.a[which(examine.a$all.act!=examine.a$plat.down),c(1,2,4,6)]
+```
+
+Act: Grigor Dimitrov weakened
+Deact: Novak Djokovic, Rafael Nadal strengthened, Stan Wawrinka, Andy Murray, Jo-Wilfried Tsonga weakened
+
+```{r}
+examine.b <- m.y3
+examine.b$all.deact <- conduct.experiment(1:19,P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$all.act <- conduct.experiment(c(),P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$plat.up <- conduct.experiment((1:19)[-act],P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$plat.down <- conduct.experiment(deact,P.y2.y3,m.y3,test.year=t.y3)$result
+```
+```{r}
+examine.player.function(examine.b,"down","Andy Murray")
+```
+(1/0); (1/0)
+
+## [4] 2014 - 2016
+
+Table entry: 1,6,14; 12,15,19 / (0,1); (3,3) / 3.465; -0.495
+(Sample: 1,9; 1 / (0/0); (0/0) / -0.976; -0.488)
+
+```{r}
+# Easier to go from iteration to iteration
+y1 <- "14"
+y2 <- "15"
+y3 <- "16"
+P.y1.y2 <- P.14.15
+P.y2.y3 <- P.15.16
+P.y1.y3 <- P.14.16
+m.y2 <- m.2015
+m.y3 <- m.2016
+# test.year: 0 for up to 2018, 1 for 2019 to 2021 inclusive, 2 for 2022 beyond
+t.y2 <- 0
+t.y3 <- 0
+```
+```{r eval=FALSE, include=FALSE}
+res <- downwards.experiment(c(),P.y1.y2,m.y2,atp=TRUE,c(),depth=5,test.year=t.y2)
+saveRDS(res, file=paste("paper_res/down5-",y1,"-",y2,".rds",sep=""))
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.y1.y2,m.y2,atp=TRUE,c(),depth=5,test.year=t.y2)
+saveRDS(res, file=paste("paper_res/up5-",y1,"-",y2,".rds",sep=""))
+```
+```{r}
+down.y1.y2 <- readRDS(paste("paper_res/down5-",y1,"-",y2,".rds",sep=""))
+up.y1.y2 <- readRDS(paste("paper_res/up5-",y1,"-",y2,".rds",sep=""))
+```
+```{r}
+plot.path.score(5,down.y1.y2,5,up.y1.y2,P.y1.y2,m.y2,ylim.lower=0.6,ylim.upper=0.7)
+```
+```{r}
+plot.path.state(5,down.y1.y2,5,up.y1.y2)
+```
+Act: 1,6,14; Deact: 12,15,19
+
+```{r eval=FALSE, include=FALSE}
+tally <- rep(0,4)
+for (i in 1:55){
+  tally[i] <- up.y1.y2[[i]][[2]][1]
+}
+hist(tally,breaks=seq(0.5,19.5,1))
+```
+
+```{r}
+act <- c(1,6,14)
+deact <- c(12,15,19)
+```
+```{r}
+(a <- conduct.experiment(1:19,P.y1.y3,m.y3,test.year=t.y3)$score)
+(b <- conduct.experiment((1:19)[-act],P.y1.y3,m.y3,test.year=t.y3)$score)
+(b-a)*100
+(c <- conduct.experiment(c(),P.y1.y3,m.y3,test.year=t.y3)$score)
+(d <- conduct.experiment(deact,P.y1.y3,m.y3,test.year=t.y3)$score)
+(d-c)*100
+```
+
+```{r}
+examine.a <- m.y2[,c(3,4)]
+examine.a$all.deact <- conduct.experiment(1:19,P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$all.act <- conduct.experiment(c(),P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$plat.up <- conduct.experiment((1:19)[-act],P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$plat.down <- conduct.experiment(deact,P.y1.y2,m.y2,test.year=t.y2)$result
+```
+
+```{r}
+# ex <- examine.a[which(examine.a$all.deact!=examine.a$plat.up),c(1,2,3,5)]
+ex <- examine.a[which(examine.a$all.act!=examine.a$plat.down),c(1,2,4,6)]
+```
+
+Act: Andy Murray,Jo-Wilfried Tsonga,Novak Djokovic strengthened; Tomas Berdych weakened
+Deact: Grigor Dimitrov,Novak Djokovic,Tomas Berdych strengthened; Jo-Wilfried Tsonga,Rafael Nadal,Stan Wawrinka weakened
+
+```{r}
+examine.b <- m.y3
+examine.b$all.deact <- conduct.experiment(1:19,P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$all.act <- conduct.experiment(c(),P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$plat.up <- conduct.experiment((1:19)[-act],P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$plat.down <- conduct.experiment(deact,P.y2.y3,m.y3,test.year=t.y3)$result
+```
+```{r}
+examine.player.function(examine.b,"down","Stan Wawrinka")
+```
+(0,1); (3,3)
+
+## [5] 2015 - 2017
+
+Table entry:  1,16; 19 / (1,0); (2,1) / -1.478; 3.448
+(Sample: 1,9; 1 / (0/0); (0/0) / -0.976; -0.488)
+
+```{r}
+# Easier to go from iteration to iteration
+y1 <- "15"
+y2 <- "16"
+y3 <- "17"
+P.y1.y2 <- P.15.16
+P.y2.y3 <- P.16.17
+P.y1.y3 <- P.15.17
+m.y2 <- m.2016
+m.y3 <- m.2017
+# test.year: 0 for up to 2018, 1 for 2019 to 2021 inclusive, 2 for 2022 beyond
+t.y2 <- 0
+t.y3 <- 0
+```
+```{r eval=FALSE, include=FALSE}
+res <- downwards.experiment(c(),P.y1.y2,m.y2,atp=TRUE,c(),depth=5,test.year=t.y2)
+saveRDS(res, file=paste("paper_res/down5-",y1,"-",y2,".rds",sep=""))
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.y1.y2,m.y2,atp=TRUE,c(),depth=5,test.year=t.y2)
+saveRDS(res, file=paste("paper_res/up5-",y1,"-",y2,".rds",sep=""))
+```
+```{r}
+down.y1.y2 <- readRDS(paste("paper_res/down5-",y1,"-",y2,".rds",sep=""))
+up.y1.y2 <- readRDS(paste("paper_res/up5-",y1,"-",y2,".rds",sep=""))
+```
+```{r}
+plot.path.score(5,down.y1.y2,5,up.y1.y2,P.y1.y2,m.y2,ylim.lower=0.6,ylim.upper=0.7)
+```
+```{r}
+plot.path.state(5,down.y1.y2,5,up.y1.y2)
+```
+Act: 1,16; Deact: 19
+
+```{r eval=FALSE, include=FALSE}
+tally <- rep(0,48)
+for (i in 1:48){
+  tally[i] <- up.y1.y2[[i]][[2]][1]
+}
+hist(tally,breaks=seq(0.5,19.5,1))
+```
+
+```{r}
+act <- c(1,16)
+deact <- c(19)
+```
+```{r}
+(a <- conduct.experiment(1:19,P.y1.y3,m.y3,test.year=t.y3)$score)
+(b <- conduct.experiment((1:19)[-act],P.y1.y3,m.y3,test.year=t.y3)$score)
+(b-a)*100
+(c <- conduct.experiment(c(),P.y1.y3,m.y3,test.year=t.y3)$score)
+(d <- conduct.experiment(deact,P.y1.y3,m.y3,test.year=t.y3)$score)
+(d-c)*100
+```
+
+```{r}
+examine.a <- m.y2[,c(3,4)]
+examine.a$all.deact <- conduct.experiment(1:19,P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$all.act <- conduct.experiment(c(),P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$plat.up <- conduct.experiment((1:19)[-act],P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$plat.down <- conduct.experiment(deact,P.y1.y2,m.y2,test.year=t.y2)$result
+```
+
+```{r}
+# ex <- examine.a[which(examine.a$all.deact!=examine.a$plat.up),c(1,2,3,5)]
+ex <- examine.a[which(examine.a$all.act!=examine.a$plat.down),c(1,2,4,6)]
+```
+
+Act: Dominic Thiem strengthened; Gael Monfils,Richard Gasquet weakened
+Deact: Marin Cilic strengthend; Grigor Dimitrov,Kei Nishikori weakened
+
+```{r}
+examine.b <- m.y3
+examine.b$all.deact <- conduct.experiment(1:19,P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$all.act <- conduct.experiment(c(),P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$plat.up <- conduct.experiment((1:19)[-act],P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$plat.down <- conduct.experiment(deact,P.y2.y3,m.y3,test.year=t.y3)$result
+```
+```{r}
+examine.player.function(examine.b,"up","Dominic Thiem")
+```
+(1,0); (2,1)
+
+## [6] 2016 - 2018
+
+Table entry: 13,15,16; 9,19 / (2,1); (2,0) / 0.995; 0.995
+(Sample: 1,9; 1 / (0/0); (0/0) / -0.976; -0.488)
+
+```{r}
+# Easier to go from iteration to iteration
+y1 <- "16"
+y2 <- "17"
+y3 <- "18"
+P.y1.y2 <- P.16.17
+P.y2.y3 <- P.17.18
+P.y1.y3 <- P.16.18
+m.y2 <- m.2017
+m.y3 <- m.2018
+# test.year: 0 for up to 2018, 1 for 2019 to 2021 inclusive, 2 for 2022 beyond
+t.y2 <- 0
+t.y3 <- 0
+```
+```{r eval=FALSE, include=FALSE}
+res <- downwards.experiment(c(),P.y1.y2,m.y2,atp=TRUE,c(),depth=5,test.year=t.y2)
+saveRDS(res, file=paste("paper_res/down5-",y1,"-",y2,".rds",sep=""))
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.y1.y2,m.y2,atp=TRUE,c(),depth=5,test.year=t.y2)
+saveRDS(res, file=paste("paper_res/up5-",y1,"-",y2,".rds",sep=""))
+```
+```{r}
+down.y1.y2 <- readRDS(paste("paper_res/down5-",y1,"-",y2,".rds",sep=""))
+up.y1.y2 <- readRDS(paste("paper_res/up5-",y1,"-",y2,".rds",sep=""))
+```
+```{r}
+plot.path.score(5,down.y1.y2,5,up.y1.y2,P.y1.y2,m.y2,ylim.lower=0.6,ylim.upper=0.7)
+```
+```{r}
+plot.path.state(5,down.y1.y2,5,up.y1.y2)
+```
+Act: 13,15,16; Deact: 9,19
+
+```{r eval=FALSE, include=FALSE}
+tally <- rep(0,48)
+for (i in 1:48){
+  tally[i] <- up.y1.y2[[i]][[2]][1]
+}
+hist(tally,breaks=seq(0.5,19.5,1))
+```
+
+```{r}
+act <- c(13,15,16)
+deact <- c(9,19)
+```
+```{r}
+(a <- conduct.experiment(1:19,P.y1.y3,m.y3,test.year=t.y3)$score)
+(b <- conduct.experiment((1:19)[-act],P.y1.y3,m.y3,test.year=t.y3)$score)
+(b-a)*100
+(c <- conduct.experiment(c(),P.y1.y3,m.y3,test.year=t.y3)$score)
+(d <- conduct.experiment(deact,P.y1.y3,m.y3,test.year=t.y3)$score)
+(d-c)*100
+```
+
+```{r}
+examine.a <- m.y2[,c(3,4)]
+examine.a$all.deact <- conduct.experiment(1:19,P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$all.act <- conduct.experiment(c(),P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$plat.up <- conduct.experiment((1:19)[-act],P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$plat.down <- conduct.experiment(deact,P.y1.y2,m.y2,test.year=t.y2)$result
+```
+
+```{r}
+# ex <- examine.a[which(examine.a$all.deact!=examine.a$plat.up),c(1,2,3,5)]
+ex <- examine.a[which(examine.a$all.act!=examine.a$plat.down),c(1,2,4,6)]
+```
+
+Act: Rafael Nadal strengthened; David Goffin,Pablo Cuevas weakened
+Deact: Dominic Thiem,Rafael Nadal strengthened; Roberto Bautista Agut,Pablo Cuevas weakened
+
+```{r}
+examine.b <- m.y3
+examine.b$all.deact <- conduct.experiment(1:19,P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$all.act <- conduct.experiment(c(),P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$plat.up <- conduct.experiment((1:19)[-act],P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$plat.down <- conduct.experiment(deact,P.y2.y3,m.y3,test.year=t.y3)$result
+```
+```{r}
+examine.player.function(examine.b,"down","Roberto Bautista Agut")
+```
+
+(2,1); (2,0)
+
+## [7] 2017 - 2019
+
+Table entry: 13; 9,19 / (0,0); (5,2) / 1; 0
+(Sample: 1,9; 1 / (0/0); (0/0) / -0.976; -0.488)
+
+```{r}
+# Easier to go from iteration to iteration
+y1 <- "17"
+y2 <- "18"
+y3 <- "19"
+P.y1.y2 <- P.17.18
+P.y2.y3 <- P.18.19
+P.y1.y3 <- P.17.19
+m.y2 <- m.2018
+m.y3 <- m.2019
+# test.year: 0 for up to 2018, 1 for 2019 to 2021 inclusive, 2 for 2022 beyond
+t.y2 <- 0
+t.y3 <- 1
+```
+```{r eval=FALSE, include=FALSE}
+res <- downwards.experiment(c(),P.y1.y2,m.y2,atp=TRUE,c(),depth=5,test.year=t.y2)
+saveRDS(res, file=paste("paper_res/down5-",y1,"-",y2,".rds",sep=""))
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.y1.y2,m.y2,atp=TRUE,c(),depth=5,test.year=t.y2)
+saveRDS(res, file=paste("paper_res/up5-",y1,"-",y2,".rds",sep=""))
+```
+```{r}
+down.y1.y2 <- readRDS(paste("paper_res/down5-",y1,"-",y2,".rds",sep=""))
+up.y1.y2 <- readRDS(paste("paper_res/up5-",y1,"-",y2,".rds",sep=""))
+```
+```{r}
+plot.path.score(5,down.y1.y2,5,up.y1.y2,P.y1.y2,m.y2,ylim.lower=0.5,ylim.upper=0.7)
+```
+```{r}
+plot.path.state(5,down.y1.y2,5,up.y1.y2)
+```
+Act: 13; Deact: 9,19
+
+```{r eval=FALSE, include=FALSE}
+tally <- rep(0,15)
+for (i in 1:15){
+  tally[i] <- up.y1.y2[[i]][[2]][2]
+}
+hist(tally,breaks=seq(0.5,19.5,1))
+```
+
+```{r}
+act <- c(13)
+deact <- c(9,19)
+```
+```{r}
+(a <- conduct.experiment(1:19,P.y1.y3,m.y3,test.year=t.y3)$score)
+(b <- conduct.experiment((1:19)[-act],P.y1.y3,m.y3,test.year=t.y3)$score)
+(b-a)*100
+(c <- conduct.experiment(c(),P.y1.y3,m.y3,test.year=t.y3)$score)
+(d <- conduct.experiment(deact,P.y1.y3,m.y3,test.year=t.y3)$score)
+(d-c)*100
+```
+
+```{r}
+examine.a <- m.y2[,c(3,4)]
+examine.a$all.deact <- conduct.experiment(1:19,P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$all.act <- conduct.experiment(c(),P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$plat.up <- conduct.experiment((1:19)[-act],P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$plat.down <- conduct.experiment(deact,P.y1.y2,m.y2,test.year=t.y2)$result
+```
+
+```{r}
+# ex <- examine.a[which(examine.a$all.deact!=examine.a$plat.up),c(1,2,3,5)]
+ex <- examine.a[which(examine.a$all.act!=examine.a$plat.down),c(1,2,4,6)]
+```
+
+Act: -
+Deact: Alexander Zverev,Dominic Thiem,Grigor Dimitrov,Juan Martin del Potro,Novak Djokovic strengthened; Borna Coric,Karen Khachanov,Pablo Carreno Busta,Nick Kyrgios weakened
+
+```{r}
+examine.b <- m.y3
+examine.b$all.deact <- conduct.experiment(1:19,P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$all.act <- conduct.experiment(c(),P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$plat.up <- conduct.experiment((1:19)[-act],P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$plat.down <- conduct.experiment(deact,P.y2.y3,m.y3,test.year=t.y3)$result
+```
+```{r}
+examine.player.function(examine.b,"down","Dominic Thiem")
+```
+
+(0,0); (5,2)
+
+## [8] 2018 - 2020
+
+Table entry: 8,9,18; 5,17 / (0,0); (0,0) / -2.913; 1.942
+(Sample: 1,9; 1 / (0/0); (0/0) / -0.976; -0.488)
+
+```{r}
+# Easier to go from iteration to iteration
+y1 <- "18"
+y2 <- "19"
+y3 <- "20"
+P.y1.y2 <- P.18.19
+P.y2.y3 <- P.19.20
+P.y1.y3 <- P.18.20
+m.y2 <- m.2019
+m.y3 <- m.2020
+# test.year: 0 for up to 2018, 1 for 2019 to 2021 inclusive, 2 for 2022 beyond
+t.y2 <- 1
+t.y3 <- 1
+```
+```{r eval=FALSE, include=FALSE}
+res <- downwards.experiment(c(),P.y1.y2,m.y2,atp=TRUE,c(),depth=5,test.year=t.y2)
+saveRDS(res, file=paste("paper_res/down5-",y1,"-",y2,".rds",sep=""))
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.y1.y2,m.y2,atp=TRUE,c(),depth=5,test.year=t.y2)
+saveRDS(res, file=paste("paper_res/up5-",y1,"-",y2,".rds",sep=""))
+```
+```{r}
+down.y1.y2 <- readRDS(paste("paper_res/down5-",y1,"-",y2,".rds",sep=""))
+up.y1.y2 <- readRDS(paste("paper_res/up5-",y1,"-",y2,".rds",sep=""))
+```
+```{r}
+plot.path.score(5,down.y1.y2,5,up.y1.y2,P.y1.y2,m.y2,ylim.lower=0.5,ylim.upper=0.7)
+```
+```{r}
+plot.path.state(5,down.y1.y2,5,up.y1.y2)
+```
+Act: 8,9,18; Deact: 5,17
+
+```{r eval=FALSE, include=FALSE}
+tally <- rep(0,15)
+for (i in 1:15){
+  tally[i] <- up.y1.y2[[i]][[2]][2]
+}
+hist(tally,breaks=seq(0.5,19.5,1))
+```
+
+```{r}
+act <- c(8,9,18)
+deact <- c(5,17)
+```
+```{r}
+(a <- conduct.experiment(1:19,P.y1.y3,m.y3,test.year=t.y3)$score)
+(b <- conduct.experiment((1:19)[-act],P.y1.y3,m.y3,test.year=t.y3)$score)
+(b-a)*100
+(c <- conduct.experiment(c(),P.y1.y3,m.y3,test.year=t.y3)$score)
+(d <- conduct.experiment(deact,P.y1.y3,m.y3,test.year=t.y3)$score)
+(d-c)*100
+```
+
+```{r}
+examine.a <- m.y2[,c(3,4)]
+examine.a$all.deact <- conduct.experiment(1:19,P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$all.act <- conduct.experiment(c(),P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$plat.up <- conduct.experiment((1:19)[-act],P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$plat.down <- conduct.experiment(deact,P.y1.y2,m.y2,test.year=t.y2)$result
+```
+
+```{r}
+# ex <- examine.a[which(examine.a$all.deact!=examine.a$plat.up),c(1,2,3,5)]
+ex <- examine.a[which(examine.a$all.act!=examine.a$plat.down),c(1,2,4,6)]
+```
+
+Act: Daniil Medvedev,Lorenzo Sonego,Rafael Nadal strengthened; Grigor Dimitrov weakened
+Deact: Daniil Medvedev strengthened
+
+```{r}
+examine.b <- m.y3
+examine.b$all.deact <- conduct.experiment(1:19,P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$all.act <- conduct.experiment(c(),P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$plat.up <- conduct.experiment((1:19)[-act],P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$plat.down <- conduct.experiment(deact,P.y2.y3,m.y3,test.year=t.y3)$result
+```
+```{r}
+examine.player.function(examine.b,"down","Daniil Medvedev")
+```
+
+(0,0); (0,0)
+
+## [9] 2019 - 2021
+
+Table entry: 16; 8,15 / (2,0); (0,0) / 2.139; 0
+(Sample: 1,9; 1 / (0/0); (0/0) / -0.976; -0.488)
+
+```{r}
+# Easier to go from iteration to iteration
+y1 <- "19"
+y2 <- "20"
+y3 <- "21"
+P.y1.y2 <- P.19.20
+P.y2.y3 <- P.20.21
+P.y1.y3 <- P.19.21
+m.y2 <- m.2020
+m.y3 <- m.2021
+# test.year: 0 for up to 2018, 1 for 2019 to 2021 inclusive, 2 for 2022 beyond
+t.y2 <- 1
+t.y3 <- 1
+```
+```{r eval=FALSE, include=FALSE}
+res <- downwards.experiment(c(),P.y1.y2,m.y2,atp=TRUE,c(),depth=5,test.year=t.y2)
+saveRDS(res, file=paste("paper_res/down5-",y1,"-",y2,".rds",sep=""))
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.y1.y2,m.y2,atp=TRUE,c(),depth=5,test.year=t.y2)
+saveRDS(res, file=paste("paper_res/up5-",y1,"-",y2,".rds",sep=""))
+```
+```{r}
+down.y1.y2 <- readRDS(paste("paper_res/down5-",y1,"-",y2,".rds",sep=""))
+up.y1.y2 <- readRDS(paste("paper_res/up5-",y1,"-",y2,".rds",sep=""))
+```
+```{r}
+plot.path.score(5,down.y1.y2,5,up.y1.y2,P.y1.y2,m.y2,ylim.lower=0.6,ylim.upper=0.75)
+```
+```{r}
+plot.path.state(5,down.y1.y2,5,up.y1.y2)
+```
+Act: 16; Deact: 8,15
+
+```{r eval=FALSE, include=FALSE}
+tally <- rep(0,97)
+for (i in 1:97){
+  tally[i] <- up.y1.y2[[i]][[2]][3]
+}
+hist(tally,breaks=seq(0.5,19.5,1))
+```
+
+```{r}
+act <- c(16)
+deact <- c(8,15)
+```
+```{r}
+(a <- conduct.experiment(1:19,P.y1.y3,m.y3,test.year=t.y3)$score)
+(b <- conduct.experiment((1:19)[-act],P.y1.y3,m.y3,test.year=t.y3)$score)
+(b-a)*100
+(c <- conduct.experiment(c(),P.y1.y3,m.y3,test.year=t.y3)$score)
+(d <- conduct.experiment(deact,P.y1.y3,m.y3,test.year=t.y3)$score)
+(d-c)*100
+```
+
+```{r}
+examine.a <- m.y2[,c(3,4)]
+examine.a$all.deact <- conduct.experiment(1:19,P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$all.act <- conduct.experiment(c(),P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$plat.up <- conduct.experiment((1:19)[-act],P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$plat.down <- conduct.experiment(deact,P.y1.y2,m.y2,test.year=t.y2)$result
+```
+
+```{r}
+# ex <- examine.a[which(examine.a$all.deact!=examine.a$plat.up),c(1,2,3,5)]
+# ex <- examine.a[which(examine.a$all.act!=examine.a$plat.down),c(1,2,4,6)]
+```
+
+Act: Alexander Zverev strengthened; Ugo Humbert weakened
+Deact: -
+
+```{r}
+examine.b <- m.y3
+examine.b$all.deact <- conduct.experiment(1:19,P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$all.act <- conduct.experiment(c(),P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$plat.up <- conduct.experiment((1:19)[-act],P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$plat.down <- conduct.experiment(deact,P.y2.y3,m.y3,test.year=t.y3)$result
+```
+```{r}
+examine.player.function(examine.b,"up","Ugo Humbert")
+```
+
+(2,0); (0,0)
+
+## [10] 2020 - 2022
+
+Table entry: 3; 19 / (1,0); (7,2) / 0; 2.688
+(Sample: 1,9; 1 / (0/0); (0/0) / -0.976; -0.488)
+
+```{r}
+# Easier to go from iteration to iteration
+y1 <- "20"
+y2 <- "21"
+y3 <- "22"
+P.y1.y2 <- P.20.21
+P.y2.y3 <- P.21.22
+P.y1.y3 <- P.20.22
+m.y2 <- m.2021
+m.y3 <- m.2022
+# test.year: 0 for up to 2018, 1 for 2019 to 2021 inclusive, 2 for 2022 beyond
+t.y2 <- 1
+t.y3 <- 2
+```
+```{r eval=FALSE, include=FALSE}
+res <- downwards.experiment(c(),P.y1.y2,m.y2,atp=TRUE,c(),depth=5,test.year=t.y2)
+saveRDS(res, file=paste("paper_res/down5-",y1,"-",y2,".rds",sep=""))
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.y1.y2,m.y2,atp=TRUE,c(),depth=5,test.year=t.y2)
+saveRDS(res, file=paste("paper_res/up5-",y1,"-",y2,".rds",sep=""))
+```
+```{r}
+down.y1.y2 <- readRDS(paste("paper_res/down5-",y1,"-",y2,".rds",sep=""))
+up.y1.y2 <- readRDS(paste("paper_res/up5-",y1,"-",y2,".rds",sep=""))
+```
+```{r}
+plot.path.score(5,down.y1.y2,5,up.y1.y2,P.y1.y2,m.y2,ylim.lower=0.55,ylim.upper=0.68)
+```
+```{r}
+plot.path.state(5,down.y1.y2,5,up.y1.y2)
+```
+Act: 3; Deact: 19
+
+```{r eval=FALSE, include=FALSE}
+tally <- rep(0,81)
+for (i in 1:81){
+  tally[i] <- up.y1.y2[[i]][[2]][1]
+}
+hist(tally,breaks=seq(0.5,19.5,1))
+```
+
+```{r}
+act <- c(3)
+deact <- c(19)
+```
+```{r}
+(a <- conduct.experiment(1:19,P.y1.y3,m.y3,test.year=t.y3)$score)
+(b <- conduct.experiment((1:19)[-act],P.y1.y3,m.y3,test.year=t.y3)$score)
+(b-a)*100
+(c <- conduct.experiment(c(),P.y1.y3,m.y3,test.year=t.y3)$score)
+(d <- conduct.experiment(deact,P.y1.y3,m.y3,test.year=t.y3)$score)
+(d-c)*100
+```
+
+```{r}
+examine.a <- m.y2[,c(3,4)]
+examine.a$all.deact <- conduct.experiment(1:19,P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$all.act <- conduct.experiment(c(),P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$plat.up <- conduct.experiment((1:19)[-act],P.y1.y2,m.y2,test.year=t.y2)$result
+examine.a$plat.down <- conduct.experiment(deact,P.y1.y2,m.y2,test.year=t.y2)$result
+```
+
+```{r}
+# ex <- examine.a[which(examine.a$all.deact!=examine.a$plat.up),c(1,2,3,5)]
+ex <- examine.a[which(examine.a$all.act!=examine.a$plat.down),c(1,2,4,6)]
+```
+
+Act: Daniil Medvedev,Reilly Opelka strengthened
+Deact: Daniil Medvedev,Hubert Hurkacz strengthened; Novak Djokovic,Gael Monfils weakened
+
+```{r}
+examine.b <- m.y3
+examine.b$all.deact <- conduct.experiment(1:19,P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$all.act <- conduct.experiment(c(),P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$plat.up <- conduct.experiment((1:19)[-act],P.y2.y3,m.y3,test.year=t.y3)$result
+examine.b$plat.down <- conduct.experiment(deact,P.y2.y3,m.y3,test.year=t.y3)$result
+```
+```{r}
+examine.player.function(examine.b,"down","Daniil Medvedev")
+```
+
+(1,0); (7,2)

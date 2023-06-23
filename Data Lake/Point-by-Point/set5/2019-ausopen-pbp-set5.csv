@@ -1,0 +1,1449 @@
+P1,P2,Surface,PointServer,PointWinner,P1Score,P2Score,SetNo
+L. Vanni,P. Carreno Busta,hard,1,2,0,15,5
+L. Vanni,P. Carreno Busta,hard,1,2,0,30,5
+L. Vanni,P. Carreno Busta,hard,1,1,15,30,5
+L. Vanni,P. Carreno Busta,hard,1,2,15,40,5
+L. Vanni,P. Carreno Busta,hard,1,1,30,40,5
+L. Vanni,P. Carreno Busta,hard,1,1,40,40,5
+L. Vanni,P. Carreno Busta,hard,1,2,40,AD,5
+L. Vanni,P. Carreno Busta,hard,1,1,40,40,5
+L. Vanni,P. Carreno Busta,hard,1,2,40,AD,5
+L. Vanni,P. Carreno Busta,hard,1,1,40,40,5
+L. Vanni,P. Carreno Busta,hard,1,1,AD,40,5
+L. Vanni,P. Carreno Busta,hard,1,1,0,0,5
+L. Vanni,P. Carreno Busta,hard,2,2,0,15,5
+L. Vanni,P. Carreno Busta,hard,2,2,0,30,5
+L. Vanni,P. Carreno Busta,hard,2,2,0,40,5
+L. Vanni,P. Carreno Busta,hard,2,1,15,40,5
+L. Vanni,P. Carreno Busta,hard,2,2,0,0,5
+L. Vanni,P. Carreno Busta,hard,1,1,15,0,5
+L. Vanni,P. Carreno Busta,hard,1,1,30,0,5
+L. Vanni,P. Carreno Busta,hard,1,1,40,0,5
+L. Vanni,P. Carreno Busta,hard,1,1,0,0,5
+L. Vanni,P. Carreno Busta,hard,2,2,0,15,5
+L. Vanni,P. Carreno Busta,hard,2,1,15,15,5
+L. Vanni,P. Carreno Busta,hard,2,1,30,15,5
+L. Vanni,P. Carreno Busta,hard,2,2,30,30,5
+L. Vanni,P. Carreno Busta,hard,2,2,30,40,5
+L. Vanni,P. Carreno Busta,hard,2,1,40,40,5
+L. Vanni,P. Carreno Busta,hard,2,2,40,AD,5
+L. Vanni,P. Carreno Busta,hard,2,1,40,40,5
+L. Vanni,P. Carreno Busta,hard,2,2,40,AD,5
+L. Vanni,P. Carreno Busta,hard,2,2,0,0,5
+L. Vanni,P. Carreno Busta,hard,1,1,15,0,5
+L. Vanni,P. Carreno Busta,hard,1,2,15,15,5
+L. Vanni,P. Carreno Busta,hard,1,2,15,30,5
+L. Vanni,P. Carreno Busta,hard,1,2,15,40,5
+L. Vanni,P. Carreno Busta,hard,1,2,0,0,5
+L. Vanni,P. Carreno Busta,hard,2,2,0,15,5
+L. Vanni,P. Carreno Busta,hard,2,1,15,15,5
+L. Vanni,P. Carreno Busta,hard,2,2,15,30,5
+L. Vanni,P. Carreno Busta,hard,2,2,15,40,5
+L. Vanni,P. Carreno Busta,hard,2,2,0,0,5
+L. Vanni,P. Carreno Busta,hard,1,2,0,15,5
+L. Vanni,P. Carreno Busta,hard,1,1,15,15,5
+L. Vanni,P. Carreno Busta,hard,1,1,30,15,5
+L. Vanni,P. Carreno Busta,hard,1,1,40,15,5
+L. Vanni,P. Carreno Busta,hard,1,1,0,0,5
+L. Vanni,P. Carreno Busta,hard,2,2,0,15,5
+L. Vanni,P. Carreno Busta,hard,2,2,0,30,5
+L. Vanni,P. Carreno Busta,hard,2,2,0,40,5
+L. Vanni,P. Carreno Busta,hard,2,2,0,0,5
+L. Vanni,P. Carreno Busta,hard,1,2,0,15,5
+L. Vanni,P. Carreno Busta,hard,1,2,0,30,5
+L. Vanni,P. Carreno Busta,hard,1,1,15,30,5
+L. Vanni,P. Carreno Busta,hard,1,2,15,40,5
+L. Vanni,P. Carreno Busta,hard,1,1,30,40,5
+L. Vanni,P. Carreno Busta,hard,1,1,40,40,5
+L. Vanni,P. Carreno Busta,hard,1,1,AD,40,5
+L. Vanni,P. Carreno Busta,hard,1,1,0,0,5
+L. Vanni,P. Carreno Busta,hard,2,2,0,15,5
+L. Vanni,P. Carreno Busta,hard,2,2,0,30,5
+L. Vanni,P. Carreno Busta,hard,2,1,15,30,5
+L. Vanni,P. Carreno Busta,hard,2,1,30,30,5
+L. Vanni,P. Carreno Busta,hard,2,2,30,40,5
+L. Vanni,P. Carreno Busta,hard,2,2,0,0,5
+G. Pella,J. Sousa,hard,1,1,15,0,5
+G. Pella,J. Sousa,hard,1,2,15,15,5
+G. Pella,J. Sousa,hard,1,2,15,30,5
+G. Pella,J. Sousa,hard,1,1,30,30,5
+G. Pella,J. Sousa,hard,1,1,40,30,5
+G. Pella,J. Sousa,hard,1,2,40,40,5
+G. Pella,J. Sousa,hard,1,1,AD,40,5
+G. Pella,J. Sousa,hard,1,2,40,40,5
+G. Pella,J. Sousa,hard,1,1,AD,40,5
+G. Pella,J. Sousa,hard,1,1,0,0,5
+G. Pella,J. Sousa,hard,2,2,0,15,5
+G. Pella,J. Sousa,hard,2,2,0,30,5
+G. Pella,J. Sousa,hard,2,2,0,40,5
+G. Pella,J. Sousa,hard,2,2,0,0,5
+G. Pella,J. Sousa,hard,1,2,0,15,5
+G. Pella,J. Sousa,hard,1,2,0,30,5
+G. Pella,J. Sousa,hard,1,2,0,40,5
+G. Pella,J. Sousa,hard,1,1,15,40,5
+G. Pella,J. Sousa,hard,1,1,30,40,5
+G. Pella,J. Sousa,hard,1,2,0,0,5
+G. Pella,J. Sousa,hard,2,2,0,15,5
+G. Pella,J. Sousa,hard,2,2,0,30,5
+G. Pella,J. Sousa,hard,2,2,0,40,5
+G. Pella,J. Sousa,hard,2,1,15,40,5
+G. Pella,J. Sousa,hard,2,2,0,0,5
+G. Pella,J. Sousa,hard,1,2,0,15,5
+G. Pella,J. Sousa,hard,1,1,15,15,5
+G. Pella,J. Sousa,hard,1,1,30,15,5
+G. Pella,J. Sousa,hard,1,2,30,30,5
+G. Pella,J. Sousa,hard,1,2,30,40,5
+G. Pella,J. Sousa,hard,1,1,40,40,5
+G. Pella,J. Sousa,hard,1,2,40,AD,5
+G. Pella,J. Sousa,hard,1,2,0,0,5
+G. Pella,J. Sousa,hard,2,2,0,15,5
+G. Pella,J. Sousa,hard,2,1,15,15,5
+G. Pella,J. Sousa,hard,2,1,30,15,5
+G. Pella,J. Sousa,hard,2,1,40,15,5
+G. Pella,J. Sousa,hard,2,2,40,30,5
+G. Pella,J. Sousa,hard,2,2,40,40,5
+G. Pella,J. Sousa,hard,2,2,40,AD,5
+G. Pella,J. Sousa,hard,2,2,0,0,5
+G. Pella,J. Sousa,hard,1,2,0,15,5
+G. Pella,J. Sousa,hard,1,1,15,15,5
+G. Pella,J. Sousa,hard,1,1,30,15,5
+G. Pella,J. Sousa,hard,1,2,30,30,5
+G. Pella,J. Sousa,hard,1,1,40,30,5
+G. Pella,J. Sousa,hard,1,2,40,40,5
+G. Pella,J. Sousa,hard,1,1,AD,40,5
+G. Pella,J. Sousa,hard,1,1,0,0,5
+G. Pella,J. Sousa,hard,2,1,15,0,5
+G. Pella,J. Sousa,hard,2,2,15,15,5
+G. Pella,J. Sousa,hard,2,2,15,30,5
+G. Pella,J. Sousa,hard,2,1,30,30,5
+G. Pella,J. Sousa,hard,2,2,30,40,5
+G. Pella,J. Sousa,hard,2,1,40,40,5
+G. Pella,J. Sousa,hard,2,2,40,AD,5
+G. Pella,J. Sousa,hard,2,2,0,0,5
+K. Majchrzak,K. Nishikori,hard,1,1,15,0,5
+K. Majchrzak,K. Nishikori,hard,1,2,15,15,5
+K. Majchrzak,K. Nishikori,hard,1,2,15,30,5
+K. Majchrzak,K. Nishikori,hard,1,2,15,40,5
+K. Majchrzak,K. Nishikori,hard,1,2,0,0,5
+K. Majchrzak,K. Nishikori,hard,2,2,0,15,5
+K. Majchrzak,K. Nishikori,hard,2,1,15,15,5
+K. Majchrzak,K. Nishikori,hard,2,2,15,30,5
+K. Majchrzak,K. Nishikori,hard,2,2,15,40,5
+K. Majchrzak,K. Nishikori,hard,2,2,0,0,5
+K. Majchrzak,K. Nishikori,hard,1,2,0,15,5
+K. Majchrzak,K. Nishikori,hard,1,2,0,30,5
+K. Majchrzak,K. Nishikori,hard,1,2,0,40,5
+K. Majchrzak,K. Nishikori,hard,1,2,0,0,5
+J. Chardy,U. Humbert,hard,1,1,15,0,5
+J. Chardy,U. Humbert,hard,1,1,30,0,5
+J. Chardy,U. Humbert,hard,1,1,40,0,5
+J. Chardy,U. Humbert,hard,1,1,0,0,5
+J. Chardy,U. Humbert,hard,2,1,15,0,5
+J. Chardy,U. Humbert,hard,2,2,15,15,5
+J. Chardy,U. Humbert,hard,2,1,30,15,5
+J. Chardy,U. Humbert,hard,2,2,30,30,5
+J. Chardy,U. Humbert,hard,2,2,30,40,5
+J. Chardy,U. Humbert,hard,2,1,40,40,5
+J. Chardy,U. Humbert,hard,2,1,AD,40,5
+J. Chardy,U. Humbert,hard,2,2,40,40,5
+J. Chardy,U. Humbert,hard,2,2,40,AD,5
+J. Chardy,U. Humbert,hard,2,1,40,40,5
+J. Chardy,U. Humbert,hard,2,2,40,AD,5
+J. Chardy,U. Humbert,hard,2,2,0,0,5
+J. Chardy,U. Humbert,hard,1,1,15,0,5
+J. Chardy,U. Humbert,hard,1,1,30,0,5
+J. Chardy,U. Humbert,hard,1,1,40,0,5
+J. Chardy,U. Humbert,hard,1,2,40,15,5
+J. Chardy,U. Humbert,hard,1,2,40,30,5
+J. Chardy,U. Humbert,hard,1,2,40,40,5
+J. Chardy,U. Humbert,hard,1,1,AD,40,5
+J. Chardy,U. Humbert,hard,1,1,0,0,5
+J. Chardy,U. Humbert,hard,2,1,15,0,5
+J. Chardy,U. Humbert,hard,2,2,15,15,5
+J. Chardy,U. Humbert,hard,2,2,15,30,5
+J. Chardy,U. Humbert,hard,2,2,15,40,5
+J. Chardy,U. Humbert,hard,2,2,0,0,5
+J. Chardy,U. Humbert,hard,1,1,15,0,5
+J. Chardy,U. Humbert,hard,1,2,15,15,5
+J. Chardy,U. Humbert,hard,1,2,15,30,5
+J. Chardy,U. Humbert,hard,1,1,30,30,5
+J. Chardy,U. Humbert,hard,1,2,30,40,5
+J. Chardy,U. Humbert,hard,1,1,40,40,5
+J. Chardy,U. Humbert,hard,1,1,AD,40,5
+J. Chardy,U. Humbert,hard,1,1,0,0,5
+J. Chardy,U. Humbert,hard,2,2,0,15,5
+J. Chardy,U. Humbert,hard,2,2,0,30,5
+J. Chardy,U. Humbert,hard,2,2,0,40,5
+J. Chardy,U. Humbert,hard,2,2,0,0,5
+J. Chardy,U. Humbert,hard,1,1,15,0,5
+J. Chardy,U. Humbert,hard,1,1,30,0,5
+J. Chardy,U. Humbert,hard,1,2,30,15,5
+J. Chardy,U. Humbert,hard,1,2,30,30,5
+J. Chardy,U. Humbert,hard,1,1,40,30,5
+J. Chardy,U. Humbert,hard,1,1,0,0,5
+J. Chardy,U. Humbert,hard,2,1,15,0,5
+J. Chardy,U. Humbert,hard,2,2,15,15,5
+J. Chardy,U. Humbert,hard,2,1,30,15,5
+J. Chardy,U. Humbert,hard,2,2,30,30,5
+J. Chardy,U. Humbert,hard,2,2,30,40,5
+J. Chardy,U. Humbert,hard,2,2,0,0,5
+J. Chardy,U. Humbert,hard,1,2,0,15,5
+J. Chardy,U. Humbert,hard,1,1,15,15,5
+J. Chardy,U. Humbert,hard,1,1,30,15,5
+J. Chardy,U. Humbert,hard,1,2,30,30,5
+J. Chardy,U. Humbert,hard,1,1,40,30,5
+J. Chardy,U. Humbert,hard,1,1,0,0,5
+J. Chardy,U. Humbert,hard,2,1,15,0,5
+J. Chardy,U. Humbert,hard,2,1,30,0,5
+J. Chardy,U. Humbert,hard,2,1,40,0,5
+J. Chardy,U. Humbert,hard,2,2,40,15,5
+J. Chardy,U. Humbert,hard,2,2,40,30,5
+J. Chardy,U. Humbert,hard,2,2,40,40,5
+J. Chardy,U. Humbert,hard,2,2,40,AD,5
+J. Chardy,U. Humbert,hard,2,1,40,40,5
+J. Chardy,U. Humbert,hard,2,2,40,AD,5
+J. Chardy,U. Humbert,hard,2,2,0,0,5
+J. Chardy,U. Humbert,hard,1,1,15,0,5
+J. Chardy,U. Humbert,hard,1,1,30,0,5
+J. Chardy,U. Humbert,hard,1,1,40,0,5
+J. Chardy,U. Humbert,hard,1,1,0,0,5
+J. Chardy,U. Humbert,hard,2,2,0,15,5
+J. Chardy,U. Humbert,hard,2,2,0,30,5
+J. Chardy,U. Humbert,hard,2,2,0,40,5
+J. Chardy,U. Humbert,hard,2,2,0,0,5
+J. Chardy,U. Humbert,hard,1,2,0,1,5
+J. Chardy,U. Humbert,hard,2,2,0,2,5
+J. Chardy,U. Humbert,hard,2,2,0,3,5
+J. Chardy,U. Humbert,hard,1,1,1,3,5
+J. Chardy,U. Humbert,hard,1,1,2,3,5
+J. Chardy,U. Humbert,hard,2,1,3,3,5
+J. Chardy,U. Humbert,hard,2,2,3,4,5
+J. Chardy,U. Humbert,hard,1,1,4,4,5
+J. Chardy,U. Humbert,hard,1,2,4,5,5
+J. Chardy,U. Humbert,hard,2,2,4,6,5
+J. Chardy,U. Humbert,hard,2,1,5,6,5
+J. Chardy,U. Humbert,hard,1,1,6,6,5
+J. Chardy,U. Humbert,hard,1,1,7,6,5
+J. Chardy,U. Humbert,hard,2,1,8,6,5
+J. Chardy,U. Humbert,hard,2,1,9,6,5
+J. Chardy,U. Humbert,hard,1,1,10,6,5
+H. Chung,B. Klahn,hard,1,1,15,0,5
+H. Chung,B. Klahn,hard,1,1,30,0,5
+H. Chung,B. Klahn,hard,1,1,40,0,5
+H. Chung,B. Klahn,hard,1,2,40,15,5
+H. Chung,B. Klahn,hard,1,1,0,0,5
+H. Chung,B. Klahn,hard,2,1,15,0,5
+H. Chung,B. Klahn,hard,2,2,15,15,5
+H. Chung,B. Klahn,hard,2,2,15,30,5
+H. Chung,B. Klahn,hard,2,2,15,40,5
+H. Chung,B. Klahn,hard,2,2,0,0,5
+H. Chung,B. Klahn,hard,1,2,0,15,5
+H. Chung,B. Klahn,hard,1,1,15,15,5
+H. Chung,B. Klahn,hard,1,1,30,15,5
+H. Chung,B. Klahn,hard,1,1,40,15,5
+H. Chung,B. Klahn,hard,1,1,0,0,5
+H. Chung,B. Klahn,hard,2,2,0,15,5
+H. Chung,B. Klahn,hard,2,2,0,30,5
+H. Chung,B. Klahn,hard,2,2,0,40,5
+H. Chung,B. Klahn,hard,2,2,0,0,5
+H. Chung,B. Klahn,hard,1,1,15,0,5
+H. Chung,B. Klahn,hard,1,1,30,0,5
+H. Chung,B. Klahn,hard,1,1,40,0,5
+H. Chung,B. Klahn,hard,1,1,0,0,5
+H. Chung,B. Klahn,hard,2,1,15,0,5
+H. Chung,B. Klahn,hard,2,1,30,0,5
+H. Chung,B. Klahn,hard,2,1,40,0,5
+H. Chung,B. Klahn,hard,2,2,40,15,5
+H. Chung,B. Klahn,hard,2,2,40,30,5
+H. Chung,B. Klahn,hard,2,2,40,40,5
+H. Chung,B. Klahn,hard,2,2,40,AD,5
+H. Chung,B. Klahn,hard,2,2,0,0,5
+H. Chung,B. Klahn,hard,1,2,0,15,5
+H. Chung,B. Klahn,hard,1,1,15,15,5
+H. Chung,B. Klahn,hard,1,1,30,15,5
+H. Chung,B. Klahn,hard,1,2,30,30,5
+H. Chung,B. Klahn,hard,1,1,40,30,5
+H. Chung,B. Klahn,hard,1,1,0,0,5
+H. Chung,B. Klahn,hard,2,2,0,15,5
+H. Chung,B. Klahn,hard,2,2,0,30,5
+H. Chung,B. Klahn,hard,2,2,0,40,5
+H. Chung,B. Klahn,hard,2,2,0,0,5
+H. Chung,B. Klahn,hard,1,1,15,0,5
+H. Chung,B. Klahn,hard,1,1,30,0,5
+H. Chung,B. Klahn,hard,1,1,40,0,5
+H. Chung,B. Klahn,hard,1,1,0,0,5
+H. Chung,B. Klahn,hard,2,2,0,15,5
+H. Chung,B. Klahn,hard,2,1,15,15,5
+H. Chung,B. Klahn,hard,2,1,30,15,5
+H. Chung,B. Klahn,hard,2,2,30,30,5
+H. Chung,B. Klahn,hard,2,1,40,30,5
+H. Chung,B. Klahn,hard,2,1,0,0,5
+F. Krajinovic,M. Cecchinato,hard,2,2,0,15,5
+F. Krajinovic,M. Cecchinato,hard,2,2,0,30,5
+F. Krajinovic,M. Cecchinato,hard,2,1,15,30,5
+F. Krajinovic,M. Cecchinato,hard,2,1,30,30,5
+F. Krajinovic,M. Cecchinato,hard,2,1,40,30,5
+F. Krajinovic,M. Cecchinato,hard,2,1,0,0,5
+F. Krajinovic,M. Cecchinato,hard,1,1,15,0,5
+F. Krajinovic,M. Cecchinato,hard,1,2,15,15,5
+F. Krajinovic,M. Cecchinato,hard,1,1,30,15,5
+F. Krajinovic,M. Cecchinato,hard,1,1,40,15,5
+F. Krajinovic,M. Cecchinato,hard,1,1,0,0,5
+F. Krajinovic,M. Cecchinato,hard,2,1,15,0,5
+F. Krajinovic,M. Cecchinato,hard,2,1,30,0,5
+F. Krajinovic,M. Cecchinato,hard,2,1,40,0,5
+F. Krajinovic,M. Cecchinato,hard,2,2,40,15,5
+F. Krajinovic,M. Cecchinato,hard,2,2,40,30,5
+F. Krajinovic,M. Cecchinato,hard,2,2,40,40,5
+F. Krajinovic,M. Cecchinato,hard,2,2,40,AD,5
+F. Krajinovic,M. Cecchinato,hard,2,2,0,0,5
+F. Krajinovic,M. Cecchinato,hard,1,2,0,15,5
+F. Krajinovic,M. Cecchinato,hard,1,1,15,15,5
+F. Krajinovic,M. Cecchinato,hard,1,1,30,15,5
+F. Krajinovic,M. Cecchinato,hard,1,1,40,15,5
+F. Krajinovic,M. Cecchinato,hard,1,1,0,0,5
+F. Krajinovic,M. Cecchinato,hard,2,1,15,0,5
+F. Krajinovic,M. Cecchinato,hard,2,2,15,15,5
+F. Krajinovic,M. Cecchinato,hard,2,2,15,30,5
+F. Krajinovic,M. Cecchinato,hard,2,1,30,30,5
+F. Krajinovic,M. Cecchinato,hard,2,2,30,40,5
+F. Krajinovic,M. Cecchinato,hard,2,2,0,0,5
+F. Krajinovic,M. Cecchinato,hard,1,1,15,0,5
+F. Krajinovic,M. Cecchinato,hard,1,1,30,0,5
+F. Krajinovic,M. Cecchinato,hard,1,2,30,15,5
+F. Krajinovic,M. Cecchinato,hard,1,1,40,15,5
+F. Krajinovic,M. Cecchinato,hard,1,1,0,0,5
+F. Krajinovic,M. Cecchinato,hard,2,2,0,15,5
+F. Krajinovic,M. Cecchinato,hard,2,2,0,30,5
+F. Krajinovic,M. Cecchinato,hard,2,1,15,30,5
+F. Krajinovic,M. Cecchinato,hard,2,2,15,40,5
+F. Krajinovic,M. Cecchinato,hard,2,1,30,40,5
+F. Krajinovic,M. Cecchinato,hard,2,1,40,40,5
+F. Krajinovic,M. Cecchinato,hard,2,2,40,AD,5
+F. Krajinovic,M. Cecchinato,hard,2,2,0,0,5
+F. Krajinovic,M. Cecchinato,hard,1,1,15,0,5
+F. Krajinovic,M. Cecchinato,hard,1,1,30,0,5
+F. Krajinovic,M. Cecchinato,hard,1,1,40,0,5
+F. Krajinovic,M. Cecchinato,hard,1,2,40,15,5
+F. Krajinovic,M. Cecchinato,hard,1,2,40,30,5
+F. Krajinovic,M. Cecchinato,hard,1,1,0,0,5
+F. Krajinovic,M. Cecchinato,hard,2,2,0,15,5
+F. Krajinovic,M. Cecchinato,hard,2,2,0,30,5
+F. Krajinovic,M. Cecchinato,hard,2,2,0,40,5
+F. Krajinovic,M. Cecchinato,hard,2,2,0,0,5
+F. Krajinovic,M. Cecchinato,hard,1,1,15,0,5
+F. Krajinovic,M. Cecchinato,hard,1,2,15,15,5
+F. Krajinovic,M. Cecchinato,hard,1,1,30,15,5
+F. Krajinovic,M. Cecchinato,hard,1,2,30,30,5
+F. Krajinovic,M. Cecchinato,hard,1,1,40,30,5
+F. Krajinovic,M. Cecchinato,hard,1,1,0,0,5
+B. Paire,D. Thiem,hard,2,2,0,15,5
+B. Paire,D. Thiem,hard,2,1,15,15,5
+B. Paire,D. Thiem,hard,2,2,15,30,5
+B. Paire,D. Thiem,hard,2,2,15,40,5
+B. Paire,D. Thiem,hard,2,2,0,0,5
+B. Paire,D. Thiem,hard,1,1,15,0,5
+B. Paire,D. Thiem,hard,1,2,15,15,5
+B. Paire,D. Thiem,hard,1,1,30,15,5
+B. Paire,D. Thiem,hard,1,1,40,15,5
+B. Paire,D. Thiem,hard,1,1,0,0,5
+B. Paire,D. Thiem,hard,2,2,0,15,5
+B. Paire,D. Thiem,hard,2,1,15,15,5
+B. Paire,D. Thiem,hard,2,2,15,30,5
+B. Paire,D. Thiem,hard,2,1,30,30,5
+B. Paire,D. Thiem,hard,2,2,30,40,5
+B. Paire,D. Thiem,hard,2,1,40,40,5
+B. Paire,D. Thiem,hard,2,2,40,AD,5
+B. Paire,D. Thiem,hard,2,2,0,0,5
+B. Paire,D. Thiem,hard,1,2,0,15,5
+B. Paire,D. Thiem,hard,1,1,15,15,5
+B. Paire,D. Thiem,hard,1,1,30,15,5
+B. Paire,D. Thiem,hard,1,2,30,30,5
+B. Paire,D. Thiem,hard,1,2,30,40,5
+B. Paire,D. Thiem,hard,1,1,40,40,5
+B. Paire,D. Thiem,hard,1,1,AD,40,5
+B. Paire,D. Thiem,hard,1,1,0,0,5
+B. Paire,D. Thiem,hard,2,2,0,15,5
+B. Paire,D. Thiem,hard,2,2,0,30,5
+B. Paire,D. Thiem,hard,2,2,0,40,5
+B. Paire,D. Thiem,hard,2,1,15,40,5
+B. Paire,D. Thiem,hard,2,1,30,40,5
+B. Paire,D. Thiem,hard,2,2,0,0,5
+B. Paire,D. Thiem,hard,1,1,15,0,5
+B. Paire,D. Thiem,hard,1,2,15,15,5
+B. Paire,D. Thiem,hard,1,2,15,30,5
+B. Paire,D. Thiem,hard,1,1,30,30,5
+B. Paire,D. Thiem,hard,1,1,40,30,5
+B. Paire,D. Thiem,hard,1,1,0,0,5
+B. Paire,D. Thiem,hard,2,2,0,15,5
+B. Paire,D. Thiem,hard,2,2,0,30,5
+B. Paire,D. Thiem,hard,2,2,0,40,5
+B. Paire,D. Thiem,hard,2,1,15,40,5
+B. Paire,D. Thiem,hard,2,2,0,0,5
+B. Paire,D. Thiem,hard,1,2,0,15,5
+B. Paire,D. Thiem,hard,1,1,15,15,5
+B. Paire,D. Thiem,hard,1,1,30,15,5
+B. Paire,D. Thiem,hard,1,2,30,30,5
+B. Paire,D. Thiem,hard,1,1,40,30,5
+B. Paire,D. Thiem,hard,1,2,40,40,5
+B. Paire,D. Thiem,hard,1,2,40,AD,5
+B. Paire,D. Thiem,hard,1,2,0,0,5
+B. Paire,D. Thiem,hard,2,2,0,15,5
+B. Paire,D. Thiem,hard,2,1,15,15,5
+B. Paire,D. Thiem,hard,2,2,15,30,5
+B. Paire,D. Thiem,hard,2,2,15,40,5
+B. Paire,D. Thiem,hard,2,1,30,40,5
+B. Paire,D. Thiem,hard,2,1,40,40,5
+B. Paire,D. Thiem,hard,2,2,40,AD,5
+B. Paire,D. Thiem,hard,2,1,40,40,5
+B. Paire,D. Thiem,hard,2,2,40,AD,5
+B. Paire,D. Thiem,hard,2,2,0,0,5
+R. Bautista Agut,A. Murray,hard,2,1,15,0,5
+R. Bautista Agut,A. Murray,hard,2,2,15,15,5
+R. Bautista Agut,A. Murray,hard,2,2,15,30,5
+R. Bautista Agut,A. Murray,hard,2,2,15,40,5
+R. Bautista Agut,A. Murray,hard,2,2,0,0,5
+R. Bautista Agut,A. Murray,hard,1,2,0,15,5
+R. Bautista Agut,A. Murray,hard,1,2,0,30,5
+R. Bautista Agut,A. Murray,hard,1,1,15,30,5
+R. Bautista Agut,A. Murray,hard,1,1,30,30,5
+R. Bautista Agut,A. Murray,hard,1,1,40,30,5
+R. Bautista Agut,A. Murray,hard,1,1,0,0,5
+R. Bautista Agut,A. Murray,hard,2,2,0,15,5
+R. Bautista Agut,A. Murray,hard,2,1,15,15,5
+R. Bautista Agut,A. Murray,hard,2,1,30,15,5
+R. Bautista Agut,A. Murray,hard,2,1,40,15,5
+R. Bautista Agut,A. Murray,hard,2,2,40,30,5
+R. Bautista Agut,A. Murray,hard,2,1,0,0,5
+R. Bautista Agut,A. Murray,hard,1,1,15,0,5
+R. Bautista Agut,A. Murray,hard,1,1,30,0,5
+R. Bautista Agut,A. Murray,hard,1,1,40,0,5
+R. Bautista Agut,A. Murray,hard,1,1,0,0,5
+R. Bautista Agut,A. Murray,hard,2,2,0,15,5
+R. Bautista Agut,A. Murray,hard,2,2,0,30,5
+R. Bautista Agut,A. Murray,hard,2,1,15,30,5
+R. Bautista Agut,A. Murray,hard,2,1,30,30,5
+R. Bautista Agut,A. Murray,hard,2,1,40,30,5
+R. Bautista Agut,A. Murray,hard,2,1,0,0,5
+R. Bautista Agut,A. Murray,hard,1,1,15,0,5
+R. Bautista Agut,A. Murray,hard,1,1,30,0,5
+R. Bautista Agut,A. Murray,hard,1,1,40,0,5
+R. Bautista Agut,A. Murray,hard,1,1,0,0,5
+R. Bautista Agut,A. Murray,hard,2,2,0,15,5
+R. Bautista Agut,A. Murray,hard,2,1,15,15,5
+R. Bautista Agut,A. Murray,hard,2,2,15,30,5
+R. Bautista Agut,A. Murray,hard,2,1,30,30,5
+R. Bautista Agut,A. Murray,hard,2,1,40,30,5
+R. Bautista Agut,A. Murray,hard,2,2,40,40,5
+R. Bautista Agut,A. Murray,hard,2,2,40,AD,5
+R. Bautista Agut,A. Murray,hard,2,2,0,0,5
+R. Bautista Agut,A. Murray,hard,1,1,15,0,5
+R. Bautista Agut,A. Murray,hard,1,1,30,0,5
+R. Bautista Agut,A. Murray,hard,1,1,40,0,5
+R. Bautista Agut,A. Murray,hard,1,1,0,0,5
+V. Troicki,R. Carballes Baena,hard,2,2,0,15,5
+V. Troicki,R. Carballes Baena,hard,2,2,0,30,5
+V. Troicki,R. Carballes Baena,hard,2,2,0,40,5
+V. Troicki,R. Carballes Baena,hard,2,2,0,0,5
+V. Troicki,R. Carballes Baena,hard,1,2,0,15,5
+V. Troicki,R. Carballes Baena,hard,1,1,15,15,5
+V. Troicki,R. Carballes Baena,hard,1,1,30,15,5
+V. Troicki,R. Carballes Baena,hard,1,1,40,15,5
+V. Troicki,R. Carballes Baena,hard,1,1,0,0,5
+V. Troicki,R. Carballes Baena,hard,2,2,0,15,5
+V. Troicki,R. Carballes Baena,hard,2,2,0,30,5
+V. Troicki,R. Carballes Baena,hard,2,2,0,40,5
+V. Troicki,R. Carballes Baena,hard,2,2,0,0,5
+V. Troicki,R. Carballes Baena,hard,1,1,15,0,5
+V. Troicki,R. Carballes Baena,hard,1,1,30,0,5
+V. Troicki,R. Carballes Baena,hard,1,1,40,0,5
+V. Troicki,R. Carballes Baena,hard,1,2,40,15,5
+V. Troicki,R. Carballes Baena,hard,1,1,0,0,5
+V. Troicki,R. Carballes Baena,hard,2,1,15,0,5
+V. Troicki,R. Carballes Baena,hard,2,1,30,0,5
+V. Troicki,R. Carballes Baena,hard,2,2,30,15,5
+V. Troicki,R. Carballes Baena,hard,2,1,40,15,5
+V. Troicki,R. Carballes Baena,hard,2,2,40,30,5
+V. Troicki,R. Carballes Baena,hard,2,1,0,0,5
+V. Troicki,R. Carballes Baena,hard,1,1,15,0,5
+V. Troicki,R. Carballes Baena,hard,1,2,15,15,5
+V. Troicki,R. Carballes Baena,hard,1,1,30,15,5
+V. Troicki,R. Carballes Baena,hard,1,1,40,15,5
+V. Troicki,R. Carballes Baena,hard,1,2,40,30,5
+V. Troicki,R. Carballes Baena,hard,1,2,40,40,5
+V. Troicki,R. Carballes Baena,hard,1,1,AD,40,5
+V. Troicki,R. Carballes Baena,hard,1,1,0,0,5
+V. Troicki,R. Carballes Baena,hard,2,2,0,15,5
+V. Troicki,R. Carballes Baena,hard,2,1,15,15,5
+V. Troicki,R. Carballes Baena,hard,2,2,15,30,5
+V. Troicki,R. Carballes Baena,hard,2,2,15,40,5
+V. Troicki,R. Carballes Baena,hard,2,1,30,40,5
+V. Troicki,R. Carballes Baena,hard,2,2,0,0,5
+V. Troicki,R. Carballes Baena,hard,1,1,15,0,5
+V. Troicki,R. Carballes Baena,hard,1,1,30,0,5
+V. Troicki,R. Carballes Baena,hard,1,1,40,0,5
+V. Troicki,R. Carballes Baena,hard,1,2,40,15,5
+V. Troicki,R. Carballes Baena,hard,1,2,40,30,5
+V. Troicki,R. Carballes Baena,hard,1,2,40,40,5
+V. Troicki,R. Carballes Baena,hard,1,1,AD,40,5
+V. Troicki,R. Carballes Baena,hard,1,1,0,0,5
+V. Troicki,R. Carballes Baena,hard,2,1,15,0,5
+V. Troicki,R. Carballes Baena,hard,2,2,15,15,5
+V. Troicki,R. Carballes Baena,hard,2,2,15,30,5
+V. Troicki,R. Carballes Baena,hard,2,2,15,40,5
+V. Troicki,R. Carballes Baena,hard,2,2,0,0,5
+V. Troicki,R. Carballes Baena,hard,1,1,15,0,5
+V. Troicki,R. Carballes Baena,hard,1,1,30,0,5
+V. Troicki,R. Carballes Baena,hard,1,2,30,15,5
+V. Troicki,R. Carballes Baena,hard,1,2,30,30,5
+V. Troicki,R. Carballes Baena,hard,1,1,40,30,5
+V. Troicki,R. Carballes Baena,hard,1,1,0,0,5
+M. Polmans,D. Kudla,hard,1,1,15,0,5
+M. Polmans,D. Kudla,hard,1,2,15,15,5
+M. Polmans,D. Kudla,hard,1,2,15,30,5
+M. Polmans,D. Kudla,hard,1,1,30,30,5
+M. Polmans,D. Kudla,hard,1,2,30,40,5
+M. Polmans,D. Kudla,hard,1,1,40,40,5
+M. Polmans,D. Kudla,hard,1,1,AD,40,5
+M. Polmans,D. Kudla,hard,1,1,0,0,5
+M. Polmans,D. Kudla,hard,2,1,15,0,5
+M. Polmans,D. Kudla,hard,2,2,15,15,5
+M. Polmans,D. Kudla,hard,2,2,15,30,5
+M. Polmans,D. Kudla,hard,2,1,30,30,5
+M. Polmans,D. Kudla,hard,2,1,40,30,5
+M. Polmans,D. Kudla,hard,2,2,40,40,5
+M. Polmans,D. Kudla,hard,2,2,40,AD,5
+M. Polmans,D. Kudla,hard,2,2,0,0,5
+M. Polmans,D. Kudla,hard,1,1,15,0,5
+M. Polmans,D. Kudla,hard,1,2,15,15,5
+M. Polmans,D. Kudla,hard,1,1,30,15,5
+M. Polmans,D. Kudla,hard,1,2,30,30,5
+M. Polmans,D. Kudla,hard,1,2,30,40,5
+M. Polmans,D. Kudla,hard,1,2,0,0,5
+M. Polmans,D. Kudla,hard,2,1,15,0,5
+M. Polmans,D. Kudla,hard,2,1,30,0,5
+M. Polmans,D. Kudla,hard,2,1,40,0,5
+M. Polmans,D. Kudla,hard,2,2,40,15,5
+M. Polmans,D. Kudla,hard,2,2,40,30,5
+M. Polmans,D. Kudla,hard,2,2,40,40,5
+M. Polmans,D. Kudla,hard,2,2,40,AD,5
+M. Polmans,D. Kudla,hard,2,2,0,0,5
+M. Polmans,D. Kudla,hard,1,2,0,15,5
+M. Polmans,D. Kudla,hard,1,2,0,30,5
+M. Polmans,D. Kudla,hard,1,2,0,40,5
+M. Polmans,D. Kudla,hard,1,1,15,40,5
+M. Polmans,D. Kudla,hard,1,1,30,40,5
+M. Polmans,D. Kudla,hard,1,2,0,0,5
+M. Polmans,D. Kudla,hard,2,1,15,0,5
+M. Polmans,D. Kudla,hard,2,1,30,0,5
+M. Polmans,D. Kudla,hard,2,1,40,0,5
+M. Polmans,D. Kudla,hard,2,2,40,15,5
+M. Polmans,D. Kudla,hard,2,2,40,30,5
+M. Polmans,D. Kudla,hard,2,2,40,40,5
+M. Polmans,D. Kudla,hard,2,2,40,AD,5
+M. Polmans,D. Kudla,hard,2,1,40,40,5
+M. Polmans,D. Kudla,hard,2,2,40,AD,5
+M. Polmans,D. Kudla,hard,2,2,0,0,5
+M. Polmans,D. Kudla,hard,1,2,0,15,5
+M. Polmans,D. Kudla,hard,1,1,15,15,5
+M. Polmans,D. Kudla,hard,1,2,15,30,5
+M. Polmans,D. Kudla,hard,1,2,15,40,5
+M. Polmans,D. Kudla,hard,1,1,30,40,5
+M. Polmans,D. Kudla,hard,1,1,40,40,5
+M. Polmans,D. Kudla,hard,1,1,AD,40,5
+M. Polmans,D. Kudla,hard,1,1,0,0,5
+M. Polmans,D. Kudla,hard,2,2,0,15,5
+M. Polmans,D. Kudla,hard,2,2,0,30,5
+M. Polmans,D. Kudla,hard,2,2,0,40,5
+M. Polmans,D. Kudla,hard,2,2,0,0,5
+P. Kohlschreiber,J. Sousa,hard,1,1,15,0,5
+P. Kohlschreiber,J. Sousa,hard,1,1,30,0,5
+P. Kohlschreiber,J. Sousa,hard,1,2,30,15,5
+P. Kohlschreiber,J. Sousa,hard,1,1,40,15,5
+P. Kohlschreiber,J. Sousa,hard,1,2,40,30,5
+P. Kohlschreiber,J. Sousa,hard,1,2,40,40,5
+P. Kohlschreiber,J. Sousa,hard,1,1,AD,40,5
+P. Kohlschreiber,J. Sousa,hard,1,2,40,40,5
+P. Kohlschreiber,J. Sousa,hard,1,1,AD,40,5
+P. Kohlschreiber,J. Sousa,hard,1,1,0,0,5
+P. Kohlschreiber,J. Sousa,hard,2,1,15,0,5
+P. Kohlschreiber,J. Sousa,hard,2,2,15,15,5
+P. Kohlschreiber,J. Sousa,hard,2,2,15,30,5
+P. Kohlschreiber,J. Sousa,hard,2,2,15,40,5
+P. Kohlschreiber,J. Sousa,hard,2,2,0,0,5
+P. Kohlschreiber,J. Sousa,hard,1,2,0,15,5
+P. Kohlschreiber,J. Sousa,hard,1,1,15,15,5
+P. Kohlschreiber,J. Sousa,hard,1,2,15,30,5
+P. Kohlschreiber,J. Sousa,hard,1,2,15,40,5
+P. Kohlschreiber,J. Sousa,hard,1,1,30,40,5
+P. Kohlschreiber,J. Sousa,hard,1,1,40,40,5
+P. Kohlschreiber,J. Sousa,hard,1,2,40,AD,5
+P. Kohlschreiber,J. Sousa,hard,1,1,40,40,5
+P. Kohlschreiber,J. Sousa,hard,1,2,40,AD,5
+P. Kohlschreiber,J. Sousa,hard,1,2,0,0,5
+P. Kohlschreiber,J. Sousa,hard,2,2,0,15,5
+P. Kohlschreiber,J. Sousa,hard,2,1,15,15,5
+P. Kohlschreiber,J. Sousa,hard,2,2,15,30,5
+P. Kohlschreiber,J. Sousa,hard,2,2,15,40,5
+P. Kohlschreiber,J. Sousa,hard,2,2,0,0,5
+P. Kohlschreiber,J. Sousa,hard,1,1,15,0,5
+P. Kohlschreiber,J. Sousa,hard,1,1,30,0,5
+P. Kohlschreiber,J. Sousa,hard,1,1,40,0,5
+P. Kohlschreiber,J. Sousa,hard,1,2,40,15,5
+P. Kohlschreiber,J. Sousa,hard,1,1,0,0,5
+P. Kohlschreiber,J. Sousa,hard,2,2,0,15,5
+P. Kohlschreiber,J. Sousa,hard,2,2,0,30,5
+P. Kohlschreiber,J. Sousa,hard,2,1,15,30,5
+P. Kohlschreiber,J. Sousa,hard,2,2,15,40,5
+P. Kohlschreiber,J. Sousa,hard,2,2,0,0,5
+P. Kohlschreiber,J. Sousa,hard,1,1,15,0,5
+P. Kohlschreiber,J. Sousa,hard,1,1,30,0,5
+P. Kohlschreiber,J. Sousa,hard,1,1,40,0,5
+P. Kohlschreiber,J. Sousa,hard,1,1,0,0,5
+P. Kohlschreiber,J. Sousa,hard,2,2,0,15,5
+P. Kohlschreiber,J. Sousa,hard,2,2,0,30,5
+P. Kohlschreiber,J. Sousa,hard,2,1,15,30,5
+P. Kohlschreiber,J. Sousa,hard,2,2,15,40,5
+P. Kohlschreiber,J. Sousa,hard,2,1,30,40,5
+P. Kohlschreiber,J. Sousa,hard,2,1,40,40,5
+P. Kohlschreiber,J. Sousa,hard,2,1,AD,40,5
+P. Kohlschreiber,J. Sousa,hard,2,2,40,40,5
+P. Kohlschreiber,J. Sousa,hard,2,2,40,AD,5
+P. Kohlschreiber,J. Sousa,hard,2,2,0,0,5
+P. Kohlschreiber,J. Sousa,hard,1,2,0,15,5
+P. Kohlschreiber,J. Sousa,hard,1,2,0,30,5
+P. Kohlschreiber,J. Sousa,hard,1,1,15,30,5
+P. Kohlschreiber,J. Sousa,hard,1,1,30,30,5
+P. Kohlschreiber,J. Sousa,hard,1,1,40,30,5
+P. Kohlschreiber,J. Sousa,hard,1,1,0,0,5
+P. Kohlschreiber,J. Sousa,hard,2,2,0,15,5
+P. Kohlschreiber,J. Sousa,hard,2,2,0,30,5
+P. Kohlschreiber,J. Sousa,hard,2,2,0,40,5
+P. Kohlschreiber,J. Sousa,hard,2,2,0,0,5
+I. Karlovic,K. Nishikori,hard,2,1,15,0,5
+I. Karlovic,K. Nishikori,hard,2,2,15,15,5
+I. Karlovic,K. Nishikori,hard,2,2,15,30,5
+I. Karlovic,K. Nishikori,hard,2,2,15,40,5
+I. Karlovic,K. Nishikori,hard,2,2,0,0,5
+I. Karlovic,K. Nishikori,hard,1,1,15,0,5
+I. Karlovic,K. Nishikori,hard,1,1,30,0,5
+I. Karlovic,K. Nishikori,hard,1,2,30,15,5
+I. Karlovic,K. Nishikori,hard,1,1,40,15,5
+I. Karlovic,K. Nishikori,hard,1,2,40,30,5
+I. Karlovic,K. Nishikori,hard,1,2,40,40,5
+I. Karlovic,K. Nishikori,hard,1,1,AD,40,5
+I. Karlovic,K. Nishikori,hard,1,1,0,0,5
+I. Karlovic,K. Nishikori,hard,2,1,15,0,5
+I. Karlovic,K. Nishikori,hard,2,2,15,15,5
+I. Karlovic,K. Nishikori,hard,2,2,15,30,5
+I. Karlovic,K. Nishikori,hard,2,2,15,40,5
+I. Karlovic,K. Nishikori,hard,2,1,30,40,5
+I. Karlovic,K. Nishikori,hard,2,2,0,0,5
+I. Karlovic,K. Nishikori,hard,1,1,15,0,5
+I. Karlovic,K. Nishikori,hard,1,1,30,0,5
+I. Karlovic,K. Nishikori,hard,1,1,40,0,5
+I. Karlovic,K. Nishikori,hard,1,1,0,0,5
+I. Karlovic,K. Nishikori,hard,2,1,15,0,5
+I. Karlovic,K. Nishikori,hard,2,2,15,15,5
+I. Karlovic,K. Nishikori,hard,2,2,15,30,5
+I. Karlovic,K. Nishikori,hard,2,2,15,40,5
+I. Karlovic,K. Nishikori,hard,2,2,0,0,5
+I. Karlovic,K. Nishikori,hard,1,1,15,0,5
+I. Karlovic,K. Nishikori,hard,1,1,30,0,5
+I. Karlovic,K. Nishikori,hard,1,1,40,0,5
+I. Karlovic,K. Nishikori,hard,1,1,0,0,5
+I. Karlovic,K. Nishikori,hard,2,2,0,15,5
+I. Karlovic,K. Nishikori,hard,2,2,0,30,5
+I. Karlovic,K. Nishikori,hard,2,2,0,40,5
+I. Karlovic,K. Nishikori,hard,2,2,0,0,5
+I. Karlovic,K. Nishikori,hard,1,1,15,0,5
+I. Karlovic,K. Nishikori,hard,1,1,30,0,5
+I. Karlovic,K. Nishikori,hard,1,1,40,0,5
+I. Karlovic,K. Nishikori,hard,1,2,40,15,5
+I. Karlovic,K. Nishikori,hard,1,1,0,0,5
+I. Karlovic,K. Nishikori,hard,2,1,15,0,5
+I. Karlovic,K. Nishikori,hard,2,1,30,0,5
+I. Karlovic,K. Nishikori,hard,2,1,40,0,5
+I. Karlovic,K. Nishikori,hard,2,2,40,15,5
+I. Karlovic,K. Nishikori,hard,2,2,40,30,5
+I. Karlovic,K. Nishikori,hard,2,2,40,40,5
+I. Karlovic,K. Nishikori,hard,2,2,40,AD,5
+I. Karlovic,K. Nishikori,hard,2,2,0,0,5
+I. Karlovic,K. Nishikori,hard,1,1,15,0,5
+I. Karlovic,K. Nishikori,hard,1,1,30,0,5
+I. Karlovic,K. Nishikori,hard,1,1,40,0,5
+I. Karlovic,K. Nishikori,hard,1,1,0,0,5
+I. Karlovic,K. Nishikori,hard,2,2,0,15,5
+I. Karlovic,K. Nishikori,hard,2,2,0,30,5
+I. Karlovic,K. Nishikori,hard,2,1,15,30,5
+I. Karlovic,K. Nishikori,hard,2,2,15,40,5
+I. Karlovic,K. Nishikori,hard,2,2,0,0,5
+I. Karlovic,K. Nishikori,hard,1,1,15,0,5
+I. Karlovic,K. Nishikori,hard,1,2,15,15,5
+I. Karlovic,K. Nishikori,hard,1,2,15,30,5
+I. Karlovic,K. Nishikori,hard,1,1,30,30,5
+I. Karlovic,K. Nishikori,hard,1,1,40,30,5
+I. Karlovic,K. Nishikori,hard,1,1,0,0,5
+I. Karlovic,K. Nishikori,hard,2,2,0,1,5
+I. Karlovic,K. Nishikori,hard,1,2,0,2,5
+I. Karlovic,K. Nishikori,hard,1,1,1,2,5
+I. Karlovic,K. Nishikori,hard,2,2,1,3,5
+I. Karlovic,K. Nishikori,hard,2,2,1,4,5
+I. Karlovic,K. Nishikori,hard,1,1,2,4,5
+I. Karlovic,K. Nishikori,hard,1,1,3,4,5
+I. Karlovic,K. Nishikori,hard,2,2,3,5,5
+I. Karlovic,K. Nishikori,hard,2,2,3,6,5
+I. Karlovic,K. Nishikori,hard,1,1,4,6,5
+I. Karlovic,K. Nishikori,hard,1,1,5,6,5
+I. Karlovic,K. Nishikori,hard,2,1,6,6,5
+I. Karlovic,K. Nishikori,hard,2,1,7,6,5
+I. Karlovic,K. Nishikori,hard,1,2,7,7,5
+I. Karlovic,K. Nishikori,hard,1,2,7,8,5
+I. Karlovic,K. Nishikori,hard,2,2,7,9,5
+I. Karlovic,K. Nishikori,hard,2,2,7,10,5
+A. Zverev,J. Chardy,hard,1,1,15,0,5
+A. Zverev,J. Chardy,hard,1,2,15,15,5
+A. Zverev,J. Chardy,hard,1,1,30,15,5
+A. Zverev,J. Chardy,hard,1,2,30,30,5
+A. Zverev,J. Chardy,hard,1,1,40,30,5
+A. Zverev,J. Chardy,hard,1,1,0,0,5
+A. Zverev,J. Chardy,hard,2,2,0,15,5
+A. Zverev,J. Chardy,hard,2,1,15,15,5
+A. Zverev,J. Chardy,hard,2,1,30,15,5
+A. Zverev,J. Chardy,hard,2,2,30,30,5
+A. Zverev,J. Chardy,hard,2,1,40,30,5
+A. Zverev,J. Chardy,hard,2,1,0,0,5
+A. Zverev,J. Chardy,hard,1,1,15,0,5
+A. Zverev,J. Chardy,hard,1,1,30,0,5
+A. Zverev,J. Chardy,hard,1,1,40,0,5
+A. Zverev,J. Chardy,hard,1,1,0,0,5
+A. Zverev,J. Chardy,hard,2,1,15,0,5
+A. Zverev,J. Chardy,hard,2,1,30,0,5
+A. Zverev,J. Chardy,hard,2,2,30,15,5
+A. Zverev,J. Chardy,hard,2,1,40,15,5
+A. Zverev,J. Chardy,hard,2,2,40,30,5
+A. Zverev,J. Chardy,hard,2,1,0,0,5
+A. Zverev,J. Chardy,hard,1,2,0,15,5
+A. Zverev,J. Chardy,hard,1,2,0,30,5
+A. Zverev,J. Chardy,hard,1,1,15,30,5
+A. Zverev,J. Chardy,hard,1,2,15,40,5
+A. Zverev,J. Chardy,hard,1,1,30,40,5
+A. Zverev,J. Chardy,hard,1,1,40,40,5
+A. Zverev,J. Chardy,hard,1,1,AD,40,5
+A. Zverev,J. Chardy,hard,1,2,40,40,5
+A. Zverev,J. Chardy,hard,1,2,40,AD,5
+A. Zverev,J. Chardy,hard,1,1,40,40,5
+A. Zverev,J. Chardy,hard,1,1,AD,40,5
+A. Zverev,J. Chardy,hard,1,2,40,40,5
+A. Zverev,J. Chardy,hard,1,1,AD,40,5
+A. Zverev,J. Chardy,hard,1,2,40,40,5
+A. Zverev,J. Chardy,hard,1,1,AD,40,5
+A. Zverev,J. Chardy,hard,1,1,0,0,5
+A. Zverev,J. Chardy,hard,2,2,0,15,5
+A. Zverev,J. Chardy,hard,2,2,0,30,5
+A. Zverev,J. Chardy,hard,2,2,0,40,5
+A. Zverev,J. Chardy,hard,2,2,0,0,5
+A. Zverev,J. Chardy,hard,1,1,15,0,5
+A. Zverev,J. Chardy,hard,1,1,30,0,5
+A. Zverev,J. Chardy,hard,1,1,40,0,5
+A. Zverev,J. Chardy,hard,1,1,0,0,5
+A. Bolt,G. Simon,hard,2,1,15,0,5
+A. Bolt,G. Simon,hard,2,2,15,15,5
+A. Bolt,G. Simon,hard,2,1,30,15,5
+A. Bolt,G. Simon,hard,2,2,30,30,5
+A. Bolt,G. Simon,hard,2,2,30,40,5
+A. Bolt,G. Simon,hard,2,2,0,0,5
+A. Bolt,G. Simon,hard,1,1,15,0,5
+A. Bolt,G. Simon,hard,1,2,15,15,5
+A. Bolt,G. Simon,hard,1,1,30,15,5
+A. Bolt,G. Simon,hard,1,1,40,15,5
+A. Bolt,G. Simon,hard,1,1,0,0,5
+A. Bolt,G. Simon,hard,2,2,0,15,5
+A. Bolt,G. Simon,hard,2,2,0,30,5
+A. Bolt,G. Simon,hard,2,1,15,30,5
+A. Bolt,G. Simon,hard,2,1,30,30,5
+A. Bolt,G. Simon,hard,2,2,30,40,5
+A. Bolt,G. Simon,hard,2,1,40,40,5
+A. Bolt,G. Simon,hard,2,1,AD,40,5
+A. Bolt,G. Simon,hard,2,2,40,40,5
+A. Bolt,G. Simon,hard,2,1,AD,40,5
+A. Bolt,G. Simon,hard,2,1,0,0,5
+A. Bolt,G. Simon,hard,1,1,15,0,5
+A. Bolt,G. Simon,hard,1,1,30,0,5
+A. Bolt,G. Simon,hard,1,1,40,0,5
+A. Bolt,G. Simon,hard,1,1,0,0,5
+A. Bolt,G. Simon,hard,2,2,0,15,5
+A. Bolt,G. Simon,hard,2,2,0,30,5
+A. Bolt,G. Simon,hard,2,2,0,40,5
+A. Bolt,G. Simon,hard,2,1,15,40,5
+A. Bolt,G. Simon,hard,2,2,0,0,5
+A. Bolt,G. Simon,hard,1,2,0,15,5
+A. Bolt,G. Simon,hard,1,1,15,15,5
+A. Bolt,G. Simon,hard,1,1,30,15,5
+A. Bolt,G. Simon,hard,1,1,40,15,5
+A. Bolt,G. Simon,hard,1,2,40,30,5
+A. Bolt,G. Simon,hard,1,1,0,0,5
+A. Bolt,G. Simon,hard,2,2,0,15,5
+A. Bolt,G. Simon,hard,2,2,0,30,5
+A. Bolt,G. Simon,hard,2,2,0,40,5
+A. Bolt,G. Simon,hard,2,2,0,0,5
+A. Bolt,G. Simon,hard,1,2,0,15,5
+A. Bolt,G. Simon,hard,1,1,15,15,5
+A. Bolt,G. Simon,hard,1,2,15,30,5
+A. Bolt,G. Simon,hard,1,2,15,40,5
+A. Bolt,G. Simon,hard,1,2,0,0,5
+A. Bolt,G. Simon,hard,2,1,15,0,5
+A. Bolt,G. Simon,hard,2,1,30,0,5
+A. Bolt,G. Simon,hard,2,2,30,15,5
+A. Bolt,G. Simon,hard,2,1,40,15,5
+A. Bolt,G. Simon,hard,2,1,0,0,5
+A. Bolt,G. Simon,hard,1,1,15,0,5
+A. Bolt,G. Simon,hard,1,1,30,0,5
+A. Bolt,G. Simon,hard,1,2,30,15,5
+A. Bolt,G. Simon,hard,1,1,40,15,5
+A. Bolt,G. Simon,hard,1,1,0,0,5
+R. Bautista Agut,J. Millman,hard,2,2,0,15,5
+R. Bautista Agut,J. Millman,hard,2,2,0,30,5
+R. Bautista Agut,J. Millman,hard,2,2,0,40,5
+R. Bautista Agut,J. Millman,hard,2,1,15,40,5
+R. Bautista Agut,J. Millman,hard,2,2,0,0,5
+R. Bautista Agut,J. Millman,hard,1,1,15,0,5
+R. Bautista Agut,J. Millman,hard,1,1,30,0,5
+R. Bautista Agut,J. Millman,hard,1,2,30,15,5
+R. Bautista Agut,J. Millman,hard,1,1,40,15,5
+R. Bautista Agut,J. Millman,hard,1,1,0,0,5
+R. Bautista Agut,J. Millman,hard,2,1,15,0,5
+R. Bautista Agut,J. Millman,hard,2,2,15,15,5
+R. Bautista Agut,J. Millman,hard,2,2,15,30,5
+R. Bautista Agut,J. Millman,hard,2,1,30,30,5
+R. Bautista Agut,J. Millman,hard,2,1,40,30,5
+R. Bautista Agut,J. Millman,hard,2,2,40,40,5
+R. Bautista Agut,J. Millman,hard,2,2,40,AD,5
+R. Bautista Agut,J. Millman,hard,2,1,40,40,5
+R. Bautista Agut,J. Millman,hard,2,2,40,AD,5
+R. Bautista Agut,J. Millman,hard,2,2,0,0,5
+R. Bautista Agut,J. Millman,hard,1,1,15,0,5
+R. Bautista Agut,J. Millman,hard,1,2,15,15,5
+R. Bautista Agut,J. Millman,hard,1,1,30,15,5
+R. Bautista Agut,J. Millman,hard,1,2,30,30,5
+R. Bautista Agut,J. Millman,hard,1,1,40,30,5
+R. Bautista Agut,J. Millman,hard,1,1,0,0,5
+R. Bautista Agut,J. Millman,hard,2,1,15,0,5
+R. Bautista Agut,J. Millman,hard,2,1,30,0,5
+R. Bautista Agut,J. Millman,hard,2,1,40,0,5
+R. Bautista Agut,J. Millman,hard,2,1,0,0,5
+R. Bautista Agut,J. Millman,hard,1,2,0,15,5
+R. Bautista Agut,J. Millman,hard,1,1,15,15,5
+R. Bautista Agut,J. Millman,hard,1,1,30,15,5
+R. Bautista Agut,J. Millman,hard,1,2,30,30,5
+R. Bautista Agut,J. Millman,hard,1,1,40,30,5
+R. Bautista Agut,J. Millman,hard,1,1,0,0,5
+R. Bautista Agut,J. Millman,hard,2,1,15,0,5
+R. Bautista Agut,J. Millman,hard,2,1,30,0,5
+R. Bautista Agut,J. Millman,hard,2,2,30,15,5
+R. Bautista Agut,J. Millman,hard,2,2,30,30,5
+R. Bautista Agut,J. Millman,hard,2,2,30,40,5
+R. Bautista Agut,J. Millman,hard,2,1,40,40,5
+R. Bautista Agut,J. Millman,hard,2,2,40,AD,5
+R. Bautista Agut,J. Millman,hard,2,2,0,0,5
+R. Bautista Agut,J. Millman,hard,1,2,0,15,5
+R. Bautista Agut,J. Millman,hard,1,1,15,15,5
+R. Bautista Agut,J. Millman,hard,1,1,30,15,5
+R. Bautista Agut,J. Millman,hard,1,1,40,15,5
+R. Bautista Agut,J. Millman,hard,1,1,0,0,5
+R. Bautista Agut,J. Millman,hard,2,1,15,0,5
+R. Bautista Agut,J. Millman,hard,2,2,15,15,5
+R. Bautista Agut,J. Millman,hard,2,2,15,30,5
+R. Bautista Agut,J. Millman,hard,2,1,30,30,5
+R. Bautista Agut,J. Millman,hard,2,2,30,40,5
+R. Bautista Agut,J. Millman,hard,2,1,40,40,5
+R. Bautista Agut,J. Millman,hard,2,2,40,AD,5
+R. Bautista Agut,J. Millman,hard,2,2,0,0,5
+R. Bautista Agut,J. Millman,hard,1,1,15,0,5
+R. Bautista Agut,J. Millman,hard,1,1,30,0,5
+R. Bautista Agut,J. Millman,hard,1,1,40,0,5
+R. Bautista Agut,J. Millman,hard,1,1,0,0,5
+S. Travaglia,N. Basilashvili,hard,2,1,15,0,5
+S. Travaglia,N. Basilashvili,hard,2,2,15,15,5
+S. Travaglia,N. Basilashvili,hard,2,1,30,15,5
+S. Travaglia,N. Basilashvili,hard,2,2,30,30,5
+S. Travaglia,N. Basilashvili,hard,2,1,40,30,5
+S. Travaglia,N. Basilashvili,hard,2,2,40,40,5
+S. Travaglia,N. Basilashvili,hard,2,1,AD,40,5
+S. Travaglia,N. Basilashvili,hard,2,2,40,40,5
+S. Travaglia,N. Basilashvili,hard,2,2,40,AD,5
+S. Travaglia,N. Basilashvili,hard,2,2,0,0,5
+S. Travaglia,N. Basilashvili,hard,1,1,15,0,5
+S. Travaglia,N. Basilashvili,hard,1,1,30,0,5
+S. Travaglia,N. Basilashvili,hard,1,1,40,0,5
+S. Travaglia,N. Basilashvili,hard,1,2,40,15,5
+S. Travaglia,N. Basilashvili,hard,1,1,0,0,5
+S. Travaglia,N. Basilashvili,hard,2,2,0,15,5
+S. Travaglia,N. Basilashvili,hard,2,1,15,15,5
+S. Travaglia,N. Basilashvili,hard,2,1,30,15,5
+S. Travaglia,N. Basilashvili,hard,2,2,30,30,5
+S. Travaglia,N. Basilashvili,hard,2,2,30,40,5
+S. Travaglia,N. Basilashvili,hard,2,2,0,0,5
+S. Travaglia,N. Basilashvili,hard,1,2,0,15,5
+S. Travaglia,N. Basilashvili,hard,1,2,0,30,5
+S. Travaglia,N. Basilashvili,hard,1,1,15,30,5
+S. Travaglia,N. Basilashvili,hard,1,2,15,40,5
+S. Travaglia,N. Basilashvili,hard,1,2,0,0,5
+S. Travaglia,N. Basilashvili,hard,2,2,0,15,5
+S. Travaglia,N. Basilashvili,hard,2,2,0,30,5
+S. Travaglia,N. Basilashvili,hard,2,2,0,40,5
+S. Travaglia,N. Basilashvili,hard,2,1,15,40,5
+S. Travaglia,N. Basilashvili,hard,2,2,0,0,5
+S. Travaglia,N. Basilashvili,hard,1,1,15,0,5
+S. Travaglia,N. Basilashvili,hard,1,1,30,0,5
+S. Travaglia,N. Basilashvili,hard,1,1,40,0,5
+S. Travaglia,N. Basilashvili,hard,1,1,0,0,5
+S. Travaglia,N. Basilashvili,hard,2,1,15,0,5
+S. Travaglia,N. Basilashvili,hard,2,2,15,15,5
+S. Travaglia,N. Basilashvili,hard,2,1,30,15,5
+S. Travaglia,N. Basilashvili,hard,2,2,30,30,5
+S. Travaglia,N. Basilashvili,hard,2,1,40,30,5
+S. Travaglia,N. Basilashvili,hard,2,2,40,40,5
+S. Travaglia,N. Basilashvili,hard,2,1,AD,40,5
+S. Travaglia,N. Basilashvili,hard,2,1,0,0,5
+S. Travaglia,N. Basilashvili,hard,1,2,0,15,5
+S. Travaglia,N. Basilashvili,hard,1,2,0,30,5
+S. Travaglia,N. Basilashvili,hard,1,2,0,40,5
+S. Travaglia,N. Basilashvili,hard,1,1,15,40,5
+S. Travaglia,N. Basilashvili,hard,1,2,0,0,5
+S. Travaglia,N. Basilashvili,hard,2,2,0,15,5
+S. Travaglia,N. Basilashvili,hard,2,1,15,15,5
+S. Travaglia,N. Basilashvili,hard,2,1,30,15,5
+S. Travaglia,N. Basilashvili,hard,2,2,30,30,5
+S. Travaglia,N. Basilashvili,hard,2,2,30,40,5
+S. Travaglia,N. Basilashvili,hard,2,2,0,0,5
+T. Fabbiano,R. Opelka,hard,1,2,0,15,5
+T. Fabbiano,R. Opelka,hard,1,2,0,30,5
+T. Fabbiano,R. Opelka,hard,1,1,15,30,5
+T. Fabbiano,R. Opelka,hard,1,1,30,30,5
+T. Fabbiano,R. Opelka,hard,1,1,40,30,5
+T. Fabbiano,R. Opelka,hard,1,2,40,40,5
+T. Fabbiano,R. Opelka,hard,1,1,AD,40,5
+T. Fabbiano,R. Opelka,hard,1,1,0,0,5
+T. Fabbiano,R. Opelka,hard,2,2,0,15,5
+T. Fabbiano,R. Opelka,hard,2,1,15,15,5
+T. Fabbiano,R. Opelka,hard,2,1,30,15,5
+T. Fabbiano,R. Opelka,hard,2,2,30,30,5
+T. Fabbiano,R. Opelka,hard,2,1,40,30,5
+T. Fabbiano,R. Opelka,hard,2,2,40,40,5
+T. Fabbiano,R. Opelka,hard,2,2,40,AD,5
+T. Fabbiano,R. Opelka,hard,2,1,40,40,5
+T. Fabbiano,R. Opelka,hard,2,2,40,AD,5
+T. Fabbiano,R. Opelka,hard,2,2,0,0,5
+T. Fabbiano,R. Opelka,hard,1,1,15,0,5
+T. Fabbiano,R. Opelka,hard,1,1,30,0,5
+T. Fabbiano,R. Opelka,hard,1,2,30,15,5
+T. Fabbiano,R. Opelka,hard,1,1,40,15,5
+T. Fabbiano,R. Opelka,hard,1,2,40,30,5
+T. Fabbiano,R. Opelka,hard,1,1,0,0,5
+T. Fabbiano,R. Opelka,hard,2,2,0,15,5
+T. Fabbiano,R. Opelka,hard,2,2,0,30,5
+T. Fabbiano,R. Opelka,hard,2,2,0,40,5
+T. Fabbiano,R. Opelka,hard,2,2,0,0,5
+T. Fabbiano,R. Opelka,hard,1,1,15,0,5
+T. Fabbiano,R. Opelka,hard,1,2,15,15,5
+T. Fabbiano,R. Opelka,hard,1,1,30,15,5
+T. Fabbiano,R. Opelka,hard,1,1,40,15,5
+T. Fabbiano,R. Opelka,hard,1,1,0,0,5
+T. Fabbiano,R. Opelka,hard,2,2,0,15,5
+T. Fabbiano,R. Opelka,hard,2,2,0,30,5
+T. Fabbiano,R. Opelka,hard,2,1,15,30,5
+T. Fabbiano,R. Opelka,hard,2,2,15,40,5
+T. Fabbiano,R. Opelka,hard,2,2,0,0,5
+T. Fabbiano,R. Opelka,hard,1,1,15,0,5
+T. Fabbiano,R. Opelka,hard,1,1,30,0,5
+T. Fabbiano,R. Opelka,hard,1,1,40,0,5
+T. Fabbiano,R. Opelka,hard,1,1,0,0,5
+T. Fabbiano,R. Opelka,hard,2,2,0,15,5
+T. Fabbiano,R. Opelka,hard,2,2,0,30,5
+T. Fabbiano,R. Opelka,hard,2,2,0,40,5
+T. Fabbiano,R. Opelka,hard,2,2,0,0,5
+T. Fabbiano,R. Opelka,hard,1,1,15,0,5
+T. Fabbiano,R. Opelka,hard,1,2,15,15,5
+T. Fabbiano,R. Opelka,hard,1,1,30,15,5
+T. Fabbiano,R. Opelka,hard,1,1,40,15,5
+T. Fabbiano,R. Opelka,hard,1,1,0,0,5
+T. Fabbiano,R. Opelka,hard,2,2,0,15,5
+T. Fabbiano,R. Opelka,hard,2,2,0,30,5
+T. Fabbiano,R. Opelka,hard,2,2,0,40,5
+T. Fabbiano,R. Opelka,hard,2,1,15,40,5
+T. Fabbiano,R. Opelka,hard,2,1,30,40,5
+T. Fabbiano,R. Opelka,hard,2,2,0,0,5
+T. Fabbiano,R. Opelka,hard,1,1,15,0,5
+T. Fabbiano,R. Opelka,hard,1,1,30,0,5
+T. Fabbiano,R. Opelka,hard,1,2,30,15,5
+T. Fabbiano,R. Opelka,hard,1,1,40,15,5
+T. Fabbiano,R. Opelka,hard,1,2,40,30,5
+T. Fabbiano,R. Opelka,hard,1,2,40,40,5
+T. Fabbiano,R. Opelka,hard,1,1,AD,40,5
+T. Fabbiano,R. Opelka,hard,1,1,0,0,5
+T. Fabbiano,R. Opelka,hard,2,2,0,15,5
+T. Fabbiano,R. Opelka,hard,2,2,0,30,5
+T. Fabbiano,R. Opelka,hard,2,1,15,30,5
+T. Fabbiano,R. Opelka,hard,2,2,15,40,5
+T. Fabbiano,R. Opelka,hard,2,2,0,0,5
+T. Fabbiano,R. Opelka,hard,1,1,1,0,5
+T. Fabbiano,R. Opelka,hard,2,2,1,1,5
+T. Fabbiano,R. Opelka,hard,2,2,1,2,5
+T. Fabbiano,R. Opelka,hard,1,1,2,2,5
+T. Fabbiano,R. Opelka,hard,1,1,3,2,5
+T. Fabbiano,R. Opelka,hard,2,1,4,2,5
+T. Fabbiano,R. Opelka,hard,2,1,5,2,5
+T. Fabbiano,R. Opelka,hard,1,1,6,2,5
+T. Fabbiano,R. Opelka,hard,1,1,7,2,5
+T. Fabbiano,R. Opelka,hard,2,2,7,3,5
+T. Fabbiano,R. Opelka,hard,2,2,7,4,5
+T. Fabbiano,R. Opelka,hard,1,1,8,4,5
+T. Fabbiano,R. Opelka,hard,1,2,8,5,5
+T. Fabbiano,R. Opelka,hard,2,1,9,5,5
+T. Fabbiano,R. Opelka,hard,2,1,10,5,5
+D. Kudla,D. Schwartzman,hard,1,1,15,0,5
+D. Kudla,D. Schwartzman,hard,1,1,30,0,5
+D. Kudla,D. Schwartzman,hard,1,2,30,15,5
+D. Kudla,D. Schwartzman,hard,1,2,30,30,5
+D. Kudla,D. Schwartzman,hard,1,1,40,30,5
+D. Kudla,D. Schwartzman,hard,1,1,0,0,5
+D. Kudla,D. Schwartzman,hard,2,2,0,15,5
+D. Kudla,D. Schwartzman,hard,2,2,0,30,5
+D. Kudla,D. Schwartzman,hard,2,2,0,40,5
+D. Kudla,D. Schwartzman,hard,2,1,15,40,5
+D. Kudla,D. Schwartzman,hard,2,1,30,40,5
+D. Kudla,D. Schwartzman,hard,2,1,40,40,5
+D. Kudla,D. Schwartzman,hard,2,1,AD,40,5
+D. Kudla,D. Schwartzman,hard,2,1,0,0,5
+D. Kudla,D. Schwartzman,hard,1,1,15,0,5
+D. Kudla,D. Schwartzman,hard,1,1,30,0,5
+D. Kudla,D. Schwartzman,hard,1,2,30,15,5
+D. Kudla,D. Schwartzman,hard,1,1,40,15,5
+D. Kudla,D. Schwartzman,hard,1,2,40,30,5
+D. Kudla,D. Schwartzman,hard,1,1,0,0,5
+D. Kudla,D. Schwartzman,hard,2,2,0,15,5
+D. Kudla,D. Schwartzman,hard,2,2,0,30,5
+D. Kudla,D. Schwartzman,hard,2,2,0,40,5
+D. Kudla,D. Schwartzman,hard,2,2,0,0,5
+D. Kudla,D. Schwartzman,hard,1,1,15,0,5
+D. Kudla,D. Schwartzman,hard,1,1,30,0,5
+D. Kudla,D. Schwartzman,hard,1,2,30,15,5
+D. Kudla,D. Schwartzman,hard,1,1,40,15,5
+D. Kudla,D. Schwartzman,hard,1,1,0,0,5
+D. Kudla,D. Schwartzman,hard,2,2,0,15,5
+D. Kudla,D. Schwartzman,hard,2,2,0,30,5
+D. Kudla,D. Schwartzman,hard,2,1,15,30,5
+D. Kudla,D. Schwartzman,hard,2,1,30,30,5
+D. Kudla,D. Schwartzman,hard,2,2,30,40,5
+D. Kudla,D. Schwartzman,hard,2,2,0,0,5
+D. Kudla,D. Schwartzman,hard,1,1,15,0,5
+D. Kudla,D. Schwartzman,hard,1,2,15,15,5
+D. Kudla,D. Schwartzman,hard,1,2,15,30,5
+D. Kudla,D. Schwartzman,hard,1,2,15,40,5
+D. Kudla,D. Schwartzman,hard,1,1,30,40,5
+D. Kudla,D. Schwartzman,hard,1,1,40,40,5
+D. Kudla,D. Schwartzman,hard,1,1,AD,40,5
+D. Kudla,D. Schwartzman,hard,1,2,40,40,5
+D. Kudla,D. Schwartzman,hard,1,2,40,AD,5
+D. Kudla,D. Schwartzman,hard,1,2,0,0,5
+D. Kudla,D. Schwartzman,hard,2,1,15,0,5
+D. Kudla,D. Schwartzman,hard,2,1,30,0,5
+D. Kudla,D. Schwartzman,hard,2,2,30,15,5
+D. Kudla,D. Schwartzman,hard,2,2,30,30,5
+D. Kudla,D. Schwartzman,hard,2,1,40,30,5
+D. Kudla,D. Schwartzman,hard,2,2,40,40,5
+D. Kudla,D. Schwartzman,hard,2,2,40,AD,5
+D. Kudla,D. Schwartzman,hard,2,2,0,0,5
+D. Kudla,D. Schwartzman,hard,1,2,0,15,5
+D. Kudla,D. Schwartzman,hard,1,1,15,15,5
+D. Kudla,D. Schwartzman,hard,1,2,15,30,5
+D. Kudla,D. Schwartzman,hard,1,2,15,40,5
+D. Kudla,D. Schwartzman,hard,1,2,0,0,5
+D. Kudla,D. Schwartzman,hard,2,1,15,0,5
+D. Kudla,D. Schwartzman,hard,2,2,15,15,5
+D. Kudla,D. Schwartzman,hard,2,1,30,15,5
+D. Kudla,D. Schwartzman,hard,2,2,30,30,5
+D. Kudla,D. Schwartzman,hard,2,2,30,40,5
+D. Kudla,D. Schwartzman,hard,2,2,0,0,5
+A. De Minaur,H. Laaksonen,hard,1,1,15,0,5
+A. De Minaur,H. Laaksonen,hard,1,2,15,15,5
+A. De Minaur,H. Laaksonen,hard,1,1,30,15,5
+A. De Minaur,H. Laaksonen,hard,1,2,30,30,5
+A. De Minaur,H. Laaksonen,hard,1,2,30,40,5
+A. De Minaur,H. Laaksonen,hard,1,1,40,40,5
+A. De Minaur,H. Laaksonen,hard,1,1,AD,40,5
+A. De Minaur,H. Laaksonen,hard,1,1,0,0,5
+A. De Minaur,H. Laaksonen,hard,2,2,0,15,5
+A. De Minaur,H. Laaksonen,hard,2,2,0,30,5
+A. De Minaur,H. Laaksonen,hard,2,2,0,40,5
+A. De Minaur,H. Laaksonen,hard,2,1,15,40,5
+A. De Minaur,H. Laaksonen,hard,2,1,30,40,5
+A. De Minaur,H. Laaksonen,hard,2,1,40,40,5
+A. De Minaur,H. Laaksonen,hard,2,1,AD,40,5
+A. De Minaur,H. Laaksonen,hard,2,2,40,40,5
+A. De Minaur,H. Laaksonen,hard,2,1,AD,40,5
+A. De Minaur,H. Laaksonen,hard,2,1,0,0,5
+A. De Minaur,H. Laaksonen,hard,1,1,15,0,5
+A. De Minaur,H. Laaksonen,hard,1,1,30,0,5
+A. De Minaur,H. Laaksonen,hard,1,2,30,15,5
+A. De Minaur,H. Laaksonen,hard,1,2,30,30,5
+A. De Minaur,H. Laaksonen,hard,1,1,40,30,5
+A. De Minaur,H. Laaksonen,hard,1,2,40,40,5
+A. De Minaur,H. Laaksonen,hard,1,1,AD,40,5
+A. De Minaur,H. Laaksonen,hard,1,2,40,40,5
+A. De Minaur,H. Laaksonen,hard,1,1,AD,40,5
+A. De Minaur,H. Laaksonen,hard,1,2,40,40,5
+A. De Minaur,H. Laaksonen,hard,1,2,40,AD,5
+A. De Minaur,H. Laaksonen,hard,1,2,0,0,5
+A. De Minaur,H. Laaksonen,hard,2,1,15,0,5
+A. De Minaur,H. Laaksonen,hard,2,2,15,15,5
+A. De Minaur,H. Laaksonen,hard,2,1,30,15,5
+A. De Minaur,H. Laaksonen,hard,2,2,30,30,5
+A. De Minaur,H. Laaksonen,hard,2,2,30,40,5
+A. De Minaur,H. Laaksonen,hard,2,2,0,0,5
+A. De Minaur,H. Laaksonen,hard,1,1,15,0,5
+A. De Minaur,H. Laaksonen,hard,1,1,30,0,5
+A. De Minaur,H. Laaksonen,hard,1,1,40,0,5
+A. De Minaur,H. Laaksonen,hard,1,1,0,0,5
+A. De Minaur,H. Laaksonen,hard,2,2,0,15,5
+A. De Minaur,H. Laaksonen,hard,2,1,15,15,5
+A. De Minaur,H. Laaksonen,hard,2,2,15,30,5
+A. De Minaur,H. Laaksonen,hard,2,2,15,40,5
+A. De Minaur,H. Laaksonen,hard,2,2,0,0,5
+A. De Minaur,H. Laaksonen,hard,1,1,15,0,5
+A. De Minaur,H. Laaksonen,hard,1,1,30,0,5
+A. De Minaur,H. Laaksonen,hard,1,1,40,0,5
+A. De Minaur,H. Laaksonen,hard,1,2,40,15,5
+A. De Minaur,H. Laaksonen,hard,1,1,0,0,5
+A. De Minaur,H. Laaksonen,hard,2,1,15,0,5
+A. De Minaur,H. Laaksonen,hard,2,2,15,15,5
+A. De Minaur,H. Laaksonen,hard,2,2,15,30,5
+A. De Minaur,H. Laaksonen,hard,2,1,30,30,5
+A. De Minaur,H. Laaksonen,hard,2,1,40,30,5
+A. De Minaur,H. Laaksonen,hard,2,1,0,0,5
+A. De Minaur,H. Laaksonen,hard,1,1,15,0,5
+A. De Minaur,H. Laaksonen,hard,1,1,30,0,5
+A. De Minaur,H. Laaksonen,hard,1,2,30,15,5
+A. De Minaur,H. Laaksonen,hard,1,2,30,30,5
+A. De Minaur,H. Laaksonen,hard,1,1,40,30,5
+A. De Minaur,H. Laaksonen,hard,1,1,0,0,5
+L. Pouille,A. Popyrin,hard,1,1,15,0,5
+L. Pouille,A. Popyrin,hard,1,1,30,0,5
+L. Pouille,A. Popyrin,hard,1,1,40,0,5
+L. Pouille,A. Popyrin,hard,1,2,40,15,5
+L. Pouille,A. Popyrin,hard,1,1,0,0,5
+L. Pouille,A. Popyrin,hard,2,2,0,15,5
+L. Pouille,A. Popyrin,hard,2,2,0,30,5
+L. Pouille,A. Popyrin,hard,2,2,0,40,5
+L. Pouille,A. Popyrin,hard,2,2,0,0,5
+L. Pouille,A. Popyrin,hard,1,1,15,0,5
+L. Pouille,A. Popyrin,hard,1,1,30,0,5
+L. Pouille,A. Popyrin,hard,1,1,40,0,5
+L. Pouille,A. Popyrin,hard,1,1,0,0,5
+L. Pouille,A. Popyrin,hard,2,2,0,15,5
+L. Pouille,A. Popyrin,hard,2,1,15,15,5
+L. Pouille,A. Popyrin,hard,2,2,15,30,5
+L. Pouille,A. Popyrin,hard,2,2,15,40,5
+L. Pouille,A. Popyrin,hard,2,2,0,0,5
+L. Pouille,A. Popyrin,hard,1,1,15,0,5
+L. Pouille,A. Popyrin,hard,1,1,30,0,5
+L. Pouille,A. Popyrin,hard,1,1,40,0,5
+L. Pouille,A. Popyrin,hard,1,1,0,0,5
+L. Pouille,A. Popyrin,hard,2,1,15,0,5
+L. Pouille,A. Popyrin,hard,2,2,15,15,5
+L. Pouille,A. Popyrin,hard,2,2,15,30,5
+L. Pouille,A. Popyrin,hard,2,1,30,30,5
+L. Pouille,A. Popyrin,hard,2,2,30,40,5
+L. Pouille,A. Popyrin,hard,2,1,40,40,5
+L. Pouille,A. Popyrin,hard,2,2,40,AD,5
+L. Pouille,A. Popyrin,hard,2,1,40,40,5
+L. Pouille,A. Popyrin,hard,2,1,AD,40,5
+L. Pouille,A. Popyrin,hard,2,1,0,0,5
+L. Pouille,A. Popyrin,hard,1,1,15,0,5
+L. Pouille,A. Popyrin,hard,1,1,30,0,5
+L. Pouille,A. Popyrin,hard,1,1,40,0,5
+L. Pouille,A. Popyrin,hard,1,1,0,0,5
+L. Pouille,A. Popyrin,hard,2,2,0,15,5
+L. Pouille,A. Popyrin,hard,2,2,0,30,5
+L. Pouille,A. Popyrin,hard,2,2,0,40,5
+L. Pouille,A. Popyrin,hard,2,1,15,40,5
+L. Pouille,A. Popyrin,hard,2,2,0,0,5
+L. Pouille,A. Popyrin,hard,1,1,15,0,5
+L. Pouille,A. Popyrin,hard,1,2,15,15,5
+L. Pouille,A. Popyrin,hard,1,1,30,15,5
+L. Pouille,A. Popyrin,hard,1,2,30,30,5
+L. Pouille,A. Popyrin,hard,1,2,30,40,5
+L. Pouille,A. Popyrin,hard,1,1,40,40,5
+L. Pouille,A. Popyrin,hard,1,1,AD,40,5
+L. Pouille,A. Popyrin,hard,1,1,0,0,5
+M. Cilic,F. Verdasco,hard,1,1,15,0,5
+M. Cilic,F. Verdasco,hard,1,1,30,0,5
+M. Cilic,F. Verdasco,hard,1,2,30,15,5
+M. Cilic,F. Verdasco,hard,1,1,40,15,5
+M. Cilic,F. Verdasco,hard,1,2,40,30,5
+M. Cilic,F. Verdasco,hard,1,1,0,0,5
+M. Cilic,F. Verdasco,hard,2,2,0,15,5
+M. Cilic,F. Verdasco,hard,2,2,0,30,5
+M. Cilic,F. Verdasco,hard,2,2,0,40,5
+M. Cilic,F. Verdasco,hard,2,1,15,40,5
+M. Cilic,F. Verdasco,hard,2,1,30,40,5
+M. Cilic,F. Verdasco,hard,2,1,40,40,5
+M. Cilic,F. Verdasco,hard,2,1,AD,40,5
+M. Cilic,F. Verdasco,hard,2,2,40,40,5
+M. Cilic,F. Verdasco,hard,2,2,40,AD,5
+M. Cilic,F. Verdasco,hard,2,1,40,40,5
+M. Cilic,F. Verdasco,hard,2,1,AD,40,5
+M. Cilic,F. Verdasco,hard,2,2,40,40,5
+M. Cilic,F. Verdasco,hard,2,1,AD,40,5
+M. Cilic,F. Verdasco,hard,2,1,0,0,5
+M. Cilic,F. Verdasco,hard,1,1,15,0,5
+M. Cilic,F. Verdasco,hard,1,1,30,0,5
+M. Cilic,F. Verdasco,hard,1,1,40,0,5
+M. Cilic,F. Verdasco,hard,1,1,0,0,5
+M. Cilic,F. Verdasco,hard,2,1,15,0,5
+M. Cilic,F. Verdasco,hard,2,2,15,15,5
+M. Cilic,F. Verdasco,hard,2,2,15,30,5
+M. Cilic,F. Verdasco,hard,2,2,15,40,5
+M. Cilic,F. Verdasco,hard,2,2,0,0,5
+M. Cilic,F. Verdasco,hard,1,1,15,0,5
+M. Cilic,F. Verdasco,hard,1,1,30,0,5
+M. Cilic,F. Verdasco,hard,1,2,30,15,5
+M. Cilic,F. Verdasco,hard,1,1,40,15,5
+M. Cilic,F. Verdasco,hard,1,1,0,0,5
+M. Cilic,F. Verdasco,hard,2,1,15,0,5
+M. Cilic,F. Verdasco,hard,2,2,15,15,5
+M. Cilic,F. Verdasco,hard,2,1,30,15,5
+M. Cilic,F. Verdasco,hard,2,2,30,30,5
+M. Cilic,F. Verdasco,hard,2,1,40,30,5
+M. Cilic,F. Verdasco,hard,2,2,40,40,5
+M. Cilic,F. Verdasco,hard,2,1,AD,40,5
+M. Cilic,F. Verdasco,hard,2,2,40,40,5
+M. Cilic,F. Verdasco,hard,2,2,40,AD,5
+M. Cilic,F. Verdasco,hard,2,2,0,0,5
+M. Cilic,F. Verdasco,hard,1,2,0,15,5
+M. Cilic,F. Verdasco,hard,1,2,0,30,5
+M. Cilic,F. Verdasco,hard,1,2,0,40,5
+M. Cilic,F. Verdasco,hard,1,1,15,40,5
+M. Cilic,F. Verdasco,hard,1,1,30,40,5
+M. Cilic,F. Verdasco,hard,1,1,40,40,5
+M. Cilic,F. Verdasco,hard,1,1,AD,40,5
+M. Cilic,F. Verdasco,hard,1,1,0,0,5
+M. Cilic,F. Verdasco,hard,2,1,15,0,5
+M. Cilic,F. Verdasco,hard,2,2,15,15,5
+M. Cilic,F. Verdasco,hard,2,2,15,30,5
+M. Cilic,F. Verdasco,hard,2,2,15,40,5
+M. Cilic,F. Verdasco,hard,2,1,30,40,5
+M. Cilic,F. Verdasco,hard,2,2,0,0,5
+M. Cilic,F. Verdasco,hard,1,1,15,0,5
+M. Cilic,F. Verdasco,hard,1,2,15,15,5
+M. Cilic,F. Verdasco,hard,1,2,15,30,5
+M. Cilic,F. Verdasco,hard,1,1,30,30,5
+M. Cilic,F. Verdasco,hard,1,1,40,30,5
+M. Cilic,F. Verdasco,hard,1,1,0,0,5
+F. Tiafoe,A. Seppi,hard,2,1,15,0,5
+F. Tiafoe,A. Seppi,hard,2,1,30,0,5
+F. Tiafoe,A. Seppi,hard,2,1,40,0,5
+F. Tiafoe,A. Seppi,hard,2,2,40,15,5
+F. Tiafoe,A. Seppi,hard,2,2,40,30,5
+F. Tiafoe,A. Seppi,hard,2,1,0,0,5
+F. Tiafoe,A. Seppi,hard,1,2,0,15,5
+F. Tiafoe,A. Seppi,hard,1,1,15,15,5
+F. Tiafoe,A. Seppi,hard,1,1,30,15,5
+F. Tiafoe,A. Seppi,hard,1,1,40,15,5
+F. Tiafoe,A. Seppi,hard,1,1,0,0,5
+F. Tiafoe,A. Seppi,hard,2,2,0,15,5
+F. Tiafoe,A. Seppi,hard,2,2,0,30,5
+F. Tiafoe,A. Seppi,hard,2,2,0,40,5
+F. Tiafoe,A. Seppi,hard,2,2,0,0,5
+F. Tiafoe,A. Seppi,hard,1,1,15,0,5
+F. Tiafoe,A. Seppi,hard,1,1,30,0,5
+F. Tiafoe,A. Seppi,hard,1,2,30,15,5
+F. Tiafoe,A. Seppi,hard,1,2,30,30,5
+F. Tiafoe,A. Seppi,hard,1,1,40,30,5
+F. Tiafoe,A. Seppi,hard,1,1,0,0,5
+F. Tiafoe,A. Seppi,hard,2,1,15,0,5
+F. Tiafoe,A. Seppi,hard,2,2,15,15,5
+F. Tiafoe,A. Seppi,hard,2,1,30,15,5
+F. Tiafoe,A. Seppi,hard,2,2,30,30,5
+F. Tiafoe,A. Seppi,hard,2,2,30,40,5
+F. Tiafoe,A. Seppi,hard,2,2,0,0,5
+F. Tiafoe,A. Seppi,hard,1,1,15,0,5
+F. Tiafoe,A. Seppi,hard,1,1,30,0,5
+F. Tiafoe,A. Seppi,hard,1,1,40,0,5
+F. Tiafoe,A. Seppi,hard,1,1,0,0,5
+F. Tiafoe,A. Seppi,hard,2,2,0,15,5
+F. Tiafoe,A. Seppi,hard,2,1,15,15,5
+F. Tiafoe,A. Seppi,hard,2,2,15,30,5
+F. Tiafoe,A. Seppi,hard,2,2,15,40,5
+F. Tiafoe,A. Seppi,hard,2,2,0,0,5
+F. Tiafoe,A. Seppi,hard,1,1,15,0,5
+F. Tiafoe,A. Seppi,hard,1,2,15,15,5
+F. Tiafoe,A. Seppi,hard,1,1,30,15,5
+F. Tiafoe,A. Seppi,hard,1,1,40,15,5
+F. Tiafoe,A. Seppi,hard,1,1,0,0,5
+F. Tiafoe,A. Seppi,hard,2,1,15,0,5
+F. Tiafoe,A. Seppi,hard,2,2,15,15,5
+F. Tiafoe,A. Seppi,hard,2,2,15,30,5
+F. Tiafoe,A. Seppi,hard,2,1,30,30,5
+F. Tiafoe,A. Seppi,hard,2,1,40,30,5
+F. Tiafoe,A. Seppi,hard,2,2,40,40,5
+F. Tiafoe,A. Seppi,hard,2,2,40,AD,5
+F. Tiafoe,A. Seppi,hard,2,1,40,40,5
+F. Tiafoe,A. Seppi,hard,2,1,AD,40,5
+F. Tiafoe,A. Seppi,hard,2,1,0,0,5
+P. Carreno Busta,K. Nishikori,hard,1,1,15,0,5
+P. Carreno Busta,K. Nishikori,hard,1,1,30,0,5
+P. Carreno Busta,K. Nishikori,hard,1,1,40,0,5
+P. Carreno Busta,K. Nishikori,hard,1,2,40,15,5
+P. Carreno Busta,K. Nishikori,hard,1,1,0,0,5
+P. Carreno Busta,K. Nishikori,hard,2,2,0,15,5
+P. Carreno Busta,K. Nishikori,hard,2,2,0,30,5
+P. Carreno Busta,K. Nishikori,hard,2,2,0,40,5
+P. Carreno Busta,K. Nishikori,hard,2,1,15,40,5
+P. Carreno Busta,K. Nishikori,hard,2,2,0,0,5
+P. Carreno Busta,K. Nishikori,hard,1,2,0,15,5
+P. Carreno Busta,K. Nishikori,hard,1,2,0,30,5
+P. Carreno Busta,K. Nishikori,hard,1,2,0,40,5
+P. Carreno Busta,K. Nishikori,hard,1,1,15,40,5
+P. Carreno Busta,K. Nishikori,hard,1,1,30,40,5
+P. Carreno Busta,K. Nishikori,hard,1,2,0,0,5
+P. Carreno Busta,K. Nishikori,hard,2,1,15,0,5
+P. Carreno Busta,K. Nishikori,hard,2,2,15,15,5
+P. Carreno Busta,K. Nishikori,hard,2,2,15,30,5
+P. Carreno Busta,K. Nishikori,hard,2,2,15,40,5
+P. Carreno Busta,K. Nishikori,hard,2,2,0,0,5
+P. Carreno Busta,K. Nishikori,hard,1,1,15,0,5
+P. Carreno Busta,K. Nishikori,hard,1,1,30,0,5
+P. Carreno Busta,K. Nishikori,hard,1,1,40,0,5
+P. Carreno Busta,K. Nishikori,hard,1,1,0,0,5
+P. Carreno Busta,K. Nishikori,hard,2,2,0,15,5
+P. Carreno Busta,K. Nishikori,hard,2,1,15,15,5
+P. Carreno Busta,K. Nishikori,hard,2,1,30,15,5
+P. Carreno Busta,K. Nishikori,hard,2,1,40,15,5
+P. Carreno Busta,K. Nishikori,hard,2,2,40,30,5
+P. Carreno Busta,K. Nishikori,hard,2,2,40,40,5
+P. Carreno Busta,K. Nishikori,hard,2,2,40,AD,5
+P. Carreno Busta,K. Nishikori,hard,2,1,40,40,5
+P. Carreno Busta,K. Nishikori,hard,2,2,40,AD,5
+P. Carreno Busta,K. Nishikori,hard,2,1,40,40,5
+P. Carreno Busta,K. Nishikori,hard,2,2,40,AD,5
+P. Carreno Busta,K. Nishikori,hard,2,2,0,0,5
+P. Carreno Busta,K. Nishikori,hard,1,1,15,0,5
+P. Carreno Busta,K. Nishikori,hard,1,2,15,15,5
+P. Carreno Busta,K. Nishikori,hard,1,1,30,15,5
+P. Carreno Busta,K. Nishikori,hard,1,2,30,30,5
+P. Carreno Busta,K. Nishikori,hard,1,1,40,30,5
+P. Carreno Busta,K. Nishikori,hard,1,1,0,0,5
+P. Carreno Busta,K. Nishikori,hard,2,2,0,15,5
+P. Carreno Busta,K. Nishikori,hard,2,2,0,30,5
+P. Carreno Busta,K. Nishikori,hard,2,1,15,30,5
+P. Carreno Busta,K. Nishikori,hard,2,2,15,40,5
+P. Carreno Busta,K. Nishikori,hard,2,2,0,0,5
+P. Carreno Busta,K. Nishikori,hard,1,2,0,15,5
+P. Carreno Busta,K. Nishikori,hard,1,1,15,15,5
+P. Carreno Busta,K. Nishikori,hard,1,1,30,15,5
+P. Carreno Busta,K. Nishikori,hard,1,1,40,15,5
+P. Carreno Busta,K. Nishikori,hard,1,2,40,30,5
+P. Carreno Busta,K. Nishikori,hard,1,1,0,0,5
+P. Carreno Busta,K. Nishikori,hard,2,1,15,0,5
+P. Carreno Busta,K. Nishikori,hard,2,2,15,15,5
+P. Carreno Busta,K. Nishikori,hard,2,1,30,15,5
+P. Carreno Busta,K. Nishikori,hard,2,1,40,15,5
+P. Carreno Busta,K. Nishikori,hard,2,2,40,30,5
+P. Carreno Busta,K. Nishikori,hard,2,1,0,0,5
+P. Carreno Busta,K. Nishikori,hard,1,2,0,15,5
+P. Carreno Busta,K. Nishikori,hard,1,1,15,15,5
+P. Carreno Busta,K. Nishikori,hard,1,1,30,15,5
+P. Carreno Busta,K. Nishikori,hard,1,2,30,30,5
+P. Carreno Busta,K. Nishikori,hard,1,1,40,30,5
+P. Carreno Busta,K. Nishikori,hard,1,1,0,0,5
+P. Carreno Busta,K. Nishikori,hard,2,1,15,0,5
+P. Carreno Busta,K. Nishikori,hard,2,2,15,15,5
+P. Carreno Busta,K. Nishikori,hard,2,2,15,30,5
+P. Carreno Busta,K. Nishikori,hard,2,2,15,40,5
+P. Carreno Busta,K. Nishikori,hard,2,1,30,40,5
+P. Carreno Busta,K. Nishikori,hard,2,2,0,0,5
+P. Carreno Busta,K. Nishikori,hard,1,1,1,0,5
+P. Carreno Busta,K. Nishikori,hard,2,2,1,1,5
+P. Carreno Busta,K. Nishikori,hard,2,1,2,1,5
+P. Carreno Busta,K. Nishikori,hard,1,2,2,2,5
+P. Carreno Busta,K. Nishikori,hard,1,1,3,2,5
+P. Carreno Busta,K. Nishikori,hard,2,1,4,2,5
+P. Carreno Busta,K. Nishikori,hard,2,2,4,3,5
+P. Carreno Busta,K. Nishikori,hard,1,1,5,3,5
+P. Carreno Busta,K. Nishikori,hard,1,2,5,4,5
+P. Carreno Busta,K. Nishikori,hard,2,1,6,4,5
+P. Carreno Busta,K. Nishikori,hard,2,2,6,5,5
+P. Carreno Busta,K. Nishikori,hard,1,1,7,5,5
+P. Carreno Busta,K. Nishikori,hard,1,1,8,5,5
+P. Carreno Busta,K. Nishikori,hard,2,2,8,6,5
+P. Carreno Busta,K. Nishikori,hard,2,2,8,7,5
+P. Carreno Busta,K. Nishikori,hard,1,2,8,8,5
+P. Carreno Busta,K. Nishikori,hard,1,2,8,9,5
+P. Carreno Busta,K. Nishikori,hard,2,2,8,10,5
+M. Cilic,R. Bautista Agut,hard,1,1,15,0,5
+M. Cilic,R. Bautista Agut,hard,1,2,15,15,5
+M. Cilic,R. Bautista Agut,hard,1,1,30,15,5
+M. Cilic,R. Bautista Agut,hard,1,2,30,30,5
+M. Cilic,R. Bautista Agut,hard,1,1,40,30,5
+M. Cilic,R. Bautista Agut,hard,1,1,0,0,5
+M. Cilic,R. Bautista Agut,hard,2,1,15,0,5
+M. Cilic,R. Bautista Agut,hard,2,2,15,15,5
+M. Cilic,R. Bautista Agut,hard,2,1,30,15,5
+M. Cilic,R. Bautista Agut,hard,2,2,30,30,5
+M. Cilic,R. Bautista Agut,hard,2,1,40,30,5
+M. Cilic,R. Bautista Agut,hard,2,2,40,40,5
+M. Cilic,R. Bautista Agut,hard,2,2,40,AD,5
+M. Cilic,R. Bautista Agut,hard,2,2,0,0,5
+M. Cilic,R. Bautista Agut,hard,1,2,0,15,5
+M. Cilic,R. Bautista Agut,hard,1,1,15,15,5
+M. Cilic,R. Bautista Agut,hard,1,1,30,15,5
+M. Cilic,R. Bautista Agut,hard,1,2,30,30,5
+M. Cilic,R. Bautista Agut,hard,1,2,30,40,5
+M. Cilic,R. Bautista Agut,hard,1,1,40,40,5
+M. Cilic,R. Bautista Agut,hard,1,1,AD,40,5
+M. Cilic,R. Bautista Agut,hard,1,1,0,0,5
+M. Cilic,R. Bautista Agut,hard,2,1,15,0,5
+M. Cilic,R. Bautista Agut,hard,2,2,15,15,5
+M. Cilic,R. Bautista Agut,hard,2,2,15,30,5
+M. Cilic,R. Bautista Agut,hard,2,2,15,40,5
+M. Cilic,R. Bautista Agut,hard,2,2,0,0,5
+M. Cilic,R. Bautista Agut,hard,1,2,0,15,5
+M. Cilic,R. Bautista Agut,hard,1,1,15,15,5
+M. Cilic,R. Bautista Agut,hard,1,1,30,15,5
+M. Cilic,R. Bautista Agut,hard,1,1,40,15,5
+M. Cilic,R. Bautista Agut,hard,1,1,0,0,5
+M. Cilic,R. Bautista Agut,hard,2,2,0,15,5
+M. Cilic,R. Bautista Agut,hard,2,2,0,30,5
+M. Cilic,R. Bautista Agut,hard,2,1,15,30,5
+M. Cilic,R. Bautista Agut,hard,2,2,15,40,5
+M. Cilic,R. Bautista Agut,hard,2,2,0,0,5
+M. Cilic,R. Bautista Agut,hard,1,1,15,0,5
+M. Cilic,R. Bautista Agut,hard,1,1,30,0,5
+M. Cilic,R. Bautista Agut,hard,1,1,40,0,5
+M. Cilic,R. Bautista Agut,hard,1,2,40,15,5
+M. Cilic,R. Bautista Agut,hard,1,2,40,30,5
+M. Cilic,R. Bautista Agut,hard,1,2,40,40,5
+M. Cilic,R. Bautista Agut,hard,1,1,AD,40,5
+M. Cilic,R. Bautista Agut,hard,1,1,0,0,5
+M. Cilic,R. Bautista Agut,hard,2,2,0,15,5
+M. Cilic,R. Bautista Agut,hard,2,2,0,30,5
+M. Cilic,R. Bautista Agut,hard,2,1,15,30,5
+M. Cilic,R. Bautista Agut,hard,2,2,15,40,5
+M. Cilic,R. Bautista Agut,hard,2,2,0,0,5
+M. Cilic,R. Bautista Agut,hard,1,2,0,15,5
+M. Cilic,R. Bautista Agut,hard,1,2,0,30,5
+M. Cilic,R. Bautista Agut,hard,1,1,15,30,5
+M. Cilic,R. Bautista Agut,hard,1,2,15,40,5
+M. Cilic,R. Bautista Agut,hard,1,1,30,40,5
+M. Cilic,R. Bautista Agut,hard,1,1,40,40,5
+M. Cilic,R. Bautista Agut,hard,1,1,AD,40,5
+M. Cilic,R. Bautista Agut,hard,1,2,40,40,5
+M. Cilic,R. Bautista Agut,hard,1,2,40,AD,5
+M. Cilic,R. Bautista Agut,hard,1,2,0,0,5
+M. Cilic,R. Bautista Agut,hard,2,2,0,15,5
+M. Cilic,R. Bautista Agut,hard,2,1,15,15,5
+M. Cilic,R. Bautista Agut,hard,2,2,15,30,5
+M. Cilic,R. Bautista Agut,hard,2,2,15,40,5
+M. Cilic,R. Bautista Agut,hard,2,2,0,0,5

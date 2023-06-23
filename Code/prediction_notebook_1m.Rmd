@@ -1,0 +1,1596 @@
+---
+title: "Notebook 1m"
+subtitle: "To organize into Latex"
+always_allow_html: true
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+!!! This markdown is not for knitting/reading purposes !!!
+Instead here the training/testing file sources are switched for their 2015-2018 counterparts. The purpose is purely to extract experiment results, so variable names will not be changed. For example atp.test.2018 will actually be 2018 data.
+
+```{r}
+source("case_patching.R")
+grand.slams <- c("Australian Open","Roland Garros","Wimbledon","US Open")
+get.prob.2018 <- function(p1,p2,match,atp=TRUE){
+  if (is.na(p1)||is.na(p2)){
+    return(NA)
+  }
+  if (match %in% grand.slams){
+    if (match=="US Open"){
+      ret <- match.win.prob.nonpw(p1,p2,format=0+atp)
+    } else {
+      ret <- match.win.prob.nonpw(p1,p2,format=4+atp)
+    }
+  } else {
+    ret <- match.win.prob.nonpw(p1,p2,format=0)
+  }
+  return(ret)
+}
+```
+
+## Experiments
+
+```{r}
+# testing data
+atp.test.2018 <- read.csv('../Data Lake/Experiments/2018_atp_testing.csv')
+wta.test.2018 <- read.csv('../Data Lake/Experiments/2018_wta_testing.csv')
+```
+```{r}
+# following function highlights matches that were incomplete
+# this is determined by if the score has letters ("W/O","Def.","RET" etc.)
+# takes as input the score column of a dataset and returns indexes
+ic.match <- function(score) grep("[A-Za-z]",score)
+ic.atp <- ic.match(atp.test.2018$score)
+ic.wta <- ic.match(wta.test.2018$score)
+```
+```{r}
+# training data
+atp.train.2017 <- read.csv('../Data Lake/Players/2017_atp_individual.csv')
+atp.train.3yrs <- read.csv('../Data Lake/Players/2015-2017_atp_individual.csv')
+wta.train.2017 <- read.csv('../Data Lake/Players/2017_wta_individual.csv')
+wta.train.3yrs <- read.csv('../Data Lake/Players/2015-2017_wta_individual.csv')
+atp.h2h.2017 <- read.csv('../Data Lake/Players/2017_atp_h2h.csv')
+atp.h2h.3yrs <- read.csv('../Data Lake/Players/2015-2017_atp_h2h.csv')
+atp.co.2017 <- read.csv('../Data Lake/Players/2017_atp_co.csv')
+atp.co.3yrs <- read.csv('../Data Lake/Players/2015-2017_atp_co.csv')
+wta.h2h.2017 <- read.csv('../Data Lake/Players/2017_wta_h2h.csv')
+wta.h2h.3yrs <- read.csv('../Data Lake/Players/2015-2017_wta_h2h.csv')
+wta.co.2017 <- read.csv('../Data Lake/Players/2017_wta_co.csv')
+wta.co.3yrs <- read.csv('../Data Lake/Players/2015-2017_wta_co.csv')
+# for the match specific datasets, they also need ic entries removed
+atp.h2h.2017 <- atp.h2h.2017[-ic.atp,]
+atp.h2h.3yrs <- atp.h2h.3yrs[-ic.atp,]
+atp.co.2017 <- atp.co.2017[-ic.atp,]
+atp.co.3yrs <- atp.co.3yrs[-ic.atp,]
+wta.h2h.2017 <- wta.h2h.2017[-ic.wta,]
+wta.h2h.3yrs <- wta.h2h.3yrs[-ic.wta,]
+wta.co.2017 <- wta.co.2017[-ic.wta,]
+wta.co.3yrs <- wta.co.3yrs[-ic.wta,]
+```
+```{r}
+# remove incomplete matches for test sets
+atp.test.2018 <- atp.test.2018[-ic.atp,]
+wta.test.2018 <- wta.test.2018[-ic.wta,]
+```
+
+
+### Baseline ATP (estimating the p1,p2s with observed means)
+
+#### 1 - 2017 Data - No Surface Distinction - General Data
+
+```{r}
+# augmentations to training set
+# reload set after experiment
+atp.train.2017$total_pts_served <- atp.train.2017$grass_pts_served +
+  atp.train.2017$clay_pts_served + atp.train.2017$hard_pts_served
+atp.train.2017$total_service_pts_won <- atp.train.2017$grass_service_pts_won +
+  atp.train.2017$clay_service_pts_won + atp.train.2017$hard_service_pts_won
+atp.train.2017$p.estimate <- atp.train.2017$total_service_pts_won / 
+  atp.train.2017$total_pts_served
+# 2 players found not to have data prior to 2018, resulting in estimates of NaN
+# For these the average of the remaining players was plugged in
+atp.train.2017$p.estimate[which(is.na(atp.train.2017$p.estimate))] <- 
+  mean(atp.train.2017$p.estimate[-which(is.na(atp.train.2017$p.estimate))])
+```
+```{r}
+n <- nrow(atp.test.2018)
+res1 <- rep(0,n)
+for (i in 1:n){
+  winner <- atp.test.2018$winner_name[i]
+  loser <- atp.test.2018$loser_name[i]
+  winner.idx <- which(atp.train.2017$name==winner)
+  loser.idx <- which(atp.train.2017$name==loser)
+  if (atp.train.2017$p.estimate[winner.idx]>atp.train.2017$p.estimate[loser.idx]) res1[i]<-1
+}
+mean(res1)
+```
+So in terms of accuracy, the absolute baseline is 60%. Better than random guessing, but not by much. This is also in line with the results of the paper *Searching for the GOAT of tennis win prediction*, which had the various methods' accuracy in the low 60%s overall.
+
+#### 2 - 2017 Data - Surface Distinction - General Data
+
+```{r}
+# augmentations to training set
+# reload set after experiment
+atp.train.2017$grass_p <- atp.train.2017$grass_service_pts_won/
+  atp.train.2017$grass_pts_served
+atp.train.2017$hard_p <- atp.train.2017$hard_service_pts_won/
+  atp.train.2017$hard_pts_served
+atp.train.2017$clay_p <- atp.train.2017$clay_service_pts_won/
+  atp.train.2017$clay_pts_served
+# like before, filling in NaNs (slightly more now, since some players did not play that
+# surface in 2017) with corresponding averages
+atp.train.2017$grass_p[which(is.na(atp.train.2017$grass_p))] <- 
+  mean(atp.train.2017$grass_p[-which(is.na(atp.train.2017$grass_p))])
+atp.train.2017$hard_p[which(is.na(atp.train.2017$hard_p))] <- 
+  mean(atp.train.2017$hard_p[-which(is.na(atp.train.2017$hard_p))])
+atp.train.2017$clay_p[which(is.na(atp.train.2017$clay_p))] <- 
+  mean(atp.train.2017$clay_p[-which(is.na(atp.train.2017$clay_p))])
+```
+```{r}
+n <- nrow(atp.test.2018)
+res2 <- rep(0,n)
+for (i in 1:n){
+  winner <- atp.test.2018$winner_name[i]
+  loser <- atp.test.2018$loser_name[i]
+  winner.idx <- which(atp.train.2017$name==winner)
+  loser.idx <- which(atp.train.2017$name==loser)
+  if (atp.test.2018$surface[i]=="Grass") {
+    res2[i] <- atp.train.2017$grass_p[winner.idx]>atp.train.2017$grass_p[loser.idx]
+  } else if (atp.test.2018$surface[i]=="Hard") {
+    res2[i] <- atp.train.2017$hard_p[winner.idx]>atp.train.2017$hard_p[loser.idx]
+  } else if (atp.test.2018$surface[i]=="Clay") {
+    res2[i] <- atp.train.2017$clay_p[winner.idx]>atp.train.2017$clay_p[loser.idx]
+  } else {
+    print("something wrong")
+  }
+}
+mean(res2)
+```
+An increase in accuracy of 2% is incredibly encouraging given the simple approach being deployed. It aligns with previous studies' assertions of surface being of particular importance in predictions.
+
+#### 3 - 2015-2017 Data - No Surface Distinction - General Data
+
+```{r}
+# augmentations to training set
+# reload set after experiment
+atp.train.3yrs$total_pts_served <- atp.train.3yrs$grass_pts_served +
+  atp.train.3yrs$clay_pts_served + atp.train.3yrs$hard_pts_served
+atp.train.3yrs$total_service_pts_won <- atp.train.3yrs$grass_service_pts_won +
+  atp.train.3yrs$clay_service_pts_won + atp.train.3yrs$hard_service_pts_won
+atp.train.3yrs$p.estimate <- atp.train.3yrs$total_service_pts_won / 
+  atp.train.3yrs$total_pts_served
+# 2 players found not to have data prior to 2018, resulting in estimates of NaN
+# For these the average of the remaining players was plugged in
+atp.train.3yrs$p.estimate[which(is.na(atp.train.3yrs$p.estimate))] <-
+  mean(atp.train.3yrs$p.estimate[-which(is.na(atp.train.3yrs$p.estimate))])
+```
+```{r}
+n <- nrow(atp.test.2018)
+res3 <- rep(0,n)
+for (i in 1:n){
+  winner <- atp.test.2018$winner_name[i]
+  loser <- atp.test.2018$loser_name[i]
+  winner.idx <- which(atp.train.3yrs$name==winner)
+  loser.idx <- which(atp.train.3yrs$name==loser)
+  if (atp.train.3yrs$p.estimate[winner.idx]>atp.train.3yrs$p.estimate[loser.idx]) res3[i]<-1
+}
+mean(res3)
+```
+Here we see a decrease from the already not-very-good 60% in the very first experiment. This is evidence for the existence of the aforementioned tradeoff between data quantity and recency, and furthermore makes a strong case for recency over quantity. This will be kept in mind for future experiments, but this tradeoff will also have to be re-evaluated when H2H data is used and the need for quantity may increase.
+
+#### 4 - 2015-2017 Data - Surface Distinction - General Data
+
+```{r}
+# augmentations to training set
+# reload set after experiment
+atp.train.3yrs$grass_p <- atp.train.3yrs$grass_service_pts_won/
+  atp.train.3yrs$grass_pts_served
+atp.train.3yrs$hard_p <- atp.train.3yrs$hard_service_pts_won/
+  atp.train.3yrs$hard_pts_served
+atp.train.3yrs$clay_p <- atp.train.3yrs$clay_service_pts_won/
+  atp.train.3yrs$clay_pts_served
+# like before, filling in NaNs (slightly more now, since some players did not play that
+# surface in 2017) with corresponding averages
+atp.train.3yrs$grass_p[which(is.na(atp.train.3yrs$grass_p))] <- 
+  mean(atp.train.3yrs$grass_p[-which(is.na(atp.train.3yrs$grass_p))])
+atp.train.3yrs$hard_p[which(is.na(atp.train.3yrs$hard_p))] <- 
+  mean(atp.train.3yrs$hard_p[-which(is.na(atp.train.3yrs$hard_p))])
+atp.train.3yrs$clay_p[which(is.na(atp.train.3yrs$clay_p))] <- 
+  mean(atp.train.3yrs$clay_p[-which(is.na(atp.train.3yrs$clay_p))])
+```
+```{r}
+n <- nrow(atp.test.2018)
+res4 <- rep(0,n)
+for (i in 1:n){
+  winner <- atp.test.2018$winner_name[i]
+  loser <- atp.test.2018$loser_name[i]
+  winner.idx <- which(atp.train.3yrs$name==winner)
+  loser.idx <- which(atp.train.3yrs$name==loser)
+  if (atp.test.2018$surface[i]=="Grass") {
+    res4[i] <- atp.train.3yrs$grass_p[winner.idx]>atp.train.3yrs$grass_p[loser.idx]
+  } else if (atp.test.2018$surface[i]=="Hard") {
+    res4[i] <- atp.train.3yrs$hard_p[winner.idx]>atp.train.3yrs$hard_p[loser.idx]
+  } else if (atp.test.2018$surface[i]=="Clay") {
+    res4[i] <- atp.train.3yrs$clay_p[winner.idx]>atp.train.3yrs$clay_p[loser.idx]
+  } else {
+    print("something wrong")
+  }
+}
+mean(res4)
+```
+Thankfully both observations from before hold in this result. Making the surface distinction significantly increases prediction accuracy (again by 2%), and sacrificing data recency for data quantity again results in a decrease in accuracy of around 2%.
+
+### Baseline WTA (estimating the p1,p2s with observed means)
+
+#### 5 - 2017 Data - No Surface Distinction - General Data
+
+```{r}
+# reload dataset after using this block
+wta.train.2017$total_pts_served <- wta.train.2017$grass_pts_served +
+  wta.train.2017$clay_pts_served + wta.train.2017$hard_pts_served
+wta.train.2017$total_service_pts_won <- wta.train.2017$grass_service_pts_won +
+  wta.train.2017$clay_service_pts_won + wta.train.2017$hard_service_pts_won
+wta.train.2017$p.estimate <- wta.train.2017$total_service_pts_won / 
+  wta.train.2017$total_pts_served
+wta.train.2017$p.estimate[which(is.na(wta.train.2017$p.estimate))] <- 
+  mean(wta.train.2017$p.estimate[-which(is.na(wta.train.2017$p.estimate))])
+n <- nrow(wta.test.2018)
+res5 <- rep(0,n)
+for (i in 1:n){
+  winner <- wta.test.2018$winner_name[i]
+  loser <- wta.test.2018$loser_name[i]
+  winner.idx <- which(wta.train.2017$name==winner)
+  loser.idx <- which(wta.train.2017$name==loser)
+  if (wta.train.2017$p.estimate[winner.idx]>wta.train.2017$p.estimate[loser.idx]) res5[i]<-1
+}
+mean(res5)
+```
+
+#### 6 - 2017 Data - Surface Distinction - General Data
+
+```{r}
+# reload dataset after using this block
+wta.train.2017$grass_p <- wta.train.2017$grass_service_pts_won/
+  wta.train.2017$grass_pts_served
+wta.train.2017$hard_p <- wta.train.2017$hard_service_pts_won/
+  wta.train.2017$hard_pts_served
+wta.train.2017$clay_p <- wta.train.2017$clay_service_pts_won/
+  wta.train.2017$clay_pts_served
+wta.train.2017$grass_p[which(is.na(wta.train.2017$grass_p))] <- 
+  mean(wta.train.2017$grass_p[-which(is.na(wta.train.2017$grass_p))])
+wta.train.2017$hard_p[which(is.na(wta.train.2017$hard_p))] <- 
+  mean(wta.train.2017$hard_p[-which(is.na(wta.train.2017$hard_p))])
+wta.train.2017$clay_p[which(is.na(wta.train.2017$clay_p))] <- 
+  mean(wta.train.2017$clay_p[-which(is.na(wta.train.2017$clay_p))])
+n <- nrow(wta.test.2018)
+res6 <- rep(0,n)
+for (i in 1:n){
+  winner <- wta.test.2018$winner_name[i]
+  loser <- wta.test.2018$loser_name[i]
+  winner.idx <- which(wta.train.2017$name==winner)
+  loser.idx <- which(wta.train.2017$name==loser)
+  if (wta.test.2018$surface[i]=="Grass") {
+    res6[i] <- wta.train.2017$grass_p[winner.idx]>wta.train.2017$grass_p[loser.idx]
+  } else if (wta.test.2018$surface[i]=="Hard") {
+    res6[i] <- wta.train.2017$hard_p[winner.idx]>wta.train.2017$hard_p[loser.idx]
+  } else if (wta.test.2018$surface[i]=="Clay") {
+    res6[i] <- wta.train.2017$clay_p[winner.idx]>wta.train.2017$clay_p[loser.idx]
+  } else {
+    print("something wrong")
+  }
+}
+mean(res6)
+```
+
+#### 7 - 2015-2017 Data - No Surface Distinction - General Data
+
+```{r}
+# reload dataset after using this block
+wta.train.3yrs$total_pts_served <- wta.train.3yrs$grass_pts_served +
+  wta.train.3yrs$clay_pts_served + wta.train.3yrs$hard_pts_served
+wta.train.3yrs$total_service_pts_won <- wta.train.3yrs$grass_service_pts_won +
+  wta.train.3yrs$clay_service_pts_won + wta.train.3yrs$hard_service_pts_won
+wta.train.3yrs$p.estimate <- wta.train.3yrs$total_service_pts_won / 
+  wta.train.3yrs$total_pts_served
+wta.train.3yrs$p.estimate[which(is.na(wta.train.3yrs$p.estimate))] <-
+  mean(wta.train.3yrs$p.estimate[-which(is.na(wta.train.3yrs$p.estimate))])
+n <- nrow(wta.test.2018)
+res7 <- rep(0,n)
+for (i in 1:n){
+  winner <- wta.test.2018$winner_name[i]
+  loser <- wta.test.2018$loser_name[i]
+  winner.idx <- which(wta.train.3yrs$name==winner)
+  loser.idx <- which(wta.train.3yrs$name==loser)
+  if (wta.train.3yrs$p.estimate[winner.idx]>wta.train.3yrs$p.estimate[loser.idx]) res7[i]<-1
+}
+mean(res7)
+```
+
+#### 8 - 2015-2017 Data - Surface Distinction - General Data
+
+```{r}
+# reload dataset after using this block
+wta.train.3yrs$grass_p <- wta.train.3yrs$grass_service_pts_won/
+  wta.train.3yrs$grass_pts_served
+wta.train.3yrs$hard_p <- wta.train.3yrs$hard_service_pts_won/
+  wta.train.3yrs$hard_pts_served
+wta.train.3yrs$clay_p <- wta.train.3yrs$clay_service_pts_won/
+  wta.train.3yrs$clay_pts_served
+wta.train.3yrs$grass_p[which(is.na(wta.train.3yrs$grass_p))] <- 
+  mean(wta.train.3yrs$grass_p[-which(is.na(wta.train.3yrs$grass_p))])
+wta.train.3yrs$hard_p[which(is.na(wta.train.3yrs$hard_p))] <- 
+  mean(wta.train.3yrs$hard_p[-which(is.na(wta.train.3yrs$hard_p))])
+wta.train.3yrs$clay_p[which(is.na(wta.train.3yrs$clay_p))] <- 
+  mean(wta.train.3yrs$clay_p[-which(is.na(wta.train.3yrs$clay_p))])
+n <- nrow(wta.test.2018)
+res8 <- rep(0,n)
+for (i in 1:n){
+  winner <- wta.test.2018$winner_name[i]
+  loser <- wta.test.2018$loser_name[i]
+  winner.idx <- which(wta.train.3yrs$name==winner)
+  loser.idx <- which(wta.train.3yrs$name==loser)
+  if (wta.test.2018$surface[i]=="Grass") {
+    res8[i] <- wta.train.3yrs$grass_p[winner.idx]>wta.train.3yrs$grass_p[loser.idx]
+  } else if (wta.test.2018$surface[i]=="Hard") {
+    res8[i] <- wta.train.3yrs$hard_p[winner.idx]>wta.train.3yrs$hard_p[loser.idx]
+  } else if (wta.test.2018$surface[i]=="Clay") {
+    res8[i] <- wta.train.3yrs$clay_p[winner.idx]>wta.train.3yrs$clay_p[loser.idx]
+  } else {
+    print("something wrong")
+  }
+}
+mean(res8)
+```
+
+The first 3 WTA baseline experiments all reflect the same trends with slightly higher prediction accuracy, though still in the same overall range. Accuracy increases when training data is separated by surface, and decreases when recent training data is diluted by older data. But the drop in accuracy in the 4th WTA experiment, where older data was already added to the training data and the key change was to make distinctions between surface, is the first evidence against separating training data by surface. It is possible this speaks more strongly to the chaos older data can additionally have on results, and for the time being will be chalked up to be so. Still, we will have to keep an eye out for similar results in the future and come back to examine more closely if necessary.
+
+### Opponent-Adjusted ATP
+
+The main method for adjusting for opponent returning ability found in the literature is deducting from $p$ the difference between the opponent's returning ability (hereafter denoting $q$) and the average returning ability. We will see if this results in increase in accuracy, as well as compare with another way of adjusting for opponent ability - directly restricting the training set to head-to-head (H2H) data. Previous studies (Monte Carlo simulation) have noted this approach's lack of data, but we will attempt to remedy this by augmenting with common-opponent data (CO) (cite). Remaining 'holes' in the data fabric, which we do not expect to be numerous, will finally be patched with common data.
+
+#### 9 - 2017 Data - No Surface Distinction - Opponent-Adjusted Formula
+
+$\hat{p_1}=p_1-(q_2-\bar{q})$
+
+```{r}
+# same augmentation as [1]
+# augmentations to training set
+# reload set after experiment
+atp.train.2017$total_pts_served <- atp.train.2017$grass_pts_served +
+  atp.train.2017$clay_pts_served + atp.train.2017$hard_pts_served
+atp.train.2017$total_service_pts_won <- atp.train.2017$grass_service_pts_won +
+  atp.train.2017$clay_service_pts_won + atp.train.2017$hard_service_pts_won
+atp.train.2017$p.estimate <- atp.train.2017$total_service_pts_won / 
+  atp.train.2017$total_pts_served
+# 2 players found not to have data prior to 2018, resulting in estimates of NaN
+# For these the average of the remaining players was plugged in
+atp.train.2017$p.estimate[which(is.na(atp.train.2017$p.estimate))] <- 
+  mean(atp.train.2017$p.estimate[-which(is.na(atp.train.2017$p.estimate))])
+
+# get q estimates as well
+atp.train.2017$total_pts_received <- atp.train.2017$grass_pts_received +
+  atp.train.2017$hard_pts_received + atp.train.2017$clay_pts_received
+atp.train.2017$total_receiving_pts_won <- atp.train.2017$grass_receiving_pts_won +
+  atp.train.2017$hard_receiving_pts_won + atp.train.2017$clay_receiving_pts_won
+atp.train.2017$q.estimate <- atp.train.2017$total_receiving_pts_won /
+  atp.train.2017$total_pts_received
+atp.train.2017$q.estimate[which(is.na(atp.train.2017$q.estimate))] <- 
+  mean(atp.train.2017$q.estimate[-which(is.na(atp.train.2017$q.estimate))])
+
+q.bar <- mean(atp.train.2017$q.estimate)
+n <- nrow(atp.test.2018)
+res9 <- rep(0,n)
+exact.res9 <- rep(0,n) # added much later in
+for (i in 1:n){
+  winner <- atp.test.2018$winner_name[i]
+  loser <- atp.test.2018$loser_name[i]
+  winner.idx <- which(atp.train.2017$name==winner)
+  loser.idx <- which(atp.train.2017$name==loser)
+  winner.adj.p <- atp.train.2017$p.estimate[winner.idx] - 
+    (atp.train.2017$q.estimate[loser.idx] - q.bar)
+  loser.adj.p <- atp.train.2017$p.estimate[loser.idx] - 
+    (atp.train.2017$q.estimate[winner.idx] - q.bar)
+  res9[i] <- winner.adj.p > loser.adj.p
+  exact.res9[i] <- get.prob.2018(winner.adj.p,loser.adj.p,
+                                 atp.test.2018$tourney_name[i],atp=TRUE)
+}
+mean(res9)
+saveRDS(exact.res9,"p_est_exact_probs/atp2018_1y_ns_oaf_exact.rds")
+```
+A very strong jump in accuracy.
+
+#### 10 - 2017 Data - Surface Distinction - Opponent-Adjusted Formula
+
+```{r}
+# same augmentation as [2]
+# augmentations to training set
+# reload set after experiment
+# p's
+atp.train.2017$grass_p <- atp.train.2017$grass_service_pts_won/
+  atp.train.2017$grass_pts_served
+atp.train.2017$hard_p <- atp.train.2017$hard_service_pts_won/
+  atp.train.2017$hard_pts_served
+atp.train.2017$clay_p <- atp.train.2017$clay_service_pts_won/
+  atp.train.2017$clay_pts_served
+atp.train.2017$grass_p[which(is.na(atp.train.2017$grass_p))] <- 
+  mean(atp.train.2017$grass_p[-which(is.na(atp.train.2017$grass_p))])
+atp.train.2017$hard_p[which(is.na(atp.train.2017$hard_p))] <- 
+  mean(atp.train.2017$hard_p[-which(is.na(atp.train.2017$hard_p))])
+atp.train.2017$clay_p[which(is.na(atp.train.2017$clay_p))] <- 
+  mean(atp.train.2017$clay_p[-which(is.na(atp.train.2017$clay_p))])
+# q's
+atp.train.2017$grass_q <- atp.train.2017$grass_receiving_pts_won /
+  atp.train.2017$grass_pts_received
+atp.train.2017$hard_q <- atp.train.2017$hard_receiving_pts_won /
+  atp.train.2017$hard_pts_received
+atp.train.2017$clay_q <- atp.train.2017$clay_receiving_pts_won /
+  atp.train.2017$clay_pts_received
+atp.train.2017$grass_q[which(is.na(atp.train.2017$grass_q))] <- 
+  mean(atp.train.2017$grass_q[-which(is.na(atp.train.2017$grass_q))])
+atp.train.2017$hard_q[which(is.na(atp.train.2017$hard_q))] <- 
+  mean(atp.train.2017$hard_q[-which(is.na(atp.train.2017$hard_q))])
+atp.train.2017$clay_q[which(is.na(atp.train.2017$clay_q))] <- 
+  mean(atp.train.2017$clay_q[-which(is.na(atp.train.2017$clay_q))])
+q.bar.grass <- mean(atp.train.2017$grass_q)
+q.bar.hard <- mean(atp.train.2017$hard_q)
+q.bar.clay <- mean(atp.train.2017$clay_q)
+
+n <- nrow(atp.test.2018)
+res10 <- rep(0,n)
+exact.res10 <- rep(0,n) # added much later in
+for (i in 1:n){
+  winner <- atp.test.2018$winner_name[i]
+  loser <- atp.test.2018$loser_name[i]
+  winner.idx <- which(atp.train.2017$name==winner)
+  loser.idx <- which(atp.train.2017$name==loser)
+  surf <- atp.test.2018$surface[i]
+  if (surf=="Grass") {
+    winner.adj.p <- atp.train.2017$grass_p[winner.idx] - 
+      (atp.train.2017$grass_q[loser.idx] - q.bar.grass)
+    loser.adj.p <- atp.train.2017$grass_p[loser.idx] - 
+      (atp.train.2017$grass_q[winner.idx] - q.bar.grass)
+    res10[i] <- winner.adj.p > loser.adj.p
+  } else if (surf=="Hard"){
+    winner.adj.p <- atp.train.2017$hard_p[winner.idx] - 
+      (atp.train.2017$hard_q[loser.idx] - q.bar.hard)
+    loser.adj.p <- atp.train.2017$hard_p[loser.idx] - 
+      (atp.train.2017$hard_q[winner.idx] - q.bar.hard)
+    res10[i] <- winner.adj.p > loser.adj.p
+  } else if (surf=="Clay"){
+    winner.adj.p <- atp.train.2017$clay_p[winner.idx] - 
+      (atp.train.2017$clay_q[loser.idx] - q.bar.clay)
+    loser.adj.p <- atp.train.2017$clay_p[loser.idx] - 
+      (atp.train.2017$clay_q[winner.idx] - q.bar.clay)
+    res10[i] <- winner.adj.p > loser.adj.p
+  }
+  exact.res10[i] <- get.prob.2018(winner.adj.p,loser.adj.p,
+                                  atp.test.2018$tourney_name[i],atp=TRUE)
+}
+mean(res10)
+saveRDS(exact.res10,"p_est_exact_probs/atp2018_1y_s_oaf_exact.rds")
+```
+Still positive compared to previous general data results, but disappointing as separating by surface decreased instead of increased the accuracy. Would be interesting to see if results are the same on the wta side. As well if future tests with 2015-2018 data corroborate results. (More thoughts on this in #12)
+
+#### 11 - 2015-2017 Data - No Surface Distinction - Opponent-Adjusted Formula
+
+```{r}
+# same augmentation as [1]
+# augmentations to training set
+# reload set after experiment
+atp.train.3yrs$total_pts_served <- atp.train.3yrs$grass_pts_served +
+  atp.train.3yrs$clay_pts_served + atp.train.3yrs$hard_pts_served
+atp.train.3yrs$total_service_pts_won <- atp.train.3yrs$grass_service_pts_won +
+  atp.train.3yrs$clay_service_pts_won + atp.train.3yrs$hard_service_pts_won
+atp.train.3yrs$p.estimate <- atp.train.3yrs$total_service_pts_won / 
+  atp.train.3yrs$total_pts_served
+# 2 players found not to have data prior to 2018, resulting in estimates of NaN
+# For these the average of the remaining players was plugged in
+atp.train.3yrs$p.estimate[which(is.na(atp.train.3yrs$p.estimate))] <- 
+  mean(atp.train.3yrs$p.estimate[-which(is.na(atp.train.3yrs$p.estimate))])
+
+# get q estimates as well
+atp.train.3yrs$total_pts_received <- atp.train.3yrs$grass_pts_received +
+  atp.train.3yrs$hard_pts_received + atp.train.3yrs$clay_pts_received
+atp.train.3yrs$total_receiving_pts_won <- atp.train.3yrs$grass_receiving_pts_won +
+  atp.train.3yrs$hard_receiving_pts_won + atp.train.3yrs$clay_receiving_pts_won
+atp.train.3yrs$q.estimate <- atp.train.3yrs$total_receiving_pts_won /
+  atp.train.3yrs$total_pts_received
+atp.train.3yrs$q.estimate[which(is.na(atp.train.3yrs$q.estimate))] <- 
+  mean(atp.train.3yrs$q.estimate[-which(is.na(atp.train.3yrs$q.estimate))])
+
+q.bar <- mean(atp.train.3yrs$q.estimate)
+n <- nrow(atp.test.2018)
+res11 <- rep(0,n)
+exact.res11 <- rep(0,n) # added much later in
+for (i in 1:n){
+  winner <- atp.test.2018$winner_name[i]
+  loser <- atp.test.2018$loser_name[i]
+  winner.idx <- which(atp.train.3yrs$name==winner)
+  loser.idx <- which(atp.train.3yrs$name==loser)
+  winner.adj.p <- atp.train.3yrs$p.estimate[winner.idx] - 
+    (atp.train.3yrs$q.estimate[loser.idx] - q.bar)
+  loser.adj.p <- atp.train.3yrs$p.estimate[loser.idx] - 
+    (atp.train.3yrs$q.estimate[winner.idx] - q.bar)
+  res11[i] <- winner.adj.p > loser.adj.p
+  exact.res11[i] <- get.prob.2018(winner.adj.p,loser.adj.p,
+                                  atp.test.2018$tourney_name[i],atp=TRUE)
+}
+mean(res11)
+saveRDS(exact.res11,"p_est_exact_probs/atp2018_3y_ns_oaf_exact.rds")
+```
+Good to see that at least one of the trends identified as before still hold, that using more data at the expense of data recency decreases accuracy substantially (3 points here).
+
+#### 12 - 2015-2017 Data - Surface Distinction - Opponent-Adjusted Formula
+
+```{r}
+# same augmentation as [2]
+# augmentations to training set
+# reload set after experiment
+# p's
+atp.train.3yrs$grass_p <- atp.train.3yrs$grass_service_pts_won/
+  atp.train.3yrs$grass_pts_served
+atp.train.3yrs$hard_p <- atp.train.3yrs$hard_service_pts_won/
+  atp.train.3yrs$hard_pts_served
+atp.train.3yrs$clay_p <- atp.train.3yrs$clay_service_pts_won/
+  atp.train.3yrs$clay_pts_served
+atp.train.3yrs$grass_p[which(is.na(atp.train.3yrs$grass_p))] <- 
+  mean(atp.train.3yrs$grass_p[-which(is.na(atp.train.3yrs$grass_p))])
+atp.train.3yrs$hard_p[which(is.na(atp.train.3yrs$hard_p))] <- 
+  mean(atp.train.3yrs$hard_p[-which(is.na(atp.train.3yrs$hard_p))])
+atp.train.3yrs$clay_p[which(is.na(atp.train.3yrs$clay_p))] <- 
+  mean(atp.train.3yrs$clay_p[-which(is.na(atp.train.3yrs$clay_p))])
+# q's
+atp.train.3yrs$grass_q <- atp.train.3yrs$grass_receiving_pts_won /
+  atp.train.3yrs$grass_pts_received
+atp.train.3yrs$hard_q <- atp.train.3yrs$hard_receiving_pts_won /
+  atp.train.3yrs$hard_pts_received
+atp.train.3yrs$clay_q <- atp.train.3yrs$clay_receiving_pts_won /
+  atp.train.3yrs$clay_pts_received
+atp.train.3yrs$grass_q[which(is.na(atp.train.3yrs$grass_q))] <- 
+  mean(atp.train.3yrs$grass_q[-which(is.na(atp.train.3yrs$grass_q))])
+atp.train.3yrs$hard_q[which(is.na(atp.train.3yrs$hard_q))] <- 
+  mean(atp.train.3yrs$hard_q[-which(is.na(atp.train.3yrs$hard_q))])
+atp.train.3yrs$clay_q[which(is.na(atp.train.3yrs$clay_q))] <- 
+  mean(atp.train.3yrs$clay_q[-which(is.na(atp.train.3yrs$clay_q))])
+q.bar.grass <- mean(atp.train.3yrs$grass_q)
+q.bar.hard <- mean(atp.train.3yrs$hard_q)
+q.bar.clay <- mean(atp.train.3yrs$clay_q)
+
+n <- nrow(atp.test.2018)
+res12 <- rep(0,n)
+exact.res12 <- rep(0,n) # added much later in
+for (i in 1:n){
+  winner <- atp.test.2018$winner_name[i]
+  loser <- atp.test.2018$loser_name[i]
+  winner.idx <- which(atp.train.3yrs$name==winner)
+  loser.idx <- which(atp.train.3yrs$name==loser)
+  surf <- atp.test.2018$surface[i]
+  if (surf=="Grass") {
+    winner.adj.p <- atp.train.3yrs$grass_p[winner.idx] - 
+      (atp.train.3yrs$grass_q[loser.idx] - q.bar.grass)
+    loser.adj.p <- atp.train.3yrs$grass_p[loser.idx] - 
+      (atp.train.3yrs$grass_q[winner.idx] - q.bar.grass)
+    res12[i] <- winner.adj.p > loser.adj.p
+  } else if (surf=="Hard"){
+    winner.adj.p <- atp.train.3yrs$hard_p[winner.idx] - 
+      (atp.train.3yrs$hard_q[loser.idx] - q.bar.hard)
+    loser.adj.p <- atp.train.3yrs$hard_p[loser.idx] - 
+      (atp.train.3yrs$hard_q[winner.idx] - q.bar.hard)
+    res12[i] <- winner.adj.p > loser.adj.p
+  } else if (surf=="Clay"){
+    winner.adj.p <- atp.train.3yrs$clay_p[winner.idx] - 
+      (atp.train.3yrs$clay_q[loser.idx] - q.bar.clay)
+    loser.adj.p <- atp.train.3yrs$clay_p[loser.idx] - 
+      (atp.train.3yrs$clay_q[winner.idx] - q.bar.clay)
+    res12[i] <- winner.adj.p > loser.adj.p
+  }
+  exact.res12[i] <- get.prob.2018(winner.adj.p,loser.adj.p,
+                                  atp.test.2018$tourney_name[i],atp=TRUE)
+}
+mean(res12)
+saveRDS(exact.res12,"p_est_exact_probs/atp2018_3y_s_oaf_exact.rds")
+```
+All in line with most recent observations, though perhaps not surprisingly as experiments 10 and 12 are not completely independent, if separating by surface in 10 decreases accuracy, then doing the same in 12, which has 1/3 of its data as 10's training data, very well may result in the same. However, this invalidates data volume as an excuse for the drop in 10.
+Or does it completely? We have a reasonable amount of evidence pointing to the fact that data volume in the form of older data does not make up for data recency. Perhaps the problem is still a lack of recent data if we were to separate data by surface. It is notable that comparing #2 and #10, #10 still performs noticeably better.
+
+#### 13 - 2017 Data - No Surface Distinction - H2H Data With CO Support
+
+```{r}
+# make a copy where co augmentation will go
+data.13 <- atp.h2h.2017
+# in h2h/co datasets, p1 is always the winner
+data.13$w_total_pts_served <- data.13$grass_pts_served1 + 
+  data.13$hard_pts_served1 + data.13$clay_pts_served1
+data.13$w_total_service_pts_won <- data.13$grass_service_pts_won1 +
+  data.13$hard_service_pts_won1 + data.13$clay_service_pts_won1
+data.13$w_p <- data.13$w_total_service_pts_won/data.13$w_total_pts_served
+data.13$l_total_pts_served <- data.13$grass_pts_served2 + 
+  data.13$hard_pts_served2 + data.13$clay_pts_served2
+data.13$l_total_service_pts_won <- data.13$grass_service_pts_won2 +
+  data.13$hard_service_pts_won2 + data.13$clay_service_pts_won2
+data.13$l_p <- data.13$l_total_service_pts_won/data.13$l_total_pts_served
+
+# first see accuracy for entries where h2h data is available
+h2h.valid <- which(!is.na(data.13$w_p)) #l_p also works
+res13.h2h <- rep(0,length(h2h.valid))
+exact13.h2h <- rep(0,length(h2h.valid))
+for (i in 1:length(h2h.valid)){
+  res13.h2h[i] <- data.13$w_p[h2h.valid[i]] > data.13$l_p[h2h.valid[i]]
+  exact13.h2h[i] <- get.prob.2018(data.13$w_p[h2h.valid[i]],data.13$l_p[h2h.valid[i]],
+                                  atp.test.2018$tourney_name[h2h.valid[i]],atp=TRUE)
+}
+mean(res13.h2h) # 0.8703704 very high, but also small testing set size
+
+# next see accuracy for all entries where co data is available 
+data.13$w_total_pts_served_co <- atp.co.2017$grass_pts_served1 + 
+  atp.co.2017$hard_pts_served1 + atp.co.2017$clay_pts_served1
+data.13$w_total_service_pts_won_co <- atp.co.2017$grass_service_pts_won1 +
+  atp.co.2017$hard_service_pts_won1 + atp.co.2017$clay_service_pts_won1
+data.13$w_p_co <- data.13$w_total_service_pts_won_co/data.13$w_total_pts_served_co
+data.13$l_total_pts_served_co <- atp.co.2017$grass_pts_served2 + 
+  atp.co.2017$hard_pts_served2 + atp.co.2017$clay_pts_served2
+data.13$l_total_service_pts_won_co <- atp.co.2017$grass_service_pts_won2 +
+  atp.co.2017$hard_service_pts_won2 + atp.co.2017$clay_service_pts_won2
+data.13$l_p_co <- data.13$l_total_service_pts_won_co/data.13$l_total_pts_served_co
+co.valid <- which(!is.na(data.13$w_p_co) & !is.na(data.13$l_p_co)) #l_p_co also works
+res13.co <- rep(0,length(co.valid))
+exact13.co <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res13.co[i] <- data.13$w_p_co[co.valid[i]] > data.13$l_p_co[co.valid[i]]
+  exact13.co[i] <- get.prob.2018(data.13$w_p_co[co.valid[i]],data.13$l_p_co[co.valid[i]],
+                                 atp.test.2018$tourney_name[co.valid[i]],atp=TRUE)
+}
+mean(res13.co) # 6258065 substantial decrease, a little better than absolute baseline
+
+# finally h2h with co support
+res13 <- res1 # first use general data and apply new results on top
+res13[co.valid] <- res13.co
+res13[h2h.valid] <- res13.h2h
+mean(res13)
+```
+Summarizing results and comments above: Pure H2H data yields extremely high accuracy, though this can't be taken in its entirety as the number of entries with pure H2H data is by comparison very small. For pure CO data, accuracy is only a little better than baseline, raising the question of if augmenting with general data would be enough. This, though a little disappointing, aligns with the searching for GOAT prediction paper's results where common opponent data does not make any significant difference. The final result is essentially a weighted combination of the previous 2 results with a little (3 entries in this specific case) general results (#13 corresponds to to #1), and a final result of 70% is still pretty encouraging and early evidence for how valuable H2H data is.
+```{r}
+# Just to see if we left out CO data
+res13.no_co <- res1
+res13.no_co[h2h.valid] <- res13.h2h
+mean(res13.no_co)
+```
+As expected since as noted above, this is just a weighted sum of the 3 pure data results, and we saw that in this case, common opponent data was a little bit helpful.
+
+```{r}
+# later added to save results
+res13.h2h.sv <- rep(-1,nrow(atp.test.2018))
+res13.h2h.sv[h2h.valid] <- res13.h2h
+res13.co.sv <- rep(-1,nrow(atp.test.2018))
+res13.co.sv[co.valid] <- res13.co
+exact13.h2h.sv <- rep(-1,nrow(atp.test.2018))
+exact13.h2h.sv[h2h.valid] <- exact13.h2h
+exact13.co.sv <- rep(-1,nrow(atp.test.2018))
+exact13.co.sv[co.valid] <- exact13.co
+saveRDS(exact13.h2h.sv,"p_est_exact_probs/atp2018_1y_ns_h2h.rds")
+saveRDS(exact13.co.sv,"p_est_exact_probs/atp2018_1y_ns_co.rds")
+```
+
+
+#### 14 - 2017 Data - Surface Distinction - H2H Data With CO Support
+
+```{r}
+data.14 <- atp.h2h.2017
+# g for grass_p, h for hard_p, c for clay_p
+data.14$w_g <- data.14$grass_service_pts_won1/data.14$grass_pts_served1
+data.14$w_h <- data.14$hard_service_pts_won1/data.14$hard_pts_served1
+data.14$w_c <- data.14$clay_service_pts_won1/data.14$clay_pts_served1
+data.14$l_g <- data.14$grass_service_pts_won2/data.14$grass_pts_served2
+data.14$l_h <- data.14$hard_service_pts_won2/data.14$hard_pts_served2
+data.14$l_c <- data.14$clay_service_pts_won2/data.14$clay_pts_served2
+
+h2h.valid <- rep(0,nrow(atp.test.2018))
+# see performance for pure h2h data separated by surface
+res14.h2h <- c() # initialize and add elements by res14.h2h <- c(res14.h2h,...)
+exact14.h2h <- c()
+for (i in 1:nrow(atp.test.2018)){
+  if (atp.test.2018$surface[i]=="Grass" && !is.na(data.14$w_g[i])){
+    res14.h2h <- c(res14.h2h, data.14$w_g[i] > data.14$l_g[i])
+    exact14.h2h <- c(exact14.h2h,
+                     get.prob.2018(data.14$w_g[i],data.14$l_g[i],
+                                   atp.test.2018$tourney_name[i],atp=TRUE))
+    h2h.valid[i] <- 1
+  } else if (atp.test.2018$surface[i]=="Hard" && !is.na(data.14$w_h[i])){
+    res14.h2h <- c(res14.h2h, data.14$w_h[i] > data.14$l_h[i])
+    exact14.h2h <- c(exact14.h2h,
+                     get.prob.2018(data.14$w_h[i],data.14$l_h[i],
+                                   atp.test.2018$tourney_name[i],atp=TRUE))
+    h2h.valid[i] <- 1
+  } else if (atp.test.2018$surface[i]=="Clay" && !is.na(data.14$w_c[i])){
+    res14.h2h <- c(res14.h2h, data.14$w_c[i] > data.14$l_c[i])
+    exact14.h2h <- c(exact14.h2h,
+                     get.prob.2018(data.14$w_c[i],data.14$l_c[i],
+                                   atp.test.2018$tourney_name[i],atp=TRUE))
+    h2h.valid[i] <- 1
+  }
+}
+h2h.valid <- which(h2h.valid==1)
+mean(res14.h2h) # 0.81481
+```
+81% is a very large decrease compared to the 87% achieved previously. These early results indicate that not only is h2h data more valuable than surface-separated data, but that sacrificing data volume for surface-specific quality may be detrimental when H2H is at hand.
+Can this be remediated using lesser quality older data? (Will see in #16)
+```{r}
+# see performance for pure co data separated by surface
+data.14$w_g_co <- atp.co.2017$grass_service_pts_won1/atp.co.2017$grass_pts_served1
+data.14$w_h_co <- atp.co.2017$hard_service_pts_won1/atp.co.2017$hard_pts_served1
+data.14$w_c_co <- atp.co.2017$clay_service_pts_won1/atp.co.2017$clay_pts_served1
+data.14$l_g_co <- atp.co.2017$grass_service_pts_won2/atp.co.2017$grass_pts_served2
+data.14$l_h_co <- atp.co.2017$hard_service_pts_won2/atp.co.2017$hard_pts_served2
+data.14$l_c_co <- atp.co.2017$clay_service_pts_won2/atp.co.2017$clay_pts_served2
+res14.co <- c() # same method as before
+exact14.co <- c()
+co.valid <- rep(0,nrow(atp.test.2018))
+for (i in 1:nrow(atp.test.2018)){
+  if (atp.test.2018$surface[i]=="Grass" & 
+      !is.na(data.14$w_g_co[i]) & !is.na(data.14$l_g_co[i])){
+    res14.co <- c(res14.co, data.14$w_g_co[i] > data.14$l_g_co[i])
+    exact14.co <- c(exact14.co,
+                    get.prob.2018(data.14$w_g_co[i],data.14$l_g_co[i],
+                                  atp.test.2018$tourney_name[i],atp=TRUE))
+    co.valid[i] <- 1
+  } else if (atp.test.2018$surface[i]=="Hard" &
+             !is.na(data.14$w_h_co[i]) & !is.na(data.14$l_h_co[i])){
+    res14.co <- c(res14.co, data.14$w_h_co[i] > data.14$l_h_co[i])
+    exact14.co <- c(exact14.co,
+                    get.prob.2018(data.14$w_h_co[i],data.14$l_h_co[i],
+                                  atp.test.2018$tourney_name[i],atp=TRUE))
+    co.valid[i] <- 1
+  } else if (atp.test.2018$surface[i]=="Clay" & 
+             !is.na(data.14$w_c_co[i]) & !is.na(data.14$l_c_co[i])){
+    res14.co <- c(res14.co, data.14$w_c_co[i] > data.14$l_c_co[i])
+    exact14.co <- c(exact14.co,
+                    get.prob.2018(data.14$w_c_co[i],data.14$l_c_co[i],
+                                  atp.test.2018$tourney_name[i],atp=TRUE))
+    co.valid[i] <- 1
+  }
+}
+co.valid <- which(co.valid==1)
+mean(res14.co)
+# mean(res14.co) NA initially, discovered 6 entries where only 1 player in a match had stats
+# so above edited to check for both w_*_co and l_*_co 
+# reason for this was noted previously during collection or in notes
+```
+Here (when comparing with #2) we see an instance of common-opponent data directly outperforming general data.
+
+```{r}
+# Now combine h2h data with co/general data
+# first overlap with co results
+res14 <- res2
+res14[co.valid] <- res14.co
+res14[h2h.valid] <- res14.h2h
+mean(res14)
+```
+In the same ballpark as final results in #13, but slightly worse, as is expected looking at the pure h2h and co results that are both slightly worse as well. Again to get a feel for the effect of the co data's effect, we will also only overlay h2h results onto general results from #2.
+```{r}
+res14.no_co <- res2
+res14.no_co[h2h.valid] <- res14.h2h
+mean(res14.no_co)
+```
+Here there is entirely no difference between the entries' results. But note that the actual match predictions are different. The # of correct predictions on the whole hasn't changed.
+```{r}
+which(res14!=res14.no_co)
+```
+```{r}
+# later added to save results
+res14.h2h.sv <- rep(-1,nrow(atp.test.2018))
+res14.h2h.sv[h2h.valid] <- res14.h2h
+res14.co.sv <- rep(-1,nrow(atp.test.2018))
+res14.co.sv[co.valid] <- res14.co
+exact14.h2h.sv <- rep(-1,nrow(atp.test.2018))
+exact14.h2h.sv[h2h.valid] <- exact14.h2h
+exact14.co.sv <- rep(-1,nrow(atp.test.2018))
+exact14.co.sv[co.valid] <- exact14.co
+saveRDS(exact14.h2h.sv,"p_est_exact_probs/atp2018_1y_s_h2h.rds")
+saveRDS(exact14.co.sv,"p_est_exact_probs/atp2018_1y_s_co.rds")
+```
+
+#### 15 - 2015-2017 Data - No Surface Distinction - H2H Data With CO Support
+
+```{r}
+# make a copy where co augmentation will go
+data.15 <- atp.h2h.3yrs
+# in h2h/co datasets, p1 is always the winner
+data.15$w_total_pts_served <- data.15$grass_pts_served1 + 
+  data.15$hard_pts_served1 + data.15$clay_pts_served1
+data.15$w_total_service_pts_won <- data.15$grass_service_pts_won1 +
+  data.15$hard_service_pts_won1 + data.15$clay_service_pts_won1
+data.15$w_p <- data.15$w_total_service_pts_won/data.15$w_total_pts_served
+data.15$l_total_pts_served <- data.15$grass_pts_served2 + 
+  data.15$hard_pts_served2 + data.15$clay_pts_served2
+data.15$l_total_service_pts_won <- data.15$grass_service_pts_won2 +
+  data.15$hard_service_pts_won2 + data.15$clay_service_pts_won2
+data.15$l_p <- data.15$l_total_service_pts_won/data.15$l_total_pts_served
+
+# first see accuracy for entries where h2h data is available
+h2h.valid <- which(!is.na(data.15$w_p)) #l_p also works
+res15.h2h <- rep(0,length(h2h.valid))
+exact15.h2h <- rep(0,length(h2h.valid))
+for (i in 1:length(h2h.valid)){
+  res15.h2h[i] <- data.15$w_p[h2h.valid[i]] > data.15$l_p[h2h.valid[i]]
+  exact15.h2h[i] <- get.prob.2018(data.15$w_p[h2h.valid[i]],data.15$l_p[h2h.valid[i]],
+                                  atp.test.2018$tourney_name[h2h.valid[i]],atp=TRUE)
+}
+mean(res15.h2h)
+
+# next see accuracy for all entries where co data is available 
+data.15$w_total_pts_served_co <- atp.co.3yrs$grass_pts_served1 + 
+  atp.co.3yrs$hard_pts_served1 + atp.co.3yrs$clay_pts_served1
+data.15$w_total_service_pts_won_co <- atp.co.3yrs$grass_service_pts_won1 +
+  atp.co.3yrs$hard_service_pts_won1 + atp.co.3yrs$clay_service_pts_won1
+data.15$w_p_co <- data.15$w_total_service_pts_won_co/data.15$w_total_pts_served_co
+data.15$l_total_pts_served_co <- atp.co.3yrs$grass_pts_served2 + 
+  atp.co.3yrs$hard_pts_served2 + atp.co.3yrs$clay_pts_served2
+data.15$l_total_service_pts_won_co <- atp.co.3yrs$grass_service_pts_won2 +
+  atp.co.3yrs$hard_service_pts_won2 + atp.co.3yrs$clay_service_pts_won2
+data.15$l_p_co <- data.15$l_total_service_pts_won_co/data.15$l_total_pts_served_co
+co.valid <- which(!is.na(data.15$w_p_co)) #l_p_co also works
+res15.co <- rep(0,length(co.valid))
+exact15.co <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res15.co[i] <- data.15$w_p_co[co.valid[i]] > data.15$l_p_co[co.valid[i]]
+  exact15.co[i] <- get.prob.2018(data.15$w_p_co[co.valid[i]],data.15$l_p_co[co.valid[i]],
+                                 atp.test.2018$tourney_name[co.valid[i]],atp=TRUE)
+}
+mean(res15.co)
+
+# finally h2h with co support
+res15 <- res3 # first use general data and apply new results on top
+res15[co.valid] <- res15.co
+res15[h2h.valid] <- res15.h2h
+mean(res15)
+```
+We see an increase for all 3 - pure h2h subset, pure co subset, proposed (h2h->co->general) approach. When it comes to matchup-specific data, it seems data recency becomes less of an issue. #16's results will probably be in-line with this conclusion since, as noted before in #12, the training sets overlap quite a lot. Again like in #13, we also look at accuracy when the CO layer is removed:
+```{r}
+res15.no_co <- res3
+res15.no_co[h2h.valid] <- res15.h2h
+mean(res15.no_co)
+```
+A slight decrease, exactly the same as before.
+
+```{r}
+# later added to save results
+res15.h2h.sv <- rep(-1,nrow(atp.test.2018))
+res15.h2h.sv[h2h.valid] <- res15.h2h
+res15.co.sv <- rep(-1,nrow(atp.test.2018))
+res15.co.sv[co.valid] <- res15.co
+exact15.h2h.sv <- rep(-1,nrow(atp.test.2018))
+exact15.h2h.sv[h2h.valid] <- exact15.h2h
+exact15.co.sv <- rep(-1,nrow(atp.test.2018))
+exact15.co.sv[co.valid] <- exact15.co
+saveRDS(exact15.h2h.sv,"p_est_exact_probs/atp2018_3y_ns_h2h.rds")
+saveRDS(exact15.co.sv,"p_est_exact_probs/atp2018_3y_ns_co.rds")
+```
+
+#### 16 - 2015-2017 Data - Surface Distinction - H2H Data With CO Support
+
+```{r}
+data.16 <- atp.h2h.3yrs
+# g for grass_p, h for hard_p, c for clay_p
+data.16$w_g <- data.16$grass_service_pts_won1/data.16$grass_pts_served1
+data.16$w_h <- data.16$hard_service_pts_won1/data.16$hard_pts_served1
+data.16$w_c <- data.16$clay_service_pts_won1/data.16$clay_pts_served1
+data.16$l_g <- data.16$grass_service_pts_won2/data.16$grass_pts_served2
+data.16$l_h <- data.16$hard_service_pts_won2/data.16$hard_pts_served2
+data.16$l_c <- data.16$clay_service_pts_won2/data.16$clay_pts_served2
+
+# see performance for pure h2h data separated by surface
+h2h.valid <- rep(0,nrow(atp.test.2018))
+res16.h2h <- c() # initialize and add elements by res14.h2h <- c(res14.h2h,...)
+exact16.h2h <- c()
+for (i in 1:nrow(atp.test.2018)){
+  if (atp.test.2018$surface[i]=="Grass" && !is.na(data.16$w_g[i])){
+    res16.h2h <- c(res16.h2h, data.16$w_g[i] > data.16$l_g[i])
+    exact16.h2h <- c(exact16.h2h,
+                     get.prob.2018(data.16$w_g[i],data.16$l_g[i],
+                                   atp.test.2018$tourney_name[i],atp=TRUE))
+    h2h.valid[i] <- 1
+  } else if (atp.test.2018$surface[i]=="Hard" && !is.na(data.16$w_h[i])){
+    res16.h2h <- c(res16.h2h, data.16$w_h[i] > data.16$l_h[i])
+    exact16.h2h <- c(exact16.h2h,
+                     get.prob.2018(data.16$w_h[i],data.16$l_h[i],
+                                   atp.test.2018$tourney_name[i],atp=TRUE))
+    h2h.valid[i] <- 1
+  } else if (atp.test.2018$surface[i]=="Clay" && !is.na(data.16$w_c[i])){
+    res16.h2h <- c(res16.h2h, data.16$w_c[i] > data.16$l_c[i])
+    exact16.h2h <- c(exact16.h2h,
+                     get.prob.2018(data.16$w_c[i],data.16$l_c[i],
+                                   atp.test.2018$tourney_name[i],atp=TRUE))
+    h2h.valid[i] <- 1
+  }
+}
+h2h.valid <- which(h2h.valid==1)
+mean(res16.h2h)
+
+# see performance for pure co data separated by surface
+data.16$w_g_co <- atp.co.3yrs$grass_service_pts_won1/atp.co.3yrs$grass_pts_served1
+data.16$w_h_co <- atp.co.3yrs$hard_service_pts_won1/atp.co.3yrs$hard_pts_served1
+data.16$w_c_co <- atp.co.3yrs$clay_service_pts_won1/atp.co.3yrs$clay_pts_served1
+data.16$l_g_co <- atp.co.3yrs$grass_service_pts_won2/atp.co.3yrs$grass_pts_served2
+data.16$l_h_co <- atp.co.3yrs$hard_service_pts_won2/atp.co.3yrs$hard_pts_served2
+data.16$l_c_co <- atp.co.3yrs$clay_service_pts_won2/atp.co.3yrs$clay_pts_served2
+co.valid <- rep(0,nrow(atp.test.2018))
+res16.co <- c() # same method as before
+exact16.co <- c()
+for (i in 1:nrow(atp.test.2018)){
+  if (atp.test.2018$surface[i]=="Grass" & 
+      !is.na(data.16$w_g_co[i]) & !is.na(data.16$l_g_co[i])){
+    res16.co <- c(res16.co, data.16$w_g_co[i] > data.16$l_g_co[i])
+    exact16.co <- c(exact16.co,
+                    get.prob.2018(data.16$w_g_co[i],data.16$l_g_co[i],
+                                  atp.test.2018$tourney_name[i],atp=TRUE))
+    co.valid[i] <- 1
+  } else if (atp.test.2018$surface[i]=="Hard" &
+             !is.na(data.16$w_h_co[i]) & !is.na(data.16$l_h_co[i])){
+    res16.co <- c(res16.co, data.16$w_h_co[i] > data.16$l_h_co[i])
+    exact16.co <- c(exact16.co,
+                    get.prob.2018(data.16$w_h_co[i],data.16$l_h_co[i],
+                                  atp.test.2018$tourney_name[i],atp=TRUE))
+    co.valid[i] <- 1
+  } else if (atp.test.2018$surface[i]=="Clay" & 
+             !is.na(data.16$w_c_co[i]) & !is.na(data.16$l_c_co[i])){
+    res16.co <- c(res16.co, data.16$w_c_co[i] > data.16$l_c_co[i])
+    exact16.co <- c(exact16.co,
+                    get.prob.2018(data.16$w_c_co[i],data.16$l_c_co[i],
+                                  atp.test.2018$tourney_name[i],atp=TRUE))
+    co.valid[i] <- 1
+  }
+}
+co.valid <- which(co.valid==1)
+mean(res16.co)
+
+res16 <- res4
+res16[co.valid] <- res16.co
+res16[h2h.valid] <- res16.h2h
+mean(res16)
+```
+Substantial increase for all 3 compared to #14. Though this was partly expected, as noted in #15. Will see if same trends present in wta equivalent.
+```{r}
+# again see difference if co layer removed
+res16.no_co <- res4
+res16.no_co[h2h.valid] <- res16.h2h
+mean(res16.no_co)
+```
+
+```{r}
+# later added to save results
+res16.h2h.sv <- rep(-1,nrow(atp.test.2018))
+res16.h2h.sv[h2h.valid] <- res16.h2h
+res16.co.sv <- rep(-1,nrow(atp.test.2018))
+res16.co.sv[co.valid] <- res16.co
+exact16.h2h.sv <- rep(-1,nrow(atp.test.2018))
+exact16.h2h.sv[h2h.valid] <- exact16.h2h
+exact16.co.sv <- rep(-1,nrow(atp.test.2018))
+exact16.co.sv[co.valid] <- exact16.co
+saveRDS(exact16.h2h.sv,"p_est_exact_probs/atp2018_3y_s_h2h.rds")
+saveRDS(exact16.co.sv,"p_est_exact_probs/atp2018_3y_s_co.rds")
+```
+
+### Opponent Adjusted WTA
+
+Conclusions to be drawn all together after #24.
+
+#### 17 - 2017 Data - No Surface Distinction - Opponent-Adjusted Formula
+
+```{r}
+# same augmentation as [5]
+# augmentations to training set
+# reload set after experiment
+wta.train.2017$total_pts_served <- wta.train.2017$grass_pts_served +
+  wta.train.2017$clay_pts_served + wta.train.2017$hard_pts_served
+wta.train.2017$total_service_pts_won <- wta.train.2017$grass_service_pts_won +
+  wta.train.2017$clay_service_pts_won + wta.train.2017$hard_service_pts_won
+wta.train.2017$p.estimate <- wta.train.2017$total_service_pts_won / 
+  wta.train.2017$total_pts_served
+wta.train.2017$p.estimate[which(is.na(wta.train.2017$p.estimate))] <- 
+  mean(wta.train.2017$p.estimate[-which(is.na(wta.train.2017$p.estimate))])
+
+# get q estimates as well
+wta.train.2017$total_pts_received <- wta.train.2017$grass_pts_received +
+  wta.train.2017$hard_pts_received + wta.train.2017$clay_pts_received
+wta.train.2017$total_receiving_pts_won <- wta.train.2017$grass_receiving_pts_won +
+  wta.train.2017$hard_receiving_pts_won + wta.train.2017$clay_receiving_pts_won
+wta.train.2017$q.estimate <- wta.train.2017$total_receiving_pts_won /
+  wta.train.2017$total_pts_received
+wta.train.2017$q.estimate[which(is.na(wta.train.2017$q.estimate))] <- 
+  mean(wta.train.2017$q.estimate[-which(is.na(wta.train.2017$q.estimate))])
+
+q.bar <- mean(wta.train.2017$q.estimate)
+n <- nrow(wta.test.2018)
+res17 <- rep(0,n)
+exact.res17 <- rep(0,n) # added much later in
+for (i in 1:n){
+  winner <- wta.test.2018$winner_name[i]
+  loser <- wta.test.2018$loser_name[i]
+  winner.idx <- which(wta.train.2017$name==winner)
+  loser.idx <- which(wta.train.2017$name==loser)
+  winner.adj.p <- wta.train.2017$p.estimate[winner.idx] - 
+    (wta.train.2017$q.estimate[loser.idx] - q.bar)
+  loser.adj.p <- wta.train.2017$p.estimate[loser.idx] - 
+    (wta.train.2017$q.estimate[winner.idx] - q.bar)
+  res17[i] <- winner.adj.p > loser.adj.p
+  exact.res17[i] <- get.prob.2018(winner.adj.p,loser.adj.p,
+                                  wta.test.2018$tourney_name[i],atp=FALSE)
+}
+mean(res17)
+saveRDS(exact.res17,"p_est_exact_probs/wta2018_1y_ns_oaf_exact.rds")
+```
+
+#### 18 - 2017 Data - Surface Distinction - Opponent-Adjusted Formula
+
+```{r}
+# p's
+wta.train.2017$grass_p <- wta.train.2017$grass_service_pts_won/
+  wta.train.2017$grass_pts_served
+wta.train.2017$hard_p <- wta.train.2017$hard_service_pts_won/
+  wta.train.2017$hard_pts_served
+wta.train.2017$clay_p <- wta.train.2017$clay_service_pts_won/
+  wta.train.2017$clay_pts_served
+wta.train.2017$grass_p[which(is.na(wta.train.2017$grass_p))] <- 
+  mean(wta.train.2017$grass_p[-which(is.na(wta.train.2017$grass_p))])
+wta.train.2017$hard_p[which(is.na(wta.train.2017$hard_p))] <- 
+  mean(wta.train.2017$hard_p[-which(is.na(wta.train.2017$hard_p))])
+wta.train.2017$clay_p[which(is.na(wta.train.2017$clay_p))] <- 
+  mean(wta.train.2017$clay_p[-which(is.na(wta.train.2017$clay_p))])
+# q's
+wta.train.2017$grass_q <- wta.train.2017$grass_receiving_pts_won /
+  wta.train.2017$grass_pts_received
+wta.train.2017$hard_q <- wta.train.2017$hard_receiving_pts_won /
+  wta.train.2017$hard_pts_received
+wta.train.2017$clay_q <- wta.train.2017$clay_receiving_pts_won /
+  wta.train.2017$clay_pts_received
+wta.train.2017$grass_q[which(is.na(wta.train.2017$grass_q))] <- 
+  mean(wta.train.2017$grass_q[-which(is.na(wta.train.2017$grass_q))])
+wta.train.2017$hard_q[which(is.na(wta.train.2017$hard_q))] <- 
+  mean(wta.train.2017$hard_q[-which(is.na(wta.train.2017$hard_q))])
+wta.train.2017$clay_q[which(is.na(wta.train.2017$clay_q))] <- 
+  mean(wta.train.2017$clay_q[-which(is.na(wta.train.2017$clay_q))])
+q.bar.grass <- mean(wta.train.2017$grass_q)
+q.bar.hard <- mean(wta.train.2017$hard_q)
+q.bar.clay <- mean(wta.train.2017$clay_q)
+
+n <- nrow(wta.test.2018)
+res18 <- rep(0,n)
+exact.res18 <- rep(0,n) # added much later in
+for (i in 1:n){
+  winner <- wta.test.2018$winner_name[i]
+  loser <- wta.test.2018$loser_name[i]
+  winner.idx <- which(wta.train.2017$name==winner)
+  loser.idx <- which(wta.train.2017$name==loser)
+  surf <- wta.test.2018$surface[i]
+  if (surf=="Grass") {
+    winner.adj.p <- wta.train.2017$grass_p[winner.idx] - 
+      (wta.train.2017$grass_q[loser.idx] - q.bar.grass)
+    loser.adj.p <- wta.train.2017$grass_p[loser.idx] - 
+      (wta.train.2017$grass_q[winner.idx] - q.bar.grass)
+    res18[i] <- winner.adj.p > loser.adj.p
+  } else if (surf=="Hard"){
+    winner.adj.p <- wta.train.2017$hard_p[winner.idx] - 
+      (wta.train.2017$hard_q[loser.idx] - q.bar.hard)
+    loser.adj.p <- wta.train.2017$hard_p[loser.idx] - 
+      (wta.train.2017$hard_q[winner.idx] - q.bar.hard)
+    res18[i] <- winner.adj.p > loser.adj.p
+  } else if (surf=="Clay"){
+    winner.adj.p <- wta.train.2017$clay_p[winner.idx] - 
+      (wta.train.2017$clay_q[loser.idx] - q.bar.clay)
+    loser.adj.p <- wta.train.2017$clay_p[loser.idx] - 
+      (wta.train.2017$clay_q[winner.idx] - q.bar.clay)
+    res18[i] <- winner.adj.p > loser.adj.p
+  }
+  exact.res18[i] <- get.prob.2018(winner.adj.p,loser.adj.p,
+                                  wta.test.2018$tourney_name[i],atp=FALSE)
+}
+mean(res18)
+saveRDS(exact.res18,"p_est_exact_probs/wta2018_1y_s_oaf_exact.rds")
+```
+
+#### 19 - 2015-2017 Data - No Surface Distinction - Opponent-Adjusted Formula
+
+```{r}
+wta.train.3yrs$total_pts_served <- wta.train.3yrs$grass_pts_served +
+  wta.train.3yrs$clay_pts_served + wta.train.3yrs$hard_pts_served
+wta.train.3yrs$total_service_pts_won <- wta.train.3yrs$grass_service_pts_won +
+  wta.train.3yrs$clay_service_pts_won + wta.train.3yrs$hard_service_pts_won
+wta.train.3yrs$p.estimate <- wta.train.3yrs$total_service_pts_won / 
+  wta.train.3yrs$total_pts_served
+wta.train.3yrs$p.estimate[which(is.na(wta.train.3yrs$p.estimate))] <- 
+  mean(wta.train.3yrs$p.estimate[-which(is.na(wta.train.3yrs$p.estimate))])
+
+# get q estimates as well
+wta.train.3yrs$total_pts_received <- wta.train.3yrs$grass_pts_received +
+  wta.train.3yrs$hard_pts_received + wta.train.3yrs$clay_pts_received
+wta.train.3yrs$total_receiving_pts_won <- wta.train.3yrs$grass_receiving_pts_won +
+  wta.train.3yrs$hard_receiving_pts_won + wta.train.3yrs$clay_receiving_pts_won
+wta.train.3yrs$q.estimate <- wta.train.3yrs$total_receiving_pts_won /
+  wta.train.3yrs$total_pts_received
+wta.train.3yrs$q.estimate[which(is.na(wta.train.3yrs$q.estimate))] <- 
+  mean(wta.train.3yrs$q.estimate[-which(is.na(wta.train.3yrs$q.estimate))])
+
+q.bar <- mean(wta.train.3yrs$q.estimate)
+n <- nrow(wta.test.2018)
+res19 <- rep(0,n)
+exact.res19 <- rep(0,n) # added much later in
+for (i in 1:n){
+  winner <- wta.test.2018$winner_name[i]
+  loser <- wta.test.2018$loser_name[i]
+  winner.idx <- which(wta.train.3yrs$name==winner)
+  loser.idx <- which(wta.train.3yrs$name==loser)
+  winner.adj.p <- wta.train.3yrs$p.estimate[winner.idx] - 
+    (wta.train.3yrs$q.estimate[loser.idx] - q.bar)
+  loser.adj.p <- wta.train.3yrs$p.estimate[loser.idx] - 
+    (wta.train.3yrs$q.estimate[winner.idx] - q.bar)
+  res19[i] <- winner.adj.p > loser.adj.p
+  exact.res19[i] <- get.prob.2018(winner.adj.p,loser.adj.p,
+                                  wta.test.2018$tourney_name[i],atp=FALSE)
+}
+mean(res19)
+saveRDS(exact.res19,"p_est_exact_probs/wta2018_3y_ns_oaf_exact.rds")
+```
+
+#### 20 - 2015-2017 Data - Surface Distinction - Opponent-Adjusted Formula
+
+```{r}
+# p's
+wta.train.3yrs$grass_p <- wta.train.3yrs$grass_service_pts_won/
+  wta.train.3yrs$grass_pts_served
+wta.train.3yrs$hard_p <- wta.train.3yrs$hard_service_pts_won/
+  wta.train.3yrs$hard_pts_served
+wta.train.3yrs$clay_p <- wta.train.3yrs$clay_service_pts_won/
+  wta.train.3yrs$clay_pts_served
+wta.train.3yrs$grass_p[which(is.na(wta.train.3yrs$grass_p))] <- 
+  mean(wta.train.3yrs$grass_p[-which(is.na(wta.train.3yrs$grass_p))])
+wta.train.3yrs$hard_p[which(is.na(wta.train.3yrs$hard_p))] <- 
+  mean(wta.train.3yrs$hard_p[-which(is.na(wta.train.3yrs$hard_p))])
+wta.train.3yrs$clay_p[which(is.na(wta.train.3yrs$clay_p))] <- 
+  mean(wta.train.3yrs$clay_p[-which(is.na(wta.train.3yrs$clay_p))])
+# q's
+wta.train.3yrs$grass_q <- wta.train.3yrs$grass_receiving_pts_won /
+  wta.train.3yrs$grass_pts_received
+wta.train.3yrs$hard_q <- wta.train.3yrs$hard_receiving_pts_won /
+  wta.train.3yrs$hard_pts_received
+wta.train.3yrs$clay_q <- wta.train.3yrs$clay_receiving_pts_won /
+  wta.train.3yrs$clay_pts_received
+wta.train.3yrs$grass_q[which(is.na(wta.train.3yrs$grass_q))] <- 
+  mean(wta.train.3yrs$grass_q[-which(is.na(wta.train.3yrs$grass_q))])
+wta.train.3yrs$hard_q[which(is.na(wta.train.3yrs$hard_q))] <- 
+  mean(wta.train.3yrs$hard_q[-which(is.na(wta.train.3yrs$hard_q))])
+wta.train.3yrs$clay_q[which(is.na(wta.train.3yrs$clay_q))] <- 
+  mean(wta.train.3yrs$clay_q[-which(is.na(wta.train.3yrs$clay_q))])
+q.bar.grass <- mean(wta.train.3yrs$grass_q)
+q.bar.hard <- mean(wta.train.3yrs$hard_q)
+q.bar.clay <- mean(wta.train.3yrs$clay_q)
+
+n <- nrow(wta.test.2018)
+res20 <- rep(0,n)
+exact.res20 <- rep(0,n) # added much later in
+for (i in 1:n){
+  winner <- wta.test.2018$winner_name[i]
+  loser <- wta.test.2018$loser_name[i]
+  winner.idx <- which(wta.train.3yrs$name==winner)
+  loser.idx <- which(wta.train.3yrs$name==loser)
+  surf <- wta.test.2018$surface[i]
+  if (surf=="Grass") {
+    winner.adj.p <- wta.train.3yrs$grass_p[winner.idx] - 
+      (wta.train.3yrs$grass_q[loser.idx] - q.bar.grass)
+    loser.adj.p <- wta.train.3yrs$grass_p[loser.idx] - 
+      (wta.train.3yrs$grass_q[winner.idx] - q.bar.grass)
+    res20[i] <- winner.adj.p > loser.adj.p
+  } else if (surf=="Hard"){
+    winner.adj.p <- wta.train.3yrs$hard_p[winner.idx] - 
+      (wta.train.3yrs$hard_q[loser.idx] - q.bar.hard)
+    loser.adj.p <- wta.train.3yrs$hard_p[loser.idx] - 
+      (wta.train.3yrs$hard_q[winner.idx] - q.bar.hard)
+    res20[i] <- winner.adj.p > loser.adj.p
+  } else if (surf=="Clay"){
+    winner.adj.p <- wta.train.3yrs$clay_p[winner.idx] - 
+      (wta.train.3yrs$clay_q[loser.idx] - q.bar.clay)
+    loser.adj.p <- wta.train.3yrs$clay_p[loser.idx] - 
+      (wta.train.3yrs$clay_q[winner.idx] - q.bar.clay)
+    res20[i] <- winner.adj.p > loser.adj.p
+  }
+  exact.res20[i] <- get.prob.2018(winner.adj.p,loser.adj.p,
+                                  wta.test.2018$tourney_name[i],atp=FALSE)
+}
+mean(res20)
+saveRDS(exact.res20,"p_est_exact_probs/wta2018_3y_s_oaf_exact.rds")
+```
+
+#### 21 - 2017 Data - No Surface Distinction - H2H Data With CO Support
+
+```{r}
+# make a copy where co augmentation will go
+data.21 <- wta.h2h.2017
+# in h2h/co datasets, p1 is always the winner
+data.21$w_total_pts_served <- data.21$grass_pts_served1 + 
+  data.21$hard_pts_served1 + data.21$clay_pts_served1
+data.21$w_total_service_pts_won <- data.21$grass_service_pts_won1 +
+  data.21$hard_service_pts_won1 + data.21$clay_service_pts_won1
+data.21$w_p <- data.21$w_total_service_pts_won/data.21$w_total_pts_served
+data.21$l_total_pts_served <- data.21$grass_pts_served2 + 
+  data.21$hard_pts_served2 + data.21$clay_pts_served2
+data.21$l_total_service_pts_won <- data.21$grass_service_pts_won2 +
+  data.21$hard_service_pts_won2 + data.21$clay_service_pts_won2
+data.21$l_p <- data.21$l_total_service_pts_won/data.21$l_total_pts_served
+
+# first see accuracy for entries where h2h data is available
+h2h.valid <- which(!is.na(data.21$w_p)) #l_p also works
+res21.h2h <- rep(0,length(h2h.valid))
+exact21.h2h <- rep(0,length(h2h.valid))
+for (i in 1:length(h2h.valid)){
+  res21.h2h[i] <- data.21$w_p[h2h.valid[i]] > data.21$l_p[h2h.valid[i]]
+  exact21.h2h[i] <- get.prob.2018(data.21$w_p[h2h.valid[i]],data.21$l_p[h2h.valid[i]],
+                                  wta.test.2018$tourney_name[h2h.valid[i]],atp=FALSE)
+}
+mean(res21.h2h) # 0.84483
+
+# next see accuracy for all entries where co data is available 
+data.21$w_total_pts_served_co <- wta.co.2017$grass_pts_served1 + 
+  wta.co.2017$hard_pts_served1 + wta.co.2017$clay_pts_served1
+data.21$w_total_service_pts_won_co <- wta.co.2017$grass_service_pts_won1 +
+  wta.co.2017$hard_service_pts_won1 + wta.co.2017$clay_service_pts_won1
+data.21$w_p_co <- data.21$w_total_service_pts_won_co/data.21$w_total_pts_served_co
+data.21$l_total_pts_served_co <- wta.co.2017$grass_pts_served2 + 
+  wta.co.2017$hard_pts_served2 + wta.co.2017$clay_pts_served2
+data.21$l_total_service_pts_won_co <- wta.co.2017$grass_service_pts_won2 +
+  wta.co.2017$hard_service_pts_won2 + wta.co.2017$clay_service_pts_won2
+data.21$l_p_co <- data.21$l_total_service_pts_won_co/data.21$l_total_pts_served_co
+co.valid <- which(!is.na(data.21$w_p_co) & !is.na(data.21$l_p_co)) #l_p_co also works
+res21.co <- rep(0,length(co.valid))
+exact21.co <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res21.co[i] <- data.21$w_p_co[co.valid[i]] > data.21$l_p_co[co.valid[i]]
+  exact21.co[i] <- get.prob.2018(data.21$w_p_co[co.valid[i]],data.21$l_p_co[co.valid[i]],
+                                 wta.test.2018$tourney_name[co.valid[i]],atp=FALSE)
+}
+mean(res21.co) # 0.628
+
+res21.no_co <- res5
+res21.no_co[h2h.valid] <- res21.h2h
+mean(res21.no_co) # 0.675
+
+# finally h2h with co support
+res21 <- res5 # first use general data and apply new results on top
+res21[co.valid] <- res21.co
+res21[h2h.valid] <- res21.h2h
+mean(res21)
+```
+```{r}
+# later added to save results
+res21.h2h.sv <- rep(-1,nrow(wta.test.2018))
+res21.h2h.sv[h2h.valid] <- res21.h2h
+res21.co.sv <- rep(-1,nrow(wta.test.2018))
+res21.co.sv[co.valid] <- res21.co
+exact21.h2h.sv <- rep(-1,nrow(wta.test.2018))
+exact21.h2h.sv[h2h.valid] <- exact21.h2h
+exact21.co.sv <- rep(-1,nrow(wta.test.2018))
+exact21.co.sv[co.valid] <- exact21.co
+saveRDS(exact21.h2h.sv,"p_est_exact_probs/wta2018_1y_ns_h2h.rds")
+saveRDS(exact21.co.sv,"p_est_exact_probs/wta2018_1y_ns_co.rds")
+```
+
+#### 22 - 2017 Data - Surface Distinction - H2H Data With CO Support
+
+```{r}
+data.22 <- wta.h2h.2017
+# g for grass_p, h for hard_p, c for clay_p
+data.22$w_g <- data.22$grass_service_pts_won1/data.22$grass_pts_served1
+data.22$w_h <- data.22$hard_service_pts_won1/data.22$hard_pts_served1
+data.22$w_c <- data.22$clay_service_pts_won1/data.22$clay_pts_served1
+data.22$l_g <- data.22$grass_service_pts_won2/data.22$grass_pts_served2
+data.22$l_h <- data.22$hard_service_pts_won2/data.22$hard_pts_served2
+data.22$l_c <- data.22$clay_service_pts_won2/data.22$clay_pts_served2
+
+# see performance for pure h2h data separated by surface
+res22.h2h <- c() # initialize and add elements by res14.h2h <- c(res14.h2h,...)
+exact22.h2h <- c()
+h2h.valid <- rep(0,nrow(wta.test.2018))
+for (i in 1:nrow(wta.test.2018)){
+  if (wta.test.2018$surface[i]=="Grass" && !is.na(data.22$w_g[i])){
+    res22.h2h <- c(res22.h2h, data.22$w_g[i] > data.22$l_g[i])
+    exact22.h2h <- c(exact22.h2h,
+                     get.prob.2018(data.22$w_g[i],data.22$l_g[i],
+                                   wta.test.2018$tourney_name[i],atp=FALSE))
+    h2h.valid[i] <- 1
+  } else if (wta.test.2018$surface[i]=="Hard" && !is.na(data.22$w_h[i])){
+    res22.h2h <- c(res22.h2h, data.22$w_h[i] > data.22$l_h[i])
+    exact22.h2h <- c(exact22.h2h,
+                     get.prob.2018(data.22$w_h[i],data.22$l_h[i],
+                                   wta.test.2018$tourney_name[i],atp=FALSE))
+    h2h.valid[i] <- 1
+  } else if (wta.test.2018$surface[i]=="Clay" && !is.na(data.22$w_c[i])){
+    res22.h2h <- c(res22.h2h, data.22$w_c[i] > data.22$l_c[i])
+    exact22.h2h <- c(exact22.h2h,
+                     get.prob.2018(data.22$w_c[i],data.22$l_c[i],
+                                   wta.test.2018$tourney_name[i],atp=FALSE))
+    h2h.valid[i] <- 1
+  }
+}
+h2h.valid <- which(h2h.valid==1)
+mean(res22.h2h) # 0.867
+
+# see performance for pure co data separated by surface
+data.22$w_g_co <- wta.co.2017$grass_service_pts_won1/wta.co.2017$grass_pts_served1
+data.22$w_h_co <- wta.co.2017$hard_service_pts_won1/wta.co.2017$hard_pts_served1
+data.22$w_c_co <- wta.co.2017$clay_service_pts_won1/wta.co.2017$clay_pts_served1
+data.22$l_g_co <- wta.co.2017$grass_service_pts_won2/wta.co.2017$grass_pts_served2
+data.22$l_h_co <- wta.co.2017$hard_service_pts_won2/wta.co.2017$hard_pts_served2
+data.22$l_c_co <- wta.co.2017$clay_service_pts_won2/wta.co.2017$clay_pts_served2
+res22.co <- c() # same method as before
+exact22.co <- c()
+co.valid <- rep(0,nrow(wta.test.2018))
+for (i in 1:nrow(wta.test.2018)){
+  if (wta.test.2018$surface[i]=="Grass" & 
+      !is.na(data.22$w_g_co[i]) & !is.na(data.22$l_g_co[i])){
+    res22.co <- c(res22.co, data.22$w_g_co[i] > data.22$l_g_co[i])
+    exact22.co <- c(exact22.co,
+                    get.prob.2018(data.22$w_g_co[i],data.22$l_g_co[i],
+                                  wta.test.2018$tourney_name[i],atp=FALSE))
+    co.valid[i] <- 1
+  } else if (wta.test.2018$surface[i]=="Hard" &
+             !is.na(data.22$w_h_co[i]) & !is.na(data.22$l_h_co[i])){
+    res22.co <- c(res22.co, data.22$w_h_co[i] > data.22$l_h_co[i])
+    exact22.co <- c(exact22.co,
+                    get.prob.2018(data.22$w_h_co[i],data.22$l_h_co[i],
+                                  wta.test.2018$tourney_name[i],atp=FALSE))
+    co.valid[i] <- 1
+  } else if (wta.test.2018$surface[i]=="Clay" & 
+             !is.na(data.22$w_c_co[i]) & !is.na(data.22$l_c_co[i])){
+    res22.co <- c(res22.co, data.22$w_c_co[i] > data.22$l_c_co[i])
+    exact22.co <- c(exact22.co,
+                    get.prob.2018(data.22$w_c_co[i],data.22$l_c_co[i],
+                                  wta.test.2018$tourney_name[i],atp=FALSE))
+    co.valid[i] <- 1
+  }
+}
+co.valid <- which(co.valid==1)
+mean(res22.co) # 0.605
+
+# h2h overlaid on general data
+res22.no_co <- res6
+res22.no_co[h2h.valid] <- res22.h2h
+mean(res22.no_co) # 0.679
+
+# h2h -> co -> general
+res22 <- res6
+res22[co.valid] <- res22.co
+res22[h2h.valid] <- res22.h2h
+mean(res22)
+```
+
+```{r}
+# later added to save results
+res22.h2h.sv <- rep(-1,nrow(wta.test.2018))
+res22.h2h.sv[h2h.valid] <- res22.h2h
+res22.co.sv <- rep(-1,nrow(wta.test.2018))
+res22.co.sv[co.valid] <- res22.co
+exact22.h2h.sv <- rep(-1,nrow(wta.test.2018))
+exact22.h2h.sv[h2h.valid] <- exact22.h2h
+exact22.co.sv <- rep(-1,nrow(wta.test.2018))
+exact22.co.sv[co.valid] <- exact22.co
+saveRDS(exact22.h2h.sv,"p_est_exact_probs/wta2018_1y_s_h2h.rds")
+saveRDS(exact22.co.sv,"p_est_exact_probs/wta2018_1y_s_co.rds")
+```
+
+#### 23 - 2015-2017 Data - No Surface Distinction - H2H Data With CO Support
+
+```{r}
+# make a copy where co augmentation will go
+data.23 <- wta.h2h.3yrs
+# in h2h/co datasets, p1 is always the winner
+data.23$w_total_pts_served <- data.23$grass_pts_served1 + 
+  data.23$hard_pts_served1 + data.23$clay_pts_served1
+data.23$w_total_service_pts_won <- data.23$grass_service_pts_won1 +
+  data.23$hard_service_pts_won1 + data.23$clay_service_pts_won1
+data.23$w_p <- data.23$w_total_service_pts_won/data.23$w_total_pts_served
+data.23$l_total_pts_served <- data.23$grass_pts_served2 + 
+  data.23$hard_pts_served2 + data.23$clay_pts_served2
+data.23$l_total_service_pts_won <- data.23$grass_service_pts_won2 +
+  data.23$hard_service_pts_won2 + data.23$clay_service_pts_won2
+data.23$l_p <- data.23$l_total_service_pts_won/data.23$l_total_pts_served
+
+# first see accuracy for entries where h2h data is available
+h2h.valid <- which(!is.na(data.23$w_p)) #l_p also works
+res23.h2h <- rep(0,length(h2h.valid))
+exact23.h2h <- rep(0,length(h2h.valid))
+for (i in 1:length(h2h.valid)){
+  res23.h2h[i] <- data.23$w_p[h2h.valid[i]] > data.23$l_p[h2h.valid[i]]
+  exact23.h2h[i] <- get.prob.2018(data.23$w_p[h2h.valid[i]],data.23$l_p[h2h.valid[i]],
+                                  wta.test.2018$tourney_name[h2h.valid[i]],atp=FALSE)
+}
+mean(res23.h2h) # 0.951
+
+# next see accuracy for all entries where co data is available 
+data.23$w_total_pts_served_co <- wta.co.3yrs$grass_pts_served1 + 
+  wta.co.3yrs$hard_pts_served1 + wta.co.3yrs$clay_pts_served1
+data.23$w_total_service_pts_won_co <- wta.co.3yrs$grass_service_pts_won1 +
+  wta.co.3yrs$hard_service_pts_won1 + wta.co.3yrs$clay_service_pts_won1
+data.23$w_p_co <- data.23$w_total_service_pts_won_co/data.23$w_total_pts_served_co
+data.23$l_total_pts_served_co <- wta.co.3yrs$grass_pts_served2 + 
+  wta.co.3yrs$hard_pts_served2 + wta.co.3yrs$clay_pts_served2
+data.23$l_total_service_pts_won_co <- wta.co.3yrs$grass_service_pts_won2 +
+  wta.co.3yrs$hard_service_pts_won2 + wta.co.3yrs$clay_service_pts_won2
+data.23$l_p_co <- data.23$l_total_service_pts_won_co/data.23$l_total_pts_served_co
+co.valid <- which(!is.na(data.23$w_p_co) & !is.na(data.23$l_p_co)) 
+res23.co <- rep(0,length(co.valid))
+exact23.co <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res23.co[i] <- data.23$w_p_co[co.valid[i]] > data.23$l_p_co[co.valid[i]]
+  exact23.co[i] <- get.prob.2018(data.23$w_p_co[co.valid[i]],data.23$l_p_co[co.valid[i]],
+                                 wta.test.2018$tourney_name[co.valid[i]],atp=FALSE)
+}
+mean(res23.co) # 0.606
+
+# just h2h and general data
+res23.no_co <- res7
+res23.no_co[h2h.valid] <- res23.h2h
+mean(res23.no_co) # 0.715
+
+# finally h2h with co support
+res23 <- res7 
+res23[co.valid] <- res23.co
+res23[h2h.valid] <- res23.h2h
+mean(res23)
+```
+```{r}
+# later added to save results
+res23.h2h.sv <- rep(-1,nrow(wta.test.2018))
+res23.h2h.sv[h2h.valid] <- res23.h2h
+res23.co.sv <- rep(-1,nrow(wta.test.2018))
+res23.co.sv[co.valid] <- res23.co
+exact23.h2h.sv <- rep(-1,nrow(wta.test.2018))
+exact23.h2h.sv[h2h.valid] <- exact23.h2h
+exact23.co.sv <- rep(-1,nrow(wta.test.2018))
+exact23.co.sv[co.valid] <- exact23.co
+saveRDS(exact23.h2h.sv,"p_est_exact_probs/wta2018_3y_ns_h2h.rds")
+saveRDS(exact23.co.sv,"p_est_exact_probs/wta2018_3y_ns_co.rds")
+```
+
+#### 24 - 2015-2017 Data - Surface Distinction - H2H Data With CO Support
+
+```{r}
+data.24 <- wta.h2h.3yrs
+# g for grass_p, h for hard_p, c for clay_p
+data.24$w_g <- data.24$grass_service_pts_won1/data.24$grass_pts_served1
+data.24$w_h <- data.24$hard_service_pts_won1/data.24$hard_pts_served1
+data.24$w_c <- data.24$clay_service_pts_won1/data.24$clay_pts_served1
+data.24$l_g <- data.24$grass_service_pts_won2/data.24$grass_pts_served2
+data.24$l_h <- data.24$hard_service_pts_won2/data.24$hard_pts_served2
+data.24$l_c <- data.24$clay_service_pts_won2/data.24$clay_pts_served2
+
+# see performance for pure h2h data separated by surface
+res24.h2h <- c() # initialize and add elements by res14.h2h <- c(res14.h2h,...)
+exact24.h2h <- c()
+h2h.valid <- rep(0,nrow(wta.test.2018))
+for (i in 1:nrow(wta.test.2018)){
+  if (wta.test.2018$surface[i]=="Grass" && !is.na(data.24$w_g[i])){
+    res24.h2h <- c(res24.h2h, data.24$w_g[i] > data.24$l_g[i])
+    exact24.h2h <- c(exact24.h2h,
+                     get.prob.2018(data.24$w_g[i],data.24$l_g[i],
+                                   wta.test.2018$tourney_name[i],atp=FALSE))
+    h2h.valid[i] <- 1
+  } else if (wta.test.2018$surface[i]=="Hard" && !is.na(data.24$w_h[i])){
+    res24.h2h <- c(res24.h2h, data.24$w_h[i] > data.24$l_h[i])
+    exact24.h2h <- c(exact24.h2h,
+                     get.prob.2018(data.24$w_h[i],data.24$l_h[i],
+                                   wta.test.2018$tourney_name[i],atp=FALSE))
+    h2h.valid[i] <- 1
+  } else if (wta.test.2018$surface[i]=="Clay" && !is.na(data.24$w_c[i])){
+    res24.h2h <- c(res24.h2h, data.24$w_c[i] > data.24$l_c[i])
+    exact24.h2h <- c(exact24.h2h,
+                     get.prob.2018(data.24$w_c[i],data.24$l_c[i],
+                                   wta.test.2018$tourney_name[i],atp=FALSE))
+    h2h.valid[i] <- 1
+  }
+}
+h2h.valid <- which(h2h.valid==1)
+mean(res24.h2h) # 0.926
+
+# see performance for pure co data separated by surface
+data.24$w_g_co <- wta.co.3yrs$grass_service_pts_won1/wta.co.3yrs$grass_pts_served1
+data.24$w_h_co <- wta.co.3yrs$hard_service_pts_won1/wta.co.3yrs$hard_pts_served1
+data.24$w_c_co <- wta.co.3yrs$clay_service_pts_won1/wta.co.3yrs$clay_pts_served1
+data.24$l_g_co <- wta.co.3yrs$grass_service_pts_won2/wta.co.3yrs$grass_pts_served2
+data.24$l_h_co <- wta.co.3yrs$hard_service_pts_won2/wta.co.3yrs$hard_pts_served2
+data.24$l_c_co <- wta.co.3yrs$clay_service_pts_won2/wta.co.3yrs$clay_pts_served2
+res24.co <- c() # same method as before
+exact24.co <- c()
+co.valid <- rep(0,nrow(wta.test.2018))
+for (i in 1:nrow(wta.test.2018)){
+  if (wta.test.2018$surface[i]=="Grass" & 
+      !is.na(data.24$w_g_co[i]) & !is.na(data.24$l_g_co[i])){
+    res24.co <- c(res24.co, data.24$w_g_co[i] > data.24$l_g_co[i])
+    exact24.co <- c(exact24.co,
+                    get.prob.2018(data.24$w_g_co[i],data.24$l_g_co[i],
+                                  wta.test.2018$tourney_name[i],atp=FALSE))
+    co.valid[i] <- 1
+  } else if (wta.test.2018$surface[i]=="Hard" &
+             !is.na(data.24$w_h_co[i]) & !is.na(data.24$l_h_co[i])){
+    res24.co <- c(res24.co, data.24$w_h_co[i] > data.24$l_h_co[i])
+    exact24.co <- c(exact24.co,
+                    get.prob.2018(data.24$w_h_co[i],data.24$l_h_co[i],
+                                  wta.test.2018$tourney_name[i],atp=FALSE))
+    co.valid[i] <- 1
+  } else if (wta.test.2018$surface[i]=="Clay" & 
+             !is.na(data.24$w_c_co[i]) & !is.na(data.24$l_c_co[i])){
+    res24.co <- c(res24.co, data.24$w_c_co[i] > data.24$l_c_co[i])
+    exact24.co <- c(exact24.co,
+                    get.prob.2018(data.24$w_c_co[i],data.24$l_c_co[i],
+                                  wta.test.2018$tourney_name[i],atp=FALSE))
+    co.valid[i] <- 1
+  }
+}
+co.valid <- which(co.valid==1)
+mean(res24.co) # 0.606
+
+# again see difference if co layer removed
+res24.no_co <- res8
+res24.no_co[h2h.valid] <- res24.h2h
+mean(res24.no_co) # 0.656
+
+res24 <- res8
+res24[co.valid] <- res24.co
+res24[h2h.valid] <- res24.h2h
+mean(res24)
+```
+
+```{r}
+# later added to save results
+res24.h2h.sv <- rep(-1,nrow(wta.test.2018))
+res24.h2h.sv[h2h.valid] <- res24.h2h
+res24.co.sv <- rep(-1,nrow(wta.test.2018))
+res24.co.sv[co.valid] <- res24.co
+exact24.h2h.sv <- rep(-1,nrow(wta.test.2018))
+exact24.h2h.sv[h2h.valid] <- exact24.h2h
+exact24.co.sv <- rep(-1,nrow(wta.test.2018))
+exact24.co.sv[co.valid] <- exact24.co
+saveRDS(exact24.h2h.sv,"p_est_exact_probs/wta2018_3y_s_h2h.rds")
+saveRDS(exact24.co.sv,"p_est_exact_probs/wta2018_3y_s_co.rds")
+```
+
+### Note On Further Categories
+
+For knitting/compilation purposes, this notebook will end here and each category going forward will have their own notebook. Further investigations regarding category will also continue in a new notebook.
+
+```{r}
+# storing of results for future overlay
+saveRDS(res1,file="res18atp_1yr_g_ns.rds")
+saveRDS(res2,file="res18atp_1yr_g_s.rds")
+saveRDS(res3,file="res18atp_3yr_g_ns.rds")
+saveRDS(res4,file="res18atp_3yr_g_s.rds")
+saveRDS(res5,file="res18wta_1yr_g_ns.rds")
+saveRDS(res6,file="res18wta_1yr_g_s.rds")
+saveRDS(res7,file="res18wta_3yr_g_ns.rds")
+saveRDS(res8,file="res18wta_3yr_g_s.rds")
+saveRDS(res9,file="res18atp_1yr_oaf_ns.rds")
+saveRDS(res10,file="res18atp_1yr_oaf_s.rds")
+saveRDS(res11,file="res18atp_3yr_oaf_ns.rds")
+saveRDS(res12,file="res18atp_3yr_oaf_s.rds")
+saveRDS(res17,file="res18wta_1yr_oaf_ns.rds")
+saveRDS(res18,file="res18wta_1yr_oaf_s.rds")
+saveRDS(res19,file="res18wta_3yr_oaf_ns.rds")
+saveRDS(res20,file="res18wta_3yr_oaf_s.rds")
+saveRDS(res13.h2h.sv,file="res18atp_1yr_h2h_ns.rds")
+saveRDS(res13.co.sv,file="res18atp_1yr_co_ns.rds")
+saveRDS(res14.h2h.sv,file="res18atp_1yr_h2h_s.rds")
+saveRDS(res14.co.sv,file="res18atp_1yr_co_s.rds")
+saveRDS(res15.h2h.sv,file="res18atp_3yr_h2h_ns.rds")
+saveRDS(res15.co.sv,file="res18atp_3yr_co_ns.rds")
+saveRDS(res16.h2h.sv,file="res18atp_3yr_h2h_s.rds")
+saveRDS(res16.co.sv,file="res18atp_3yr_co_s.rds")
+saveRDS(res21.h2h.sv,file="res18wta_1yr_h2h_ns.rds")
+saveRDS(res21.co.sv,file="res18wta_1yr_co_ns.rds")
+saveRDS(res22.h2h.sv,file="res18wta_1yr_h2h_s.rds")
+saveRDS(res22.co.sv,file="res18wta_1yr_co_s.rds")
+saveRDS(res23.h2h.sv,file="res18wta_3yr_h2h_ns.rds")
+saveRDS(res23.co.sv,file="res18wta_3yr_co_ns.rds")
+saveRDS(res24.h2h.sv,file="res18wta_3yr_h2h_s.rds")
+saveRDS(res24.co.sv,file="res18wta_3yr_co_s.rds")
+```

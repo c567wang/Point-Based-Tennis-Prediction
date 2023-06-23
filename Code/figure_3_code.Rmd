@@ -1,0 +1,45 @@
+---
+title: "Figure 3 Code"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Figure 3 is the 3D plot used for Appendix A.
+
+```{r}
+source("case_patching.R")
+library(plotly)
+```
+
+```{r}
+p <- seq(0.01,0.99,by=0.01) # n=21
+n <- length(p)
+`Match Win Probability` <- matrix(0,nrow=n,ncol=n)
+for (i in 1:n){
+  for (j in 1:n){
+    # `Match Win Probability`[i,j] <- one.set.win.prob.nonpw(p[i],p[j],format=0)
+    `Match Win Probability`[i,j] <- match.win.prob.nonpw(p[i],p[j],format=0)
+  }
+}
+`Match Win Probability` <- t(`Match Win Probability`)
+p_A <- p
+p_B <- p
+```
+```{r}
+fig <- plot_ly(z = ~`Match Win Probability`, x = ~p_A, y = ~p_B)
+fig <- fig %>% add_surface()
+fig
+```
+
+```{r}
+library(processx)
+```
+```{r}
+# orca(fig, "a_just_testing.jpg")
+# orca has been deprecated, using kaleido instead
+`test 1` <- 1
+```
+

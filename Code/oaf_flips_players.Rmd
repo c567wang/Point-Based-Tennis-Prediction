@@ -1,0 +1,22 @@
+---
+title: "OAF Flips Players"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r Do not run after initial run!!, eval=FALSE, include=FALSE}
+# run after notebook to get and store oaf flips
+test.set <- atp.test.2022
+test.set$a <- res3
+test.set$b <- res11
+ex <- test.set[which(test.set$a<test.set$b),c(5,6,28,29)]
+saveRDS(ex,file="oaf_flips/atp14_3y.rds")
+ex <- readRDS("oaf_flips/atp14_3y.rds")
+```
+```{r}
+ex <- readRDS("oaf_flips/wta18_3y.rds")
+```
+

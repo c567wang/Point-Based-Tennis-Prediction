@@ -1,0 +1,493 @@
+P1,P2,Surface,PointServer,PointWinner,P1Score,P2Score,SetNo
+Roger Federer,Frances Tiafoe,hard,1,1,15,0,5
+Roger Federer,Frances Tiafoe,hard,1,1,30,0,5
+Roger Federer,Frances Tiafoe,hard,1,1,40,0,5
+Roger Federer,Frances Tiafoe,hard,1,1,0,0,5
+Roger Federer,Frances Tiafoe,hard,2,2,0,15,5
+Roger Federer,Frances Tiafoe,hard,2,2,0,30,5
+Roger Federer,Frances Tiafoe,hard,2,1,15,30,5
+Roger Federer,Frances Tiafoe,hard,2,2,15,40,5
+Roger Federer,Frances Tiafoe,hard,2,1,30,40,5
+Roger Federer,Frances Tiafoe,hard,2,2,0,0,5
+Roger Federer,Frances Tiafoe,hard,1,1,15,0,5
+Roger Federer,Frances Tiafoe,hard,1,1,30,0,5
+Roger Federer,Frances Tiafoe,hard,1,1,40,0,5
+Roger Federer,Frances Tiafoe,hard,1,1,0,0,5
+Roger Federer,Frances Tiafoe,hard,2,1,15,0,5
+Roger Federer,Frances Tiafoe,hard,2,2,15,15,5
+Roger Federer,Frances Tiafoe,hard,2,2,15,30,5
+Roger Federer,Frances Tiafoe,hard,2,1,30,30,5
+Roger Federer,Frances Tiafoe,hard,2,1,40,30,5
+Roger Federer,Frances Tiafoe,hard,2,1,0,0,5
+Roger Federer,Frances Tiafoe,hard,1,1,15,0,5
+Roger Federer,Frances Tiafoe,hard,1,2,15,15,5
+Roger Federer,Frances Tiafoe,hard,1,1,30,15,5
+Roger Federer,Frances Tiafoe,hard,1,1,40,15,5
+Roger Federer,Frances Tiafoe,hard,1,1,0,0,5
+Roger Federer,Frances Tiafoe,hard,2,2,0,15,5
+Roger Federer,Frances Tiafoe,hard,2,2,0,30,5
+Roger Federer,Frances Tiafoe,hard,2,2,0,40,5
+Roger Federer,Frances Tiafoe,hard,2,2,0,0,5
+Roger Federer,Frances Tiafoe,hard,1,1,15,0,5
+Roger Federer,Frances Tiafoe,hard,1,1,30,0,5
+Roger Federer,Frances Tiafoe,hard,1,1,40,0,5
+Roger Federer,Frances Tiafoe,hard,1,1,0,0,5
+Roger Federer,Frances Tiafoe,hard,2,1,15,0,5
+Roger Federer,Frances Tiafoe,hard,2,2,15,15,5
+Roger Federer,Frances Tiafoe,hard,2,2,15,30,5
+Roger Federer,Frances Tiafoe,hard,2,2,15,40,5
+Roger Federer,Frances Tiafoe,hard,2,2,0,0,5
+Roger Federer,Frances Tiafoe,hard,1,2,0,15,5
+Roger Federer,Frances Tiafoe,hard,1,1,15,15,5
+Roger Federer,Frances Tiafoe,hard,1,1,30,15,5
+Roger Federer,Frances Tiafoe,hard,1,2,30,30,5
+Roger Federer,Frances Tiafoe,hard,1,1,40,30,5
+Roger Federer,Frances Tiafoe,hard,1,2,40,40,5
+Roger Federer,Frances Tiafoe,hard,1,2,40,AD,5
+Roger Federer,Frances Tiafoe,hard,1,1,40,40,5
+Roger Federer,Frances Tiafoe,hard,1,2,40,AD,5
+Roger Federer,Frances Tiafoe,hard,1,2,0,0,5
+Roger Federer,Frances Tiafoe,hard,2,1,15,0,5
+Roger Federer,Frances Tiafoe,hard,2,1,30,0,5
+Roger Federer,Frances Tiafoe,hard,2,2,30,15,5
+Roger Federer,Frances Tiafoe,hard,2,1,40,15,5
+Roger Federer,Frances Tiafoe,hard,2,2,40,30,5
+Roger Federer,Frances Tiafoe,hard,2,1,0,0,5
+Jack Sock,Jordan Thompson,hard,2,2,0,15,5
+Jack Sock,Jordan Thompson,hard,2,2,0,30,5
+Jack Sock,Jordan Thompson,hard,2,2,0,40,5
+Jack Sock,Jordan Thompson,hard,2,2,0,0,5
+Jack Sock,Jordan Thompson,hard,1,1,15,0,5
+Jack Sock,Jordan Thompson,hard,1,1,30,0,5
+Jack Sock,Jordan Thompson,hard,1,1,40,0,5
+Jack Sock,Jordan Thompson,hard,1,2,40,15,5
+Jack Sock,Jordan Thompson,hard,1,1,0,0,5
+Jack Sock,Jordan Thompson,hard,2,2,0,15,5
+Jack Sock,Jordan Thompson,hard,2,2,0,30,5
+Jack Sock,Jordan Thompson,hard,2,1,15,30,5
+Jack Sock,Jordan Thompson,hard,2,2,15,40,5
+Jack Sock,Jordan Thompson,hard,2,2,0,0,5
+Jack Sock,Jordan Thompson,hard,1,2,0,15,5
+Jack Sock,Jordan Thompson,hard,1,2,0,30,5
+Jack Sock,Jordan Thompson,hard,1,1,15,30,5
+Jack Sock,Jordan Thompson,hard,1,1,30,30,5
+Jack Sock,Jordan Thompson,hard,1,1,40,30,5
+Jack Sock,Jordan Thompson,hard,1,2,40,40,5
+Jack Sock,Jordan Thompson,hard,1,1,AD,40,5
+Jack Sock,Jordan Thompson,hard,1,2,40,40,5
+Jack Sock,Jordan Thompson,hard,1,1,AD,40,5
+Jack Sock,Jordan Thompson,hard,1,2,40,40,5
+Jack Sock,Jordan Thompson,hard,1,2,40,AD,5
+Jack Sock,Jordan Thompson,hard,1,2,0,0,5
+Jack Sock,Jordan Thompson,hard,2,2,0,15,5
+Jack Sock,Jordan Thompson,hard,2,1,15,15,5
+Jack Sock,Jordan Thompson,hard,2,1,30,15,5
+Jack Sock,Jordan Thompson,hard,2,2,30,30,5
+Jack Sock,Jordan Thompson,hard,2,1,40,30,5
+Jack Sock,Jordan Thompson,hard,2,2,40,40,5
+Jack Sock,Jordan Thompson,hard,2,2,40,AD,5
+Jack Sock,Jordan Thompson,hard,2,1,40,40,5
+Jack Sock,Jordan Thompson,hard,2,1,AD,40,5
+Jack Sock,Jordan Thompson,hard,2,1,0,0,5
+Jack Sock,Jordan Thompson,hard,1,1,15,0,5
+Jack Sock,Jordan Thompson,hard,1,1,30,0,5
+Jack Sock,Jordan Thompson,hard,1,1,40,0,5
+Jack Sock,Jordan Thompson,hard,1,1,0,0,5
+Jack Sock,Jordan Thompson,hard,2,1,15,0,5
+Jack Sock,Jordan Thompson,hard,2,1,30,0,5
+Jack Sock,Jordan Thompson,hard,2,1,40,0,5
+Jack Sock,Jordan Thompson,hard,2,1,0,0,5
+Jack Sock,Jordan Thompson,hard,1,1,15,0,5
+Jack Sock,Jordan Thompson,hard,1,2,15,15,5
+Jack Sock,Jordan Thompson,hard,1,1,30,15,5
+Jack Sock,Jordan Thompson,hard,1,2,30,30,5
+Jack Sock,Jordan Thompson,hard,1,2,30,40,5
+Jack Sock,Jordan Thompson,hard,1,2,0,0,5
+Jack Sock,Jordan Thompson,hard,2,2,0,15,5
+Jack Sock,Jordan Thompson,hard,2,2,0,30,5
+Jack Sock,Jordan Thompson,hard,2,2,0,40,5
+Jack Sock,Jordan Thompson,hard,2,2,0,0,5
+Jack Sock,Jordan Thompson,hard,1,1,15,0,5
+Jack Sock,Jordan Thompson,hard,1,2,15,15,5
+Jack Sock,Jordan Thompson,hard,1,2,15,30,5
+Jack Sock,Jordan Thompson,hard,1,2,15,40,5
+Jack Sock,Jordan Thompson,hard,1,1,30,40,5
+Jack Sock,Jordan Thompson,hard,1,2,0,0,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,0,15,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,0,30,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,0,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,0,0,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,2,0,15,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,2,0,30,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,2,0,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,1,15,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,1,30,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,1,40,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,1,AD,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,2,40,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,1,AD,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,1,0,0,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,0,15,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,0,30,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,1,15,30,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,15,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,1,30,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,1,40,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,1,AD,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,40,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,1,AD,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,40,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,1,AD,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,40,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,40,AD,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,0,0,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,2,0,15,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,2,0,30,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,2,0,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,1,15,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,2,0,0,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,0,15,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,0,30,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,0,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,1,15,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,0,0,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,1,15,0,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,1,30,0,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,1,40,0,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,1,0,0,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,0,15,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,1,15,15,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,1,30,15,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,30,30,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,1,40,30,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,40,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,40,AD,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,1,40,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,1,AD,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,40,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,1,AD,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,40,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,40,AD,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,0,0,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,2,0,15,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,2,0,30,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,1,15,30,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,2,15,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,1,30,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,1,40,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,2,40,AD,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,1,40,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,1,AD,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,2,40,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,1,AD,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,1,1,0,0,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,0,15,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,0,30,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,0,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,1,15,40,5
+Thanasi Kokkinakis,Janko Tipsarevic,hard,2,2,0,0,5
+David Goffin,Guido Pella,hard,2,1,15,0,5
+David Goffin,Guido Pella,hard,2,2,15,15,5
+David Goffin,Guido Pella,hard,2,2,15,30,5
+David Goffin,Guido Pella,hard,2,1,30,30,5
+David Goffin,Guido Pella,hard,2,2,30,40,5
+David Goffin,Guido Pella,hard,2,2,0,0,5
+David Goffin,Guido Pella,hard,1,1,15,0,5
+David Goffin,Guido Pella,hard,1,2,15,15,5
+David Goffin,Guido Pella,hard,1,1,30,15,5
+David Goffin,Guido Pella,hard,1,2,30,30,5
+David Goffin,Guido Pella,hard,1,1,40,30,5
+David Goffin,Guido Pella,hard,1,1,0,0,5
+David Goffin,Guido Pella,hard,2,1,15,0,5
+David Goffin,Guido Pella,hard,2,1,30,0,5
+David Goffin,Guido Pella,hard,2,1,40,0,5
+David Goffin,Guido Pella,hard,2,2,40,15,5
+David Goffin,Guido Pella,hard,2,2,40,30,5
+David Goffin,Guido Pella,hard,2,2,40,40,5
+David Goffin,Guido Pella,hard,2,2,40,AD,5
+David Goffin,Guido Pella,hard,2,2,0,0,5
+David Goffin,Guido Pella,hard,1,1,15,0,5
+David Goffin,Guido Pella,hard,1,1,30,0,5
+David Goffin,Guido Pella,hard,1,1,40,0,5
+David Goffin,Guido Pella,hard,1,2,40,15,5
+David Goffin,Guido Pella,hard,1,1,0,0,5
+David Goffin,Guido Pella,hard,2,1,15,0,5
+David Goffin,Guido Pella,hard,2,2,15,15,5
+David Goffin,Guido Pella,hard,2,1,30,15,5
+David Goffin,Guido Pella,hard,2,1,40,15,5
+David Goffin,Guido Pella,hard,2,2,40,30,5
+David Goffin,Guido Pella,hard,2,1,0,0,5
+David Goffin,Guido Pella,hard,1,1,15,0,5
+David Goffin,Guido Pella,hard,1,1,30,0,5
+David Goffin,Guido Pella,hard,1,1,40,0,5
+David Goffin,Guido Pella,hard,1,1,0,0,5
+David Goffin,Guido Pella,hard,2,2,0,15,5
+David Goffin,Guido Pella,hard,2,1,15,15,5
+David Goffin,Guido Pella,hard,2,2,15,30,5
+David Goffin,Guido Pella,hard,2,2,15,40,5
+David Goffin,Guido Pella,hard,2,2,0,0,5
+David Goffin,Guido Pella,hard,1,2,0,15,5
+David Goffin,Guido Pella,hard,1,1,15,15,5
+David Goffin,Guido Pella,hard,1,2,15,30,5
+David Goffin,Guido Pella,hard,1,1,30,30,5
+David Goffin,Guido Pella,hard,1,1,40,30,5
+David Goffin,Guido Pella,hard,1,1,0,0,5
+David Goffin,Guido Pella,hard,2,1,15,0,5
+David Goffin,Guido Pella,hard,2,2,15,15,5
+David Goffin,Guido Pella,hard,2,2,15,30,5
+David Goffin,Guido Pella,hard,2,2,15,40,5
+David Goffin,Guido Pella,hard,2,1,30,40,5
+David Goffin,Guido Pella,hard,2,1,40,40,5
+David Goffin,Guido Pella,hard,2,1,AD,40,5
+David Goffin,Guido Pella,hard,2,1,0,0,5
+Donald Young,Gael Monfils,hard,1,2,0,15,5
+Donald Young,Gael Monfils,hard,1,2,0,30,5
+Donald Young,Gael Monfils,hard,1,1,15,30,5
+Donald Young,Gael Monfils,hard,1,1,30,30,5
+Donald Young,Gael Monfils,hard,1,1,40,30,5
+Donald Young,Gael Monfils,hard,1,1,0,0,5
+Donald Young,Gael Monfils,hard,2,2,0,15,5
+Donald Young,Gael Monfils,hard,2,1,15,15,5
+Donald Young,Gael Monfils,hard,2,2,15,30,5
+Donald Young,Gael Monfils,hard,2,2,15,40,5
+Donald Young,Gael Monfils,hard,2,2,0,0,5
+Donald Young,Gael Monfils,hard,1,1,15,0,5
+Donald Young,Gael Monfils,hard,1,2,15,15,5
+Donald Young,Gael Monfils,hard,1,2,15,30,5
+Donald Young,Gael Monfils,hard,1,2,15,40,5
+Donald Young,Gael Monfils,hard,1,2,0,0,5
+Donald Young,Gael Monfils,hard,2,1,15,0,5
+Donald Young,Gael Monfils,hard,2,2,15,15,5
+Donald Young,Gael Monfils,hard,2,2,15,30,5
+Donald Young,Gael Monfils,hard,2,1,30,30,5
+Donald Young,Gael Monfils,hard,2,2,30,40,5
+Donald Young,Gael Monfils,hard,2,2,0,0,5
+Donald Young,Gael Monfils,hard,1,2,0,15,5
+Donald Young,Gael Monfils,hard,1,1,15,15,5
+Donald Young,Gael Monfils,hard,1,1,30,15,5
+Donald Young,Gael Monfils,hard,1,1,40,15,5
+Donald Young,Gael Monfils,hard,1,2,40,30,5
+Donald Young,Gael Monfils,hard,1,1,0,0,5
+Donald Young,Gael Monfils,hard,2,1,15,0,5
+Donald Young,Gael Monfils,hard,2,1,30,0,5
+Donald Young,Gael Monfils,hard,2,2,30,15,5
+Donald Young,Gael Monfils,hard,2,1,40,15,5
+Donald Young,Gael Monfils,hard,2,2,40,30,5
+Donald Young,Gael Monfils,hard,2,1,0,0,5
+Donald Young,Gael Monfils,hard,1,1,15,0,5
+Donald Young,Gael Monfils,hard,1,1,30,0,5
+Donald Young,Gael Monfils,hard,1,1,40,0,5
+Donald Young,Gael Monfils,hard,1,2,40,15,5
+Donald Young,Gael Monfils,hard,1,2,40,30,5
+Donald Young,Gael Monfils,hard,1,2,40,40,5
+Donald Young,Gael Monfils,hard,1,2,40,AD,5
+Donald Young,Gael Monfils,hard,1,2,0,0,5
+Donald Young,Gael Monfils,hard,2,1,15,0,5
+Donald Young,Gael Monfils,hard,2,1,30,0,5
+Donald Young,Gael Monfils,hard,2,2,30,15,5
+Donald Young,Gael Monfils,hard,2,2,30,30,5
+Donald Young,Gael Monfils,hard,2,1,40,30,5
+Donald Young,Gael Monfils,hard,2,1,0,0,5
+Donald Young,Gael Monfils,hard,1,1,15,0,5
+Donald Young,Gael Monfils,hard,1,1,30,0,5
+Donald Young,Gael Monfils,hard,1,1,40,0,5
+Donald Young,Gael Monfils,hard,1,1,0,0,5
+Donald Young,Gael Monfils,hard,2,2,0,15,5
+Donald Young,Gael Monfils,hard,2,2,0,30,5
+Donald Young,Gael Monfils,hard,2,2,0,40,5
+Donald Young,Gael Monfils,hard,2,2,0,0,5
+Donald Young,Gael Monfils,hard,1,2,0,15,5
+Donald Young,Gael Monfils,hard,1,2,0,30,5
+Donald Young,Gael Monfils,hard,1,1,15,30,5
+Donald Young,Gael Monfils,hard,1,1,30,30,5
+Donald Young,Gael Monfils,hard,1,2,30,40,5
+Donald Young,Gael Monfils,hard,1,1,40,40,5
+Donald Young,Gael Monfils,hard,1,1,AD,40,5
+Donald Young,Gael Monfils,hard,1,2,40,40,5
+Donald Young,Gael Monfils,hard,1,2,40,AD,5
+Donald Young,Gael Monfils,hard,1,1,40,40,5
+Donald Young,Gael Monfils,hard,1,2,40,AD,5
+Donald Young,Gael Monfils,hard,1,2,0,0,5
+Donald Young,Gael Monfils,hard,2,2,0,15,5
+Donald Young,Gael Monfils,hard,2,2,0,30,5
+Donald Young,Gael Monfils,hard,2,1,15,30,5
+Donald Young,Gael Monfils,hard,2,2,15,40,5
+Donald Young,Gael Monfils,hard,2,2,0,0,5
+Roger Federer,Mikhail Youzhny,hard,1,1,15,0,5
+Roger Federer,Mikhail Youzhny,hard,1,1,30,0,5
+Roger Federer,Mikhail Youzhny,hard,1,1,40,0,5
+Roger Federer,Mikhail Youzhny,hard,1,1,0,0,5
+Roger Federer,Mikhail Youzhny,hard,2,2,0,15,5
+Roger Federer,Mikhail Youzhny,hard,2,2,0,30,5
+Roger Federer,Mikhail Youzhny,hard,2,1,15,30,5
+Roger Federer,Mikhail Youzhny,hard,2,2,15,40,5
+Roger Federer,Mikhail Youzhny,hard,2,2,0,0,5
+Roger Federer,Mikhail Youzhny,hard,1,1,15,0,5
+Roger Federer,Mikhail Youzhny,hard,1,1,30,0,5
+Roger Federer,Mikhail Youzhny,hard,1,2,30,15,5
+Roger Federer,Mikhail Youzhny,hard,1,1,40,15,5
+Roger Federer,Mikhail Youzhny,hard,1,1,0,0,5
+Roger Federer,Mikhail Youzhny,hard,2,1,15,0,5
+Roger Federer,Mikhail Youzhny,hard,2,2,15,15,5
+Roger Federer,Mikhail Youzhny,hard,2,2,15,30,5
+Roger Federer,Mikhail Youzhny,hard,2,2,15,40,5
+Roger Federer,Mikhail Youzhny,hard,2,1,30,40,5
+Roger Federer,Mikhail Youzhny,hard,2,1,40,40,5
+Roger Federer,Mikhail Youzhny,hard,2,2,40,AD,5
+Roger Federer,Mikhail Youzhny,hard,2,1,40,40,5
+Roger Federer,Mikhail Youzhny,hard,2,2,40,AD,5
+Roger Federer,Mikhail Youzhny,hard,2,1,40,40,5
+Roger Federer,Mikhail Youzhny,hard,2,2,40,AD,5
+Roger Federer,Mikhail Youzhny,hard,2,1,40,40,5
+Roger Federer,Mikhail Youzhny,hard,2,1,AD,40,5
+Roger Federer,Mikhail Youzhny,hard,2,2,40,40,5
+Roger Federer,Mikhail Youzhny,hard,2,1,AD,40,5
+Roger Federer,Mikhail Youzhny,hard,2,2,40,40,5
+Roger Federer,Mikhail Youzhny,hard,2,2,40,AD,5
+Roger Federer,Mikhail Youzhny,hard,2,2,0,0,5
+Roger Federer,Mikhail Youzhny,hard,1,2,0,15,5
+Roger Federer,Mikhail Youzhny,hard,1,1,15,15,5
+Roger Federer,Mikhail Youzhny,hard,1,1,30,15,5
+Roger Federer,Mikhail Youzhny,hard,1,1,40,15,5
+Roger Federer,Mikhail Youzhny,hard,1,1,0,0,5
+Roger Federer,Mikhail Youzhny,hard,2,1,15,0,5
+Roger Federer,Mikhail Youzhny,hard,2,1,30,0,5
+Roger Federer,Mikhail Youzhny,hard,2,1,40,0,5
+Roger Federer,Mikhail Youzhny,hard,2,2,40,15,5
+Roger Federer,Mikhail Youzhny,hard,2,1,0,0,5
+Roger Federer,Mikhail Youzhny,hard,1,1,15,0,5
+Roger Federer,Mikhail Youzhny,hard,1,1,30,0,5
+Roger Federer,Mikhail Youzhny,hard,1,1,40,0,5
+Roger Federer,Mikhail Youzhny,hard,1,1,0,0,5
+Roger Federer,Mikhail Youzhny,hard,2,1,15,0,5
+Roger Federer,Mikhail Youzhny,hard,2,2,15,15,5
+Roger Federer,Mikhail Youzhny,hard,2,2,15,30,5
+Roger Federer,Mikhail Youzhny,hard,2,2,15,40,5
+Roger Federer,Mikhail Youzhny,hard,2,1,30,40,5
+Roger Federer,Mikhail Youzhny,hard,2,1,40,40,5
+Roger Federer,Mikhail Youzhny,hard,2,1,AD,40,5
+Roger Federer,Mikhail Youzhny,hard,2,2,40,40,5
+Roger Federer,Mikhail Youzhny,hard,2,2,40,AD,5
+Roger Federer,Mikhail Youzhny,hard,2,1,40,40,5
+Roger Federer,Mikhail Youzhny,hard,2,1,AD,40,5
+Roger Federer,Mikhail Youzhny,hard,2,1,0,0,5
+Lucas Pouille,Jared Donaldson,hard,2,2,0,15,5
+Lucas Pouille,Jared Donaldson,hard,2,2,0,30,5
+Lucas Pouille,Jared Donaldson,hard,2,2,0,40,5
+Lucas Pouille,Jared Donaldson,hard,2,2,0,0,5
+Lucas Pouille,Jared Donaldson,hard,1,1,15,0,5
+Lucas Pouille,Jared Donaldson,hard,1,1,30,0,5
+Lucas Pouille,Jared Donaldson,hard,1,2,30,15,5
+Lucas Pouille,Jared Donaldson,hard,1,1,40,15,5
+Lucas Pouille,Jared Donaldson,hard,1,1,0,0,5
+Lucas Pouille,Jared Donaldson,hard,2,2,0,15,5
+Lucas Pouille,Jared Donaldson,hard,2,2,0,30,5
+Lucas Pouille,Jared Donaldson,hard,2,2,0,40,5
+Lucas Pouille,Jared Donaldson,hard,2,1,15,40,5
+Lucas Pouille,Jared Donaldson,hard,2,1,30,40,5
+Lucas Pouille,Jared Donaldson,hard,2,1,40,40,5
+Lucas Pouille,Jared Donaldson,hard,2,2,40,AD,5
+Lucas Pouille,Jared Donaldson,hard,2,1,40,40,5
+Lucas Pouille,Jared Donaldson,hard,2,2,40,AD,5
+Lucas Pouille,Jared Donaldson,hard,2,2,0,0,5
+Lucas Pouille,Jared Donaldson,hard,1,1,15,0,5
+Lucas Pouille,Jared Donaldson,hard,1,1,30,0,5
+Lucas Pouille,Jared Donaldson,hard,1,1,40,0,5
+Lucas Pouille,Jared Donaldson,hard,1,2,40,15,5
+Lucas Pouille,Jared Donaldson,hard,1,1,0,0,5
+Lucas Pouille,Jared Donaldson,hard,2,2,0,15,5
+Lucas Pouille,Jared Donaldson,hard,2,2,0,30,5
+Lucas Pouille,Jared Donaldson,hard,2,2,0,40,5
+Lucas Pouille,Jared Donaldson,hard,2,2,0,0,5
+Lucas Pouille,Jared Donaldson,hard,1,1,15,0,5
+Lucas Pouille,Jared Donaldson,hard,1,1,30,0,5
+Lucas Pouille,Jared Donaldson,hard,1,2,30,15,5
+Lucas Pouille,Jared Donaldson,hard,1,1,40,15,5
+Lucas Pouille,Jared Donaldson,hard,1,2,40,30,5
+Lucas Pouille,Jared Donaldson,hard,1,1,0,0,5
+Lucas Pouille,Jared Donaldson,hard,2,2,0,15,5
+Lucas Pouille,Jared Donaldson,hard,2,1,15,15,5
+Lucas Pouille,Jared Donaldson,hard,2,2,15,30,5
+Lucas Pouille,Jared Donaldson,hard,2,2,15,40,5
+Lucas Pouille,Jared Donaldson,hard,2,1,30,40,5
+Lucas Pouille,Jared Donaldson,hard,2,2,0,0,5
+Lucas Pouille,Jared Donaldson,hard,1,2,0,15,5
+Lucas Pouille,Jared Donaldson,hard,1,1,15,15,5
+Lucas Pouille,Jared Donaldson,hard,1,1,30,15,5
+Lucas Pouille,Jared Donaldson,hard,1,2,30,30,5
+Lucas Pouille,Jared Donaldson,hard,1,1,40,30,5
+Lucas Pouille,Jared Donaldson,hard,1,1,0,0,5
+Lucas Pouille,Jared Donaldson,hard,2,1,15,0,5
+Lucas Pouille,Jared Donaldson,hard,2,2,15,15,5
+Lucas Pouille,Jared Donaldson,hard,2,2,15,30,5
+Lucas Pouille,Jared Donaldson,hard,2,2,15,40,5
+Lucas Pouille,Jared Donaldson,hard,2,1,30,40,5
+Lucas Pouille,Jared Donaldson,hard,2,1,40,40,5
+Lucas Pouille,Jared Donaldson,hard,2,1,AD,40,5
+Lucas Pouille,Jared Donaldson,hard,2,1,0,0,5
+Lucas Pouille,Jared Donaldson,hard,1,1,15,0,5
+Lucas Pouille,Jared Donaldson,hard,1,1,30,0,5
+Lucas Pouille,Jared Donaldson,hard,1,1,40,0,5
+Lucas Pouille,Jared Donaldson,hard,1,1,0,0,5
+Juan Martin del Potro,Dominic Thiem,hard,1,2,0,15,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,15,15,5
+Juan Martin del Potro,Dominic Thiem,hard,1,2,15,30,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,30,30,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,40,30,5
+Juan Martin del Potro,Dominic Thiem,hard,1,2,40,40,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,AD,40,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,0,0,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,0,15,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,0,30,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,0,40,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,0,0,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,15,0,5
+Juan Martin del Potro,Dominic Thiem,hard,1,2,15,15,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,30,15,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,40,15,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,0,0,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,0,15,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,0,30,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,0,40,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,0,0,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,15,0,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,30,0,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,40,0,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,0,0,5
+Juan Martin del Potro,Dominic Thiem,hard,2,1,15,0,5
+Juan Martin del Potro,Dominic Thiem,hard,2,1,30,0,5
+Juan Martin del Potro,Dominic Thiem,hard,2,1,40,0,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,40,15,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,40,30,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,40,40,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,40,AD,5
+Juan Martin del Potro,Dominic Thiem,hard,2,1,40,40,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,40,AD,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,0,0,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,15,0,5
+Juan Martin del Potro,Dominic Thiem,hard,1,2,15,15,5
+Juan Martin del Potro,Dominic Thiem,hard,1,2,15,30,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,30,30,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,40,30,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,0,0,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,0,15,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,0,30,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,0,40,5
+Juan Martin del Potro,Dominic Thiem,hard,2,1,15,40,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,0,0,5
+Juan Martin del Potro,Dominic Thiem,hard,1,2,0,15,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,15,15,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,30,15,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,40,15,5
+Juan Martin del Potro,Dominic Thiem,hard,1,2,40,30,5
+Juan Martin del Potro,Dominic Thiem,hard,1,1,0,0,5
+Juan Martin del Potro,Dominic Thiem,hard,2,1,15,0,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,15,15,5
+Juan Martin del Potro,Dominic Thiem,hard,2,1,30,15,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,30,30,5
+Juan Martin del Potro,Dominic Thiem,hard,2,1,40,30,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,40,40,5
+Juan Martin del Potro,Dominic Thiem,hard,2,2,40,AD,5
+Juan Martin del Potro,Dominic Thiem,hard,2,1,40,40,5
+Juan Martin del Potro,Dominic Thiem,hard,2,1,AD,40,5
+Juan Martin del Potro,Dominic Thiem,hard,2,1,0,0,5

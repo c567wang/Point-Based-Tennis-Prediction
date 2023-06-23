@@ -1,0 +1,1589 @@
+---
+title: "Notebook 6"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+MATCH.WIN.PROB OUTDATED IN THIS FILE, WILL UPDATE IN THE FUTURE. NOT EXPECTING RESULTS TO CHANGE TOO MUCH.
+
+# Purpose
+
+Continuation of notebooks 2&5. As stated at the end of notebook 5, for this notebook's tests we now have yearly pbp data from 2011 to 2021, and yearly match testing data from 2012 to 2022 (originally extended to R128 for all grandslams+masters+finals, but found the P matrices created roughly had 1/4 players that didn't have any point by point data, so narrowed to R64 and when the problem was still significant, ). 2 questions for this notebook:
+
+  1. Are the state-beneficiary results consistent across time up to a certain extent? If so, then the plateau exercises can reveal exploitable deviations from the IID assumption for certain groups of players. If not, then the deviations from the identically distributed assumption are still noticeable, but not exploitable for predictions a year out.
+  
+  2. When the training set and the testing set (used for the plateau exercise) are fixed, are the identified states good for the training set's predicative power in general? In other words, are we just overfitting the training set on the testing set or are we eliminating noise in the training set?
+  
+It is recognized that these two questions are not independent of each other. If 1 is true, then overall 2 will be true. But since it isn't too much extra work, both will be examined. The way this will be done, is for each 3 consecutive years, labelled here year 1,2,3:
+
+  a. The plateau exercise is done with year 1's pbp data and year 2's match data. 2 sets of states, 1 downwards and 1 upwards, and their corresponding (anti-)beneficiaries, are obtained.
+  
+  b. The states identified are applied to the year 2 pbp data and tested on the year 3 match data restricted to the corresponding (anti-)beneficiaries. This is then compared to the year 2 pbp data's all (de-)activated performance on year 3 match data with the same restrictions. If we see an increase, then the player-specific results are consistent for at least 1 year.
+  
+  c. The states identified are applied to the year 1 pbp data and tested on year 3 match data. This is then compared to the year 1 pbp data's all (de-)activated performance on year 3 match data. If we see an increase, then the plateau exercise helps boost the predictive power of the training set (year 1 pbp data here).
+  
+For the data we have, the above 3 steps will be done 9 times. Theoretically this could be auotomated, but there are a lot of judgement calls involved, especially where to draw the line when identifying states and beneficiaries, so it will be done manually. The plateau exercise results will be saved and loaded so they won't have to be done again.
+  
+# Functions From Notebooks 2&5 (with slight modifications)
+
+Modifications:
+
+  1. create.p.vector handles the filling in of NAs too now, and will print percentage of NAs.
+  
+  2. plot.path split into plot.path.score and plot.path.state, for both upward and downward results are plotted together now. For the score plots baselines are added in to show the plateau shape.
+
+```{r}
+source("matrices/game_matrices_pointwise.R")
+source("matrices/tiebreak_matrices.R")
+source("matrices/set_matrices.R")
+source("matrices/match_matrices.R")
+match.win.prob <- function(p1,p2,format=0){
+  # under the iid assumptions, calculates player 1 (P1)'s probability of winning a match
+  # with player 2 (P2), where P1 is the player who serves the first game of the first set
+  # input:
+  #   p1(p2): probability of P1(P2) winning a point in their serving game
+  #   format: acceptable values are 0,1,2
+  #     0 - best of 3 sets, all tiebreaks to 7
+  #     1 - best of 3 sets, final tiebreak to 10
+  #     2 - best of 5 sets, final tiebreak to 10
+  # output:
+  #   p: probability model gives of P1 winning the match
+  
+  # !MODIFICATION! p1,p2 now should be vectors of length 19 (1-18 states + tiebreak)
+  # important that the tiebreak probability is placed is the last/19th entry
+  # if vector longer than 19, only first 19 elements are used
+  # identically distributed assumption may be dropped now depending on p1/p2 composition
+  
+  # get probs of P1,P2 holding their serve
+  m.p2g.p1 <- point.to.game.matrices.pw(p=p1)
+  p1.g <- (solve(diag(18)-m.p2g.p1$Q)%*%m.p2g.p1$R)[1,1]
+  m.p2g.p2 <- point.to.game.matrices.pw(p=p2)
+  p2.g <- (solve(diag(18)-m.p2g.p2$Q)%*%m.p2g.p2$R)[1,1]
+  
+  # get probs of P1,P2 winning sets
+  # in this block of code, probs correspond to sets where P1 serves the 1st game 
+  m.g2s.p1 <- game.to.set.matrices(p=p1.g,q=p2.g)
+  m.g2s.p1.w <- (solve(diag(38)-m.g2s.p1$Q)%*%m.g2s.p1$R)[1,]
+  p.s1.t <- m.g2s.p1.w[1] # prob of going to tiebreak in such a set
+  p1.s1.h <- m.g2s.p1.w[2] # prob of P1 winning by holding in such a set
+  p1.s1.b <- m.g2s.p1.w[3] # prob of P1 winning by breaking P2's serve
+  p2.s1.h <- m.g2s.p1.w[4] # prob of P2 winning by holding in such a set
+  p2.s1.b <- m.g2s.p1.w[5] # prob of P2 winning by breaking P1's serve
+  
+  # in this block of code, probs correspond to sets where P2 serves the 1st game 
+  m.g2s.p2 <- game.to.set.matrices(p=p2.g,q=p1.g)
+  m.g2s.p2.w <- (solve(diag(38)-m.g2s.p2$Q)%*%m.g2s.p2$R)[1,]
+  p.s2.t <- m.g2s.p2.w[1] # prob of going to tiebreak in such a set
+  p2.s2.h <- m.g2s.p2.w[2] # prob of P2 winning by holding in such a set
+  p2.s2.b <- m.g2s.p2.w[3] # prob of P2 winning by breaking P1's serve
+  p1.s2.h <- m.g2s.p2.w[4] # prob of P1 winning by holding in such a set
+  p1.s2.b <- m.g2s.p2.w[5] # prob of P1 winning by breaking P2's serve
+  
+  # get probs for players winning tiebreak games
+  m.tb.p1 <- tb.to.7.matrices(p=p1[19],q=p2[19]) # to 7, P1 serves first
+  m.tb.p1.w <- (solve(diag(48)-m.tb.p1$Q)%*%m.tb.p1$R)[1,]
+  p.tb1.to7 <- m.tb.p1.w[1] # prob of the tiebreak needing more than 12 pts played
+  p1.tb1.to7 <- m.tb.p1.w[2] # prob of P1 winning tiebreak when serving first
+  p2.tb1.to7 <- m.tb.p1.w[3] # prob of P2 winning tiebreak when receiving first
+  
+  m.tb.p2 <- tb.to.7.matrices(p=p2[19],q=p1[19]) # to 7, P2 serves first
+  m.tb.p2.w <- (solve(diag(48)-m.tb.p2$Q)%*%m.tb.p2$R)[1,]
+  p.tb2.to7 <- m.tb.p2.w[1] # prob of the tiebreak needing more than 12 pts played
+  p2.tb2.to7 <- m.tb.p2.w[2] # prob of P2 winning tiebreak when serving first
+  p1.tb2.to7 <- m.tb.p2.w[3] # prob of P1 winning tiebreak when receiving first
+  
+  if (format!=0){
+    m.tbd.p1 <- tb.to.10.matrices(p=p1[19],q=p2[19]) # to 10, P1 serves first
+    m.tbd.p1.w <- (solve(diag(99)-m.tbd.p1$Q)%*%m.tbd.p1$R)[1,]
+    p.tb1.to10 <- m.tbd.p1.w[1] # prob of the tiebreak needing more than 18 pts played
+    p1.tb1.to10 <- m.tbd.p1.w[2] # prob of P1 winning tiebreak when serving first
+    p2.tb1.to10 <- m.tbd.p1.w[3] # prob of P2 winning tiebreak when receiving first
+  
+    m.tbd.p2 <- tb.to.10.matrices(p=p2[19],q=p1[19]) # to 10, P2 serves first
+    m.tbd.p2.w <- (solve(diag(99)-m.tbd.p2$Q)%*%m.tbd.p2$R)[1,]
+    p.tb2.to10 <- m.tbd.p2.w[1] # prob of the tiebreak needing more than 18 pts played
+    p2.tb2.to10 <- m.tbd.p2.w[2] # prob of P2 winning tiebreak when serving first
+    p1.tb2.to10 <- m.tbd.p2.w[3] # prob of P1 winning tiebreak when receiving first
+  }
+  
+  # probs for if a tiebreak needs more than 7(10) points to win
+  # for non-deciding sets (to 7), chain starts at (T,A2) which is the first row
+  # for deciding sets (to 10), chain starts at (T,B2) which is the second row
+  # results in this block for when P1 served first in the tiebreak
+  # note the player who serves first in the tiebreak served first in the set
+  m.tbe.p1 <- tb.extra.matrices(p=p1[19],q=p2[19])
+  m.tbe.p1.w <- solve(diag(6)-m.tbe.p1$Q)%*%m.tbe.p1$R
+  p1.tbe.to7 <- m.tbe.p1.w[1,1] # P1 win prob once extra pts are played in the tiebreak
+  p1.tbe.to10 <- m.tbe.p1.w[2,1] # for P2's probs, need only subtract this from 1
+  
+  # results in this block for when P2 served first in the tiebreak
+  m.tbe.p2 <- tb.extra.matrices(p=p2[19],q=p1[19])
+  m.tbe.p2.w <- solve(diag(6)-m.tbe.p2$Q)%*%m.tbe.p2$R
+  p2.tbe.to7 <- m.tbe.p2.w[1,1] # P2 win prob once extra pts are played in the tiebreak
+  p2.tbe.to10 <- m.tbe.p2.w[2,1] # for P1's probs, need only subtract this from 1
+  
+  # now that the individual pieces are established, start calculating overall set
+  # winning probabilities to plug into set.to.match functions
+  # since P1 was designated as serving the 1st game of the entire match
+  # A(B) will be synonymous with P1(P2) in variable naming from here on in
+  p.b.A <- p1.s1.b
+  p.h.A <- p1.s1.h+p.s1.t*(p1.tb1.to7+p.tb1.to7*p1.tbe.to7)
+  q.b.A <- p2.s1.b+p.s1.t*(p2.tb1.to7+p.tb1.to7*(1-p1.tbe.to7))
+  q.h.A <- p2.s1.h
+  p.b.B <- p1.s2.b+p.s2.t*(p1.tb2.to7+p.tb2.to7*(1-p2.tbe.to7))
+  p.h.B <- p1.s2.h
+  q.b.B <- p2.s2.b
+  q.h.B <- p2.s2.h+p.s2.t*(p2.tb2.to7+p.tb2.to7*p2.tbe.to7)
+  
+  if (format==0){
+    # using set.to.match for final results
+    m.s2m <- set.to.match.womens(p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B,
+                                 p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B)
+    p <- (solve(diag(7)-m.s2m$Q)%*%m.s2m$R)[1,1]
+  } else {
+    p.b.A.d <- p1.s1.b
+    p.h.A.d <- p1.s1.h+p.s1.t*(p1.tb1.to10+p.tb1.to10*p1.tbe.to10)
+    q.b.A.d <- p2.s1.b+p.s1.t*(p2.tb1.to10+p.tb1.to10*(1-p1.tbe.to10))
+    q.h.A.d <- p2.s1.h
+    p.b.B.d <- p1.s2.b+p.s2.t*(p1.tb2.to10+p.tb2.to10*(1-p2.tbe.to10))
+    p.h.B.d <- p1.s2.h
+    q.b.B.d <- p2.s2.b
+    q.h.B.d <- p2.s2.h+p.s2.t*(p2.tb2.to10+p.tb2.to10*p2.tbe.to10)
+    
+    if (format==1){
+      m.s2m <- set.to.match.womens(p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B,
+                                   p.b.A.d,p.h.A.d,q.b.A.d,q.h.A.d,
+                                   p.b.B.d,p.h.B.d,q.b.B.d,q.h.B.d)
+      p <- (solve(diag(7)-m.s2m$Q)%*%m.s2m$R)[1,1]
+    } else if (format==2){
+      m.s2m <- set.to.match.mens(p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B,
+                                 p.b.A.d,p.h.A.d,q.b.A.d,q.h.A.d,
+                                 p.b.B.d,p.h.B.d,q.b.B.d,q.h.B.d)
+      p <- (solve(diag(17)-m.s2m$Q)%*%m.s2m$R)[1,1]
+    } else {
+      p <- -1 # marks invalid format value
+    }
+  }
+  return(p)
+}
+
+# following function highlights matches that were incomplete
+# this is determined by if the score has letters ("W/O","Def.","RET" etc.)
+# takes as input the score column of a dataset and returns indexes
+ic.match <- function(score) grep("[A-Za-z]",score)
+
+get.unique.players <- function(testset){
+  # takes the players in the test set and returns vector
+  # containing unique players in the test set
+  names <- c(testset$winner_name,testset$loser_name)
+  names <- unique(names)
+  return(names)
+}
+
+get.equiv.names <- function(fullname){
+  # returns vector of equivalent names in different formats
+  # according to the fullname given
+  # fullname ideally from get.unique.players output
+  # More special examples:
+  #   Alejandro Davidovich Fokina -> A Davidovich Fokina & A. Davidovich Fokina
+  #   Pierre Hugues Herbert -> P Herbert & Ph Herbert & P. Herbert
+  #   Alex De Minaur -> A. De Minaur & Alex de Minaur & A De Minaur
+  #   Karolina Pliskova -> K. Pliskova & Ka. Pliskova & Ka Pliskova
+  #   Kristyna Pliskova -> K. Pliskova & Kr. Pliskova & Kr Pliskova
+  #   some cases manually remediated (see misc. google doc)
+  #   but quick manual remediation can't help if player in test set has middle name
+  #   and full name isn't in pbp training set.
+  #   Function tries to account for this as follows.
+  
+  # Alex Bee Caine -> c("A. Caine", "A Caine", "A. Bee Caine", "A Bee Caine",
+  #                     ""A Bee-Caine", "A. Bee-Caine", Ab Caine")
+  
+  # This method risks picking up on players with same last name and first letter
+  # But this is unlikely as the pbp training set only 1 case of this - Kr&Ka Pliskova
+  # And this was picked up since there were 2 characters before the space
+  
+  parts <- strsplit(fullname,split=" ")[[1]]
+  n <- length(parts)
+  first.letter <- substr(parts[1],1,1)
+  equiv <- c(fullname,
+             paste(first.letter," ",parts[n],sep=""),
+             paste(first.letter,"."," ",parts[n],sep=""))
+  if (n > 2){
+    rest <- ""
+    rest.dash <- ""
+    for (i in 1:(n-1)){
+      rest <- paste(rest," ",parts[i+1],sep="")
+      rest.dash <- paste(rest.dash,parts[i+1],sep="-")
+    }
+    rest.dash <- substr(rest.dash,2,nchar(rest.dash)) # get rid of first dash
+    first.middle.name.letter <- tolower(substr(parts[2],1,1))
+    rest.more <- "" # for if the name has four or more parts
+    for (i in 1:(n-2)){
+      rest.more <- paste(rest.more," ",parts[i+2],sep="")
+    }
+    # rest contains the first space, rest.dash doesn't
+    equiv <- c(equiv, paste(first.letter,rest,sep=""),
+               paste(first.letter,".",rest,sep=""),
+               paste(first.letter," ",rest.dash,sep=""),
+               paste(first.letter,"."," ",rest.dash,sep=""),
+               paste(first.letter,first.middle.name.letter,rest.more,sep=""))
+  }
+  return(equiv)
+}
+
+get.aggr.by.state <- function(entry){
+  # extract serve won & serve total fields for a player
+  # without surface distinction
+  ret <- rep(0,38)
+  for (i in 1:18){
+    # odd indices for pts won, even for total
+    ret[2*i-1] <- entry[[3+12*i]]+entry[[7+12*i]]+entry[[11+12*i]]
+    ret[2*i] <- entry[[2+12*i]]+entry[[6+12*i]]+entry[[10+12*i]]
+  }
+  ret[37] <- entry[[3]]+entry[[7]]+entry[[11]]
+  ret[38] <- entry[[2]]+entry[[6]]+entry[[10]]
+  return(ret)
+}
+
+create.p.vector <- function(tst.names,pbp){
+  # returns a dataframe with the rows in the order of names,
+  # the columns being p's for states 1-18 and then t (tiebreak)
+  # final column is overall p regardless of state by taking total won / total serve
+  # names usually from get.unique.players on test data set
+  # pbp is the point-by-point data given
+  # note p-vectors not surface specific
+  # prints percentage of NA players (as determined by state 1 being NA)
+  # percentage not stored to not produce too many unnecessary variables
+  
+  n <- length(tst.names)
+  m <- nrow(pbp)
+  pbp.name <- pbp$name
+  aggr <- matrix(0,nrow=n,ncol=38) # 38=2x19, taking won & total to divide later
+  for (i in 1:n){
+    equiv <- get.equiv.names(tst.names[i])
+    p <- length(equiv)
+    for (j in 1:p){
+      for (l in 1:m){
+        # check 1 by 1 since pbp has non-unique names after manual remediation
+        if (equiv[j]==pbp.name[l]){
+          more.aggr <- get.aggr.by.state(pbp[l,])
+          aggr[i,] <- aggr[i,]+more.aggr
+        }
+      }
+    }
+  }
+  # now divide odd cols by even cols to obtain p's
+  output <- matrix(0,nrow=n,ncol=20)
+  output <- data.frame(output, row.names=tst.names)
+  for (i in 1:n){
+    for (j in 1:19){
+      output[i,j] <- aggr[i,2*j-1]/aggr[i,2*j]
+    } # note below first seq() output will end at 37
+    output[i,20] <- sum(aggr[i,seq(1,38,by=2)])/sum(aggr[i,seq(2,38,by=2)])
+  }
+  # get and print percentage of NAs
+  cat("Percentage of NAs:",sum(is.na(output$X1))/n,"\n")
+  # fill in NAs with column averages
+  for (i in 1:20){
+    output[which(is.na(output[,i])),i] <- mean(output[-which(is.na(output[,i])),i])
+  }
+  return(output)
+}
+
+# list of grand slams as their Men's singles are played to best 3 of 5 sets
+# naming convention following that found in the test sets
+grand.slams <- c("Australian Open","Roland Garros","Wimbledon","US Open")
+
+# overall function to do experiments with
+conduct.experiment <- function(inactive.states, P, test.set, atp=TRUE){
+  # inactive.states:
+  #   vector containing states (19 for tiebreak) to deactivate, i.e. 
+  #   replace the state's unique p with the player's overall p
+  # P:
+  #   data.frame containing players' individual p vectors
+  #   usually obtained via create.p.vector output
+  # test.set:
+  #   data set used to test accuracy of prediction
+  # atp:
+  #   boolean defaulted to true if test.set is ATP data
+  
+  # make copy of P and change copy to align with specified inactive.states
+  cP <- P[,1:19]
+  cP[,inactive.states] <- P[,20]
+  
+  # record exact probability values from model
+  # so we can examine closer if we want
+  n <- nrow(test.set)
+  exact <- rep(0,n)
+  
+  # experiment begins
+  pbp.names <- rownames(cP)
+  for (i in 1:n){
+    matchup <- test.set[i,]
+    winner <- matchup$winner_name
+    loser <- matchup$loser_name
+    inds <- match(c(winner,loser),pbp.names)
+    winner.P <- unname(unlist(cP[inds[1],]))
+    loser.P <- unname(unlist(cP[inds[2],]))
+    if (matchup$tourney_name %in% grand.slams){
+      if (atp){
+        exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=2)
+      } else {
+        exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=1)
+      }
+    } else {
+      exact[i] <- match.win.prob(p1=winner.P,p2=loser.P)
+    }
+  }
+  res <- exact > 0.5
+  return(list("score"=mean(res),"result"=res,"exact"=exact))
+}
+
+downwards.wrapper <- function(deactivate,P,testset,atp){
+  # atp is boolean for if testset is for ATP
+  scores <- rep(0,19)
+  if (length(deactivate)==0){
+    options <- 1:19
+  } else {
+    options <- (1:19)[-deactivate]
+  }
+  for (i in options){
+    scores[i] <- conduct.experiment(c(i,deactivate),P,testset,atp)$score
+    # so deactivated state's indices will have 0
+  }
+  return(list("max"=max(scores),"candidates"=which(scores==max(scores))))
+}
+
+upwards.wrapper <- function(activate,P,testset,atp){
+  # atp is boolean for if testset is for ATP
+  if (length(activate)==0){
+    deactivate <- 1:19
+  } else {
+    deactivate <- (1:19)[-activate]
+  }
+  scores <- rep(0,19)
+  for (i in deactivate){
+    deactivate.no.i <- (1:19)[-c(activate,i)]
+    scores[i] <- conduct.experiment(deactivate.no.i,P,testset,atp)$score
+    # activated state's indices will have 0
+  }
+  return(list("max"=max(scores),"candidates"=which(scores==max(scores))))
+}
+
+# can be further optimized in the future by combining equivalent paths
+downwards.experiment <- function(starting.states,P,testset,atp,previous.scores,depth=18){
+  
+  diverge.lists <- c()
+  deactivate <- starting.states
+  
+  # through recursion, aim to combine all ovr.lists produced
+  ovr.list <- list() # to contain lists containing state & score vectors
+  path <- list()
+  # if no previous scores, can initialize NULL list element for scores:
+  # https://stackoverflow.com/questions/45666451/r-adding-an-empty-vector-to-a-list
+  if (length(previous.scores)==0){
+    path[1] <- list(NULL)
+  } else {
+    path[[1]] <- previous.scores # to record best scores of this path
+  }
+  # path[[2]] to record states deactivated, but does not need initialization
+  
+  while(length(deactivate) < depth){
+    
+    res <- downwards.wrapper(deactivate,P,testset,atp)
+    score <- res$max
+    cands <- res$candidates
+    scores.sofar <- c(path[[1]],score)
+    
+    l <- length(cands)
+    if (l>1){
+      # recursion call
+      for (i in 2:l){
+        diverge.lists <- c(
+          diverge.lists,
+          downwards.experiment(c(deactivate,cands[i]),P,testset,atp,scores.sofar,depth))
+      }
+    }
+    path[[1]] <- scores.sofar
+    deactivate <- c(deactivate,cands[1])
+    path[[2]] <- deactivate
+  }
+  path[[2]] <- deactivate
+  ovr.list[[1]] <- path
+  ovr.list <- c(ovr.list,diverge.lists)
+  
+  return(ovr.list)
+}
+
+upwards.experiment <- function(starting.states,P,testset,atp,previous.scores,depth=18){
+  
+  diverge.lists <- c()
+  activate <- starting.states
+  
+  # through recursion, aim to combine all ovr.lists produced
+  ovr.list <- list() # to contain lists containing state & score vectors
+  path <- list()
+  # if no previous scores, can initialize NULL list element for scores:
+  # https://stackoverflow.com/questions/45666451/r-adding-an-empty-vector-to-a-list
+  if (length(previous.scores)==0){
+    path[1] <- list(NULL)
+  } else {
+    path[[1]] <- previous.scores # to record best scores of this path
+  }
+  # path[[2]] to record states deactivated, but does not need initialization
+  
+  while(length(activate) < depth){
+    
+    res <- upwards.wrapper(activate,P,testset,atp)
+    score <- res$max
+    cands <- res$candidates
+    scores.sofar <- c(path[[1]],score)
+    
+    l <- length(cands)
+    if (l>1){
+      # recursion call
+      for (i in 2:l){
+        diverge.lists <- c(
+          diverge.lists,
+          upwards.experiment(c(activate,cands[i]),P,testset,atp,scores.sofar,depth))
+      }
+    }
+    path[[1]] <- scores.sofar
+    activate <- c(activate,cands[1])
+    path[[2]] <- activate
+  }
+  path[[2]] <- activate
+  ovr.list[[1]] <- path
+  ovr.list <- c(ovr.list,diverge.lists)
+  
+  return(ovr.list)
+}
+```
+
+Modifications to the notebook 5 plot functions to include baselines and put paths into one plot.
+
+```{r}
+plot.path.score <- function(n.down,dat.down,n.up,dat.up,
+                      P, test.set, atp=TRUE,
+                      ylim.lower=0.55,ylim.upper=0.7){
+  # n - length of path given
+  # dat - data saved containing paths
+  # ylim.lower(upper) - ylim for plot, set to around 0(20) for type=2
+  
+  baseline.down <- conduct.experiment(c(),P,test.set,atp)$score
+  baseline.up <- conduct.experiment(1:19,P,test.set,atp)$score
+  
+  plot(0:n.up,c(baseline.up,dat.up[[1]][[1]]),'l',
+       xlim=c(0,20),ylim=c(ylim.lower,ylim.upper),main="Scores")
+  for (i in 2:length(dat.up)){
+    lines(0:n.up,c(baseline.up,dat.up[[i]][[1]]))
+  }
+  for (i in 1:length(dat.down)){
+    lines(20:(20-n.down),c(baseline.down,dat.down[[i]][[1]]))
+  }
+}
+
+plot.path.state <- function(n.down,dat.down,n.up,dat.up,ylim.lower=0,ylim.upper=20){
+  # n - length of path given
+  # dat - data saved containing paths
+  # ylim.lower(upper) - ylim for plot, set to around 0(20) for state
+  
+  plot(1:n.up,dat.up[[1]][[2]],'l',
+       xlim=c(1,19),ylim=c(ylim.lower,ylim.upper),main="States")
+  for (i in 2:length(dat.up)){
+    lines(1:n.up,dat.up[[i]][[2]])
+  }
+  for (i in 1:length(dat.down)){
+    lines(19:(20-n.down),dat.down[[i]][[2]])
+  }
+}
+```
+
+
+
+# Data Loading & Processing
+
+```{r}
+# match/test data
+load.match.csv <- function(file.name){
+  m <- read.csv(file.name)
+  # remove R128,64 entries since resulted in too many players 
+  # which we had no point by point data on
+  m <- m[-which(m$round=="R128"|m$round=="R64"|m$round=="R32"),]
+  # removing incomplete matches (ret,def,w/o)
+  m <- m[-ic.match(m$score),]
+  return(m)
+}
+m.2012 <- load.match.csv("2012_match.csv")
+m.2013 <- load.match.csv("2013_match.csv")
+m.2014 <- load.match.csv("2014_match.csv")
+m.2015 <- load.match.csv("2015_match.csv")
+m.2016 <- load.match.csv("2016_match.csv")
+m.2017 <- load.match.csv("2017_match.csv")
+m.2018 <- load.match.csv("2018_match.csv")
+m.2019 <- load.match.csv("2019_match.csv")
+m.2020 <- load.match.csv("2020_match.csv")
+m.2021 <- load.match.csv("2021_match.csv")
+m.2022 <- load.match.csv("2022_match.csv")
+# unique names of match players to generate P matrices later
+names.2012 <- get.unique.players(m.2012)
+names.2013 <- get.unique.players(m.2013)
+names.2014 <- get.unique.players(m.2014)
+names.2015 <- get.unique.players(m.2015)
+names.2016 <- get.unique.players(m.2016)
+names.2017 <- get.unique.players(m.2017)
+names.2018 <- get.unique.players(m.2018)
+names.2019 <- get.unique.players(m.2019)
+names.2020 <- get.unique.players(m.2020)
+names.2021 <- get.unique.players(m.2021)
+names.2022 <- get.unique.players(m.2022)
+# point-by-point data
+pbp.2011 <- read.csv("2011_pbp.csv")
+pbp.2012 <- read.csv("2012_pbp.csv")
+pbp.2013 <- read.csv("2013_pbp.csv")
+pbp.2014 <- read.csv("2014_pbp.csv")
+pbp.2015 <- read.csv("2015_pbp.csv")
+pbp.2016 <- read.csv("2016_pbp.csv")
+pbp.2017 <- read.csv("2017_pbp.csv")
+pbp.2018 <- read.csv("2018_pbp.csv")
+pbp.2019 <- read.csv("2019_pbp.csv")
+pbp.2020 <- read.csv("2020_pbp.csv")
+pbp.2021 <- read.csv("2021_pbp.csv")
+```
+```{r}
+# creating all the P matrices that will be used
+# naming convention for all P matrices - P.xx.yy
+# xx being the year the pbp data is from, yy the year for the match/test data
+print("11=>12")
+P.11.12 <- create.p.vector(names.2012,pbp.2011)
+print("12=>13")
+P.12.13 <- create.p.vector(names.2013,pbp.2012)
+print("13=>14")
+P.13.14 <- create.p.vector(names.2014,pbp.2013)
+print("14=>15")
+P.14.15 <- create.p.vector(names.2015,pbp.2014)
+print("15=>16")
+P.15.16 <- create.p.vector(names.2016,pbp.2015)
+print("16=>17")
+P.16.17 <- create.p.vector(names.2017,pbp.2016)
+print("17=>18")
+P.17.18 <- create.p.vector(names.2018,pbp.2017)
+print("18=>19")
+P.18.19 <- create.p.vector(names.2019,pbp.2018)
+print("19=>20")
+P.19.20 <- create.p.vector(names.2020,pbp.2019)
+print("20=>21")
+P.20.21 <- create.p.vector(names.2021,pbp.2020)
+print("21=>22")
+P.21.22 <- create.p.vector(names.2022,pbp.2021)
+print("11=>13")
+P.11.13 <- create.p.vector(names.2013,pbp.2011)
+print("12=>14")
+P.12.14 <- create.p.vector(names.2014,pbp.2012)
+print("13=>15")
+P.13.15 <- create.p.vector(names.2015,pbp.2013)
+print("14=>16")
+P.14.16 <- create.p.vector(names.2016,pbp.2014)
+print("15=>17")
+P.15.17 <- create.p.vector(names.2017,pbp.2015)
+print("16=>18")
+P.16.18 <- create.p.vector(names.2018,pbp.2016)
+print("17=>19")
+P.17.19 <- create.p.vector(names.2019,pbp.2017)
+print("18=>20")
+P.18.20 <- create.p.vector(names.2020,pbp.2018)
+print("19=>21")
+P.19.21 <- create.p.vector(names.2021,pbp.2019)
+print("20=>22")
+P.20.22 <- create.p.vector(names.2022,pbp.2020)
+```
+
+
+# 2011-2013 [1]
+
+## 1a
+
+```{r eval=FALSE, include=TRUE}
+# because 5 states are chosen at depth=1, running time for this one is
+# especially long. Had to settle for depth=5 instead of 7, and even this took
+res <- downwards.experiment(c(),P.11.12,m.2012,atp=TRUE,c(),depth=5)
+saveRDS(res, file="down5-11-12.rds")
+```
+```{r}
+down.11.12 <- readRDS("down5-11-12.rds")
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.11.12,m.2012,atp=TRUE,c(),depth=7)
+saveRDS(res, file="up7-11-12.rds")
+```
+```{r}
+up.11.12 <- readRDS("up7-11-12.rds")
+```
+```{r}
+plot.path.score(5,down.11.12,7,up.11.12,P.11.12,m.2012,ylim.lower=0.67,ylim.upper=0.75)
+```
+```{r}
+plot.path.state(5,down.11.12,7,up.11.12)
+```
+
+Here it seems 3 steps upwards or 2 steps downwards is sufficient to get in its vicinity. The state paths do diverge pretty early on, especially from the upwards direction. We also note how the baselines are higher than usual in this case, in the high 60's. We determine {1,9,16} as the favoured states in the upwards direction, and {1,6} as the opposed states in the downwards direction. For the especially messy downwards paths, 1 was chosen as 81/135 of the paths started with it so it was the dominant starting point.
+
+```{r}
+examine.1a <- m.2012[,c(3,4)]
+examine.1a$all.deact <- conduct.experiment(1:19,P.11.12,m.2012)$result
+examine.1a$all.act <- conduct.experiment(c(),P.11.12,m.2012)$result
+examine.1a$plat.up <- conduct.experiment((1:19)[-c(1,9,16)],P.11.12,m.2012)$result
+examine.1a$plat.down <- conduct.experiment(c(1,6),P.11.12,m.2012)$result
+examine.1a[which(examine.1a$all.deact!=examine.1a$plat.up),c(1,2,5)]
+examine.1a[which(examine.1a$all.act!=examine.1a$plat.down),c(1,2,6)]
+```
+
+## 1a Results
+
+*Italics* denote signiicantly based on duplicates or variations of the same matchup and may not be as strong a result.
+
+Identified beneficiaries of activating {1,9,16}: Stan Wawrinka (2/11), *Andy Murray* (2/11), *Juan Martin del Potro* (2/11) 
+
+Identified anti-beneficiaries of activating {1,9,16}: Nicolas Almagro (3/11), *Marin Cilic* (2/11), *Tomas Berdych* (2/11)
+
+Identified beneficiaries of de-activating {1,6}: *Novak Djokovic* (5/8)
+
+Identified anti-beneficiaries of de-activating {1,6}: *Roger Federer* (5/8)
+
+## 1b
+
+```{r}
+examine.player.function <- function(dat,direction,player){
+  # dat is the dataset containing Xb experiment results
+  # direction is either "up" or "down"
+  # player is the player to be examined
+  
+  if (direction=="up"){
+    dat[which((dat$winner_name==player
+             |dat$loser_name==player)
+            &(dat$all.deact!=dat$plat.up)),c(3,4,5,7,9)]
+  } else if (direction=="down"){
+    dat[which((dat$winner_name==player
+             |dat$loser_name==player)
+            &(dat$all.act!=dat$plat.down)),c(3,4,5,8,10)]
+  }
+}
+```
+
+```{r}
+examine.1b <- m.2013
+examine.1b$all.deact <- conduct.experiment(1:19,P.12.13,m.2013)$result
+examine.1b$all.act <- conduct.experiment(c(),P.12.13,m.2013)$result
+examine.1b$plat.up <- conduct.experiment((1:19)[-c(1,9,16)],P.12.13,m.2013)$result
+examine.1b$plat.down <- conduct.experiment(c(1,6),P.12.13,m.2013)$result
+```
+```{r}
+examine.player.function(examine.1b,"up","Stan Wawrinka")
+```
+
+We see here two instances where Wawrinka gets flips in his favour when the identified states are activated, though the matchups are actually the same.
+
+```{r}
+examine.player.function(examine.1b,"up","Andy Murray")
+```
+
+del Potro and Murray were both weak beneficiaries, so flipping one over the other does not tell us much, except that del Potro may have been a stronger beneficiary of the activations.
+
+```{r}
+examine.player.function(examine.1b,"up","Juan Martin del Potro")
+# examine.player.function(examine.1b,"up","Nicolas Almagro") # 0 rows
+# examine.player.function(examine.1b,"up","Marin Cilic") # 0 rows
+# examine.player.function(examine.1b,"up","Tomas Berdych") # 0 rows
+# examine.player.function(examine.1b,"down","Novak Djokovic") # 0 rows
+# examine.player.function(examine.1b,"down","Roger Federer") # 0 rows
+```
+
+Apart from the del Potro match from before, there were no differences among the determined players' matchups. Though especially from on the downwards/de-activation side, this is not unexpected as the results regarding Federer and Djokovic, as well as the downward paths themselves, were pretty weak to begin with.
+
+## 1c
+
+```{r}
+conduct.experiment(c(),P.11.13,m.2013)$score # all activated
+conduct.experiment(1:19,P.11.13,m.2013)$score # all de-activated
+conduct.experiment(c(1,6),P.11.13,m.2013)$score # identified downward states
+conduct.experiment((1:19)[-c(1,9,16)],P.11.13,m.2013)$score # identified upward states
+```
+
+We see small decreases in the (de-)activated scores with their respective baselines, so here it is pretty conclusive that here the plateau exercises' results aren't good for prediction 1 more year out.
+
+# 2012-2014 [2]
+
+## 2a
+
+```{r eval=FALSE, include=TRUE}
+res <- downwards.experiment(c(),P.12.13,m.2013,atp=TRUE,c(),depth=7)
+saveRDS(res, file="down7-12-13.rds")
+```
+```{r}
+down.12.13 <- readRDS("down7-12-13.rds")
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.12.13,m.2013,atp=TRUE,c(),depth=7)
+saveRDS(res, file="up7-12-13.rds")
+```
+```{r}
+up.12.13 <- readRDS("up7-12-13.rds")
+```
+```{r}
+plot.path.score(7,down.12.13,7,up.12.13,P.12.13,m.2013,ylim.lower=0.63,ylim.upper=0.73)
+```
+```{r}
+plot.path.state(7,down.12.13,7,up.12.13)
+```
+
+Here it seems 3 steps upwards or 1 step downwards is sufficient to get in its vicinity. We determine {2,3,19} as the favoured states in the upwards direction, and {15} as the opposed states in the downwards direction.
+
+```{r}
+examine.2a <- m.2013[,c(3,4)]
+examine.2a$all.deact <- conduct.experiment(1:19,P.12.13,m.2013)$result
+examine.2a$all.act <- conduct.experiment(c(),P.12.13,m.2013)$result
+examine.2a$plat.up <- conduct.experiment((1:19)[-c(2,3,19)],P.12.13,m.2013)$result
+examine.2a$plat.down <- conduct.experiment(c(15),P.12.13,m.2013)$result
+examine.2a[which(examine.2a$all.deact!=examine.2a$plat.up),c(1,2,5)]
+examine.2a[which(examine.2a$all.act!=examine.2a$plat.down),c(1,2,6)]
+```
+
+## 2a Results
+
+*Italics* denote signiicantly based on duplicates or variations of the same matchup and may not be as strong a result.
+
+Identified beneficiaries of activating {2,3,19}: Rafael Nadal (8/27), Andy Murray (3/27), Tommy Haas (2/27),  *Florian Mayer* (2/27)
+
+Identified anti-beneficiaries of activating {2,3,19}: Novak Djokovic (5/27), Richard Gasquet (4/27), Mikhail Youzhny (2/27), *Roger Federer* (5/27), *Jo-Wilfried Tsonga* (2/27)
+
+Identified beneficiaries of de-activating {15}: Dmitry Tursunov (2/13), Milos Raonic (2/13), *Novak Djokovic* (4/27), *Rafael Nadal* (2/13)
+
+Identified anti-beneficiaries of de-activating {15}: *Andy Murray* (3/13), *Ernests Gulbis* (3/13), *Jo-Wilfried Tsonga* (2/13)
+
+## 2b
+
+```{r}
+examine.2b <- m.2014
+examine.2b$all.deact <- conduct.experiment(1:19,P.13.14,m.2014)$result
+examine.2b$all.act <- conduct.experiment(c(),P.13.14,m.2014)$result
+examine.2b$plat.up <- conduct.experiment((1:19)[-c(2,3,19)],P.13.14,m.2014)$result
+examine.2b$plat.down <- conduct.experiment(15,P.13.14,m.2014)$result
+```
+```{r}
+examine.player.function(examine.2b,"up","Rafael Nadal")
+```
+
+We see for Nadal, the three flips were all wrong, though two were against Murray, who was also determined a beneficiary.
+
+```{r}
+examine.player.function(examine.2b,"up","Andy Murray")
+```
+
+So as stated above, Murray still seems a beneficiary in his matchups with Nadal, but the active states do not seem to favour him with Kevin Anderson.
+
+```{r}
+# examine.player.function(examine.2b,"up","Tommy Haas") # 0 rows
+# examine.player.function(examine.2b,"up","Florian Mayer") # 0 rows
+# examine.player.function(examine.2b,"up","Novak Djokovic") # 0 rows
+# examine.player.function(examine.2b,"up","Richard Gasquet") # 0 rows
+examine.player.function(examine.2b,"up","Mikhail Youzhny")
+```
+
+Youzhny was a anti-beneficiary of the activations and here we do see the activations in 2012 data disadvantage/weaken him as well in the model.
+
+```{r}
+# examine.player.function(examine.2b,"up","Roger Federer") # no rows
+# examine.player.function(examine.2b,"up","Jo-Wilfried Tsonga") # no rows
+# examine.player.function(examine.2b,"down","Dmitry Tursunov") # no rows
+# examine.player.function(examine.2b,"down","Milos Raonic") # no rows
+# examine.player.function(examine.2b,"down","Novak Djokovic") # no rows
+examine.player.function(examine.2b,"down","Rafael Nadal")
+```
+
+We see Nadal was not a beneficiary of deactivating 15, a slightly negative result but not by much since Nadal was identified as a weak beneficiary. 
+
+```{r}
+examine.player.function(examine.2b,"down","Andy Murray")
+# examine.player.function(examine.2b,"down","Ernests Gulbis") # no rows
+# examine.player.function(examine.2b,"down","Jo-Wilfried Tsonga") # no rows
+```
+
+Andy Murray is indeed still an anti-beneficiary of 15's deactivation.
+
+## 2c
+
+```{r}
+conduct.experiment(c(),P.12.14,m.2014)$score # all activated
+conduct.experiment(1:19,P.12.14,m.2014)$score # all de-activated
+conduct.experiment(c(15),P.12.14,m.2014)$score # identified downward states
+conduct.experiment((1:19)[-c(2,3,19)],P.12.14,m.2014)$score # identified upward states
+```
+
+Like in 1c, (de-)activations don't have significant positive effects on the next year's data. It is expected for following 'c' results to remain like this, so no further comments will be made unless something significant comes up.
+
+# 2013-2015 [3]
+
+## 3a
+
+```{r eval=FALSE, include=TRUE}
+res <- downwards.experiment(c(),P.13.14,m.2014,atp=TRUE,c(),depth=7)
+saveRDS(res, file="down7-13-14.rds")
+```
+```{r}
+down.13.14 <- readRDS("down7-13-14.rds")
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.13.14,m.2014,atp=TRUE,c(),depth=5)
+saveRDS(res, file="up5-13-14.rds")
+```
+```{r}
+up.13.14 <- readRDS("up5-13-14.rds")
+```
+```{r}
+plot.path.score(7,down.13.14,5,up.13.14,P.13.14,m.2014)
+```
+```{r}
+plot.path.state(7,down.13.14,5,up.13.14)
+```
+
+We take 1 step upwards with state {16} and 2 step downwards with states {1,18}.
+
+```{r}
+examine.3a <- m.2014[,c(3,4)]
+examine.3a$all.deact <- conduct.experiment(1:19,P.13.14,m.2014)$result
+examine.3a$all.act <- conduct.experiment(c(),P.13.14,m.2014)$result
+examine.3a$plat.up <- conduct.experiment((1:19)[-c(16)],P.13.14,m.2014)$result
+examine.3a$plat.down <- conduct.experiment(c(1,18),P.13.14,m.2014)$result
+examine.3a[which(examine.3a$all.deact!=examine.3a$plat.up),c(1,2,5)]
+examine.3a[which(examine.3a$all.act!=examine.3a$plat.down),c(1,2,6)]
+```
+
+## 3a Results
+
+*Italics* denote signiicantly based on duplicates or variations of the same matchup and may not be as strong a result.
+
+Identified beneficiaries of activating {16}: *Andy Murray* (2/10), *Stan Wawrinka* (2/10)
+
+Identified anti-beneficiaries of activating {16}: Grigor Dimitrov (6/10)
+
+Identified beneficiaries of de-activating {1,18}: *Tomas Berdych* (5/14), *Rafael Nadal* (4/14), *Novak Djokovic* (2/14)
+
+Identified anti-beneficiaries of de-activating {1,18}: *Grigor Dimitrov* (4/14) *Marin Cilic* (2/14), *Philipp Kohlschreiber* (2/14), *Andy Murray* (2/14)
+
+## 3b
+
+```{r}
+examine.3b <- m.2015
+examine.3b$all.deact <- conduct.experiment(1:19,P.14.15,m.2015)$result
+examine.3b$all.act <- conduct.experiment(c(),P.14.15,m.2015)$result
+examine.3b$plat.up <- conduct.experiment((1:19)[-c(16)],P.14.15,m.2015)$result
+examine.3b$plat.down <- conduct.experiment(c(1,18),P.14.15,m.2015)$result
+```
+```{r}
+examine.player.function(examine.3b,"up","Andy Murray")
+# examine.player.function(examine.3b,"up","Stan Wawrinka") # no rows
+```
+
+Murray remains a beneficiary.
+
+```{r}
+examine.player.function(examine.3b,"up","Grigor Dimitrov")
+```
+
+Grigor Dimitrov being an anti-beneficiary of activating state 16 was one of the strongest results found thus far. That meekly holds here, with his loss against Nadal being flipped correctly.
+
+```{r}
+# examine.player.function(examine.3b,"down","Tomas Berdych") # no rows
+# examine.player.function(examine.3b,"down","Rafael Nadal) # no rows
+# examine.player.function(examine.3b,"down","Novak Djokovic") # no rows
+# examine.player.function(examine.3b,"down","Grigor Dimitrov") # no rows
+# examine.player.function(examine.3b,"down","Marin Cilic") # no rows
+# examine.player.function(examine.3b,"down","Philipp Kohlschreiber") # no rows
+examine.player.function(examine.3b,"down","Andy Murray")
+```
+
+Now Murray, instead of being a weak anti-beneficiary, is a beneficiary of the deactivations. Perceived results clearly do not hold here.
+
+## 3c
+
+```{r}
+conduct.experiment(c(),P.13.15,m.2015)$score # all activated
+conduct.experiment(1:19,P.13.15,m.2015)$score # all de-activated
+conduct.experiment(c(1,18),P.13.15,m.2015)$score # identified downward states
+conduct.experiment((1:19)[-c(16)],P.13.15,m.2015)$score # identified upward states
+```
+
+Here we get our first, probably just random, increase from (de-)activations. Activating state 16, deuce, yields some increase. (More specifically given for m.2015 n=205, an increase of one).
+
+# 2014-2016 [4]
+
+## 4a
+
+```{r eval=FALSE, include=TRUE}
+res <- downwards.experiment(c(),P.14.15,m.2015,atp=TRUE,c(),depth=7)
+saveRDS(res, file="down7-14-15.rds")
+```
+```{r}
+down.14.15 <- readRDS("down7-14-15.rds")
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.14.15,m.2015,atp=TRUE,c(),depth=7)
+saveRDS(res, file="up7-14-15.rds")
+```
+```{r}
+up.14.15 <- readRDS("up7-14-15.rds")
+```
+```{r}
+plot.path.score(7,down.14.15,7,up.14.15,P.14.15,m.2015,ylim.upper=0.71)
+```
+```{r}
+plot.path.state(7,down.14.15,7,up.14.15)
+```
+
+Very clean increases from both sides this time around, though from the downwards direction the choice of cutoff is harder. We take 2 steps upwards with states {1,6} and 3 steps downwards with {12,15,19}
+
+```{r}
+examine.4a <- m.2015[,c(3,4)]
+examine.4a$all.deact <- conduct.experiment(1:19,P.14.15,m.2015)$result
+examine.4a$all.act <- conduct.experiment(c(),P.14.15,m.2015)$result
+examine.4a$plat.up <- conduct.experiment((1:19)[-c(1,6)],P.14.15,m.2015)$result
+examine.4a$plat.down <- conduct.experiment(c(12,15,19),P.14.15,m.2015)$result
+examine.4a[which(examine.4a$all.deact!=examine.4a$plat.up),c(1,2,5)]
+examine.4a[which(examine.4a$all.act!=examine.4a$plat.down),c(1,2,6)]
+```
+
+## 4a Results
+
+*Italics* denote significantly based on duplicates or variations of the same matchup and may not be as strong a result.
+
+Identified beneficiaries of activating {1,6}: Andy Murray (5/19), *Novak Djokovic* (7/19), *Jo-Wilfried Tsonga* (3/19), *Grigor Dimitrov* (2/19)
+
+Identified anti-beneficiaries of activating {1,6}: Tomas Berdych (6/19), Kei Nishikori (3/19), *Rafael Nadal* (3/19),*Richard Gasquet* (2/19), *Stan Wawrinka* (2/19)
+
+Identified beneficiaries of de-activating {12,15,19}: Novak Djokovic (18/29), *Grigor Dimitrov* (3/29), *Tomas Berdych* (5/29)
+
+Identified anti-beneficiaries of de-activating {12,15,19}: *Stan Wawrinka* (7/29), *Rafael Nadal* (6/29), *Jo-Wilfried Tsonga* (4/29)
+
+## 4b
+
+```{r}
+examine.4b <- m.2016
+examine.4b$all.deact <- conduct.experiment(1:19,P.15.16,m.2016)$result
+examine.4b$all.act <- conduct.experiment(c(),P.15.16,m.2016)$result
+examine.4b$plat.up <- conduct.experiment((1:19)[-c(1,6)],P.15.16,m.2016)$result
+examine.4b$plat.down <- conduct.experiment(c(12,15,19),P.15.16,m.2016)$result
+```
+```{r}
+# examine.player.function(examine.4b,"up","Andy Murray") # no rows
+# examine.player.function(examine.4b,"up","Novak Djokovic") # no rows
+# examine.player.function(examine.4b,"up","Jo-Wilfried Tsonga") # no rows
+# examine.player.function(examine.4b,"up","Grigor Dimitrov") # no rows
+examine.player.function(examine.4b,"up","Tomas Berdych")
+```
+
+Instead of being disadvantaged with 1,6's activations, Berdych is a beneficiary here. Though it should be noted the opponent, Gasquet, was also a weak anti-beneficiary above.
+
+```{r}
+examine.player.function(examine.4b,"up","Kei Nishikori")
+```
+
+Like before, Nishikori is now a beneficiary instead, but the opponent, Wawrinka was a anti-beneficiary before as well.
+
+```{r}
+examine.player.function(examine.4b,"up","Rafael Nadal")
+```
+
+Indeed Nadal is still an anti-beneficiary here.
+
+```{r}
+examine.player.function(examine.4b,"up","Richard Gasquet")
+examine.player.function(examine.4b,"up","Stan Wawrinka")
+```
+
+As noted before, it is no surprise that Gasquet and Wawrinka remain anti-beneficiaries here.
+
+```{r}
+examine.player.function(examine.4b,"down","Novak Djokovic")
+```
+
+While the results from the upwards direction have been holding up well, the strongest result, Djokovic's huge boost from the deactivations, does not show up when going to the next year. As we are dealing with deactivations, they aim to reveal weaknesses in the player's point-play tendencies. As here we do not have negative results, but rather are faced with the absence of positive ones, it is completely possible Djokovic worked on his mental game and consistency for those point situations in the offseason. 
+
+```{r}
+examine.player.function(examine.4b,"down","Grigor Dimitrov")
+examine.player.function(examine.4b,"down","Tomas Berdych")
+```
+
+Dimitrov and Berdych have now gone from weak beneficiaries to anti-beneficiaries.
+
+```{r}
+examine.player.function(examine.4b,"down","Stan Wawrinka")
+```
+
+Wawrinka is still a clear anti-beneficiary of the deactivations, a very positive result.
+
+```{r}
+examine.player.function(examine.4b,"down","Rafael Nadal")
+# examine.player.function(examine.4b,"down","Jo-Wilfried Tsonga") # no rows
+```
+
+## 4c
+
+```{r}
+conduct.experiment(c(),P.14.16,m.2016)$score # all activated
+conduct.experiment(1:19,P.14.16,m.2016)$score # all de-activated
+conduct.experiment(c(12,15,19),P.14.16,m.2016)$score # identified downward states
+conduct.experiment((1:19)[-c(1,6)],P.14.16,m.2016)$score # identified upward states
+```
+
+Like in 3c, we have an increase (6 more correct) going in the upwards direction.
+
+```{r}
+not.function.just.note.marker <- function() pass
+# Do the identified states tell us more about the train year or the test year's
+# player's point tendencies?
+# Should lean heavily towards the training set, following to check
+# if states 1,6 are identified early on in the upwards climb to the plateau
+# tex <- upwards.experiment(c(),P.14.16,m.2016,atp=TRUE,c(),depth=5)
+# plot.path(5,tex,2,ylim.lower=1,ylim.upper=19) # function from notebook 5
+# 1 can be identified on the 1st step, 6 is identified at the 4th step, relatively late
+# so we can conclude the information is entirely that of the training set year's,
+# but rather a combination of both years. Though the score may not be the best indicator...
+```
+
+
+# 2015-2017 [5]
+
+## 5a
+
+```{r eval=FALSE, include=TRUE}
+res <- downwards.experiment(c(),P.15.16,m.2016,atp=TRUE,c(),depth=5)
+saveRDS(res, file="down5-15-16.rds")
+```
+```{r}
+down.15.16 <- readRDS("down5-15-16.rds")
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.15.16,m.2016,atp=TRUE,c(),depth=6)
+saveRDS(res, file="up6-15-16.rds")
+```
+```{r}
+up.15.16 <- readRDS("up6-15-16.rds")
+```
+```{r}
+plot.path.score(5,down.15.16,6,up.15.16,P.15.16,m.2016)
+```
+```{r}
+plot.path.state(5,down.15.16,6,up.15.16)
+```
+
+In the upwards direction we take 3 steps with states {1,5,16}. In the downwards direction both the paths and the scores are incredibly messy from the get-go. So we will only take the start where the scores haven't diverged and the paths are still distinguishable. Therefore we take 1 step down with state {19} (compared to 12, its branches all score higher on the second step). **(Do note that 12 and 19 were among the deactivated states chosen for 14-15 as well!)**
+
+```{r}
+examine.5a <- m.2016[,c(3,4)]
+examine.5a$all.deact <- conduct.experiment(1:19,P.15.16,m.2016)$result
+examine.5a$all.act <- conduct.experiment(c(),P.15.16,m.2016)$result
+examine.5a$plat.up <- conduct.experiment((1:19)[-c(1,5,16)],P.15.16,m.2016)$result
+examine.5a$plat.down <- conduct.experiment(c(19),P.15.16,m.2016)$result
+examine.5a[which(examine.5a$all.deact!=examine.5a$plat.up),c(1,2,5)]
+examine.5a[which(examine.5a$all.act!=examine.5a$plat.down),c(1,2,6)]
+```
+
+## 5a Results
+
+*Italics* denote significantly based on duplicates or variations of the same matchup and may not be as strong a result.
+
+Identified beneficiaries of activating {1,5,16}: Dominic Thiem (3/14), *Andy Murray* (6/14)
+
+Identified anti-beneficiaries of activating {1,5,16}: *Richard Gasquet* (5/14)
+
+Identified beneficiaries of de-activating {19}: Marin Cilic (2/9), *Richard Gasquet* (4/9)
+
+Identified anti-beneficiaries of de-activating {19}: Grigor Dimitrov (2/9)
+
+## 5b
+
+```{r}
+examine.5b <- m.2017
+examine.5b$all.deact <- conduct.experiment(1:19,P.16.17,m.2017)$result
+examine.5b$all.act <- conduct.experiment(c(),P.16.17,m.2017)$result
+examine.5b$plat.up <- conduct.experiment((1:19)[-c(1,5,16)],P.16.17,m.2017)$result
+examine.5b$plat.down <- conduct.experiment(19,P.16.17,m.2017)$result
+```
+```{r}
+examine.player.function(examine.5b,"up","Dominic Thiem")
+```
+
+Thiem has instead become an anti-beneficiary here, though a weak one as the three flipped matches are essentially the same one.
+
+```{r}
+examine.player.function(examine.5b,"up","Andy Murray")
+```
+
+Murray remains a beneficiary.
+
+```{r}
+# examine.player.function(examine.5b,"up","Richard Gasquet") # no rows
+# examine.player.function(examine.5b,"down","Richard Gasquet") # no rows
+# examine.player.function(examine.5b,"down","Marin Cilic") # no rows
+examine.player.function(examine.5b,"down","Grigor Dimitrov")
+```
+
+Mixed results here as one of Dimitrov's wins are flipped false indicating he is an anti-beneficiary, but then we have a match he lost flipped false indicating him as a beneficiary.
+
+## 5c
+
+```{r}
+conduct.experiment(c(),P.15.17,m.2017)$score # all activated
+conduct.experiment(1:19,P.15.17,m.2017)$score # all de-activated
+conduct.experiment(c(19),P.15.17,m.2017)$score # identified downward states
+conduct.experiment((1:19)[-c(1,5,16)],P.15.17,m.2017)$score # identified upward states
+```
+
+# 2016-2018 [6]
+
+## 6a
+
+```{r eval=FALSE, include=TRUE}
+res <- downwards.experiment(c(),P.16.17,m.2017,atp=TRUE,c(),depth=7)
+saveRDS(res, file="down7-16-17.rds")
+```
+```{r}
+down.16.17 <- readRDS("down7-16-17.rds")
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.16.17,m.2017,atp=TRUE,c(),depth=7)
+saveRDS(res, file="up7-16-17.rds")
+```
+```{r}
+up.16.17 <- readRDS("up7-16-17.rds")
+```
+```{r}
+plot.path.score(7,down.16.17,7,up.16.17,P.16.17,m.2017)
+```
+```{r}
+plot.path.state(7,down.16.17,7,up.16.17)
+```
+
+We take 3 steps up with {13,15,16} and 2 steps down with {9,19}.
+
+```{r}
+examine.6a <- m.2017[,c(3,4)]
+examine.6a$all.deact <- conduct.experiment(1:19,P.16.17,m.2017)$result
+examine.6a$all.act <- conduct.experiment(c(),P.16.17,m.2017)$result
+examine.6a$plat.up <- conduct.experiment((1:19)[-c(13,15,16)],P.16.17,m.2017)$result
+examine.6a$plat.down <- conduct.experiment(c(9,19),P.16.17,m.2017)$result
+examine.6a[which(examine.6a$all.deact!=examine.6a$plat.up),c(1,2,5)]
+examine.6a[which(examine.6a$all.act!=examine.6a$plat.down),c(1,2,6)]
+```
+
+## 6a Results
+
+*Italics* denote significantly based on duplicates or variations of the same matchup and may not be as strong a result.
+
+Identified beneficiaries of activating {13,15,16}: Rafael Nadal (3/11), *Grigor Dimitrov* (3/11)
+
+Identified anti-beneficiaries of activating {13,15,16}: Pablo Cuevas (2/11), *David Goffin* (5/11)
+
+Identified beneficiaries of de-activating {9,19}: Rafael Nadal (6/15), Stan Wawrinka (2/15), Dominic Thiem (2/15)
+
+Identified anti-beneficiaries of de-activating {9,19}: Roberto Bautista Agut (2/15), Pablo Cuevas (2/15)
+
+## 6b
+
+```{r}
+examine.6b <- m.2018
+examine.6b$all.deact <- conduct.experiment(1:19,P.17.18,m.2018)$result
+examine.6b$all.act <- conduct.experiment(c(),P.17.18,m.2018)$result
+examine.6b$plat.up <- conduct.experiment((1:19)[-c(13,15,16)],P.17.18,m.2018)$result
+examine.6b$plat.down <- conduct.experiment(c(9,19),P.17.18,m.2018)$result
+```
+```{r}
+# examine.player.function(examine.6b,"up","Rafael Nadal") # no rows
+examine.player.function(examine.6b,"up","Grigor Dimitrov")
+```
+
+Positive results as Dimitrov remains a beneficiary against 2 distinct opponents. One of them is Goffin, who was also identified as an anti-beneficiary.
+
+```{r}
+# examine.player.function(examine.6b,"up","Pablo Cuevas") # no rows
+examine.player.function(examine.6b,"up","David Goffin")
+```
+
+Here Goffin remains an anti-benficiary against 2 distinct opponents, Dimitrov and del Potro, but is a beneficiary aginast Cilic.
+
+```{r}
+# examine.player.function(examine.6b,"down","Rafael Nadal") # no rows
+# examine.player.function(examine.6b,"down","Stan Wawrinka") # no rows
+examine.player.function(examine.6b,"down","Dominic Thiem")
+# examine.player.function(examine.6b,"down","Roberto Bautista Agut") # no rows
+# examine.player.function(examine.6b,"down","Pablo Cuevas") # no rows
+```
+
+Positive results as Thiem remains a beneficiary over 2 distinct opponents.
+
+## 6c
+
+```{r}
+conduct.experiment(c(),P.16.18,m.2018)$score # all activated
+conduct.experiment(1:19,P.16.18,m.2018)$score # all de-activated
+conduct.experiment(c(9,19),P.16.18,m.2018)$score # identified downward states
+conduct.experiment((1:19)[-c(13,15,16)],P.16.18,m.2018)$score # identified upward states
+```
+
+The most positive results so far, with the plateau score all scoring (2 more matchups) higher than their all (de-)activated counterparts. Overall [6] has been immensely positive.
+
+# 2017-2019 [7]
+
+## 7a
+
+```{r eval=FALSE, include=TRUE}
+res <- downwards.experiment(c(),P.17.18,m.2018,atp=TRUE,c(),depth=7)
+saveRDS(res, file="down7-17-18.rds")
+```
+```{r}
+down.17.18 <- readRDS("down7-17-18.rds")
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.17.18,m.2018,atp=TRUE,c(),depth=7)
+saveRDS(res, file="up7-17-18.rds")
+```
+```{r}
+up.17.18 <- readRDS("up7-17-18.rds")
+```
+```{r}
+plot.path.score(7,down.17.18,7,up.17.18,P.17.18,m.2018)
+```
+```{r}
+plot.path.state(7,down.17.18,7,up.17.18)
+```
+
+We take 2 steps up with states {10,13} and 2 steps down with {9,19} (unchanged in the downward side!).
+
+```{r}
+examine.7a <- m.2018[,c(3,4)]
+examine.7a$all.deact <- conduct.experiment(1:19,P.17.18,m.2018)$result
+examine.7a$all.act <- conduct.experiment(c(),P.17.18,m.2018)$result
+examine.7a$plat.up <- conduct.experiment((1:19)[-c(10,13)],P.17.18,m.2018)$result
+examine.7a$plat.down <- conduct.experiment(c(9,19),P.17.18,m.2018)$result
+examine.7a[which(examine.7a$all.deact!=examine.7a$plat.up),c(1,2,5)]
+examine.7a[which(examine.7a$all.act!=examine.7a$plat.down),c(1,2,6)]
+```
+
+## 7a Results
+
+*Italics* denote significantly based on duplicates or variations of the same matchup and may not be as strong a result.
+
+Identified beneficiaries of activating {10,13}: *Alexander Zverev* (4/6)
+
+Identified anti-beneficiaries of activating {10,13}: .
+
+Identified beneficiaries of de-activating {9,19}: Alexander Zverev (10/31), Grigor Dimitrov (2/31), Juan Martin del Potro (2/31), *Novak Djokovic* (6/31), *Dominic Thiem* (3/31)
+
+Identified anti-beneficiaries of de-activating {9,19}: Nick Kyrgios (3/31), *Marin Cilic* (9/31), *Karen Khachanov* (5/31), *Pablo Carreno Busta* (5/31), *Borna Coric* (3/31)
+
+## 7b
+
+```{r}
+examine.7b <- m.2019
+examine.7b$all.deact <- conduct.experiment(1:19,P.18.19,m.2019)$result
+examine.7b$all.act <- conduct.experiment(c(),P.18.19,m.2019)$result
+examine.7b$plat.up <- conduct.experiment((1:19)[-c(10,13)],P.18.19,m.2019)$result
+examine.7b$plat.down <- conduct.experiment(c(9,19),P.18.19,m.2019)$result
+```
+```{r}
+# examine.player.function(examine.7b,"up","Alexander Zverev") # no rows
+examine.player.function(examine.7b,"down","Alexander Zverev")
+```
+
+We see Zverev continues to be a beneficiary of the deactivations, having his losses flipped to predicted wins instead against two distinct opponents. We also note that Khachanov was identified as an anti-beneficiary above.
+
+```{r}
+# examine.player.function(examine.7b,"down","Grigor Dimitrov") # no rows
+# examine.player.function(examine.7b,"down","Juan Martin del Potro") # no rows
+examine.player.function(examine.7b,"down","Novak Djokovic")
+```
+
+We see Djokovic is clearly a beneficiary of the {9,19} deactivations with flips against 3 distinct opponents. Thiem was also identified as a weaker beneficiary above, so he will show up below as a anti-beneficiary instead. But this is acceptable as Djokovic has come out as such a consistent beneficiary.
+
+```{r}
+examine.player.function(examine.7b,"down","Dominic Thiem")
+```
+
+As stated above, it is not too negative a result that Thiem is now an anti-beneficiary against Djokovic, which accounts for 3 of the 4 flips here. The flip against Cilic, who was identified as a weak anti-beneficary, is however, a negative result.
+
+```{r}
+# examine.player.function(examine.7b,"down","Nick Kyrgios") # no rows
+examine.player.function(examine.7b,"down","Marin Cilic")
+```
+
+Instead of remaining an anti-beneficiary, Cilic is now not just a beneficiary against Thiem, but also against Nadal.
+
+```{r}
+examine.player.function(examine.7b,"down","Karen Khachanov")
+# examine.player.function(examine.7b,"down","Pablo Carreno Busta") # no rows
+# examine.player.function(examine.7b,"down","Borna Coric") # no rows
+```
+
+Khachanov remains an anti-beneficiary.
+
+## 7c
+
+```{r}
+conduct.experiment(c(),P.17.19,m.2019)$score # all activated
+conduct.experiment(1:19,P.17.19,m.2019)$score # all de-activated
+conduct.experiment(c(9,19),P.17.19,m.2019)$score # identified downward states
+conduct.experiment((1:19)[-c(10,13)],P.17.19,m.2019)$score # identified upward states
+```
+
+This time the scores of the plateau extremes are sandwiched between the activation and de-activation scores, with the activation score being the highest. 
+
+# 2018-2020 [8]
+
+## 8a
+
+```{r eval=FALSE, include=TRUE}
+res <- downwards.experiment(c(),P.18.19,m.2019,atp=TRUE,c(),depth=7)
+saveRDS(res, file="down7-18-19.rds")
+```
+```{r}
+down.18.19 <- readRDS("down7-18-19.rds")
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.18.19,m.2019,atp=TRUE,c(),depth=7)
+saveRDS(res, file="up7-18-19.rds")
+```
+```{r}
+up.18.19 <- readRDS("up7-18-19.rds")
+```
+```{r}
+plot.path.score(7,down.18.19,7,up.18.19,P.18.19,m.2019)
+```
+```{r}
+plot.path.state(7,down.18.19,7,up.18.19)
+```
+
+We have an extremely clean upwards path this time. We take 3 steps upwards with {8,9,18} and 2 steps downward with {5,17}.
+
+```{r}
+examine.8a <- m.2019[,c(3,4)]
+examine.8a$all.deact <- conduct.experiment(1:19,P.18.19,m.2019)$result
+examine.8a$all.act <- conduct.experiment(c(),P.18.19,m.2019)$result
+examine.8a$plat.up <- conduct.experiment((1:19)[-c(8,9,18)],P.18.19,m.2019)$result
+examine.8a$plat.down <- conduct.experiment(c(5,17),P.18.19,m.2019)$result
+examine.8a[which(examine.8a$all.deact!=examine.8a$plat.up),c(1,2,5)]
+examine.8a[which(examine.8a$all.act!=examine.8a$plat.down),c(1,2,6)]
+```
+
+## 8a Results
+
+*Italics* denote significantly based on duplicates or variations of the same matchup and may not be as strong a result.
+
+Identified beneficiaries of activating {8,9,18}: Novak Djokovic (5/17), Daniil Medvedev (3/17), Lorenzo Sonego (2/17)
+
+Identified anti-beneficiaries of activating {8,9,18}: Grigor Dimitrov (2/17)
+
+Identified beneficiaries of de-activating {5,17}: Daniil Medvedev (6/7)
+
+Identified anti-beneficiaries of de-activating {5,17}: .
+
+## 8b
+
+```{r}
+examine.8b <- m.2020
+examine.8b$all.deact <- conduct.experiment(1:19,P.19.20,m.2020)$result
+examine.8b$all.act <- conduct.experiment(c(),P.19.20,m.2020)$result
+examine.8b$plat.up <- conduct.experiment((1:19)[-c(8,9,18)],P.19.20,m.2020)$result
+examine.8b$plat.down <- conduct.experiment(c(5,17),P.19.20,m.2020)$result
+```
+```{r}
+# examine.player.function(examine.8b,"up","Novak Djokovic") # no rows
+# examine.player.function(examine.8b,"up","Daniil Medvedev") # no rows
+# examine.player.function(examine.8b,"up","Lorenzo Sonego") # no rows
+# examine.player.function(examine.8b,"up","Grigor Dimitrov") # no rows
+# examine.player.function(examine.8b,"down","Daniil Medvedev") # no rows
+```
+
+Here despite very clear results in 8a, none translate into flips in 8b.
+
+```{r}
+# tried to look into this
+examine.8b$extra1 <- examine.8b$all.act <- conduct.experiment(c(),P.19.20,m.2020)$exact
+examine.8b$extra2 <- examine.8b$all.deact <- conduct.experiment(1:19,P.19.20,m.2020)$exact
+examine.8b$extra3 <- conduct.experiment(c(5,17),P.19.20,m.2020)$exact
+examine.8b[which(examine.8b$winner_name=="Daniil Medvedev"
+                 |examine.8b$loser_name=="Daniil Medvedev"),c(3:5,11:13)]
+```
+
+## 8c
+
+```{r}
+conduct.experiment(c(),P.18.20,m.2020)$score # all activated
+conduct.experiment(1:19,P.18.20,m.2020)$score # all de-activated
+conduct.experiment(c(5,17),P.18.20,m.2020)$score # identified downward states
+conduct.experiment((1:19)[-c(8,9,18)],P.18.20,m.2020)$score # identified upward states
+```
+
+# 2019-2021 [9]
+
+## 9a
+
+```{r eval=FALSE, include=TRUE}
+res <- downwards.experiment(c(),P.19.20,m.2020,atp=TRUE,c(),depth=7)
+saveRDS(res, file="down7-19-20.rds")
+```
+```{r}
+down.19.20 <- readRDS("down7-19-20.rds")
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.19.20,m.2020,atp=TRUE,c(),depth=5)
+saveRDS(res, file="up5-19-20.rds")
+```
+```{r}
+up.19.20 <- readRDS("up5-19-20.rds")
+```
+```{r}
+plot.path.score(7,down.19.20,5,up.19.20,P.19.20,m.2020,ylim.lower=0.63,ylim.upper=0.73)
+```
+```{r}
+plot.path.state(7,down.19.20,5,up.19.20)
+```
+
+For both directions, we will just take one step, upwards with {16} and downwards with {15}.
+
+```{r}
+examine.9a <- m.2020[,c(3,4)]
+examine.9a$all.deact <- conduct.experiment(1:19,P.19.20,m.2020)$result
+examine.9a$all.act <- conduct.experiment(c(),P.19.20,m.2020)$result
+examine.9a$plat.up <- conduct.experiment((1:19)[-c(16)],P.19.20,m.2020)$result
+examine.9a$plat.down <- conduct.experiment(c(15),P.19.20,m.2020)$result
+examine.9a[which(examine.9a$all.deact!=examine.9a$plat.up),c(1,2,5)]
+examine.9a[which(examine.9a$all.act!=examine.9a$plat.down),c(1,2,6)]
+```
+
+## 9a Results
+
+*Italics* denote significantly based on duplicates or variations of the same matchup and may not be as strong a result.
+
+Identified beneficiaries of activating {16}: Alexander Zverev (3/8)
+
+Identified anti-beneficiaries of activating {16}: Ugo Humbert (2/8)
+
+Identified beneficiaries of de-activating {15}: Dominic Thiem (2/3)
+
+Identified anti-beneficiaries of de-activating {15}: .
+
+## 9b
+
+```{r}
+examine.9b <- m.2021
+examine.9b$all.deact <- conduct.experiment(1:19,P.20.21,m.2021)$result
+examine.9b$all.act <- conduct.experiment(c(),P.20.21,m.2021)$result
+examine.9b$plat.up <- conduct.experiment((1:19)[-c(16)],P.20.21,m.2021)$result
+examine.9b$plat.down <- conduct.experiment(c(15),P.20.21,m.2021)$result
+```
+```{r}
+examine.player.function(examine.9b,"up","Alexander Zverev")
+# examine.player.function(examine.9b,"up","Ugo Humbert") # no rows
+# examine.player.function(examine.9b,"down","Dominic Thiem") # no rows
+```
+
+Against Fritz, Zverev remains a beneficiary, but against Tsitsipas this is no longer the case.
+
+## 9c
+
+```{r}
+conduct.experiment(c(),P.19.21,m.2021)$score # all activated
+conduct.experiment(1:19,P.19.21,m.2021)$score # all de-activated
+conduct.experiment(c(15),P.19.21,m.2021)$score # identified downward states
+conduct.experiment((1:19)[-c(16)],P.19.21,m.2021)$score # identified upward states
+```
+
+# 2020-2022 [10]
+
+## 10a
+
+```{r eval=FALSE, include=TRUE}
+res <- downwards.experiment(c(),P.20.21,m.2021,atp=TRUE,c(),depth=7)
+saveRDS(res, file="down7-20-21.rds")
+```
+```{r}
+down.20.21 <- readRDS("down7-20-21.rds")
+```
+```{r eval=FALSE, include=TRUE}
+res <- upwards.experiment(c(),P.20.21,m.2021,atp=TRUE,c(),depth=7)
+saveRDS(res, file="up7-20-21.rds")
+```
+```{r}
+up.20.21 <- readRDS("up7-20-21.rds")
+```
+```{r}
+plot.path.score(7,down.20.21,7,up.20.21,P.20.21,m.2021)
+```
+```{r}
+plot.path.state(7,down.20.21,7,up.20.21)
+```
+
+We take 1 step upwards with {3} and 1 step downwards with {19}.
+
+```{r}
+examine.10a <- m.2021[,c(3,4)]
+examine.10a$all.deact <- conduct.experiment(1:19,P.20.21,m.2021)$result
+examine.10a$all.act <- conduct.experiment(c(),P.20.21,m.2021)$result
+examine.10a$plat.up <- conduct.experiment((1:19)[-c(3)],P.20.21,m.2021)$result
+examine.10a$plat.down <- conduct.experiment(c(19),P.20.21,m.2021)$result
+examine.10a[which(examine.10a$all.deact!=examine.10a$plat.up),c(1,2,5)]
+examine.10a[which(examine.10a$all.act!=examine.10a$plat.down),c(1,2,6)]
+```
+
+## 10a Results
+
+*Italics* denote significantly based on duplicates or variations of the same matchup and may not be as strong a result.
+
+Identified beneficiaries of activating {3}: Reilly Opelka (3/10)
+
+Identified anti-beneficiaries of activating {3}: .
+
+Identified beneficiaries of de-activating {19}: Hubert Hurkacz (5/23), *Daniil Medvedev* (6/23)
+
+Identified anti-beneficiaries of de-activating {19}: Gael Monfils (2/23), *Novak Djokovic* (5/23)
+
+## 10b
+
+```{r}
+examine.10b <- m.2022
+examine.10b$all.deact <- conduct.experiment(1:19,P.21.22,m.2022)$result
+examine.10b$all.act <- conduct.experiment(c(),P.21.22,m.2022)$result
+examine.10b$plat.up <- conduct.experiment((1:19)[-c(3)],P.21.22,m.2022)$result
+examine.10b$plat.down <- conduct.experiment(c(19),P.21.22,m.2022)$result
+```
+```{r}
+# examine.player.function(examine.10b,"up","Reilly Opelka") # no rows
+# examine.player.function(examine.10b,"up","Hubert Hurkacz") # no rows
+examine.player.function(examine.10b,"down","Daniil Medvedev")
+```
+
+Medvedev is a very strong beneficiary here, with flips in his favour against 5 distinct opponents.
+
+```{r}
+examine.player.function(examine.10b,"down","Gael Monfils")
+```
+
+Monfils is a beneficiary here instead.
+
+```{r}
+examine.player.function(examine.10b,"down","Novak Djokovic")
+```
+
+Djokovic remains an anti-beneficiary of deactivating the tiebreak.
+
+## 10c
+
+```{r}
+conduct.experiment(c(),P.20.22,m.2022)$score # all activated
+conduct.experiment(1:19,P.20.22,m.2022)$score # all de-activated
+conduct.experiment(c(19),P.20.22,m.2022)$score # identified downward states
+conduct.experiment((1:19)[-c(3)],P.20.22,m.2022)$score # identified upward states
+```

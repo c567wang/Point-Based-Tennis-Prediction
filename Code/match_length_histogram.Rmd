@@ -1,0 +1,119 @@
+---
+title: "match_length_histogram"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data
+```{r}
+atp.2019 <- read.csv('../Data Lake/Matches/atp_matches_2019.csv')
+wta.2019 <- read.csv('../Data Lake/Matches/wta_matches_2019.csv')
+atp.2020 <- read.csv('../Data Lake/Matches/atp_matches_2020.csv')
+wta.2020 <- read.csv('../Data Lake/Matches/wta_matches_2020.csv')
+atp.2021 <- read.csv('../Data Lake/Matches/atp_matches_2021.csv')
+wta.2021 <- read.csv('../Data Lake/Matches/wta_matches_2021.csv')
+atp.2022 <- read.csv('../Data Lake/Matches/atp_matches_2022.csv')
+wta.2022 <- read.csv('../Data Lake/Matches/wta_matches_2022.csv')
+```
+```{r}
+# following function highlights matches that were incomplete
+# this is determined by if the score has letters ("W/O","Def.","RET" etc.)
+# takes as input the score column of a dataset and returns indexes
+ic.match <- function(score) grep("[A-Za-z]",score)
+```
+```{r}
+get.match.length <- function(dataset){
+  # rid of incomplete matches
+  ic.idx <- ic.match(dataset$score)
+  data <- dataset[-ic.idx,]
+  # get total points played
+  data$total_pts <- data$w_svpt + data$l_svpt
+  # initialize vectors
+  grass <- c()
+  hard <- c()
+  clay <- c()
+  grass.gs <- c()
+  hard.gs <- c()
+  clay.gs <- c()
+  # categorize entries
+  n <- nrow(data)
+  for (i in 1:n){
+    if (data$surface[i]=="Grass"){
+      if (data$tourney_level[i]=="G"){
+        grass.gs <- c(grass.gs,data$total_pts[i])
+      } else {
+        grass <- c(grass,data$total_pts[i])
+      }
+    } else if (data$surface[i]=="Hard"){
+      if (data$tourney_level[i]=="G"){
+        hard.gs <- c(hard.gs,data$total_pts[i])
+      } else {
+        hard <- c(hard,data$total_pts[i])
+      }
+    } else if (data$surface[i]=="Clay"){
+      if (data$tourney_level[i]=="G"){
+        clay.gs <- c(clay.gs,data$total_pts[i])
+      } else {
+        clay <- c(clay,data$total_pts[i])
+      }
+    } else {
+      print("error")
+    }
+  }
+  return(list("grass"=grass,"hard"=hard,"clay"=clay,
+              "grass.gs"=grass.gs,"hard.gs"=hard.gs,"clay.gs"=clay.gs))
+}
+```
+```{r}
+lens.2019 <- get.match.length(atp.2019)
+lent.2019 <- get.match.length(wta.2019)
+lens.2020 <- get.match.length(atp.2020)
+lent.2020 <- get.match.length(wta.2020)
+lens.2021 <- get.match.length(atp.2021)
+lent.2021 <- get.match.length(wta.2021)
+lens.2022 <- get.match.length(atp.2022)
+lent.2022 <- get.match.length(wta.2022)
+```
+
+## Graphs
+### Grass
+```{r}
+# Wimbledon ATP 2019-2022
+h1 <- c(lens.2019$grass.gs,lens.2020$grass.gs,lens.2021$grass.gs,lens.2022$grass.gs)
+hist(h1,breaks=30,xlab="Wimbledon ATP 2019-2022")
+```
+```{r}
+# ex. WTA Grass (including Wimbledon) 2019-2022
+h2 <- c(lent.2019$grass.gs,lent.2020$grass.gs,lent.2021$grass.gs,lent.2022$grass.gs,
+         lent.2019$grass,lent.2020$grass,lent.2021$grass,lent.2022$grass)
+hist(h2,breaks=30,xlab="Grass WTA 2019-2022")
+```
+```{r}
+# The outlier is found to be a non-Grandslam 2021 Grass Tournament
+summary(lent.2021$grass)
+```
+Upon further examination, this outlier is from Alison Riske Amritraj v.s. Xiyu Wang in 2021, a match which was actually played to 216 points, so this is a recording error.
+```{r}
+h2 <- h2[-which(is.na(h2))]
+h2 <- h2[-which(h2==max(h2))]
+hist(h2,breaks=30,xlab="Grass WTA 2019-2022")
+```
+```{r}
+h3 <- c(lens.2019$grass,lens.2020$grass,lens.2021$grass,lens.2022$grass)
+hist(h3,breaks=30,xlab="Grass (Non-Grandslam) ATP 2019-2022")
+```
+### Hard
+```{r}
+# ex. WTA Hard 2019-2022
+h4 <- c(lent.2019$hard.gs,lent.2020$hard.gs,lent.2021$hard.gs,lent.2022$hard.gs,
+         lent.2019$hard,lent.2020$hard,lent.2021$hard,lent.2022$hard)
+h4 <- h4[-which(is.na(h4))]
+h4 <- h4[-which(h4==max(h4))]
+h4 <- h4[-which(h4==max(h4))]
+h4 <- h4[-which(h4==min(h4))]
+hist(h4,breaks=30,xlab="Hard WTA 2019-2022")
+```
+Upon further inspection, there again exists recording errors in the 2021 dataset. These misrecorded terms have been taken out.

@@ -1,0 +1,818 @@
+---
+title: "Scrap Paper Equivalent"
+output: pdf_document
+date: "2022-10-20"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# R Markdown Compiling
+{without backslash}
+
+\{with backslash\}
+
+# Names For Python Script
+
+```{r}
+dat <- read.csv('../Data Lake/Experiments/2014_atp_testing.csv')
+ic.match <- function(score) grep("[A-Za-z]",score)
+ic <- ic.match(dat$score)
+dat <- dat[-ic,]
+names <- unique(c(dat$winner_name,dat$loser_name))
+#feed <- paste(names,collapse='","')
+feed <- paste(names,collapse="\n")
+cat(feed)
+```
+
+# Outdated Cat1 Experiments
+
+```{r}
+extra <- res18
+j <- 1
+for (i in 1:nrow(data.22)){
+  if (atp.test.2022$surface[i]=="Grass" && !is.na(data.22$w_g[i])){
+    extra[i] <- res22.h2h[j]
+    j <- j+1
+  } else if (atp.test.2022$surface[i]=="Hard" && !is.na(data.22$w_h[i])){
+    extra[i] <- res22.h2h[j]
+    j <- j+1
+  } else if (atp.test.2022$surface[i]=="Clay" && !is.na(data.22$w_c[i])){
+    extra[i] <- res22.h2h[j]
+    j <- j+1
+  }
+}
+mean(extra)
+```
+```{r}
+extra <- res20
+j <- 1
+for (i in 1:nrow(data.24)){
+  if (atp.test.2022$surface[i]=="Grass" && !is.na(data.24$w_g[i])){
+    extra[i] <- res24.h2h[j]
+    j <- j+1
+  } else if (atp.test.2022$surface[i]=="Hard" && !is.na(data.24$w_h[i])){
+    extra[i] <- res24.h2h[j]
+    j <- j+1
+  } else if (atp.test.2022$surface[i]=="Clay" && !is.na(data.24$w_c[i])){
+    extra[i] <- res24.h2h[j]
+    j <- j+1
+  }
+}
+mean(extra)
+```
+```{r}
+extra <- res17
+h2h.valid <- which(!is.na(data.21$w_p))
+extra[h2h.valid] <- res21.h2h
+mean(extra)
+```
+```{r}
+extra <- res19
+h2h.valid <- which(!is.na(data.23$w_p))
+extra[h2h.valid] <- res23.h2h
+mean(extra)
+```
+
+# Early Plotting of State Paths
+
+```{r}
+# depth n plotting
+n <- 7
+dat <- lu7.atp.2022
+plot(1:n,dat[[1]][[2]],'l')#, ylim=c(0.55,0.7)) # adjust ylim on ad-hoc basis
+for (i in 2:length(dat)){
+  lines(1:n,dat[[i]][[2]])
+}
+```
+
+# More Cat1 Results
+
+```{r}
+res18atp.1yr.h2h.ns <- readRDS("res18atp_1yr_h2h_ns.rds")
+res18atp.1yr.h2h.s <- readRDS("res18atp_1yr_h2h_s.rds")
+res18atp.3yr.h2h.ns <- readRDS("res18atp_3yr_h2h_ns.rds")
+res18atp.3yr.h2h.s <- readRDS("res18atp_3yr_h2h_s.rds")
+res18atp.1yr.co.ns <- readRDS("res18atp_1yr_co_ns.rds")
+res18atp.1yr.co.s <- readRDS("res18atp_1yr_co_s.rds")
+res18atp.3yr.co.ns <- readRDS("res18atp_3yr_co_ns.rds")
+res18atp.3yr.co.s <- readRDS("res18atp_3yr_co_s.rds")
+res18atp.1yr.oaf.ns <- readRDS("res18atp_1yr_oaf_ns.rds")
+res18atp.1yr.oaf.s <- readRDS("res18atp_1yr_oaf_s.rds")
+res18atp.3yr.oaf.ns <- readRDS("res18atp_3yr_oaf_ns.rds")
+res18atp.3yr.oaf.s <- readRDS("res18atp_3yr_oaf_s.rds")
+res18wta.1yr.h2h.ns <- readRDS("res18wta_1yr_h2h_ns.rds")
+res18wta.1yr.h2h.s <- readRDS("res18wta_1yr_h2h_s.rds")
+res18wta.3yr.h2h.ns <- readRDS("res18wta_3yr_h2h_ns.rds")
+res18wta.3yr.h2h.s <- readRDS("res18wta_3yr_h2h_s.rds")
+res18wta.1yr.co.ns <- readRDS("res18wta_1yr_co_ns.rds")
+res18wta.1yr.co.s <- readRDS("res18wta_1yr_co_s.rds")
+res18wta.3yr.co.ns <- readRDS("res18wta_3yr_co_ns.rds")
+res18wta.3yr.co.s <- readRDS("res18wta_3yr_co_s.rds")
+res18wta.1yr.oaf.ns <- readRDS("res18wta_1yr_oaf_ns.rds")
+res18wta.1yr.oaf.s <- readRDS("res18wta_1yr_oaf_s.rds")
+res18wta.3yr.oaf.ns <- readRDS("res18wta_3yr_oaf_ns.rds")
+res18wta.3yr.oaf.s <- readRDS("res18wta_3yr_oaf_s.rds")
+```
+```{r}
+overlay.h2h.oaf <- function(h2h,oaf){
+  h2h.valid <- which(!(h2h==-1))
+  res <- oaf
+  res[h2h.valid] <- h2h[h2h.valid]
+  mean(res)
+}
+```
+```{r}
+overlay.h2h.oaf(res18atp.1yr.h2h.ns,res18atp.1yr.oaf.ns)
+overlay.h2h.oaf(res18atp.1yr.h2h.s,res18atp.1yr.oaf.s)
+overlay.h2h.oaf(res18atp.3yr.h2h.ns,res18atp.3yr.oaf.ns)
+overlay.h2h.oaf(res18atp.3yr.h2h.s,res18atp.3yr.oaf.s)
+overlay.h2h.oaf(res18wta.1yr.h2h.ns,res18wta.1yr.oaf.ns)
+overlay.h2h.oaf(res18wta.1yr.h2h.s,res18wta.1yr.oaf.s)
+overlay.h2h.oaf(res18wta.3yr.h2h.ns,res18wta.3yr.oaf.ns)
+overlay.h2h.oaf(res18wta.3yr.h2h.s,res18wta.3yr.oaf.s)
+```
+```{r}
+overlay.h2h.co.oaf <- function(h2h,co,oaf){
+  h2h.valid <- which(!(h2h==-1))
+  co.valid <- which(!(co==-1))
+  res <- oaf
+  res[co.valid] <- co[co.valid]
+  res[h2h.valid] <- h2h[h2h.valid]
+  mean(res)
+}
+```
+```{r}
+overlay.h2h.co.oaf(res18atp.1yr.h2h.ns,res18atp.1yr.co.ns,res18atp.1yr.oaf.ns)
+overlay.h2h.co.oaf(res18atp.1yr.h2h.s,res18atp.1yr.co.s,res18atp.1yr.oaf.s)
+overlay.h2h.co.oaf(res18atp.3yr.h2h.ns,res18atp.3yr.co.ns,res18atp.3yr.oaf.ns)
+overlay.h2h.co.oaf(res18atp.3yr.h2h.s,res18atp.3yr.co.s,res18atp.3yr.oaf.s)
+overlay.h2h.co.oaf(res18wta.1yr.h2h.ns,res18wta.1yr.co.ns,res18wta.1yr.oaf.ns)
+overlay.h2h.co.oaf(res18wta.1yr.h2h.s,res18wta.1yr.co.s,res18wta.1yr.oaf.s)
+overlay.h2h.co.oaf(res18wta.3yr.h2h.ns,res18wta.3yr.co.ns,res18wta.3yr.oaf.ns)
+overlay.h2h.co.oaf(res18wta.3yr.h2h.s,res18wta.3yr.co.s,res18wta.3yr.oaf.s)
+```
+# Testing Patched match.win.prob
+
+```{r}
+# NON-REPEATABLE FOR NOW
+# list of grand slams as their Men's singles are played to best 3 of 5 sets
+# naming convention following that found in the test sets
+grand.slams <- c("Australian Open","Roland Garros","Wimbledon","US Open")
+
+# overall function to do experiments with
+conduct.experiment.2014 <- function(inactive.states, P, test.set, atp=TRUE){
+  # inactive.states:
+  #   vector containing states (19 for tiebreak) to deactivate, i.e. 
+  #   replace the state's unique p with the player's overall p
+  # P:
+  #   data.frame containing players' individual p vectors
+  #   usually obtained via create.p.vector output
+  # test.set:
+  #   data set used to test accuracy of prediction
+  # atp:
+  #   boolean defaulted to true if test.set is ATP data
+  
+  # make copy of P and change copy to align with specified inactive.states
+  cP <- P[,1:19]
+  cP[,inactive.states] <- P[,20]
+  
+  # record exact probability values from model
+  # so we can examine closer if we want
+  n <- nrow(test.set)
+  exact <- rep(0,n)
+  
+  # experiment begins
+  pbp.names <- rownames(cP)
+  for (i in 1:n){
+    matchup <- test.set[i,]
+    winner <- matchup$winner_name
+    loser <- matchup$loser_name
+    inds <- match(c(winner,loser),pbp.names)
+    winner.P <- unname(unlist(cP[inds[1],]))
+    loser.P <- unname(unlist(cP[inds[2],]))
+    if (matchup$tourney_name %in% grand.slams){
+      if (atp){
+        if (matchup$tourney_name=="US Open") {
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=1)
+        } else {
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=5)
+        }
+      } else {
+        if (matchup$tourney_name=="US Open") {
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=0)
+        } else {
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=4)
+        }
+      }
+    } else {
+      exact[i] <- match.win.prob(p1=winner.P,p2=loser.P)
+    }
+  }
+  res <- exact > 0.5
+  return(list("score"=mean(res),"result"=res,"exact"=exact))
+}
+```
+
+# Observed p's resulting accuracy
+
+```{r}
+wta.14 <- read.csv('../Data Lake/Experiments/2014_wta_testing.csv')
+wta.18 <- read.csv('../Data Lake/Experiments/2018_wta_testing.csv')
+wta.22 <- read.csv('../Data Lake/Experiments/2022_wta_testing.csv')
+atp.14 <- read.csv('../Data Lake/Experiments/2014_atp_testing.csv')
+atp.18 <- read.csv('../Data Lake/Experiments/2018_atp_testing.csv')
+atp.22 <- read.csv('../Data Lake/Experiments/2022_atp_testing.csv')
+ic.match <- function(score) grep("[A-Za-z]",score)
+wta.14 <- wta.14[-ic.match(wta.14$score),]
+wta.18 <- wta.18[-ic.match(wta.18$score),]
+wta.22 <- wta.22[-ic.match(wta.22$score),]
+atp.14 <- atp.14[-ic.match(atp.14$score),]
+atp.18 <- atp.18[-ic.match(atp.18$score),]
+atp.22 <- atp.22[-ic.match(atp.22$score),]
+```
+```{r}
+testsets <- list(wta.14,wta.18,wta.22,atp.14,atp.18,atp.22)
+for (i in 1:6){
+  ts <- testsets[[i]]
+  ts$w_p <- (ts$w_1stWon+ts$w_2ndWon)/ts$w_svpt
+  ts$l_p <- (ts$l_1stWon+ts$l_2ndWon)/ts$l_svpt
+  ts$pred <- ts$w_p > ts$l_p
+  print(mean(ts$pred[which(!is.na(ts$pred))]))
+}
+```
+
+# Percentage of overlapping names in test sets
+
+```{r}
+n <- length(c)
+perc <- rep(0,n)
+for (i in 1:n){
+  if (c[i] %in% b){
+    perc[i]=1
+  }
+}
+mean(perc)
+# 43.284% names preserved ATP 2014 -> 2018
+```
+
+# Looking At 3 Surface Scores Separatedly
+
+```{r ATP 1 Year}
+dat <- atp.test.2022
+dat$atp1yr <- res2
+mean(dat$atp1yr) # aggregated, col 28 
+mean(dat[which(dat$surface=="Clay"),28])
+mean(dat[which(dat$surface=="Hard"),28])
+mean(dat[which(dat$surface=="Grass"),28])
+```
+```{r ATP 3 Years}
+dat$atp3yr <- res4
+mean(dat$atp3yr) # aggregated, col 29 
+mean(dat[which(dat$surface=="Clay"),29])
+mean(dat[which(dat$surface=="Hard"),29])
+mean(dat[which(dat$surface=="Grass"),29])
+```
+```{r WTA 1 Year}
+# sample sizes:
+# 2014 clay-43, hard-150, grass-15
+dat <- wta.test.2022
+dat$wta1yr <- res6
+mean(dat$wta1yr) # aggregated, col 28 
+mean(dat[which(dat$surface=="Clay"),28])
+mean(dat[which(dat$surface=="Hard"),28])
+mean(dat[which(dat$surface=="Grass"),28])
+```
+
+# Momentum Set Matrix Scrap
+
+```{r}
+source("matrices/set_matrices.R")
+library(expm)
+p.a <- 10
+p.b <- 100
+Ms <- game.to.set.matrices(p=p.a,q=p.b)
+I <- diag(5)
+Z <- matrix(0,nrow=5,ncol=38)
+M <- cbind(rbind(Ms$Q,Z),rbind(Ms$R,I))
+colnames(M) <- c("0-0","1-0","0-1","2-0","1-1","0-2","3-0","2-1","1-2",
+                 "0-3","4-0","3-1","2-2","1-3","0-4",rep("T",28))
+```
+```{r}
+(M%^%3)[1,]
+```
+```{r}
+MAlt <- M
+MAlt <- cbind(rbind(MAlt,matrix(0,nrow=2,ncol=43)),
+              rbind(matrix(0,nrow=43,ncol=2),diag(2)))
+MAlt[6,10] <- 0
+MAlt[6,45] <- 1-p.a
+MAlt[7,11] <- 0
+MAlt[7,44] <- 1-p.b
+MAlt[8,44] <- p.a*(1-p.b)*(1-p.b)
+MAlt[8,12] <- (1-p.b)*(1-p.a+p.a*p.b)
+```
+```{r}
+(MAlt%^%4)[1,]
+```
+```{r}
+demo <- function(x,y){
+  ret <- (1-x)*(1-y)/(2*(1-x)*(1-y)+x*y)
+}
+```
+
+
+# Random H2H Examination
+
+```{r}
+d <- readRDS("res18atp_3yr_h2h_ns.rds")
+dat <- read.csv('../Data Lake/Experiments/2018_atp_testing.csv')
+ic.match <- function(score) grep("[A-Za-z]",score)
+ic.atp <- ic.match(dat$score)
+dat <- dat[-ic.atp,]
+row.names(dat) <- NULL
+dat$H2H <- d
+dat <- dat[,c(2,4:8,28)]
+```
+```{r}
+v1 <- read.csv('../Data Lake/Players/crucial_h2h_error/2017_atp_co.csv')
+v2 <- read.csv('../Data Lake/Players/2017_atp_co.csv')
+v3 <- read.csv('../Data Lake/CO Examination/2017_atp_co.csv')
+length(which(v1<v3))
+```
+```{r}
+e2 <- read.csv('../Data Lake/Players/2017_atp_h2h.csv')
+e3 <- read.csv('../Data Lake/CO Examination/2017_atp_h2h.csv')
+length(which(e2!=e3))
+```
+
+# CO(OAF)
+```{r}
+source("case_patching.R")
+# grand.slams <- c("Australian Open","Roland Garros","Wimbledon","US Open")
+grand.slams <- c("Australian Open","Roland Garros","Wimbledon","Us Open") # 2022
+# "Us Open" specific to 2022 test sets
+get.prob.2022 <- function(p1,p2,match,atp=TRUE){
+  if (is.na(p1)||is.na(p2)){
+    return(NA)
+  }
+  if (match %in% grand.slams){
+    ret <- match.win.prob.nonpw(p1,p2,format=2+atp)
+  } else {
+    ret <- match.win.prob.nonpw(p1,p2,format=0)
+  }
+  return(ret)
+}
+```
+```{r}
+dat <- read.csv('../Data Lake/Players/2019-2021_wta_co.csv')
+test.matches <- read.csv('../Data Lake/Experiments/2022_wta_testing.csv')
+ns.exact.a <- "p_est_exact_probs/wta2022_3y_ns_cooaf.rds"
+s.exact.a <- "p_est_exact_probs/wta2022_3y_s_cooaf.rds"
+ns.a <- "res22wta_3yr_cooaf_ns.rds"
+s.a <- "res22wta_3yr_cooaf_s.rds"
+atp <- FALSE
+ic.match <- function(score) grep("[A-Za-z]",score)
+ic <- ic.match(test.matches$score)
+dat <- dat[-ic,]
+test.matches <- test.matches[-ic,]
+dat$surface <- test.matches$surface
+dat$tour <- test.matches$tourney_name
+rm(ic.match,ic,test.matches)
+
+# p's and q's for oaf applied to co
+dat$co.w.p <- (dat$grass_service_pts_won1
+               +dat$hard_service_pts_won1
+               +dat$clay_service_pts_won1)/(
+                 dat$grass_pts_served1
+                 +dat$hard_pts_served1
+                 +dat$clay_pts_served1)
+dat$co.l.p <- (dat$grass_service_pts_won2
+               +dat$hard_service_pts_won2
+               +dat$clay_service_pts_won2)/(
+                 dat$grass_pts_served2
+                 +dat$hard_pts_served2
+                 +dat$clay_pts_served2)
+dat$co.w.q <- (dat$grass_receiving_pts_won1
+               +dat$hard_receiving_pts_won1
+               +dat$clay_receiving_pts_won1)/(
+                 dat$grass_pts_received1
+                 +dat$hard_pts_received1
+                 +dat$clay_pts_received1)
+dat$co.l.q <- (dat$grass_receiving_pts_won2
+               +dat$hard_receiving_pts_won2
+               +dat$clay_receiving_pts_won2)/(
+                 dat$grass_pts_received2
+                 +dat$hard_pts_received2
+                 +dat$clay_pts_received2)
+# with the average q of all the testset players
+# we can now calculate the non-surface co results
+# won't use the combined index above where both winner and loser has data
+# for the q average, instead will use all the q's available 
+co.avg.q <- mean(c(dat$co.w.q[which(!is.na(dat$co.w.q))],
+                   dat$co.l.q[which(!is.na(dat$co.l.q))]))
+dat$co.ns <- dat$co.w.p - (dat$co.l.q - co.avg.q) > 
+  dat$co.l.p - (dat$co.w.q - co.avg.q)
+### added for exact additions, e.g. H2H+CO(OAF) ###
+dat$exact.ns <- NA
+for (i in 1:(nrow(dat))){
+  dat$exact.ns[i] <- get.prob.2018(dat$co.w.p[i] - (dat$co.l.q[i] - co.avg.q),
+                                   dat$co.l.p[i] - (dat$co.w.q[i] - co.avg.q),
+                                   match=dat$tour[i],atp=atp)
+  if (is.na(dat$exact.ns[i])) {
+    dat$exact.ns[i] <- -1
+  }
+}
+ns.exact.f <- dat$exact.ns
+saveRDS(ns.exact.f,ns.exact.a)
+###################################################
+mean(dat$co.ns[which(!is.na(dat$co.ns))])
+nrow(dat)-length(which(is.na(dat$co.ns)))
+
+
+dat$co.w.grass.p <- dat$grass_service_pts_won1/dat$grass_pts_served1
+dat$co.w.hard.p <- dat$hard_service_pts_won1/dat$hard_pts_served1
+dat$co.w.clay.p <- dat$clay_service_pts_won1/dat$clay_pts_served1
+dat$co.l.grass.p <- dat$grass_service_pts_won2/dat$grass_pts_served2
+dat$co.l.hard.p <- dat$hard_service_pts_won2/dat$hard_pts_served2
+dat$co.l.clay.p <- dat$clay_service_pts_won2/dat$clay_pts_served2
+dat$co.w.grass.q <- dat$grass_receiving_pts_won1/dat$grass_pts_received1
+dat$co.w.hard.q <- dat$hard_receiving_pts_won1/dat$hard_pts_received1
+dat$co.w.clay.q <- dat$clay_receiving_pts_won1/dat$clay_pts_received1
+dat$co.l.grass.q <- dat$grass_receiving_pts_won2/dat$grass_pts_received2
+dat$co.l.hard.q <- dat$hard_receiving_pts_won2/dat$hard_pts_received2
+dat$co.l.clay.q <- dat$clay_receiving_pts_won2/dat$clay_pts_received2
+# get oaf co results by surface
+co.avg.grass.q <- mean(c(dat$co.w.grass.q[which(!is.na(dat$co.w.grass.q))],
+                         dat$co.l.grass.q[which(!is.na(dat$co.l.grass.q))]))
+co.avg.hard.q <- mean(c(dat$co.w.hard.q[which(!is.na(dat$co.w.hard.q))],
+                        dat$co.l.hard.q[which(!is.na(dat$co.l.hard.q))]))
+co.avg.clay.q <- mean(c(dat$co.w.clay.q[which(!is.na(dat$co.w.clay.q))],
+                        dat$co.l.clay.q[which(!is.na(dat$co.l.clay.q))]))
+# calculating surface
+dat$co.s <- NA
+dat$exact.s <- NA
+for (i in 1:nrow(dat)){
+  surface <- dat$surface[i]
+  if (surface=="Grass"){
+    dat$co.s[i] <- dat$co.w.grass.p[i] - (dat$co.l.grass.q[i] - co.avg.grass.q) >
+      dat$co.l.grass.p[i] - (dat$co.w.grass.q[i] - co.avg.grass.q)
+    dat$exact.s[i] <- get.prob.2018(
+      dat$co.w.grass.p[i] - (dat$co.l.grass.q[i] - co.avg.grass.q),
+      dat$co.l.grass.p[i] - (dat$co.w.grass.q[i] - co.avg.grass.q),
+      match=dat$tour[i],atp=atp)
+  } else if (surface=="Hard"){
+    dat$co.s[i] <- dat$co.w.hard.p[i] - (dat$co.l.hard.q[i] - co.avg.hard.q) >
+      dat$co.l.hard.p[i] - (dat$co.w.hard.q[i] - co.avg.hard.q)
+    dat$exact.s[i] <- get.prob.2018(
+      dat$co.w.hard.p[i] - (dat$co.l.hard.q[i] - co.avg.hard.q),
+      dat$co.l.hard.p[i] - (dat$co.w.hard.q[i] - co.avg.hard.q),
+      match=dat$tour[i],atp=atp)
+  } else if (surface=="Clay"){
+    dat$co.s[i] <- dat$co.w.clay.p[i] - (dat$co.l.clay.q[i] - co.avg.clay.q) >
+      dat$co.l.clay.p[i] - (dat$co.w.clay.q[i] - co.avg.clay.q)
+    dat$exact.s[i] <- get.prob.2018(
+      dat$co.w.clay.p[i] - (dat$co.l.clay.q[i] - co.avg.clay.q),
+      dat$co.l.clay.p[i] - (dat$co.w.clay.q[i] - co.avg.clay.q),
+      match=dat$tour[i],atp=atp)
+  }
+}
+mean(dat$co.s[which(!is.na(dat$co.s))])
+nrow(dat)-length(which(is.na(dat$co.s)))
+
+
+# saving files for overlays
+res.ns <- dat$co.ns
+s.exact.f <- dat$exact.s
+res.ns[which(is.na(res.ns))] <- -1
+s.exact.f[which(is.na(s.exact.f))] <- -1
+saveRDS(s.exact.f,s.exact.a)
+saveRDS(res.ns,file=ns.a)
+res.s <- dat$co.s
+res.s[which(is.na(res.s))] <- -1
+saveRDS(res.s,file=s.a)
+```
+
+# CO2
+
+```{r}
+atp14.1y <- read.csv('../Data Lake/Players/2013_atp_co2.csv')
+atp14.3y <- read.csv('../Data Lake/Players/2011-2013_atp_co2.csv')
+wta14.1y <- read.csv('../Data Lake/Players/2013_wta_co2.csv')
+wta14.3y <- read.csv('../Data Lake/Players/2011-2013_wta_co2.csv')
+atp18.1y <- read.csv('../Data Lake/Players/2017_atp_co2.csv')
+atp18.3y <- read.csv('../Data Lake/Players/2015-2017_atp_co2.csv')
+wta18.1y <- read.csv('../Data Lake/Players/2017_wta_co2.csv')
+wta18.3y <- read.csv('../Data Lake/Players/2015-2017_wta_co2.csv')
+atp22.1y <- read.csv('../Data Lake/Players/2021_atp_co2.csv')
+atp22.3y <- read.csv('../Data Lake/Players/2019-2021_atp_co2.csv')
+wta22.1y <- read.csv('../Data Lake/Players/2021_wta_co2.csv')
+wta22.3y <- read.csv('../Data Lake/Players/2019-2021_wta_co2.csv')
+tm.atp14 <- read.csv('../Data Lake/Experiments/2014_atp_testing.csv')
+tm.atp18 <- read.csv('../Data Lake/Experiments/2018_atp_testing.csv')
+tm.atp22 <- read.csv('../Data Lake/Experiments/2022_atp_testing.csv')
+tm.wta14 <- read.csv('../Data Lake/Experiments/2014_wta_testing.csv')
+tm.wta18 <- read.csv('../Data Lake/Experiments/2018_wta_testing.csv')
+tm.wta22 <- read.csv('../Data Lake/Experiments/2022_wta_testing.csv')
+ic.match <- function(score) grep("[A-Za-z]",score)
+ic.atp14 <- ic.match(tm.atp14$score)
+ic.atp18 <- ic.match(tm.atp18$score)
+ic.atp22 <- ic.match(tm.atp22$score)
+ic.wta14 <- ic.match(tm.wta14$score)
+ic.wta18 <- ic.match(tm.wta18$score)
+ic.wta22 <- ic.match(tm.wta22$score)
+atp14.1y <- atp14.1y[-ic.atp14,]
+atp14.3y <- atp14.3y[-ic.atp14,]
+wta14.1y <- wta14.1y[-ic.wta14,]
+wta14.3y <- wta14.3y[-ic.wta14,]
+atp18.1y <- atp18.1y[-ic.atp18,]
+atp18.3y <- atp18.3y[-ic.atp18,]
+wta18.1y <- wta18.1y[-ic.wta18,]
+wta18.3y <- wta18.3y[-ic.wta18,]
+atp22.1y <- atp22.1y[-ic.atp22,]
+atp22.3y <- atp22.3y[-ic.atp22,]
+wta22.1y <- wta22.1y[-ic.wta22,]
+wta22.3y <- wta22.3y[-ic.wta22,]
+rm(tm.atp14,tm.atp18,tm.atp22,tm.wta14,tm.wta18,tm.wta22,
+   ic.atp14,ic.atp18,ic.atp22,ic.wta14,ic.wta18,ic.wta22,ic.match)
+```
+
+```{r}
+co2.res <- function(dat){
+  dat$p1 <- dat$service_pts_won1/dat$pts_served1
+  dat$p2 <- dat$service_pts_won2/dat$pts_served2
+  dat$res <- dat$p1 > dat$p2
+  dat$res[which(is.na(dat$res))] <- -1
+  return(dat$res)
+}
+```
+
+```{r}
+res14atp.1yr.co2 <- co2.res(atp14.1y)
+saveRDS(res14atp.1yr.co2,file="res14atp_1yr_co2.rds")
+res14atp.3yr.co2 <- co2.res(atp14.3y)
+saveRDS(res14atp.3yr.co2,file="res14atp_3yr_co2.rds")
+res14wta.1yr.co2 <- co2.res(wta14.1y)
+saveRDS(res14wta.1yr.co2,file="res14wta_1yr_co2.rds")
+res14wta.3yr.co2 <- co2.res(wta14.3y)
+saveRDS(res14wta.3yr.co2,file="res14wta_3yr_co2.rds")
+res18atp.1yr.co2 <- co2.res(atp18.1y)
+saveRDS(res18atp.1yr.co2,file="res18atp_1yr_co2.rds")
+res18atp.3yr.co2 <- co2.res(atp18.3y)
+saveRDS(res18atp.3yr.co2,file="res18atp_3yr_co2.rds")
+res18wta.1yr.co2 <- co2.res(wta18.1y)
+saveRDS(res18wta.1yr.co2,file="res18wta_1yr_co2.rds")
+res18wta.3yr.co2 <- co2.res(wta18.3y)
+saveRDS(res18wta.3yr.co2,file="res18wta_3yr_co2.rds")
+res22atp.1yr.co2 <- co2.res(atp22.1y)
+saveRDS(res22atp.1yr.co2,file="res22atp_1yr_co2.rds")
+res22atp.3yr.co2 <- co2.res(atp22.3y)
+saveRDS(res22atp.3yr.co2,file="res22atp_3yr_co2.rds")
+res22wta.1yr.co2 <- co2.res(wta22.1y)
+saveRDS(res22wta.1yr.co2,file="res22wta_1yr_co2.rds")
+res22wta.3yr.co2 <- co2.res(wta22.3y)
+saveRDS(res22wta.3yr.co2,file="res22wta_3yr_co2.rds")
+```
+
+```{r}
+print("14-ATP")
+mean(res14atp.1yr.co2[which(res14atp.1yr.co2>=0)])
+length(res14atp.1yr.co2)-length(which(res14atp.1yr.co2<0))
+mean(res14atp.3yr.co2[which(res14atp.3yr.co2>=0)])
+length(res14atp.3yr.co2)-length(which(res14atp.3yr.co2<0))
+print("14-WTA")
+mean(res14wta.1yr.co2[which(res14wta.1yr.co2>=0)])
+length(res14wta.1yr.co2)-length(which(res14wta.1yr.co2<0))
+mean(res14wta.3yr.co2[which(res14wta.3yr.co2>=0)])
+length(res14wta.3yr.co2)-length(which(res14wta.3yr.co2<0))
+print("18-ATP")
+mean(res18atp.1yr.co2[which(res18atp.1yr.co2>=0)])
+length(res18atp.1yr.co2)-length(which(res18atp.1yr.co2<0))
+mean(res18atp.3yr.co2[which(res18atp.3yr.co2>=0)])
+length(res18atp.3yr.co2)-length(which(res18atp.3yr.co2<0))
+print("18-WTA")
+mean(res18wta.1yr.co2[which(res18wta.1yr.co2>=0)])
+length(res18wta.1yr.co2)-length(which(res18wta.1yr.co2<0))
+mean(res18wta.3yr.co2[which(res18wta.3yr.co2>=0)])
+length(res18wta.3yr.co2)-length(which(res18wta.3yr.co2<0))
+print("22-ATP")
+mean(res22atp.1yr.co2[which(res22atp.1yr.co2>=0)])
+length(res22atp.1yr.co2)-length(which(res22atp.1yr.co2<0))
+mean(res22atp.3yr.co2[which(res22atp.3yr.co2>=0)])
+length(res22atp.3yr.co2)-length(which(res22atp.3yr.co2<0))
+print("22-WTA")
+mean(res22wta.1yr.co2[which(res22wta.1yr.co2>=0)])
+length(res22wta.1yr.co2)-length(which(res22wta.1yr.co2<0))
+mean(res22wta.3yr.co2[which(res22wta.3yr.co2>=0)])
+length(res22wta.3yr.co2)-length(which(res22wta.3yr.co2<0))
+```
+
+# CO2(ns)
+
+```{r}
+atp14.1y <- read.csv('../Data Lake/Players/2013_atp_co2_ns.csv')
+atp14.3y <- read.csv('../Data Lake/Players/2011-2013_atp_co2_ns.csv')
+wta14.1y <- read.csv('../Data Lake/Players/2013_wta_co2_ns.csv')
+wta14.3y <- read.csv('../Data Lake/Players/2011-2013_wta_co2_ns.csv')
+atp18.1y <- read.csv('../Data Lake/Players/2017_atp_co2_ns.csv')
+atp18.3y <- read.csv('../Data Lake/Players/2015-2017_atp_co2_ns.csv')
+wta18.1y <- read.csv('../Data Lake/Players/2017_wta_co2_ns.csv')
+wta18.3y <- read.csv('../Data Lake/Players/2015-2017_wta_co2_ns.csv')
+atp22.1y <- read.csv('../Data Lake/Players/2021_atp_co2_ns.csv')
+atp22.3y <- read.csv('../Data Lake/Players/2019-2021_atp_co2_ns.csv')
+wta22.1y <- read.csv('../Data Lake/Players/2021_wta_co2_ns.csv')
+wta22.3y <- read.csv('../Data Lake/Players/2019-2021_wta_co2_ns.csv')
+tm.atp14 <- read.csv('../Data Lake/Experiments/2014_atp_testing.csv')
+tm.atp18 <- read.csv('../Data Lake/Experiments/2018_atp_testing.csv')
+tm.atp22 <- read.csv('../Data Lake/Experiments/2022_atp_testing.csv')
+tm.wta14 <- read.csv('../Data Lake/Experiments/2014_wta_testing.csv')
+tm.wta18 <- read.csv('../Data Lake/Experiments/2018_wta_testing.csv')
+tm.wta22 <- read.csv('../Data Lake/Experiments/2022_wta_testing.csv')
+ic.match <- function(score) grep("[A-Za-z]",score)
+ic.atp14 <- ic.match(tm.atp14$score)
+ic.atp18 <- ic.match(tm.atp18$score)
+ic.atp22 <- ic.match(tm.atp22$score)
+ic.wta14 <- ic.match(tm.wta14$score)
+ic.wta18 <- ic.match(tm.wta18$score)
+ic.wta22 <- ic.match(tm.wta22$score)
+atp14.1y <- atp14.1y[-ic.atp14,]
+atp14.3y <- atp14.3y[-ic.atp14,]
+wta14.1y <- wta14.1y[-ic.wta14,]
+wta14.3y <- wta14.3y[-ic.wta14,]
+atp18.1y <- atp18.1y[-ic.atp18,]
+atp18.3y <- atp18.3y[-ic.atp18,]
+wta18.1y <- wta18.1y[-ic.wta18,]
+wta18.3y <- wta18.3y[-ic.wta18,]
+atp22.1y <- atp22.1y[-ic.atp22,]
+atp22.3y <- atp22.3y[-ic.atp22,]
+wta22.1y <- wta22.1y[-ic.wta22,]
+wta22.3y <- wta22.3y[-ic.wta22,]
+rm(tm.atp14,tm.atp18,tm.atp22,tm.wta14,tm.wta18,tm.wta22,
+   ic.atp14,ic.atp18,ic.atp22,ic.wta14,ic.wta18,ic.wta22,ic.match)
+```
+
+```{r}
+co2ns.res <- function(dat){
+  dat$p1 <- dat$service_pts_won1/dat$pts_served1
+  dat$p2 <- dat$service_pts_won2/dat$pts_served2
+  dat$res <- dat$p1 > dat$p2
+  dat$res[which(is.na(dat$res))] <- -1
+  return(dat$res)
+}
+```
+
+```{r}
+res14atp.1yr.co2ns <- co2ns.res(atp14.1y)
+saveRDS(res14atp.1yr.co2ns,file="res14atp_1yr_co2ns.rds")
+res14atp.3yr.co2ns <- co2ns.res(atp14.3y)
+saveRDS(res14atp.3yr.co2ns,file="res14atp_3yr_co2ns.rds")
+res14wta.1yr.co2ns <- co2ns.res(wta14.1y)
+saveRDS(res14wta.1yr.co2ns,file="res14wta_1yr_co2ns.rds")
+res14wta.3yr.co2ns <- co2ns.res(wta14.3y)
+saveRDS(res14wta.3yr.co2ns,file="res14wta_3yr_co2ns.rds")
+res18atp.1yr.co2ns <- co2ns.res(atp18.1y)
+saveRDS(res18atp.1yr.co2ns,file="res18atp_1yr_co2ns.rds")
+res18atp.3yr.co2ns <- co2ns.res(atp18.3y)
+saveRDS(res18atp.3yr.co2ns,file="res18atp_3yr_co2ns.rds")
+res18wta.1yr.co2ns <- co2ns.res(wta18.1y)
+saveRDS(res18wta.1yr.co2ns,file="res18wta_1yr_co2ns.rds")
+res18wta.3yr.co2ns <- co2ns.res(wta18.3y)
+saveRDS(res18wta.3yr.co2ns,file="res18wta_3yr_co2ns.rds")
+res22atp.1yr.co2ns <- co2ns.res(atp22.1y)
+saveRDS(res22atp.1yr.co2ns,file="res22atp_1yr_co2ns.rds")
+res22atp.3yr.co2ns <- co2ns.res(atp22.3y)
+saveRDS(res22atp.3yr.co2ns,file="res22atp_3yr_co2ns.rds")
+res22wta.1yr.co2ns <- co2ns.res(wta22.1y)
+saveRDS(res22wta.1yr.co2ns,file="res22wta_1yr_co2ns.rds")
+res22wta.3yr.co2ns <- co2ns.res(wta22.3y)
+saveRDS(res22wta.3yr.co2ns,file="res22wta_3yr_co2ns.rds")
+```
+
+```{r}
+print("14-ATP")
+mean(res14atp.1yr.co2ns[which(res14atp.1yr.co2ns>=0)])
+length(res14atp.1yr.co2ns)-length(which(res14atp.1yr.co2ns<0))
+mean(res14atp.3yr.co2ns[which(res14atp.3yr.co2ns>=0)])
+length(res14atp.3yr.co2ns)-length(which(res14atp.3yr.co2ns<0))
+print("14-WTA")
+mean(res14wta.1yr.co2ns[which(res14wta.1yr.co2ns>=0)])
+length(res14wta.1yr.co2ns)-length(which(res14wta.1yr.co2ns<0))
+mean(res14wta.3yr.co2ns[which(res14wta.3yr.co2ns>=0)])
+length(res14wta.3yr.co2ns)-length(which(res14wta.3yr.co2ns<0))
+print("18-ATP")
+mean(res18atp.1yr.co2ns[which(res18atp.1yr.co2ns>=0)])
+length(res18atp.1yr.co2ns)-length(which(res18atp.1yr.co2ns<0))
+mean(res18atp.3yr.co2ns[which(res18atp.3yr.co2ns>=0)])
+length(res18atp.3yr.co2ns)-length(which(res18atp.3yr.co2ns<0))
+print("18-WTA")
+mean(res18wta.1yr.co2ns[which(res18wta.1yr.co2ns>=0)])
+length(res18wta.1yr.co2ns)-length(which(res18wta.1yr.co2ns<0))
+mean(res18wta.3yr.co2ns[which(res18wta.3yr.co2ns>=0)])
+length(res18wta.3yr.co2ns)-length(which(res18wta.3yr.co2ns<0))
+print("22-ATP")
+mean(res22atp.1yr.co2ns[which(res22atp.1yr.co2ns>=0)])
+length(res22atp.1yr.co2ns)-length(which(res22atp.1yr.co2ns<0))
+mean(res22atp.3yr.co2ns[which(res22atp.3yr.co2ns>=0)])
+length(res22atp.3yr.co2ns)-length(which(res22atp.3yr.co2ns<0))
+print("22-WTA")
+mean(res22wta.1yr.co2ns[which(res22wta.1yr.co2ns>=0)])
+length(res22wta.1yr.co2ns)-length(which(res22wta.1yr.co2ns<0))
+mean(res22wta.3yr.co2ns[which(res22wta.3yr.co2ns>=0)])
+length(res22wta.3yr.co2ns)-length(which(res22wta.3yr.co2ns<0))
+```
+
+
+# WTA22 H2H
+
+```{r}
+res22wta.1yr.h2h.ns <- readRDS("res22wta_1yr_h2h_ns.rds")
+res22wta.1yr.h2h.s <- readRDS("res22wta_1yr_h2h_s.rds")
+res22wta.3yr.h2h.ns <- readRDS("res22wta_3yr_h2h_ns.rds")
+res22wta.3yr.h2h.s <- readRDS("res22wta_3yr_h2h_s.rds")
+res22wta.1yr.co.ns <- readRDS("res22wta_1yr_co_ns.rds")
+res22wta.1yr.co.s <- readRDS("res22wta_1yr_co_s.rds")
+res22wta.3yr.co.ns <- readRDS("res22wta_3yr_co_ns.rds")
+res22wta.3yr.co.s <- readRDS("res22wta_3yr_co_s.rds")
+res22wta.1yr.oaf.ns <- readRDS("res22wta_1yr_oaf_ns.rds")
+res22wta.1yr.oaf.s <- readRDS("res22wta_1yr_oaf_s.rds")
+res22wta.3yr.oaf.ns <- readRDS("res22wta_3yr_oaf_ns.rds")
+res22wta.3yr.oaf.s <- readRDS("res22wta_3yr_oaf_s.rds")
+res22wta.1yr.g.ns <- readRDS("res22wta_1yr_g_ns.rds")
+res22wta.1yr.g.s <- readRDS("res22wta_1yr_g_s.rds")
+res22wta.3yr.g.ns <- readRDS("res22wta_3yr_g_ns.rds")
+res22wta.3yr.g.s <- readRDS("res22wta_3yr_g_s.rds")
+res22wta.1yr.cooaf.ns <- readRDS("res22wta_1yr_cooaf_ns.rds")
+res22wta.1yr.cooaf.s <- readRDS("res22wta_1yr_cooaf_s.rds")
+res22wta.3yr.cooaf.ns <- readRDS("res22wta_3yr_cooaf_ns.rds")
+res22wta.3yr.cooaf.s <- readRDS("res22wta_3yr_cooaf_s.rds")
+res22wta.1yr.co2 <- readRDS("res22wta_1yr_co2.rds")
+res22wta.3yr.co2 <- readRDS("res22wta_3yr_co2.rds")
+wta.test.2022 <- read.csv('../Data Lake/Experiments/2022_wta_testing.csv')
+ic.match <- function(score) grep("[A-Za-z]",score)
+ic.wta <- ic.match(wta.test.2022$score)
+wta.test.2022 <- wta.test.2022[-ic.wta,]
+rm(ic.wta,ic.match)
+```
+```{r}
+examine <- cbind(wta.test.2022$tourney_name,
+                 wta.test.2022$surface,
+                 wta.test.2022$winner_name,
+                 wta.test.2022$loser_name,
+                 res22wta.1yr.g.ns,
+                 res22wta.1yr.g.s,
+                 res22wta.3yr.g.ns,
+                 res22wta.3yr.g.s,
+                 res22wta.1yr.h2h.ns,
+                 res22wta.1yr.h2h.s,
+                 res22wta.3yr.h2h.ns,
+                 res22wta.3yr.h2h.s,
+                 res22wta.1yr.co.ns,
+                 res22wta.1yr.co.s,
+                 res22wta.3yr.co.ns,
+                 res22wta.3yr.co.s,
+                 res22wta.1yr.oaf.ns,
+                 res22wta.1yr.oaf.s,
+                 res22wta.3yr.oaf.ns,
+                 res22wta.3yr.oaf.s,
+                 res22wta.1yr.cooaf.ns,
+                 res22wta.1yr.cooaf.s,
+                 res22wta.3yr.cooaf.ns,
+                 res22wta.3yr.cooaf.s)
+examine <- data.frame(examine)
+```
+```{r}
+ex <- examine[which(examine$res22wta.3yr.g.ns!=examine$res22wta.3yr.h2h.ns
+                    & examine$res22wta.3yr.h2h.ns!=-1),
+              c(1:4,7,11)]
+```
+
+
+# Test sets
+```{r}
+atp.test.2014 <- read.csv('../Data Lake/Experiments/2014_atp_testing.csv')
+atp.test.2018 <- read.csv('../Data Lake/Experiments/2018_atp_testing.csv')
+atp.test.2022 <- read.csv('../Data Lake/Experiments/2022_atp_testing.csv')
+wta.test.2014 <- read.csv('../Data Lake/Experiments/2014_wta_testing.csv')
+wta.test.2018 <- read.csv('../Data Lake/Experiments/2018_wta_testing.csv')
+wta.test.2022 <- read.csv('../Data Lake/Experiments/2022_wta_testing.csv')
+```
+
+# CO2 Examination
+
+```{r}
+s <- readRDS("res14wta_1yr_co2.rds")
+ns <- readRDS("res14wta_1yr_co2ns.rds")
+tm.wta14 <- read.csv('../Data Lake/Experiments/2014_wta_testing.csv')
+ic.match <- function(score) grep("[A-Za-z]",score)
+ic.wta14 <- ic.match(tm.wta14$score)
+tm.wta14 <- tm.wta14[-ic.wta14,]
+```
+```{r}
+which(s==-1)
+which(ns==-1)
+```
+```{r}
+ex <- cbind(tm.wta14[,c(2,5,6)],s,ns)
+```
+

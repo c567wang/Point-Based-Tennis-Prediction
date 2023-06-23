@@ -1,0 +1,577 @@
+---
+title: "Figure 2 & 4 Code"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Prep Functions
+
+```{r functions}
+# main function is match.win.prob
+source("case_patching.R")
+
+# 3 helper functions
+
+get.unique.players <- function(testset){
+  # takes the players in the test set and returns vector
+  # containing unique players in the test set
+  names <- c(testset$winner_name,testset$loser_name)
+  names <- unique(names)
+  return(names)
+}
+
+get.equiv.names <- function(fullname){
+  # returns vector of equivalent names in different formats
+  # according to the fullname given
+  # fullname ideally from get.unique.players output
+  # More special examples:
+  #   Alejandro Davidovich Fokina -> A Davidovich Fokina & A. Davidovich Fokina
+  #   Pierre Hugues Herbert -> P Herbert & Ph Herbert & P. Herbert
+  #   Alex De Minaur -> A. De Minaur & Alex de Minaur & A De Minaur
+  #   Karolina Pliskova -> K. Pliskova & Ka. Pliskova & Ka Pliskova
+  #   Kristyna Pliskova -> K. Pliskova & Kr. Pliskova & Kr Pliskova
+  #   some cases manually remediated (see misc. google doc)
+  #   but quick manual remediation can't help if player in test set has middle name
+  #   and full name isn't in pbp training set.
+  #   Function tries to account for this as follows.
+  
+  # Alex Bee Caine -> c("A. Caine", "A Caine", "A. Bee Caine", "A Bee Caine",
+  #                     "Ab Caine", "A Bee-Caine", "A. Bee-Caine")
+  
+  # This method risks picking up on players with same last name and first letter
+  # But this is unlikely as the pbp training set only 1 case of this - Kr&Ka Pliskova
+  # And this was picked up since there were 2 characters before the space
+  
+  parts <- strsplit(fullname,split=" ")[[1]]
+  n <- length(parts)
+  first.letter <- substr(parts[1],1,1)
+  equiv <- c(fullname,
+             paste(first.letter," ",parts[n],sep=""),
+             paste(first.letter,"."," ",parts[n],sep=""))
+  if (n > 2){
+    rest <- ""
+    rest.dash <- ""
+    for (i in 1:(n-1)){
+      rest <- paste(rest," ",parts[i+1],sep="")
+      rest.dash <- paste(rest.dash,parts[i+1],sep="-")
+    }
+    rest.dash <- substr(rest.dash,2,nchar(rest.dash)) # get rid of first dash
+    first.middle.name.letter <- tolower(substr(parts[2],1,1))
+    rest.more <- "" # for if the name has four or more parts
+    for (i in 1:(n-2)){
+      rest.more <- paste(rest.more," ",parts[i+2],sep="")
+    }
+    # rest contains the first space, rest.dash doesn't
+    equiv <- c(equiv, paste(first.letter,rest,sep=""),
+               paste(first.letter,".",rest,sep=""),
+               paste(first.letter," ",rest.dash,sep=""),
+               paste(first.letter,"."," ",rest.dash,sep=""),
+               paste(first.letter,first.middle.name.letter,rest.more,sep=""))
+  }
+  return(equiv)
+}
+
+get.aggr.by.state <- function(entry){
+  # extract serve won & serve total fields for a player
+  # without surface distinction
+  ret <- rep(0,38)
+  for (i in 1:18){
+    # odd indices for pts won, even for total
+    ret[2*i-1] <- entry[[3+12*i]]+entry[[7+12*i]]+entry[[11+12*i]]
+    ret[2*i] <- entry[[2+12*i]]+entry[[6+12*i]]+entry[[10+12*i]]
+  }
+  ret[37] <- entry[[3]]+entry[[7]]+entry[[11]]
+  ret[38] <- entry[[2]]+entry[[6]]+entry[[10]]
+  return(ret)
+}
+
+create.p.vector <- function(tst.names,pbp){
+  # returns a dataframe with the rows in the order of names,
+  # the columns being p's for states 1-18 and then t (tiebreak)
+  # final column is overall p regardless of state by taking total won / total serve
+  # names usually from get.unique.players on test data set
+  # pbp is the point-by-point data given
+  # note p-vectors not surface specific
+  
+  n <- length(tst.names)
+  m <- nrow(pbp)
+  pbp.name <- pbp$name
+  aggr <- matrix(0,nrow=n,ncol=38) # 38=2x19, taking won & total to divide later
+  for (i in 1:n){
+    equiv <- get.equiv.names(tst.names[i])
+    p <- length(equiv)
+    for (j in 1:p){
+      for (l in 1:m){
+        # check 1 by 1 since pbp has non-unique names after manual remediation
+        if (equiv[j]==pbp.name[l]){
+          more.aggr <- get.aggr.by.state(pbp[l,])
+          aggr[i,] <- aggr[i,]+more.aggr
+        }
+      }
+    }
+  }
+  # now divide odd cols by even cols to obtain p's
+  output <- matrix(0,nrow=n,ncol=20)
+  output <- data.frame(output, row.names=tst.names)
+  for (i in 1:n){
+    for (j in 1:19){
+      output[i,j] <- aggr[i,2*j-1]/aggr[i,2*j]
+    } # note below first seq() output will end at 37
+    output[i,20] <- sum(aggr[i,seq(1,38,by=2)])/sum(aggr[i,seq(2,38,by=2)])
+  }
+  return(output)
+}
+
+grand.slams <- c("Australian Open","Roland Garros","Wimbledon","US Open","Us Open")
+# overall function to do experiments with
+conduct.experiment <- function(inactive.states, P, test.set, atp=TRUE, test.year=0){
+  # inactive.states:
+  #   vector containing states (19 for tiebreak) to deactivate, i.e. 
+  #   replace the state's unique p with the player's overall p
+  # P:
+  #   data.frame containing players' individual p vectors
+  #   usually obtained via create.p.vector output
+  # test.set:
+  #   data set used to test accuracy of prediction
+  # atp:
+  #   boolean defaulted to true if test.set is ATP data
+  # test.year:
+  #   three valid values: 0,1,2
+  #   0 for up to 2018, 1 for 2019 to 2021 inclusive, 2 for 2022 beyond
+  
+  # make copy of P and change copy to align with specified inactive.states
+  cP <- P[,1:19]
+  cP[,inactive.states] <- P[,20]
+  
+  # record exact probability values from model
+  # so we can examine closer if we want
+  n <- nrow(test.set)
+  exact <- rep(0,n)
+  
+  # experiment begins
+  pbp.names <- rownames(cP)
+  for (i in 1:n){
+    matchup <- test.set[i,]
+    winner <- matchup$winner_name
+    loser <- matchup$loser_name
+    inds <- match(c(winner,loser),pbp.names)
+    winner.P <- unname(unlist(cP[inds[1],]))
+    loser.P <- unname(unlist(cP[inds[2],]))
+    if (matchup$tourney_name %in% grand.slams){
+      if (test.year==0){
+        if (matchup$tourney_name=="US Open"){
+          # here we do something that many cases below will also do
+          # atp is TRUE if the match is an ATP match, x+ATP is a numeric value
+          # so x+ATP can be directly used for format without if-statements 
+          # this also works because the format codes were wta/atp alternating
+          # with the wta/atp code pairs only differing in playing to 3 or 5 sets
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=0+atp)
+        } else {
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=4+atp)
+        }
+      } else if (test.year==1){
+        # no overlap of rules from 2019 to 2021, so we have to code all cases
+        if (matchup$tourney_name=="Australian Open"){
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=2+atp)
+        } else if (matchup$tourney_name=="Roland Garros"){
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=4+atp)
+        } else if (matchup$tourney_name=="Wimbledon"){
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=6+atp)
+        } else { # matchup is from US Open
+          exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=0+atp)
+        }
+      } else{ # test.year is 2, all grand slams formats standardized in 2022
+        exact[i] <- match.win.prob(p1=winner.P,p2=loser.P,format=2+atp)
+      }
+    } else {
+      exact[i] <- match.win.prob(p1=winner.P,p2=loser.P)
+    }
+  }
+  res <- exact > 0.5
+  return(list("score"=mean(res),"result"=res,"exact"=exact))
+}
+
+downwards.wrapper <- function(deactivate,P,testset,atp,test.year){
+  # atp is boolean for if testset is for ATP
+  scores <- rep(0,19)
+  if (length(deactivate)==0){
+    options <- 1:19
+  } else {
+    options <- (1:19)[-deactivate]
+  }
+  for (i in options){
+    scores[i] <- conduct.experiment(c(i,deactivate),P,testset,atp,test.year)$score
+    # so deactivated state's indices will have 0
+  }
+  return(list("max"=max(scores),"candidates"=which(scores==max(scores))))
+}
+upwards.wrapper <- function(activate,P,testset,atp,test.year){
+  # atp is boolean for if testset is for ATP
+  if (length(activate)==0){
+    deactivate <- 1:19
+  } else {
+    deactivate <- (1:19)[-activate]
+  }
+  scores <- rep(0,19)
+  for (i in deactivate){
+    deactivate.no.i <- (1:19)[-c(activate,i)]
+    scores[i] <- conduct.experiment(deactivate.no.i,P,testset,atp,test.year)$score
+    # activated state's indices will have 0
+  }
+  return(list("max"=max(scores),"candidates"=which(scores==max(scores))))
+}
+
+downwards.experiment <- function(starting.states,P,testset,atp,previous.scores,
+                                 depth=18,test.year=2){
+  
+  diverge.lists <- c()
+  deactivate <- starting.states
+  
+  # through recursion, aim to combine all ovr.lists produced
+  ovr.list <- list() # to contain lists containing state & score vectors
+  path <- list()
+  # if no previous scores, can initialize NULL list element for scores:
+  # https://stackoverflow.com/questions/45666451/r-adding-an-empty-vector-to-a-list
+  if (length(previous.scores)==0){
+    path[1] <- list(NULL)
+  } else {
+    path[[1]] <- previous.scores # to record best scores of this path
+  }
+  # path[[2]] to record states deactivated, but does not need initialization
+  
+  while(length(deactivate) < depth){
+    
+    res <- downwards.wrapper(deactivate,P,testset,atp,test.year)
+    score <- res$max
+    cands <- res$candidates
+    scores.sofar <- c(path[[1]],score)
+    
+    l <- length(cands)
+    if (l>1){
+      # recursion call
+      for (i in 2:l){
+        diverge.lists <- c(
+          diverge.lists,
+          downwards.experiment(c(deactivate,cands[i]),P,testset,atp,scores.sofar,
+                               depth,test.year))
+      }
+    }
+    path[[1]] <- scores.sofar
+    deactivate <- c(deactivate,cands[1])
+    path[[2]] <- deactivate
+  }
+  path[[2]] <- deactivate
+  ovr.list[[1]] <- path
+  ovr.list <- c(ovr.list,diverge.lists)
+  
+  return(ovr.list)
+}
+
+upwards.experiment <- function(starting.states,P,testset,atp,previous.scores,
+                               depth=18,test.year=2){
+  
+  diverge.lists <- c()
+  activate <- starting.states
+  
+  # through recursion, aim to combine all ovr.lists produced
+  ovr.list <- list() # to contain lists containing state & score vectors
+  path <- list()
+  # if no previous scores, can initialize NULL list element for scores:
+  # https://stackoverflow.com/questions/45666451/r-adding-an-empty-vector-to-a-list
+  if (length(previous.scores)==0){
+    path[1] <- list(NULL)
+  } else {
+    path[[1]] <- previous.scores # to record best scores of this path
+  }
+  # path[[2]] to record states deactivated, but does not need initialization
+  
+  while(length(activate) < depth){
+    
+    res <- upwards.wrapper(activate,P,testset,atp,test.year)
+    score <- res$max
+    cands <- res$candidates
+    scores.sofar <- c(path[[1]],score)
+    
+    l <- length(cands)
+    if (l>1){
+      # recursion call
+      for (i in 2:l){
+        diverge.lists <- c(
+          diverge.lists,
+          upwards.experiment(c(activate,cands[i]),P,testset,atp,scores.sofar,
+                             depth,test.year))
+      }
+    }
+    path[[1]] <- scores.sofar
+    activate <- c(activate,cands[1])
+    path[[2]] <- activate
+  }
+  path[[2]] <- activate
+  ovr.list[[1]] <- path
+  ovr.list <- c(ovr.list,diverge.lists)
+  
+  return(ovr.list)
+}
+
+plot.path.score <- function(n.down,dat.down,n.up,dat.up,
+                      P, test.set, atp=TRUE, main="Score",
+                      ylim.lower=0.55,ylim.upper=0.7,hide.axis=FALSE){
+  # n - length of path given
+  # dat - data saved containing paths
+  # ylim.lower(upper) - ylim for plot, set to around 0(20) for type=2
+  
+  baseline.down <- conduct.experiment(c(),P,test.set,atp)$score
+  baseline.up <- conduct.experiment(1:19,P,test.set,atp)$score
+  
+  if (hide.axis) {
+    plot(0:n.up,c(baseline.up,dat.up[[1]][[1]]),'l',
+         xlim=c(0,20),ylim=c(ylim.lower,ylim.upper),main=main)
+  } else {
+    plot(0:n.up,c(baseline.up,dat.up[[1]][[1]]),'l',
+         xlim=c(0,20),ylim=c(ylim.lower,ylim.upper),main=main,
+         ylab="Score",xlab="# States Activated")
+  }
+  for (i in 2:length(dat.up)){
+    lines(0:n.up,c(baseline.up,dat.up[[i]][[1]]))
+  }
+  for (i in 1:length(dat.down)){
+    lines(20:(20-n.down),c(baseline.down,dat.down[[i]][[1]]))
+  }
+}
+
+plot.path.state <- function(n.down,dat.down,n.up,dat.up,main="States",
+                            ylim.lower=0,ylim.upper=20,hide.axis=FALSE){
+  # n - length of path given
+  # dat - data saved containing paths
+  # ylim.lower(upper) - ylim for plot, set to around 0(20) for state
+  if (hide.axis) {
+    plot(1:n.up,dat.up[[1]][[2]],'l',
+         xlim=c(1,19),ylim=c(ylim.lower,ylim.upper),main=main)
+  } else {
+    plot(1:n.up,dat.up[[1]][[2]],'l',
+         xlim=c(1,19),ylim=c(ylim.lower,ylim.upper),main=main,
+         ylab="States",xlab="# States Activated")
+  }
+  for (i in 2:length(dat.up)){
+    lines(1:n.up,dat.up[[i]][[2]])
+  }
+  for (i in 1:length(dat.down)){
+    lines(19:(20-n.down),dat.down[[i]][[2]])
+  }
+}
+```
+
+# Data
+
+```{r data}
+# testing data
+atp.test.2014 <- read.csv('../Data Lake/Experiments/2014_atp_testing.csv')
+wta.test.2014 <- read.csv('../Data Lake/Experiments/2014_wta_testing.csv')
+atp.test.2018 <- read.csv('../Data Lake/Experiments/2018_atp_testing.csv')
+wta.test.2018 <- read.csv('../Data Lake/Experiments/2018_wta_testing.csv')
+atp.test.2022 <- read.csv('../Data Lake/Experiments/2022_atp_testing.csv')
+wta.test.2022 <- read.csv('../Data Lake/Experiments/2022_wta_testing.csv')
+# remove incomplete matches for test sets
+ic.match <- function(score) grep("[A-Za-z]",score)
+atp.test.2014 <- atp.test.2014[-ic.match(atp.test.2014$score),]
+wta.test.2014 <- wta.test.2014[-ic.match(wta.test.2014$score),]
+atp.test.2018 <- atp.test.2018[-ic.match(atp.test.2018$score),]
+wta.test.2018 <- wta.test.2018[-ic.match(wta.test.2018$score),]
+atp.test.2022 <- atp.test.2022[-ic.match(atp.test.2022$score),]
+wta.test.2022 <- wta.test.2022[-ic.match(wta.test.2022$score),]
+# Point-by-Point data
+pbp.123 <- read.csv('../Data Lake/Players/2011-2013_pbp_individual.csv')
+pbp.567 <- read.csv('../Data Lake/Players/2015-2017_pbp_individual.csv')
+pbp.901 <- read.csv('../Data Lake/Players/2019-2021_pbp_individual.csv')
+# Getting unique names
+atp.names.2014 <- get.unique.players(atp.test.2014)
+atp.names.2018 <- get.unique.players(atp.test.2018)
+atp.names.2022 <- get.unique.players(atp.test.2022)
+wta.names.2014 <- get.unique.players(wta.test.2014)
+wta.names.2018 <- get.unique.players(wta.test.2018)
+wta.names.2022 <- get.unique.players(wta.test.2022)
+# create p vectors
+atp.P.123 <- create.p.vector(atp.names.2014,pbp.123)
+atp.P.567 <- create.p.vector(atp.names.2018,pbp.567)
+atp.P.901 <- create.p.vector(atp.names.2022,pbp.901)
+wta.P.123 <- create.p.vector(wta.names.2014,pbp.123)
+wta.P.567 <- create.p.vector(wta.names.2018,pbp.567)
+wta.P.901 <- create.p.vector(wta.names.2022,pbp.901)
+for (i in 1:ncol(atp.P.123)){
+  atp.P.123[which(is.na(atp.P.123[,i])),i] <- 
+    mean(atp.P.123[-which(is.na(atp.P.123[,i])),i])
+}
+for (i in 1:ncol(atp.P.567)){
+  atp.P.567[which(is.na(atp.P.567[,i])),i] <- 
+    mean(atp.P.567[-which(is.na(atp.P.567[,i])),i])
+}
+for (i in 1:ncol(atp.P.901)){
+  atp.P.901[which(is.na(atp.P.901[,i])),i] <- 
+    mean(atp.P.901[-which(is.na(atp.P.901[,i])),i])
+}
+for (i in 1:ncol(wta.P.123)){
+  wta.P.123[which(is.na(wta.P.123[,i])),i] <- 
+    mean(wta.P.123[-which(is.na(wta.P.123[,i])),i])
+}
+for (i in 1:ncol(wta.P.567)){
+  wta.P.567[which(is.na(wta.P.567[,i])),i] <- 
+    mean(wta.P.567[-which(is.na(wta.P.567[,i])),i])
+}
+for (i in 1:ncol(wta.P.901)){
+  wta.P.901[which(is.na(wta.P.901[,i])),i] <- 
+    mean(wta.P.901[-which(is.na(wta.P.901[,i])),i])
+}
+```
+
+```{r}
+ld6.atp.2014 <- readRDS("cat2_res/ld6_atp_2014.rds")
+lu6.atp.2014 <- readRDS("cat2_res/lu6_atp_2014.rds")
+ld7.wta.2014 <- readRDS("cat2_res/ld7_wta_2014.rds")
+lu6.wta.2014 <- readRDS("cat2_res/lu6_wta_2014.rds")
+ld7.atp.2018 <- readRDS("cat2_res/ld7_atp_2018.rds")
+lu7.atp.2018 <- readRDS("cat2_res/lu7_atp_2018.rds")
+ld7.wta.2018 <- readRDS("cat2_res/ld7_wta_2018.rds")
+lu7.wta.2018 <- readRDS("cat2_res/lu7_wta_2018.rds")
+ld7.atp.2022 <- readRDS("cat2_res/ld7_atp_2022.rds")
+lu7.atp.2022 <- readRDS("cat2_res/lu7_atp_2022.rds")
+ld7.wta.2022 <- readRDS("cat2_res/ld7_wta_2022.rds")
+lu7.wta.2022 <- readRDS("cat2_res/lu7_wta_2022.rds")
+```
+
+# ggplot2 Upgrades
+
+## Score
+
+```{r}
+library(ggplot2)
+```
+```{r}
+get.gg.score <- function(d.res,d.depth,u.res,u.depth,P,test.set,atp=TRUE,
+                         ylim.lower=0.6,ylim.upper=0.7){
+  n.paths <- length(u.res)+length(d.res)
+  d.score <- conduct.experiment(c(),P,test.set,atp)$score
+  u.score <- conduct.experiment(1:19,P,test.set,atp)$score
+  df <- matrix(0,nrow=length(d.res)*d.depth+length(u.res)*u.depth+2,ncol=3)
+  row.ptr <- 3
+  # # states activated \ Path ID \ Score
+  df[1,] <- c(0,1,u.score)
+  df[2,] <- c(20,n.paths,d.score)
+  for (i in 1:length(u.res)){
+    for (j in 1:u.depth){
+      df[row.ptr,] <- c(j,i,u.res[[i]][[1]][j])
+      row.ptr <- row.ptr + 1
+    }
+  }
+  for (i in 1:length(d.res)){
+    for (j in 1:d.depth){
+      df[row.ptr,] <- c(20-j,i+length(u.res),d.res[[i]][[1]][j])
+      row.ptr <- row.ptr + 1
+    }
+  }
+  df <- data.frame(df)
+  gg <- ggplot(data=df,aes(x=X1,y=X3,group=X2)) +
+    geom_line() +
+    xlab("Number of States Activated") +
+    ylab("Score") +
+    ylim(ylim.lower,ylim.upper)
+    # scale_y_continuous(
+    #   breaks = round(seq(min(df$X3),max(df$X3),length.out=3),2)-c(0,0,0.01))
+}
+```
+```{r}
+gg.a14 <- get.gg.score(ld6.atp.2014,6,lu6.atp.2014,6,atp.P.123,atp.test.2014,atp=TRUE)+
+  theme(axis.title.x=element_blank())+ggtitle("ATP 2014")+
+  theme(plot.title = element_text(hjust = 0.5))
+gg.a18 <- get.gg.score(ld7.atp.2018,7,lu7.atp.2018,7,atp.P.567,atp.test.2018,atp=TRUE)+
+  theme(axis.title.x=element_blank(),axis.title.y=element_blank())+ggtitle("ATP 2018")+
+  theme(plot.title = element_text(hjust = 0.5))
+gg.a22 <- get.gg.score(ld7.atp.2022,7,lu7.atp.2022,7,atp.P.901,atp.test.2022,atp=TRUE,
+                       ylim.lower = 0.58)+
+  theme(axis.title.x=element_blank(),axis.title.y=element_blank())+ggtitle("ATP 2022")+
+  theme(plot.title = element_text(hjust = 0.5))
+gg.w14 <- get.gg.score(ld7.wta.2014,7,lu6.wta.2014,6,wta.P.123,wta.test.2014,atp=FALSE)+
+  #theme(axis.title.x=element_blank())+
+  ggtitle("WTA 2014")+
+  theme(plot.title = element_text(hjust = 0.5))
+gg.w18 <- get.gg.score(ld7.wta.2018,7,lu7.wta.2018,7,wta.P.567,wta.test.2018,atp=FALSE,
+                       ylim.lower=0.49,ylim.upper=0.57)+
+  theme(axis.title.y=element_blank())+ggtitle("WTA 2018")+
+  theme(plot.title = element_text(hjust = 0.5))
+gg.w22 <- get.gg.score(ld7.wta.2022,7,lu7.wta.2022,7,wta.P.901,wta.test.2022,atp=FALSE)+
+  theme(axis.title.y=element_blank())+ggtitle("WTA 2022")+
+  theme(plot.title = element_text(hjust = 0.5))
+```
+```{r}
+library(patchwork)
+gg <- gg.a14 + gg.a18 + gg.a22 + gg.w14 + gg.w18 + gg.w22
+gg
+```
+```{r}
+ggsave('ad-hoc/fig2.png', gg, dpi=300)
+```
+
+## State
+
+```{r}
+get.gg.state <- function(d.res,d.depth,u.res,u.depth){
+  n.paths <- length(u.res)+length(d.res)
+  df <- matrix(0,nrow=length(d.res)*d.depth+length(u.res)*u.depth,ncol=3)
+  row.ptr <- 1
+  # # states activated \ Path ID \ State
+  for (i in 1:length(u.res)){
+    for (j in 1:u.depth){
+      df[row.ptr,] <- c(j,i,u.res[[i]][[2]][j])
+      row.ptr <- row.ptr + 1
+    }
+  }
+  for (i in 1:length(d.res)){
+    for (j in 1:d.depth){
+      df[row.ptr,] <- c(20-j,i+length(u.res),d.res[[i]][[2]][j])
+      row.ptr <- row.ptr + 1
+    }
+  }
+  df <- data.frame(df)
+  gg <- ggplot(data=df,aes(x=X1,y=X3,group=X2)) +
+    geom_line() +
+    xlab("Number of States Activated") +
+    ylab("State Chosen")
+}
+```
+```{r}
+gs.a14 <- get.gg.state(ld6.atp.2014,6,lu6.atp.2014,6) +
+  theme(axis.title.x=element_blank())+ggtitle("ATP 2014")+
+  theme(plot.title = element_text(hjust = 0.5))
+gs.a18 <- get.gg.state(ld7.atp.2018,7,lu7.atp.2018,7) +
+  theme(axis.title.x=element_blank()) + theme(axis.title.y=element_blank())+
+  ggtitle("ATP 2018")+
+  theme(plot.title = element_text(hjust = 0.5))
+gs.a22 <- get.gg.state(ld7.atp.2022,7,lu7.atp.2022,7) +
+  theme(axis.title.x=element_blank()) + theme(axis.title.y=element_blank())+
+  ggtitle("ATP 2022")+
+  theme(plot.title = element_text(hjust = 0.5))
+gs.w14 <- get.gg.state(ld7.wta.2014,7,lu6.atp.2014,6) +
+  #theme(axis.title.x=element_blank())+
+  ggtitle("WTA 2014")+
+  theme(plot.title = element_text(hjust = 0.5))
+gs.w18 <- get.gg.state(ld7.wta.2018,7,lu7.wta.2018,7) +
+  theme(axis.title.y=element_blank())+ggtitle("WTA 2018")+
+  theme(plot.title = element_text(hjust = 0.5))
+gs.w22 <- get.gg.state(ld7.wta.2022,7,lu7.wta.2022,7) +
+  #theme(axis.title.x=element_blank()) + 
+  theme(axis.title.y=element_blank())+
+  ggtitle("WTA 2022")+
+  theme(plot.title = element_text(hjust = 0.5))
+```
+```{r}
+gs <- gs.a14 + gs.a18 + gs.a22 + gs.w14 + gs.w18 + gs.w22
+gs
+```
+
+```{r}
+ggsave('ad-hoc/figs.png', gs, dpi=300)
+```
+
+

@@ -1,0 +1,622 @@
+---
+title: "Notebook 3"
+subtitle: "To organize into Latex"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Factors Exploration
+
+The goal in this file is to explore relationships between players' performance and factors such as fatigue (mental & physical) and momentum. Trends discovered will then be the target of modelling of category 3 in notebook 3.
+
+Separating data by ATP/WTA is a luxury we can afford due to the abundance of data points. As studies have shown, there does not seem to exist statistical difference in distance ran between the men's and women's games. 
+
+(https://doi.org/10.1080/02640414.2016.1139161 - no observable difference between ATP/WTA distance covered, https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0200591 - no observable difference in distance covered in Grand Slams for WTA) 
+
+The point-by-point data is comprised of entirely grand slam matches, so some matches are best of 3 sets while others are best of 5. But further separation is not required because the metrics are taken only up to the point of retiring. It does not matter when the match ultimately ends.
+
+```{r}
+separate.atp.wta <- function(dataset){
+  ids <- dataset$MatchID
+  n <- length(ids)
+  ind <- rep(0,n) # for WTA matches
+  for (i in 1:n){
+    if (substr(ids[i],nchar(ids[i])-3,nchar(ids[i])-3)=='2') ind[i] <- 1
+  }
+  wta <- which(ind==1)
+  return(list("atp"=dataset[-wta,],
+              "wta"=dataset[wta,]))
+}
+```
+
+```{r}
+rallies <- read.csv('../Data Lake/Point-By-Point/pbp_rallies.csv')
+rallies <- separate.atp.wta(rallies)
+atp.rallies <- rallies$atp
+wta.rallies <- rallies$wta
+rm(rallies)
+points <- read.csv('../Data Lake/Point-By-Point/pbp_points.csv')
+points <- separate.atp.wta(points)
+atp.points <- points$atp
+wta.points <- points$wta
+rm(points)
+distance <- read.csv('../Data Lake/Point-By-Point/pbp_distance.csv')
+distance.sep <- separate.atp.wta(distance)
+atp.distance <- distance.sep$atp
+wta.distance <- distance.sep$wta
+rm(distance.sep)
+```
+
+
+# Looking at Where Fatigue Factors of Retired Matches Fall at Time of Retirement
+
+## Functions
+
+```{r}
+# each function will be metric-specific instead of having metrics as a variable
+# because variables do not work with the '$' operator
+hist.of.rallies.at.ret <- function(gameno,rallyno,atp=TRUE,main="entries"){
+  # returns the entries used for histogram and creates the basic histogram as well
+  # gameno - the game number the player retired at, max 39(65) for best of 3(5)
+  # rallyno - the # of rallies played for the retired game/walkover
+  
+  # only getting match_id and accumulated rallies
+  if (atp) {
+    # relevant <- samp[which(samp$GameNoAcc==gameno),c(1,5)]
+    relevant <- atp.rallies[which(atp.rallies$GameNoAcc==gameno),c(1,6)]
+  } else {
+    relevant <- wta.rallies[which(wta.rallies$GameNoAcc==gameno),c(1,6)]
+  }
+  
+  
+  matches <- unique(relevant[,1])
+  i <- 1
+  j <- 1
+  m <- nrow(relevant)
+  n <- length(matches)
+  entries <- rep(0,n)
+  while (i<=m & j<=n){
+    if (relevant[i,1]==matches[j]){
+      entries[j] <- relevant[i,2]
+      i <- i+1
+    } else {
+      j <- j+1
+    }
+  }
+  hist(entries,main=main)
+  abline(v=rallyno,lty=2,col='red')
+  return(entries)
+}
+
+hist.of.points.at.ret <- function(gameno,pointno,atp=TRUE,main="entries"){
+  # returns the entries used for histogram and creates the basic histogram as well
+  # gameno - the game number the player retired at, max 39(65) for best of 3(5)
+  # pointno - the # of points played for the retired game/walkover
+  
+  # only getting match_id and accumulated points
+  if (atp) {
+    # relevant <- samp[which(samp$GameNoAcc==gameno),c(1,5)]
+    relevant <- atp.points[which(atp.points$GameNoAcc==gameno),c(1,5)]
+  } else {
+    relevant <- wta.points[which(wta.points$GameNoAcc==gameno),c(1,5)]
+  }
+  
+  
+  matches <- unique(relevant[,1])
+  i <- 1
+  j <- 1
+  m <- nrow(relevant)
+  n <- length(matches)
+  entries <- rep(0,n)
+  while (i<=m & j<=n){
+    if (relevant[i,1]==matches[j]){
+      entries[j] <- as.numeric(relevant[i,2])
+      i <- i+1
+    } else {
+      j <- j+1
+    }
+  }
+  hist(entries,main=main)
+  abline(v=pointno,lty=2,col='red')
+  return(entries)
+}
+
+hist.of.dist.at.ret <- function(gameno,dist.ran.1,dist.ran.2,main="entries"){
+  # returns the entries used for histogram and creates the basic histogram as well
+  # gameno - the game number the player retired at, max 39(65) for best of 3(5)
+  # dist.ran.1(.2) - the distance ran for the retired game/walkover
+  
+  # only getting match_id and distances
+  relevant <- distance[which(distance$GameNoAcc==gameno),c(1,6,8)]
+  
+  matches <- unique(relevant[,1])
+  i <- 1
+  j <- 1
+  m <- nrow(relevant)
+  n <- length(matches)
+  entries <- rep(0,2*n)
+  while (i<=m & j<=n){
+    if (relevant[i,1]==matches[j]){
+      entries[2*j-1] <- relevant[i,2]
+      entries[2*j] <- relevant[i,3]
+      i <- i+1
+    } else {
+      j <- j+1
+    }
+  }
+  hist(entries,main=main)
+  abline(v=c(dist.ran.1,dist.ran.2),lty=2,col='red')
+  return(entries)
+}
+```
+
+Measuring by time instead of game number really only makes sense for distance - distance ran over time. Points played and rallies played focus more on mental fatigue and so are better measured by game played.
+
+```{r}
+time.in.seconds <- function(string){
+  split.time <- strsplit(string,":")[[1]]
+  h <- split.time[1]
+  m <- split.time[2]
+  s <- split.time[3]
+  time <- 3600*as.numeric(h)+60*as.numeric(m)+as.numeric(s)
+  return(time)
+}
+
+add.time.in.seconds <- function(dat){
+  # given dataset dat with column 'ElapsedTime', adds return vector
+  # contains the same elapsed time but in only seconds
+  # dat$time <- add.time.in.seconds(dat)
+  etime <- dat$ElapsedTime
+  n <- length(etime)
+  time <- rep(0,n)
+  for (i in 1:n){
+    time[i] <- time.in.seconds(etime[i])
+  }
+  return(time)
+}
+
+hist.of.dist.at.time.of.ret <- function(time,dist.ran.1,dist.ran.2,limit=60,main="entries"){
+  # returns the entries used for histogram and creates the basic histogram as well
+  # time - time in seconds of when the match was retired
+  # dist.ran.1(.2) - the distance ran for the retired game/walkover
+  # !!! On limit:
+  # For each match, choosing to take the time closest to the time given
+  # limit is used to specify the shortest/longest times acceptable
+  # so times in [time-limit,time+limit] have their distances kept
+  # default value is 60 which corresponds to a 2 minute long interval
+  
+  # only getting match_id and distances
+  relevant <- distance[which((distance$time>=time-60)
+                             &(distance$time<=time+60)),c(1,6,8,9)]
+  matches <- unique(relevant[,1])
+  i <- 1
+  j <- 1
+  m <- nrow(relevant)
+  n <- length(matches)
+  entries <- rep(0,2*n)
+  # larger than limit so in the first loop the second if always true
+  time.gap <- limit+1 
+  while (i<=m & j<=n){
+    if (relevant[i,1]==matches[j]){
+      if (distance$time[i]-time<time.gap){
+        time.gap <- distance$time[i]-time
+        entries[2*j-1] <- relevant[i,2]
+        entries[2*j] <- relevant[i,3]
+      }
+      i <- i+1
+    } else {
+      j <- j+1
+      time.gap <- limit+1
+    }
+  }
+  entries <- entries[-which(entries==0)]
+  hist(entries,main=main)
+  abline(v=c(dist.ran.1,dist.ran.2),lty=2,col='red')
+  return(list(relevant,entries))
+}
+```
+```{r}
+distance$time <- add.time.in.seconds(distance)
+```
+
+## Retired Matches Manual
+
+There is only a very small amount of retired matches where we have all metrics recorded at time of retirement. If a particular metric is missing below, the section will just be blank after the colon. X & Y below were two of the few cases where all metrics were present and we found to have been retired.
+
+[Template] match-id, P1 / P2, time elapsed, GameNoAcc: , PointsAcc: , RalliesAcc: , P1Distance: , P2Distance:
+
+### 1
+2011-ausopen-1101, Rafael Nadal / Marcos Daniel, 0:46:46, GameNoAcc: 11, PointsAcc: 61, RalliesAcc: 241, P1Distance: , P2Distance:
+  
+### 2
+2011-ausopen-1132, Karol Beck / Andy Murray, 1:42:27, GameNoAcc: 22, PointsAcc: 149, RalliesAcc: 675, P1Distance: , P2Distance:
+  
+### 3
+2011-ausopen-1207, David Nalbandian / Richard Berankis, 1:04:48, GameNoAcc: 16, PointsAcc: 89, RalliesAcc: 281, P1Distance: , P2Distance:
+
+### 4
+2011-ausopen-1307, Jurgen Melzer / Marcos Baghdatis, 2:21:02, GameNoAcc: 35, PointsAcc: 209, RalliesAcc: 889, P1Distance: , P2Distance:
+  
+### 5
+2011-ausopen-1312, Viktor Troicki / Novak Djokovic, 0:39:14, GameNoAcc: 8, PointsAcc: 60, RalliesAcc: 325, P1Distance: , P2Distance:
+  
+### 6
+2011-usopen-1501, Novak Djokovic / Janko Tipsarevic, 3:26:20, GameNoAcc: 36, PointsAcc: 234, RalliesAcc: 1347, P1Distance: , P2Distance:
+  
+### 7
+2011-wimbledon-2148, Magdalena Rybarikova / Victoria Azarenka, 1:12:48, GameNoAcc: 16, PointsAcc: 106, RalliesAcc: 403, P1Distance: , P2Distance:
+
+### 8 
+2011-frenchopen-1232, Victor Hanescu / Novak Djokovic, 1:28:47, GameNoAcc: 23, PointsAcc: 128, RalliesAcc: 436, P1Distance: , P2Distance:
+  
+### X
+2017-frenchopen-1404, Marin Cilic / Kevin Anderson, 0:46:52, GameNoAcc: 12, PointsAcc: 65, RalliesAcc: 216, P1Distance: 545.685, P2Distance: 592.518
+  
+### Y
+2017-frenchopen-1503, Rafael Nadal / Pablo Carreno Busta, 0:43:14, GameNoAcc: 11, PointsAcc: 54, RalliesAcc: 344 P1Distance: 698.172, P2Distance: 768.867
+
+## Histograms Manual
+
+```{r}
+# Function calls (Fill in)
+# rallies.res <- hist.of.rallies.at.ret(,)
+# points.res <- hist.of.points.at.ret(,)
+# distance.res <- hist.of.dist.at.ret(,,)
+# distance.time.res <- hist.of.dist.at.time.of.ret(,,)
+```
+
+### 1
+```{r}
+rallies.res <- hist.of.rallies.at.ret(11,241)
+points.res <- hist.of.points.at.ret(11,61)
+```
+
+### 2
+```{r}
+rallies.res <- hist.of.rallies.at.ret(22,675)
+points.res <- hist.of.points.at.ret(22,149)
+```
+
+### 3
+```{r}
+rallies.res <- hist.of.rallies.at.ret(16,281)
+points.res <- hist.of.points.at.ret(16,89)
+```
+
+### 4
+```{r}
+rallies.res <- hist.of.rallies.at.ret(35,889)
+points.res <- hist.of.points.at.ret(35,209)
+```
+
+### 5
+```{r}
+rallies.res <- hist.of.rallies.at.ret(8,325)
+points.res <- hist.of.points.at.ret(8,60)
+```
+
+### 6
+```{r}
+rallies.res <- hist.of.rallies.at.ret(36,1347)
+points.res <- hist.of.points.at.ret(36,234)
+```
+
+### 7
+```{r}
+rallies.res <- hist.of.rallies.at.ret(16,403,atp=FALSE)
+points.res <- hist.of.points.at.ret(16,106,atp=FALSE)
+```
+
+### 8
+```{r}
+rallies.res <- hist.of.rallies.at.ret(23,436)
+points.res <- hist.of.points.at.ret(23,128)
+```
+
+### X
+```{r}
+rallies.res <- hist.of.rallies.at.ret(12,216)
+points.res <- hist.of.points.at.ret(12,65)
+distance.res <- hist.of.dist.at.ret(12,545.685,592.518)
+distance.time.res <- hist.of.dist.at.time.of.ret(60*46+52,545.685,592.518)
+```
+
+### Y
+```{r}
+rallies.res <- hist.of.rallies.at.ret(11,344)
+points.res <- hist.of.points.at.ret(11,54)
+distance.res <- hist.of.dist.at.ret(11,698.172,768.867)
+distance.time.res <- hist.of.dist.at.time.of.ret(60*43+14,698.172,768.867)
+```
+
+## Retired Matches Histograms Progrommatic
+
+Upon examination, only the 2011 matches have retired status recorded in the point-by-point "...-matches.csv" files. 
+
+Change file name to switch to another 2011 Grand Slam tournament. The function can be used for matches after 2011 if obtain a list of match ids from the data sets in the "Matches" folder, in which case file.name is overriden and ret.id is supplied directly.
+
+However, this cannot be done programmatically since those data sets do not have the "match_id" fields. One can go through matches manually as we did with X and Y above, though it would take a considerable amount of time and effort. For now, we believe the 20 matches that can be seen programmatically below, along with X&Y above, are enough to conclude no strong exploitable connection exists between the fatigue factors and chances of retiring.
+
+```{r}
+# file.name e.g. '../Data Lake/Point-By-Point/2011-wimbledon-matches.csv'
+# give "override" as file.name to provide ret.id directly
+retired.match.histograms <- function(file.name,ret.id=NULL){
+  if (file.name!="override"){
+    matches <- read.csv(file.name)
+    ret.id <- matches$match_id[which(matches$status=="Retired")]
+  }
+  if (length(ret.id)==0) return()
+  r <- length(ret.id)
+  for (i in 1:r){
+    wta_match <- substr(ret.id[i],nchar(ret.id[i])-3,nchar(ret.id[i])-3)=='2'
+    if (wta_match) {
+      # WTA match
+      ret.time <- tail(wta.rallies$ElapsedTime[which(wta.rallies$MatchID==ret.id[i])],1)
+      ret.games <- tail(wta.rallies$GameNoAcc[which(wta.rallies$MatchID==ret.id[i])],1)
+      ret.rallies <- tail(wta.rallies$RalliesAcc[which(wta.rallies$MatchID==ret.id[i])],1)
+      ret.points <- tail(wta.points$PointsAcc[which(wta.points$MatchID==ret.id[i])],1)
+      ret.dis1 <- tail(wta.distance$P1DistanceAcc[which(wta.distance$MatchID==ret.id[i])],1)
+      ret.dis2 <- tail(wta.distance$P2DistanceAcc[which(wta.distance$MatchID==ret.id[i])],1)
+    } else {
+      # ATP match
+      ret.time <- tail(atp.rallies$ElapsedTime[which(atp.rallies$MatchID==ret.id[i])],1)
+      ret.games <- tail(atp.rallies$GameNoAcc[which(atp.rallies$MatchID==ret.id[i])],1)
+      ret.rallies <- tail(atp.rallies$RalliesAcc[which(atp.rallies$MatchID==ret.id[i])],1)
+      ret.points <- tail(atp.points$PointsAcc[which(atp.points$MatchID==ret.id[i])],1)
+      ret.dis1 <- tail(atp.distance$P1DistanceAcc[which(atp.distance$MatchID==ret.id[i])],1)
+      ret.dis2 <- tail(atp.distance$P2DistanceAcc[which(atp.distance$MatchID==ret.id[i])],1)
+    }
+    if (length(ret.games)!=0 && !is.na(ret.games)){
+      if (length(ret.rallies)!=0 && !is.na(ret.rallies)) {
+        rallies.res <- hist.of.rallies.at.ret(
+          ret.games,ret.rallies,atp=!wta_match,main=paste(ret.id[i],"Rallies"))
+      }
+      if (length(ret.points)!=0 && !is.na(ret.points)) {
+        points.res <- hist.of.points.at.ret(
+          ret.games,ret.points,atp=!wta_match,main=paste(ret.id[i],"Points"))
+      }
+      if (length(ret.dis1)!=0 && length(ret.dis2)!=0 &&
+          !is.na(ret.dis1 && !is.na(ret.dis2))) {
+        distance.res <- hist.of.dist.at.ret(
+          ret.games,ret.dis1,ret.dis2,main=paste(ret.id[i],"Distance(GP)"))
+      }
+    }
+    if (length(ret.time)!=0 && !is.na(ret.time) && 
+        length(ret.dis1)!=0 && length(ret.dis2)!=0 && 
+        !is.na(ret.dis1) && !is.na(ret.dis2)) {
+      ret.sec <- 3600*as.numeric(substr(ret.time,1,1))+
+        60*as.numeric(substr(ret.time,3,4))+as.numeric(substr(ret.time,6,7))
+      distance.time.res <- hist.of.dist.at.time.of.ret(
+        ret.sec,ret.dis1,ret.dis2,main=paste(ret.id[i],"Distance(Time)"))
+    }
+  }
+}
+```
+```{r}
+retired.match.histograms('../Data Lake/Point-By-Point/2011-ausopen-matches.csv')
+```
+
+```{r}
+# As mentioned in text above, this block does not work
+# m.data <- read.csv('../Data Lake/Matches/atp_matches_2012.csv')
+# ret.id <- m.data$match_id[grep("RET",m.data$score)]
+```
+
+
+
+# Looking at Tournament Outcomes of Matches on the Extremes wrt Fatigue
+
+```{r}
+get.endgame.distance <- function(dat){
+  matches <- unique(dat$MatchID)
+  m <- nrow(dat)
+  n <- length(matches)
+  dis1 <- rep(0,n)
+  dis2 <- rep(0,n)
+  i <- 1
+  j <- 1
+  while(i<=m&j<=n){
+    if(dat$MatchID[i]==matches[j]){
+      dis1[j] <- dat$P1DistanceAcc[i]
+      dis2[j] <- dat$P2DistanceAcc[i]
+      i <- i+1
+    } else {
+      j <- j+1
+    }
+  }
+  ret <- data.frame(cbind(matches,dis1,dis2))
+  colnames(ret) <- c("MatchID","Distance1","Distance2")
+  ret$Distance1 <- as.numeric(ret$Distance1)
+  ret$Distance2 <- as.numeric(ret$Distance2)
+  return(ret)
+}
+```
+```{r}
+atp.endgame.distance <- get.endgame.distance(atp.distance)
+wta.endgame.distance <- get.endgame.distance(wta.distance)
+```
+```{r}
+atp.distance.all <- c(atp.endgame.distance$Distance1,atp.endgame.distance$Distance2)
+wta.distance.all <- c(wta.endgame.distance$Distance1,wta.endgame.distance$Distance2)
+hist(atp.distance.all)
+summary(atp.distance.all)
+hist(wta.distance.all)
+summary(wta.distance.all)
+```
+
+Since all distance data is gathered from grand slams and ATP grand slams are best of 5 instead of 3, it is expected for the ATP histogram to be shifted more to the right. On the whole, this seems to be the case. For both, we will look at the matches with distance ran in the 95th percentile (for a total of around n=140 unique matches).
+
+```{r}
+atp.distance.cutoff <- quantile(atp.distance.all,0.95) # 8186
+wta.distance.cutoff <- quantile(wta.distance.all,0.95) # 5400
+atp.distance.examine <-
+  atp.endgame.distance[which(atp.endgame.distance$Distance1>atp.distance.cutoff
+                             |atp.endgame.distance$Distance2>atp.distance.cutoff),]
+wta.distance.examine <-
+  wta.endgame.distance[which(wta.endgame.distance$Distance1>wta.distance.cutoff
+                             |wta.endgame.distance$Distance2>wta.distance.cutoff),]
+```
+```{r}
+# actual n = 158
+head(atp.distance.examine) #n1 = 81
+head(wta.distance.examine) #n2 = 77
+```
+
+Inspection that followed of the specific matchups can be found in the corresponding Excel files, the summary statistics:
+
+  - WTA: Percentage of the winners that lost their next immediate match (R128 only): 52.703% (47.826%); Percentage of the player than ran more winning the match: 59.740%
+  
+  - ATP: Percentage of the winners that lost their next immediate match (R128 only): 51.899% (40.000%); Percentage of the player than ran more winning the match: 45.679%
+
+
+# Looking at 5th set p's and if they differ significantly from first 4 sets
+
+Just 2021 for now. Since we look at the 5th set, we are using the 4 ATP grand slams of that year.
+
+```{r}
+pbp.only5th <- read.csv('../Data Lake/Players/set5/pbp_5th_set.csv')
+pbp.no5th <- read.csv('../Data Lake/Players/set5/pbp_no_5th_set.csv')
+```
+```{r}
+# functions from notebook 2
+
+get.equiv.names <- function(fullname){
+  # returns vector of equivalent names in different formats
+  # according to the fullname given
+  # fullname ideally from get.unique.players output
+  # More special examples:
+  #   Alejandro Davidovich Fokina -> A Davidovich Fokina & A. Davidovich Fokina
+  #   Pierre Hugues Herbert -> P Herbert & Ph Herbert & P. Herbert
+  #   Alex De Minaur -> A. De Minaur & Alex de Minaur & A De Minaur
+  #   Karolina Pliskova -> K. Pliskova & Ka. Pliskova & Ka Pliskova
+  #   Kristyna Pliskova -> K. Pliskova & Kr. Pliskova & Kr Pliskova
+  #   some cases manually remediated (see misc. google doc)
+  #   but quick manual remediation can't help if player in test set has middle name
+  #   and full name isn't in pbp training set.
+  #   Function tries to account for this as follows.
+  
+  # Alex Bee Caine -> c("A. Caine", "A Caine", "A. Bee Caine", "A Bee Caine",
+  #                     "Ab Caine", "A Bee-Caine", "A. Bee-Caine")
+  
+  # This method risks picking up on players with same last name and first letter
+  # But this is unlikely as the pbp training set only 1 case of this - Kr&Ka Pliskova
+  # And this was picked up since there were 2 characters before the space
+  
+  parts <- strsplit(fullname,split=" ")[[1]]
+  n <- length(parts)
+  first.letter <- substr(parts[1],1,1)
+  equiv <- c(fullname,
+             paste(first.letter," ",parts[n],sep=""),
+             paste(first.letter,"."," ",parts[n],sep=""))
+  if (n > 2){
+    rest <- ""
+    rest.dash <- ""
+    for (i in 1:(n-1)){
+      rest <- paste(rest," ",parts[i+1],sep="")
+      rest.dash <- paste(rest.dash,parts[i+1],sep="-")
+    }
+    rest.dash <- substr(rest.dash,2,nchar(rest.dash)) # get rid of first dash
+    first.middle.name.letter <- tolower(substr(parts[2],1,1))
+    rest.more <- "" # for if the name has four or more parts
+    for (i in 1:(n-2)){
+      rest.more <- paste(rest.more," ",parts[i+2],sep="")
+    }
+    # rest contains the first space, rest.dash doesn't
+    equiv <- c(equiv, paste(first.letter,rest,sep=""),
+               paste(first.letter,".",rest,sep=""),
+               paste(first.letter," ",rest.dash,sep=""),
+               paste(first.letter,"."," ",rest.dash,sep=""),
+               paste(first.letter,first.middle.name.letter,rest.more,sep=""))
+  }
+  return(equiv)
+}
+
+get.aggr.by.state <- function(entry){
+  # extract serve won & serve total fields for a player
+  # without surface distinction
+  ret <- rep(0,38)
+  for (i in 1:18){
+    # odd indices for pts won, even for total
+    ret[2*i-1] <- entry[[3+12*i]]+entry[[7+12*i]]+entry[[11+12*i]]
+    ret[2*i] <- entry[[2+12*i]]+entry[[6+12*i]]+entry[[10+12*i]]
+  }
+  ret[37] <- entry[[3]]+entry[[7]]+entry[[11]]
+  ret[38] <- entry[[2]]+entry[[6]]+entry[[10]]
+  return(ret)
+}
+
+create.p.vector <- function(tst.names,pbp){
+  # returns a dataframe with the rows in the order of names,
+  # the columns being p's for states 1-18 and then t (tiebreak)
+  # final column is overall p regardless of state by taking total won / total serve
+  # names usually from get.unique.players on test data set
+  # pbp is the point-by-point data given
+  # note p-vectors not surface specific
+  
+  n <- length(tst.names)
+  m <- nrow(pbp)
+  pbp.name <- pbp$name
+  aggr <- matrix(0,nrow=n,ncol=38) # 38=2x19, taking won & total to divide later
+  for (i in 1:n){
+    equiv <- get.equiv.names(tst.names[i])
+    p <- length(equiv)
+    for (j in 1:p){
+      for (l in 1:m){
+        # check 1 by 1 since pbp has non-unique names after manual remediation
+        if (equiv[j]==pbp.name[l]){
+          more.aggr <- get.aggr.by.state(pbp[l,])
+          aggr[i,] <- aggr[i,]+more.aggr
+        }
+      }
+    }
+  }
+  # now divide odd cols by even cols to obtain p's
+  output <- matrix(0,nrow=n,ncol=20)
+  output <- data.frame(output, row.names=tst.names)
+  for (i in 1:n){
+    for (j in 1:19){
+      output[i,j] <- aggr[i,2*j-1]/aggr[i,2*j]
+    } # note below first seq() output will end at 37
+    output[i,20] <- sum(aggr[i,seq(1,38,by=2)])/sum(aggr[i,seq(2,38,by=2)])
+  }
+  return(output)
+}
+```
+```{r}
+# only5th file names manually filed in directly in the file
+# with the list of names in only5th, we can then pull names 
+# with get.equiv.names from no5th
+names <- unique(pbp.only5th$name)
+n <- length(names)
+compare <- matrix(0,nrow=n,ncol=2)
+rownames(compare) <- names
+colnames(compare) <- c("Except5th","5th")
+compare[,1] <- create.p.vector(names,pbp.no5th)[,20]
+compare[,2] <- create.p.vector(names,pbp.only5th)[,20]
+```
+```{r}
+plot(1:n,compare[,2],pch=19,col="red",ylim=c(0.2,1))
+#text(compare[,2], pos=1.5,col="blue",cex=0.7)
+points(1:n,compare[,1],pch=20,col="black")
+```
+
+To see correspondence more clearly:
+
+```{r}
+plot(compare[,1],compare[,2],xlim=c(0.5,0.8),ylim=c(0.2,1),
+     xlab="p's estimated without 5th set data",
+     ylab="p's estimated with only 5th set data")
+text(compare[,1],y=compare[,2],rownames(compare),pos=1.5,col="blue",cex=0.7)
+abline(a=0,b=1,lty=2)
+```
+```{r}
+compare[c(49,55,1,84,25),]
+```
+```{r}
+compare[c(40,45,61,101,66,94,47),]
+```
+
+

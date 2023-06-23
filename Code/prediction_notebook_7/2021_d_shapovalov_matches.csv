@@ -1,0 +1,55 @@
+tourney_id,tourney_name,surface,winner_name,loser_name,score,best_of,minutes,w_ace,w_df,w_svpt,w_1stIn,w_1stWon,w_2ndWon,w_SvGms,w_bpSaved,w_bpFaced,l_ace,l_df,l_svpt,l_1stIn,l_1stWon,l_2ndWon,l_SvGms,l_bpSaved,l_bpFaced
+2021-0311,Queen's Club,Grass,Denis Shapovalov,Aleksandar Vukic,7-6(6) 7-6(6),3,98,20,1,70,40,36,22,12,0,0,7,2,84,52,44,18,12,2,2
+2021-0311,Queen's Club,Grass,Denis Shapovalov,Feliciano Lopez,6-2 6-3,3,69,8,3,48,25,21,17,9,0,0,5,6,52,23,20,10,8,3,6
+2021-0311,Queen's Club,Grass,Denis Shapovalov,Frances Tiafoe,6-3 6-4,3,85,11,10,67,38,30,15,10,5,5,0,1,58,37,25,11,9,7,9
+2021-0321,Stuttgart,Grass,Denis Shapovalov,Feliciano Lopez,6-2 6-7(2) 6-3,3,125,21,6,82,49,43,20,15,0,0,4,6,98,59,46,14,14,4,7
+2021-0322,Geneva,Clay,Denis Shapovalov,Marco Cecchinato,6-7(4) 7-5 6-1,3,141,15,9,100,58,50,21,16,4,5,7,3,101,79,50,11,15,5,9
+2021-0322,Geneva,Clay,Denis Shapovalov,Laslo Djere,6-4 6-4,3,90,2,7,71,42,32,14,10,8,9,1,1,62,44,27,10,10,3,6
+2021-0322,Geneva,Clay,Denis Shapovalov,Pablo Cuevas,6-4 7-5,3,101,8,3,66,44,33,10,11,3,5,4,1,70,46,30,10,11,6,10
+2021-0403,Miami Masters,Hard,Denis Shapovalov,Ilya Ivashka,6-7(5) 6-4 6-4,3,186,8,11,102,58,44,26,16,6,7,1,3,119,72,50,25,16,10,13
+2021-0404,Indian Wells Masters,Hard,Denis Shapovalov,Vasek Pospisil,3-0 RET,3,26,0,0,6,4,4,2,1,0,0,0,7,20,8,5,3,2,2,4
+2021-0416,Rome Masters,Clay,Denis Shapovalov,Kamil Majchrzak,6-1 6-3,3,66,3,4,42,21,17,12,8,0,1,1,3,55,32,13,11,8,4,9
+2021-0416,Rome Masters,Clay,Denis Shapovalov,Stefano Travaglia,7-6(2) 6-3,3,95,2,10,64,29,26,20,10,3,3,1,6,74,45,32,15,11,5,7
+2021-0425,Barcelona,Clay,Denis Shapovalov,Jeremy Chardy,6-3 7-5,3,97,9,6,63,37,25,14,10,3,5,1,2,76,50,28,12,11,6,11
+2021-0429,Stockholm,Hard,Denis Shapovalov,Andrea Vavassori,7-6(1) 6-1,3,89,4,7,56,36,33,9,10,0,1,1,7,66,40,27,8,9,8,11
+2021-0429,Stockholm,Hard,Denis Shapovalov,Arthur Rinderknech,4-6 6-3 7-5,3,141,14,6,87,62,48,14,16,2,4,7,3,91,55,41,21,15,5,8
+2021-0429,Stockholm,Hard,Denis Shapovalov,Felix Auger Aliassime,6-4 7-5,3,118,7,3,74,53,37,8,11,3,5,2,2,60,25,21,13,11,2,6
+2021-0451,Doha,Hard,Denis Shapovalov,Vasek Pospisil,7-5 6-4,3,104,7,2,55,30,24,21,11,0,0,3,2,80,47,35,14,11,7,9
+2021-0495,Dubai,Hard,Denis Shapovalov,Jan Lennard Struff,6-1 6-3,3,61,8,3,45,26,22,12,8,2,2,5,3,45,29,20,4,8,2,6
+2021-0495,Dubai,Hard,Denis Shapovalov,Hubert Hurkacz,6-4 6-3,3,76,5,2,49,31,28,10,9,1,1,1,1,66,51,30,6,10,4,7
+2021-0495,Dubai,Hard,Denis Shapovalov,Jeremy Chardy,7-5 6-4,3,84,10,2,50,28,26,18,11,0,0,0,3,63,32,24,18,11,0,2
+2021-0568,St. Petersburg,Hard,Denis Shapovalov,Pablo Andujar,2-6 6-3 6-0,3,108,11,8,73,41,34,13,12,4,6,0,4,70,44,26,11,11,5,9
+2021-1536,Madrid Masters,Clay,Denis Shapovalov,Dusan Lajovic,6-1 6-3,3,62,7,2,45,21,19,15,8,3,3,1,1,48,28,14,10,8,5,9
+2021-540,Wimbledon,Grass,Denis Shapovalov,Philipp Kohlschreiber,6-4 4-6 6-3 5-7 6-4,5,215,14,16,164,91,70,37,26,10,13,3,3,147,88,69,29,25,8,12
+2021-540,Wimbledon,Grass,Denis Shapovalov,Pablo Andujar,W/O,5,,,,,,,,,,,,,,,,,,,
+2021-540,Wimbledon,Grass,Denis Shapovalov,Andy Murray,6-4 6-2 6-2,5,137,13,3,91,49,35,24,13,8,9,1,2,80,47,24,17,13,5,11
+2021-540,Wimbledon,Grass,Denis Shapovalov,Roberto Bautista Agut,6-1 6-3 7-5,5,127,15,8,99,58,45,18,14,10,12,1,2,84,55,27,13,14,6,13
+2021-540,Wimbledon,Grass,Denis Shapovalov,Karen Khachanov,6-4 3-6 5-7 6-1 6-4,5,206,18,10,131,83,71,24,24,5,8,3,7,162,99,66,32,24,14,19
+2021-560,Us Open,Hard,Denis Shapovalov,Federico Delbonis,6-2 6-2 6-3,5,109,14,6,68,41,37,12,12,0,0,1,2,82,51,30,13,13,6,12
+2021-560,Us Open,Hard,Denis Shapovalov,Roberto Carballes Baena,7-6(7) 6-3 6-0,5,127,9,8,84,53,45,16,14,1,2,3,4,82,43,29,16,14,3,8
+2021-580,Australian Open,Hard,Denis Shapovalov,Jannik Sinner,3-6 6-3 6-2 4-6 6-4,5,235,12,9,157,99,74,28,23,17,20,4,4,145,102,68,24,23,5,10
+2021-580,Australian Open,Hard,Denis Shapovalov,Bernard Tomic,6-1 6-3 6-2,5,107,16,7,83,50,42,18,12,7,7,6,5,95,51,29,18,12,5,11
+2021-9569,San Diego,Hard,Denis Shapovalov,Taylor Fritz,7-6(7) 6-2,3,98,6,4,65,41,37,9,10,6,7,8,2,66,35,29,12,10,2,5
+2021-0311,Queen's Club,Grass,Cameron Norrie,Denis Shapovalov,7-5 6-3,3,93,1,5,65,42,32,13,11,1,2,2,5,66,39,28,10,10,3,6
+2021-0314,Gstaad,Clay,Vit Kopriva,Denis Shapovalov,2-6 6-3 6-2,3,109,3,4,71,33,27,19,13,3,6,11,10,82,48,36,11,12,4,8
+2021-0321,Stuttgart,Grass,Marin Cilic,Denis Shapovalov,7-5 7-6(3),3,110,8,3,68,39,34,16,12,0,1,6,7,92,52,39,18,12,7,9
+2021-0322,Geneva,Clay,Casper Ruud,Denis Shapovalov,7-6(6) 6-4,3,101,4,0,60,33,26,22,11,0,0,8,5,74,36,28,22,11,4,5
+2021-0403,Miami Masters,Hard,Hubert Hurkacz,Denis Shapovalov,6-3 7-6(6),3,92,2,1,69,47,38,15,11,3,3,4,1,61,44,35,8,10,0,1
+2021-0404,Indian Wells Masters,Hard,Aslan Karatsev,Denis Shapovalov,7-5 6-2,3,96,0,3,61,27,21,24,10,1,1,12,4,58,35,26,9,10,6,9
+2021-0416,Rome Masters,Clay,Rafael Nadal,Denis Shapovalov,3-6 6-4 7-6(3),3,207,2,2,119,82,53,17,16,5,10,12,5,114,66,45,20,15,10,14
+2021-0421,Canada Masters,Hard,Frances Tiafoe,Denis Shapovalov,6-1 6-4,3,75,5,3,50,26,23,14,9,0,0,4,9,61,30,22,11,8,10,13
+2021-0422,Cincinnati Masters,Hard,Benoit Paire,Denis Shapovalov,6-3 4-6 7-5,3,134,11,5,104,55,40,22,15,7,10,5,9,111,72,45,21,16,6,11
+2021-0425,Barcelona,Clay,Felix Auger Aliassime,Denis Shapovalov,6-2 6-3,3,79,1,1,48,32,25,10,9,0,1,0,6,50,24,15,10,8,5,9
+2021-0429,Stockholm,Hard,Tommy Paul,Denis Shapovalov,6-4 2-6 6-4,3,132,1,1,84,46,33,23,14,3,5,1,3,89,62,44,11,14,10,12
+2021-0451,Doha,Hard,Taylor Fritz,Denis Shapovalov,5-7 6-3 7-5,3,125,11,2,102,72,57,14,17,3,5,12,5,82,51,42,18,16,1,4
+2021-0495,Dubai,Hard,Lloyd Harris,Denis Shapovalov,6-7(5) 6-4 7-6(6),3,161,12,2,105,71,57,18,17,3,4,8,8,108,72,54,17,17,1,3
+2021-0568,St. Petersburg,Hard,Jan Lennard Struff,Denis Shapovalov,6-4 6-3,3,80,4,4,52,25,22,14,9,4,5,4,4,55,33,19,10,10,4,8
+2021-1536,Madrid Masters,Clay,Alexander Bublik,Denis Shapovalov,6-4 5-7 6-4,3,139,10,7,101,62,46,21,16,4,6,6,14,115,59,42,28,16,11,14
+2021-540,Wimbledon,Grass,Novak Djokovic,Denis Shapovalov,7-6(3) 7-5 7-5,5,164,8,5,112,68,55,25,18,10,11,5,6,108,72,57,15,19,7,10
+2021-560,Us Open,Hard,Lloyd Harris,Denis Shapovalov,6-4 6-4 6-4,5,132,10,5,89,64,48,13,15,6,8,7,9,93,63,43,10,15,4,9
+2021-580,Australian Open,Hard,Felix Auger Aliassime,Denis Shapovalov,7-5 7-5 6-3,5,148,8,2,95,61,47,20,17,3,5,4,5,98,56,34,21,16,6,11
+2021-7290,Estoril,Clay,Corentin Moutet,Denis Shapovalov,6-4 2-6 6-4,3,126,1,2,91,61,40,15,14,9,13,3,8,79,47,30,18,14,4,8
+2021-8888,Atp Cup,Hard,Alexander Zverev,Denis Shapovalov,6-7(5) 6-3 7-6(4),3,175,15,7,113,74,61,24,17,4,4,5,6,116,63,53,28,16,8,9
+2021-8888,Atp Cup,Hard,Novak Djokovic,Denis Shapovalov,7-5 7-5,3,113,1,3,63,44,35,14,12,0,0,9,4,81,45,36,16,12,4,6
+2021-9569,San Diego,Hard,Cameron Norrie,Denis Shapovalov,6-3 6-1,3,67,1,0,54,43,33,4,8,1,1,3,5,45,25,16,7,8,2,6
+2021-9210,Laver Cup,Hard,Daniil Medvedev,Denis Shapovalov,6-4 6-0,3,,,,,,,,,,,,,,,,,,,

@@ -1,0 +1,479 @@
+P1,P2,Surface,PointServer,PointWinner,P1Score,P2Score,SetNo
+Bernard Tomic,Sam Querrey,hard,1,1,15,0,5
+Bernard Tomic,Sam Querrey,hard,1,1,30,0,5
+Bernard Tomic,Sam Querrey,hard,1,2,30,15,5
+Bernard Tomic,Sam Querrey,hard,1,1,40,15,5
+Bernard Tomic,Sam Querrey,hard,1,1,0,0,5
+Bernard Tomic,Sam Querrey,hard,2,1,15,0,5
+Bernard Tomic,Sam Querrey,hard,2,2,15,15,5
+Bernard Tomic,Sam Querrey,hard,2,1,30,15,5
+Bernard Tomic,Sam Querrey,hard,2,2,30,30,5
+Bernard Tomic,Sam Querrey,hard,2,2,30,40,5
+Bernard Tomic,Sam Querrey,hard,2,1,40,40,5
+Bernard Tomic,Sam Querrey,hard,2,1,AD,40,5
+Bernard Tomic,Sam Querrey,hard,2,2,40,40,5
+Bernard Tomic,Sam Querrey,hard,2,1,AD,40,5
+Bernard Tomic,Sam Querrey,hard,2,2,40,40,5
+Bernard Tomic,Sam Querrey,hard,2,2,40,AD,5
+Bernard Tomic,Sam Querrey,hard,2,2,0,0,5
+Bernard Tomic,Sam Querrey,hard,1,1,15,0,5
+Bernard Tomic,Sam Querrey,hard,1,1,30,0,5
+Bernard Tomic,Sam Querrey,hard,1,2,30,15,5
+Bernard Tomic,Sam Querrey,hard,1,1,40,15,5
+Bernard Tomic,Sam Querrey,hard,1,2,40,30,5
+Bernard Tomic,Sam Querrey,hard,1,1,0,0,5
+Bernard Tomic,Sam Querrey,hard,2,2,0,15,5
+Bernard Tomic,Sam Querrey,hard,2,2,0,30,5
+Bernard Tomic,Sam Querrey,hard,2,2,0,40,5
+Bernard Tomic,Sam Querrey,hard,2,2,0,0,5
+Bernard Tomic,Sam Querrey,hard,1,1,15,0,5
+Bernard Tomic,Sam Querrey,hard,1,1,30,0,5
+Bernard Tomic,Sam Querrey,hard,1,1,40,0,5
+Bernard Tomic,Sam Querrey,hard,1,1,0,0,5
+Bernard Tomic,Sam Querrey,hard,2,2,0,15,5
+Bernard Tomic,Sam Querrey,hard,2,2,0,30,5
+Bernard Tomic,Sam Querrey,hard,2,2,0,40,5
+Bernard Tomic,Sam Querrey,hard,2,1,15,40,5
+Bernard Tomic,Sam Querrey,hard,2,2,0,0,5
+Bernard Tomic,Sam Querrey,hard,1,1,15,0,5
+Bernard Tomic,Sam Querrey,hard,1,1,30,0,5
+Bernard Tomic,Sam Querrey,hard,1,1,40,0,5
+Bernard Tomic,Sam Querrey,hard,1,1,0,0,5
+Bernard Tomic,Sam Querrey,hard,2,1,15,0,5
+Bernard Tomic,Sam Querrey,hard,2,1,30,0,5
+Bernard Tomic,Sam Querrey,hard,2,1,40,0,5
+Bernard Tomic,Sam Querrey,hard,2,2,40,15,5
+Bernard Tomic,Sam Querrey,hard,2,1,0,0,5
+Bernard Tomic,Sam Querrey,hard,1,2,0,15,5
+Bernard Tomic,Sam Querrey,hard,1,1,15,15,5
+Bernard Tomic,Sam Querrey,hard,1,1,30,15,5
+Bernard Tomic,Sam Querrey,hard,1,1,40,15,5
+Bernard Tomic,Sam Querrey,hard,1,1,0,0,5
+Ivan Dodig,Philipp Kohlschreiber,hard,2,2,0,15,5
+Ivan Dodig,Philipp Kohlschreiber,hard,2,2,0,30,5
+Ivan Dodig,Philipp Kohlschreiber,hard,2,1,15,30,5
+Ivan Dodig,Philipp Kohlschreiber,hard,2,2,15,40,5
+Ivan Dodig,Philipp Kohlschreiber,hard,2,2,0,0,5
+Ivan Dodig,Philipp Kohlschreiber,hard,1,1,15,0,5
+Ivan Dodig,Philipp Kohlschreiber,hard,1,1,30,0,5
+Ivan Dodig,Philipp Kohlschreiber,hard,1,1,40,0,5
+Ivan Dodig,Philipp Kohlschreiber,hard,1,1,0,0,5
+Ivan Dodig,Philipp Kohlschreiber,hard,2,1,15,0,5
+Ivan Dodig,Philipp Kohlschreiber,hard,2,1,30,0,5
+Ivan Dodig,Philipp Kohlschreiber,hard,2,2,30,15,5
+Ivan Dodig,Philipp Kohlschreiber,hard,2,2,30,30,5
+Ivan Dodig,Philipp Kohlschreiber,hard,2,1,40,30,5
+Ivan Dodig,Philipp Kohlschreiber,hard,2,2,40,40,5
+Ivan Dodig,Philipp Kohlschreiber,hard,2,1,AD,40,5
+Ivan Dodig,Philipp Kohlschreiber,hard,2,1,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,2,1,15,0,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,15,15,5
+Grigor Dimitrov,Grega Zemlja,hard,2,1,30,15,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,30,30,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,30,40,5
+Grigor Dimitrov,Grega Zemlja,hard,2,1,40,40,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,40,AD,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,15,0,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,15,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,30,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,40,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,15,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,30,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,40,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,15,0,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,15,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,30,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,40,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,40,30,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,2,1,15,0,5
+Grigor Dimitrov,Grega Zemlja,hard,2,1,30,0,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,30,15,5
+Grigor Dimitrov,Grega Zemlja,hard,2,1,40,15,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,40,30,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,40,40,5
+Grigor Dimitrov,Grega Zemlja,hard,2,1,AD,40,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,40,40,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,40,AD,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,15,0,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,15,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,30,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,40,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,15,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,30,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,40,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,15,0,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,30,0,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,30,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,40,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,2,1,15,0,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,15,15,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,15,30,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,15,40,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,15,0,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,30,0,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,40,0,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,40,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,15,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,30,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,40,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,0,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,15,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,30,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,40,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,2,1,15,0,5
+Grigor Dimitrov,Grega Zemlja,hard,2,1,30,0,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,30,15,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,30,30,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,30,40,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,0,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,15,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,30,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,30,30,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,30,40,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,40,40,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,40,AD,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,40,40,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,AD,40,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,40,40,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,AD,40,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,15,5
+Grigor Dimitrov,Grega Zemlja,hard,2,1,15,15,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,15,30,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,15,40,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,15,0,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,15,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,30,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,30,30,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,40,30,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,15,5
+Grigor Dimitrov,Grega Zemlja,hard,2,1,15,15,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,15,30,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,15,40,5
+Grigor Dimitrov,Grega Zemlja,hard,2,1,30,40,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,0,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,0,30,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,15,30,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,30,30,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,30,40,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,40,40,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,AD,40,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,40,40,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,40,AD,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,40,40,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,AD,40,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,40,40,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,40,AD,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,40,40,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,AD,40,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,15,5
+Grigor Dimitrov,Grega Zemlja,hard,2,1,15,15,5
+Grigor Dimitrov,Grega Zemlja,hard,2,1,30,15,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,30,30,5
+Grigor Dimitrov,Grega Zemlja,hard,2,1,40,30,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,40,40,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,40,AD,5
+Grigor Dimitrov,Grega Zemlja,hard,2,2,0,0,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,0,15,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,0,30,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,15,30,5
+Grigor Dimitrov,Grega Zemlja,hard,1,1,30,30,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,30,40,5
+Grigor Dimitrov,Grega Zemlja,hard,1,2,0,0,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,2,0,15,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,2,0,30,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,2,0,40,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,2,0,0,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,1,15,0,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,1,30,0,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,1,40,0,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,2,40,15,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,1,0,0,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,1,15,0,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,1,30,0,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,2,30,15,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,1,40,15,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,1,0,0,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,1,15,0,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,1,30,0,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,1,40,0,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,1,0,0,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,2,0,15,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,2,0,30,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,1,15,30,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,1,30,30,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,2,30,40,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,2,0,0,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,1,15,0,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,2,15,15,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,1,30,15,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,2,30,30,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,1,40,30,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,1,0,0,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,2,0,15,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,1,15,15,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,1,30,15,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,2,30,30,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,2,30,40,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,2,0,0,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,2,0,15,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,2,0,30,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,2,0,40,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,2,0,0,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,2,0,15,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,2,0,30,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,2,0,40,5
+Vasek Pospisil,Mikhail Youzhny,hard,2,2,0,0,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,2,0,15,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,1,15,15,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,2,15,30,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,1,30,30,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,2,30,40,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,1,40,40,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,2,40,AD,5
+Vasek Pospisil,Mikhail Youzhny,hard,1,2,0,0,5
+David Ferrer,Alexandr Dolgopolov,hard,2,2,0,15,5
+David Ferrer,Alexandr Dolgopolov,hard,2,2,0,30,5
+David Ferrer,Alexandr Dolgopolov,hard,2,2,0,40,5
+David Ferrer,Alexandr Dolgopolov,hard,2,2,0,0,5
+David Ferrer,Alexandr Dolgopolov,hard,1,1,15,0,5
+David Ferrer,Alexandr Dolgopolov,hard,1,1,30,0,5
+David Ferrer,Alexandr Dolgopolov,hard,1,2,30,15,5
+David Ferrer,Alexandr Dolgopolov,hard,1,1,40,15,5
+David Ferrer,Alexandr Dolgopolov,hard,1,1,0,0,5
+David Ferrer,Alexandr Dolgopolov,hard,2,2,0,15,5
+David Ferrer,Alexandr Dolgopolov,hard,2,1,15,15,5
+David Ferrer,Alexandr Dolgopolov,hard,2,2,15,30,5
+David Ferrer,Alexandr Dolgopolov,hard,2,2,15,40,5
+David Ferrer,Alexandr Dolgopolov,hard,2,2,0,0,5
+David Ferrer,Alexandr Dolgopolov,hard,1,1,15,0,5
+David Ferrer,Alexandr Dolgopolov,hard,1,1,30,0,5
+David Ferrer,Alexandr Dolgopolov,hard,1,2,30,15,5
+David Ferrer,Alexandr Dolgopolov,hard,1,2,30,30,5
+David Ferrer,Alexandr Dolgopolov,hard,1,2,30,40,5
+David Ferrer,Alexandr Dolgopolov,hard,1,1,40,40,5
+David Ferrer,Alexandr Dolgopolov,hard,1,1,AD,40,5
+David Ferrer,Alexandr Dolgopolov,hard,1,1,0,0,5
+David Ferrer,Alexandr Dolgopolov,hard,2,1,15,0,5
+David Ferrer,Alexandr Dolgopolov,hard,2,1,30,0,5
+David Ferrer,Alexandr Dolgopolov,hard,2,2,30,15,5
+David Ferrer,Alexandr Dolgopolov,hard,2,1,40,15,5
+David Ferrer,Alexandr Dolgopolov,hard,2,2,40,30,5
+David Ferrer,Alexandr Dolgopolov,hard,2,1,0,0,5
+David Ferrer,Alexandr Dolgopolov,hard,1,1,15,0,5
+David Ferrer,Alexandr Dolgopolov,hard,1,2,15,15,5
+David Ferrer,Alexandr Dolgopolov,hard,1,1,30,15,5
+David Ferrer,Alexandr Dolgopolov,hard,1,2,30,30,5
+David Ferrer,Alexandr Dolgopolov,hard,1,1,40,30,5
+David Ferrer,Alexandr Dolgopolov,hard,1,2,40,40,5
+David Ferrer,Alexandr Dolgopolov,hard,1,1,AD,40,5
+David Ferrer,Alexandr Dolgopolov,hard,1,2,40,40,5
+David Ferrer,Alexandr Dolgopolov,hard,1,1,AD,40,5
+David Ferrer,Alexandr Dolgopolov,hard,1,1,0,0,5
+David Ferrer,Alexandr Dolgopolov,hard,2,2,0,15,5
+David Ferrer,Alexandr Dolgopolov,hard,2,2,0,30,5
+David Ferrer,Alexandr Dolgopolov,hard,2,1,15,30,5
+David Ferrer,Alexandr Dolgopolov,hard,2,1,30,30,5
+David Ferrer,Alexandr Dolgopolov,hard,2,1,40,30,5
+David Ferrer,Alexandr Dolgopolov,hard,2,2,40,40,5
+David Ferrer,Alexandr Dolgopolov,hard,2,1,AD,40,5
+David Ferrer,Alexandr Dolgopolov,hard,2,2,40,40,5
+David Ferrer,Alexandr Dolgopolov,hard,2,2,40,AD,5
+David Ferrer,Alexandr Dolgopolov,hard,2,1,40,40,5
+David Ferrer,Alexandr Dolgopolov,hard,2,2,40,AD,5
+David Ferrer,Alexandr Dolgopolov,hard,2,1,40,40,5
+David Ferrer,Alexandr Dolgopolov,hard,2,2,40,AD,5
+David Ferrer,Alexandr Dolgopolov,hard,2,1,40,40,5
+David Ferrer,Alexandr Dolgopolov,hard,2,1,AD,40,5
+David Ferrer,Alexandr Dolgopolov,hard,2,1,0,0,5
+David Ferrer,Alexandr Dolgopolov,hard,1,1,15,0,5
+David Ferrer,Alexandr Dolgopolov,hard,1,1,30,0,5
+David Ferrer,Alexandr Dolgopolov,hard,1,1,40,0,5
+David Ferrer,Alexandr Dolgopolov,hard,1,1,0,0,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,2,0,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,2,0,30,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,2,0,40,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,2,0,0,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,15,0,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,2,15,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,30,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,40,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,0,0,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,2,0,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,1,15,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,1,30,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,1,40,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,1,0,0,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,15,0,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,30,0,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,40,0,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,2,40,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,0,0,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,2,0,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,2,0,30,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,2,0,40,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,1,15,40,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,2,0,0,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,2,0,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,15,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,30,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,2,30,30,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,40,30,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,0,0,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,1,15,0,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,2,15,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,1,30,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,2,30,30,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,2,30,40,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,2,0,0,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,2,0,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,15,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,30,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,40,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,2,40,30,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,0,0,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,2,0,15,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,2,0,30,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,2,0,40,5
+Jerzy Janowicz,Jurgen Melzer,hard,2,2,0,0,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,15,0,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,30,0,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,40,0,5
+Jerzy Janowicz,Jurgen Melzer,hard,1,1,0,0,5
+Fernando Verdasco,Andy Murray,hard,1,1,15,0,5
+Fernando Verdasco,Andy Murray,hard,1,2,15,15,5
+Fernando Verdasco,Andy Murray,hard,1,1,30,15,5
+Fernando Verdasco,Andy Murray,hard,1,1,40,15,5
+Fernando Verdasco,Andy Murray,hard,1,2,40,30,5
+Fernando Verdasco,Andy Murray,hard,1,1,0,0,5
+Fernando Verdasco,Andy Murray,hard,2,2,0,15,5
+Fernando Verdasco,Andy Murray,hard,2,2,0,30,5
+Fernando Verdasco,Andy Murray,hard,2,1,15,30,5
+Fernando Verdasco,Andy Murray,hard,2,2,15,40,5
+Fernando Verdasco,Andy Murray,hard,2,2,0,0,5
+Fernando Verdasco,Andy Murray,hard,1,1,15,0,5
+Fernando Verdasco,Andy Murray,hard,1,1,30,0,5
+Fernando Verdasco,Andy Murray,hard,1,1,40,0,5
+Fernando Verdasco,Andy Murray,hard,1,2,40,15,5
+Fernando Verdasco,Andy Murray,hard,1,1,0,0,5
+Fernando Verdasco,Andy Murray,hard,2,1,15,0,5
+Fernando Verdasco,Andy Murray,hard,2,2,15,15,5
+Fernando Verdasco,Andy Murray,hard,2,2,15,30,5
+Fernando Verdasco,Andy Murray,hard,2,2,15,40,5
+Fernando Verdasco,Andy Murray,hard,2,2,0,0,5
+Fernando Verdasco,Andy Murray,hard,1,1,15,0,5
+Fernando Verdasco,Andy Murray,hard,1,1,30,0,5
+Fernando Verdasco,Andy Murray,hard,1,1,40,0,5
+Fernando Verdasco,Andy Murray,hard,1,1,0,0,5
+Fernando Verdasco,Andy Murray,hard,2,2,0,15,5
+Fernando Verdasco,Andy Murray,hard,2,2,0,30,5
+Fernando Verdasco,Andy Murray,hard,2,2,0,40,5
+Fernando Verdasco,Andy Murray,hard,2,2,0,0,5
+Fernando Verdasco,Andy Murray,hard,1,1,15,0,5
+Fernando Verdasco,Andy Murray,hard,1,2,15,15,5
+Fernando Verdasco,Andy Murray,hard,1,2,15,30,5
+Fernando Verdasco,Andy Murray,hard,1,1,30,30,5
+Fernando Verdasco,Andy Murray,hard,1,1,40,30,5
+Fernando Verdasco,Andy Murray,hard,1,1,0,0,5
+Fernando Verdasco,Andy Murray,hard,2,1,15,0,5
+Fernando Verdasco,Andy Murray,hard,2,1,30,0,5
+Fernando Verdasco,Andy Murray,hard,2,2,30,15,5
+Fernando Verdasco,Andy Murray,hard,2,2,30,30,5
+Fernando Verdasco,Andy Murray,hard,2,2,30,40,5
+Fernando Verdasco,Andy Murray,hard,2,2,0,0,5
+Fernando Verdasco,Andy Murray,hard,1,2,0,15,5
+Fernando Verdasco,Andy Murray,hard,1,1,15,15,5
+Fernando Verdasco,Andy Murray,hard,1,1,30,15,5
+Fernando Verdasco,Andy Murray,hard,1,1,40,15,5
+Fernando Verdasco,Andy Murray,hard,1,1,0,0,5
+Fernando Verdasco,Andy Murray,hard,2,2,0,15,5
+Fernando Verdasco,Andy Murray,hard,2,2,0,30,5
+Fernando Verdasco,Andy Murray,hard,2,2,0,40,5
+Fernando Verdasco,Andy Murray,hard,2,2,0,0,5
+Fernando Verdasco,Andy Murray,hard,1,1,15,0,5
+Fernando Verdasco,Andy Murray,hard,1,2,15,15,5
+Fernando Verdasco,Andy Murray,hard,1,2,15,30,5
+Fernando Verdasco,Andy Murray,hard,1,1,30,30,5
+Fernando Verdasco,Andy Murray,hard,1,2,30,40,5
+Fernando Verdasco,Andy Murray,hard,1,2,0,0,5
+Fernando Verdasco,Andy Murray,hard,2,2,0,15,5
+Fernando Verdasco,Andy Murray,hard,2,2,0,30,5
+Fernando Verdasco,Andy Murray,hard,2,2,0,40,5
+Fernando Verdasco,Andy Murray,hard,2,2,0,0,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,15,0,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,30,0,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,40,0,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,0,0,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,2,0,15,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,2,0,30,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,2,0,40,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,1,15,40,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,1,30,40,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,1,40,40,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,2,40,AD,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,2,0,0,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,15,0,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,30,0,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,40,0,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,0,0,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,2,0,15,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,1,15,15,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,2,15,30,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,2,15,40,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,2,0,0,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,15,0,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,30,0,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,2,30,15,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,40,15,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,2,40,30,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,2,40,40,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,2,40,AD,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,40,40,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,AD,40,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,2,40,40,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,AD,40,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,0,0,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,1,15,0,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,2,15,15,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,2,15,30,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,1,30,30,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,1,40,30,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,2,40,40,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,2,40,AD,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,2,0,0,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,15,0,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,2,15,15,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,30,15,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,40,15,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,0,0,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,2,0,15,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,1,15,15,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,1,30,15,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,1,40,15,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,2,40,30,5
+Novak Djokovic,Juan Martin Del Potro,hard,2,1,0,0,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,2,0,15,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,2,0,30,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,15,30,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,30,30,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,2,30,40,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,40,40,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,AD,40,5
+Novak Djokovic,Juan Martin Del Potro,hard,1,1,0,0,5

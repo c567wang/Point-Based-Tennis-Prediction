@@ -1,0 +1,196 @@
+tourney_id,tourney_name,surface,tourney_date,winner_name,loser_name,score,round,minutes,w_ace,w_df,w_svpt,w_1stIn,w_1stWon,w_2ndWon,w_SvGms,w_bpSaved,w_bpFaced,l_ace,l_df,l_svpt,l_1stIn,l_1stWon,l_2ndWon,l_SvGms,l_bpSaved,l_bpFaced
+2022-580,Australian Open,Hard,20220117,Gael Monfils,Miomir Kecmanovic,7-5 7-6(4) 6-3,R16,154,17,4,100,59,48,21,17,5,6,4,4,129,73,48,28,16,7,11
+2022-580,Australian Open,Hard,20220117,Matteo Berrettini,Pablo Carreno Busta,7-5 7-6(4) 6-4,R16,142,28,1,92,71,62,12,17,1,1,2,2,115,81,57,17,17,5,7
+2022-580,Australian Open,Hard,20220117,Denis Shapovalov,Alexander Zverev,6-3 7-6(5) 6-3,R16,141,3,11,104,65,50,18,15,3,5,3,8,88,67,46,6,15,2,6
+2022-580,Australian Open,Hard,20220117,Rafael Nadal,Adrian Mannarino,7-6(14) 6-2 6-2,R16,160,16,6,88,48,42,24,14,1,2,7,4,104,55,40,23,14,12,17
+2022-580,Australian Open,Hard,20220117,Jannik Sinner,Alex De Minaur,7-6(3) 6-3 6-4,R16,155,9,0,111,69,52,26,16,7,8,7,2,91,60,44,14,15,3,6
+2022-580,Australian Open,Hard,20220117,Stefanos Tsitsipas,Taylor Fritz,4-6 6-4 4-6 6-3 6-4,R16,203,19,1,159,107,85,25,25,13,15,13,4,136,84,66,29,24,2,5
+2022-580,Australian Open,Hard,20220117,Felix Auger Aliassime,Marin Cilic,2-6 7-6(7) 6-2 7-6(4),R16,215,22,4,117,72,62,26,20,0,2,24,8,142,77,66,29,20,13,15
+2022-580,Australian Open,Hard,20220117,Daniil Medvedev,Maxime Cressy,6-2 7-6(4) 6-7(4) 7-5,R16,210,15,6,129,84,71,29,22,1,1,18,18,165,104,77,32,22,9,12
+2022-580,Australian Open,Hard,20220117,Matteo Berrettini,Gael Monfils,6-4 6-4 3-6 3-6 6-2,QF,229,12,2,170,103,76,34,23,11,14,15,7,136,76,58,32,23,7,11
+2022-580,Australian Open,Hard,20220117,Rafael Nadal,Denis Shapovalov,6-3 6-4 4-6 3-6 6-3,QF,248,8,11,146,100,79,21,24,6,8,20,5,137,80,58,31,23,4,7
+2022-580,Australian Open,Hard,20220117,Stefanos Tsitsipas,Jannik Sinner,6-3 6-4 6-2,QF,126,4,2,78,53,42,15,14,0,0,4,1,66,42,30,13,13,0,4
+2022-580,Australian Open,Hard,20220117,Daniil Medvedev,Felix Auger Aliassime,6-7(4) 3-6 7-6(2) 7-5 6-4,QF,282,15,9,196,126,94,36,28,9,11,18,4,168,116,91,25,27,2,5
+2022-580,Australian Open,Hard,20220117,Rafael Nadal,Matteo Berrettini,6-3 6-2 3-6 6-3,SF,175,5,2,102,70,51,20,18,1,2,14,2,102,68,50,15,17,4,8
+2022-580,Australian Open,Hard,20220117,Daniil Medvedev,Stefanos Tsitsipas,7-6(5) 4-6 6-4 6-1,SF,150,13,4,100,71,61,21,20,2,4,5,1,120,83,56,23,19,8,12
+2022-580,Australian Open,Hard,20220117,Rafael Nadal,Daniil Medvedev,2-6 6-7(5) 6-4 6-4 7-5,F,324,3,5,189,117,78,34,26,16,22,23,5,182,126,89,23,26,15,22
+2022-0404,Indian Wells Masters,Hard,20220307,Taylor Fritz,Rafael Nadal,6-3 7-6(5),F,126,1,3,76,49,34,13,10,8,10,2,3,78,52,29,14,11,5,9
+2022-0404,Indian Wells Masters,Hard,20220307,Rafael Nadal,Carlos Alcaraz,6-4 4-6 6-3,SF,192,2,4,108,72,45,16,15,9,14,1,3,100,63,38,17,14,15,21
+2022-0404,Indian Wells Masters,Hard,20220307,Taylor Fritz,Andrey Rublev,7-5 6-4,SF,110,5,3,64,38,29,16,11,3,4,5,3,101,62,40,19,11,8,11
+2022-0404,Indian Wells Masters,Hard,20220307,Carlos Alcaraz,Cameron Norrie,6-4 6-3,QF,104,0,1,71,44,26,13,10,5,9,0,0,62,36,20,7,9,2,8
+2022-0404,Indian Wells Masters,Hard,20220307,Rafael Nadal,Nick Kyrgios,7-6(0) 5-7 6-4,QF,166,10,7,102,67,52,17,17,3,5,12,5,107,58,44,26,17,2,4
+2022-0404,Indian Wells Masters,Hard,20220307,Taylor Fritz,Miomir Kecmanovic,7-6(5) 3-6 6-1,QF,117,14,4,72,49,44,12,14,2,3,7,5,106,57,41,25,14,8,10
+2022-0404,Indian Wells Masters,Hard,20220307,Andrey Rublev,Grigor Dimitrov,7-5 6-2,QF,90,4,2,58,36,29,10,10,2,3,3,5,72,45,29,10,10,6,10
+2022-0404,Indian Wells Masters,Hard,20220307,Carlos Alcaraz,Gael Monfils,7-5 6-1,R16,77,4,1,43,30,26,10,9,0,0,3,4,67,37,23,12,10,3,7
+2022-0404,Indian Wells Masters,Hard,20220307,Cameron Norrie,Jenson Brooksby,6-2 6-4,R16,98,4,4,60,44,30,9,9,5,7,1,1,67,39,22,12,9,4,9
+2022-0404,Indian Wells Masters,Hard,20220307,Rafael Nadal,Reilly Opelka,7-6(3) 7-6(5),R16,131,6,3,73,51,43,16,12,3,4,9,5,98,74,56,8,12,4,5
+2022-0404,Indian Wells Masters,Hard,20220307,Nick Kyrgios,Jannik Sinner,W/O,R16,0,,,,,,,,,,,,,,,,,,
+2022-0404,Indian Wells Masters,Hard,20220307,Miomir Kecmanovic,Matteo Berrettini,6-3 6-7(5) 6-4,R16,148,2,1,101,55,42,35,16,1,1,14,3,100,62,47,20,15,4,6
+2022-0404,Indian Wells Masters,Hard,20220307,Taylor Fritz,Alex De Minaur,3-6 6-4 7-6(5),R16,143,14,2,111,74,53,17,16,4,8,2,1,101,62,45,19,15,6,9
+2022-0404,Indian Wells Masters,Hard,20220307,Andrey Rublev,Hubert Hurkacz,7-6(5) 6-4,R16,99,9,1,68,36,33,16,11,1,2,9,3,79,46,36,12,11,6,8
+2022-0404,Indian Wells Masters,Hard,20220307,Grigor Dimitrov,John Isner,6-3 7-6(6),R16,93,8,3,69,49,39,11,11,1,1,12,2,57,39,34,7,10,0,1
+2022-0403,Miami Masters,Hard,20220321,Carlos Alcaraz,Casper Ruud,7-5 6-4,F,112,6,2,68,48,36,9,11,6,8,5,3,73,43,26,16,11,5,9
+2022-0403,Miami Masters,Hard,20220321,Carlos Alcaraz,Hubert Hurkacz,7-6(5) 7-6(2),SF,122,3,0,81,58,45,16,12,3,3,13,0,86,57,46,13,12,3,3
+2022-0403,Miami Masters,Hard,20220321,Casper Ruud,Francisco Cerundolo,6-4 6-1,SF,94,6,3,61,37,31,8,9,4,5,1,5,57,33,17,11,8,4,8
+2022-0403,Miami Masters,Hard,20220321,Hubert Hurkacz,Daniil Medvedev,7-6(7) 6-3,QF,123,5,2,64,46,34,11,10,3,4,2,6,94,49,34,22,11,11,14
+2022-0403,Miami Masters,Hard,20220321,Carlos Alcaraz,Miomir Kecmanovic,6-7(5) 6-3 7-6(5),QF,143,5,3,106,79,62,14,17,1,2,2,0,95,64,49,20,16,0,2
+2022-0403,Miami Masters,Hard,20220321,Francisco Cerundolo,Jannik Sinner,4-1 RET,QF,22,3,2,20,15,11,3,3,1,1,1,0,13,6,4,3,2,0,1
+2022-0403,Miami Masters,Hard,20220321,Casper Ruud,Alexander Zverev,6-3 1-6 6-3,QF,98,6,0,63,47,37,10,13,2,4,10,1,66,44,35,12,12,3,5
+2022-0403,Miami Masters,Hard,20220321,Daniil Medvedev,Jenson Brooksby,7-5 6-1,R16,78,8,4,58,40,34,7,10,2,3,0,1,46,33,18,6,9,0,4
+2022-0403,Miami Masters,Hard,20220321,Hubert Hurkacz,Lloyd Harris,7-6(3) 6-2,R16,89,9,1,60,39,31,12,10,3,4,6,0,64,38,24,11,10,1,4
+2022-0403,Miami Masters,Hard,20220321,Carlos Alcaraz,Stefanos Tsitsipas,7-5 6-3,R16,110,1,2,72,50,37,10,10,7,8,5,1,78,46,34,9,11,7,11
+2022-0403,Miami Masters,Hard,20220321,Miomir Kecmanovic,Taylor Fritz,3-6 6-1 6-4,R16,126,6,2,97,70,51,12,13,5,6,8,1,88,60,42,14,13,5,8
+2022-0403,Miami Masters,Hard,20220321,Jannik Sinner,Nick Kyrgios,7-6(3) 6-3,R16,99,8,4,70,46,38,11,10,2,2,7,4,71,45,31,13,11,2,4
+2022-0403,Miami Masters,Hard,20220321,Francisco Cerundolo,Frances Tiafoe,6-7(2) 7-6(3) 6-2,R16,156,5,3,94,70,49,13,16,4,7,3,5,112,53,35,29,16,7,12
+2022-0403,Miami Masters,Hard,20220321,Casper Ruud,Cameron Norrie,6-3 6-4,R16,92,7,1,68,39,33,10,10,2,3,5,3,53,28,19,12,9,5,8
+2022-0403,Miami Masters,Hard,20220321,Alexander Zverev,Thanasi Kokkinakis,6-4 6-4,R16,96,4,2,50,35,31,9,10,0,0,8,3,73,41,32,12,10,6,8
+2022-0410,Monte Carlo Masters,Clay,20220411,Stefanos Tsitsipas,Alejandro Davidovich Fokina,6-3 7-6(3),F,96,3,1,61,45,32,8,11,1,4,1,1,68,52,27,9,10,2,6
+2022-0410,Monte Carlo Masters,Clay,20220411,Alejandro Davidovich Fokina,Grigor Dimitrov,6-4 6-7(2) 6-3,SF,164,3,3,113,87,54,15,16,7,10,2,6,89,47,30,25,15,1,6
+2022-0410,Monte Carlo Masters,Clay,20220411,Stefanos Tsitsipas,Alexander Zverev,6-4 6-2,SF,75,8,1,47,28,21,11,9,2,4,3,4,49,32,17,6,9,3,8
+2022-0410,Monte Carlo Masters,Clay,20220411,Alejandro Davidovich Fokina,Taylor Fritz,2-6 6-4 6-3,QF,145,0,4,84,61,42,11,13,7,10,5,1,114,67,39,23,14,15,19
+2022-0410,Monte Carlo Masters,Clay,20220411,Grigor Dimitrov,Hubert Hurkacz,6-4 3-6 7-6(2),QF,147,4,2,85,46,38,22,15,1,4,11,0,101,53,40,25,16,5,8
+2022-0410,Monte Carlo Masters,Clay,20220411,Stefanos Tsitsipas,Diego Schwartzman,6-2 6-7(3) 6-4,QF,163,4,4,102,53,35,26,15,3,7,0,5,98,72,45,10,15,3,10
+2022-0410,Monte Carlo Masters,Clay,20220411,Alexander Zverev,Jannik Sinner,5-7 6-3 7-6(5),QF,187,5,6,113,80,55,14,17,7,12,3,3,100,55,40,17,16,3,8
+2022-0410,Monte Carlo Masters,Clay,20220411,Alejandro Davidovich Fokina,David Goffin,6-4 6-1,R16,92,1,0,51,42,30,4,9,3,5,1,3,67,24,14,18,8,12,17
+2022-0410,Monte Carlo Masters,Clay,20220411,Taylor Fritz,Sebastian Korda,7-6(4) 7-5,R16,93,11,1,67,39,32,19,12,1,2,8,2,65,38,30,16,12,2,4
+2022-0410,Monte Carlo Masters,Clay,20220411,Grigor Dimitrov,Casper Ruud,6-3 7-5,R16,92,4,2,48,29,27,10,10,1,2,2,2,64,37,24,14,11,5,9
+2022-0410,Monte Carlo Masters,Clay,20220411,Hubert Hurkacz,Albert Ramos,7-6(2) 6-2,R16,88,13,1,57,37,30,16,10,0,0,0,1,67,51,33,8,10,4,6
+2022-0410,Monte Carlo Masters,Clay,20220411,Diego Schwartzman,Lorenzo Musetti,2-6 6-4 6-3,R16,152,1,6,84,61,35,6,13,7,14,0,6,82,46,21,17,14,5,13
+2022-0410,Monte Carlo Masters,Clay,20220411,Stefanos Tsitsipas,Laslo Djere,7-5 7-6(1),R16,113,5,2,73,45,38,18,12,2,2,6,6,82,46,39,13,12,1,2
+2022-0410,Monte Carlo Masters,Clay,20220411,Jannik Sinner,Andrey Rublev,5-7 6-1 6-3,R16,140,6,2,85,48,34,19,14,6,10,0,7,100,65,39,12,14,5,12
+2022-0410,Monte Carlo Masters,Clay,20220411,Alexander Zverev,Pablo Carreno Busta,6-2 7-5,R16,95,8,2,56,38,30,8,10,4,6,0,1,72,47,27,10,10,9,14
+2022-1536,Madrid Masters,Clay,20220502,Carlos Alcaraz,Alexander Zverev,6-3 6-1,F,62,1,0,38,27,24,8,8,0,0,3,5,47,31,19,4,8,4,8
+2022-1536,Madrid Masters,Clay,20220502,Carlos Alcaraz,Novak Djokovic,6-7(5) 7-5 7-6(5),SF,215,4,4,136,91,67,23,18,5,6,8,2,129,86,57,28,18,8,10
+2022-1536,Madrid Masters,Clay,20220502,Alexander Zverev,Stefanos Tsitsipas,6-4 3-6 6-2,SF,113,4,4,66,48,40,10,13,1,2,1,0,77,43,32,19,14,2,5
+2022-1536,Madrid Masters,Clay,20220502,Novak Djokovic,Hubert Hurkacz,6-3 6-4,QF,81,6,1,55,36,29,13,10,0,0,3,2,55,36,28,7,9,4,6
+2022-1536,Madrid Masters,Clay,20220502,Carlos Alcaraz,Rafael Nadal,6-2 1-6 6-3,QF,148,4,3,70,39,26,16,12,6,9,1,1,74,52,30,13,12,1,5
+2022-1536,Madrid Masters,Clay,20220502,Stefanos Tsitsipas,Andrey Rublev,6-3 2-6 6-4,QF,119,10,1,75,48,39,14,14,3,5,5,5,88,47,38,18,13,5,7
+2022-1536,Madrid Masters,Clay,20220502,Alexander Zverev,Felix Auger Aliassime,6-3 7-5,QF,115,1,9,68,43,32,14,10,3,4,1,1,83,49,32,13,11,6,10
+2022-1536,Madrid Masters,Clay,20220502,Novak Djokovic,Andy Murray,W/O,R16,0,,,,,,,,,,,,,,,,,,
+2022-1536,Madrid Masters,Clay,20220502,Hubert Hurkacz,Dusan Lajovic,7-5 6-3,R16,96,16,1,72,42,35,15,11,3,3,3,0,68,38,25,18,10,9,11
+2022-1536,Madrid Masters,Clay,20220502,Rafael Nadal,David Goffin,6-3 5-7 7-6(9),R16,189,7,4,109,72,55,20,17,2,5,3,2,116,85,57,14,16,8,11
+2022-1536,Madrid Masters,Clay,20220502,Carlos Alcaraz,Cameron Norrie,6-4 6-7(4) 6-3,R16,159,7,4,105,73,52,14,15,7,9,3,2,101,63,47,16,16,2,7
+2022-1536,Madrid Masters,Clay,20220502,Andrey Rublev,Daniel Evans,7-6(7) 7-5,R16,148,8,5,91,47,41,16,12,3,5,1,2,106,71,43,17,12,9,12
+2022-1536,Madrid Masters,Clay,20220502,Stefanos Tsitsipas,Grigor Dimitrov,6-3 6-4,R16,78,10,0,49,34,29,12,10,0,0,4,0,54,27,19,14,9,3,5
+2022-1536,Madrid Masters,Clay,20220502,Felix Auger Aliassime,Jannik Sinner,6-1 6-2,R16,79,5,0,41,29,26,7,8,0,0,1,1,62,42,20,10,7,4,8
+2022-1536,Madrid Masters,Clay,20220502,Alexander Zverev,Lorenzo Musetti,6-3 1-0 RET,R16,39,7,0,23,18,16,4,5,0,0,0,0,27,20,12,4,5,0,2
+2022-0416,Rome Masters,Clay,20220509,Novak Djokovic,Stefanos Tsitsipas,6-0 7-6(5),F,96,6,1,53,37,30,9,9,1,2,1,1,59,39,25,7,9,2,6
+2022-0416,Rome Masters,Clay,20220509,Novak Djokovic,Casper Ruud,6-4 6-3,SF,102,1,1,51,33,23,12,9,0,1,2,0,64,48,29,8,10,5,9
+2022-0416,Rome Masters,Clay,20220509,Stefanos Tsitsipas,Alexander Zverev,4-6 6-3 6-3,SF,148,3,1,91,55,38,22,14,2,3,5,4,87,56,39,13,14,2,5
+2022-0416,Rome Masters,Clay,20220509,Novak Djokovic,Felix Auger Aliassime,7-5 7-6(1),QF,129,4,0,75,57,42,11,12,3,5,11,3,75,47,34,12,12,5,8
+2022-0416,Rome Masters,Clay,20220509,Casper Ruud,Denis Shapovalov,7-6(7) 7-5,QF,139,5,1,81,58,45,15,12,2,2,3,7,104,66,46,21,12,14,15
+2022-0416,Rome Masters,Clay,20220509,Stefanos Tsitsipas,Jannik Sinner,7-6(5) 6-2,QF,147,10,5,95,62,44,14,10,5,6,3,2,68,45,33,7,10,3,6
+2022-0416,Rome Masters,Clay,20220509,Alexander Zverev,Cristian Garin,7-5 6-2,QF,111,4,2,74,47,33,14,10,4,5,1,3,64,43,29,5,10,7,11
+2022-0416,Rome Masters,Clay,20220509,Novak Djokovic,Stan Wawrinka,6-2 6-2,R16,75,2,0,48,36,27,6,8,3,4,1,4,57,24,14,12,8,2,7
+2022-0416,Rome Masters,Clay,20220509,Felix Auger Aliassime,Marcos Giron,6-3 6-2,R16,88,11,3,55,31,26,13,9,2,3,1,2,61,43,24,6,8,4,8
+2022-0416,Rome Masters,Clay,20220509,Denis Shapovalov,Rafael Nadal,1-6 7-5 6-2,R16,157,13,3,93,63,40,13,13,7,11,2,4,90,65,36,14,14,8,13
+2022-0416,Rome Masters,Clay,20220509,Casper Ruud,Jenson Brooksby,6-3 6-4,R16,96,5,2,64,42,36,10,10,3,3,0,0,64,36,21,18,9,4,6
+2022-0416,Rome Masters,Clay,20220509,Jannik Sinner,Filip Krajinovic,6-2 7-6(6),R16,101,13,2,70,38,31,14,10,1,2,5,2,57,39,28,9,10,0,3
+2022-0416,Rome Masters,Clay,20220509,Stefanos Tsitsipas,Karen Khachanov,4-6 6-0 6-3,R16,111,8,4,77,48,38,15,13,6,8,3,2,64,38,21,14,12,2,7
+2022-0416,Rome Masters,Clay,20220509,Cristian Garin,Marin Cilic,6-3 4-6 6-4,R16,176,1,6,116,72,42,23,14,16,20,3,2,97,49,31,23,15,9,15
+2022-0416,Rome Masters,Clay,20220509,Alexander Zverev,Alex De Minaur,6-3 7-6(5),R16,109,4,2,61,41,31,9,11,1,4,0,0,82,50,26,19,10,5,9
+2022-520,Roland Garros,Clay,20220523,Novak Djokovic,Diego Schwartzman,6-1 6-3 6-3,R16,,,,,,,,,,,,,,,,,,,
+2022-520,Roland Garros,Clay,20220523,Rafael Nadal,Felix Auger Aliassime,3-6 6-3 6-2 3-6 6-3,R16,,,,,,,,,,,,,,,,,,,
+2022-520,Roland Garros,Clay,20220523,Alexander Zverev,Bernabe Zapata Miralles,7-6(11) 7-5 6-3,R16,,,,,,,,,,,,,,,,,,,
+2022-520,Roland Garros,Clay,20220523,Carlos Alcaraz,Karen Khachanov,6-1 6-4 6-4,R16,,,,,,,,,,,,,,,,,,,
+2022-520,Roland Garros,Clay,20220523,Casper Ruud,Hubert Hurkacz,6-2 6-3 3-6 6-3,R16,,,,,,,,,,,,,,,,,,,
+2022-520,Roland Garros,Clay,20220523,Holger Rune,Stefanos Tsitsipas,7-5 3-6 6-3 6-4,R16,,,,,,,,,,,,,,,,,,,
+2022-520,Roland Garros,Clay,20220523,Andrey Rublev,Jannik Sinner,1-6 6-4 2-0 RET,R16,,,,,,,,,,,,,,,,,,,
+2022-520,Roland Garros,Clay,20220523,Marin Cilic,Daniil Medvedev,6-2 6-3 6-2,R16,,,,,,,,,,,,,,,,,,,
+2022-520,Roland Garros,Clay,20220523,Rafael Nadal,Novak Djokovic,6-2 4-6 6-2 7-6(4),QF,,,,,,,,,,,,,,,,,,,
+2022-520,Roland Garros,Clay,20220523,Alexander Zverev,Carlos Alcaraz,6-4 6-4 4-6 7-6(7),QF,,,,,,,,,,,,,,,,,,,
+2022-520,Roland Garros,Clay,20220523,Casper Ruud,Holger Rune,6-1 4-6 7-6(2) 6-3,QF,,,,,,,,,,,,,,,,,,,
+2022-520,Roland Garros,Clay,20220523,Marin Cilic,Andrey Rublev,5-7 6-3 6-4 3-6 7-6(2),QF,,,,,,,,,,,,,,,,,,,
+2022-520,Roland Garros,Clay,20220523,Rafael Nadal,Alexander Zverev,7-6(8) 6-6 RET,SF,,,,,,,,,,,,,,,,,,,
+2022-520,Roland Garros,Clay,20220523,Casper Ruud,Marin Cilic,3-6 6-4 6-2 6-2,SF,,,,,,,,,,,,,,,,,,,
+2022-520,Roland Garros,Clay,20220523,Rafael Nadal,Casper Ruud,6-3 6-3 6-0,F,,,,,,,,,,,,,,,,,,,
+2022-540,Wimbledon,Grass,20220627,Novak Djokovic,Tim Van Rijthoven,6-2 4-6 6-1 6-2,R16,158,7,2,97,61,46,25,17,3,4,20,5,124,80,53,15,16,11,17
+2022-540,Wimbledon,Grass,20220627,Jannik Sinner,Carlos Alcaraz,6-1 6-4 6-7(8) 6-3,R16,215,4,5,143,82,61,40,21,7,7,9,3,121,81,53,23,18,8,12
+2022-540,Wimbledon,Grass,20220627,David Goffin,Frances Tiafoe,7-6(3) 5-7 5-7 6-4 7-5,R16,276,18,9,211,132,96,36,30,12,18,16,8,192,92,71,48,29,10,16
+2022-540,Wimbledon,Grass,20220627,Cameron Norrie,Tommy Paul,6-4 7-5 6-4,R16,141,3,0,111,81,57,16,16,6,7,5,2,103,64,41,22,16,4,8
+2022-540,Wimbledon,Grass,20220627,Cristian Garin,Alex De Minaur,2-6 5-7 7-6(3) 6-4 7-6(6),R16,274,5,9,175,106,71,33,27,4,12,5,7,190,105,68,46,29,16,22
+2022-540,Wimbledon,Grass,20220627,Nick Kyrgios,Brandon Nakashima,4-6 6-4 7-6(2) 3-6 6-2,R16,191,35,3,141,104,81,18,25,4,7,10,9,148,87,69,31,25,4,7
+2022-540,Wimbledon,Grass,20220627,Taylor Fritz,Jason Kubler,6-3 6-1 6-4,R16,120,16,3,75,47,40,14,13,4,5,3,6,90,61,39,8,13,7,13
+2022-540,Wimbledon,Grass,20220627,Rafael Nadal,Botic Van De Zandschulp,6-4 6-2 7-6(6),R16,142,9,2,88,56,41,21,15,2,4,11,7,101,62,42,17,16,6,11
+2022-540,Wimbledon,Grass,20220627,Novak Djokovic,Jannik Sinner,5-7 2-6 6-3 6-2 6-2,QF,215,8,5,128,85,70,18,23,5,9,8,7,134,72,50,31,22,9,15
+2022-540,Wimbledon,Grass,20220627,Cameron Norrie,David Goffin,3-6 7-5 2-6 6-3 7-5,QF,208,5,4,151,96,69,26,25,5,10,6,3,145,88,62,33,25,3,8
+2022-540,Wimbledon,Grass,20220627,Nick Kyrgios,Cristian Garin,6-4 6-3 7-6(5),QF,133,17,4,114,79,58,15,16,8,9,2,5,88,63,43,13,16,3,6
+2022-540,Wimbledon,Grass,20220627,Rafael Nadal,Taylor Fritz,3-6 7-5 3-6 7-5 7-6(4),QF,261,5,7,164,107,75,27,28,6,14,19,3,172,109,76,30,27,7,14
+2022-540,Wimbledon,Grass,20220627,Novak Djokovic,Cameron Norrie,2-6 6-3 6-2 6-4,SF,155,13,1,88,57,47,18,18,1,4,7,3,114,65,46,20,17,9,14
+2022-540,Wimbledon,Grass,20220627,Nick Kyrgios,Rafael Nadal,W/O,SF,,,,,,,,,,,,,,,,,,,
+2022-540,Wimbledon,Grass,20220627,Novak Djokovic,Nick Kyrgios,4-6 6-3 6-4 7-6(3),F,181,15,7,119,75,62,27,22,5,6,30,7,125,91,64,18,20,2,4
+2022-0421,Canada Masters,Hard,20220808,Pablo Carreno Busta,Hubert Hurkacz,3-6 6-3 6-3,F,105,4,0,68,44,32,17,13,0,1,18,3,76,53,42,7,14,0,3
+2022-0421,Canada Masters,Hard,20220808,Hubert Hurkacz,Casper Ruud,5-7 6-3 6-2,SF,122,18,1,99,52,42,20,15,5,8,8,2,76,50,40,8,14,3,8
+2022-0421,Canada Masters,Hard,20220808,Pablo Carreno Busta,Daniel Evans,7-5 6-7(7) 6-2,SF,178,6,1,100,62,49,19,16,2,4,6,6,110,67,47,19,16,3,8
+2022-0421,Canada Masters,Hard,20220808,Hubert Hurkacz,Nick Kyrgios,7-6(4) 6-7(5) 6-1,QF,106,20,2,99,61,52,24,16,6,6,19,8,105,72,56,16,15,4,6
+2022-0421,Canada Masters,Hard,20220808,Casper Ruud,Felix Auger Aliassime,6-1 6-2,QF,74,4,0,45,31,23,6,8,0,1,10,4,47,32,18,2,7,2,7
+2022-0421,Canada Masters,Hard,20220808,Pablo Carreno Busta,Jack Draper,7-6(4) 6-1,QF,113,1,2,69,44,31,15,10,1,2,7,2,69,39,23,15,9,10,13
+2022-0421,Canada Masters,Hard,20220808,Daniel Evans,Tommy Paul,1-6 6-3 6-4,QF,137,3,4,94,60,45,14,13,6,8,4,3,79,51,37,16,13,2,4
+2022-0421,Canada Masters,Hard,20220808,Nick Kyrgios,Alex De Minaur,6-2 6-3,R16,62,8,1,42,23,18,10,8,0,2,2,1,46,30,15,5,9,4,10
+2022-0421,Canada Masters,Hard,20220808,Hubert Hurkacz,Albert Ramos,6-7(6) 6-2 7-6(3),R16,145,23,5,108,66,51,19,16,3,5,1,1,88,51,37,18,16,0,4
+2022-0421,Canada Masters,Hard,20220808,Casper Ruud,Roberto Bautista Agut,6-7(4) 7-6(4) 6-4,R16,198,10,2,118,72,52,27,17,7,9,10,5,118,85,60,18,17,6,9
+2022-0421,Canada Masters,Hard,20220808,Felix Auger Aliassime,Cameron Norrie,6-3 6-4,R16,72,15,1,46,39,36,4,10,0,0,0,5,56,41,30,5,9,3,5
+2022-0421,Canada Masters,Hard,20220808,Pablo Carreno Busta,Jannik Sinner,6-2 6-4,R16,84,1,1,49,32,25,12,9,0,0,5,2,54,27,21,12,9,2,5
+2022-0421,Canada Masters,Hard,20220808,Jack Draper,Gael Monfils,6-2 0-2 RET,R16,55,6,3,29,17,13,6,5,0,1,1,5,34,20,14,4,5,0,2
+2022-0421,Canada Masters,Hard,20220808,Daniel Evans,Taylor Fritz,7-6(5) 1-6 7-5,R16,163,6,7,115,75,53,17,16,12,17,10,3,96,55,39,21,15,6,9
+2022-0421,Canada Masters,Hard,20220808,Tommy Paul,Marin Cilic,6-4 6-2,R16,84,3,1,51,31,23,12,9,4,5,2,2,59,42,25,5,9,5,9
+2022-0422,Cincinnati Masters,Hard,20220815,Borna Coric,Stefanos Tsitsipas,7-6(0) 6-2,F,117,7,2,72,43,36,14,10,6,7,6,4,68,44,28,11,10,9,12
+2022-0422,Cincinnati Masters,Hard,20220815,Stefanos Tsitsipas,Daniil Medvedev,7-6(6) 3-6 6-3,SF,143,4,7,91,60,49,12,15,0,3,2,11,106,52,34,32,15,4,7
+2022-0422,Cincinnati Masters,Hard,20220815,Borna Coric,Cameron Norrie,6-3 6-4,SF,91,7,2,56,24,19,20,10,1,2,4,2,54,32,20,10,9,4,7
+2022-0422,Cincinnati Masters,Hard,20220815,Daniil Medvedev,Taylor Fritz,7-6(1) 6-3,QF,97,18,4,84,54,41,17,11,6,6,3,3,62,31,26,17,10,2,3
+2022-0422,Cincinnati Masters,Hard,20220815,Stefanos Tsitsipas,John Isner,7-6(5) 5-7 6-3,QF,149,7,1,96,60,47,25,17,2,3,18,2,98,69,55,14,16,0,1
+2022-0422,Cincinnati Masters,Hard,20220815,Cameron Norrie,Carlos Alcaraz,7-6(4) 6-7(4) 6-4,QF,183,3,2,128,87,60,21,17,11,13,5,4,107,69,48,25,17,5,8
+2022-0422,Cincinnati Masters,Hard,20220815,Borna Coric,Felix Auger Aliassime,6-4 6-4,QF,100,8,1,50,32,31,9,10,0,0,12,5,74,44,31,15,10,7,9
+2022-0422,Cincinnati Masters,Hard,20220815,Daniil Medvedev,Denis Shapovalov,7-5 7-5,R16,106,4,5,68,45,35,14,12,3,4,2,5,92,61,38,16,12,10,13
+2022-0422,Cincinnati Masters,Hard,20220815,Taylor Fritz,Andrey Rublev,6-7(4) 6-2 7-5,R16,152,13,6,113,69,57,21,16,6,6,16,2,110,66,51,20,16,4,7
+2022-0422,Cincinnati Masters,Hard,20220815,Stefanos Tsitsipas,Diego Schwartzman,6-3 6-3,R16,98,6,3,62,35,24,14,9,3,5,1,9,70,43,25,10,9,9,14
+2022-0422,Cincinnati Masters,Hard,20220815,John Isner,Sebastian Korda,7-6(3) 1-6 7-6(4),R16,124,20,2,88,61,52,13,15,1,3,9,0,99,74,56,16,16,2,2
+2022-0422,Cincinnati Masters,Hard,20220815,Cameron Norrie,Ben Shelton,6-0 6-2,R16,58,2,2,43,25,18,12,7,1,1,3,8,47,22,15,5,7,5,10
+2022-0422,Cincinnati Masters,Hard,20220815,Carlos Alcaraz,Marin Cilic,7-6(4) 6-1,R16,99,8,4,63,42,35,11,10,2,3,4,2,67,48,29,7,9,3,6
+2022-0422,Cincinnati Masters,Hard,20220815,Felix Auger Aliassime,Jannik Sinner,2-6 7-6(1) 6-1,R16,146,14,4,92,58,46,14,14,5,8,4,4,93,52,33,23,13,5,8
+2022-0422,Cincinnati Masters,Hard,20220815,Borna Coric,Roberto Bautista Agut,6-2 6-3,R16,80,16,1,59,36,31,9,8,5,5,1,1,47,30,19,8,9,3,7
+2022-560,Us Open,Hard,20220829,Nick Kyrgios,Daniil Medvedev,7-6(11) 3-6 6-3 6-2,R16,173,21,7,120,85,64,16,20,5,8,22,2,127,75,56,23,19,2,7
+2022-560,Us Open,Hard,20220829,Karen Khachanov,Pablo Carreno Busta,4-6 6-3 6-1 4-6 6-3,R16,201,11,6,122,69,54,35,23,0,2,9,6,139,87,62,26,22,10,15
+2022-560,Us Open,Hard,20220829,Matteo Berrettini,Alejandro Davidovich Fokina,3-6 7-6(2) 6-3 4-6 6-2,R16,226,18,3,135,73,61,34,24,9,13,4,6,146,97,67,26,25,4,10
+2022-560,Us Open,Hard,20220829,Casper Ruud,Corentin Moutet,6-1 6-2 6-7(4) 6-2,R16,200,5,4,120,83,60,22,19,5,6,4,1,117,74,43,25,17,10,17
+2022-560,Us Open,Hard,20220829,Jannik Sinner,Ilya Ivashka,6-1 5-7 6-2 4-6 6-3,R16,228,5,14,134,62,45,35,23,6,14,5,13,166,102,62,21,23,14,26
+2022-560,Us Open,Hard,20220829,Carlos Alcaraz,Marin Cilic,6-4 3-6 6-4 4-6 6-3,R16,234,3,4,143,103,64,24,24,4,9,14,13,142,73,54,33,24,12,18
+2022-560,Us Open,Hard,20220829,Andrey Rublev,Cameron Norrie,6-4 6-4 6-4,R16,146,11,4,88,59,47,16,15,1,2,7,3,88,50,39,14,15,4,8
+2022-560,Us Open,Hard,20220829,Frances Tiafoe,Rafael Nadal,6-4 4-6 6-4 6-3,R16,214,18,4,116,58,44,35,19,4,6,9,9,114,60,43,30,20,3,8
+2022-560,Us Open,Hard,20220829,Karen Khachanov,Nick Kyrgios,7-5 4-6 7-5 6-7(3) 6-4,QF,219,30,3,166,99,76,43,28,7,9,31,5,160,115,91,21,29,4,8
+2022-560,Us Open,Hard,20220829,Casper Ruud,Matteo Berrettini,6-1 6-4 7-6(4),QF,156,0,2,97,63,47,17,16,7,9,13,3,98,59,38,18,14,9,14
+2022-560,Us Open,Hard,20220829,Carlos Alcaraz,Jannik Sinner,6-3 6-7(7) 6-7(0) 7-5 6-3,QF,315,5,5,169,110,69,35,29,9,16,8,11,213,117,75,43,27,15,26
+2022-560,Us Open,Hard,20220829,Frances Tiafoe,Andrey Rublev,7-6(3) 7-6(0) 6-4,QF,156,18,3,112,56,49,35,18,4,4,14,1,109,60,46,26,18,3,4
+2022-560,Us Open,Hard,20220829,Casper Ruud,Karen Khachanov,7-6(5) 6-2 5-7 6-2,SF,180,10,1,108,69,57,23,21,2,5,15,3,124,84,57,19,20,7,13
+2022-560,Us Open,Hard,20220829,Carlos Alcaraz,Frances Tiafoe,6-7(6) 6-3 6-1 6-7(5) 6-3,SF,259,6,3,150,105,78,27,26,4,7,15,6,163,76,54,43,25,11,20
+2022-560,Us Open,Hard,20220829,Carlos Alcaraz,Casper Ruud,6-4 2-6 7-6(1) 6-3,F,200,14,3,132,85,63,24,20,7,10,4,2,117,71,47,30,20,8,11
+2022-0352,Paris Masters,Hard,20221031,Holger Rune,Novak Djokovic,3-6 6-3 7-5,F,153,6,7,109,69,49,19,15,10,12,8,2,80,51,42,14,15,0,3
+2022-0352,Paris Masters,Hard,20221031,Holger Rune,Felix Auger Aliassime,6-4 6-2,SF,87,5,1,47,37,32,4,9,0,0,4,2,64,47,30,6,9,5,8
+2022-0352,Paris Masters,Hard,20221031,Novak Djokovic,Stefanos Tsitsipas,6-2 3-6 7-6(4),SF,139,11,0,78,49,41,21,15,0,2,9,1,89,61,44,14,14,4,6
+2022-0352,Paris Masters,Hard,20221031,Holger Rune,Carlos Alcaraz,6-3 6-6 RET,QF,100,5,3,72,53,40,12,11,2,2,3,1,60,38,31,12,10,3,4
+2022-0352,Paris Masters,Hard,20221031,Felix Auger Aliassime,Frances Tiafoe,6-1 6-4,QF,93,8,0,50,36,31,7,9,0,0,6,3,69,39,24,14,8,11,14
+2022-0352,Paris Masters,Hard,20221031,Novak Djokovic,Lorenzo Musetti,6-0 6-3,QF,74,3,0,38,21,18,11,8,0,1,2,2,53,33,15,8,7,6,11
+2022-0352,Paris Masters,Hard,20221031,Stefanos Tsitsipas,Tommy Paul,6-2 6-4,QF,76,2,1,63,41,31,13,9,7,7,2,2,41,26,16,8,9,0,3
+2022-0352,Paris Masters,Hard,20221031,Carlos Alcaraz,Grigor Dimitrov,6-1 6-3,R16,71,1,3,47,30,23,8,8,3,4,3,2,59,41,23,5,8,2,7
+2022-0352,Paris Masters,Hard,20221031,Holger Rune,Andrey Rublev,6-4 7-5,R16,89,7,4,72,40,30,22,11,6,6,9,0,63,41,33,10,11,1,3
+2022-0352,Paris Masters,Hard,20221031,Frances Tiafoe,Alex De Minaur,6-3 7-6(5),R16,100,14,3,77,45,33,17,11,4,5,7,1,62,35,29,9,10,5,7
+2022-0352,Paris Masters,Hard,20221031,Felix Auger Aliassime,Gilles Simon,6-1 6-3,R16,93,11,3,53,36,27,9,8,2,2,2,0,55,31,19,9,8,3,7
+2022-0352,Paris Masters,Hard,20221031,Novak Djokovic,Karen Khachanov,6-4 6-1,R16,87,2,3,48,28,24,11,9,0,1,2,2,57,36,23,4,8,4,8
+2022-0352,Paris Masters,Hard,20221031,Lorenzo Musetti,Casper Ruud,4-6 6-4 6-4,R16,139,4,1,78,56,43,14,15,1,3,2,2,91,55,37,22,15,4,7
+2022-0352,Paris Masters,Hard,20221031,Stefanos Tsitsipas,Corentin Moutet,6-3 7-6(3),R16,98,3,0,58,33,30,17,11,0,0,3,3,67,44,33,12,10,5,6
+2022-0352,Paris Masters,Hard,20221031,Tommy Paul,Pablo Carreno Busta,6-4 6-4,R16,79,4,0,57,38,29,13,10,0,1,3,0,64,52,34,3,10,9,12
+2022-0605,Tour Finals,Hard,20221114,Novak Djokovic,Casper Ruud,7-5 6-3,F,92,9,0,55,39,33,11,11,0,0,6,1,57,40,31,6,10,3,5
+2022-0605,Tour Finals,Hard,20221114,Casper Ruud,Andrey Rublev,6-2 6-4,SF,68,10,0,46,35,27,8,9,0,1,9,0,50,30,20,9,9,0,4
+2022-0605,Tour Finals,Hard,20221114,Novak Djokovic,Taylor Fritz,7-6(5) 7-6(6),SF,114,4,1,76,53,40,14,12,0,2,15,1,81,55,42,9,12,0,2
+2022-0605,Tour Finals,Hard,20221114,Rafael Nadal,Casper Ruud,7-5 7-5,RR,102,16,1,61,41,38,12,12,2,2,4,0,66,46,33,10,12,1,3
+2022-0605,Tour Finals,Hard,20221114,Felix Auger Aliassime,Rafael Nadal,6-3 6-4,RR,117,15,2,68,48,39,8,10,5,5,1,4,61,36,26,12,9,2,4
+2022-0605,Tour Finals,Hard,20221114,Taylor Fritz,Rafael Nadal,7-6(3) 6-1,RR,97,8,1,58,40,32,14,10,0,0,7,4,69,49,37,8,9,7,9
+2022-0605,Tour Finals,Hard,20221114,Casper Ruud,Felix Auger Aliassime,7-6(4) 6-4,RR,111,5,1,67,44,33,18,11,0,0,14,3,59,38,32,12,11,0,1
+2022-0605,Tour Finals,Hard,20221114,Casper Ruud,Taylor Fritz,6-3 4-6 7-6(6),RR,131,14,3,93,65,57,14,16,3,4,15,0,89,55,48,17,15,4,5
+2022-0605,Tour Finals,Hard,20221114,Taylor Fritz,Felix Auger Aliassime,7-6(4) 6-7(5) 6-2,RR,164,5,1,90,56,49,24,16,3,3,9,2,102,67,50,19,16,3,5
+2022-0605,Tour Finals,Hard,20221114,Stefanos Tsitsipas,Daniil Medvedev,6-3 6-7(11) 7-6(1),RR,141,9,1,103,77,64,14,17,0,1,16,2,101,67,57,16,16,1,3
+2022-0605,Tour Finals,Hard,20221114,Andrey Rublev,Stefanos Tsitsipas,3-6 6-3 6-2,RR,102,10,2,84,57,45,14,13,2,3,10,2,71,48,36,14,13,2,5
+2022-0605,Tour Finals,Hard,20221114,Novak Djokovic,Stefanos Tsitsipas,6-4 7-6(4),RR,98,3,2,63,44,36,14,11,1,1,9,0,61,41,33,12,11,1,2
+2022-0605,Tour Finals,Hard,20221114,Andrey Rublev,Daniil Medvedev,6-7(7) 6-3 7-6(7),RR,151,9,1,98,68,56,18,16,1,2,24,8,123,82,65,18,17,6,9
+2022-0605,Tour Finals,Hard,20221114,Novak Djokovic,Daniil Medvedev,6-3 6-7(5) 7-6(2),RR,191,9,3,131,85,67,22,17,5,6,16,2,126,93,60,17,16,4,6
+2022-0605,Tour Finals,Hard,20221114,Novak Djokovic,Andrey Rublev,6-4 6-1,RR,67,12,0,43,35,33,3,9,0,0,10,1,56,31,22,9,8,1,4

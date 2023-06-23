@@ -1,0 +1,196 @@
+tourney_name,surface,winner_name,loser_name,score,round
+Australian Open,Hard,Gael Monfils,Miomir Kecmanovic,7-5 7-6(4) 6-3,R16
+Australian Open,Hard,Matteo Berrettini,Pablo Carreno Busta,7-5 7-6(4) 6-4,R16
+Australian Open,Hard,Denis Shapovalov,Alexander Zverev,6-3 7-6(5) 6-3,R16
+Australian Open,Hard,Rafael Nadal,Adrian Mannarino,7-6(14) 6-2 6-2,R16
+Australian Open,Hard,Jannik Sinner,Alex De Minaur,7-6(3) 6-3 6-4,R16
+Australian Open,Hard,Stefanos Tsitsipas,Taylor Fritz,4-6 6-4 4-6 6-3 6-4,R16
+Australian Open,Hard,Felix Auger Aliassime,Marin Cilic,2-6 7-6(7) 6-2 7-6(4),R16
+Australian Open,Hard,Daniil Medvedev,Maxime Cressy,6-2 7-6(4) 6-7(4) 7-5,R16
+Australian Open,Hard,Matteo Berrettini,Gael Monfils,6-4 6-4 3-6 3-6 6-2,QF
+Australian Open,Hard,Rafael Nadal,Denis Shapovalov,6-3 6-4 4-6 3-6 6-3,QF
+Australian Open,Hard,Stefanos Tsitsipas,Jannik Sinner,6-3 6-4 6-2,QF
+Australian Open,Hard,Daniil Medvedev,Felix Auger Aliassime,6-7(4) 3-6 7-6(2) 7-5 6-4,QF
+Australian Open,Hard,Rafael Nadal,Matteo Berrettini,6-3 6-2 3-6 6-3,SF
+Australian Open,Hard,Daniil Medvedev,Stefanos Tsitsipas,7-6(5) 4-6 6-4 6-1,SF
+Australian Open,Hard,Rafael Nadal,Daniil Medvedev,2-6 6-7(5) 6-4 6-4 7-5,F
+Indian Wells Masters,Hard,Taylor Fritz,Rafael Nadal,6-3 7-6(5),F
+Indian Wells Masters,Hard,Rafael Nadal,Carlos Alcaraz,6-4 4-6 6-3,SF
+Indian Wells Masters,Hard,Taylor Fritz,Andrey Rublev,7-5 6-4,SF
+Indian Wells Masters,Hard,Carlos Alcaraz,Cameron Norrie,6-4 6-3,QF
+Indian Wells Masters,Hard,Rafael Nadal,Nick Kyrgios,7-6(0) 5-7 6-4,QF
+Indian Wells Masters,Hard,Taylor Fritz,Miomir Kecmanovic,7-6(5) 3-6 6-1,QF
+Indian Wells Masters,Hard,Andrey Rublev,Grigor Dimitrov,7-5 6-2,QF
+Indian Wells Masters,Hard,Carlos Alcaraz,Gael Monfils,7-5 6-1,R16
+Indian Wells Masters,Hard,Cameron Norrie,Jenson Brooksby,6-2 6-4,R16
+Indian Wells Masters,Hard,Rafael Nadal,Reilly Opelka,7-6(3) 7-6(5),R16
+Indian Wells Masters,Hard,Nick Kyrgios,Jannik Sinner,W/O,R16
+Indian Wells Masters,Hard,Miomir Kecmanovic,Matteo Berrettini,6-3 6-7(5) 6-4,R16
+Indian Wells Masters,Hard,Taylor Fritz,Alex De Minaur,3-6 6-4 7-6(5),R16
+Indian Wells Masters,Hard,Andrey Rublev,Hubert Hurkacz,7-6(5) 6-4,R16
+Indian Wells Masters,Hard,Grigor Dimitrov,John Isner,6-3 7-6(6),R16
+Miami Masters,Hard,Carlos Alcaraz,Casper Ruud,7-5 6-4,F
+Miami Masters,Hard,Carlos Alcaraz,Hubert Hurkacz,7-6(5) 7-6(2),SF
+Miami Masters,Hard,Casper Ruud,Francisco Cerundolo,6-4 6-1,SF
+Miami Masters,Hard,Hubert Hurkacz,Daniil Medvedev,7-6(7) 6-3,QF
+Miami Masters,Hard,Carlos Alcaraz,Miomir Kecmanovic,6-7(5) 6-3 7-6(5),QF
+Miami Masters,Hard,Francisco Cerundolo,Jannik Sinner,4-1 RET,QF
+Miami Masters,Hard,Casper Ruud,Alexander Zverev,6-3 1-6 6-3,QF
+Miami Masters,Hard,Daniil Medvedev,Jenson Brooksby,7-5 6-1,R16
+Miami Masters,Hard,Hubert Hurkacz,Lloyd Harris,7-6(3) 6-2,R16
+Miami Masters,Hard,Carlos Alcaraz,Stefanos Tsitsipas,7-5 6-3,R16
+Miami Masters,Hard,Miomir Kecmanovic,Taylor Fritz,3-6 6-1 6-4,R16
+Miami Masters,Hard,Jannik Sinner,Nick Kyrgios,7-6(3) 6-3,R16
+Miami Masters,Hard,Francisco Cerundolo,Frances Tiafoe,6-7(2) 7-6(3) 6-2,R16
+Miami Masters,Hard,Casper Ruud,Cameron Norrie,6-3 6-4,R16
+Miami Masters,Hard,Alexander Zverev,Thanasi Kokkinakis,6-4 6-4,R16
+Monte Carlo Masters,Clay,Stefanos Tsitsipas,Alejandro Davidovich Fokina,6-3 7-6(3),F
+Monte Carlo Masters,Clay,Alejandro Davidovich Fokina,Grigor Dimitrov,6-4 6-7(2) 6-3,SF
+Monte Carlo Masters,Clay,Stefanos Tsitsipas,Alexander Zverev,6-4 6-2,SF
+Monte Carlo Masters,Clay,Alejandro Davidovich Fokina,Taylor Fritz,2-6 6-4 6-3,QF
+Monte Carlo Masters,Clay,Grigor Dimitrov,Hubert Hurkacz,6-4 3-6 7-6(2),QF
+Monte Carlo Masters,Clay,Stefanos Tsitsipas,Diego Schwartzman,6-2 6-7(3) 6-4,QF
+Monte Carlo Masters,Clay,Alexander Zverev,Jannik Sinner,5-7 6-3 7-6(5),QF
+Monte Carlo Masters,Clay,Alejandro Davidovich Fokina,David Goffin,6-4 6-1,R16
+Monte Carlo Masters,Clay,Taylor Fritz,Sebastian Korda,7-6(4) 7-5,R16
+Monte Carlo Masters,Clay,Grigor Dimitrov,Casper Ruud,6-3 7-5,R16
+Monte Carlo Masters,Clay,Hubert Hurkacz,Albert Ramos,7-6(2) 6-2,R16
+Monte Carlo Masters,Clay,Diego Schwartzman,Lorenzo Musetti,2-6 6-4 6-3,R16
+Monte Carlo Masters,Clay,Stefanos Tsitsipas,Laslo Djere,7-5 7-6(1),R16
+Monte Carlo Masters,Clay,Jannik Sinner,Andrey Rublev,5-7 6-1 6-3,R16
+Monte Carlo Masters,Clay,Alexander Zverev,Pablo Carreno Busta,6-2 7-5,R16
+Madrid Masters,Clay,Carlos Alcaraz,Alexander Zverev,6-3 6-1,F
+Madrid Masters,Clay,Carlos Alcaraz,Novak Djokovic,6-7(5) 7-5 7-6(5),SF
+Madrid Masters,Clay,Alexander Zverev,Stefanos Tsitsipas,6-4 3-6 6-2,SF
+Madrid Masters,Clay,Novak Djokovic,Hubert Hurkacz,6-3 6-4,QF
+Madrid Masters,Clay,Carlos Alcaraz,Rafael Nadal,6-2 1-6 6-3,QF
+Madrid Masters,Clay,Stefanos Tsitsipas,Andrey Rublev,6-3 2-6 6-4,QF
+Madrid Masters,Clay,Alexander Zverev,Felix Auger Aliassime,6-3 7-5,QF
+Madrid Masters,Clay,Novak Djokovic,Andy Murray,W/O,R16
+Madrid Masters,Clay,Hubert Hurkacz,Dusan Lajovic,7-5 6-3,R16
+Madrid Masters,Clay,Rafael Nadal,David Goffin,6-3 5-7 7-6(9),R16
+Madrid Masters,Clay,Carlos Alcaraz,Cameron Norrie,6-4 6-7(4) 6-3,R16
+Madrid Masters,Clay,Andrey Rublev,Daniel Evans,7-6(7) 7-5,R16
+Madrid Masters,Clay,Stefanos Tsitsipas,Grigor Dimitrov,6-3 6-4,R16
+Madrid Masters,Clay,Felix Auger Aliassime,Jannik Sinner,6-1 6-2,R16
+Madrid Masters,Clay,Alexander Zverev,Lorenzo Musetti,6-3 1-0 RET,R16
+Rome Masters,Clay,Novak Djokovic,Stefanos Tsitsipas,6-0 7-6(5),F
+Rome Masters,Clay,Novak Djokovic,Casper Ruud,6-4 6-3,SF
+Rome Masters,Clay,Stefanos Tsitsipas,Alexander Zverev,4-6 6-3 6-3,SF
+Rome Masters,Clay,Novak Djokovic,Felix Auger Aliassime,7-5 7-6(1),QF
+Rome Masters,Clay,Casper Ruud,Denis Shapovalov,7-6(7) 7-5,QF
+Rome Masters,Clay,Stefanos Tsitsipas,Jannik Sinner,7-6(5) 6-2,QF
+Rome Masters,Clay,Alexander Zverev,Cristian Garin,7-5 6-2,QF
+Rome Masters,Clay,Novak Djokovic,Stan Wawrinka,6-2 6-2,R16
+Rome Masters,Clay,Felix Auger Aliassime,Marcos Giron,6-3 6-2,R16
+Rome Masters,Clay,Denis Shapovalov,Rafael Nadal,1-6 7-5 6-2,R16
+Rome Masters,Clay,Casper Ruud,Jenson Brooksby,6-3 6-4,R16
+Rome Masters,Clay,Jannik Sinner,Filip Krajinovic,6-2 7-6(6),R16
+Rome Masters,Clay,Stefanos Tsitsipas,Karen Khachanov,4-6 6-0 6-3,R16
+Rome Masters,Clay,Cristian Garin,Marin Cilic,6-3 4-6 6-4,R16
+Rome Masters,Clay,Alexander Zverev,Alex De Minaur,6-3 7-6(5),R16
+Roland Garros,Clay,Novak Djokovic,Diego Schwartzman,6-1 6-3 6-3,R16
+Roland Garros,Clay,Rafael Nadal,Felix Auger Aliassime,3-6 6-3 6-2 3-6 6-3,R16
+Roland Garros,Clay,Alexander Zverev,Bernabe Zapata Miralles,7-6(11) 7-5 6-3,R16
+Roland Garros,Clay,Carlos Alcaraz,Karen Khachanov,6-1 6-4 6-4,R16
+Roland Garros,Clay,Casper Ruud,Hubert Hurkacz,6-2 6-3 3-6 6-3,R16
+Roland Garros,Clay,Holger Rune,Stefanos Tsitsipas,7-5 3-6 6-3 6-4,R16
+Roland Garros,Clay,Andrey Rublev,Jannik Sinner,1-6 6-4 2-0 RET,R16
+Roland Garros,Clay,Marin Cilic,Daniil Medvedev,6-2 6-3 6-2,R16
+Roland Garros,Clay,Rafael Nadal,Novak Djokovic,6-2 4-6 6-2 7-6(4),QF
+Roland Garros,Clay,Alexander Zverev,Carlos Alcaraz,6-4 6-4 4-6 7-6(7),QF
+Roland Garros,Clay,Casper Ruud,Holger Rune,6-1 4-6 7-6(2) 6-3,QF
+Roland Garros,Clay,Marin Cilic,Andrey Rublev,5-7 6-3 6-4 3-6 7-6(2),QF
+Roland Garros,Clay,Rafael Nadal,Alexander Zverev,7-6(8) 6-6 RET,SF
+Roland Garros,Clay,Casper Ruud,Marin Cilic,3-6 6-4 6-2 6-2,SF
+Roland Garros,Clay,Rafael Nadal,Casper Ruud,6-3 6-3 6-0,F
+Wimbledon,Grass,Novak Djokovic,Tim Van Rijthoven,6-2 4-6 6-1 6-2,R16
+Wimbledon,Grass,Jannik Sinner,Carlos Alcaraz,6-1 6-4 6-7(8) 6-3,R16
+Wimbledon,Grass,David Goffin,Frances Tiafoe,7-6(3) 5-7 5-7 6-4 7-5,R16
+Wimbledon,Grass,Cameron Norrie,Tommy Paul,6-4 7-5 6-4,R16
+Wimbledon,Grass,Cristian Garin,Alex De Minaur,2-6 5-7 7-6(3) 6-4 7-6(6),R16
+Wimbledon,Grass,Nick Kyrgios,Brandon Nakashima,4-6 6-4 7-6(2) 3-6 6-2,R16
+Wimbledon,Grass,Taylor Fritz,Jason Kubler,6-3 6-1 6-4,R16
+Wimbledon,Grass,Rafael Nadal,Botic Van De Zandschulp,6-4 6-2 7-6(6),R16
+Wimbledon,Grass,Novak Djokovic,Jannik Sinner,5-7 2-6 6-3 6-2 6-2,QF
+Wimbledon,Grass,Cameron Norrie,David Goffin,3-6 7-5 2-6 6-3 7-5,QF
+Wimbledon,Grass,Nick Kyrgios,Cristian Garin,6-4 6-3 7-6(5),QF
+Wimbledon,Grass,Rafael Nadal,Taylor Fritz,3-6 7-5 3-6 7-5 7-6(4),QF
+Wimbledon,Grass,Novak Djokovic,Cameron Norrie,2-6 6-3 6-2 6-4,SF
+Wimbledon,Grass,Nick Kyrgios,Rafael Nadal,W/O,SF
+Wimbledon,Grass,Novak Djokovic,Nick Kyrgios,4-6 6-3 6-4 7-6(3),F
+Canada Masters,Hard,Pablo Carreno Busta,Hubert Hurkacz,3-6 6-3 6-3,F
+Canada Masters,Hard,Hubert Hurkacz,Casper Ruud,5-7 6-3 6-2,SF
+Canada Masters,Hard,Pablo Carreno Busta,Daniel Evans,7-5 6-7(7) 6-2,SF
+Canada Masters,Hard,Hubert Hurkacz,Nick Kyrgios,7-6(4) 6-7(5) 6-1,QF
+Canada Masters,Hard,Casper Ruud,Felix Auger Aliassime,6-1 6-2,QF
+Canada Masters,Hard,Pablo Carreno Busta,Jack Draper,7-6(4) 6-1,QF
+Canada Masters,Hard,Daniel Evans,Tommy Paul,1-6 6-3 6-4,QF
+Canada Masters,Hard,Nick Kyrgios,Alex De Minaur,6-2 6-3,R16
+Canada Masters,Hard,Hubert Hurkacz,Albert Ramos,6-7(6) 6-2 7-6(3),R16
+Canada Masters,Hard,Casper Ruud,Roberto Bautista Agut,6-7(4) 7-6(4) 6-4,R16
+Canada Masters,Hard,Felix Auger Aliassime,Cameron Norrie,6-3 6-4,R16
+Canada Masters,Hard,Pablo Carreno Busta,Jannik Sinner,6-2 6-4,R16
+Canada Masters,Hard,Jack Draper,Gael Monfils,6-2 0-2 RET,R16
+Canada Masters,Hard,Daniel Evans,Taylor Fritz,7-6(5) 1-6 7-5,R16
+Canada Masters,Hard,Tommy Paul,Marin Cilic,6-4 6-2,R16
+Cincinnati Masters,Hard,Borna Coric,Stefanos Tsitsipas,7-6(0) 6-2,F
+Cincinnati Masters,Hard,Stefanos Tsitsipas,Daniil Medvedev,7-6(6) 3-6 6-3,SF
+Cincinnati Masters,Hard,Borna Coric,Cameron Norrie,6-3 6-4,SF
+Cincinnati Masters,Hard,Daniil Medvedev,Taylor Fritz,7-6(1) 6-3,QF
+Cincinnati Masters,Hard,Stefanos Tsitsipas,John Isner,7-6(5) 5-7 6-3,QF
+Cincinnati Masters,Hard,Cameron Norrie,Carlos Alcaraz,7-6(4) 6-7(4) 6-4,QF
+Cincinnati Masters,Hard,Borna Coric,Felix Auger Aliassime,6-4 6-4,QF
+Cincinnati Masters,Hard,Daniil Medvedev,Denis Shapovalov,7-5 7-5,R16
+Cincinnati Masters,Hard,Taylor Fritz,Andrey Rublev,6-7(4) 6-2 7-5,R16
+Cincinnati Masters,Hard,Stefanos Tsitsipas,Diego Schwartzman,6-3 6-3,R16
+Cincinnati Masters,Hard,John Isner,Sebastian Korda,7-6(3) 1-6 7-6(4),R16
+Cincinnati Masters,Hard,Cameron Norrie,Ben Shelton,6-0 6-2,R16
+Cincinnati Masters,Hard,Carlos Alcaraz,Marin Cilic,7-6(4) 6-1,R16
+Cincinnati Masters,Hard,Felix Auger Aliassime,Jannik Sinner,2-6 7-6(1) 6-1,R16
+Cincinnati Masters,Hard,Borna Coric,Roberto Bautista Agut,6-2 6-3,R16
+Us Open,Hard,Nick Kyrgios,Daniil Medvedev,7-6(11) 3-6 6-3 6-2,R16
+Us Open,Hard,Karen Khachanov,Pablo Carreno Busta,4-6 6-3 6-1 4-6 6-3,R16
+Us Open,Hard,Matteo Berrettini,Alejandro Davidovich Fokina,3-6 7-6(2) 6-3 4-6 6-2,R16
+Us Open,Hard,Casper Ruud,Corentin Moutet,6-1 6-2 6-7(4) 6-2,R16
+Us Open,Hard,Jannik Sinner,Ilya Ivashka,6-1 5-7 6-2 4-6 6-3,R16
+Us Open,Hard,Carlos Alcaraz,Marin Cilic,6-4 3-6 6-4 4-6 6-3,R16
+Us Open,Hard,Andrey Rublev,Cameron Norrie,6-4 6-4 6-4,R16
+Us Open,Hard,Frances Tiafoe,Rafael Nadal,6-4 4-6 6-4 6-3,R16
+Us Open,Hard,Karen Khachanov,Nick Kyrgios,7-5 4-6 7-5 6-7(3) 6-4,QF
+Us Open,Hard,Casper Ruud,Matteo Berrettini,6-1 6-4 7-6(4),QF
+Us Open,Hard,Carlos Alcaraz,Jannik Sinner,6-3 6-7(7) 6-7(0) 7-5 6-3,QF
+Us Open,Hard,Frances Tiafoe,Andrey Rublev,7-6(3) 7-6(0) 6-4,QF
+Us Open,Hard,Casper Ruud,Karen Khachanov,7-6(5) 6-2 5-7 6-2,SF
+Us Open,Hard,Carlos Alcaraz,Frances Tiafoe,6-7(6) 6-3 6-1 6-7(5) 6-3,SF
+Us Open,Hard,Carlos Alcaraz,Casper Ruud,6-4 2-6 7-6(1) 6-3,F
+Paris Masters,Hard,Holger Rune,Novak Djokovic,3-6 6-3 7-5,F
+Paris Masters,Hard,Holger Rune,Felix Auger Aliassime,6-4 6-2,SF
+Paris Masters,Hard,Novak Djokovic,Stefanos Tsitsipas,6-2 3-6 7-6(4),SF
+Paris Masters,Hard,Holger Rune,Carlos Alcaraz,6-3 6-6 RET,QF
+Paris Masters,Hard,Felix Auger Aliassime,Frances Tiafoe,6-1 6-4,QF
+Paris Masters,Hard,Novak Djokovic,Lorenzo Musetti,6-0 6-3,QF
+Paris Masters,Hard,Stefanos Tsitsipas,Tommy Paul,6-2 6-4,QF
+Paris Masters,Hard,Carlos Alcaraz,Grigor Dimitrov,6-1 6-3,R16
+Paris Masters,Hard,Holger Rune,Andrey Rublev,6-4 7-5,R16
+Paris Masters,Hard,Frances Tiafoe,Alex De Minaur,6-3 7-6(5),R16
+Paris Masters,Hard,Felix Auger Aliassime,Gilles Simon,6-1 6-3,R16
+Paris Masters,Hard,Novak Djokovic,Karen Khachanov,6-4 6-1,R16
+Paris Masters,Hard,Lorenzo Musetti,Casper Ruud,4-6 6-4 6-4,R16
+Paris Masters,Hard,Stefanos Tsitsipas,Corentin Moutet,6-3 7-6(3),R16
+Paris Masters,Hard,Tommy Paul,Pablo Carreno Busta,6-4 6-4,R16
+Tour Finals,Hard,Novak Djokovic,Casper Ruud,7-5 6-3,F
+Tour Finals,Hard,Casper Ruud,Andrey Rublev,6-2 6-4,SF
+Tour Finals,Hard,Novak Djokovic,Taylor Fritz,7-6(5) 7-6(6),SF
+Tour Finals,Hard,Rafael Nadal,Casper Ruud,7-5 7-5,RR
+Tour Finals,Hard,Felix Auger Aliassime,Rafael Nadal,6-3 6-4,RR
+Tour Finals,Hard,Taylor Fritz,Rafael Nadal,7-6(3) 6-1,RR
+Tour Finals,Hard,Casper Ruud,Felix Auger Aliassime,7-6(4) 6-4,RR
+Tour Finals,Hard,Casper Ruud,Taylor Fritz,6-3 4-6 7-6(6),RR
+Tour Finals,Hard,Taylor Fritz,Felix Auger Aliassime,7-6(4) 6-7(5) 6-2,RR
+Tour Finals,Hard,Stefanos Tsitsipas,Daniil Medvedev,6-3 6-7(11) 7-6(1),RR
+Tour Finals,Hard,Andrey Rublev,Stefanos Tsitsipas,3-6 6-3 6-2,RR
+Tour Finals,Hard,Novak Djokovic,Stefanos Tsitsipas,6-4 7-6(4),RR
+Tour Finals,Hard,Andrey Rublev,Daniil Medvedev,6-7(7) 6-3 7-6(7),RR
+Tour Finals,Hard,Novak Djokovic,Daniil Medvedev,6-3 6-7(5) 7-6(2),RR
+Tour Finals,Hard,Novak Djokovic,Andrey Rublev,6-4 6-1,RR
