@@ -2,11 +2,11 @@
 
 ## Code
 
-This directory contains various R, RMarkdown, Excel, and Jupyter notebook files. The Jupyter notebooks are only used for aggregating and extracting data (see Data Lake section below), while main analysis was done with R. The Excel files mainly document results, but also contain some aggregatation functions and highlighting of cells. See descriptions below for which files contain code ran to obtain results in paper. If there are further inquries, please reach out here or through email.
+This directory contains various R, R Markdown, Excel, and Jupyter notebook files. The Jupyter notebooks are only used for aggregating and extracting data (see Data Lake section below), while main analysis was done with R. The Excel files mainly document results, but also contain some aggregatation functions and highlighting of cells. See descriptions below for which files contain code ran to obtain results in paper. If there are further inquries, please reach out here or through email.
 
 ### R & Excel
 
-Among the R and RMarkdown files, the 7 prediction notebooks, provided for reference, were the ones originally used for the study. Correspondingly, they are not very streamlined and in some cases contain outdated code. Overall, notebook 3 is the only notebook which is suitable for direct use. Notebook 1, including its 1m and 1n variants, can also be run for finalized results, but many of its accompanying comments are outdated.
+Among the R and R Markdown files, the 7 prediction notebooks, provided for reference, were the ones originally used for the study. Correspondingly, they are not very streamlined and in some cases contain outdated code. Overall, notebook 3 is the only notebook which is suitable for direct use. Notebook 1, including its 1m and 1n variants, can also be run for finalized results, but many of its accompanying comments are outdated.
 
 | File | Description |
 | ------ | -------------------------- |
@@ -19,7 +19,7 @@ Among the R and RMarkdown files, the 7 prediction notebooks, provided for refere
 | oaf_flips_players.Rmd | Examines players in the "oaf_flips" directory to obtain table in Appendix B. |
 | distance_examine_atp.xlsx, distance_examine_wta.xlsx | Contains records of matches with long distance ran and the tournament results of the players. Aggregate results are derived in the spreadsheet and reported in Appendix C. |
 | overlays.Rmd | Loads data obtained in notebooks 1 (including 1m and 1n) and 4, as well as certain sections of "scrap_paper" detailed below. Produces final results for overlays and merges. |
-| scrap_paper.Rmd | Used as digital scrap paper for small experiments outside of the notebooks. All experiments are separated by level 1 headers, and some can only be run after certain parts of code in the notebooks are run. Some experiments were eventually separated into their own RMarkdown files, such as "overlays" and "breakpoint_q_experiment. Among the ones still here, the sections "CO2", "CO2(ns)", and "CO(OAF)" were used to get results that went into "diff_p_results" and "overlays". These sections can be independently run. |
+| scrap_paper.Rmd | Used as digital scrap paper for small experiments outside of the notebooks. All experiments are separated by level 1 headers, and some can only be run after certain parts of code in the notebooks are run. Some experiments were eventually separated into their own R Markdown files, such as "overlays" and "breakpoint_q_experiment. Among the ones still here, the sections "CO2", "CO2(ns)", and "CO(OAF)" were used to get results that went into "diff_p_results" and "overlays". These sections can be independently run. |
 | prediction_notebook_1.Rmd, prediction_notebook_1m.Rmd, prediction_notebook_1n.Rmd | Notebooks used for the majority of experiments using different $p$ estimates. "1" is used for the 2019-2022 time period, while "1m" and "1n" are exact copies of "1", with "1m" accounting for 2015-2018 and "1n" for 2011-2014. |
 | prediction_notebook_2.Rmd | Notebook used for initial experiments on game scenarios. Organized and re-ran in "cat2_for_paper". |
 | prediction_notebook_3.Rmd | Notebook used for the 3 experiments on fatigue in Appendix C. The only one of the notebooks which is organized enough for direct reading. |
