@@ -29,8 +29,9 @@ p_A <- p
 p_B <- p
 ```
 ```{r}
-fig <- plot_ly(z = ~`Match Win Probability`, x = ~p_A, y = ~p_B)
-fig <- fig %>% add_surface()
+fig <- plot_ly(z = ~`Match Win Probability`, x = ~p_A, y = ~p_B,
+               colors = c("#d1d1d1","#bdbdbd","#636363"))
+fig <- fig %>% add_surface() %>% hide_colorbar()
 fig
 ```
 
