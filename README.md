@@ -2,11 +2,11 @@
 
 ## Code
 
-Now organized into chapters which can be indepedently run.
+Now organized into chapters which can be independently run.
 
 ## New Data
 
-"New" relative to the data in the archive directory. All from [Jeff Sackmann’s GitHub](https://github.com/JeffSackmann). Title of directory cannot be changed without making corresponding changes in the Jupyter notebooks.
+"New" relative to the data in the archive directory. All from [Jeff Sackmann’s GitHub](https://github.com/JeffSackmann). Title of directory cannot be changed without making corresponding changes in the Jupyter notebooks under the Code directory.
 
 ## Misc.
 
