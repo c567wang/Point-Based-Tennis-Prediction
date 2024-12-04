@@ -1,0 +1,1360 @@
+tourney_id,tourney_name,surface,tourney_level,winner_id,winner_name,loser_id,loser_name,score,best_of,round,minutes
+2017-580,Australian Open,Hard,G,104918,Andy Murray,105011,Illya Marchenko,7-5 7-6(5) 6-2,5,R128,167
+2017-580,Australian Open,Hard,G,126094,Andrey Rublev,104229,Yen Hsun Lu,4-6 6-3 7-6(0) 6-3,5,R128,170
+2017-580,Australian Open,Hard,G,200282,Alex De Minaur,105589,Gerald Melzer,5-7 6-3 2-6 7-6(2) 6-1,5,R128,222
+2017-580,Australian Open,Hard,G,105023,Sam Querrey,111460,Quentin Halys,6-7(10) 7-6(4) 6-3 6-4,5,R128,165
+2017-580,Australian Open,Hard,G,104545,John Isner,104505,Konstantin Kravchuk,6-3 6-4 6-7(5) 6-1,5,R128,143
+2017-580,Australian Open,Hard,G,104999,Mischa Zverev,104198,Guillermo Garcia Lopez,6-3 7-6(5) 6-4,5,R128,132
+2017-580,Australian Open,Hard,G,104291,Malek Jaziri,104424,Go Soeda,6-3 6-4 6-3,5,R128,120
+2017-580,Australian Open,Hard,G,122330,Alexander Bublik,106298,Lucas Pouille,6-0 3-6 6-3 6-4,5,R128,103
+2017-580,Australian Open,Hard,G,104607,Tomas Berdych,104563,Luca Vanni,6-1 RET,5,R128,32
+2017-580,Australian Open,Hard,G,105992,Ryan Harrison,103917,Nicolas Mahut,6-3 6-4 6-2,5,R128,122
+2017-580,Australian Open,Hard,G,111511,Noah Rubin,106216,Bjorn Fratangelo,6-7(4) 7-5 3-6 6-2 6-2,5,R128,188
+2017-580,Australian Open,Hard,G,103819,Roger Federer,103781,Jurgen Melzer,7-5 3-6 6-2 6-2,5,R128,125
+2017-580,Australian Open,Hard,G,105041,Lukas Lacko,105077,Albert Ramos,4-6 7-5 1-6 6-4 6-3,5,R128,200
+2017-580,Australian Open,Hard,G,104534,Dudi Sela,104719,Marcel Granollers,5-7 6-3 6-2 6-0,5,R128,154
+2017-580,Australian Open,Hard,G,104871,Jeremy Chardy,104597,Nicolas Almagro,4-0 RET,5,R128,23
+2017-580,Australian Open,Hard,G,105453,Kei Nishikori,105723,Andrey Kuznetsov,5-7 6-1 6-4 6-7(6) 6-2,5,R128,214
+2017-580,Australian Open,Hard,G,104527,Stan Wawrinka,105373,Martin Klizan,4-6 6-4 7-5 4-6 6-4,5,R128,204
+2017-580,Australian Open,Hard,G,105449,Steve Johnson,105643,Federico Delbonis,6-3 6-4 6-4,5,R128,120
+2017-580,Australian Open,Hard,G,103893,Paolo Lorenzi,105902,James Duckworth,6-4 7-6(4) 6-7(4) 6-4,5,R128,195
+2017-580,Australian Open,Hard,G,104678,Viktor Troicki,106000,Damir Dzumhur,6-4 6-4 2-6 2-6 6-3,5,R128,166
+2017-580,Australian Open,Hard,G,106043,Diego Schwartzman,104655,Pablo Cuevas,6-3 6-3 6-0,5,R128,82
+2017-580,Australian Open,Hard,G,104327,Steve Darcis,105032,Sam Groth,3-6 6-3 6-2 6-2,5,R128,130
+2017-580,Australian Open,Hard,G,104312,Andreas Seppi,103908,Paul Henri Mathieu,6-4 7-6(4) 6-7(3) 7-5,5,R128,185
+2017-580,Australian Open,Hard,G,106401,Nick Kyrgios,105671,Gastao Elias,6-1 6-2 6-2,5,R128,84
+2017-580,Australian Open,Hard,G,104542,Jo-Wilfried Tsonga,106329,Thiago Monteiro,6-1 6-3 6-7(5) 6-2,5,R128,143
+2017-580,Australian Open,Hard,G,105583,Dusan Lajovic,103565,Stephane Robert,6-3 6-3 6-3,5,R128,119
+2017-580,Australian Open,Hard,G,111575,Karen Khachanov,105173,Adrian Mannarino,6-4 3-6 7-6(9) 6-3,5,R128,166
+2017-580,Australian Open,Hard,G,106058,Jack Sock,105732,Pierre Hugues Herbert,6-4 7-6(4) 6-3,5,R128,132
+2017-580,Australian Open,Hard,G,106071,Bernard Tomic,105064,Thomaz Bellucci,6-2 6-1 6-4,5,R128,97
+2017-580,Australian Open,Hard,G,103607,Victor Estrella,105379,Aljaz Bedene,7-6(7) 7-5 0-6 6-3,5,R128,189
+2017-580,Australian Open,Hard,G,105554,Daniel Evans,105487,Facundo Bagnis,7-6(8) 6-3 6-1,5,R128,115
+2017-580,Australian Open,Hard,G,105227,Marin Cilic,105668,Jerzy Janowicz,4-6 4-6 6-2 6-2 6-3,5,R128,184
+2017-580,Australian Open,Hard,G,104792,Gael Monfils,106210,Jiri Vesely,6-2 6-3 6-2,5,R128,92
+2017-580,Australian Open,Hard,G,105238,Alexandr Dolgopolov,106432,Borna Coric,6-3 6-4 3-6 7-6(7),5,R128,177
+2017-580,Australian Open,Hard,G,105385,Donald Young,105341,Thomas Fabbiano,6-4 7-6(1) 6-4,5,R128,150
+2017-580,Australian Open,Hard,G,104259,Philipp Kohlschreiber,105932,Nikoloz Basilashvili,6-4 3-6 7-6(2) 6-4,5,R128,151
+2017-580,Australian Open,Hard,G,100644,Alexander Zverev,104898,Robin Haase,6-2 3-6 5-7 6-3 6-2,5,R128,174
+2017-580,Australian Open,Hard,G,126207,Frances Tiafoe,105062,Mikhail Kukushkin,6-1 6-7(3) 6-3 6-2,5,R128,157
+2017-580,Australian Open,Hard,G,104571,Marcos Baghdatis,104022,Mikhail Youzhny,6-3 3-0 RET,5,R128,65
+2017-580,Australian Open,Hard,G,104745,Rafael Nadal,104252,Florian Mayer,6-3 6-4 6-4,5,R128,124
+2017-580,Australian Open,Hard,G,105138,Roberto Bautista Agut,105550,Guido Pella,6-3 6-1 6-1,5,R128,83
+2017-580,Australian Open,Hard,G,106415,Yoshihito Nishioka,106109,Alex Bolt,6-4 1-6 6-2 6-4,5,R128,150
+2017-580,Australian Open,Hard,G,124014,Ernesto Escobedo,106421,Daniil Medvedev,7-5 4-6 7-6(5) 6-1,5,R128,156
+2017-580,Australian Open,Hard,G,103970,David Ferrer,117357,Omar Jasika,6-3 6-0 6-2,5,R128,85
+2017-580,Australian Open,Hard,G,104468,Gilles Simon,111581,Michael Mmoh,6-1 6-3 6-3,5,R128,110
+2017-580,Australian Open,Hard,G,104297,Rogerio Dutra Silva,111577,Jared Donaldson,3-6 0-6 6-1 6-4 6-4,5,R128,185
+2017-580,Australian Open,Hard,G,104180,Gilles Muller,126203,Taylor Fritz,7-6(6) 7-6(5) 6-3,5,R128,134
+2017-580,Australian Open,Hard,G,105683,Milos Raonic,104460,Dustin Brown,6-3 6-4 6-2,5,R128,92
+2017-580,Australian Open,Hard,G,106233,Dominic Thiem,105526,Jan Lennard Struff,4-6 6-4 6-4 6-3,5,R128,174
+2017-580,Australian Open,Hard,G,111442,Jordan Thompson,105311,Joao Sousa,6-7(2) 4-6 6-3 6-2 6-1,5,R128,201
+2017-580,Australian Open,Hard,G,105332,Benoit Paire,103163,Tommy Haas,7-6(2) 6-4 RET,5,R128,97
+2017-580,Australian Open,Hard,G,104926,Fabio Fognini,103852,Feliciano Lopez,7-5 6-3 7-5,5,R128,123
+2017-580,Australian Open,Hard,G,103333,Ivo Karlovic,104547,Horacio Zeballos,6-7(6) 3-6 7-5 6-2 22-20,5,R128,314
+2017-580,Australian Open,Hard,G,106225,Andrew Whittington,106361,Adam Pavlasek,6-4 4-6 6-2 6-3,5,R128,145
+2017-580,Australian Open,Hard,G,103285,Radek Stepanek,104098,Dmitry Tursunov,6-2 7-6(1) 6-3,5,R128,119
+2017-580,Australian Open,Hard,G,105676,David Goffin,124187,Reilly Opelka,6-4 4-6 6-2 4-6 6-4,5,R128,176
+2017-580,Australian Open,Hard,G,105777,Grigor Dimitrov,106331,Christopher Oconnell,7-6(2) 6-3 6-3,5,R128,121
+2017-580,Australian Open,Hard,G,111202,Hyeon Chung,105952,Renzo Olivo,6-2 6-3 6-2,5,R128,105
+2017-580,Australian Open,Hard,G,104122,Carlos Berlocq,105430,Radu Albot,6-4 7-6(4) 5-7 7-6(8),5,R128,236
+2017-580,Australian Open,Hard,G,104755,Richard Gasquet,106425,Blake Mott,6-4 6-4 6-2,5,R128,113
+2017-580,Australian Open,Hard,G,105807,Pablo Carreno Busta,105166,Peter Polansky,6-0 3-6 3-6 6-2 3-0 RET,5,R128,143
+2017-580,Australian Open,Hard,G,106378,Kyle Edmund,105053,Santiago Giraldo,6-2 7-5 6-3,5,R128,110
+2017-580,Australian Open,Hard,G,104797,Denis Istomin,104471,Ivan Dodig,6-1 6-4 3-6 7-5,5,R128,154
+2017-580,Australian Open,Hard,G,104925,Novak Djokovic,104269,Fernando Verdasco,6-1 7-6(4) 6-2,5,R128,140
+2017-580,Australian Open,Hard,G,104918,Andy Murray,126094,Andrey Rublev,6-3 6-0 6-2,5,R64,96
+2017-580,Australian Open,Hard,G,105023,Sam Querrey,200282,Alex De Minaur,7-6(5) 6-0 6-1,5,R64,108
+2017-580,Australian Open,Hard,G,104999,Mischa Zverev,104545,John Isner,6-7(4) 6-7(4) 6-4 7-6(7) 9-7,5,R64,250
+2017-580,Australian Open,Hard,G,104291,Malek Jaziri,122330,Alexander Bublik,6-2 6-3 7-5,5,R64,97
+2017-580,Australian Open,Hard,G,104607,Tomas Berdych,105992,Ryan Harrison,6-3 7-6(6) 6-2,5,R64,125
+2017-580,Australian Open,Hard,G,103819,Roger Federer,111511,Noah Rubin,7-5 6-3 7-6(3),5,R64,123
+2017-580,Australian Open,Hard,G,105041,Lukas Lacko,104534,Dudi Sela,2-6 6-3 6-2 6-4,5,R64,135
+2017-580,Australian Open,Hard,G,105453,Kei Nishikori,104871,Jeremy Chardy,6-3 6-4 6-3,5,R64,126
+2017-580,Australian Open,Hard,G,104527,Stan Wawrinka,105449,Steve Johnson,6-3 6-4 6-4,5,R64,111
+2017-580,Australian Open,Hard,G,104678,Viktor Troicki,103893,Paolo Lorenzi,6-3 1-6 7-6(3) 3-6 6-3,5,R64,227
+2017-580,Australian Open,Hard,G,104327,Steve Darcis,106043,Diego Schwartzman,6-3 6-3 2-6 6-4,5,R64,152
+2017-580,Australian Open,Hard,G,104312,Andreas Seppi,106401,Nick Kyrgios,1-6 6-7(1) 6-4 6-2 10-8,5,R64,188
+2017-580,Australian Open,Hard,G,104542,Jo-Wilfried Tsonga,105583,Dusan Lajovic,6-2 6-2 6-3,5,R64,105
+2017-580,Australian Open,Hard,G,106058,Jack Sock,111575,Karen Khachanov,6-3 6-4 6-4,5,R64,134
+2017-580,Australian Open,Hard,G,106071,Bernard Tomic,103607,Victor Estrella,7-5 7-6(4) 4-6 7-6(5),5,R64,200
+2017-580,Australian Open,Hard,G,105554,Daniel Evans,105227,Marin Cilic,3-6 7-5 6-3 6-3,5,R64,177
+2017-580,Australian Open,Hard,G,104792,Gael Monfils,105238,Alexandr Dolgopolov,6-3 6-4 1-6 6-0,5,R64,116
+2017-580,Australian Open,Hard,G,104259,Philipp Kohlschreiber,105385,Donald Young,7-5 6-3 6-0,5,R64,111
+2017-580,Australian Open,Hard,G,100644,Alexander Zverev,126207,Frances Tiafoe,6-2 6-3 6-4,5,R64,116
+2017-580,Australian Open,Hard,G,104745,Rafael Nadal,104571,Marcos Baghdatis,6-3 6-1 6-3,5,R64,132
+2017-580,Australian Open,Hard,G,105138,Roberto Bautista Agut,106415,Yoshihito Nishioka,6-2 6-3 6-3,5,R64,129
+2017-580,Australian Open,Hard,G,103970,David Ferrer,124014,Ernesto Escobedo,2-6 6-4 6-4 6-2,5,R64,166
+2017-580,Australian Open,Hard,G,104468,Gilles Simon,104297,Rogerio Dutra Silva,6-4 6-1 6-1,5,R64,96
+2017-580,Australian Open,Hard,G,105683,Milos Raonic,104180,Gilles Muller,6-3 6-4 7-6(4),5,R64,119
+2017-580,Australian Open,Hard,G,106233,Dominic Thiem,111442,Jordan Thompson,6-2 6-1 6-7(6) 6-4,5,R64,163
+2017-580,Australian Open,Hard,G,105332,Benoit Paire,104926,Fabio Fognini,7-6(3) 4-6 6-3 3-6 6-3,5,R64,208
+2017-580,Australian Open,Hard,G,103333,Ivo Karlovic,106225,Andrew Whittington,6-4 6-4 6-4,5,R64,120
+2017-580,Australian Open,Hard,G,105676,David Goffin,103285,Radek Stepanek,6-4 6-0 6-3,5,R64,104
+2017-580,Australian Open,Hard,G,105777,Grigor Dimitrov,111202,Hyeon Chung,1-6 6-4 6-4 6-4,5,R64,156
+2017-580,Australian Open,Hard,G,104755,Richard Gasquet,104122,Carlos Berlocq,6-1 6-1 6-1,5,R64,105
+2017-580,Australian Open,Hard,G,105807,Pablo Carreno Busta,106378,Kyle Edmund,6-2 6-4 6-2,5,R64,106
+2017-580,Australian Open,Hard,G,104797,Denis Istomin,104925,Novak Djokovic,7-6(8) 5-7 2-6 7-6(5) 6-4,5,R64,288
+2017-580,Australian Open,Hard,G,104918,Andy Murray,105023,Sam Querrey,6-4 6-2 6-4,5,R32,119
+2017-580,Australian Open,Hard,G,104999,Mischa Zverev,104291,Malek Jaziri,6-1 4-6 6-3 6-0,5,R32,141
+2017-580,Australian Open,Hard,G,103819,Roger Federer,104607,Tomas Berdych,6-2 6-4 6-4,5,R32,90
+2017-580,Australian Open,Hard,G,105453,Kei Nishikori,105041,Lukas Lacko,6-4 6-4 6-4,5,R32,131
+2017-580,Australian Open,Hard,G,104527,Stan Wawrinka,104678,Viktor Troicki,3-6 6-2 6-2 7-6(7),5,R32,152
+2017-580,Australian Open,Hard,G,104312,Andreas Seppi,104327,Steve Darcis,4-6 6-4 7-6(1) 7-6(2),5,R32,187
+2017-580,Australian Open,Hard,G,104542,Jo-Wilfried Tsonga,106058,Jack Sock,7-6(4) 7-5 6-7(8) 6-3,5,R32,213
+2017-580,Australian Open,Hard,G,105554,Daniel Evans,106071,Bernard Tomic,7-5 7-6(2) 7-6(3),5,R32,168
+2017-580,Australian Open,Hard,G,104792,Gael Monfils,104259,Philipp Kohlschreiber,6-3 7-6(1) 6-4,5,R32,115
+2017-580,Australian Open,Hard,G,104745,Rafael Nadal,100644,Alexander Zverev,4-6 6-3 6-7(5) 6-3 6-2,5,R32,245
+2017-580,Australian Open,Hard,G,105138,Roberto Bautista Agut,103970,David Ferrer,7-5 6-7(6) 7-6(3) 6-4,5,R32,242
+2017-580,Australian Open,Hard,G,105683,Milos Raonic,104468,Gilles Simon,6-2 7-6(5) 3-6 6-3,5,R32,154
+2017-580,Australian Open,Hard,G,106233,Dominic Thiem,105332,Benoit Paire,6-1 4-6 6-4 6-4,5,R32,143
+2017-580,Australian Open,Hard,G,105676,David Goffin,103333,Ivo Karlovic,6-3 6-2 6-4,5,R32,87
+2017-580,Australian Open,Hard,G,105777,Grigor Dimitrov,104755,Richard Gasquet,6-3 6-2 6-4,5,R32,122
+2017-580,Australian Open,Hard,G,104797,Denis Istomin,105807,Pablo Carreno Busta,6-4 4-6 6-4 4-6 6-2,5,R32,207
+2017-580,Australian Open,Hard,G,104999,Mischa Zverev,104918,Andy Murray,7-5 5-7 6-2 6-4,5,R16,213
+2017-580,Australian Open,Hard,G,103819,Roger Federer,105453,Kei Nishikori,6-7(4) 6-4 6-1 4-6 6-3,5,R16,203
+2017-580,Australian Open,Hard,G,104527,Stan Wawrinka,104312,Andreas Seppi,7-6(2) 7-6(4) 7-6(4),5,R16,163
+2017-580,Australian Open,Hard,G,104542,Jo-Wilfried Tsonga,105554,Daniel Evans,6-7(4) 6-2 6-4 6-4,5,R16,173
+2017-580,Australian Open,Hard,G,104745,Rafael Nadal,104792,Gael Monfils,6-3 6-3 4-6 6-4,5,R16,175
+2017-580,Australian Open,Hard,G,105683,Milos Raonic,105138,Roberto Bautista Agut,7-6(6) 3-6 6-4 6-1,5,R16,171
+2017-580,Australian Open,Hard,G,105676,David Goffin,106233,Dominic Thiem,5-7 7-6(4) 6-2 6-2,5,R16,163
+2017-580,Australian Open,Hard,G,105777,Grigor Dimitrov,104797,Denis Istomin,2-6 7-6(2) 6-2 6-1,5,R16,144
+2017-580,Australian Open,Hard,G,103819,Roger Federer,104999,Mischa Zverev,6-1 7-5 6-2,5,QF,92
+2017-580,Australian Open,Hard,G,104527,Stan Wawrinka,104542,Jo-Wilfried Tsonga,7-6(2) 6-4 6-3,5,QF,134
+2017-580,Australian Open,Hard,G,104745,Rafael Nadal,105683,Milos Raonic,6-4 7-6(7) 6-4,5,QF,164
+2017-580,Australian Open,Hard,G,105777,Grigor Dimitrov,105676,David Goffin,6-3 6-2 6-4,5,QF,132
+2017-580,Australian Open,Hard,G,103819,Roger Federer,104527,Stan Wawrinka,7-5 6-3 1-6 4-6 6-3,5,SF,184
+2017-580,Australian Open,Hard,G,104745,Rafael Nadal,105777,Grigor Dimitrov,6-3 5-7 7-6(5) 6-7(4) 6-4,5,SF,296
+2017-580,Australian Open,Hard,G,103819,Roger Federer,104745,Rafael Nadal,6-4 3-6 6-1 3-6 6-3,5,F,217
+2017-M-DC-2017-G1-AM-M-DOM-CHI-01,Davis Cup G1 R1: DOM vs CHI,Hard,D,111797,Nicolas Jarry,105497,Jose Hernandez,6-3 7-5 6-2,3,RR,107
+2017-M-DC-2017-G1-AM-M-DOM-CHI-01,Davis Cup G1 R1: DOM vs CHI,Hard,D,106426,Cristian Garin,106232,Roberto Cid,5-7 6-1 6-2 6-2,5,RR,163
+2017-M-DC-2017-G1-AM-M-DOM-CHI-01,Davis Cup G1 R1: DOM vs CHI,Hard,D,144642,Tomas Barrios Vera,144773,Jose Olivares,7-6(8) 7-6(2),3,RR,105
+2017-M-DC-2017-G1-AM-M-DOM-CHI-01,Davis Cup G1 R1: DOM vs CHI,Hard,D,111797,Nicolas Jarry,200572,Nick Hardt,6-3 6-3,3,RR,
+2017-M-DC-2017-G1-EPA-M-ISR-POR-01,Davis Cup G1 R1: ISR vs POR,Clay,D,105311,Joao Sousa,200075,Yshai Oliel,6-1 6-1 6-2,5,RR,88
+2017-M-DC-2017-G1-EPA-M-ISR-POR-01,Davis Cup G1 R1: ISR vs POR,Clay,D,105671,Gastao Elias,104534,Dudi Sela,1-6 6-2 6-4 6-2,5,RR,146
+2017-M-DC-2017-G1-EPA-M-ISR-POR-01,Davis Cup G1 R1: ISR vs POR,Clay,D,106393,Frederico Ferreira Silva,131951,Daniel Cukierman,6-2 6-0,3,RR,57
+2017-M-DC-2017-G1-EPA-M-ISR-POR-01,Davis Cup G1 R1: ISR vs POR,Clay,D,105155,Pedro Sousa,200075,Yshai Oliel,6-2 6-0,3,RR,44
+2017-M-DC-2017-G1-AO-M-NZL-IND-01,Davis Cup G1 R1: NZL vs IND,Hard,D,106026,Yuki Bhambri,110686,Finn Tearney,6-4 6-4 6-3,5,RR,
+2017-M-DC-2017-G1-AO-M-NZL-IND-01,Davis Cup G1 R1: NZL vs IND,Hard,D,106368,Ramkumar Ramanathan,104907,Jose Rubin Statham,6-3 6-4 6-3,5,RR,112
+2017-M-DC-2017-G1-AO-M-NZL-IND-01,Davis Cup G1 R1: NZL vs IND,Hard,D,106368,Ramkumar Ramanathan,110686,Finn Tearney,7-5 6-1 6-0,5,RR,
+2017-M-DC-2017-G1-AO-M-NZL-IND-01,Davis Cup G1 R1: NZL vs IND,Hard,D,106026,Yuki Bhambri,104907,Jose Rubin Statham,7-5 3-6 6-4,3,RR,
+2017-M-DC-2017-G1-AM-M-PER-ECU-01,Davis Cup G1 R1: PER vs ECU,Clay,D,105877,Emilio Gomez,122669,Juan Pablo Varillas,6-3 6-0 6-7(5) 2-6 6-3,5,RR,214
+2017-M-DC-2017-G1-AM-M-PER-ECU-01,Davis Cup G1 R1: PER vs ECU,Clay,D,105933,Roberto Quiroz,105273,Mauricio Echazu,5-7 6-4 6-1 6-3,5,RR,164
+2017-M-DC-2017-G1-AM-M-PER-ECU-01,Davis Cup G1 R1: PER vs ECU,Clay,D,105933,Roberto Quiroz,122669,Juan Pablo Varillas,6-4 7-6(6),3,RR,90
+2017-M-DC-2017-G1-AM-M-PER-ECU-01,Davis Cup G1 R1: PER vs ECU,Clay,D,105271,Gonzalo Escobar,122635,Alexander Merino,6-3 6-0,3,RR,46
+2017-M-DC-2017-G1-EPA-M-POL-BIH-01,Davis Cup G1 R1: POL vs BIH,Hard,D,105806,Mirza Basic,111794,Kamil Majchrzak,6-4 6-3 RET,3,RR,88
+2017-M-DC-2017-G1-EPA-M-POL-BIH-01,Davis Cup G1 R1: POL vs BIH,Hard,D,106000,Damir Dzumhur,128034,Hubert Hurkacz,7-6(1) 7-5 7-5,5,RR,134
+2017-M-DC-2017-G1-EPA-M-POL-BIH-01,Davis Cup G1 R1: POL vs BIH,Hard,D,106000,Damir Dzumhur,111794,Kamil Majchrzak,Walkover,3,RR,
+2017-M-DC-2017-G1-EPA-M-POL-BIH-01,Davis Cup G1 R1: POL vs BIH,Hard,D,105493,Tomislav Brkic,128034,Hubert Hurkacz,7-6(1) 4-6 7-5,3,RR,134
+2017-M-DC-2017-G1-EPA-M-ROU-BLR-01,Davis Cup G1 R1: ROU vs BLR,Hard,D,104494,Adrian Ungur,125802,Ilya Ivashka,6-2 5-7 7-5 6-4,5,RR,183
+2017-M-DC-2017-G1-EPA-M-ROU-BLR-01,Davis Cup G1 R1: ROU vs BLR,Hard,D,106078,Egor Gerasimov,105657,Marius Copil,6-3 6-4 6-4,5,RR,101
+2017-M-DC-2017-G1-EPA-M-ROU-BLR-01,Davis Cup G1 R1: ROU vs BLR,Hard,D,105657,Marius Copil,125802,Ilya Ivashka,7-5 6-4 6-1,3,RR,122
+2017-M-DC-2017-G1-EPA-M-ROU-BLR-01,Davis Cup G1 R1: ROU vs BLR,Hard,D,106078,Egor Gerasimov,104494,Adrian Ungur,7-6(5) 6-4 6-4,5,RR,137
+2017-M-DC-2017-G1-AO-M-UZB-KOR-01,Davis Cup G1 R1: UZB vs KOR,Hard,D,111202,Hyeon Chung,122109,Sanjar Fayziev,6-4 6-4 6-7(5) 4-6 6-0,5,RR,208
+2017-M-DC-2017-G1-AO-M-UZB-KOR-01,Davis Cup G1 R1: UZB vs KOR,Hard,D,104797,Denis Istomin,117353,Duck Hee Lee,4-6 6-2 7-6(0) 6-4,5,RR,165
+2017-M-DC-2017-G1-AO-M-UZB-KOR-01,Davis Cup G1 R1: UZB vs KOR,Hard,D,104797,Denis Istomin,126952,Soon Woo Kwon,3-6 7-6(5) 6-2 7-6(12),5,RR,196
+2017-M-DC-2017-G1-EPA-M-SVK-HUN-01,Davis Cup G1 R2: SVK vs HUN,Hard,D,105373,Martin Klizan,105226,Attila Balazs,6-1 6-2 3-6 6-4,5,RR,150
+2017-M-DC-2017-G1-EPA-M-SVK-HUN-01,Davis Cup G1 R2: SVK vs HUN,Hard,D,105916,Marton Fucsovics,106075,Jozef Kovalik,6-2 6-7(4) 6-3 6-4,5,RR,153
+2017-M-DC-2017-G1-EPA-M-SVK-HUN-01,Davis Cup G1 R2: SVK vs HUN,Hard,D,105916,Marton Fucsovics,105373,Martin Klizan,3-6 6-3 6-3 7-5,5,RR,154
+2017-M-DC-2017-G2-AM-M-BAH-VEN-01,Davis Cup G2 R1: BAH vs VEN,Hard,D,106175,Ricardo Rodriguez,132040,Philip Wilbert Major,6-7(5) 6-1 6-1 6-1,5,RR,163
+2017-M-DC-2017-G2-AM-M-BAH-VEN-01,Davis Cup G2 R1: BAH vs VEN,Hard,D,105334,Luis David Martinez,106180,Spencer Newman,7-5 6-0 7-6(5),5,RR,148
+2017-M-DC-2017-G2-AM-M-BAH-VEN-01,Davis Cup G2 R1: BAH vs VEN,Hard,D,106175,Ricardo Rodriguez,132028,Justin Lunn,6-0 6-2,3,RR,66
+2017-M-DC-2017-G2-AM-M-BAH-VEN-01,Davis Cup G2 R1: BAH vs VEN,Hard,D,105467,Jordi Munoz Abreu,132040,Philip Wilbert Major,6-7(8) 6-4 6-3,3,RR,167
+2017-M-DC-2017-G2-AM-M-BAR-PAR-01,Davis Cup G2 R1: BAR vs PAR,Clay,D,137018,Ayed Zatar,104656,Haydn Lewis,7-6(5) 7-5 6-2,5,RR,150
+2017-M-DC-2017-G2-AM-M-BAR-PAR-01,Davis Cup G2 R1: BAR vs PAR,Clay,D,105985,Darian King,200621,Bruno Britez,6-2 6-3 6-3,3,RR,134
+2017-M-DC-2017-G2-AM-M-BAR-PAR-01,Davis Cup G2 R1: BAR vs PAR,Clay,D,105985,Darian King,137018,Ayed Zatar,7-6(2) 6-1 6-1,3,RR,97
+2017-M-DC-2017-G2-AM-M-BAR-PAR-01,Davis Cup G2 R1: BAR vs PAR,Clay,D,200621,Bruno Britez,108786,Seanon Williams,6-3 6-2,3,RR,67
+2017-M-DC-2017-G2-AM-M-BOL-ESA-01,Davis Cup G2 R1: BOL vs ESA,Hard,D,105156,Federico Zeballos,108763,Alberto Emmanuel Alvarado Larin,6-4 6-2 6-3,3,RR,115
+2017-M-DC-2017-G2-AM-M-BOL-ESA-01,Davis Cup G2 R1: BOL vs ESA,Hard,D,105656,Marcelo Arevalo,106198,Hugo Dellien,6-2 6-4 7-5,5,RR,134
+2017-M-DC-2017-G2-AM-M-BOL-ESA-01,Davis Cup G2 R1: BOL vs ESA,Hard,D,105656,Marcelo Arevalo,105156,Federico Zeballos,6-3 6-3 6-1,5,RR,
+2017-M-DC-2017-G2-AM-M-BOL-ESA-01,Davis Cup G2 R1: BOL vs ESA,Hard,D,123965,Rodrigo Banzer,108763,Alberto Emmanuel Alvarado Larin,6-2 6-0,3,RR,
+2017-M-DC-2017-G2-EPA-M-EST-RSA-01,Davis Cup G2 R1: EST vs RSA,Hard,D,105707,Nicolaas Scholtz,105132,Jurgen Zopp,4-6 6-4 6-3 RET,3,RR,116
+2017-M-DC-2017-G2-EPA-M-EST-RSA-01,Davis Cup G2 R1: EST vs RSA,Hard,D,144750,Lloyd Harris,104901,Vladimir Ivanov,6-4 6-3 6-2,5,RR,114
+2017-M-DC-2017-G2-EPA-M-EST-RSA-01,Davis Cup G2 R1: EST vs RSA,Hard,D,144750,Lloyd Harris,144940,Mattias Siimar,7-5 6-3,3,RR,76
+2017-M-DC-2017-G2-EPA-M-EST-RSA-01,Davis Cup G2 R1: EST vs RSA,Hard,D,104901,Vladimir Ivanov,105707,Nicolaas Scholtz,7-6(3) 6-3,3,RR,89
+2017-M-DC-2017-G2-EPA-M-FIN-GEO-01,Davis Cup G2 R1: FIN vs GEO,Carpet,D,105932,Nikoloz Basilashvili,144814,Eero Vasa,2-6 6-1 6-4 6-1,5,RR,117
+2017-M-DC-2017-G2-EPA-M-FIN-GEO-01,Davis Cup G2 R1: FIN vs GEO,Carpet,D,105349,Harri Heliovaara,106106,George Tsivadze,7-5 6-2 6-1,3,RR,112
+2017-M-DC-2017-G2-EPA-M-FIN-GEO-01,Davis Cup G2 R1: FIN vs GEO,Carpet,D,105932,Nikoloz Basilashvili,200325,Emil Ruusuvuori,6-2 6-4 6-4,5,RR,110
+2017-M-DC-2017-G2-EPA-M-FIN-GEO-01,Davis Cup G2 R1: FIN vs GEO,Carpet,D,106106,George Tsivadze,126609,Patrik Niklas Salminen,6-4 7-5 5-7 0-6 7-6(5),5,RR,
+2017-M-DC-2017-G2-AO-M-INA-PHI-01,Davis Cup G2 R1: INA vs PHI,Clay,D,105812,David Agung Susanto,202165,Alberto Lim,3-6 2-6 6-2 6-1 1-1 RET,3,RR,187
+2017-M-DC-2017-G2-AO-M-INA-PHI-01,Davis Cup G2 R1: INA vs PHI,Clay,D,104604,Ruben Gonzales,105177,Aditya Hari Sasongko,6-2 6-2 6-4,5,RR,115
+2017-M-DC-2017-G2-AO-M-INA-PHI-01,Davis Cup G2 R1: INA vs PHI,Clay,D,104604,Ruben Gonzales,105812,David Agung Susanto,6-2 6-3 6-4,5,RR,122
+2017-M-DC-2017-G2-AO-M-INA-PHI-01,Davis Cup G2 R1: INA vs PHI,Clay,D,202165,Alberto Lim,200045,Anthony Susanto,7-5 6-3,3,RR,86
+2017-M-DC-2017-G2-AO-M-KUW-THA-01,Davis Cup G2 R1: KUW vs THA,Hard,D,127143,Jirat Navasirisomboon,104895,Abdullah Maqdas,6-2 6-4 6-7(4) 6-4,5,RR,163
+2017-M-DC-2017-G2-AO-M-KUW-THA-01,Davis Cup G2 R1: KUW vs THA,Hard,D,103600,Mohammad Ghareeb,106397,Wishaya Trongcharoenchaikul,6-4 3-6 6-3 6-7(3) 6-0,5,RR,188
+2017-M-DC-2017-G2-AO-M-KUW-THA-01,Davis Cup G2 R1: KUW vs THA,Hard,D,106397,Wishaya Trongcharoenchaikul,104895,Abdullah Maqdas,6-4 6-2 5-7 4-6 7-6(3),5,RR,220
+2017-M-DC-2017-G2-EPA-M-LTU-MAD-01,Davis Cup G2 R1: LTU vs MAD,Hard,D,105827,Laurynas Grigelis,145003,Lucas Andriamasilalao,6-1 6-2 6-4,5,RR,82
+2017-M-DC-2017-G2-EPA-M-LTU-MAD-01,Davis Cup G2 R1: LTU vs MAD,Hard,D,105182,Antso Rakotondramanga,126689,Tadas Babelis,6-4 6-4 6-3,3,RR,97
+2017-M-DC-2017-G2-EPA-M-LTU-MAD-01,Davis Cup G2 R1: LTU vs MAD,Hard,D,105827,Laurynas Grigelis,105182,Antso Rakotondramanga,6-4 7-6(6) 6-4,5,RR,116
+2017-M-DC-2017-G2-EPA-M-LTU-MAD-01,Davis Cup G2 R1: LTU vs MAD,Hard,D,200272,Jean Jacques Rakotohasy,202219,Tomas Vaise,6-3 4-6 6-2,3,RR,89
+2017-M-DC-2017-G2-EPA-M-MAR-DEN-01,Davis Cup G2 R1: MAR vs DEN,Carpet,D,104233,Frederik Nielsen,144760,Amine Ahouda,6-1 6-3 6-3,5,RR,80
+2017-M-DC-2017-G2-EPA-M-MAR-DEN-01,Davis Cup G2 R1: MAR vs DEN,Carpet,D,105149,Reda El Amrani,126526,Soren Hess Olesen,6-2 3-6 6-2 7-6(5),5,RR,146
+2017-M-DC-2017-G2-EPA-M-MAR-DEN-01,Davis Cup G2 R1: MAR vs DEN,Carpet,D,104233,Frederik Nielsen,105149,Reda El Amrani,6-2 3-6 6-3 6-4,5,RR,127
+2017-M-DC-2017-G2-EPA-M-MAR-DEN-01,Davis Cup G2 R1: MAR vs DEN,Carpet,D,126526,Soren Hess Olesen,105250,Mehdi Jdi,3-6 6-0 6-0,3,RR,58
+2017-M-DC-2017-G2-AM-M-MEX-GUA-01,Davis Cup G2 R1: MEX vs GUA,Hard,D,108739,Wilfredo Gonzalez,106250,Luis Patino,6-4 6-2 6-4,5,RR,131
+2017-M-DC-2017-G2-AM-M-MEX-GUA-01,Davis Cup G2 R1: MEX vs GUA,Hard,D,105688,Manuel Sanchez,105499,Christopher Diaz Figueroa,6-2 6-2 7-6(2),3,RR,134
+2017-M-DC-2017-G2-AM-M-MEX-GUA-01,Davis Cup G2 R1: MEX vs GUA,Hard,D,105499,Christopher Diaz Figueroa,126204,Gerardo Lopez Villasenor,6-7(5) 6-4 7-5 6-2,5,RR,200
+2017-M-DC-2017-G2-EPA-M-MON-SLO-01,Davis Cup G2 R1: MON vs SLO,Hard,D,104882,Blaz Kavcic,200031,Lucas Catarina,6-4 2-6 6-2 6-4,5,RR,164
+2017-M-DC-2017-G2-EPA-M-MON-SLO-01,Davis Cup G2 R1: MON vs SLO,Hard,D,104813,Grega Zemlja,106033,Romain Arneodo,6-3 6-4 6-7(5) 6-4,5,RR,175
+2017-M-DC-2017-G2-EPA-M-MON-SLO-01,Davis Cup G2 R1: MON vs SLO,Hard,D,104813,Grega Zemlja,200031,Lucas Catarina,6-2 6-3 6-1,5,RR,101
+2017-M-DC-2017-G2-EPA-M-MON-SLO-01,Davis Cup G2 R1: MON vs SLO,Hard,D,103531,Thomas Oger,105798,Tilen Zitnik,1-6 6-4 6-2,3,RR,89
+2017-M-DC-2017-G2-EPA-M-NOR-LAT-01,Davis Cup G2 R1: NOR vs LAT,Hard,D,134770,Casper Ruud,106342,Martins Podzus,6-3 6-1 7-5,3,RR,114
+2017-M-DC-2017-G2-EPA-M-NOR-LAT-01,Davis Cup G2 R1: NOR vs LAT,Hard,D,126340,Viktor Durasovic,108761,Mikelis Libietis,6-7(5) 6-4 6-1 7-6(3),5,RR,185
+2017-M-DC-2017-G2-EPA-M-NOR-LAT-01,Davis Cup G2 R1: NOR vs LAT,Hard,D,202382,Simen Sunde Bratholm,144854,Rudolfs Mednis,5-7 7-6(5) 7-6(6),3,RR,162
+2017-M-DC-2017-G2-EPA-M-NOR-LAT-01,Davis Cup G2 R1: NOR vs LAT,Hard,D,126340,Viktor Durasovic,123915,Arturs Lazdins,Walkover,3,RR,
+2017-M-DC-2017-G2-AO-M-PAK-IRI-01,Davis Cup G2 R1: PAK vs IRI,Hard,D,103499,Aqeel Khan,105566,Shahin Khaledan,7-6(1) 6-4 6-2,5,RR,131
+2017-M-DC-2017-G2-AO-M-PAK-IRI-01,Davis Cup G2 R1: PAK vs IRI,Hard,D,103529,Aisam Ul Haq Qureshi,103875,Anoosha Shahgholi,6-1 6-2 6-2,5,RR,78
+2017-M-DC-2017-G2-AO-M-PAK-IRI-01,Davis Cup G2 R1: PAK vs IRI,Hard,D,106085,Hamid Reza Nadaf,120792,M Abid Ali Khan Akbar,6-7(4) 6-4 6-3,3,RR,
+2017-M-DC-2017-G2-AO-M-PAK-IRI-01,Davis Cup G2 R1: PAK vs IRI,Hard,D,105566,Shahin Khaledan,108782,Mahammad Abid,7-6(8) 6-3,3,RR,
+2017-M-DC-2017-G2-EPA-M-SWE-TUN-01,Davis Cup G2 R1: SWE vs TUN,Hard,D,104291,Malek Jaziri,106035,Isak Arvidsson,6-4 7-5 6-2,5,RR,128
+2017-M-DC-2017-G2-EPA-M-SWE-TUN-01,Davis Cup G2 R1: SWE vs TUN,Hard,D,105113,Patrik Rosenholm,144826,Aziz Dougaz,7-6(4) 6-3 3-6 4-6 6-3,5,RR,220
+2017-M-DC-2017-G2-EPA-M-SWE-TUN-01,Davis Cup G2 R1: SWE vs TUN,Hard,D,104291,Malek Jaziri,105113,Patrik Rosenholm,6-3 6-3 6-1,5,RR,124
+2017-M-DC-2017-G2-EPA-M-SWE-TUN-01,Davis Cup G2 R1: SWE vs TUN,Hard,D,106035,Isak Arvidsson,144826,Aziz Dougaz,6-7(7) 6-2 6-1 3-6 6-3,5,RR,251
+2017-M-DC-2017-G2-EPA-M-TUR-CYP-01,Davis Cup G2 R1: TUR vs CYP,Hard,D,117356,Cem Ilkel,117365,Petros Chrysochos,6-7(4) 3-6 6-3 6-0 6-4,5,RR,201
+2017-M-DC-2017-G2-EPA-M-TUR-CYP-01,Davis Cup G2 R1: TUR vs CYP,Hard,D,104947,Marsel Ilhan,144949,Menelaos Efstathiou,5-7 1-6 6-4 7-6(5) 6-4,5,RR,213
+2017-M-DC-2017-G2-EPA-M-TUR-CYP-01,Davis Cup G2 R1: TUR vs CYP,Hard,D,104947,Marsel Ilhan,117365,Petros Chrysochos,5-7 7-5 7-6(2) 6-4,5,RR,181
+2017-M-DC-2017-G2-EPA-M-TUR-CYP-01,Davis Cup G2 R1: TUR vs CYP,Hard,D,123795,Altug Celikbilek,123315,Nicholas Campbell,6-3 7-6(1),3,RR,71
+2017-M-DC-2017-G2-AO-M-VIE-HKG-01,Davis Cup G2 R1: VIE vs HKG,Hard,D,138846,Hong Kit Jack Wong,106392,Thien Nguyen Hoang,6-7(4) 7-5 6-3 3-6 6-0,5,RR,206
+2017-M-DC-2017-G2-AO-M-VIE-HKG-01,Davis Cup G2 R1: VIE vs HKG,Hard,D,122533,Nam Hoang Ly,124023,Hei Yin Andrew Li,6-1 6-2 6-4,5,RR,117
+2017-M-DC-2017-G2-AO-M-VIE-HKG-01,Davis Cup G2 R1: VIE vs HKG,Hard,D,122533,Nam Hoang Ly,138846,Hong Kit Jack Wong,6-3 7-6(8) 6-4,5,RR,150
+2017-M-DC-2017-G2-AO-M-VIE-HKG-01,Davis Cup G2 R1: VIE vs HKG,Hard,D,104816,Karan Rastogi,106392,Thien Nguyen Hoang,6-7(4) 6-1 6-2 6-1,5,RR,
+2017-M-DC-2017-WG-M-ARG-ITA-01,Davis Cup WG R1: ARG vs ITA,Clay,D,103893,Paolo Lorenzi,105550,Guido Pella,6-3 6-3 6-3,3,RR,145
+2017-M-DC-2017-WG-M-ARG-ITA-01,Davis Cup WG R1: ARG vs ITA,Clay,D,104312,Andreas Seppi,104122,Carlos Berlocq,6-1 6-2 1-6 7-6(6),5,RR,178
+2017-M-DC-2017-WG-M-ARG-ITA-01,Davis Cup WG R1: ARG vs ITA,Clay,D,104122,Carlos Berlocq,103893,Paolo Lorenzi,4-6 6-4 6-1 3-6 6-3,5,RR,254
+2017-M-DC-2017-WG-M-ARG-ITA-01,Davis Cup WG R1: ARG vs ITA,Clay,D,104926,Fabio Fognini,105550,Guido Pella,2-6 4-6 6-3 6-4 6-2,5,RR,255
+2017-M-DC-2017-WG-M-BEL-GER-01,Davis Cup WG R1: BEL vs GER,Hard,D,104327,Steve Darcis,104259,Philipp Kohlschreiber,6-4 3-6 2-6 7-6(2) 7-6(5),5,RR,233
+2017-M-DC-2017-WG-M-BEL-GER-01,Davis Cup WG R1: BEL vs GER,Hard,D,100644,Alexander Zverev,105963,Arthur De Greef,6-3 6-3 6-4,5,RR,103
+2017-M-DC-2017-WG-M-BEL-GER-01,Davis Cup WG R1: BEL vs GER,Hard,D,104327,Steve Darcis,100644,Alexander Zverev,2-6 6-4 6-4 7-6(8),5,RR,182
+2017-M-DC-2017-WG-M-BEL-GER-01,Davis Cup WG R1: BEL vs GER,Hard,D,105074,Ruben Bemelmans,104999,Mischa Zverev,7-5 6-1,3,RR,50
+2017-M-DC-2017-WG-M-CAN-GBR-01,Davis Cup WG R1: CAN vs GBR,Hard,D,105554,Daniel Evans,133430,Denis Shapovalov,6-3 6-3 6-4,3,RR,110
+2017-M-DC-2017-WG-M-CAN-GBR-01,Davis Cup WG R1: CAN vs GBR,Hard,D,105577,Vasek Pospisil,106378,Kyle Edmund,6-4 6-1 7-6(3),5,RR,128
+2017-M-DC-2017-WG-M-CAN-GBR-01,Davis Cup WG R1: CAN vs GBR,Hard,D,105577,Vasek Pospisil,105554,Daniel Evans,7-6(3) 6-4 3-6 7-6(5),5,RR,203
+2017-M-DC-2017-WG-M-CAN-GBR-01,Davis Cup WG R1: CAN vs GBR,Hard,D,106378,Kyle Edmund,133430,Denis Shapovalov,6-3 6-4 2-1 DEF,3,RR,78
+2017-M-DC-2017-WG-M-CZE-AUS-01,Davis Cup WG R1: CZE vs AUS,Hard,D,111442,Jordan Thompson,106210,Jiri Vesely,6-3 6-3 6-4,5,RR,126
+2017-M-DC-2017-WG-M-CZE-AUS-01,Davis Cup WG R1: CZE vs AUS,Hard,D,106401,Nick Kyrgios,105596,Jan Satral,6-2 6-3 6-2,5,RR,95
+2017-M-DC-2017-WG-M-CZE-AUS-01,Davis Cup WG R1: CZE vs AUS,Hard,D,106210,Jiri Vesely,105032,Sam Groth,3-6 7-5 6-3,3,RR,107
+2017-M-DC-2017-WG-M-CZE-AUS-01,Davis Cup WG R1: CZE vs AUS,Hard,D,111442,Jordan Thompson,105596,Jan Satral,7-6(5) 6-2,3,RR,91
+2017-M-DC-2017-WG-M-ESP-CRO-01,Davis Cup WG R1: ESP vs CRO,Hard,D,105015,Franko Skugor,105807,Pablo Carreno Busta,3-6 6-3 6-4 4-6 7-6(6),5,RR,243
+2017-M-DC-2017-WG-M-ESP-CRO-01,Davis Cup WG R1: ESP vs CRO,Hard,D,105138,Roberto Bautista Agut,105302,Ante Pavic,6-4 6-2 6-3,3,RR,124
+2017-M-DC-2017-WG-M-ESP-CRO-01,Davis Cup WG R1: ESP vs CRO,Hard,D,105138,Roberto Bautista Agut,105015,Franko Skugor,6-1 6-7(4) 6-3 7-6(6),5,RR,199
+2017-M-DC-2017-WG-M-ESP-CRO-01,Davis Cup WG R1: ESP vs CRO,Hard,D,105807,Pablo Carreno Busta,105254,Nikola Mektic,7-6(4) 6-1 6-4,3,RR,135
+2017-M-DC-2017-WG-M-JPN-FRA-01,Davis Cup WG R1: JPN vs FRA,Hard,D,104755,Richard Gasquet,106121,Taro Daniel,6-2 6-3 6-2,3,RR,122
+2017-M-DC-2017-WG-M-JPN-FRA-01,Davis Cup WG R1: JPN vs FRA,Hard,D,104468,Gilles Simon,106415,Yoshihito Nishioka,6-3 6-3 6-4,3,RR,119
+2017-M-DC-2017-WG-M-JPN-FRA-01,Davis Cup WG R1: JPN vs FRA,Hard,D,103917,Nicolas Mahut,106415,Yoshihito Nishioka,6-1 1-1 RET,3,RR,33
+2017-M-DC-2017-WG-M-JPN-FRA-01,Davis Cup WG R1: JPN vs FRA,Hard,D,106034,Yasutaka Uchiyama,105732,Pierre Hugues Herbert,6-4 6-4,3,RR,60
+2017-M-DC-2017-WG-M-RUS-SRB-01,Davis Cup WG R1: RUS vs SRB,Hard,D,104678,Viktor Troicki,111575,Karen Khachanov,6-4 6-7(3) 6-3 1-6 7-6(6),5,RR,270
+2017-M-DC-2017-WG-M-RUS-SRB-01,Davis Cup WG R1: RUS vs SRB,Hard,D,104925,Novak Djokovic,106421,Daniil Medvedev,3-6 6-4 6-1 1-0 RET,3,RR,136
+2017-M-DC-2017-WG-M-RUS-SRB-01,Davis Cup WG R1: RUS vs SRB,Hard,D,105583,Dusan Lajovic,104505,Konstantin Kravchuk,6-3 4-6 6-3,3,RR,
+2017-M-DC-2017-WG-M-RUS-SRB-01,Davis Cup WG R1: RUS vs SRB,Hard,D,106421,Daniil Medvedev,102800,Nenad Zimonjic,Walkover,3,RR,
+2017-M-DC-2017-WG-M-SUI-USA-01,Davis Cup WG R1: SUI vs USA,Hard,D,106058,Jack Sock,103843,Marco Chiudinelli,6-4 6-3 6-1,5,RR,118
+2017-M-DC-2017-WG-M-SUI-USA-01,Davis Cup WG R1: SUI vs USA,Hard,D,104545,John Isner,105967,Henri Laaksonen,4-6 6-2 6-2 7-6(1),5,RR,164
+2017-M-DC-2017-WG-M-SUI-USA-01,Davis Cup WG R1: SUI vs USA,Hard,D,105023,Sam Querrey,104847,Adrien Bossel,6-3 7-5,3,RR,73
+2017-M-DC-2017-WG-M-SUI-USA-01,Davis Cup WG R1: SUI vs USA,Hard,D,105449,Steve Johnson,134472,Antoine Bellier,6-4 6-3,3,RR,60
+2017-M-DC-2017-G1-AO-M-TPE-CHN-01,Davis Cup G1 R1: TPE vs CHN,Hard,D,104810,Zhe Li,104251,Ti Chen,5-7 7-5 6-2 6-7(6) 7-5,5,RR,276
+2017-M-DC-2017-G1-AO-M-TPE-CHN-01,Davis Cup G1 R1: TPE vs CHN,Hard,D,200059,Yibing Wu,105359,Jason Jung,6-1 4-6 5-7 7-6(9) 4-1 RET,3,RR,230
+2017-M-DC-2017-G1-AO-M-TPE-CHN-01,Davis Cup G1 R1: TPE vs CHN,Hard,D,104810,Zhe Li,134120,Kuan Yi Lee,5-7 6-2 7-6(3),3,RR,126
+2017-M-DC-2017-G1-AO-M-TPE-CHN-01,Davis Cup G1 R1: TPE vs CHN,Hard,D,111190,Zhizhen Zhang,105448,Hsien Yin Peng,6-2 3-6 7-6(4),3,RR,101
+2017-M006,Indian Wells Masters,Hard,M,106378,Kyle Edmund,105671,Gastao Elias,6-1 6-3,3,R128,65
+2017-M006,Indian Wells Masters,Hard,M,105643,Federico Delbonis,105723,Andrey Kuznetsov,6-3 6-4,3,R128,69
+2017-M006,Indian Wells Masters,Hard,M,105487,Facundo Bagnis,103898,Julien Benneteau,5-7 6-4 6-2,3,R128,121
+2017-M006,Indian Wells Masters,Hard,M,104547,Horacio Zeballos,105657,Marius Copil,6-7(5) 7-6(2) 6-4,3,R128,154
+2017-M006,Indian Wells Masters,Hard,M,103565,Stephane Robert,104534,Dudi Sela,6-4 6-4,3,R128,73
+2017-M006,Indian Wells Masters,Hard,M,104731,Kevin Anderson,105943,Federico Gaio,6-1 6-4,3,R128,77
+2017-M006,Indian Wells Masters,Hard,M,105732,Pierre Hugues Herbert,105064,Thomaz Bellucci,7-6(5) 6-7(1) 6-3,3,R128,155
+2017-M006,Indian Wells Masters,Hard,M,105550,Guido Pella,104198,Guillermo Garcia Lopez,4-6 7-5 6-2,3,R128,137
+2017-M006,Indian Wells Masters,Hard,M,105554,Daniel Evans,104460,Dustin Brown,6-1 6-1,3,R128,52
+2017-M006,Indian Wells Masters,Hard,M,106210,Jiri Vesely,105952,Renzo Olivo,6-4 2-6 6-1,3,R128,113
+2017-M006,Indian Wells Masters,Hard,M,105385,Donald Young,111578,Stefan Kozlov,7-5 7-6(5),3,R128,113
+2017-M006,Indian Wells Masters,Hard,M,105526,Jan Lennard Struff,105053,Santiago Giraldo,6-3 6-4,3,R128,76
+2017-M006,Indian Wells Masters,Hard,M,104022,Mikhail Youzhny,106421,Daniil Medvedev,6-4 6-4,3,R128,92
+2017-M006,Indian Wells Masters,Hard,M,105967,Henri Laaksonen,106432,Borna Coric,3-6 6-4 6-2,3,R128,129
+2017-M006,Indian Wells Masters,Hard,M,104291,Malek Jaziri,103917,Nicolas Mahut,6-3 6-2,3,R128,87
+2017-M006,Indian Wells Masters,Hard,M,126203,Taylor Fritz,105332,Benoit Paire,6-3 6-2,3,R128,65
+2017-M006,Indian Wells Masters,Hard,M,104871,Jeremy Chardy,105430,Radu Albot,7-6(2) 6-2,3,R128,107
+2017-M006,Indian Wells Masters,Hard,M,105311,Joao Sousa,106043,Diego Schwartzman,4-6 6-3 6-4,3,R128,128
+2017-M006,Indian Wells Masters,Hard,M,105062,Mikhail Kukushkin,111442,Jordan Thompson,1-6 6-1 3-0 RET,3,R128,86
+2017-M006,Indian Wells Masters,Hard,M,105985,Darian King,105932,Nikoloz Basilashvili,7-5 7-5,3,R128,105
+2017-M006,Indian Wells Masters,Hard,M,106216,Bjorn Fratangelo,106071,Bernard Tomic,6-2 6-2,3,R128,62
+2017-M006,Indian Wells Masters,Hard,M,106415,Yoshihito Nishioka,111200,Elias Ymer,6-4 6-1,3,R128,107
+2017-M006,Indian Wells Masters,Hard,M,105238,Alexandr Dolgopolov,104678,Viktor Troicki,6-1 6-4,3,R128,69
+2017-M006,Indian Wells Masters,Hard,M,103893,Paolo Lorenzi,104898,Robin Haase,6-4 6-3,3,R128,83
+2017-M006,Indian Wells Masters,Hard,M,104926,Fabio Fognini,104505,Konstantin Kravchuk,0-6 7-5 6-4,3,R128,138
+2017-M006,Indian Wells Masters,Hard,M,105373,Martin Klizan,106329,Thiago Monteiro,7-6(6) 6-3,3,R128,99
+2017-M006,Indian Wells Masters,Hard,M,106000,Damir Dzumhur,105992,Ryan Harrison,6-4 3-6 7-5,3,R128,130
+2017-M006,Indian Wells Masters,Hard,M,111575,Karen Khachanov,103990,Tommy Robredo,6-1 7-5,3,R128,72
+2017-M006,Indian Wells Masters,Hard,M,105173,Adrian Mannarino,104338,Juan Monaco,6-3 6-7(5) 6-1,3,R128,126
+2017-M006,Indian Wells Masters,Hard,M,105376,Peter Gojowczyk,124187,Reilly Opelka,6-4 3-6 6-1,3,R128,86
+2017-M006,Indian Wells Masters,Hard,M,105583,Dusan Lajovic,126207,Frances Tiafoe,6-3 6-3,3,R128,77
+2017-M006,Indian Wells Masters,Hard,M,105577,Vasek Pospisil,104229,Yen Hsun Lu,6-7(6) 6-4 6-3,3,R128,149
+2017-M006,Indian Wells Masters,Hard,M,104925,Novak Djokovic,106378,Kyle Edmund,6-4 7-6(5),3,R64,111
+2017-M006,Indian Wells Masters,Hard,M,105223,Juan Martin del Potro,105643,Federico Delbonis,7-6(5) 6-3,3,R64,111
+2017-M006,Indian Wells Masters,Hard,M,100644,Alexander Zverev,105487,Facundo Bagnis,7-6(10) 6-3,3,R64,100
+2017-M006,Indian Wells Masters,Hard,M,106401,Nick Kyrgios,104547,Horacio Zeballos,6-3 6-4,3,R64,71
+2017-M006,Indian Wells Masters,Hard,M,103819,Roger Federer,103565,Stephane Robert,6-2 6-1,3,R64,51
+2017-M006,Indian Wells Masters,Hard,M,105449,Steve Johnson,104731,Kevin Anderson,6-4 3-6 7-6(4),3,R64,133
+2017-M006,Indian Wells Masters,Hard,M,104269,Fernando Verdasco,105732,Pierre Hugues Herbert,7-6(5) 6-1,3,R64,75
+2017-M006,Indian Wells Masters,Hard,M,104745,Rafael Nadal,105550,Guido Pella,6-3 6-2,3,R64,81
+2017-M006,Indian Wells Masters,Hard,M,105453,Kei Nishikori,105554,Daniel Evans,6-3 6-4,3,R64,84
+2017-M006,Indian Wells Masters,Hard,M,104180,Gilles Muller,106210,Jiri Vesely,7-6(1) 6-1,3,R64,87
+2017-M006,Indian Wells Masters,Hard,M,105385,Donald Young,105023,Sam Querrey,6-3 3-6 6-3,3,R64,92
+2017-M006,Indian Wells Masters,Hard,M,106298,Lucas Pouille,105526,Jan Lennard Struff,6-3 6-2,3,R64,71
+2017-M006,Indian Wells Masters,Hard,M,105777,Grigor Dimitrov,104022,Mikhail Youzhny,6-4 6-0,3,R64,70
+2017-M006,Indian Wells Masters,Hard,M,106058,Jack Sock,105967,Henri Laaksonen,6-3 0-6 6-4,3,R64,100
+2017-M006,Indian Wells Masters,Hard,M,104291,Malek Jaziri,104719,Marcel Granollers,7-5 6-3,3,R64,94
+2017-M006,Indian Wells Masters,Hard,M,126203,Taylor Fritz,105227,Marin Cilic,4-6 7-5 6-4,3,R64,137
+2017-M006,Indian Wells Masters,Hard,M,106233,Dominic Thiem,104871,Jeremy Chardy,6-2 6-4,3,R64,74
+2017-M006,Indian Wells Masters,Hard,M,104999,Mischa Zverev,105311,Joao Sousa,6-4 6-3,3,R64,74
+2017-M006,Indian Wells Masters,Hard,M,104545,John Isner,105062,Mikhail Kukushkin,7-6(0) 7-6(6),3,R64,96
+2017-M006,Indian Wells Masters,Hard,M,104792,Gael Monfils,105985,Darian King,3-6 6-0 6-1,3,R64,114
+2017-M006,Indian Wells Masters,Hard,M,104607,Tomas Berdych,106216,Bjorn Fratangelo,7-6(4) 6-4,3,R64,107
+2017-M006,Indian Wells Masters,Hard,M,106415,Yoshihito Nishioka,103333,Ivo Karlovic,6-4 6-3,3,R64,80
+2017-M006,Indian Wells Masters,Hard,M,104259,Philipp Kohlschreiber,105238,Alexandr Dolgopolov,6-7(3) 1-1 RET,3,R64,67
+2017-M006,Indian Wells Masters,Hard,M,104527,Stan Wawrinka,103893,Paolo Lorenzi,6-3 6-4,3,R64,78
+2017-M006,Indian Wells Masters,Hard,M,104926,Fabio Fognini,104542,Jo-Wilfried Tsonga,7-6(4) 3-6 6-4,3,R64,149
+2017-M006,Indian Wells Masters,Hard,M,104655,Pablo Cuevas,105373,Martin Klizan,7-6(3) 7-6(5),3,R64,120
+2017-M006,Indian Wells Masters,Hard,M,105077,Albert Ramos,106000,Damir Dzumhur,6-4 5-7 7-5,3,R64,152
+2017-M006,Indian Wells Masters,Hard,M,105676,David Goffin,111575,Karen Khachanov,6-4 3-6 6-3,3,R64,115
+2017-M006,Indian Wells Masters,Hard,M,105138,Roberto Bautista Agut,105173,Adrian Mannarino,7-5 6-2,3,R64,92
+2017-M006,Indian Wells Masters,Hard,M,105807,Pablo Carreno Busta,105376,Peter Gojowczyk,7-5 6-2,3,R64,66
+2017-M006,Indian Wells Masters,Hard,M,105583,Dusan Lajovic,103852,Feliciano Lopez,6-2 4-6 7-6(2),3,R64,116
+2017-M006,Indian Wells Masters,Hard,M,105577,Vasek Pospisil,104918,Andy Murray,6-4 7-6(5),3,R64,110
+2017-M006,Indian Wells Masters,Hard,M,104925,Novak Djokovic,105223,Juan Martin del Potro,7-5 4-6 6-1,3,R32,137
+2017-M006,Indian Wells Masters,Hard,M,106401,Nick Kyrgios,100644,Alexander Zverev,6-3 6-4,3,R32,73
+2017-M006,Indian Wells Masters,Hard,M,103819,Roger Federer,105449,Steve Johnson,7-6(3) 7-6(4),3,R32,94
+2017-M006,Indian Wells Masters,Hard,M,104745,Rafael Nadal,104269,Fernando Verdasco,6-3 7-5,3,R32,89
+2017-M006,Indian Wells Masters,Hard,M,105453,Kei Nishikori,104180,Gilles Muller,6-2 6-2,3,R32,71
+2017-M006,Indian Wells Masters,Hard,M,105385,Donald Young,106298,Lucas Pouille,6-4 1-6 6-3,3,R32,107
+2017-M006,Indian Wells Masters,Hard,M,106058,Jack Sock,105777,Grigor Dimitrov,3-6 6-3 7-6(7),3,R32,146
+2017-M006,Indian Wells Masters,Hard,M,104291,Malek Jaziri,126203,Taylor Fritz,6-4 3-6 6-3,3,R32,100
+2017-M006,Indian Wells Masters,Hard,M,106233,Dominic Thiem,104999,Mischa Zverev,6-1 6-4,3,R32,58
+2017-M006,Indian Wells Masters,Hard,M,104792,Gael Monfils,104545,John Isner,6-2 6-4,3,R32,68
+2017-M006,Indian Wells Masters,Hard,M,106415,Yoshihito Nishioka,104607,Tomas Berdych,1-6 7-6(5) 6-4,3,R32,141
+2017-M006,Indian Wells Masters,Hard,M,104527,Stan Wawrinka,104259,Philipp Kohlschreiber,7-5 6-3,3,R32,77
+2017-M006,Indian Wells Masters,Hard,M,104655,Pablo Cuevas,104926,Fabio Fognini,6-1 6-4,3,R32,66
+2017-M006,Indian Wells Masters,Hard,M,105676,David Goffin,105077,Albert Ramos,7-6(3) 6-4,3,R32,98
+2017-M006,Indian Wells Masters,Hard,M,105807,Pablo Carreno Busta,105138,Roberto Bautista Agut,W/O,3,R32,
+2017-M006,Indian Wells Masters,Hard,M,105583,Dusan Lajovic,105577,Vasek Pospisil,6-7(4) 6-3 7-5,3,R32,148
+2017-M006,Indian Wells Masters,Hard,M,106401,Nick Kyrgios,104925,Novak Djokovic,6-4 7-6(3),3,R16,111
+2017-M006,Indian Wells Masters,Hard,M,103819,Roger Federer,104745,Rafael Nadal,6-2 6-3,3,R16,68
+2017-M006,Indian Wells Masters,Hard,M,105453,Kei Nishikori,105385,Donald Young,6-2 6-4,3,R16,77
+2017-M006,Indian Wells Masters,Hard,M,106058,Jack Sock,104291,Malek Jaziri,4-6 7-6(1) 7-5,3,R16,157
+2017-M006,Indian Wells Masters,Hard,M,106233,Dominic Thiem,104792,Gael Monfils,6-3 6-2,3,R16,68
+2017-M006,Indian Wells Masters,Hard,M,104527,Stan Wawrinka,106415,Yoshihito Nishioka,3-6 6-3 7-6(4),3,R16,133
+2017-M006,Indian Wells Masters,Hard,M,104655,Pablo Cuevas,105676,David Goffin,6-3 3-6 6-3,3,R16,98
+2017-M006,Indian Wells Masters,Hard,M,105807,Pablo Carreno Busta,105583,Dusan Lajovic,6-4 7-6(5),3,R16,89
+2017-M006,Indian Wells Masters,Hard,M,103819,Roger Federer,106401,Nick Kyrgios,W/O,3,QF,
+2017-M006,Indian Wells Masters,Hard,M,106058,Jack Sock,105453,Kei Nishikori,6-3 2-6 6-2,3,QF,108
+2017-M006,Indian Wells Masters,Hard,M,104527,Stan Wawrinka,106233,Dominic Thiem,6-4 4-6 7-6(2),3,QF,151
+2017-M006,Indian Wells Masters,Hard,M,105807,Pablo Carreno Busta,104655,Pablo Cuevas,6-1 3-6 7-6(4),3,QF,124
+2017-M006,Indian Wells Masters,Hard,M,103819,Roger Federer,106058,Jack Sock,6-1 7-6(4),3,SF,74
+2017-M006,Indian Wells Masters,Hard,M,104527,Stan Wawrinka,105807,Pablo Carreno Busta,6-3 6-2,3,SF,64
+2017-M006,Indian Wells Masters,Hard,M,103819,Roger Federer,104527,Stan Wawrinka,6-4 7-5,3,F,80
+2017-M007,Miami Masters,Hard,M,104731,Kevin Anderson,105583,Dusan Lajovic,6-2 7-5,3,R128,91
+2017-M007,Miami Masters,Hard,M,124014,Ernesto Escobedo,105554,Daniel Evans,7-5 0-6 6-3,3,R128,100
+2017-M007,Miami Masters,Hard,M,105526,Jan Lennard Struff,105379,Aljaz Bedene,7-5 4-0 RET,3,R128,78
+2017-M007,Miami Masters,Hard,M,105643,Federico Delbonis,104338,Juan Monaco,7-5 7-6(4),3,R128,128
+2017-M007,Miami Masters,Hard,M,105385,Donald Young,104460,Dustin Brown,6-3 1-6 6-2,3,R128,78
+2017-M007,Miami Masters,Hard,M,105332,Benoit Paire,105373,Martin Klizan,7-6(4) 6-3,3,R128,101
+2017-M007,Miami Masters,Hard,M,104926,Fabio Fognini,105992,Ryan Harrison,6-4 7-5,3,R128,98
+2017-M007,Miami Masters,Hard,M,104871,Jeremy Chardy,105487,Facundo Bagnis,6-2 6-2,3,R128,61
+2017-M007,Miami Masters,Hard,M,104678,Viktor Troicki,106329,Thiago Monteiro,5-7 6-3 6-1,3,R128,116
+2017-M007,Miami Masters,Hard,M,111577,Jared Donaldson,106378,Kyle Edmund,2-6 7-6(4) 6-2,3,R128,143
+2017-M007,Miami Masters,Hard,M,106210,Jiri Vesely,103163,Tommy Haas,6-7(5) 6-3 7-5,3,R128,156
+2017-M007,Miami Masters,Hard,M,106415,Yoshihito Nishioka,111442,Jordan Thompson,1-6 6-4 6-3,3,R128,133
+2017-M007,Miami Masters,Hard,M,105550,Guido Pella,105065,Tim Smyczek,3-6 6-4 7-6(3),3,R128,136
+2017-M007,Miami Masters,Hard,M,103917,Nicolas Mahut,111581,Michael Mmoh,6-3 6-2,3,R128,75
+2017-M007,Miami Masters,Hard,M,126203,Taylor Fritz,106361,Adam Pavlasek,6-2 6-3,3,R128,67
+2017-M007,Miami Masters,Hard,M,104534,Dudi Sela,106328,Christian Harrison,6-1 6-1,3,R128,51
+2017-M007,Miami Masters,Hard,M,106432,Borna Coric,104719,Marcel Granollers,7-6(6) 4-6 6-3,3,R128,171
+2017-M007,Miami Masters,Hard,M,105173,Adrian Mannarino,103794,Benjamin Becker,7-6(6) 6-3,3,R128,90
+2017-M007,Miami Masters,Hard,M,104312,Andreas Seppi,105430,Radu Albot,6-4 6-4,3,R128,73
+2017-M007,Miami Masters,Hard,M,126094,Andrey Rublev,104252,Florian Mayer,6-1 6-1,3,R128,44
+2017-M007,Miami Masters,Hard,M,105062,Mikhail Kukushkin,104022,Mikhail Youzhny,6-4 6-1,3,R128,70
+2017-M007,Miami Masters,Hard,M,103990,Tommy Robredo,105932,Nikoloz Basilashvili,3-6 6-4 6-2,3,R128,118
+2017-M007,Miami Masters,Hard,M,104898,Robin Haase,144707,Mikael Ymer,7-5 7-6(3),3,R128,134
+2017-M007,Miami Masters,Hard,M,126207,Frances Tiafoe,104505,Konstantin Kravchuk,7-5 5-7 6-1,3,R128,121
+2017-M007,Miami Masters,Hard,M,105985,Darian King,105041,Lukas Lacko,7-6(2) 6-4,3,R128,100
+2017-M007,Miami Masters,Hard,M,106043,Diego Schwartzman,111575,Karen Khachanov,6-4 3-6 7-6(4),3,R128,146
+2017-M007,Miami Masters,Hard,M,105723,Andrey Kuznetsov,104797,Denis Istomin,6-4 7-6(0),3,R128,96
+2017-M007,Miami Masters,Hard,M,106000,Damir Dzumhur,111202,Hyeon Chung,3-6 6-1 7-6(1),3,R128,147
+2017-M007,Miami Masters,Hard,M,104229,Yen Hsun Lu,134770,Casper Ruud,6-2 6-1,3,R128,64
+2017-M007,Miami Masters,Hard,M,105064,Thomaz Bellucci,103565,Stephane Robert,7-6(5) 6-2,3,R128,83
+2017-M007,Miami Masters,Hard,M,104291,Malek Jaziri,105238,Alexandr Dolgopolov,7-6(4) 0-0 RET,3,R128,57
+2017-M007,Miami Masters,Hard,M,104547,Horacio Zeballos,105671,Gastao Elias,6-7(2) 6-2 7-5,3,R128,156
+2017-M007,Miami Masters,Hard,M,105453,Kei Nishikori,104731,Kevin Anderson,6-4 6-3,3,R64,88
+2017-M007,Miami Masters,Hard,M,104269,Fernando Verdasco,124014,Ernesto Escobedo,7-6(9) 7-5,3,R64,107
+2017-M007,Miami Masters,Hard,M,105526,Jan Lennard Struff,104468,Gilles Simon,6-1 6-1,3,R64,50
+2017-M007,Miami Masters,Hard,M,105643,Federico Delbonis,105807,Pablo Carreno Busta,1-6 7-5 6-2,3,R64,104
+2017-M007,Miami Masters,Hard,M,105385,Donald Young,106298,Lucas Pouille,6-2 6-4,3,R64,93
+2017-M007,Miami Masters,Hard,M,105332,Benoit Paire,104655,Pablo Cuevas,7-5 6-0,3,R64,57
+2017-M007,Miami Masters,Hard,M,104926,Fabio Fognini,105311,Joao Sousa,7-6(8) 2-6 6-3,3,R64,143
+2017-M007,Miami Masters,Hard,M,104871,Jeremy Chardy,105227,Marin Cilic,6-4 2-6 6-3,3,R64,125
+2017-M007,Miami Masters,Hard,M,105683,Milos Raonic,104678,Viktor Troicki,6-3 7-5,3,R64,79
+2017-M007,Miami Masters,Hard,M,111577,Jared Donaldson,104999,Mischa Zverev,6-4 6-4,3,R64,84
+2017-M007,Miami Masters,Hard,M,106210,Jiri Vesely,105077,Albert Ramos,7-6(5) 4-6 6-3,3,R64,174
+2017-M007,Miami Masters,Hard,M,106058,Jack Sock,106415,Yoshihito Nishioka,2-4 RET,3,R64,31
+2017-M007,Miami Masters,Hard,M,105550,Guido Pella,105777,Grigor Dimitrov,6-3 7-6(4),3,R64,115
+2017-M007,Miami Masters,Hard,M,103917,Nicolas Mahut,105449,Steve Johnson,6-4 5-7 6-4,3,R64,138
+2017-M007,Miami Masters,Hard,M,104259,Philipp Kohlschreiber,126203,Taylor Fritz,7-5 3-6 7-6(4),3,R64,151
+2017-M007,Miami Masters,Hard,M,104745,Rafael Nadal,104534,Dudi Sela,6-3 6-4,3,R64,81
+2017-M007,Miami Masters,Hard,M,106432,Borna Coric,106233,Dominic Thiem,6-1 7-5,3,R64,90
+2017-M007,Miami Masters,Hard,M,105173,Adrian Mannarino,103893,Paolo Lorenzi,6-4 3-6 6-2,3,R64,123
+2017-M007,Miami Masters,Hard,M,104180,Gilles Muller,104312,Andreas Seppi,7-6(3) 7-6(1),3,R64,109
+2017-M007,Miami Masters,Hard,M,104607,Tomas Berdych,126094,Andrey Rublev,6-3 6-2,3,R64,71
+2017-M007,Miami Masters,Hard,M,105138,Roberto Bautista Agut,105062,Mikhail Kukushkin,6-3 7-6(3),3,R64,109
+2017-M007,Miami Masters,Hard,M,105023,Sam Querrey,103990,Tommy Robredo,6-2 6-3,3,R64,52
+2017-M007,Miami Masters,Hard,M,105223,Juan Martin del Potro,104898,Robin Haase,6-2 6-4,3,R64,81
+2017-M007,Miami Masters,Hard,M,103819,Roger Federer,126207,Frances Tiafoe,7-6(2) 6-3,3,R64,72
+2017-M007,Miami Masters,Hard,M,105676,David Goffin,105985,Darian King,7-5 6-1,3,R64,86
+2017-M007,Miami Masters,Hard,M,106043,Diego Schwartzman,103970,David Ferrer,6-2 6-3,3,R64,76
+2017-M007,Miami Masters,Hard,M,103333,Ivo Karlovic,105723,Andrey Kuznetsov,7-6(4) 6-1,3,R64,76
+2017-M007,Miami Masters,Hard,M,106401,Nick Kyrgios,106000,Damir Dzumhur,6-4 6-3,3,R64,63
+2017-M007,Miami Masters,Hard,M,100644,Alexander Zverev,104229,Yen Hsun Lu,6-0 6-3,3,R64,60
+2017-M007,Miami Masters,Hard,M,104545,John Isner,105064,Thomaz Bellucci,7-5 7-6(5),3,R64,102
+2017-M007,Miami Masters,Hard,M,104291,Malek Jaziri,103852,Feliciano Lopez,6-3 4-6 6-3,3,R64,118
+2017-M007,Miami Masters,Hard,M,104527,Stan Wawrinka,104547,Horacio Zeballos,6-3 6-4,3,R64,65
+2017-M007,Miami Masters,Hard,M,105453,Kei Nishikori,104269,Fernando Verdasco,7-6(2) 6-7(5) 6-1,3,R32,164
+2017-M007,Miami Masters,Hard,M,105643,Federico Delbonis,105526,Jan Lennard Struff,7-6(5) 6-1,3,R32,78
+2017-M007,Miami Masters,Hard,M,105385,Donald Young,105332,Benoit Paire,7-6(2) 6-4,3,R32,78
+2017-M007,Miami Masters,Hard,M,104926,Fabio Fognini,104871,Jeremy Chardy,3-6 6-4 6-4,3,R32,126
+2017-M007,Miami Masters,Hard,M,111577,Jared Donaldson,105683,Milos Raonic,W/O,3,R32,
+2017-M007,Miami Masters,Hard,M,106058,Jack Sock,106210,Jiri Vesely,6-3 7-6(0),3,R32,99
+2017-M007,Miami Masters,Hard,M,103917,Nicolas Mahut,105550,Guido Pella,6-4 6-3,3,R32,76
+2017-M007,Miami Masters,Hard,M,104745,Rafael Nadal,104259,Philipp Kohlschreiber,0-6 6-2 6-3,3,R32,98
+2017-M007,Miami Masters,Hard,M,105173,Adrian Mannarino,106432,Borna Coric,6-4 2-6 7-6(3),3,R32,157
+2017-M007,Miami Masters,Hard,M,104607,Tomas Berdych,104180,Gilles Muller,6-3 6-4,3,R32,83
+2017-M007,Miami Masters,Hard,M,105138,Roberto Bautista Agut,105023,Sam Querrey,3-6 6-2 6-3,3,R32,115
+2017-M007,Miami Masters,Hard,M,103819,Roger Federer,105223,Juan Martin del Potro,6-3 6-4,3,R32,82
+2017-M007,Miami Masters,Hard,M,105676,David Goffin,106043,Diego Schwartzman,4-6 6-3 7-5,3,R32,152
+2017-M007,Miami Masters,Hard,M,106401,Nick Kyrgios,103333,Ivo Karlovic,6-4 6-7(4) 7-6(2),3,R32,146
+2017-M007,Miami Masters,Hard,M,100644,Alexander Zverev,104545,John Isner,6-7(5) 7-6(7) 7-6(5),3,R32,158
+2017-M007,Miami Masters,Hard,M,104527,Stan Wawrinka,104291,Malek Jaziri,6-3 6-4,3,R32,70
+2017-M007,Miami Masters,Hard,M,105453,Kei Nishikori,105643,Federico Delbonis,6-3 4-6 6-3,3,R16,134
+2017-M007,Miami Masters,Hard,M,104926,Fabio Fognini,105385,Donald Young,6-0 6-4,3,R16,65
+2017-M007,Miami Masters,Hard,M,106058,Jack Sock,111577,Jared Donaldson,6-2 6-1,3,R16,62
+2017-M007,Miami Masters,Hard,M,104745,Rafael Nadal,103917,Nicolas Mahut,6-4 7-6(4),3,R16,95
+2017-M007,Miami Masters,Hard,M,104607,Tomas Berdych,105173,Adrian Mannarino,6-3 7-5,3,R16,89
+2017-M007,Miami Masters,Hard,M,103819,Roger Federer,105138,Roberto Bautista Agut,7-6(5) 7-6(4),3,R16,117
+2017-M007,Miami Masters,Hard,M,106401,Nick Kyrgios,105676,David Goffin,7-6(5) 6-3,3,R16,97
+2017-M007,Miami Masters,Hard,M,100644,Alexander Zverev,104527,Stan Wawrinka,4-6 6-2 6-1,3,R16,104
+2017-M007,Miami Masters,Hard,M,104926,Fabio Fognini,105453,Kei Nishikori,6-4 6-2,3,QF,67
+2017-M007,Miami Masters,Hard,M,104745,Rafael Nadal,106058,Jack Sock,6-2 6-3,3,QF,83
+2017-M007,Miami Masters,Hard,M,103819,Roger Federer,104607,Tomas Berdych,6-2 3-6 7-6(6),3,QF,117
+2017-M007,Miami Masters,Hard,M,106401,Nick Kyrgios,100644,Alexander Zverev,6-4 6-7(9) 6-3,3,QF,153
+2017-M007,Miami Masters,Hard,M,104745,Rafael Nadal,104926,Fabio Fognini,6-1 7-5,3,SF,90
+2017-M007,Miami Masters,Hard,M,103819,Roger Federer,106401,Nick Kyrgios,7-6(9) 6-7(9) 7-6(5),3,SF,190
+2017-M007,Miami Masters,Hard,M,103819,Roger Federer,104745,Rafael Nadal,6-3 6-4,3,F,94
+2017-M-DC-2017-G1-EPA-M-BLR-AUT-01,Davis Cup G1 R2: BLR vs AUT,Hard,D,106078,Egor Gerasimov,105589,Gerald Melzer,6-3 6-3 6-3,5,RR,83
+2017-M-DC-2017-G1-EPA-M-BLR-AUT-01,Davis Cup G1 R2: BLR vs AUT,Hard,D,125802,Ilya Ivashka,103781,Jurgen Melzer,7-6(8) 6-3 4-6 7-6(1),5,RR,179
+2017-M-DC-2017-G1-EPA-M-BLR-AUT-01,Davis Cup G1 R2: BLR vs AUT,Hard,D,125802,Ilya Ivashka,105589,Gerald Melzer,7-6(3) 3-6 6-3 6-1,5,RR,160
+2017-M-DC-2017-G1-AM-M-BRA-ECU-01,Davis Cup G1 R2: BRA vs ECU,Clay,D,105064,Thomaz Bellucci,105877,Emilio Gomez,6-2 6-4 6-7(1) 4-6 6-4,5,RR,
+2017-M-DC-2017-G1-AM-M-BRA-ECU-01,Davis Cup G1 R2: BRA vs ECU,Clay,D,106329,Thiago Monteiro,105933,Roberto Quiroz,6-7(6) 7-6(0) 6-3 7-6(7),5,RR,196
+2017-M-DC-2017-G1-AM-M-BRA-ECU-01,Davis Cup G1 R2: BRA vs ECU,Clay,D,105064,Thomaz Bellucci,105111,Ivan Endara,7-6(7) 6-4,3,RR,79
+2017-M-DC-2017-G1-AM-M-BRA-ECU-01,Davis Cup G1 R2: BRA vs ECU,Clay,D,106329,Thiago Monteiro,105271,Gonzalo Escobar,6-7(5) 6-4 6-3,3,RR,121
+2017-M-DC-2017-G1-AM-M-CHI-COL-01,Davis Cup G1 R2: CHI vs COL,Clay,D,105053,Santiago Giraldo,111797,Nicolas Jarry,4-6 6-2 6-2 7-6(7),5,RR,164
+2017-M-DC-2017-G1-AM-M-CHI-COL-01,Davis Cup G1 R2: CHI vs COL,Clay,D,106426,Cristian Garin,105679,Eduardo Struvay,6-3 6-3 6-2,3,RR,111
+2017-M-DC-2017-G1-AM-M-CHI-COL-01,Davis Cup G1 R2: CHI vs COL,Clay,D,105053,Santiago Giraldo,106426,Cristian Garin,6-7(10) 6-3 6-3 6-7(7) 6-3,5,RR,263
+2017-M-DC-2017-G1-AO-M-KAZ-CHN-01,Davis Cup G1 R2: KAZ vs CHN,Clay,D,105062,Mikhail Kukushkin,105842,Di Wu,6-2 3-6 6-3 6-2,5,RR,140
+2017-M-DC-2017-G1-AO-M-KAZ-CHN-01,Davis Cup G1 R2: KAZ vs CHN,Clay,D,122078,Dmitry Popko,105585,Ze Zhang,6-3 6-4 7-5,5,RR,111
+2017-M-DC-2017-G1-AO-M-KAZ-CHN-01,Davis Cup G1 R2: KAZ vs CHN,Clay,D,105585,Ze Zhang,104873,Aleksandr Nedovyesov,3-6 6-4 6-1,3,RR,91
+2017-M-DC-2017-G1-AO-M-KAZ-CHN-01,Davis Cup G1 R2: KAZ vs CHN,Clay,D,122078,Dmitry Popko,105842,Di Wu,6-7(3) 7-5 7-6(1),3,RR,150
+2017-M-DC-2017-G1-EPA-M-NED-BIH-01,Davis Cup G1 R2: NED vs BIH,Hard,D,104898,Robin Haase,105806,Mirza Basic,6-4 6-2 5-7 6-3,5,RR,155
+2017-M-DC-2017-G1-EPA-M-NED-BIH-01,Davis Cup G1 R2: NED vs BIH,Hard,D,106000,Damir Dzumhur,105217,Thiemo De Bakker,6-2 6-2 6-2,5,RR,97
+2017-M-DC-2017-G1-EPA-M-NED-BIH-01,Davis Cup G1 R2: NED vs BIH,Hard,D,104898,Robin Haase,106000,Damir Dzumhur,7-5 6-3 6-7(4) 2-6 6-4,5,RR,227
+2017-M-DC-2017-G1-EPA-M-POR-UKR-01,Davis Cup G1 R2: POR vs UKR,Clay,D,105671,Gastao Elias,105085,Artem Smirnov,6-4 7-6(1) 6-7(6) 3-6 6-1,5,RR,272
+2017-M-DC-2017-G1-EPA-M-POR-UKR-01,Davis Cup G1 R2: POR vs UKR,Clay,D,105311,Joao Sousa,200125,Mykyta Mashtakov,6-0 6-3 6-0,5,RR,77
+2017-M-DC-2017-G1-EPA-M-POR-UKR-01,Davis Cup G1 R2: POR vs UKR,Clay,D,105311,Joao Sousa,105085,Artem Smirnov,7-6(3) 7-6(2) 6-2,5,RR,148
+2017-M-DC-2017-G1-EPA-M-POR-UKR-01,Davis Cup G1 R2: POR vs UKR,Clay,D,105155,Pedro Sousa,207277,Illia Biloborodko,6-0 6-1,3,RR,40
+2017-M-DC-2017-G1-AO-M-UZB-IND-01,Davis Cup G1 R2: UZB vs IND,Hard,D,106368,Ramkumar Ramanathan,106381,Temur Ismailov,6-2 5-7 6-2 7-5,5,RR,194
+2017-M-DC-2017-G1-AO-M-UZB-IND-01,Davis Cup G1 R2: UZB vs IND,Hard,D,105432,Prajnesh Gunneswaran,122109,Sanjar Fayziev,7-5 3-6 6-3 6-4,5,RR,144
+2017-M-DC-2017-G1-AO-M-UZB-IND-01,Davis Cup G1 R2: UZB vs IND,Hard,D,106368,Ramkumar Ramanathan,122109,Sanjar Fayziev,6-3 6-2,3,RR,66
+2017-M-DC-2017-G1-AO-M-UZB-IND-01,Davis Cup G1 R2: UZB vs IND,Hard,D,106381,Temur Ismailov,105432,Prajnesh Gunneswaran,7-5 6-3,3,RR,71
+2017-M-DC-2017-G2-AM-M-BAR-GUA-01,Davis Cup G2 R2: BAR vs GUA,Hard,D,105499,Christopher Diaz Figueroa,200618,Adam Hornby,7-5 6-0 6-2,3,RR,101
+2017-M-DC-2017-G2-AM-M-BAR-GUA-01,Davis Cup G2 R2: BAR vs GUA,Hard,D,105985,Darian King,122047,Luciano Ramazzini,6-2 6-1 6-1,5,RR,102
+2017-M-DC-2017-G2-AM-M-BAR-GUA-01,Davis Cup G2 R2: BAR vs GUA,Hard,D,105985,Darian King,105499,Christopher Diaz Figueroa,6-4 6-3 6-2,5,RR,127
+2017-M-DC-2017-G2-AM-M-BAR-GUA-01,Davis Cup G2 R2: BAR vs GUA,Hard,D,108739,Wilfredo Gonzalez,104656,Haydn Lewis,7-5 4-6 7-6(5),3,RR,153
+2017-M-DC-2017-G2-AM-M-ESA-VEN-01,Davis Cup G2 R2: ESA vs VEN,Hard,D,105656,Marcelo Arevalo,105703,Jesus Bandres,6-2 6-7(4) 6-3 6-2,5,RR,176
+2017-M-DC-2017-G2-AM-M-ESA-VEN-01,Davis Cup G2 R2: ESA vs VEN,Hard,D,106175,Ricardo Rodriguez,108763,Alberto Emmanuel Alvarado Larin,6-3 6-1 6-1,5,RR,94
+2017-M-DC-2017-G2-AM-M-ESA-VEN-01,Davis Cup G2 R2: ESA vs VEN,Hard,D,105656,Marcelo Arevalo,106175,Ricardo Rodriguez,6-2 6-2 6-3,3,RR,115
+2017-M-DC-2017-G2-AM-M-ESA-VEN-01,Davis Cup G2 R2: ESA vs VEN,Hard,D,105334,Luis David Martinez,104763,Rafael Arevalo,6-1 6-1 RET,3,RR,
+2017-M-DC-2017-G2-EPA-M-LTU-GEO,Davis Cup G2 R2: LTU vs GEO,Hard,D,105932,Nikoloz Basilashvili,126689,Tadas Babelis,6-3 6-2 6-0,5,RR,65
+2017-M-DC-2017-G2-EPA-M-LTU-GEO,Davis Cup G2 R2: LTU vs GEO,Hard,D,105827,Laurynas Grigelis,106106,George Tsivadze,6-3 6-2 6-2,3,RR,76
+2017-M-DC-2017-G2-EPA-M-LTU-GEO,Davis Cup G2 R2: LTU vs GEO,Hard,D,105932,Nikoloz Basilashvili,105827,Laurynas Grigelis,6-0 6-1 6-0,5,RR,75
+2017-M-DC-2017-G2-EPA-M-LTU-GEO,Davis Cup G2 R2: LTU vs GEO,Hard,D,108748,Lukas Mugevicius,106106,George Tsivadze,6-4 6-2 1-6 6-4,5,RR,135
+2017-M-DC-2017-G2-EPA-M-NOR-DEN-01,Davis Cup G2 R2: NOR vs DEN,Hard,D,134770,Casper Ruud,126526,Soren Hess Olesen,6-3 5-7 7-5 6-2,5,RR,179
+2017-M-DC-2017-G2-EPA-M-NOR-DEN-01,Davis Cup G2 R2: NOR vs DEN,Hard,D,104233,Frederik Nielsen,126340,Viktor Durasovic,6-2 3-6 6-2 7-6(7),5,RR,154
+2017-M-DC-2017-G2-EPA-M-NOR-DEN-01,Davis Cup G2 R2: NOR vs DEN,Hard,D,104233,Frederik Nielsen,134770,Casper Ruud,6-4 6-2 6-3,3,RR,104
+2017-M-DC-2017-G2-EPA-M-NOR-DEN-01,Davis Cup G2 R2: NOR vs DEN,Hard,D,200416,August Holmgren,202382,Simen Sunde Bratholm,7-6(4) 7-5,3,RR,102
+2017-M-DC-2017-G2-AO-M-PHI-THA-01,Davis Cup G2 R2: PHI vs THA,Hard,D,106397,Wishaya Trongcharoenchaikul,202165,Alberto Lim,7-6(2) 6-4 6-3,5,RR,
+2017-M-DC-2017-G2-AO-M-PHI-THA-01,Davis Cup G2 R2: PHI vs THA,Hard,D,127143,Jirat Navasirisomboon,106150,Jeson Patrombon,2-6 7-6(4) 6-1 6-1,5,RR,
+2017-M-DC-2017-G2-AO-M-PHI-THA-01,Davis Cup G2 R2: PHI vs THA,Hard,D,106397,Wishaya Trongcharoenchaikul,104591,Patrick Tierro,6-4 6-1,3,RR,57
+2017-M-DC-2017-G2-AO-M-PHI-THA-01,Davis Cup G2 R2: PHI vs THA,Hard,D,127143,Jirat Navasirisomboon,202165,Alberto Lim,6-4 6-2,3,RR,71
+2017-M-DC-2017-G2-EPA-M-RSA-SLO-01,Davis Cup G2 R2: RSA vs SLO,Hard,D,144750,Lloyd Harris,105450,Mike Urbanija,6-1 6-1 6-2,5,RR,73
+2017-M-DC-2017-G2-EPA-M-RSA-SLO-01,Davis Cup G2 R2: RSA vs SLO,Hard,D,105707,Nicolaas Scholtz,104813,Grega Zemlja,3-6 6-7(1) 7-6(6) 7-6(4) 7-6(7),5,RR,258
+2017-M-DC-2017-G2-EPA-M-RSA-SLO-01,Davis Cup G2 R2: RSA vs SLO,Hard,D,144750,Lloyd Harris,105798,Tilen Zitnik,6-3 6-3,3,RR,56
+2017-M-DC-2017-G2-EPA-M-RSA-SLO-01,Davis Cup G2 R2: RSA vs SLO,Hard,D,105707,Nicolaas Scholtz,105630,Tomislav Ternar,6-2 6-4,3,RR,60
+2017-M-DC-2017-G2-EPA-M-SWE-TUR-01,Davis Cup G2 R2: SWE vs TUR,Clay,D,105872,Christian Lindell,104947,Marsel Ilhan,6-1 6-4 6-4,3,RR,128
+2017-M-DC-2017-G2-EPA-M-SWE-TUR-01,Davis Cup G2 R2: SWE vs TUR,Clay,D,111200,Elias Ymer,117356,Cem Ilkel,4-6 6-3 6-7(6) 7-6(3) 6-3,5,RR,267
+2017-M-DC-2017-G2-EPA-M-SWE-TUR-01,Davis Cup G2 R2: SWE vs TUR,Clay,D,111200,Elias Ymer,123795,Altug Celikbilek,7-6(6) 6-1 7-5,3,RR,129
+2017-M-DC-2017-G2-EPA-M-SWE-TUR-01,Davis Cup G2 R2: SWE vs TUR,Clay,D,105872,Christian Lindell,105551,Anil Yuksel,6-3 5-7 6-1,3,RR,107
+2017-M-DC-2017-WG-M-AUS-USA-01,Davis Cup WG QF: AUS vs USA,Hard,D,111442,Jordan Thompson,106058,Jack Sock,6-3 3-6 7-6(4) 6-4,5,RR,
+2017-M-DC-2017-WG-M-AUS-USA-01,Davis Cup WG QF: AUS vs USA,Hard,D,106401,Nick Kyrgios,104545,John Isner,7-5 7-6(5) 7-6(5),5,RR,144
+2017-M-DC-2017-WG-M-AUS-USA-01,Davis Cup WG QF: AUS vs USA,Hard,D,106401,Nick Kyrgios,105023,Sam Querrey,7-6(4) 6-3 6-4,5,RR,125
+2017-M-DC-2017-WG-M-AUS-USA-01,Davis Cup WG QF: AUS vs USA,Hard,D,104545,John Isner,105032,Sam Groth,7-6(5) 6-3,3,RR,60
+2017-M-DC-2017-WG-M-FRA-GBR-01,Davis Cup WG QF: FRA vs GBR,Clay,D,106298,Lucas Pouille,106378,Kyle Edmund,7-5 7-6(6) 6-3,5,RR,131
+2017-M-DC-2017-WG-M-FRA-GBR-01,Davis Cup WG QF: FRA vs GBR,Clay,D,104871,Jeremy Chardy,105554,Daniel Evans,6-2 6-3 6-3,5,RR,110
+2017-M-DC-2017-WG-M-FRA-GBR-01,Davis Cup WG QF: FRA vs GBR,Clay,D,105554,Daniel Evans,103898,Julien Benneteau,6-1 6-2,3,RR,43
+2017-M-DC-2017-WG-M-FRA-GBR-01,Davis Cup WG QF: FRA vs GBR,Clay,D,104871,Jeremy Chardy,106378,Kyle Edmund,6-4 6-4,3,RR,64
+2017-M-DC-2017-WG-M-ITA-BEL-01,Davis Cup WG QF: ITA vs BEL,Hard,D,104327,Steve Darcis,103893,Paolo Lorenzi,6-7(3) 6-1 6-1 7-6(4),5,RR,200
+2017-M-DC-2017-WG-M-ITA-BEL-01,Davis Cup WG QF: ITA vs BEL,Hard,D,105676,David Goffin,104312,Andreas Seppi,6-4 6-3 6-3,5,RR,128
+2017-M-DC-2017-WG-M-ITA-BEL-01,Davis Cup WG QF: ITA vs BEL,Hard,D,105676,David Goffin,103893,Paolo Lorenzi,6-3 6-3 6-2,5,RR,112
+2017-M-DC-2017-WG-M-ITA-BEL-01,Davis Cup WG QF: ITA vs BEL,Hard,D,105561,Alessandro Giannessi,106167,Joris De Loore,6-4 7-6(9),3,RR,80
+2017-M-DC-2017-WG-M-SRB-ESP-01,Davis Cup WG QF: SRB vs ESP,Hard,D,104925,Novak Djokovic,105077,Albert Ramos,6-3 6-4 6-2,5,RR,115
+2017-M-DC-2017-WG-M-SRB-ESP-01,Davis Cup WG QF: SRB vs ESP,Hard,D,104678,Viktor Troicki,105807,Pablo Carreno Busta,6-3 6-4 6-3,5,RR,107
+2017-M-DC-2017-WG-M-SRB-ESP-01,Davis Cup WG QF: SRB vs ESP,Hard,D,105583,Dusan Lajovic,144719,Jaume Munar,2-6 6-1 6-4,3,RR,111
+2017-M-DC-2017-WG-M-SRB-ESP-01,Davis Cup WG QF: SRB vs ESP,Hard,D,105077,Albert Ramos,102800,Nenad Zimonjic,6-2 6-1,3,RR,44
+2017-0410,Monte Carlo Masters,Clay,M,104468,Gilles Simon,104291,Malek Jaziri,6-2 6-2,3,R64,80
+2017-0410,Monte Carlo Masters,Clay,M,111575,Karen Khachanov,103917,Nicolas Mahut,6-2 6-4,3,R64,
+2017-0410,Monte Carlo Masters,Clay,M,105807,Pablo Carreno Busta,104926,Fabio Fognini,7-6(0) 6-7(4) 6-3,3,R64,143
+2017-0410,Monte Carlo Masters,Clay,M,105676,David Goffin,104327,Steve Darcis,6-2 6-1,3,R64,72
+2017-0410,Monte Carlo Masters,Clay,M,104597,Nicolas Almagro,105373,Martin Klizan,4-6 6-3 6-1,3,R64,117
+2017-0410,Monte Carlo Masters,Clay,M,104898,Robin Haase,106000,Damir Dzumhur,6-3 6-2,3,R64,
+2017-0410,Monte Carlo Masters,Clay,M,106378,Kyle Edmund,105554,Daniel Evans,7-5 6-1,3,R64,80
+2017-0410,Monte Carlo Masters,Clay,M,103852,Feliciano Lopez,106421,Daniil Medvedev,7-6(6) 7-5,3,R64,
+2017-0410,Monte Carlo Masters,Clay,M,100644,Alexander Zverev,104312,Andreas Seppi,6-1 6-2,3,R64,68
+2017-0410,Monte Carlo Masters,Clay,M,105138,Roberto Bautista Agut,105932,Nikoloz Basilashvili,1-6 6-3 7-5,3,R64,126
+2017-0410,Monte Carlo Masters,Clay,M,106043,Diego Schwartzman,106071,Bernard Tomic,6-1 7-6(3),3,R64,78
+2017-0410,Monte Carlo Masters,Clay,M,105526,Jan Lennard Struff,134770,Casper Ruud,6-4 6-4,3,R64,
+2017-0410,Monte Carlo Masters,Clay,M,105173,Adrian Mannarino,104198,Guillermo Garcia Lopez,1-6 6-3 6-4,3,R64,122
+2017-0410,Monte Carlo Masters,Clay,M,103893,Paolo Lorenzi,104719,Marcel Granollers,6-2 6-4,3,R64,
+2017-0410,Monte Carlo Masters,Clay,M,106298,Lucas Pouille,105992,Ryan Harrison,6-2 6-4,3,R64,
+2017-0410,Monte Carlo Masters,Clay,M,104655,Pablo Cuevas,104678,Viktor Troicki,6-3 6-0,3,R64,78
+2017-0410,Monte Carlo Masters,Clay,M,105311,Joao Sousa,104252,Florian Mayer,6-3 6-2,3,R64,62
+2017-0410,Monte Carlo Masters,Clay,M,106210,Jiri Vesely,104999,Mischa Zverev,7-6(3) 6-3,3,R64,
+2017-0410,Monte Carlo Masters,Clay,M,104871,Jeremy Chardy,106432,Borna Coric,7-6(3) 3-6 6-3,3,R64,
+2017-0410,Monte Carlo Masters,Clay,M,103163,Tommy Haas,105332,Benoit Paire,6-2 6-3,3,R64,
+2017-0410,Monte Carlo Masters,Clay,M,104607,Tomas Berdych,105723,Andrey Kuznetsov,4-6 6-3 6-4,3,R64,
+2017-0410,Monte Carlo Masters,Clay,M,105077,Albert Ramos,105952,Renzo Olivo,6-2 6-3,3,R64,78
+2017-0410,Monte Carlo Masters,Clay,M,104122,Carlos Berlocq,105732,Pierre Hugues Herbert,3-6 6-2 6-1,3,R64,
+2017-0410,Monte Carlo Masters,Clay,M,104180,Gilles Muller,103990,Tommy Robredo,6-2 6-2,3,R64,
+2017-0410,Monte Carlo Masters,Clay,M,104925,Novak Djokovic,104468,Gilles Simon,6-3 3-6 7-5,3,R32,
+2017-0410,Monte Carlo Masters,Clay,M,105807,Pablo Carreno Busta,111575,Karen Khachanov,6-4 6-4,3,R32,88
+2017-0410,Monte Carlo Masters,Clay,M,105676,David Goffin,104597,Nicolas Almagro,7-5 6-1,3,R32,
+2017-0410,Monte Carlo Masters,Clay,M,106233,Dominic Thiem,104898,Robin Haase,6-3 6-2,3,R32,61
+2017-0410,Monte Carlo Masters,Clay,M,104745,Rafael Nadal,106378,Kyle Edmund,6-0 5-7 6-3,3,R32,138
+2017-0410,Monte Carlo Masters,Clay,M,100644,Alexander Zverev,103852,Feliciano Lopez,6-0 6-4,3,R32,59
+2017-0410,Monte Carlo Masters,Clay,M,106043,Diego Schwartzman,105138,Roberto Bautista Agut,6-3 7-6(3),3,R32,107
+2017-0410,Monte Carlo Masters,Clay,M,105526,Jan Lennard Struff,105777,Grigor Dimitrov,4-6 6-3 6-2,3,R32,117
+2017-0410,Monte Carlo Masters,Clay,M,105173,Adrian Mannarino,104542,Jo-Wilfried Tsonga,6-7(3) 6-2 6-3,3,R32,
+2017-0410,Monte Carlo Masters,Clay,M,106298,Lucas Pouille,103893,Paolo Lorenzi,6-2 6-4,3,R32,81
+2017-0410,Monte Carlo Masters,Clay,M,104655,Pablo Cuevas,105311,Joao Sousa,6-3 6-3,3,R32,
+2017-0410,Monte Carlo Masters,Clay,M,104527,Stan Wawrinka,106210,Jiri Vesely,6-2 4-6 6-2,3,R32,84
+2017-0410,Monte Carlo Masters,Clay,M,105227,Marin Cilic,104871,Jeremy Chardy,6-3 6-0,3,R32,66
+2017-0410,Monte Carlo Masters,Clay,M,104607,Tomas Berdych,103163,Tommy Haas,3-6 6-1 6-4,3,R32,114
+2017-0410,Monte Carlo Masters,Clay,M,105077,Albert Ramos,104122,Carlos Berlocq,6-2 6-2,3,R32,79
+2017-0410,Monte Carlo Masters,Clay,M,104918,Andy Murray,104180,Gilles Muller,7-5 7-5,3,R32,115
+2017-0410,Monte Carlo Masters,Clay,M,104925,Novak Djokovic,105807,Pablo Carreno Busta,6-2 4-6 6-4,3,R16,146
+2017-0410,Monte Carlo Masters,Clay,M,105676,David Goffin,106233,Dominic Thiem,7-6(4) 4-6 6-3,3,R16,134
+2017-0410,Monte Carlo Masters,Clay,M,104745,Rafael Nadal,100644,Alexander Zverev,6-1 6-1,3,R16,68
+2017-0410,Monte Carlo Masters,Clay,M,106043,Diego Schwartzman,105526,Jan Lennard Struff,6-3 6-0,3,R16,70
+2017-0410,Monte Carlo Masters,Clay,M,106298,Lucas Pouille,105173,Adrian Mannarino,3-0 RET,3,R16,11
+2017-0410,Monte Carlo Masters,Clay,M,104655,Pablo Cuevas,104527,Stan Wawrinka,6-4 6-4,3,R16,76
+2017-0410,Monte Carlo Masters,Clay,M,105227,Marin Cilic,104607,Tomas Berdych,6-2 7-6(0),3,R16,120
+2017-0410,Monte Carlo Masters,Clay,M,105077,Albert Ramos,104918,Andy Murray,2-6 6-2 7-5,3,R16,152
+2017-0410,Monte Carlo Masters,Clay,M,105676,David Goffin,104925,Novak Djokovic,6-2 3-6 7-5,3,QF,157
+2017-0410,Monte Carlo Masters,Clay,M,104745,Rafael Nadal,106043,Diego Schwartzman,6-4 6-4,3,QF,99
+2017-0410,Monte Carlo Masters,Clay,M,106298,Lucas Pouille,104655,Pablo Cuevas,6-0 3-6 7-5,3,QF,117
+2017-0410,Monte Carlo Masters,Clay,M,105077,Albert Ramos,105227,Marin Cilic,6-2 6-7(5) 6-2,3,QF,152
+2017-0410,Monte Carlo Masters,Clay,M,104745,Rafael Nadal,105676,David Goffin,6-3 6-1,3,SF,89
+2017-0410,Monte Carlo Masters,Clay,M,105077,Albert Ramos,106298,Lucas Pouille,6-3 5-7 6-1,3,SF,135
+2017-0410,Monte Carlo Masters,Clay,M,104745,Rafael Nadal,105077,Albert Ramos,6-1 6-3,3,F,76
+2017-M021,Madrid Masters,Clay,M,104597,Nicolas Almagro,103990,Tommy Robredo,6-3 3-6 6-1,3,R64,99
+2017-M021,Madrid Masters,Clay,M,103852,Feliciano Lopez,124014,Ernesto Escobedo,6-4 6-4,3,R64,73
+2017-M021,Madrid Masters,Clay,M,104468,Gilles Simon,104792,Gael Monfils,0-6 6-0 7-6(0),3,R64,121
+2017-M021,Madrid Masters,Clay,M,104542,Jo-Wilfried Tsonga,105723,Andrey Kuznetsov,7-6(5) 6-7(5) 7-5,3,R64,169
+2017-M021,Madrid Masters,Clay,M,103970,David Ferrer,105062,Mikhail Kukushkin,2-6 7-6(1) 6-4,3,R64,148
+2017-M021,Madrid Masters,Clay,M,106043,Diego Schwartzman,105077,Albert Ramos,6-1 6-3,3,R64,70
+2017-M021,Madrid Masters,Clay,M,104926,Fabio Fognini,105311,Joao Sousa,6-4 6-4,3,R64,67
+2017-M021,Madrid Masters,Clay,M,105992,Ryan Harrison,106071,Bernard Tomic,7-5 4-6 6-2,3,R64,110
+2017-M021,Madrid Masters,Clay,M,106401,Nick Kyrgios,104571,Marcos Baghdatis,7-6(1) 6-4,3,R64,77
+2017-M021,Madrid Masters,Clay,M,105676,David Goffin,111575,Karen Khachanov,6-2 7-6(8),3,R64,101
+2017-M021,Madrid Masters,Clay,M,104252,Florian Mayer,104719,Marcel Granollers,7-5 7-5,3,R64,105
+2017-M021,Madrid Masters,Clay,M,104180,Gilles Muller,103163,Tommy Haas,6-4 7-6(7),3,R64,90
+2017-M021,Madrid Masters,Clay,M,100644,Alexander Zverev,104269,Fernando Verdasco,7-5 6-3,3,R64,83
+2017-M021,Madrid Masters,Clay,M,104898,Robin Haase,105554,Daniel Evans,7-5 6-2,3,R64,80
+2017-M021,Madrid Masters,Clay,M,104607,Tomas Berdych,104797,Denis Istomin,6-4 6-4,3,R64,63
+2017-M021,Madrid Masters,Clay,M,103917,Nicolas Mahut,106058,Jack Sock,6-4 0-6 7-6(4),3,R64,118
+2017-M021,Madrid Masters,Clay,M,104655,Pablo Cuevas,105064,Thomaz Bellucci,7-6(2) 4-6 7-6(6),3,R64,154
+2017-M021,Madrid Masters,Clay,M,105332,Benoit Paire,105807,Pablo Carreno Busta,6-3 6-4,3,R64,75
+2017-M021,Madrid Masters,Clay,M,111577,Jared Donaldson,105173,Adrian Mannarino,7-5 6-3,3,R64,96
+2017-M021,Madrid Masters,Clay,M,103333,Ivo Karlovic,105138,Roberto Bautista Agut,7-6(4) 6-7(9) 7-6(7),3,R64,181
+2017-M021,Madrid Masters,Clay,M,105777,Grigor Dimitrov,104259,Philipp Kohlschreiber,7-6(7) 6-4,3,R64,107
+2017-M021,Madrid Masters,Clay,M,105732,Pierre Hugues Herbert,106298,Lucas Pouille,7-6(5) 6-7(4) 6-3,3,R64,129
+2017-M021,Madrid Masters,Clay,M,106432,Borna Coric,104999,Mischa Zverev,6-3 7-6(5),3,R64,88
+2017-M021,Madrid Masters,Clay,M,105657,Marius Copil,104198,Guillermo Garcia Lopez,7-6(6) 4-6 7-6(9),3,R64,172
+2017-M021,Madrid Masters,Clay,M,104925,Novak Djokovic,104597,Nicolas Almagro,6-1 4-6 7-5,3,R32,135
+2017-M021,Madrid Masters,Clay,M,103852,Feliciano Lopez,104468,Gilles Simon,6-3 3-6 7-6(3),3,R32,131
+2017-M021,Madrid Masters,Clay,M,103970,David Ferrer,104542,Jo-Wilfried Tsonga,W/O,3,R32,
+2017-M021,Madrid Masters,Clay,M,105453,Kei Nishikori,106043,Diego Schwartzman,1-6 6-0 6-4,3,R32,120
+2017-M021,Madrid Masters,Clay,M,104745,Rafael Nadal,104926,Fabio Fognini,7-6(3) 3-6 6-4,3,R32,177
+2017-M021,Madrid Masters,Clay,M,106401,Nick Kyrgios,105992,Ryan Harrison,6-3 6-3,3,R32,58
+2017-M021,Madrid Masters,Clay,M,105676,David Goffin,104252,Florian Mayer,7-6(3) 6-0,3,R32,74
+2017-M021,Madrid Masters,Clay,M,105683,Milos Raonic,104180,Gilles Muller,6-4 6-4,3,R32,70
+2017-M021,Madrid Masters,Clay,M,100644,Alexander Zverev,105227,Marin Cilic,6-7(3) 6-3 6-4,3,R32,154
+2017-M021,Madrid Masters,Clay,M,104607,Tomas Berdych,104898,Robin Haase,7-6(5) 6-3,3,R32,88
+2017-M021,Madrid Masters,Clay,M,104655,Pablo Cuevas,103917,Nicolas Mahut,5-7 6-4 6-4,3,R32,131
+2017-M021,Madrid Masters,Clay,M,105332,Benoit Paire,104527,Stan Wawrinka,7-5 4-6 6-2,3,R32,108
+2017-M021,Madrid Masters,Clay,M,106233,Dominic Thiem,111577,Jared Donaldson,6-3 6-4,3,R32,74
+2017-M021,Madrid Masters,Clay,M,105777,Grigor Dimitrov,103333,Ivo Karlovic,6-3 7-5,3,R32,75
+2017-M021,Madrid Masters,Clay,M,106432,Borna Coric,105732,Pierre Hugues Herbert,7-5 6-4,3,R32,86
+2017-M021,Madrid Masters,Clay,M,104918,Andy Murray,105657,Marius Copil,6-4 6-3,3,R32,83
+2017-M021,Madrid Masters,Clay,M,104925,Novak Djokovic,103852,Feliciano Lopez,6-4 7-5,3,R16,93
+2017-M021,Madrid Masters,Clay,M,105453,Kei Nishikori,103970,David Ferrer,6-4 6-3,3,R16,85
+2017-M021,Madrid Masters,Clay,M,104745,Rafael Nadal,106401,Nick Kyrgios,6-3 6-1,3,R16,72
+2017-M021,Madrid Masters,Clay,M,105676,David Goffin,105683,Milos Raonic,6-4 6-2,3,R16,74
+2017-M021,Madrid Masters,Clay,M,100644,Alexander Zverev,104607,Tomas Berdych,6-4 6-4,3,R16,74
+2017-M021,Madrid Masters,Clay,M,104655,Pablo Cuevas,105332,Benoit Paire,7-5 0-6 6-1,3,R16,96
+2017-M021,Madrid Masters,Clay,M,106233,Dominic Thiem,105777,Grigor Dimitrov,4-6 6-4 7-6(9),3,R16,154
+2017-M021,Madrid Masters,Clay,M,106432,Borna Coric,104918,Andy Murray,6-3 6-3,3,R16,85
+2017-M021,Madrid Masters,Clay,M,104925,Novak Djokovic,105453,Kei Nishikori,W/O,3,QF,
+2017-M021,Madrid Masters,Clay,M,104745,Rafael Nadal,105676,David Goffin,7-6(3) 6-2,3,QF,119
+2017-M021,Madrid Masters,Clay,M,104655,Pablo Cuevas,100644,Alexander Zverev,3-6 6-0 6-4,3,QF,90
+2017-M021,Madrid Masters,Clay,M,106233,Dominic Thiem,106432,Borna Coric,6-1 6-4,3,QF,79
+2017-M021,Madrid Masters,Clay,M,104745,Rafael Nadal,104925,Novak Djokovic,6-2 6-4,3,SF,98
+2017-M021,Madrid Masters,Clay,M,106233,Dominic Thiem,104655,Pablo Cuevas,6-4 6-4,3,SF,83
+2017-M021,Madrid Masters,Clay,M,104745,Rafael Nadal,106233,Dominic Thiem,7-6(8) 6-4,3,F,137
+2017-M009,Rome Masters,Clay,M,105379,Aljaz Bedene,126149,Gianluca Mager,6-7(3) 6-4 3-0 RET,3,R64,130
+2017-M009,Rome Masters,Clay,M,105138,Roberto Bautista Agut,105238,Alexandr Dolgopolov,6-4 6-2,3,R64,65
+2017-M009,Rome Masters,Clay,M,105807,Pablo Carreno Busta,104468,Gilles Simon,6-3 6-3,3,R64,74
+2017-M009,Rome Masters,Clay,M,105223,Juan Martin del Potro,105777,Grigor Dimitrov,3-6 6-2 6-3,3,R64,128
+2017-M009,Rome Masters,Clay,M,106378,Kyle Edmund,105311,Joao Sousa,6-3 6-4,3,R64,69
+2017-M009,Rome Masters,Clay,M,103970,David Ferrer,103852,Feliciano Lopez,4-6 6-3 6-1,3,R64,115
+2017-M009,Rome Masters,Clay,M,104597,Nicolas Almagro,104312,Andreas Seppi,7-6(6) 6-3,3,R64,116
+2017-M009,Rome Masters,Clay,M,106210,Jiri Vesely,105554,Daniel Evans,6-3 6-1,3,R64,76
+2017-M009,Rome Masters,Clay,M,106058,Jack Sock,106043,Diego Schwartzman,6-4 1-6 7-5,3,R64,129
+2017-M009,Rome Masters,Clay,M,105023,Sam Querrey,106298,Lucas Pouille,7-6(6) 7-6(8),3,R64,113
+2017-M009,Rome Masters,Clay,M,105526,Jan Lennard Struff,106071,Bernard Tomic,6-7(8) 6-1 6-4,3,R64,121
+2017-M009,Rome Masters,Clay,M,104655,Pablo Cuevas,105173,Adrian Mannarino,6-4 7-6(2),3,R64,108
+2017-M009,Rome Masters,Clay,M,105992,Ryan Harrison,111577,Jared Donaldson,2-6 7-6(0) 6-3,3,R64,144
+2017-M009,Rome Masters,Clay,M,104269,Fernando Verdasco,105385,Donald Young,6-3 6-3,3,R64,69
+2017-M009,Rome Masters,Clay,M,105676,David Goffin,105064,Thomaz Bellucci,6-7(5) 6-3 6-4,3,R64,151
+2017-M009,Rome Masters,Clay,M,104545,John Isner,105077,Albert Ramos,6-7(4) 7-6(4) 6-1,3,R64,127
+2017-M009,Rome Masters,Clay,M,104252,Florian Mayer,106329,Thiago Monteiro,6-4 6-2,3,R64,67
+2017-M009,Rome Masters,Clay,M,105332,Benoit Paire,103917,Nicolas Mahut,6-3 6-4,3,R64,72
+2017-M009,Rome Masters,Clay,M,103163,Tommy Haas,124014,Ernesto Escobedo,6-0 4-6 7-6(1),3,R64,143
+2017-M009,Rome Masters,Clay,M,104122,Carlos Berlocq,104898,Robin Haase,6-3 7-5,3,R64,127
+2017-M009,Rome Masters,Clay,M,104607,Tomas Berdych,104999,Mischa Zverev,7-6(7) 6-4,3,R64,109
+2017-M009,Rome Masters,Clay,M,100644,Alexander Zverev,104731,Kevin Anderson,6-4 4-6 6-4,3,R64,145
+2017-M009,Rome Masters,Clay,M,104678,Viktor Troicki,109303,Stefano Napolitano,7-6(1) 6-2,3,R64,88
+2017-M009,Rome Masters,Clay,M,104926,Fabio Fognini,126610,Matteo Berrettini,6-1 6-3,3,R64,70
+2017-M009,Rome Masters,Clay,M,104925,Novak Djokovic,105379,Aljaz Bedene,7-6(2) 6-2,3,R32,105
+2017-M009,Rome Masters,Clay,M,105138,Roberto Bautista Agut,105807,Pablo Carreno Busta,6-7(6) 6-1 6-4,3,R32,158
+2017-M009,Rome Masters,Clay,M,105223,Juan Martin del Potro,106378,Kyle Edmund,7-5 6-4,3,R32,105
+2017-M009,Rome Masters,Clay,M,105453,Kei Nishikori,103970,David Ferrer,7-5 6-2,3,R32,81
+2017-M009,Rome Masters,Clay,M,104745,Rafael Nadal,104597,Nicolas Almagro,3-0 RET,3,R32,24
+2017-M009,Rome Masters,Clay,M,106058,Jack Sock,106210,Jiri Vesely,6-4 3-6 7-6(1),3,R32,155
+2017-M009,Rome Masters,Clay,M,105023,Sam Querrey,105526,Jan Lennard Struff,6-4 6-3,3,R32,74
+2017-M009,Rome Masters,Clay,M,106233,Dominic Thiem,104655,Pablo Cuevas,7-6(4) 6-4,3,R32,103
+2017-M009,Rome Masters,Clay,M,105227,Marin Cilic,105992,Ryan Harrison,6-3 6-2,3,R32,82
+2017-M009,Rome Masters,Clay,M,105676,David Goffin,104269,Fernando Verdasco,3-6 6-3 6-2,3,R32,115
+2017-M009,Rome Masters,Clay,M,104545,John Isner,104252,Florian Mayer,7-6(4) 7-6(4),3,R32,94
+2017-M009,Rome Masters,Clay,M,104527,Stan Wawrinka,105332,Benoit Paire,6-3 1-6 6-3,3,R32,102
+2017-M009,Rome Masters,Clay,M,105683,Milos Raonic,103163,Tommy Haas,6-4 6-3,3,R32,74
+2017-M009,Rome Masters,Clay,M,104607,Tomas Berdych,104122,Carlos Berlocq,6-3 6-4,3,R32,87
+2017-M009,Rome Masters,Clay,M,100644,Alexander Zverev,104678,Viktor Troicki,6-3 6-4,3,R32,81
+2017-M009,Rome Masters,Clay,M,104926,Fabio Fognini,104918,Andy Murray,6-2 6-4,3,R32,93
+2017-M009,Rome Masters,Clay,M,104925,Novak Djokovic,105138,Roberto Bautista Agut,6-4 6-4,3,R16,101
+2017-M009,Rome Masters,Clay,M,105223,Juan Martin del Potro,105453,Kei Nishikori,7-6(4) 6-3,3,R16,114
+2017-M009,Rome Masters,Clay,M,104745,Rafael Nadal,106058,Jack Sock,6-3 6-4,3,R16,80
+2017-M009,Rome Masters,Clay,M,106233,Dominic Thiem,105023,Sam Querrey,3-6 6-3 7-6(7),3,R16,115
+2017-M009,Rome Masters,Clay,M,105227,Marin Cilic,105676,David Goffin,6-3 6-4,3,R16,85
+2017-M009,Rome Masters,Clay,M,104545,John Isner,104527,Stan Wawrinka,7-6(1) 6-4,3,R16,85
+2017-M009,Rome Masters,Clay,M,105683,Milos Raonic,104607,Tomas Berdych,6-3 6-2,3,R16,61
+2017-M009,Rome Masters,Clay,M,100644,Alexander Zverev,104926,Fabio Fognini,6-3 6-3,3,R16,78
+2017-M009,Rome Masters,Clay,M,104925,Novak Djokovic,105223,Juan Martin del Potro,6-1 6-4,3,QF,
+2017-M009,Rome Masters,Clay,M,106233,Dominic Thiem,104745,Rafael Nadal,6-4 6-3,3,QF,111
+2017-M009,Rome Masters,Clay,M,104545,John Isner,105227,Marin Cilic,7-6(3) 2-6 7-6(2),3,QF,157
+2017-M009,Rome Masters,Clay,M,100644,Alexander Zverev,105683,Milos Raonic,7-6(4) 6-1,3,QF,89
+2017-M009,Rome Masters,Clay,M,104925,Novak Djokovic,106233,Dominic Thiem,6-1 6-0,3,SF,59
+2017-M009,Rome Masters,Clay,M,100644,Alexander Zverev,104545,John Isner,6-4 6-7(5) 6-1,3,SF,117
+2017-M009,Rome Masters,Clay,M,100644,Alexander Zverev,104925,Novak Djokovic,6-4 6-3,3,F,81
+2017-520,Roland Garros,Clay,G,104918,Andy Murray,105723,Andrey Kuznetsov,6-4 4-6 6-2 6-0,5,R128,152
+2017-520,Roland Garros,Clay,G,105373,Martin Klizan,106362,Laurent Lokoli,7-6(4) 6-3 4-6 0-6 6-4,5,R128,219
+2017-520,Roland Garros,Clay,G,104597,Nicolas Almagro,104571,Marcos Baghdatis,6-7(3) 6-4 6-3 7-6(1),5,R128,195
+2017-520,Roland Garros,Clay,G,105223,Juan Martin del Potro,105550,Guido Pella,6-2 6-1 6-4,5,R128,109
+2017-520,Roland Garros,Clay,G,104545,John Isner,111442,Jordan Thompson,6-3 4-6 7-6(5) 6-3,5,R128,157
+2017-520,Roland Garros,Clay,G,103893,Paolo Lorenzi,105575,Ricardas Berankis,6-0 6-2 6-4,5,R128,107
+2017-520,Roland Garros,Clay,G,111575,Karen Khachanov,111797,Nicolas Jarry,6-4 3-6 7-6(4) 6-1,5,R128,165
+2017-520,Roland Garros,Clay,G,104607,Tomas Berdych,105526,Jan Lennard Struff,6-1 6-1 4-6 6-4,5,R128,152
+2017-520,Roland Garros,Clay,G,104269,Fernando Verdasco,100644,Alexander Zverev,6-4 3-6 6-4 6-2,5,R128,173
+2017-520,Roland Garros,Clay,G,105732,Pierre Hugues Herbert,111577,Jared Donaldson,6-4 7-6(5) 6-4,5,R128,131
+2017-520,Roland Garros,Clay,G,106044,Nicolas Kicker,106000,Damir Dzumhur,6-3 2-6 6-3 6-4,5,R128,133
+2017-520,Roland Garros,Clay,G,104655,Pablo Cuevas,111506,Maxime Hamou,6-3 6-2 6-4,5,R128,123
+2017-520,Roland Garros,Clay,G,111202,Hyeon Chung,105023,Sam Querrey,6-4 3-6 6-3 6-3,5,R128,135
+2017-520,Roland Garros,Clay,G,104797,Denis Istomin,124014,Ernesto Escobedo,7-6(3) 6-3 6-4,5,R128,118
+2017-520,Roland Garros,Clay,G,104871,Jeremy Chardy,105430,Radu Albot,6-2 6-4 7-6(3),5,R128,129
+2017-520,Roland Garros,Clay,G,105453,Kei Nishikori,106423,Thanasi Kokkinakis,4-6 6-1 6-4 6-4,5,R128,182
+2017-520,Roland Garros,Clay,G,104527,Stan Wawrinka,106075,Jozef Kovalik,6-2 7-6(6) 6-3,5,R128,117
+2017-520,Roland Garros,Clay,G,105238,Alexandr Dolgopolov,104122,Carlos Berlocq,7-5 6-3 6-4,5,R128,130
+2017-520,Roland Garros,Clay,G,104312,Andreas Seppi,105053,Santiago Giraldo,4-6 6-1 6-2 6-2,5,R128,131
+2017-520,Roland Garros,Clay,G,104926,Fabio Fognini,126207,Frances Tiafoe,6-4 6-3 3-6 1-6 6-0,5,R128,165
+2017-520,Roland Garros,Clay,G,104755,Richard Gasquet,105963,Arthur De Greef,6-2 3-6 6-1 6-3,5,R128,130
+2017-520,Roland Garros,Clay,G,103607,Victor Estrella,104559,Teymuraz Gabashvili,6-7(9) 2-6 7-6(3) 6-3 6-2,5,R128,260
+2017-520,Roland Garros,Clay,G,106329,Thiago Monteiro,124186,Alexandre Muller,7-6(4) 2-6 4-6 7-6(3) 6-0,5,R128,223
+2017-520,Roland Garros,Clay,G,104792,Gael Monfils,104460,Dustin Brown,6-4 7-5 6-0,5,R128,90
+2017-520,Roland Garros,Clay,G,105952,Renzo Olivo,104542,Jo-Wilfried Tsonga,7-5 6-4 6-7(6) 6-4,5,R128,211
+2017-520,Roland Garros,Clay,G,106378,Kyle Edmund,105671,Gastao Elias,6-3 6-2 7-5,5,R128,106
+2017-520,Roland Garros,Clay,G,104731,Kevin Anderson,104291,Malek Jaziri,7-6(4) 6-3 7-6(4),5,R128,155
+2017-520,Roland Garros,Clay,G,106401,Nick Kyrgios,104259,Philipp Kohlschreiber,6-3 7-6(4) 6-3,5,R128,111
+2017-520,Roland Garros,Clay,G,103970,David Ferrer,105385,Donald Young,5-7 6-3 4-6 6-3 13-11,5,R128,267
+2017-520,Roland Garros,Clay,G,103852,Feliciano Lopez,106216,Bjorn Fratangelo,6-4 7-6(4) 6-3,5,R128,121
+2017-520,Roland Garros,Clay,G,104505,Konstantin Kravchuk,105643,Federico Delbonis,6-3 6-4 7-6(6),5,R128,145
+2017-520,Roland Garros,Clay,G,105227,Marin Cilic,105208,Ernests Gulbis,6-3 6-3 6-3,5,R128,101
+2017-520,Roland Garros,Clay,G,105683,Milos Raonic,104327,Steve Darcis,6-3 6-4 6-2,5,R128,92
+2017-520,Roland Garros,Clay,G,104297,Rogerio Dutra Silva,104022,Mikhail Youzhny,4-6 7-6(5) 2-6 7-6(4) 6-2,5,R128,251
+2017-520,Roland Garros,Clay,G,105477,Marco Trungelliti,111460,Quentin Halys,3-6 6-7(4) 7-6(2) 6-4 6-4,5,R128,234
+2017-520,Roland Garros,Clay,G,104198,Guillermo Garcia Lopez,104180,Gilles Muller,7-6(4) 6-7(2) 6-2 6-2,5,R128,207
+2017-520,Roland Garros,Clay,G,105807,Pablo Carreno Busta,104252,Florian Mayer,6-4 6-2 6-2,5,R128,96
+2017-520,Roland Garros,Clay,G,106121,Taro Daniel,105668,Jerzy Janowicz,6-4 6-4 6-4,5,R128,144
+2017-520,Roland Garros,Clay,G,103990,Tommy Robredo,105554,Daniel Evans,5-7 6-4 6-3 6-1,5,R128,147
+2017-520,Roland Garros,Clay,G,105777,Grigor Dimitrov,103565,Stephane Robert,6-2 6-3 6-4,5,R128,109
+2017-520,Roland Garros,Clay,G,106210,Jiri Vesely,106058,Jack Sock,7-5 7-5 6-3,5,R128,161
+2017-520,Roland Garros,Clay,G,105379,Aljaz Bedene,105992,Ryan Harrison,6-4 6-0 3-6 6-1,5,R128,119
+2017-520,Roland Garros,Clay,G,105062,Mikhail Kukushkin,105815,Tennys Sandgren,6-2 6-1 6-4,5,R128,107
+2017-520,Roland Garros,Clay,G,105138,Roberto Bautista Agut,105357,John Millman,6-2 6-2 0-6 6-1,5,R128,134
+2017-520,Roland Garros,Clay,G,105932,Nikoloz Basilashvili,104468,Gilles Simon,1-6 6-2 6-4 6-1,5,R128,145
+2017-520,Roland Garros,Clay,G,104678,Viktor Troicki,105539,Evgeny Donskoy,7-6(4) 6-4 6-0,5,R128,137
+2017-520,Roland Garros,Clay,G,104898,Robin Haase,200282,Alex De Minaur,6-2 6-3 6-1,5,R128,96
+2017-520,Roland Garros,Clay,G,104745,Rafael Nadal,105332,Benoit Paire,6-1 6-4 6-1,5,R128,112
+2017-520,Roland Garros,Clay,G,106233,Dominic Thiem,106071,Bernard Tomic,6-4 6-0 6-2,5,R128,80
+2017-520,Roland Garros,Clay,G,104620,Simone Bolelli,103917,Nicolas Mahut,6-4 6-2 6-2,5,R128,107
+2017-520,Roland Garros,Clay,G,106432,Borna Coric,106288,Mathias Bourgue,7-6(5) 6-3 6-2,5,R128,147
+2017-520,Roland Garros,Clay,G,105449,Steve Johnson,105216,Yuichi Sugita,6-3 6-3 6-7(4) 6-7(3) 6-3,5,R128,214
+2017-520,Roland Garros,Clay,G,103333,Ivo Karlovic,126774,Stefanos Tsitsipas,7-6(5) 7-5 6-4,5,R128,134
+2017-520,Roland Garros,Clay,G,104547,Horacio Zeballos,105173,Adrian Mannarino,7-5 6-3 6-4,5,R128,132
+2017-520,Roland Garros,Clay,G,104660,Sergiy Stakhovsky,104229,Yen Hsun Lu,6-3 6-4 7-6(4),5,R128,127
+2017-520,Roland Garros,Clay,G,105676,David Goffin,103908,Paul Henri Mathieu,6-2 6-2 6-2,5,R128,110
+2017-520,Roland Garros,Clay,G,106298,Lucas Pouille,103898,Julien Benneteau,7-6(6) 3-6 4-6 6-3 6-4,5,R128,201
+2017-520,Roland Garros,Clay,G,105064,Thomaz Bellucci,105583,Dusan Lajovic,4-6 7-5 6-4 6-4,5,R128,178
+2017-520,Roland Garros,Clay,G,126127,Benjamin Bonzi,106421,Daniil Medvedev,5-7 6-4 6-1 3-1 RET,5,R128,147
+2017-520,Roland Garros,Clay,G,105077,Albert Ramos,105657,Marius Copil,6-7(7) 6-1 6-4 6-2,5,R128,186
+2017-520,Roland Garros,Clay,G,109303,Stefano Napolitano,104999,Mischa Zverev,4-6 7-5 6-2 6-2,5,R128,162
+2017-520,Roland Garros,Clay,G,106043,Diego Schwartzman,126094,Andrey Rublev,0-6 6-4 6-2 6-7(3) 9-7,5,R128,210
+2017-520,Roland Garros,Clay,G,105311,Joao Sousa,104386,Janko Tipsarevic,4-6 7-6(3) 6-2 6-2,5,R128,188
+2017-520,Roland Garros,Clay,G,104925,Novak Djokovic,104719,Marcel Granollers,6-3 6-4 6-2,5,R128,147
+2017-520,Roland Garros,Clay,G,104918,Andy Murray,105373,Martin Klizan,6-7(3) 6-2 6-2 7-6(3),5,R64,214
+2017-520,Roland Garros,Clay,G,105223,Juan Martin del Potro,104597,Nicolas Almagro,6-3 3-6 1-1 RET,5,R64,90
+2017-520,Roland Garros,Clay,G,104545,John Isner,103893,Paolo Lorenzi,6-3 7-6(3) 7-6(2),5,R64,129
+2017-520,Roland Garros,Clay,G,111575,Karen Khachanov,104607,Tomas Berdych,7-5 6-4 6-4,5,R64,133
+2017-520,Roland Garros,Clay,G,104269,Fernando Verdasco,105732,Pierre Hugues Herbert,6-3 3-6 4-6 6-3 6-3,5,R64,209
+2017-520,Roland Garros,Clay,G,104655,Pablo Cuevas,106044,Nicolas Kicker,6-4 6-4 6-4,5,R64,120
+2017-520,Roland Garros,Clay,G,111202,Hyeon Chung,104797,Denis Istomin,6-1 7-5 6-1,5,R64,111
+2017-520,Roland Garros,Clay,G,105453,Kei Nishikori,104871,Jeremy Chardy,6-3 6-0 7-6(5),5,R64,117
+2017-520,Roland Garros,Clay,G,104527,Stan Wawrinka,105238,Alexandr Dolgopolov,6-4 7-6(5) 7-5,5,R64,154
+2017-520,Roland Garros,Clay,G,104926,Fabio Fognini,104312,Andreas Seppi,6-4 7-5 6-3,5,R64,140
+2017-520,Roland Garros,Clay,G,104755,Richard Gasquet,103607,Victor Estrella,6-1 6-0 6-4,5,R64,103
+2017-520,Roland Garros,Clay,G,104792,Gael Monfils,106329,Thiago Monteiro,6-1 6-4 6-1,5,R64,91
+2017-520,Roland Garros,Clay,G,106378,Kyle Edmund,105952,Renzo Olivo,7-5 6-3 6-1,5,R64,122
+2017-520,Roland Garros,Clay,G,104731,Kevin Anderson,106401,Nick Kyrgios,5-7 6-4 6-1 6-2,5,R64,155
+2017-520,Roland Garros,Clay,G,103852,Feliciano Lopez,103970,David Ferrer,7-5 3-6 7-5 4-6 6-4,5,R64,232
+2017-520,Roland Garros,Clay,G,105227,Marin Cilic,104505,Konstantin Kravchuk,6-3 6-2 6-2,5,R64,98
+2017-520,Roland Garros,Clay,G,105683,Milos Raonic,104297,Rogerio Dutra Silva,4-6 6-2 6-3 6-4,5,R64,143
+2017-520,Roland Garros,Clay,G,104198,Guillermo Garcia Lopez,105477,Marco Trungelliti,7-5 6-4 7-5,5,R64,147
+2017-520,Roland Garros,Clay,G,105807,Pablo Carreno Busta,106121,Taro Daniel,7-5 6-4 4-6 6-0,5,R64,161
+2017-520,Roland Garros,Clay,G,105777,Grigor Dimitrov,103990,Tommy Robredo,6-3 6-4 7-5,5,R64,133
+2017-520,Roland Garros,Clay,G,106210,Jiri Vesely,105379,Aljaz Bedene,6-3 6-3 4-6 6-3,5,R64,172
+2017-520,Roland Garros,Clay,G,105138,Roberto Bautista Agut,105062,Mikhail Kukushkin,6-3 3-6 6-3 7-6(3),5,R64,175
+2017-520,Roland Garros,Clay,G,105932,Nikoloz Basilashvili,104678,Viktor Troicki,7-6(3) 7-6(2) 7-6(6),5,R64,158
+2017-520,Roland Garros,Clay,G,104745,Rafael Nadal,104898,Robin Haase,6-1 6-4 6-3,5,R64,109
+2017-520,Roland Garros,Clay,G,106233,Dominic Thiem,104620,Simone Bolelli,7-5 6-1 6-3,5,R64,143
+2017-520,Roland Garros,Clay,G,105449,Steve Johnson,106432,Borna Coric,6-2 7-6(8) 3-6 7-6(6),5,R64,233
+2017-520,Roland Garros,Clay,G,104547,Horacio Zeballos,103333,Ivo Karlovic,7-6(5) 7-6(5) 6-3,5,R64,133
+2017-520,Roland Garros,Clay,G,105676,David Goffin,104660,Sergiy Stakhovsky,6-2 6-4 3-6 6-3,5,R64,154
+2017-520,Roland Garros,Clay,G,106298,Lucas Pouille,105064,Thomaz Bellucci,7-6(5) 6-1 6-2,5,R64,128
+2017-520,Roland Garros,Clay,G,105077,Albert Ramos,126127,Benjamin Bonzi,6-2 6-1 6-1,5,R64,84
+2017-520,Roland Garros,Clay,G,106043,Diego Schwartzman,109303,Stefano Napolitano,6-3 7-5 6-2,5,R64,128
+2017-520,Roland Garros,Clay,G,104925,Novak Djokovic,105311,Joao Sousa,6-1 6-4 6-3,5,R64,127
+2017-520,Roland Garros,Clay,G,104918,Andy Murray,105223,Juan Martin del Potro,7-6(8) 7-5 6-0,5,R32,173
+2017-520,Roland Garros,Clay,G,111575,Karen Khachanov,104545,John Isner,7-6(1) 6-3 6-7(5) 7-6(3),5,R32,180
+2017-520,Roland Garros,Clay,G,104269,Fernando Verdasco,104655,Pablo Cuevas,6-2 6-1 6-3,5,R32,93
+2017-520,Roland Garros,Clay,G,105453,Kei Nishikori,111202,Hyeon Chung,7-5 6-4 6-7(4) 0-6 6-4,5,R32,231
+2017-520,Roland Garros,Clay,G,104527,Stan Wawrinka,104926,Fabio Fognini,7-6(2) 6-0 6-2,5,R32,111
+2017-520,Roland Garros,Clay,G,104792,Gael Monfils,104755,Richard Gasquet,7-6(5) 5-7 4-3 RET,5,R32,144
+2017-520,Roland Garros,Clay,G,104731,Kevin Anderson,106378,Kyle Edmund,6-7(6) 7-6(4) 5-7 6-1 6-4,5,R32,238
+2017-520,Roland Garros,Clay,G,105227,Marin Cilic,103852,Feliciano Lopez,6-1 6-3 6-3,5,R32,107
+2017-520,Roland Garros,Clay,G,105683,Milos Raonic,104198,Guillermo Garcia Lopez,6-1 1-0 RET,5,R32,28
+2017-520,Roland Garros,Clay,G,105807,Pablo Carreno Busta,105777,Grigor Dimitrov,7-5 6-3 6-4,5,R32,138
+2017-520,Roland Garros,Clay,G,105138,Roberto Bautista Agut,106210,Jiri Vesely,6-3 6-4 6-3,5,R32,122
+2017-520,Roland Garros,Clay,G,104745,Rafael Nadal,105932,Nikoloz Basilashvili,6-0 6-1 6-0,5,R32,90
+2017-520,Roland Garros,Clay,G,106233,Dominic Thiem,105449,Steve Johnson,6-1 7-6(4) 6-3,5,R32,123
+2017-520,Roland Garros,Clay,G,104547,Horacio Zeballos,105676,David Goffin,4-5 RET,5,R32,57
+2017-520,Roland Garros,Clay,G,105077,Albert Ramos,106298,Lucas Pouille,6-2 3-6 5-7 6-2 6-1,5,R32,221
+2017-520,Roland Garros,Clay,G,104925,Novak Djokovic,106043,Diego Schwartzman,5-7 6-3 3-6 6-1 6-1,5,R32,198
+2017-520,Roland Garros,Clay,G,104918,Andy Murray,111575,Karen Khachanov,6-3 6-4 6-4,5,R16,124
+2017-520,Roland Garros,Clay,G,105453,Kei Nishikori,104269,Fernando Verdasco,0-6 6-4 6-4 6-0,5,R16,154
+2017-520,Roland Garros,Clay,G,104527,Stan Wawrinka,104792,Gael Monfils,7-5 7-6(7) 6-2,5,R16,163
+2017-520,Roland Garros,Clay,G,105227,Marin Cilic,104731,Kevin Anderson,6-3 3-0 RET,5,R16,48
+2017-520,Roland Garros,Clay,G,105807,Pablo Carreno Busta,105683,Milos Raonic,4-6 7-6(2) 6-7(6) 6-4 8-6,5,R16,257
+2017-520,Roland Garros,Clay,G,104745,Rafael Nadal,105138,Roberto Bautista Agut,6-1 6-2 6-2,5,R16,110
+2017-520,Roland Garros,Clay,G,106233,Dominic Thiem,104547,Horacio Zeballos,6-1 6-3 6-1,5,R16,99
+2017-520,Roland Garros,Clay,G,104925,Novak Djokovic,105077,Albert Ramos,7-6(5) 6-1 6-3,5,R16,147
+2017-520,Roland Garros,Clay,G,104918,Andy Murray,105453,Kei Nishikori,2-6 6-1 7-6(0) 6-1,5,QF,159
+2017-520,Roland Garros,Clay,G,104527,Stan Wawrinka,105227,Marin Cilic,6-3 6-3 6-1,5,QF,100
+2017-520,Roland Garros,Clay,G,104745,Rafael Nadal,105807,Pablo Carreno Busta,6-2 2-0 RET,5,QF,51
+2017-520,Roland Garros,Clay,G,106233,Dominic Thiem,104925,Novak Djokovic,7-6(5) 6-3 6-0,5,QF,135
+2017-520,Roland Garros,Clay,G,104527,Stan Wawrinka,104918,Andy Murray,6-7(6) 6-3 5-7 7-6(3) 6-1,5,SF,274
+2017-520,Roland Garros,Clay,G,104745,Rafael Nadal,106233,Dominic Thiem,6-3 6-4 6-0,5,SF,127
+2017-520,Roland Garros,Clay,G,104745,Rafael Nadal,104527,Stan Wawrinka,6-2 6-3 6-1,5,F,125
+2017-540,Wimbledon,Grass,G,104918,Andy Murray,122330,Alexander Bublik,6-1 6-4 6-2,5,R128,103
+2017-540,Wimbledon,Grass,G,104460,Dustin Brown,105311,Joao Sousa,3-6 7-6(5) 6-4 6-4,5,R128,120
+2017-540,Wimbledon,Grass,G,106210,Jiri Vesely,105011,Illya Marchenko,6-1 4-6 4-6 7-5 6-1,5,R128,203
+2017-540,Wimbledon,Grass,G,104926,Fabio Fognini,104098,Dmitry Tursunov,6-1 6-3 6-3,5,R128,92
+2017-540,Wimbledon,Grass,G,105732,Pierre Hugues Herbert,106401,Nick Kyrgios,6-3 6-4 RET,5,R128,58
+2017-540,Wimbledon,Grass,G,105332,Benoit Paire,104297,Rogerio Dutra Silva,6-4 3-6 7-6(10) 6-4,5,R128,138
+2017-540,Wimbledon,Grass,G,105668,Jerzy Janowicz,133430,Denis Shapovalov,6-4 3-6 6-3 7-6(2),5,R128,145
+2017-540,Wimbledon,Grass,G,106298,Lucas Pouille,104291,Malek Jaziri,6-7(5) 6-4 6-4 7-6(2),5,R128,183
+2017-540,Wimbledon,Grass,G,104542,Jo-Wilfried Tsonga,111815,Cameron Norrie,6-3 6-2 6-2,5,R128,82
+2017-540,Wimbledon,Grass,G,104620,Simone Bolelli,104229,Yen Hsun Lu,6-3 1-6 6-3 6-4,5,R128,123
+2017-540,Wimbledon,Grass,G,105932,Nikoloz Basilashvili,104122,Carlos Berlocq,6-4 7-6(3) 6-1,5,R128,137
+2017-540,Wimbledon,Grass,G,105023,Sam Querrey,105341,Thomas Fabbiano,7-6(5) 7-5 6-2,5,R128,120
+2017-540,Wimbledon,Grass,G,104731,Kevin Anderson,104269,Fernando Verdasco,2-6 7-6(5) 7-6(8) 6-3,5,R128,175
+2017-540,Wimbledon,Grass,G,104312,Andreas Seppi,105613,Norbert Gombos,6-2 3-6 6-2 6-1,5,R128,98
+2017-540,Wimbledon,Grass,G,105074,Ruben Bemelmans,103163,Tommy Haas,6-2 3-6 6-3 7-5,5,R128,159
+2017-540,Wimbledon,Grass,G,106421,Daniil Medvedev,104527,Stan Wawrinka,6-4 3-6 6-4 6-1,5,R128,132
+2017-540,Wimbledon,Grass,G,104745,Rafael Nadal,105357,John Millman,6-1 6-3 6-2,5,R128,105
+2017-540,Wimbledon,Grass,G,105385,Donald Young,104797,Denis Istomin,5-7 6-4 6-4 4-2 RET,5,R128,132
+2017-540,Wimbledon,Grass,G,106329,Thiago Monteiro,106225,Andrew Whittington,4-6 6-3 7-6(4) 7-6(5),5,R128,186
+2017-540,Wimbledon,Grass,G,111575,Karen Khachanov,105723,Andrey Kuznetsov,7-6(4) 2-6 6-3 1-6 6-2,5,R128,154
+2017-540,Wimbledon,Grass,G,105379,Aljaz Bedene,103333,Ivo Karlovic,6-7(5) 7-6(6) 6-7(7) 7-6(7) 8-6,5,R128,264
+2017-540,Wimbledon,Grass,G,106000,Damir Dzumhur,105952,Renzo Olivo,6-2 6-0 6-1,5,R128,74
+2017-540,Wimbledon,Grass,G,104586,Lukas Rosol,105967,Henri Laaksonen,4-6 7-5 6-3 6-4,5,R128,122
+2017-540,Wimbledon,Grass,G,104180,Gilles Muller,105916,Marton Fucsovics,7-5 6-4 6-2,5,R128,115
+2017-540,Wimbledon,Grass,G,105453,Kei Nishikori,106065,Marco Cecchinato,6-2 6-2 6-0,5,R128,71
+2017-540,Wimbledon,Grass,G,104660,Sergiy Stakhovsky,103898,Julien Benneteau,6-3 7-6(8) 2-6 6-2,5,R128,156
+2017-540,Wimbledon,Grass,G,105376,Peter Gojowczyk,105657,Marius Copil,7-6(5) 2-6 6-3 6-1,5,R128,137
+2017-540,Wimbledon,Grass,G,105138,Roberto Bautista Agut,104890,Andreas Haider Maurer,6-3 6-1 6-2,5,R128,97
+2017-540,Wimbledon,Grass,G,105449,Steve Johnson,106044,Nicolas Kicker,6-4 7-5 6-3,5,R128,116
+2017-540,Wimbledon,Grass,G,105430,Radu Albot,105487,Facundo Bagnis,4-6 6-4 7-6(9) 7-6(3),5,R128,211
+2017-540,Wimbledon,Grass,G,104252,Florian Mayer,104678,Viktor Troicki,6-1 RET,5,R128,17
+2017-540,Wimbledon,Grass,G,105227,Marin Cilic,104259,Philipp Kohlschreiber,6-4 6-2 6-3,5,R128,116
+2017-540,Wimbledon,Grass,G,105683,Milos Raonic,105526,Jan Lennard Struff,7-6(5) 6-2 7-6(4),5,R128,135
+2017-540,Wimbledon,Grass,G,104022,Mikhail Youzhny,103917,Nicolas Mahut,6-2 7-5 6-4,5,R128,129
+2017-540,Wimbledon,Grass,G,126094,Andrey Rublev,105882,Stefano Travaglia,6-7(3) 6-3 7-5 1-6 7-5,5,R128,207
+2017-540,Wimbledon,Grass,G,105077,Albert Ramos,111442,Jordan Thompson,6-4 6-4 7-6(4),5,R128,144
+2017-540,Wimbledon,Grass,G,106058,Jack Sock,106426,Cristian Garin,6-3 4-6 7-6(4) 6-3,5,R128,134
+2017-540,Wimbledon,Grass,G,124116,Sebastian Ofner,105064,Thomaz Bellucci,6-2 6-3 6-2,5,R128,105
+2017-540,Wimbledon,Grass,G,126207,Frances Tiafoe,104898,Robin Haase,6-3 3-6 7-6(5) 7-5,5,R128,147
+2017-540,Wimbledon,Grass,G,100644,Alexander Zverev,105539,Evgeny Donskoy,6-4 7-6(3) 6-3,5,R128,110
+2017-540,Wimbledon,Grass,G,105777,Grigor Dimitrov,106043,Diego Schwartzman,7-6(4) 6-2 6-2,5,R128,110
+2017-540,Wimbledon,Grass,G,104571,Marcos Baghdatis,104868,James Ward,6-4 6-4 6-3,5,R128,100
+2017-540,Wimbledon,Grass,G,104534,Dudi Sela,104719,Marcel Granollers,4-6 6-3 1-6 6-2 6-1,5,R128,153
+2017-540,Wimbledon,Grass,G,104545,John Isner,126203,Taylor Fritz,6-4 7-6(3) 6-3,5,R128,91
+2017-540,Wimbledon,Grass,G,104999,Mischa Zverev,106071,Bernard Tomic,6-4 6-3 6-4,5,R128,84
+2017-540,Wimbledon,Grass,G,105062,Mikhail Kukushkin,106121,Taro Daniel,4-6 6-4 7-6(4) 6-2,5,R128,168
+2017-540,Wimbledon,Grass,G,105583,Dusan Lajovic,126774,Stefanos Tsitsipas,6-4 6-4 6-4,5,R128,120
+2017-540,Wimbledon,Grass,G,103819,Roger Federer,105238,Alexandr Dolgopolov,6-3 3-0 RET,5,R128,42
+2017-540,Wimbledon,Grass,G,106233,Dominic Thiem,105577,Vasek Pospisil,6-4 6-4 6-3,5,R128,115
+2017-540,Wimbledon,Grass,G,104468,Gilles Simon,111797,Nicolas Jarry,7-6(4) 6-3 6-3,5,R128,134
+2017-540,Wimbledon,Grass,G,111577,Jared Donaldson,104386,Janko Tipsarevic,5-0 RET,5,R128,12
+2017-540,Wimbledon,Grass,G,103893,Paolo Lorenzi,104547,Horacio Zeballos,7-6(3) 4-6 7-6(8) 7-5,5,R128,222
+2017-540,Wimbledon,Grass,G,103970,David Ferrer,104755,Richard Gasquet,6-3 6-4 5-7 6-2,5,R128,174
+2017-540,Wimbledon,Grass,G,104327,Steve Darcis,105575,Ricardas Berankis,4-6 6-3 2-6 6-4 6-3,5,R128,185
+2017-540,Wimbledon,Grass,G,105992,Ryan Harrison,106432,Borna Coric,7-6(4) 6-4 7-6(6),5,R128,140
+2017-540,Wimbledon,Grass,G,104607,Tomas Berdych,104871,Jeremy Chardy,6-3 3-6 7-6(4) 6-4,5,R128,142
+2017-540,Wimbledon,Grass,G,104792,Gael Monfils,104978,Daniel Brands,6-3 7-5 6-4,5,R128,94
+2017-540,Wimbledon,Grass,G,106378,Kyle Edmund,105528,Alexander Ward,4-6 6-3 6-2 6-1,5,R128,122
+2017-540,Wimbledon,Grass,G,105216,Yuichi Sugita,105454,Brydan Klein,7-6(5) 6-3 6-0,5,R128,126
+2017-540,Wimbledon,Grass,G,105173,Adrian Mannarino,103852,Feliciano Lopez,5-7 6-1 6-1 4-3 RET,5,R128,134
+2017-540,Wimbledon,Grass,G,105223,Juan Martin del Potro,106423,Thanasi Kokkinakis,6-3 3-6 7-6(2) 6-4,5,R128,183
+2017-540,Wimbledon,Grass,G,105208,Ernests Gulbis,103607,Victor Estrella,6-1 6-1 6-2,5,R128,87
+2017-540,Wimbledon,Grass,G,106361,Adam Pavlasek,124014,Ernesto Escobedo,6-7(7) 6-1 6-3 6-1,5,R128,124
+2017-540,Wimbledon,Grass,G,104925,Novak Djokovic,105373,Martin Klizan,6-3 2-0 RET,5,R128,40
+2017-540,Wimbledon,Grass,G,104918,Andy Murray,104460,Dustin Brown,6-3 6-2 6-2,5,R64,96
+2017-540,Wimbledon,Grass,G,104926,Fabio Fognini,106210,Jiri Vesely,7-6(3) 6-4 6-2,5,R64,117
+2017-540,Wimbledon,Grass,G,105332,Benoit Paire,105732,Pierre Hugues Herbert,7-6(4) 6-1 6-4,5,R64,104
+2017-540,Wimbledon,Grass,G,105668,Jerzy Janowicz,106298,Lucas Pouille,7-6(4) 7-6(5) 3-6 6-1,5,R64,165
+2017-540,Wimbledon,Grass,G,104542,Jo-Wilfried Tsonga,104620,Simone Bolelli,6-1 7-5 6-2,5,R64,114
+2017-540,Wimbledon,Grass,G,105023,Sam Querrey,105932,Nikoloz Basilashvili,6-4 4-6 6-3 6-3,5,R64,111
+2017-540,Wimbledon,Grass,G,104731,Kevin Anderson,104312,Andreas Seppi,6-3 7-6(4) 6-3,5,R64,100
+2017-540,Wimbledon,Grass,G,105074,Ruben Bemelmans,106421,Daniil Medvedev,6-4 6-2 3-6 2-6 6-3,5,R64,170
+2017-540,Wimbledon,Grass,G,104745,Rafael Nadal,105385,Donald Young,6-4 6-2 7-5,5,R64,131
+2017-540,Wimbledon,Grass,G,111575,Karen Khachanov,106329,Thiago Monteiro,3-6 7-6(5) 7-6(3) 7-5,5,R64,189
+2017-540,Wimbledon,Grass,G,105379,Aljaz Bedene,106000,Damir Dzumhur,6-3 3-6 6-3 6-3,5,R64,127
+2017-540,Wimbledon,Grass,G,104180,Gilles Muller,104586,Lukas Rosol,7-5 6-7(7) 4-6 6-3 9-7,5,R64,217
+2017-540,Wimbledon,Grass,G,105453,Kei Nishikori,104660,Sergiy Stakhovsky,6-4 6-7(7) 6-1 7-6(6),5,R64,195
+2017-540,Wimbledon,Grass,G,105138,Roberto Bautista Agut,105376,Peter Gojowczyk,6-2 6-1 3-6 6-3,5,R64,137
+2017-540,Wimbledon,Grass,G,105449,Steve Johnson,105430,Radu Albot,6-3 6-3 4-6 6-3,5,R64,152
+2017-540,Wimbledon,Grass,G,105227,Marin Cilic,104252,Florian Mayer,7-6(2) 6-4 7-5,5,R64,132
+2017-540,Wimbledon,Grass,G,105683,Milos Raonic,104022,Mikhail Youzhny,3-6 7-6(7) 6-4 7-5,5,R64,160
+2017-540,Wimbledon,Grass,G,105077,Albert Ramos,126094,Andrey Rublev,7-5 6-7(6) 4-6 6-3 6-4,5,R64,211
+2017-540,Wimbledon,Grass,G,124116,Sebastian Ofner,106058,Jack Sock,6-3 6-4 3-6 2-6 6-2,5,R64,164
+2017-540,Wimbledon,Grass,G,100644,Alexander Zverev,126207,Frances Tiafoe,6-3 6-4 6-3,5,R64,93
+2017-540,Wimbledon,Grass,G,105777,Grigor Dimitrov,104571,Marcos Baghdatis,6-3 6-2 6-1,5,R64,102
+2017-540,Wimbledon,Grass,G,104534,Dudi Sela,104545,John Isner,6-7(5) 7-6(5) 5-7 7-6(5) 6-3,5,R64,231
+2017-540,Wimbledon,Grass,G,104999,Mischa Zverev,105062,Mikhail Kukushkin,6-1 6-2 2-6 3-6 6-4,5,R64,184
+2017-540,Wimbledon,Grass,G,103819,Roger Federer,105583,Dusan Lajovic,7-6(0) 6-3 6-2,5,R64,90
+2017-540,Wimbledon,Grass,G,106233,Dominic Thiem,104468,Gilles Simon,5-7 6-4 6-2 6-4,5,R64,171
+2017-540,Wimbledon,Grass,G,111577,Jared Donaldson,103893,Paolo Lorenzi,6-4 7-6(0) 6-7(0) 6-2,5,R64,184
+2017-540,Wimbledon,Grass,G,103970,David Ferrer,104327,Steve Darcis,3-0 RET,5,R64,12
+2017-540,Wimbledon,Grass,G,104607,Tomas Berdych,105992,Ryan Harrison,6-4 6-3 6-7(8) 6-3,5,R64,156
+2017-540,Wimbledon,Grass,G,104792,Gael Monfils,106378,Kyle Edmund,7-6(1) 6-4 6-4,5,R64,132
+2017-540,Wimbledon,Grass,G,105173,Adrian Mannarino,105216,Yuichi Sugita,6-1 5-7 4-6 7-6(2) 6-2,5,R64,212
+2017-540,Wimbledon,Grass,G,105208,Ernests Gulbis,105223,Juan Martin del Potro,6-4 6-4 7-6(3),5,R64,173
+2017-540,Wimbledon,Grass,G,104925,Novak Djokovic,106361,Adam Pavlasek,6-2 6-2 6-1,5,R64,93
+2017-540,Wimbledon,Grass,G,104918,Andy Murray,104926,Fabio Fognini,6-2 4-6 6-1 7-5,5,R32,159
+2017-540,Wimbledon,Grass,G,105332,Benoit Paire,105668,Jerzy Janowicz,6-2 7-6(3) 6-3,5,R32,102
+2017-540,Wimbledon,Grass,G,105023,Sam Querrey,104542,Jo-Wilfried Tsonga,6-2 3-6 7-6(5) 1-6 7-5,5,R32,178
+2017-540,Wimbledon,Grass,G,104731,Kevin Anderson,105074,Ruben Bemelmans,7-6(3) 6-4 7-6(3),5,R32,120
+2017-540,Wimbledon,Grass,G,104745,Rafael Nadal,111575,Karen Khachanov,6-1 6-4 7-6(3),5,R32,134
+2017-540,Wimbledon,Grass,G,104180,Gilles Muller,105379,Aljaz Bedene,7-6(4) 7-5 6-4,5,R32,147
+2017-540,Wimbledon,Grass,G,105138,Roberto Bautista Agut,105453,Kei Nishikori,6-4 7-6(3) 3-6 6-3,5,R32,200
+2017-540,Wimbledon,Grass,G,105227,Marin Cilic,105449,Steve Johnson,6-4 7-6(3) 6-4,5,R32,131
+2017-540,Wimbledon,Grass,G,105683,Milos Raonic,105077,Albert Ramos,7-6(3) 6-4 7-5,5,R32,141
+2017-540,Wimbledon,Grass,G,100644,Alexander Zverev,124116,Sebastian Ofner,6-4 6-4 6-2,5,R32,92
+2017-540,Wimbledon,Grass,G,105777,Grigor Dimitrov,104534,Dudi Sela,6-1 6-1 RET,5,R32,60
+2017-540,Wimbledon,Grass,G,103819,Roger Federer,104999,Mischa Zverev,7-6(3) 6-4 6-4,5,R32,109
+2017-540,Wimbledon,Grass,G,106233,Dominic Thiem,111577,Jared Donaldson,7-5 6-4 6-2,5,R32,123
+2017-540,Wimbledon,Grass,G,104607,Tomas Berdych,103970,David Ferrer,6-3 6-4 6-3,5,R32,105
+2017-540,Wimbledon,Grass,G,105173,Adrian Mannarino,104792,Gael Monfils,7-6(3) 4-6 5-7 6-3 6-2,5,R32,209
+2017-540,Wimbledon,Grass,G,104925,Novak Djokovic,105208,Ernests Gulbis,6-4 6-1 7-6(2),5,R32,131
+2017-540,Wimbledon,Grass,G,104918,Andy Murray,105332,Benoit Paire,7-6(1) 6-4 6-4,5,R16,141
+2017-540,Wimbledon,Grass,G,105023,Sam Querrey,104731,Kevin Anderson,5-7 7-6(5) 6-3 6-7(11) 6-3,5,R16,186
+2017-540,Wimbledon,Grass,G,104180,Gilles Muller,104745,Rafael Nadal,6-3 6-4 3-6 4-6 15-13,5,R16,288
+2017-540,Wimbledon,Grass,G,105227,Marin Cilic,105138,Roberto Bautista Agut,6-2 6-2 6-2,5,R16,100
+2017-540,Wimbledon,Grass,G,105683,Milos Raonic,100644,Alexander Zverev,4-6 7-5 4-6 7-5 6-1,5,R16,203
+2017-540,Wimbledon,Grass,G,103819,Roger Federer,105777,Grigor Dimitrov,6-4 6-2 6-4,5,R16,97
+2017-540,Wimbledon,Grass,G,104607,Tomas Berdych,106233,Dominic Thiem,6-3 6-7(1) 6-3 3-6 6-3,5,R16,172
+2017-540,Wimbledon,Grass,G,104925,Novak Djokovic,105173,Adrian Mannarino,6-2 7-6(5) 6-4,5,R16,133
+2017-540,Wimbledon,Grass,G,105023,Sam Querrey,104918,Andy Murray,3-6 6-4 6-7(4) 6-1 6-1,5,QF,161
+2017-540,Wimbledon,Grass,G,105227,Marin Cilic,104180,Gilles Muller,3-6 7-6(6) 7-5 5-7 6-1,5,QF,209
+2017-540,Wimbledon,Grass,G,103819,Roger Federer,105683,Milos Raonic,6-4 6-2 7-6(4),5,QF,117
+2017-540,Wimbledon,Grass,G,104607,Tomas Berdych,104925,Novak Djokovic,7-6(2) 2-0 RET,5,QF,63
+2017-540,Wimbledon,Grass,G,105227,Marin Cilic,105023,Sam Querrey,6-7(6) 6-4 7-6(3) 7-5,5,SF,176
+2017-540,Wimbledon,Grass,G,103819,Roger Federer,104607,Tomas Berdych,7-6(4) 7-6(4) 6-4,5,SF,138
+2017-540,Wimbledon,Grass,G,103819,Roger Federer,105227,Marin Cilic,6-3 6-1 6-4,5,F,101
+2017-0421,Canada Masters,Hard,M,105166,Peter Polansky,105577,Vasek Pospisil,7-5 6-2,3,R64,80
+2017-0421,Canada Masters,Hard,M,103970,David Ferrer,106378,Kyle Edmund,6-7(5) 6-4 6-3,3,R64,146
+2017-0421,Canada Masters,Hard,M,106058,Jack Sock,105732,Pierre Hugues Herbert,7-6(4) 6-3,3,R64,88
+2017-0421,Canada Masters,Hard,M,105138,Roberto Bautista Agut,105065,Tim Smyczek,7-6(4) 6-1,3,R64,80
+2017-0421,Canada Masters,Hard,M,105992,Ryan Harrison,105341,Thomas Fabbiano,6-3 7-5,3,R64,85
+2017-0421,Canada Masters,Hard,M,104792,Gael Monfils,105449,Steve Johnson,2-6 7-6(1) 6-1,3,R64,98
+2017-0421,Canada Masters,Hard,M,106043,Diego Schwartzman,124187,Reilly Opelka,6-3 6-7(2) 6-4,3,R64,129
+2017-0421,Canada Masters,Hard,M,105332,Benoit Paire,105385,Donald Young,6-3 5-7 6-4,3,R64,120
+2017-0421,Canada Masters,Hard,M,111577,Jared Donaldson,106298,Lucas Pouille,7-6(5) 7-6(8),3,R64,118
+2017-0421,Canada Masters,Hard,M,124014,Ernesto Escobedo,105932,Nikoloz Basilashvili,7-6(4) 6-4,3,R64,85
+2017-0421,Canada Masters,Hard,M,104898,Robin Haase,105077,Albert Ramos,6-3 6-3,3,R64,77
+2017-0421,Canada Masters,Hard,M,104999,Mischa Zverev,105613,Norbert Gombos,6-4 6-7(5) 6-3,3,R64,121
+2017-0421,Canada Masters,Hard,M,105023,Sam Querrey,104672,Vincent Millot,4-6 7-6(4) 7-5,3,R64,138
+2017-0421,Canada Masters,Hard,M,104731,Kevin Anderson,104534,Dudi Sela,6-3 7-6(1),3,R64,101
+2017-0421,Canada Masters,Hard,M,105807,Pablo Carreno Busta,111575,Karen Khachanov,3-6 6-3 6-2,3,R64,86
+2017-0421,Canada Masters,Hard,M,106401,Nick Kyrgios,104678,Viktor Troicki,6-1 6-2,3,R64,50
+2017-0421,Canada Masters,Hard,M,103893,Paolo Lorenzi,126207,Frances Tiafoe,7-6(3) 0-6 6-2,3,R64,122
+2017-0421,Canada Masters,Hard,M,104755,Richard Gasquet,111790,Brayden Schnur,7-6(5) 5-7 6-1,3,R64,180
+2017-0421,Canada Masters,Hard,M,105173,Adrian Mannarino,106421,Daniil Medvedev,6-3 6-1,3,R64,80
+2017-0421,Canada Masters,Hard,M,111202,Hyeon Chung,103852,Feliciano Lopez,6-1 4-6 7-6(3),3,R64,133
+2017-0421,Canada Masters,Hard,M,105676,David Goffin,105216,Yuichi Sugita,4-6 6-1 6-4,3,R64,104
+2017-0421,Canada Masters,Hard,M,105223,Juan Martin del Potro,104545,John Isner,7-5 7-5,3,R64,109
+2017-0421,Canada Masters,Hard,M,133430,Denis Shapovalov,104297,Rogerio Dutra Silva,4-6 7-6(8) 6-4,3,R64,145
+2017-0421,Canada Masters,Hard,M,106432,Borna Coric,104022,Mikhail Youzhny,6-2 6-4,3,R64,68
+2017-0421,Canada Masters,Hard,M,103819,Roger Federer,105166,Peter Polansky,6-2 6-1,3,R32,53
+2017-0421,Canada Masters,Hard,M,103970,David Ferrer,106058,Jack Sock,7-6(7) 3-6 6-1,3,R32,140
+2017-0421,Canada Masters,Hard,M,105138,Roberto Bautista Agut,105992,Ryan Harrison,7-5 6-2,3,R32,64
+2017-0421,Canada Masters,Hard,M,104792,Gael Monfils,105453,Kei Nishikori,6-7(4) 7-5 7-6(6),3,R32,161
+2017-0421,Canada Masters,Hard,M,106043,Diego Schwartzman,106233,Dominic Thiem,6-4 6-7(7) 7-5,3,R32,174
+2017-0421,Canada Masters,Hard,M,111577,Jared Donaldson,105332,Benoit Paire,6-2 7-5,3,R32,77
+2017-0421,Canada Masters,Hard,M,104898,Robin Haase,124014,Ernesto Escobedo,6-4 6-1,3,R32,57
+2017-0421,Canada Masters,Hard,M,105777,Grigor Dimitrov,104999,Mischa Zverev,6-3 3-6 6-3,3,R32,99
+2017-0421,Canada Masters,Hard,M,105023,Sam Querrey,104542,Jo-Wilfried Tsonga,6-1 3-6 6-4,3,R32,92
+2017-0421,Canada Masters,Hard,M,104731,Kevin Anderson,105807,Pablo Carreno Busta,6-3 7-6(6),3,R32,101
+2017-0421,Canada Masters,Hard,M,106401,Nick Kyrgios,103893,Paolo Lorenzi,6-2 6-3,3,R32,62
+2017-0421,Canada Masters,Hard,M,100644,Alexander Zverev,104755,Richard Gasquet,6-3 4-6 7-6(3),3,R32,150
+2017-0421,Canada Masters,Hard,M,105173,Adrian Mannarino,105683,Milos Raonic,6-4 6-4,3,R32,75
+2017-0421,Canada Masters,Hard,M,111202,Hyeon Chung,105676,David Goffin,7-5 6-3,3,R32,95
+2017-0421,Canada Masters,Hard,M,133430,Denis Shapovalov,105223,Juan Martin del Potro,6-3 7-6(4),3,R32,103
+2017-0421,Canada Masters,Hard,M,104745,Rafael Nadal,106432,Borna Coric,6-1 6-2,3,R32,71
+2017-0421,Canada Masters,Hard,M,103819,Roger Federer,103970,David Ferrer,4-6 6-4 6-2,3,R16,116
+2017-0421,Canada Masters,Hard,M,105138,Roberto Bautista Agut,104792,Gael Monfils,4-6 7-6(5) 7-6(2),3,R16,176
+2017-0421,Canada Masters,Hard,M,106043,Diego Schwartzman,111577,Jared Donaldson,0-6 7-5 7-5,3,R16,128
+2017-0421,Canada Masters,Hard,M,104898,Robin Haase,105777,Grigor Dimitrov,7-6(3) 4-6 6-1,3,R16,129
+2017-0421,Canada Masters,Hard,M,104731,Kevin Anderson,105023,Sam Querrey,6-4 6-1,3,R16,59
+2017-0421,Canada Masters,Hard,M,100644,Alexander Zverev,106401,Nick Kyrgios,6-4 6-3,3,R16,71
+2017-0421,Canada Masters,Hard,M,105173,Adrian Mannarino,111202,Hyeon Chung,6-3 6-3,3,R16,88
+2017-0421,Canada Masters,Hard,M,133430,Denis Shapovalov,104745,Rafael Nadal,3-6 6-4 7-6(4),3,R16,165
+2017-0421,Canada Masters,Hard,M,103819,Roger Federer,105138,Roberto Bautista Agut,6-4 6-4,3,QF,68
+2017-0421,Canada Masters,Hard,M,104898,Robin Haase,106043,Diego Schwartzman,4-6 6-3 6-3,3,QF,123
+2017-0421,Canada Masters,Hard,M,100644,Alexander Zverev,104731,Kevin Anderson,7-5 6-4,3,QF,91
+2017-0421,Canada Masters,Hard,M,133430,Denis Shapovalov,105173,Adrian Mannarino,2-6 6-3 6-4,3,QF,145
+2017-0421,Canada Masters,Hard,M,103819,Roger Federer,104898,Robin Haase,6-3 7-6(5),3,SF,75
+2017-0421,Canada Masters,Hard,M,100644,Alexander Zverev,133430,Denis Shapovalov,6-4 7-5,3,SF,103
+2017-0421,Canada Masters,Hard,M,100644,Alexander Zverev,103819,Roger Federer,6-3 6-4,3,F,68
+2017-M024,Cincinnati Masters,Hard,M,111575,Karen Khachanov,106043,Diego Schwartzman,6-1 1-6 6-3,3,R64,98
+2017-M024,Cincinnati Masters,Hard,M,105311,Joao Sousa,106378,Kyle Edmund,6-3 2-6 6-3,3,R64,97
+2017-M024,Cincinnati Masters,Hard,M,105216,Yuichi Sugita,106058,Jack Sock,7-5 6-4,3,R64,92
+2017-M024,Cincinnati Masters,Hard,M,105223,Juan Martin del Potro,104607,Tomas Berdych,3-6 7-6(1) 6-0,3,R64,115
+2017-M024,Cincinnati Masters,Hard,M,106283,Mitchell Krueger,105332,Benoit Paire,6-2 6-1,3,R64,56
+2017-M024,Cincinnati Masters,Hard,M,103852,Feliciano Lopez,111202,Hyeon Chung,7-6(5) 6-1,3,R64,75
+2017-M024,Cincinnati Masters,Hard,M,126207,Frances Tiafoe,109739,Maximilian Marterer,6-3 7-6(2),3,R64,83
+2017-M024,Cincinnati Masters,Hard,M,126205,Tommy Paul,105385,Donald Young,6-4 7-6(4),3,R64,95
+2017-M024,Cincinnati Masters,Hard,M,104545,John Isner,104678,Viktor Troicki,7-6(3) 6-4,3,R64,85
+2017-M024,Cincinnati Masters,Hard,M,111577,Jared Donaldson,105138,Roberto Bautista Agut,7-6(5) 6-3,3,R64,92
+2017-M024,Cincinnati Masters,Hard,M,106368,Ramkumar Ramanathan,111153,Christopher Eubanks,6-7(5) 6-1 6-4,3,R64,108
+2017-M024,Cincinnati Masters,Hard,M,105932,Nikoloz Basilashvili,106432,Borna Coric,6-3 7-6(5),3,R64,111
+2017-M024,Cincinnati Masters,Hard,M,103970,David Ferrer,105449,Steve Johnson,6-1 5-7 6-3,3,R64,142
+2017-M024,Cincinnati Masters,Hard,M,104999,Mischa Zverev,104269,Fernando Verdasco,6-4 6-4,3,R64,68
+2017-M024,Cincinnati Masters,Hard,M,105807,Pablo Carreno Busta,103893,Paolo Lorenzi,6-3 6-3,3,R64,67
+2017-M024,Cincinnati Masters,Hard,M,105023,Sam Querrey,111578,Stefan Kozlov,6-3 6-0,3,R64,51
+2017-M024,Cincinnati Masters,Hard,M,105173,Adrian Mannarino,104898,Robin Haase,2-6 7-6(8) 6-2,3,R64,125
+2017-M024,Cincinnati Masters,Hard,M,104926,Fabio Fognini,106421,Daniil Medvedev,7-6(5) 6-4,3,R64,99
+2017-M024,Cincinnati Masters,Hard,M,103333,Ivo Karlovic,106210,Jiri Vesely,6-3 3-6 7-5,3,R64,101
+2017-M024,Cincinnati Masters,Hard,M,105238,Alexandr Dolgopolov,104731,Kevin Anderson,6-4 7-6(6),3,R64,93
+2017-M024,Cincinnati Masters,Hard,M,106401,Nick Kyrgios,105676,David Goffin,6-2 6-3,3,R64,66
+2017-M024,Cincinnati Masters,Hard,M,104180,Gilles Muller,105992,Ryan Harrison,6-4 5-7 7-6(3),3,R64,124
+2017-M024,Cincinnati Masters,Hard,M,105077,Albert Ramos,104022,Mikhail Youzhny,6-2 3-6 6-3,3,R64,104
+2017-M024,Cincinnati Masters,Hard,M,104755,Richard Gasquet,105441,John Patrick Smith,6-4 6-4,3,R64,84
+2017-M024,Cincinnati Masters,Hard,M,111575,Karen Khachanov,105341,Thomas Fabbiano,6-2 6-2,3,R32,71
+2017-M024,Cincinnati Masters,Hard,M,105216,Yuichi Sugita,105311,Joao Sousa,3-6 7-6(5) 6-1,3,R32,131
+2017-M024,Cincinnati Masters,Hard,M,105223,Juan Martin del Potro,106283,Mitchell Krueger,6-4 6-4,3,R32,100
+2017-M024,Cincinnati Masters,Hard,M,105777,Grigor Dimitrov,103852,Feliciano Lopez,7-6(5) 6-4,3,R32,91
+2017-M024,Cincinnati Masters,Hard,M,126207,Frances Tiafoe,100644,Alexander Zverev,4-6 6-3 6-4,3,R32,116
+2017-M024,Cincinnati Masters,Hard,M,104545,John Isner,126205,Tommy Paul,6-3 6-3,3,R32,56
+2017-M024,Cincinnati Masters,Hard,M,111577,Jared Donaldson,106368,Ramkumar Ramanathan,6-4 2-6 6-4,3,R32,116
+2017-M024,Cincinnati Masters,Hard,M,105932,Nikoloz Basilashvili,106328,Christian Harrison,6-3 6-3,3,R32,59
+2017-M024,Cincinnati Masters,Hard,M,103970,David Ferrer,104386,Janko Tipsarevic,6-4 6-7(5) 6-1,3,R32,145
+2017-M024,Cincinnati Masters,Hard,M,105807,Pablo Carreno Busta,104999,Mischa Zverev,6-3 7-6(2),3,R32,93
+2017-M024,Cincinnati Masters,Hard,M,105173,Adrian Mannarino,105023,Sam Querrey,6-2 7-6(4),3,R32,98
+2017-M024,Cincinnati Masters,Hard,M,106233,Dominic Thiem,104926,Fabio Fognini,6-3 6-2,3,R32,66
+2017-M024,Cincinnati Masters,Hard,M,103333,Ivo Karlovic,104542,Jo-Wilfried Tsonga,6-4 7-6(9),3,R32,95
+2017-M024,Cincinnati Masters,Hard,M,106401,Nick Kyrgios,105238,Alexandr Dolgopolov,6-3 7-6(6),3,R32,86
+2017-M024,Cincinnati Masters,Hard,M,105077,Albert Ramos,104180,Gilles Muller,5-7 6-4 6-4,3,R32,139
+2017-M024,Cincinnati Masters,Hard,M,104745,Rafael Nadal,104755,Richard Gasquet,6-3 6-4,3,R32,85
+2017-M024,Cincinnati Masters,Hard,M,105216,Yuichi Sugita,111575,Karen Khachanov,6-7(0) 6-3 6-3,3,R16,120
+2017-M024,Cincinnati Masters,Hard,M,105777,Grigor Dimitrov,105223,Juan Martin del Potro,6-3 7-5,3,R16,99
+2017-M024,Cincinnati Masters,Hard,M,104545,John Isner,126207,Frances Tiafoe,7-6(4) 7-5,3,R16,99
+2017-M024,Cincinnati Masters,Hard,M,111577,Jared Donaldson,105932,Nikoloz Basilashvili,6-4 7-6(4),3,R16,96
+2017-M024,Cincinnati Masters,Hard,M,103970,David Ferrer,105807,Pablo Carreno Busta,6-4 6-4,3,R16,76
+2017-M024,Cincinnati Masters,Hard,M,106233,Dominic Thiem,105173,Adrian Mannarino,7-6(4) 7-6(3),3,R16,121
+2017-M024,Cincinnati Masters,Hard,M,106401,Nick Kyrgios,103333,Ivo Karlovic,4-6 7-6(6) 6-3,3,R16,116
+2017-M024,Cincinnati Masters,Hard,M,104745,Rafael Nadal,105077,Albert Ramos,7-6(1) 6-2,3,R16,98
+2017-M024,Cincinnati Masters,Hard,M,105777,Grigor Dimitrov,105216,Yuichi Sugita,6-2 6-1,3,QF,52
+2017-M024,Cincinnati Masters,Hard,M,104545,John Isner,111577,Jared Donaldson,7-6(4) 7-5,3,QF,90
+2017-M024,Cincinnati Masters,Hard,M,103970,David Ferrer,106233,Dominic Thiem,6-3 6-3,3,QF,76
+2017-M024,Cincinnati Masters,Hard,M,106401,Nick Kyrgios,104745,Rafael Nadal,6-2 7-5,3,QF,80
+2017-M024,Cincinnati Masters,Hard,M,105777,Grigor Dimitrov,104545,John Isner,7-6(4) 7-6(10),3,SF,123
+2017-M024,Cincinnati Masters,Hard,M,106401,Nick Kyrgios,103970,David Ferrer,7-6(3) 7-6(4),3,SF,124
+2017-M024,Cincinnati Masters,Hard,M,105777,Grigor Dimitrov,106401,Nick Kyrgios,6-3 7-5,3,F,85
+2017-560,US Open,Hard,G,104745,Rafael Nadal,105583,Dusan Lajovic,7-6(6) 6-2 6-2,5,R128,136
+2017-560,US Open,Hard,G,106121,Taro Daniel,126205,Tommy Paul,6-1 4-6 4-6 6-2 6-2,5,R128,178
+2017-560,US Open,Hard,G,105216,Yuichi Sugita,144972,Geoffrey Blancaneaux,6-2 6-2 6-0,5,R128,109
+2017-560,US Open,Hard,G,104919,Leonardo Mayer,104755,Richard Gasquet,3-6 6-2 6-4 6-2,5,R128,180
+2017-560,US Open,Hard,G,105882,Stefano Travaglia,104926,Fabio Fognini,6-4 7-6(8) 3-6 6-0,5,R128,147
+2017-560,US Open,Hard,G,104678,Viktor Troicki,105613,Norbert Gombos,3-6 6-3 3-6 6-4 6-3,5,R128,176
+2017-560,US Open,Hard,G,105238,Alexandr Dolgopolov,105526,Jan Lennard Struff,3-6 6-3 6-2 1-6 6-3,5,R128,150
+2017-560,US Open,Hard,G,104607,Tomas Berdych,105992,Ryan Harrison,6-4 6-2 7-6(4),5,R128,127
+2017-560,US Open,Hard,G,105676,David Goffin,103898,Julien Benneteau,6-4 2-6 6-4 6-2,5,R128,138
+2017-560,US Open,Hard,G,105550,Guido Pella,104327,Steve Darcis,6-1 6-2 6-0,5,R128,89
+2017-560,US Open,Hard,G,105385,Donald Young,109739,Maximilian Marterer,6-3 1-6 6-1 6-4,5,R128,143
+2017-560,US Open,Hard,G,104792,Gael Monfils,104871,Jeremy Chardy,7-6(6) 6-3 6-4,5,R128,126
+2017-560,US Open,Hard,G,106000,Damir Dzumhur,104655,Pablo Cuevas,7-5 7-6(3) 6-1,5,R128,123
+2017-560,US Open,Hard,G,105649,Cedrik Marcel Stebe,106044,Nicolas Kicker,5-7 6-3 6-1 6-1,5,R128,168
+2017-560,US Open,Hard,G,126094,Andrey Rublev,105379,Aljaz Bedene,6-1 6-4 6-4,5,R128,102
+2017-560,US Open,Hard,G,105777,Grigor Dimitrov,106324,Vaclav Safranek,6-1 6-4 6-2,5,R128,109
+2017-560,US Open,Hard,G,103819,Roger Federer,126207,Frances Tiafoe,4-6 6-2 6-1 1-6 6-4,5,R128,157
+2017-560,US Open,Hard,G,104022,Mikhail Youzhny,104882,Blaz Kavcic,6-3 5-7 6-4 6-3,5,R128,186
+2017-560,US Open,Hard,G,104269,Fernando Verdasco,105577,Vasek Pospisil,6-2 RET,5,R128,34
+2017-560,US Open,Hard,G,103852,Feliciano Lopez,105723,Andrey Kuznetsov,6-4 7-6(4) 6-7(5) 6-2,5,R128,175
+2017-560,US Open,Hard,G,104259,Philipp Kohlschreiber,105065,Tim Smyczek,6-1 6-4 6-4,5,R128,104
+2017-560,US Open,Hard,G,105053,Santiago Giraldo,104672,Vincent Millot,6-1 6-0 4-6 4-6 6-4,5,R128,208
+2017-560,US Open,Hard,G,104291,Malek Jaziri,106329,Thiago Monteiro,7-6(5) 4-6 6-3 5-7 6-4,5,R128,226
+2017-560,US Open,Hard,G,105357,John Millman,106401,Nick Kyrgios,6-3 1-6 6-4 6-1,5,R128,135
+2017-560,US Open,Hard,G,105138,Roberto Bautista Agut,104312,Andreas Seppi,6-2 4-6 6-2 7-6(1),5,R128,175
+2017-560,US Open,Hard,G,104460,Dustin Brown,105064,Thomaz Bellucci,6-4 6-3 6-2,5,R128,102
+2017-560,US Open,Hard,G,104629,Adrian Menendez Maceiras,200516,Patrick Kypson,6-4 7-6(9) 6-1,5,R128,151
+2017-560,US Open,Hard,G,105223,Juan Martin del Potro,105967,Henri Laaksonen,6-4 7-6(3) 7-6(5),5,R128,154
+2017-560,US Open,Hard,G,105173,Adrian Mannarino,105575,Ricardas Berankis,6-2 6-4 6-2,5,R128,95
+2017-560,US Open,Hard,G,106216,Bjorn Fratangelo,103333,Ivo Karlovic,7-6(2) 6-4 3-6 7-6(4),5,R128,195
+2017-560,US Open,Hard,G,126203,Taylor Fritz,104571,Marcos Baghdatis,6-4 6-4 6-3,5,R128,119
+2017-560,US Open,Hard,G,106233,Dominic Thiem,200282,Alex De Minaur,6-4 6-1 6-1,5,R128,109
+2017-560,US Open,Hard,G,105023,Sam Querrey,104468,Gilles Simon,6-4 6-3 6-4,5,R128,112
+2017-560,US Open,Hard,G,104534,Dudi Sela,111153,Christopher Eubanks,6-2 6-4 6-2,5,R128,93
+2017-560,US Open,Hard,G,105430,Radu Albot,124014,Ernesto Escobedo,7-5 4-6 6-2 6-4,5,R128,187
+2017-560,US Open,Hard,G,104229,Yen Hsun Lu,111575,Karen Khachanov,4-6 6-2 6-3 6-3,5,R128,134
+2017-560,US Open,Hard,G,104999,Mischa Zverev,111515,Thai Son Kwiatkowski,7-6(5) 4-6 4-6 7-5 6-3,5,R128,208
+2017-560,US Open,Hard,G,105332,Benoit Paire,105041,Lukas Lacko,6-3 6-2 7-6(5),5,R128,95
+2017-560,US Open,Hard,G,111202,Hyeon Chung,104547,Horacio Zeballos,3-6 7-6(8) 6-4 6-3,5,R128,210
+2017-560,US Open,Hard,G,104545,John Isner,105732,Pierre Hugues Herbert,6-1 6-3 4-6 6-3,5,R128,143
+2017-560,US Open,Hard,G,111442,Jordan Thompson,106058,Jack Sock,6-2 7-6(12) 1-6 5-7 6-4,5,R128,236
+2017-560,US Open,Hard,G,105341,Thomas Fabbiano,105441,John Patrick Smith,7-6(5) 6-4 3-6 7-6(4),5,R128,184
+2017-560,US Open,Hard,G,103893,Paolo Lorenzi,105311,Joao Sousa,4-6 6-3 7-6(4) 6-2,5,R128,180
+2017-560,US Open,Hard,G,104180,Gilles Muller,106071,Bernard Tomic,3-6 6-3 6-4 6-4,5,R128,153
+2017-560,US Open,Hard,G,104731,Kevin Anderson,111574,Jc Aragone,6-3 6-3 6-1,5,R128,103
+2017-560,US Open,Hard,G,105208,Ernests Gulbis,105561,Alessandro Giannessi,6-4 6-7(3) 6-2 7-5,5,R128,220
+2017-560,US Open,Hard,G,106432,Borna Coric,106210,Jiri Vesely,7-6(5) 7-6(2) 6-2,5,R128,148
+2017-560,US Open,Hard,G,100644,Alexander Zverev,105985,Darian King,7-6(9) 7-5 6-4,5,R128,170
+2017-560,US Open,Hard,G,104542,Jo-Wilfried Tsonga,105657,Marius Copil,6-3 6-3 6-4,5,R128,111
+2017-560,US Open,Hard,G,133430,Denis Shapovalov,106421,Daniil Medvedev,7-5 6-1 6-2,5,R128,96
+2017-560,US Open,Hard,G,105449,Steve Johnson,104597,Nicolas Almagro,6-4 7-6(2) 7-6(5),5,R128,142
+2017-560,US Open,Hard,G,106378,Kyle Edmund,104898,Robin Haase,6-3 7-5 6-3,5,R128,114
+2017-560,US Open,Hard,G,105077,Albert Ramos,104797,Denis Istomin,4-6 7-6(4) 7-5 6-7(3) 7-5,5,R128,295
+2017-560,US Open,Hard,G,103917,Nicolas Mahut,105916,Marton Fucsovics,6-3 2-6 6-4 2-6 7-6(3),5,R128,202
+2017-560,US Open,Hard,G,111815,Cameron Norrie,104098,Dmitry Tursunov,7-6(7) 6-1 RET,5,R128,92
+2017-560,US Open,Hard,G,105807,Pablo Carreno Busta,105960,Evan King,6-3 6-2 7-6(5),5,R128,124
+2017-560,US Open,Hard,G,106298,Lucas Pouille,105074,Ruben Bemelmans,6-3 6-4 6-4,5,R128,102
+2017-560,US Open,Hard,G,111577,Jared Donaldson,105932,Nikoloz Basilashvili,6-0 4-6 6-3 7-6(6),5,R128,167
+2017-560,US Open,Hard,G,105539,Evgeny Donskoy,104890,Andreas Haider Maurer,7-6(3) 5-1 RET,5,R128,80
+2017-560,US Open,Hard,G,105062,Mikhail Kukushkin,103970,David Ferrer,4-6 6-3 6-2 6-1,5,R128,163
+2017-560,US Open,Hard,G,106043,Diego Schwartzman,104122,Carlos Berlocq,6-2 6-1 6-3,5,R128,101
+2017-560,US Open,Hard,G,104386,Janko Tipsarevic,106423,Thanasi Kokkinakis,6-7(5) 3-6 6-1 7-6(2) 6-3,5,R128,250
+2017-560,US Open,Hard,G,104252,Florian Mayer,104297,Rogerio Dutra Silva,7-5 0-6 6-3 6-4,5,R128,156
+2017-560,US Open,Hard,G,105227,Marin Cilic,105815,Tennys Sandgren,6-4 6-3 3-6 6-3,5,R128,168
+2017-560,US Open,Hard,G,104745,Rafael Nadal,106121,Taro Daniel,4-6 6-3 6-2 6-2,5,R64,173
+2017-560,US Open,Hard,G,104919,Leonardo Mayer,105216,Yuichi Sugita,6-7(3) 6-4 6-3 6-4,5,R64,179
+2017-560,US Open,Hard,G,104678,Viktor Troicki,105882,Stefano Travaglia,7-6(6) 7-5 6-0,5,R64,125
+2017-560,US Open,Hard,G,105238,Alexandr Dolgopolov,104607,Tomas Berdych,3-6 6-1 7-6(5) 6-2,5,R64,157
+2017-560,US Open,Hard,G,105676,David Goffin,105550,Guido Pella,3-6 7-6(5) 6-7(2) 7-6(4) 6-3,5,R64,260
+2017-560,US Open,Hard,G,104792,Gael Monfils,105385,Donald Young,6-3 6-7(3) 6-4 2-6 7-5,5,R64,197
+2017-560,US Open,Hard,G,106000,Damir Dzumhur,105649,Cedrik Marcel Stebe,4-6 6-4 6-0 6-1,5,R64,131
+2017-560,US Open,Hard,G,126094,Andrey Rublev,105777,Grigor Dimitrov,7-5 7-6(3) 6-3,5,R64,147
+2017-560,US Open,Hard,G,103819,Roger Federer,104022,Mikhail Youzhny,6-1 6-7(3) 4-6 6-4 6-2,5,R64,188
+2017-560,US Open,Hard,G,103852,Feliciano Lopez,104269,Fernando Verdasco,6-3 6-2 3-6 6-1,5,R64,131
+2017-560,US Open,Hard,G,104259,Philipp Kohlschreiber,105053,Santiago Giraldo,6-2 6-1 3-0 RET,5,R64,87
+2017-560,US Open,Hard,G,105357,John Millman,104291,Malek Jaziri,6-1 7-6(1) 6-1,5,R64,120
+2017-560,US Open,Hard,G,105138,Roberto Bautista Agut,104460,Dustin Brown,6-1 6-3 7-6(3),5,R64,109
+2017-560,US Open,Hard,G,105223,Juan Martin del Potro,104629,Adrian Menendez Maceiras,6-2 6-3 7-6(3),5,R64,130
+2017-560,US Open,Hard,G,105173,Adrian Mannarino,106216,Bjorn Fratangelo,6-3 6-7(4) 6-1 6-2,5,R64,137
+2017-560,US Open,Hard,G,106233,Dominic Thiem,126203,Taylor Fritz,6-4 6-4 4-6 7-5,5,R64,170
+2017-560,US Open,Hard,G,105023,Sam Querrey,104534,Dudi Sela,6-4 6-1 6-4,5,R64,80
+2017-560,US Open,Hard,G,105430,Radu Albot,104229,Yen Hsun Lu,6-2 7-6(7) 5-7 0-6 7-6(2),5,R64,236
+2017-560,US Open,Hard,G,104999,Mischa Zverev,105332,Benoit Paire,6-3 6-2 3-6 6-7(3) 7-5,5,R64,169
+2017-560,US Open,Hard,G,104545,John Isner,111202,Hyeon Chung,6-3 6-4 7-5,5,R64,106
+2017-560,US Open,Hard,G,105341,Thomas Fabbiano,111442,Jordan Thompson,2-6 6-2 3-6 6-4 6-2,5,R64,177
+2017-560,US Open,Hard,G,103893,Paolo Lorenzi,104180,Gilles Muller,6-7(4) 6-3 7-6(4) 6-3,5,R64,208
+2017-560,US Open,Hard,G,104731,Kevin Anderson,105208,Ernests Gulbis,6-3 7-5 6-4,5,R64,137
+2017-560,US Open,Hard,G,106432,Borna Coric,100644,Alexander Zverev,3-6 7-5 7-6(1) 7-6(4),5,R64,206
+2017-560,US Open,Hard,G,133430,Denis Shapovalov,104542,Jo-Wilfried Tsonga,6-4 6-4 7-6(3),5,R64,132
+2017-560,US Open,Hard,G,106378,Kyle Edmund,105449,Steve Johnson,7-5 6-2 7-6(4),5,R64,137
+2017-560,US Open,Hard,G,103917,Nicolas Mahut,105077,Albert Ramos,4-6 6-4 4-6 6-3 6-0,5,R64,207
+2017-560,US Open,Hard,G,105807,Pablo Carreno Busta,111815,Cameron Norrie,6-2 6-4 6-3,5,R64,103
+2017-560,US Open,Hard,G,106298,Lucas Pouille,111577,Jared Donaldson,7-5 6-4 4-6 3-6 6-4,5,R64,210
+2017-560,US Open,Hard,G,105062,Mikhail Kukushkin,105539,Evgeny Donskoy,6-4 6-4 7-5,5,R64,148
+2017-560,US Open,Hard,G,106043,Diego Schwartzman,104386,Janko Tipsarevic,6-2 6-4 7-5,5,R64,140
+2017-560,US Open,Hard,G,105227,Marin Cilic,104252,Florian Mayer,6-3 6-3 6-3,5,R64,100
+2017-560,US Open,Hard,G,104745,Rafael Nadal,104919,Leonardo Mayer,6-7(3) 6-3 6-1 6-4,5,R32,195
+2017-560,US Open,Hard,G,105238,Alexandr Dolgopolov,104678,Viktor Troicki,6-1 6-0 6-4,5,R32,82
+2017-560,US Open,Hard,G,105676,David Goffin,104792,Gael Monfils,7-5 5-1 RET,5,R32,75
+2017-560,US Open,Hard,G,126094,Andrey Rublev,106000,Damir Dzumhur,6-4 6-4 5-7 6-4,5,R32,166
+2017-560,US Open,Hard,G,103819,Roger Federer,103852,Feliciano Lopez,6-3 6-3 7-5,5,R32,106
+2017-560,US Open,Hard,G,104259,Philipp Kohlschreiber,105357,John Millman,7-5 6-2 6-4,5,R32,140
+2017-560,US Open,Hard,G,105223,Juan Martin del Potro,105138,Roberto Bautista Agut,6-3 6-3 6-4,5,R32,130
+2017-560,US Open,Hard,G,106233,Dominic Thiem,105173,Adrian Mannarino,7-5 6-3 6-4,5,R32,133
+2017-560,US Open,Hard,G,105023,Sam Querrey,105430,Radu Albot,4-6 6-2 6-4 6-4,5,R32,128
+2017-560,US Open,Hard,G,104999,Mischa Zverev,104545,John Isner,6-4 6-3 7-6(5),5,R32,127
+2017-560,US Open,Hard,G,103893,Paolo Lorenzi,105341,Thomas Fabbiano,6-2 6-4 6-4,5,R32,132
+2017-560,US Open,Hard,G,104731,Kevin Anderson,106432,Borna Coric,6-4 6-3 6-2,5,R32,110
+2017-560,US Open,Hard,G,133430,Denis Shapovalov,106378,Kyle Edmund,3-6 6-3 6-3 1-0 RET,5,R32,124
+2017-560,US Open,Hard,G,105807,Pablo Carreno Busta,103917,Nicolas Mahut,6-3 6-4 6-3,5,R32,108
+2017-560,US Open,Hard,G,106298,Lucas Pouille,105062,Mikhail Kukushkin,2-6 6-3 6-4 6-4,5,R32,141
+2017-560,US Open,Hard,G,106043,Diego Schwartzman,105227,Marin Cilic,4-6 7-5 7-5 6-4,5,R32,204
+2017-560,US Open,Hard,G,104745,Rafael Nadal,105238,Alexandr Dolgopolov,6-2 6-4 6-1,5,R16,101
+2017-560,US Open,Hard,G,126094,Andrey Rublev,105676,David Goffin,7-5 7-6(5) 6-3,5,R16,125
+2017-560,US Open,Hard,G,103819,Roger Federer,104259,Philipp Kohlschreiber,6-4 6-2 7-5,5,R16,109
+2017-560,US Open,Hard,G,105223,Juan Martin del Potro,106233,Dominic Thiem,1-6 2-6 6-1 7-6(1) 6-4,5,R16,215
+2017-560,US Open,Hard,G,105023,Sam Querrey,104999,Mischa Zverev,6-2 6-2 6-1,5,R16,76
+2017-560,US Open,Hard,G,104731,Kevin Anderson,103893,Paolo Lorenzi,6-4 6-3 6-7(4) 6-4,5,R16,177
+2017-560,US Open,Hard,G,105807,Pablo Carreno Busta,133430,Denis Shapovalov,7-6(2) 7-6(4) 7-6(3),5,R16,174
+2017-560,US Open,Hard,G,106043,Diego Schwartzman,106298,Lucas Pouille,7-6(3) 7-5 2-6 6-2,5,R16,155
+2017-560,US Open,Hard,G,104745,Rafael Nadal,126094,Andrey Rublev,6-1 6-2 6-2,5,QF,96
+2017-560,US Open,Hard,G,105223,Juan Martin del Potro,103819,Roger Federer,7-5 3-6 7-6(8) 6-4,5,QF,170
+2017-560,US Open,Hard,G,104731,Kevin Anderson,105023,Sam Querrey,7-6(5) 6-7(9) 6-3 7-6(7),5,QF,206
+2017-560,US Open,Hard,G,105807,Pablo Carreno Busta,106043,Diego Schwartzman,6-4 6-4 6-2,5,QF,119
+2017-560,US Open,Hard,G,104745,Rafael Nadal,105223,Juan Martin del Potro,4-6 6-0 6-3 6-2,5,SF,150
+2017-560,US Open,Hard,G,104731,Kevin Anderson,105807,Pablo Carreno Busta,4-6 7-5 6-3 6-4,5,SF,175
+2017-560,US Open,Hard,G,104745,Rafael Nadal,104731,Kevin Anderson,6-3 6-3 6-4,5,F,147
+2017-M-DC-2017-G2-AM-M-BAR-VEN-01,Davis Cup G2 R3: BAR vs VEN,Hard,D,106175,Ricardo Rodriguez,207759,Matthew Foster Estwick,6-1 6-2 6-1,3,RR,88
+2017-M-DC-2017-G2-AM-M-BAR-VEN-01,Davis Cup G2 R3: BAR vs VEN,Hard,D,105985,Darian King,105467,Jordi Munoz Abreu,6-1 1-0 RET,3,RR,36
+2017-M-DC-2017-G2-AM-M-BAR-VEN-01,Davis Cup G2 R3: BAR vs VEN,Hard,D,105985,Darian King,106175,Ricardo Rodriguez,5-7 7-5 6-2 6-3,5,RR,199
+2017-M-DC-2017-G2-AM-M-BAR-VEN-01,Davis Cup G2 R3: BAR vs VEN,Hard,D,104656,Haydn Lewis,105334,Luis David Martinez,2-6 6-4 6-3 6-4,5,RR,
+2017-M-DC-2017-G2-EPA-M-DEN-RSA-01,Davis Cup G2 R3: DEN vs RSA,Hard,D,104233,Frederik Nielsen,105707,Nicolaas Scholtz,6-4 6-2 6-3,5,RR,100
+2017-M-DC-2017-G2-EPA-M-DEN-RSA-01,Davis Cup G2 R3: DEN vs RSA,Hard,D,144750,Lloyd Harris,144813,Benjamin Hannestad,7-6(4) 6-0 7-5,3,RR,154
+2017-M-DC-2017-G2-EPA-M-DEN-RSA-01,Davis Cup G2 R3: DEN vs RSA,Hard,D,144750,Lloyd Harris,104233,Frederik Nielsen,6-1 1-6 6-4 6-3,5,RR,131
+2017-M-DC-2017-G2-AO-M-PAK-THA-01,Davis Cup G2 R3: PAK vs THA,Grass,D,103499,Aqeel Khan,106397,Wishaya Trongcharoenchaikul,6-3 6-4 6-4,5,RR,106
+2017-M-DC-2017-G2-AO-M-PAK-THA-01,Davis Cup G2 R3: PAK vs THA,Grass,D,103529,Aisam Ul Haq Qureshi,105579,Kittipong Wachiramanowong,6-1 6-0 6-4,5,RR,79
+2017-M-DC-2017-G2-AO-M-PAK-THA-01,Davis Cup G2 R3: PAK vs THA,Grass,D,106397,Wishaya Trongcharoenchaikul,103529,Aisam Ul Haq Qureshi,7-5 7-6(4) 4-6 6-7(3) 7-6(3),5,RR,251
+2017-M-DC-2017-G2-AO-M-PAK-THA-01,Davis Cup G2 R3: PAK vs THA,Grass,D,103499,Aqeel Khan,105579,Kittipong Wachiramanowong,6-4 6-3 3-6 2-6 6-2,5,RR,183
+2017-M-DC-2017-G2-EPA-M-SWE-LTU-01,Davis Cup G2 R3: SWE vs LTU,Clay,D,111200,Elias Ymer,108772,Julius Tverijonas,6-2 6-3 6-4,5,RR,93
+2017-M-DC-2017-G2-EPA-M-SWE-LTU-01,Davis Cup G2 R3: SWE vs LTU,Clay,D,144707,Mikael Ymer,105827,Laurynas Grigelis,2-6 7-5 6-0 0-6 6-1,5,RR,189
+2017-M-DC-2017-G2-EPA-M-SWE-LTU-01,Davis Cup G2 R3: SWE vs LTU,Clay,D,105436,Markus Eriksson,126689,Tadas Babelis,6-3 6-0,3,RR,42
+2017-M-DC-2017-G2-EPA-M-SWE-LTU-01,Davis Cup G2 R3: SWE vs LTU,Clay,D,144707,Mikael Ymer,108772,Julius Tverijonas,7-5 6-3,3,RR,84
+2017-M-DC-2017-WG-PO-ARG-KAZ-01,Davis Cup WG PO: ARG vs KAZ,Hard,D,105062,Mikhail Kukushkin,105550,Guido Pella,6-7(5) 7-6(5) 6-2 6-4,5,RR,234
+2017-M-DC-2017-WG-PO-ARG-KAZ-01,Davis Cup WG PO: ARG vs KAZ,Hard,D,106043,Diego Schwartzman,122078,Dmitry Popko,6-4 6-2 6-2,3,RR,119
+2017-M-DC-2017-WG-PO-ARG-KAZ-01,Davis Cup WG PO: ARG vs KAZ,Hard,D,105062,Mikhail Kukushkin,106043,Diego Schwartzman,6-4 6-4 7-6(2),5,RR,164
+2017-M-DC-2017-WG-PO-ARG-KAZ-01,Davis Cup WG PO: ARG vs KAZ,Hard,D,105550,Guido Pella,122078,Dmitry Popko,Walkover,3,RR,
+2017-M-DC-2017-WG-PO-CAN-IND-01,Davis Cup WG PO: CAN vs IND,Hard,D,106368,Ramkumar Ramanathan,111790,Brayden Schnur,5-7 7-6(4) 7-5 7-5,5,RR,196
+2017-M-DC-2017-WG-PO-CAN-IND-01,Davis Cup WG PO: CAN vs IND,Hard,D,133430,Denis Shapovalov,106026,Yuki Bhambri,7-6(2) 6-4 6-7(6) 4-6 6-1,5,RR,232
+2017-M-DC-2017-WG-PO-CAN-IND-01,Davis Cup WG PO: CAN vs IND,Hard,D,133430,Denis Shapovalov,106368,Ramkumar Ramanathan,6-3 7-6(1) 6-3,5,RR,125
+2017-M-DC-2017-WG-PO-CAN-IND-01,Davis Cup WG PO: CAN vs IND,Hard,D,106026,Yuki Bhambri,111790,Brayden Schnur,6-4 4-6 6-4,3,RR,104
+2017-M-DC-2017-WG-PO-CRO-COL-01,Davis Cup WG PO: CRO vs COL,Clay,D,105227,Marin Cilic,105292,Alejandro Gonzalez,6-1 6-4 6-1,3,RR,111
+2017-M-DC-2017-WG-PO-CRO-COL-01,Davis Cup WG PO: CRO vs COL,Clay,D,105053,Santiago Giraldo,105015,Franko Skugor,6-4 4-6 5-7 6-4 6-2,5,RR,229
+2017-M-DC-2017-WG-PO-CRO-COL-01,Davis Cup WG PO: CRO vs COL,Clay,D,105227,Marin Cilic,105053,Santiago Giraldo,6-3 6-4 6-4,3,RR,108
+2017-M-DC-2017-WG-PO-CRO-COL-01,Davis Cup WG PO: CRO vs COL,Clay,D,105634,Viktor Galovic,105292,Alejandro Gonzalez,6-4 2-6 6-2,3,RR,82
+2017-M-DC-2017-WG-PO-CZE-NED-01,Davis Cup WG PO: CZE vs NED,Clay,D,106210,Jiri Vesely,105217,Thiemo De Bakker,4-6 6-3 4-6 6-4 6-4,5,RR,224
+2017-M-DC-2017-WG-PO-CZE-NED-01,Davis Cup WG PO: CZE vs NED,Clay,D,104586,Lukas Rosol,104898,Robin Haase,6-7(5) 6-3 6-2 3-6 7-5,5,RR,205
+2017-M-DC-2017-WG-PO-CZE-NED-01,Davis Cup WG PO: CZE vs NED,Clay,D,104898,Robin Haase,106210,Jiri Vesely,6-1 1-6 6-3 6-4,5,RR,127
+2017-M-DC-2017-WG-PO-CZE-NED-01,Davis Cup WG PO: CZE vs NED,Clay,D,105217,Thiemo De Bakker,104586,Lukas Rosol,3-6 6-4 6-4 6-4,5,RR,160
+2017-M-DC-2017-WG-PO-GER-POR-01,Davis Cup WG PO: GER vs POR,Clay,D,105649,Cedrik Marcel Stebe,105311,Joao Sousa,4-6 6-3 6-3 6-0,5,RR,156
+2017-M-DC-2017-WG-PO-GER-POR-01,Davis Cup WG PO: GER vs POR,Clay,D,105155,Pedro Sousa,105526,Jan Lennard Struff,6-2 7-5 7-6(5),5,RR,140
+2017-M-DC-2017-WG-PO-GER-POR-01,Davis Cup WG PO: GER vs POR,Clay,D,105526,Jan Lennard Struff,105311,Joao Sousa,6-0 6-7(3) 3-6 7-6(6) 6-4,5,RR,193
+2017-M-DC-2017-WG-PO-GER-POR-01,Davis Cup WG PO: GER vs POR,Clay,D,106249,Joao Domingues,105870,Yannick Hanfmann,6-3 7-6(8),3,RR,87
+2017-M-DC-2017-WG-PO-JPN-BRA-01,Davis Cup WG PO: JPN vs BRA,Hard,D,105216,Yuichi Sugita,106105,Guilherme Clezar,6-2 7-5 7-6(5),5,RR,148
+2017-M-DC-2017-WG-PO-JPN-BRA-01,Davis Cup WG PO: JPN vs BRA,Hard,D,104424,Go Soeda,106329,Thiago Monteiro,3-6 6-4 6-3 6-7(1) 6-4,5,RR,221
+2017-M-DC-2017-WG-PO-JPN-BRA-01,Davis Cup WG PO: JPN vs BRA,Hard,D,105216,Yuichi Sugita,106329,Thiago Monteiro,6-3 6-2 6-3,5,RR,115
+2017-M-DC-2017-WG-PO-RUS-HUN-01,Davis Cup WG PO: RUS vs HUN,Clay,D,105916,Marton Fucsovics,126094,Andrey Rublev,6-2 6-4 5-7 2-6 6-3,5,RR,205
+2017-M-DC-2017-WG-PO-RUS-HUN-01,Davis Cup WG PO: RUS vs HUN,Clay,D,111575,Karen Khachanov,105226,Attila Balazs,3-6 6-2 7-6(12) 6-1,5,RR,183
+2017-M-DC-2017-WG-PO-RUS-HUN-01,Davis Cup WG PO: RUS vs HUN,Clay,D,105916,Marton Fucsovics,111575,Karen Khachanov,7-5 6-4 6-4,5,RR,134
+2017-M-DC-2017-WG-PO-SUI-BLR-01,Davis Cup WG PO: SUI vs BLR,Hard,D,106138,Yaraslav Shyla,105967,Henri Laaksonen,6-4 6-2 7-6(3),3,RR,104
+2017-M-DC-2017-WG-PO-SUI-BLR-01,Davis Cup WG PO: SUI vs BLR,Hard,D,103843,Marco Chiudinelli,105299,Dzmitry Zhyrmont,6-3 4-6 6-4 6-3,5,RR,168
+2017-M-DC-2017-WG-PO-SUI-BLR-01,Davis Cup WG PO: SUI vs BLR,Hard,D,105967,Henri Laaksonen,105299,Dzmitry Zhyrmont,6-2 6-2 5-7 6-2,5,RR,155
+2017-M-DC-2017-WG-PO-SUI-BLR-01,Davis Cup WG PO: SUI vs BLR,Hard,D,103843,Marco Chiudinelli,106138,Yaraslav Shyla,6-4 6-3 6-4,5,RR,131
+2017-M-DC-2017-WG-M-BEL-AUS-01,Davis Cup WG SF: BEL vs AUS,Clay,D,105676,David Goffin,105357,John Millman,6-7(4) 6-4 6-3 7-5,5,RR,212
+2017-M-DC-2017-WG-M-BEL-AUS-01,Davis Cup WG SF: BEL vs AUS,Clay,D,106401,Nick Kyrgios,104327,Steve Darcis,6-3 3-6 6-7(5) 6-1 6-2,5,RR,215
+2017-M-DC-2017-WG-M-BEL-AUS-01,Davis Cup WG SF: BEL vs AUS,Clay,D,105676,David Goffin,106401,Nick Kyrgios,6-7(4) 6-4 6-4 6-4,5,RR,189
+2017-M-DC-2017-WG-M-BEL-AUS-01,Davis Cup WG SF: BEL vs AUS,Clay,D,104327,Steve Darcis,111442,Jordan Thompson,6-4 7-5 6-2,5,RR,142
+2017-M-DC-2017-WG-M-FRA-SRB-01,Davis Cup WG SF: FRA vs SRB,Clay,D,105583,Dusan Lajovic,106298,Lucas Pouille,6-1 3-6 7-6(7) 7-6(5),5,RR,184
+2017-M-DC-2017-WG-M-FRA-SRB-01,Davis Cup WG SF: FRA vs SRB,Clay,D,104542,Jo-Wilfried Tsonga,111513,Laslo Djere,7-6(2) 6-3 6-3,5,RR,127
+2017-M-DC-2017-WG-M-FRA-SRB-01,Davis Cup WG SF: FRA vs SRB,Clay,D,104542,Jo-Wilfried Tsonga,105583,Dusan Lajovic,2-6 6-2 7-6(5) 6-2,5,RR,168
+2017-5014,Shanghai Masters,Hard,M,106043,Diego Schwartzman,111442,Jordan Thompson,6-4 7-6(4),3,R64,109
+2017-5014,Shanghai Masters,Hard,M,103852,Feliciano Lopez,103333,Ivo Karlovic,7-6(1) 7-6(6),3,R64,86
+2017-5014,Shanghai Masters,Hard,M,105238,Alexandr Dolgopolov,106058,Jack Sock,4-6 6-1 2-1 RET,3,R64,78
+2017-5014,Shanghai Masters,Hard,M,111202,Hyeon Chung,105138,Roberto Bautista Agut,6-4 6-3,3,R64,94
+2017-5014,Shanghai Masters,Hard,M,104755,Richard Gasquet,104898,Robin Haase,6-7(11) 7-5 6-2,3,R64,145
+2017-5014,Shanghai Masters,Hard,M,104468,Gilles Simon,200059,Yibing Wu,6-3 6-4,3,R64,75
+2017-5014,Shanghai Masters,Hard,M,105379,Aljaz Bedene,103893,Paolo Lorenzi,6-1 6-4,3,R64,71
+2017-5014,Shanghai Masters,Hard,M,126094,Andrey Rublev,106000,Damir Dzumhur,6-1 4-6 6-1,3,R64,82
+2017-5014,Shanghai Masters,Hard,M,105223,Juan Martin del Potro,105932,Nikoloz Basilashvili,6-2 3-6 6-4,3,R64,119
+2017-5014,Shanghai Masters,Hard,M,104545,John Isner,105583,Dusan Lajovic,4-6 7-6(5) 7-6(6),3,R64,145
+2017-5014,Shanghai Masters,Hard,M,126774,Stefanos Tsitsipas,111575,Karen Khachanov,7-5 6-3,3,R64,74
+2017-5014,Shanghai Masters,Hard,M,104678,Viktor Troicki,133430,Denis Shapovalov,6-7(3) 6-3 6-0,3,R64,103
+2017-5014,Shanghai Masters,Hard,M,105077,Albert Ramos,105311,Joao Sousa,3-6 6-3 7-5,3,R64,140
+2017-5014,Shanghai Masters,Hard,M,105526,Jan Lennard Struff,104999,Mischa Zverev,3-6 6-5 RET,3,R64,70
+2017-5014,Shanghai Masters,Hard,M,104731,Kevin Anderson,105173,Adrian Mannarino,6-3 6-1,3,R64,61
+2017-5014,Shanghai Masters,Hard,M,105449,Steve Johnson,106401,Nick Kyrgios,7-6(5) 0-0 RET,3,R64,47
+2017-5014,Shanghai Masters,Hard,M,105842,Di Wu,104871,Jeremy Chardy,7-6(2) 6-2,3,R64,76
+2017-5014,Shanghai Masters,Hard,M,106378,Kyle Edmund,106210,Jiri Vesely,6-3 6-2,3,R64,65
+2017-5014,Shanghai Masters,Hard,M,105992,Ryan Harrison,105585,Ze Zhang,6-2 6-3,3,R64,74
+2017-5014,Shanghai Masters,Hard,M,126207,Frances Tiafoe,105332,Benoit Paire,6-4 6-4,3,R64,71
+2017-5014,Shanghai Masters,Hard,M,105023,Sam Querrey,105216,Yuichi Sugita,6-3 6-2,3,R64,52
+2017-5014,Shanghai Masters,Hard,M,106298,Lucas Pouille,106421,Daniil Medvedev,6-4 6-2,3,R64,63
+2017-5014,Shanghai Masters,Hard,M,104926,Fabio Fognini,104269,Fernando Verdasco,2-6 6-4 6-2,3,R64,91
+2017-5014,Shanghai Masters,Hard,M,111577,Jared Donaldson,104655,Pablo Cuevas,6-7(7) 6-4 6-4,3,R64,141
+2017-5014,Shanghai Masters,Hard,M,103819,Roger Federer,106043,Diego Schwartzman,7-6(4) 6-4,3,R32,93
+2017-5014,Shanghai Masters,Hard,M,105238,Alexandr Dolgopolov,103852,Feliciano Lopez,7-6(4) 1-6 6-4,3,R32,92
+2017-5014,Shanghai Masters,Hard,M,104755,Richard Gasquet,111202,Hyeon Chung,3-6 6-4 6-3,3,R32,144
+2017-5014,Shanghai Masters,Hard,M,104468,Gilles Simon,105676,David Goffin,7-6(4) 6-3,3,R32,90
+2017-5014,Shanghai Masters,Hard,M,100644,Alexander Zverev,105379,Aljaz Bedene,4-0 RET,3,R32,12
+2017-5014,Shanghai Masters,Hard,M,105223,Juan Martin del Potro,126094,Andrey Rublev,6-3 6-4,3,R32,77
+2017-5014,Shanghai Masters,Hard,M,104545,John Isner,126774,Stefanos Tsitsipas,7-6(2) 7-6(9),3,R32,104
+2017-5014,Shanghai Masters,Hard,M,104678,Viktor Troicki,106233,Dominic Thiem,6-3 3-6 7-6(5),3,R32,109
+2017-5014,Shanghai Masters,Hard,M,105077,Albert Ramos,105807,Pablo Carreno Busta,7-5 7-5,3,R32,104
+2017-5014,Shanghai Masters,Hard,M,105526,Jan Lennard Struff,104731,Kevin Anderson,7-6(5) 7-6(2),3,R32,91
+2017-5014,Shanghai Masters,Hard,M,105449,Steve Johnson,105842,Di Wu,6-2 6-1,3,R32,48
+2017-5014,Shanghai Masters,Hard,M,105227,Marin Cilic,106378,Kyle Edmund,6-3 7-6(5),3,R32,97
+2017-5014,Shanghai Masters,Hard,M,105777,Grigor Dimitrov,105992,Ryan Harrison,3-6 6-3 7-6(6),3,R32,152
+2017-5014,Shanghai Masters,Hard,M,105023,Sam Querrey,126207,Frances Tiafoe,6-3 7-6(7),3,R32,84
+2017-5014,Shanghai Masters,Hard,M,104926,Fabio Fognini,106298,Lucas Pouille,7-6(7) 6-3,3,R32,96
+2017-5014,Shanghai Masters,Hard,M,104745,Rafael Nadal,111577,Jared Donaldson,6-2 6-1,3,R32,54
+2017-5014,Shanghai Masters,Hard,M,103819,Roger Federer,105238,Alexandr Dolgopolov,6-4 6-2,3,R16,60
+2017-5014,Shanghai Masters,Hard,M,104755,Richard Gasquet,104468,Gilles Simon,7-5 6-7(5) 6-3,3,R16,160
+2017-5014,Shanghai Masters,Hard,M,105223,Juan Martin del Potro,100644,Alexander Zverev,3-6 7-6(5) 6-4,3,R16,115
+2017-5014,Shanghai Masters,Hard,M,104678,Viktor Troicki,104545,John Isner,6-4 7-6(4),3,R16,67
+2017-5014,Shanghai Masters,Hard,M,105077,Albert Ramos,105526,Jan Lennard Struff,7-6(4) 6-4,3,R16,87
+2017-5014,Shanghai Masters,Hard,M,105227,Marin Cilic,105449,Steve Johnson,7-6(1) 6-4,3,R16,87
+2017-5014,Shanghai Masters,Hard,M,105777,Grigor Dimitrov,105023,Sam Querrey,6-3 7-6(3),3,R16,80
+2017-5014,Shanghai Masters,Hard,M,104745,Rafael Nadal,104926,Fabio Fognini,6-3 6-1,3,R16,62
+2017-5014,Shanghai Masters,Hard,M,103819,Roger Federer,104755,Richard Gasquet,7-5 6-4,3,QF,78
+2017-5014,Shanghai Masters,Hard,M,105223,Juan Martin del Potro,104678,Viktor Troicki,4-6 6-1 6-4,3,QF,121
+2017-5014,Shanghai Masters,Hard,M,105227,Marin Cilic,105077,Albert Ramos,6-3 6-4,3,QF,81
+2017-5014,Shanghai Masters,Hard,M,104745,Rafael Nadal,105777,Grigor Dimitrov,6-4 6-7(4) 6-3,3,QF,152
+2017-5014,Shanghai Masters,Hard,M,103819,Roger Federer,105223,Juan Martin del Potro,3-6 6-3 6-3,3,SF,117
+2017-5014,Shanghai Masters,Hard,M,104745,Rafael Nadal,105227,Marin Cilic,7-5 7-6(3),3,SF,131
+2017-5014,Shanghai Masters,Hard,M,103819,Roger Federer,104745,Rafael Nadal,6-4 6-3,3,F,72
+2017-0352,Paris Masters,Hard,M,103852,Feliciano Lopez,105732,Pierre Hugues Herbert,7-6(4) 6-3,3,R64,94
+2017-0352,Paris Masters,Hard,M,106378,Kyle Edmund,105539,Evgeny Donskoy,5-7 7-6(7) 6-3,3,R64,141
+2017-0352,Paris Masters,Hard,M,104269,Fernando Verdasco,126094,Andrey Rublev,7-6(1) 7-6(6),3,R64,109
+2017-0352,Paris Masters,Hard,M,105376,Peter Gojowczyk,105992,Ryan Harrison,7-6(5) 6-3,3,R64,85
+2017-0352,Paris Masters,Hard,M,106432,Borna Coric,105526,Jan Lennard Struff,6-3 6-4,3,R64,69
+2017-0352,Paris Masters,Hard,M,104871,Jeremy Chardy,104468,Gilles Simon,6-3 6-0,3,R64,66
+2017-0352,Paris Masters,Hard,M,103898,Julien Benneteau,133430,Denis Shapovalov,6-4 6-4,3,R64,65
+2017-0352,Paris Masters,Hard,M,105173,Adrian Mannarino,103970,David Ferrer,6-2 6-4,3,R64,92
+2017-0352,Paris Masters,Hard,M,104755,Richard Gasquet,105332,Benoit Paire,6-3 4-6 6-4,3,R64,106
+2017-0352,Paris Masters,Hard,M,106043,Diego Schwartzman,104678,Viktor Troicki,6-3 6-4,3,R64,70
+2017-0352,Paris Masters,Hard,M,105311,Joao Sousa,103893,Paolo Lorenzi,6-4 7-5,3,R64,92
+2017-0352,Paris Masters,Hard,M,104898,Robin Haase,105449,Steve Johnson,6-2 6-1,3,R64,51
+2017-0352,Paris Masters,Hard,M,103917,Nicolas Mahut,105577,Vasek Pospisil,5-7 7-5 7-6(4),3,R64,154
+2017-0352,Paris Masters,Hard,M,105936,Filip Krajinovic,105216,Yuichi Sugita,6-4 6-2,3,R64,60
+2017-0352,Paris Masters,Hard,M,104655,Pablo Cuevas,111575,Karen Khachanov,6-4 6-2,3,R64,58
+2017-0352,Paris Masters,Hard,M,111202,Hyeon Chung,104999,Mischa Zverev,6-0 6-2,3,R64,56
+2017-0352,Paris Masters,Hard,M,106298,Lucas Pouille,103852,Feliciano Lopez,6-3 6-4,3,R32,57
+2017-0352,Paris Masters,Hard,M,106058,Jack Sock,106378,Kyle Edmund,4-6 7-6(4) 7-6(5),3,R32,162
+2017-0352,Paris Masters,Hard,M,104269,Fernando Verdasco,104731,Kevin Anderson,5-7 6-4 7-5,3,R32,144
+2017-0352,Paris Masters,Hard,M,106233,Dominic Thiem,105376,Peter Gojowczyk,6-4 6-7(3) 6-4,3,R32,126
+2017-0352,Paris Masters,Hard,M,105227,Marin Cilic,106432,Borna Coric,6-4 6-3,3,R32,95
+2017-0352,Paris Masters,Hard,M,105138,Roberto Bautista Agut,104871,Jeremy Chardy,6-4 6-1,3,R32,71
+2017-0352,Paris Masters,Hard,M,103898,Julien Benneteau,104542,Jo-Wilfried Tsonga,2-6 7-6(4) 6-2,3,R32,114
+2017-0352,Paris Masters,Hard,M,105676,David Goffin,105173,Adrian Mannarino,6-2 2-6 6-3,3,R32,87
+2017-0352,Paris Masters,Hard,M,105777,Grigor Dimitrov,104755,Richard Gasquet,6-4 6-4,3,R32,82
+2017-0352,Paris Masters,Hard,M,104545,John Isner,106043,Diego Schwartzman,7-6(2) 6-7(11) 6-3,3,R32,154
+2017-0352,Paris Masters,Hard,M,105223,Juan Martin del Potro,105311,Joao Sousa,6-2 6-2,3,R32,62
+2017-0352,Paris Masters,Hard,M,104898,Robin Haase,100644,Alexander Zverev,3-6 6-2 6-2,3,R32,92
+2017-0352,Paris Masters,Hard,M,103917,Nicolas Mahut,105807,Pablo Carreno Busta,6-4 6-1,3,R32,86
+2017-0352,Paris Masters,Hard,M,105936,Filip Krajinovic,105023,Sam Querrey,6-4 6-4,3,R32,69
+2017-0352,Paris Masters,Hard,M,104655,Pablo Cuevas,105077,Albert Ramos,6-7(5) 7-6(1) 6-2,3,R32,147
+2017-0352,Paris Masters,Hard,M,104745,Rafael Nadal,111202,Hyeon Chung,7-5 6-3,3,R32,108
+2017-0352,Paris Masters,Hard,M,106058,Jack Sock,106298,Lucas Pouille,7-6(6) 6-3,3,R16,87
+2017-0352,Paris Masters,Hard,M,104269,Fernando Verdasco,106233,Dominic Thiem,6-4 6-4,3,R16,83
+2017-0352,Paris Masters,Hard,M,105227,Marin Cilic,105138,Roberto Bautista Agut,7-6(4) 6-2,3,R16,100
+2017-0352,Paris Masters,Hard,M,103898,Julien Benneteau,105676,David Goffin,6-3 6-3,3,R16,67
+2017-0352,Paris Masters,Hard,M,104545,John Isner,105777,Grigor Dimitrov,7-6(10) 5-7 7-6(3),3,R16,165
+2017-0352,Paris Masters,Hard,M,105223,Juan Martin del Potro,104898,Robin Haase,7-5 6-4,3,R16,92
+2017-0352,Paris Masters,Hard,M,105936,Filip Krajinovic,103917,Nicolas Mahut,6-2 3-6 6-1,3,R16,92
+2017-0352,Paris Masters,Hard,M,104745,Rafael Nadal,104655,Pablo Cuevas,6-3 6-7(5) 6-3,3,R16,140
+2017-0352,Paris Masters,Hard,M,106058,Jack Sock,104269,Fernando Verdasco,6-7(3) 6-2 6-3,3,QF,148
+2017-0352,Paris Masters,Hard,M,103898,Julien Benneteau,105227,Marin Cilic,7-6(5) 7-5,3,QF,123
+2017-0352,Paris Masters,Hard,M,104545,John Isner,105223,Juan Martin del Potro,6-4 6-7(5) 6-4,3,QF,130
+2017-0352,Paris Masters,Hard,M,105936,Filip Krajinovic,104745,Rafael Nadal,W/O,3,QF,
+2017-0352,Paris Masters,Hard,M,106058,Jack Sock,103898,Julien Benneteau,7-5 6-2,3,SF,78
+2017-0352,Paris Masters,Hard,M,105936,Filip Krajinovic,104545,John Isner,6-4 6-7(2) 7-6(5),3,SF,148
+2017-0352,Paris Masters,Hard,M,106058,Jack Sock,105936,Filip Krajinovic,5-7 6-4 6-1,3,F,118
+2017-0605,Tour Finals,Hard,F,105676,David Goffin,104745,Rafael Nadal,7-6(5) 6-7(4) 6-4,3,RR,
+2017-0605,Tour Finals,Hard,F,106058,Jack Sock,105227,Marin Cilic,5-7 6-2 7-6(4),3,RR,
+2017-0605,Tour Finals,Hard,F,106058,Jack Sock,100644,Alexander Zverev,6-4 1-6 6-4,3,RR,113
+2017-0605,Tour Finals,Hard,F,100644,Alexander Zverev,105227,Marin Cilic,6-4 3-6 6-4,3,RR,
+2017-0605,Tour Finals,Hard,F,103819,Roger Federer,106058,Jack Sock,6-4 7-6(4),3,RR,
+2017-0605,Tour Finals,Hard,F,103819,Roger Federer,105227,Marin Cilic,6-7(5) 6-4 6-1,3,RR,114
+2017-0605,Tour Finals,Hard,F,103819,Roger Federer,100644,Alexander Zverev,7-6(6) 5-7 6-1,3,RR,
+2017-0605,Tour Finals,Hard,F,105777,Grigor Dimitrov,105676,David Goffin,6-0 6-2,3,RR,
+2017-0605,Tour Finals,Hard,F,105676,David Goffin,106233,Dominic Thiem,6-4 6-1,3,RR,71
+2017-0605,Tour Finals,Hard,F,105777,Grigor Dimitrov,106233,Dominic Thiem,6-3 5-7 7-5,3,RR,
+2017-0605,Tour Finals,Hard,F,105777,Grigor Dimitrov,105807,Pablo Carreno Busta,6-1 6-1,3,RR,60
+2017-0605,Tour Finals,Hard,F,106233,Dominic Thiem,105807,Pablo Carreno Busta,6-3 3-6 6-4,3,RR,
+2017-0605,Tour Finals,Hard,F,105676,David Goffin,103819,Roger Federer,2-6 6-3 6-4,3,SF,105
+2017-0605,Tour Finals,Hard,F,105777,Grigor Dimitrov,106058,Jack Sock,4-6 6-0 6-3,3,SF,119
+2017-0605,Tour Finals,Hard,F,105777,Grigor Dimitrov,105676,David Goffin,7-5 4-6 6-3,3,F,150
+2017-M-DC-2017-WG-M-BEL-FRA-01,Davis Cup WG F: BEL vs FRA,Hard,D,105676,David Goffin,106298,Lucas Pouille,7-5 6-3 6-1,3,RR,119
+2017-M-DC-2017-WG-M-BEL-FRA-01,Davis Cup WG F: BEL vs FRA,Hard,D,104542,Jo-Wilfried Tsonga,104327,Steve Darcis,6-3 6-2 6-1,5,RR,106
+2017-M-DC-2017-WG-M-BEL-FRA-01,Davis Cup WG F: BEL vs FRA,Hard,D,105676,David Goffin,104542,Jo-Wilfried Tsonga,7-6(5) 6-3 6-2,3,RR,164
+2017-M-DC-2017-WG-M-BEL-FRA-01,Davis Cup WG F: BEL vs FRA,Hard,D,106298,Lucas Pouille,104327,Steve Darcis,6-3 6-1 6-0,5,RR,94
+2017-7696,NextGen Finals,Hard,F,106421,Daniil Medvedev,106432,Borna Coric,W/O,3,BR,
+2017-7696,NextGen Finals,Hard,F,111202,Hyeon Chung,126094,Andrey Rublev,3-4(5) 4-3(2) 4-2 4-2,3,F,117
+2017-7696,NextGen Finals,Hard,F,111202,Hyeon Chung,106421,Daniil Medvedev,4-1 4-1 3-4(4) 1-4 4-0,3,SF,111
+2017-7696,NextGen Finals,Hard,F,126094,Andrey Rublev,106432,Borna Coric,4-1 4-3(6) 4-1,3,SF,62
+2017-7696,NextGen Finals,Hard,F,126094,Andrey Rublev,133430,Denis Shapovalov,4-1 3-4(8) 4-3(2) 0-4 4-3(3),3,RR,121
+2017-7696,NextGen Finals,Hard,F,111202,Hyeon Chung,126094,Andrey Rublev,4-0 4-1 4-3(1),3,RR,68
+2017-7696,NextGen Finals,Hard,F,126094,Andrey Rublev,106420,Gianluigi Quinzi,1-4 4-0 4-3(3) 0-4 4-3(3),3,RR,106
+2017-7696,NextGen Finals,Hard,F,111202,Hyeon Chung,133430,Denis Shapovalov,1-4 4-3(5) 4-3(4) 4-1,3,RR,95
+2017-7696,NextGen Finals,Hard,F,133430,Denis Shapovalov,106420,Gianluigi Quinzi,4-1 4-1 3-4(5) 4-3(5),3,RR,89
+2017-7696,NextGen Finals,Hard,F,111202,Hyeon Chung,106420,Gianluigi Quinzi,1-4 4-1 4-2 3-4(6) 4-3(3),3,RR,126
+2017-7696,NextGen Finals,Hard,F,106432,Borna Coric,111575,Karen Khachanov,3-4(3) 2-4 4-2 4-0 4-2,3,RR,109
+2017-7696,NextGen Finals,Hard,F,111575,Karen Khachanov,111577,Jared Donaldson,4-1 4-3(3) 4-2,3,RR,59
+2017-7696,NextGen Finals,Hard,F,106421,Daniil Medvedev,111575,Karen Khachanov,2-4 4-3(6) 4-3(3) 4-2,3,RR,110
+2017-7696,NextGen Finals,Hard,F,106432,Borna Coric,111577,Jared Donaldson,4-3(2) 4-1 4-3(5),3,RR,77
+2017-7696,NextGen Finals,Hard,F,106432,Borna Coric,106421,Daniil Medvedev,4-3(5) 2-4 4-1 4-2,3,RR,94
+2017-7696,NextGen Finals,Hard,F,106421,Daniil Medvedev,111577,Jared Donaldson,3-4(3) 4-2 4-3(1) 4-0,3,RR,88

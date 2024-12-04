@@ -1,0 +1,1553 @@
+tourney_id,tourney_name,surface,tourney_level,winner_id,winner_name,loser_id,loser_name,score,best_of,round,minutes
+2021-2028,Abu Dhabi,Hard,P,214544,Aryna Sabalenka,206289,Maria Sakkari,6-3 6-2,3,SF,61
+2021-2028,Abu Dhabi,Hard,P,206368,Veronika Kudermetova,216146,Marta Kostyuk,7-6(8) 6-4,3,SF,103
+2021-2028,Abu Dhabi,Hard,P,206289,Maria Sakkari,213550,Sofia Kenin,2-6 6-2 6-0,3,QF,91
+2021-2028,Abu Dhabi,Hard,P,214544,Aryna Sabalenka,214981,Elena Rybakina,6-4 4-6 6-3,3,QF,118
+2021-2028,Abu Dhabi,Hard,P,216146,Marta Kostyuk,204427,Sara Sorribes Tormo,0-6 6-1 6-4,3,QF,117
+2021-2028,Abu Dhabi,Hard,P,206368,Veronika Kudermetova,202494,Elina Svitolina,5-7 6-3 7-6(3),3,QF,155
+2021-2028,Abu Dhabi,Hard,P,213550,Sofia Kenin,201709,Yulia Putintseva,3-6 7-6(5) 6-4,3,R16,161
+2021-2028,Abu Dhabi,Hard,P,206289,Maria Sakkari,202469,Garbine Muguruza,7-5 6-4,3,R16,112
+2021-2028,Abu Dhabi,Hard,P,214544,Aryna Sabalenka,202460,Ons Jabeur,6-2 6-4,3,R16,67
+2021-2028,Abu Dhabi,Hard,P,214981,Elena Rybakina,214082,Daria Kasatkina,6-3 6-4,3,R16,68
+2021-2028,Abu Dhabi,Hard,P,216146,Marta Kostyuk,214461,Tamara Zidansek,6-1 6-1,3,R16,53
+2021-2028,Abu Dhabi,Hard,P,204427,Sara Sorribes Tormo,214181,Anastasia Gasanova,7-5 6-3,3,R16,124
+2021-2028,Abu Dhabi,Hard,P,206368,Veronika Kudermetova,211651,Paula Badosa,6-4 4-6 6-1,3,R16,110
+2021-2028,Abu Dhabi,Hard,P,202494,Elina Svitolina,206420,Ekaterina Alexandrova,6-2 6-7(5) 7-6(8),3,R16,151
+2021-2028,Abu Dhabi,Hard,P,213550,Sofia Kenin,201465,Kirsten Flipkens,5-7 5-4,3,R32,101
+2021-2028,Abu Dhabi,Hard,P,201709,Yulia Putintseva,206252,Barbora Krejcikova,6-4 7-5,3,R32,119
+2021-2028,Abu Dhabi,Hard,P,206289,Maria Sakkari,221103,Coco Gauff,7-5 6-2,3,R32,88
+2021-2028,Abu Dhabi,Hard,P,202469,Garbine Muguruza,205925,Aliaksandra Sasnovich,6-1 6-4,3,R32,80
+2021-2028,Abu Dhabi,Hard,P,214544,Aryna Sabalenka,201548,Ajla Tomljanovic,7-5 6-4,3,R32,100
+2021-2028,Abu Dhabi,Hard,P,202460,Ons Jabeur,201435,Kateryna Bondarenko,5-7 6-3,3,R32,116
+2021-2028,Abu Dhabi,Hard,P,214082,Daria Kasatkina,214096,Karolina Muchova,W/O,3,R32,0
+2021-2028,Abu Dhabi,Hard,P,214981,Elena Rybakina,216016,Xiyu Wang,6-4 6-4,3,R32,93
+2021-2028,Abu Dhabi,Hard,P,216146,Marta Kostyuk,201444,Su Wei Hsieh,6-3 6-7(4),3,R32,134
+2021-2028,Abu Dhabi,Hard,P,214461,Tamara Zidansek,220367,Leylah Fernandez,6-4 6-4,3,R32,84
+2021-2028,Abu Dhabi,Hard,P,204427,Sara Sorribes Tormo,211095,Bernarda Pera,5-7 6-3 6-4,3,R32,203
+2021-2028,Abu Dhabi,Hard,P,214181,Anastasia Gasanova,201662,Karolina Pliskova,6-2 6-4,3,R32,75
+2021-2028,Abu Dhabi,Hard,P,211651,Paula Badosa,201427,Alize Cornet,6-4 6-4,3,R32,104
+2021-2028,Abu Dhabi,Hard,P,206368,Veronika Kudermetova,213926,Bianca Turati,6-2 6-1,3,R32,76
+2021-2028,Abu Dhabi,Hard,P,206420,Ekaterina Alexandrova,201586,Heather Watson,7-5 6-7(7) 6-3,3,R32,150
+2021-2028,Abu Dhabi,Hard,P,202494,Elina Svitolina,201329,Vera Zvonareva,6-4 6-1,3,R32,69
+2021-2028,Abu Dhabi,Hard,P,213550,Sofia Kenin,206107,Zhaoxuan Yang,7-6(4) 6-2,3,R64,115
+2021-2028,Abu Dhabi,Hard,P,201465,Kirsten Flipkens,201696,Laura Siegemund,5-7 7-5 6-4,3,R64,184
+2021-2028,Abu Dhabi,Hard,P,206252,Barbora Krejcikova,211222,Jamie Loeb,6-1 6-3,3,R64,67
+2021-2028,Abu Dhabi,Hard,P,201709,Yulia Putintseva,203354,Martina Trevisan,6-3 6-3,3,R64,84
+2021-2028,Abu Dhabi,Hard,P,206289,Maria Sakkari,215713,Anastasia Potapova,6-4 6-2,3,R64,89
+2021-2028,Abu Dhabi,Hard,P,221103,Coco Gauff,205918,Ulrikke Eikeri,6-0 6-1,3,R64,70
+2021-2028,Abu Dhabi,Hard,P,205925,Aliaksandra Sasnovich,214388,Anna Bondar,6-2 6-3,3,R64,86
+2021-2028,Abu Dhabi,Hard,P,202469,Garbine Muguruza,201540,Kristina Mladenovic,6-2 6-4,3,R64,101
+2021-2028,Abu Dhabi,Hard,P,214544,Aryna Sabalenka,201555,Polona Hercog,7-6(5) 6-2,3,R64,107
+2021-2028,Abu Dhabi,Hard,P,201548,Ajla Tomljanovic,202684,Lin Zhu,6-2 7-6(1),3,R64,102
+2021-2028,Abu Dhabi,Hard,P,201435,Kateryna Bondarenko,206374,Yafan Wang,6-3 3-6 7-5,3,R64,141
+2021-2028,Abu Dhabi,Hard,P,202460,Ons Jabeur,201499,Anastasia Pavlyuchenkova,7-6(3) 6-3,3,R64,93
+2021-2028,Abu Dhabi,Hard,P,214096,Karolina Muchova,203575,Danka Kovinic,6-4 6-1,3,R64,81
+2021-2028,Abu Dhabi,Hard,P,214082,Daria Kasatkina,202492,Qiang Wang,6-2 3-6 6-2,3,R64,108
+2021-2028,Abu Dhabi,Hard,P,216016,Xiyu Wang,201551,Arantxa Rus,6-3 3-6 6-4,3,R64,138
+2021-2028,Abu Dhabi,Hard,P,214981,Elena Rybakina,214593,Lucrezia Stefanini,6-1 6-3,3,R64,60
+2021-2028,Abu Dhabi,Hard,P,201444,Su Wei Hsieh,214954,Marketa Vondrousova,3-6 6-3 7-6(3),3,R64,143
+2021-2028,Abu Dhabi,Hard,P,216146,Marta Kostyuk,201556,Lucie Hradecka,6-2 6-4,3,R64,78
+2021-2028,Abu Dhabi,Hard,P,220367,Leylah Fernandez,211148,Jasmine Paolini,6-4 6-2,3,R64,73
+2021-2028,Abu Dhabi,Hard,P,214461,Tamara Zidansek,206108,Jennifer Brady,0-6 6-3 6-4,3,R64,129
+2021-2028,Abu Dhabi,Hard,P,211095,Bernarda Pera,202499,Donna Vekic,7-6(10) 2-6 6-4,3,R64,184
+2021-2028,Abu Dhabi,Hard,P,204427,Sara Sorribes Tormo,206408,Nadia Podoroska,6-3 6-3,3,R64,102
+2021-2028,Abu Dhabi,Hard,P,214181,Anastasia Gasanova,201621,Mona Barthel,6-2 6-4,3,R64,83
+2021-2028,Abu Dhabi,Hard,P,201662,Karolina Pliskova,202604,Despina Papamichail,6-2 7-6(4),3,R64,81
+2021-2028,Abu Dhabi,Hard,P,201427,Alize Cornet,204394,Valentini Grammatikopoulou,6-2 6-2,3,R64,72
+2021-2028,Abu Dhabi,Hard,P,211651,Paula Badosa,201545,Anastasija Sevastova,6-2 5-7 6-2,3,R64,111
+2021-2028,Abu Dhabi,Hard,P,213926,Bianca Turati,201468,Yaroslava Shvedova,6-1 6-2,3,R64,79
+2021-2028,Abu Dhabi,Hard,P,206368,Veronika Kudermetova,204426,Anett Kontaveit,7-5 6-1,3,R64,88
+2021-2028,Abu Dhabi,Hard,P,206420,Ekaterina Alexandrova,201610,Zarina Diyas,6-4 6-4,3,R64,81
+2021-2028,Abu Dhabi,Hard,P,201586,Heather Watson,214839,Jodie Burrage,4-6 6-2 7-5,3,R64,142
+2021-2028,Abu Dhabi,Hard,P,201329,Vera Zvonareva,203281,Amandine Hesse,6-3 6-4,3,R64,100
+2021-2028,Abu Dhabi,Hard,P,202494,Elina Svitolina,202468,Jessica Pegula,6-4 6-3,3,R64,83
+2021-2028,Abu Dhabi,Hard,P,214544,Aryna Sabalenka,206368,Veronika Kudermetova,6-2 6-2,3,F,66
+2021-2029,Gippsland Trophy,Hard,P,201466,Kaia Kanepi,206420,Ekaterina Alexandrova,6-3 7-6(6),3,SF,90
+2021-2029,Gippsland Trophy,Hard,P,210722,Elise Mertens,211768,Naomi Osaka,W/O,3,SF,0
+2021-2029,Gippsland Trophy,Hard,P,206420,Ekaterina Alexandrova,201594,Simona Halep,6-2 6-1,3,QF,60
+2021-2029,Gippsland Trophy,Hard,P,201466,Kaia Kanepi,214096,Karolina Muchova,W/O,3,QF,0
+2021-2029,Gippsland Trophy,Hard,P,210722,Elise Mertens,202494,Elina Svitolina,6-3 5-7 [10-6],3,QF,116
+2021-2029,Gippsland Trophy,Hard,P,211768,Naomi Osaka,201593,Irina Camelia Begu,7-5 6-1,3,QF,76
+2021-2029,Gippsland Trophy,Hard,P,201594,Simona Halep,201696,Laura Siegemund,6-2 6-4,3,R16,93
+2021-2029,Gippsland Trophy,Hard,P,206420,Ekaterina Alexandrova,216347,Iga Swiatek,6-4 6-2,3,R16,79
+2021-2029,Gippsland Trophy,Hard,P,201466,Kaia Kanepi,214082,Daria Kasatkina,7-5 6-1,3,R16,79
+2021-2029,Gippsland Trophy,Hard,P,214096,Karolina Muchova,211148,Jasmine Paolini,6-2 4-6 6-4,3,R16,123
+2021-2029,Gippsland Trophy,Hard,P,210722,Elise Mertens,201614,Caroline Garcia,7-6(1) 6-3,3,R16,100
+2021-2029,Gippsland Trophy,Hard,P,202494,Elina Svitolina,211533,Jelena Ostapenko,6-7(4) 6-3 6-2,3,R16,132
+2021-2029,Gippsland Trophy,Hard,P,201593,Irina Camelia Begu,202427,Johanna Konta,4-6 7-6(10) 7-6(4),3,R16,212
+2021-2029,Gippsland Trophy,Hard,P,211768,Naomi Osaka,211107,Katie Boulter,3-6 6-3 6-1,3,R16,107
+2021-2029,Gippsland Trophy,Hard,P,201594,Simona Halep,215713,Anastasia Potapova,6-4 6-4,3,R32,82
+2021-2029,Gippsland Trophy,Hard,P,201696,Laura Siegemund,215018,Destanee Aiava,6-2 6-2,3,R32,66
+2021-2029,Gippsland Trophy,Hard,P,206420,Ekaterina Alexandrova,203533,Anna Karolina Schmiedlova,4-6 6-4 6-2,3,R32,116
+2021-2029,Gippsland Trophy,Hard,P,216347,Iga Swiatek,215219,Kaja Juvan,2-6 6-2 6-1,3,R32,104
+2021-2029,Gippsland Trophy,Hard,P,201466,Kaia Kanepi,214544,Aryna Sabalenka,6-1 2-6 6-1,3,R32,104
+2021-2029,Gippsland Trophy,Hard,P,214082,Daria Kasatkina,201555,Polona Hercog,6-4 6-3,3,R32,83
+2021-2029,Gippsland Trophy,Hard,P,211148,Jasmine Paolini,202492,Qiang Wang,3-6 7-5 6-4,3,R32,141
+2021-2029,Gippsland Trophy,Hard,P,210722,Elise Mertens,206349,Mayo Hibi,6-2 6-2,3,R32,75
+2021-2029,Gippsland Trophy,Hard,P,201614,Caroline Garcia,201693,Timea Babos,6-4 6-4,3,R32,99
+2021-2029,Gippsland Trophy,Hard,P,211533,Jelena Ostapenko,203575,Danka Kovinic,6-4 7-5,3,R32,97
+2021-2029,Gippsland Trophy,Hard,P,202494,Elina Svitolina,201492,Andrea Petkovic,6-1 6-4,3,R32,72
+2021-2029,Gippsland Trophy,Hard,P,202427,Johanna Konta,211095,Bernarda Pera,6-2 6-3,3,R32,81
+2021-2029,Gippsland Trophy,Hard,P,201593,Irina Camelia Begu,205925,Aliaksandra Sasnovich,5-7 6-4 6-4,3,R32,155
+2021-2029,Gippsland Trophy,Hard,P,211107,Katie Boulter,221103,Coco Gauff,3-6 7-5 6-2,3,R32,103
+2021-2029,Gippsland Trophy,Hard,P,211768,Naomi Osaka,201427,Alize Cornet,6-2 6-2,3,R32,71
+2021-2029,Gippsland Trophy,Hard,P,215713,Anastasia Potapova,215992,Whitney Osuigwe,6-3 6-0,3,R64,48
+2021-2029,Gippsland Trophy,Hard,P,215018,Destanee Aiava,203564,Chloe Paquet,6-1 4-6 6-4,3,R64,140
+2021-2029,Gippsland Trophy,Hard,P,201696,Laura Siegemund,201512,Monica Niculescu,7-5 6-4,3,R64,118
+2021-2029,Gippsland Trophy,Hard,P,203533,Anna Karolina Schmiedlova,202443,Valeria Savinykh,6-1 6-3,3,R64,75
+2021-2029,Gippsland Trophy,Hard,P,215219,Kaja Juvan,206374,Yafan Wang,4-6 6-1 6-4,3,R64,129
+2021-2029,Gippsland Trophy,Hard,P,201466,Kaia Kanepi,206292,Astra Sharma,1-6 7-5 6-2,3,R64,130
+2021-2029,Gippsland Trophy,Hard,P,214082,Daria Kasatkina,202596,Mihaela Buzarnescu,6-1 6-1,3,R64,63
+2021-2029,Gippsland Trophy,Hard,P,201555,Polona Hercog,202506,Margarita Gasparyan,2-6 6-3 6-3,3,R64,111
+2021-2029,Gippsland Trophy,Hard,P,211148,Jasmine Paolini,201606,Rebecca Marino,7-6(2) 6-3,3,R64,82
+2021-2029,Gippsland Trophy,Hard,P,206349,Mayo Hibi,201478,Varvara Lepchenko,6-4 6-7(3) 6-1,3,R64,175
+2021-2029,Gippsland Trophy,Hard,P,201693,Timea Babos,206255,Patricia Maria Tig,7-6(5) 6-3,3,R64,118
+2021-2029,Gippsland Trophy,Hard,P,201614,Caroline Garcia,201613,Arina Rodionova,6-3 6-4,3,R64,80
+2021-2029,Gippsland Trophy,Hard,P,211533,Jelena Ostapenko,201506,Sara Errani,4-6 6-3 6-1,3,R64,113
+2021-2029,Gippsland Trophy,Hard,P,203575,Danka Kovinic,214461,Tamara Zidansek,6-3 6-3,3,R64,126
+2021-2029,Gippsland Trophy,Hard,P,201492,Andrea Petkovic,203354,Martina Trevisan,6-1 3-6 7-5,3,R64,141
+2021-2029,Gippsland Trophy,Hard,P,211095,Bernarda Pera,216265,Olivia Gadecki,6-7(2) 6-3 6-3,3,R64,136
+2021-2029,Gippsland Trophy,Hard,P,205925,Aliaksandra Sasnovich,201615,Lesia Tsurenko,3-6 6-4 6-4,3,R64,127
+2021-2029,Gippsland Trophy,Hard,P,201593,Irina Camelia Begu,202453,Saisai Zheng,3-6 7-5 6-4,3,R64,165
+2021-2029,Gippsland Trophy,Hard,P,221103,Coco Gauff,213525,Jil Teichmann,6-3 6-7(6) 7-6(5),3,R64,165
+2021-2029,Gippsland Trophy,Hard,P,211107,Katie Boulter,214939,Anna Kalinskaya,6-1 6-3,3,R64,57
+2021-2029,Gippsland Trophy,Hard,P,201427,Alize Cornet,201548,Ajla Tomljanovic,5-7 6-1 6-3,3,R64,148
+2021-2029,Gippsland Trophy,Hard,P,210722,Elise Mertens,201466,Kaia Kanepi,6-4 6-1,3,F,70
+2021-2026,Yarra Valley Classic,Hard,P,202458,Ashleigh Barty,200033,Serena Williams,W/O,3,SF,0
+2021-2026,Yarra Valley Classic,Hard,P,202469,Garbine Muguruza,214954,Marketa Vondrousova,6-1 6-0,3,SF,53
+2021-2026,Yarra Valley Classic,Hard,P,202458,Ashleigh Barty,201603,Shelby Rogers,7-5 2-6 [10-4],3,QF,92
+2021-2026,Yarra Valley Classic,Hard,P,200033,Serena Williams,203389,Danielle Collins,6-2 4-6 [10-6],3,QF,96
+2021-2026,Yarra Valley Classic,Hard,P,214954,Marketa Vondrousova,206408,Nadia Podoroska,4-6 6-3 [10-4],3,QF,102
+2021-2026,Yarra Valley Classic,Hard,P,202469,Garbine Muguruza,213550,Sofia Kenin,6-2 6-2,3,QF,75
+2021-2026,Yarra Valley Classic,Hard,P,202458,Ashleigh Barty,213631,Marie Bouzkova,6-0 4-6 6-3,3,R16,121
+2021-2026,Yarra Valley Classic,Hard,P,201603,Shelby Rogers,201549,Petra Martic,7-6(1) 6-3,3,R16,99
+2021-2026,Yarra Valley Classic,Hard,P,203389,Danielle Collins,201662,Karolina Pliskova,7-6(5) 7-6(3),3,R16,110
+2021-2026,Yarra Valley Classic,Hard,P,200033,Serena Williams,201450,Tsvetana Pironkova,6-1 6-4,3,R16,74
+2021-2026,Yarra Valley Classic,Hard,P,214954,Marketa Vondrousova,201329,Vera Zvonareva,7-6(4) 6-7(4) 6-4,3,R16,175
+2021-2026,Yarra Valley Classic,Hard,P,206408,Nadia Podoroska,201520,Petra Kvitova,5-7 6-1 7-6(7),3,R16,158
+2021-2026,Yarra Valley Classic,Hard,P,202469,Garbine Muguruza,201499,Anastasia Pavlyuchenkova,6-1 6-2,3,R16,56
+2021-2026,Yarra Valley Classic,Hard,P,213550,Sofia Kenin,202468,Jessica Pegula,5-7 7-5 6-2,3,R16,124
+2021-2026,Yarra Valley Classic,Hard,P,202458,Ashleigh Barty,202536,Ana Bogdan,6-3 6-3,3,R32,77
+2021-2026,Yarra Valley Classic,Hard,P,213631,Marie Bouzkova,211901,Aliona Bolsova,6-3 6-7(6) 6-2,3,R32,135
+2021-2026,Yarra Valley Classic,Hard,P,201603,Shelby Rogers,202490,Rebecca Peterson,6-4 5-7 6-2,3,R32,142
+2021-2026,Yarra Valley Classic,Hard,P,201549,Petra Martic,214304,Vera Lapko,4-6 6-3 6-2,3,R32,127
+2021-2026,Yarra Valley Classic,Hard,P,201662,Karolina Pliskova,220714,Elisabetta Cocciaretto,6-3 6-2,3,R32,77
+2021-2026,Yarra Valley Classic,Hard,P,203389,Danielle Collins,211411,Nina Stojanovic,6-2 6-1,3,R32,64
+2021-2026,Yarra Valley Classic,Hard,P,201450,Tsvetana Pironkova,202499,Donna Vekic,1-6 6-4 6-2,3,R32,110
+2021-2026,Yarra Valley Classic,Hard,P,200033,Serena Williams,201611,Daria Saville,6-1 6-4,3,R32,94
+2021-2026,Yarra Valley Classic,Hard,P,214954,Marketa Vondrousova,219875,Varvara Gracheva,6-4 6-0,3,R32,58
+2021-2026,Yarra Valley Classic,Hard,P,201329,Vera Zvonareva,214452,Caroline Dolehide,6-2 6-4,3,R32,81
+2021-2026,Yarra Valley Classic,Hard,P,206408,Nadia Podoroska,213889,Greet Minnen,6-3 6-4,3,R32,82
+2021-2026,Yarra Valley Classic,Hard,P,201520,Petra Kvitova,200748,Venus Williams,7-6(6) 7-5,3,R32,120
+2021-2026,Yarra Valley Classic,Hard,P,202469,Garbine Muguruza,202421,Alison Van Uytvanck,6-2 6-0,3,R32,53
+2021-2026,Yarra Valley Classic,Hard,P,201499,Anastasia Pavlyuchenkova,201545,Anastasija Sevastova,6-0 6-3,3,R32,59
+2021-2026,Yarra Valley Classic,Hard,P,202468,Jessica Pegula,201621,Mona Barthel,6-4 7-5,3,R32,83
+2021-2026,Yarra Valley Classic,Hard,P,213550,Sofia Kenin,202429,Camila Giorgi,7-5 RET,3,R32,53
+2021-2026,Yarra Valley Classic,Hard,P,202536,Ana Bogdan,215872,Kamilla Rakhimova,6-2 6-2,3,R64,79
+2021-2026,Yarra Valley Classic,Hard,P,211901,Aliona Bolsova,206102,Ankita Raina,6-3 6-0,3,R64,61
+2021-2026,Yarra Valley Classic,Hard,P,213631,Marie Bouzkova,201325,Samantha Stosur,6-2 6-0,3,R64,61
+2021-2026,Yarra Valley Classic,Hard,P,201603,Shelby Rogers,211539,Fiona Ferro,6-2 7-5,3,R64,103
+2021-2026,Yarra Valley Classic,Hard,P,202490,Rebecca Peterson,213666,Maddison Inglis,6-2 6-1,3,R64,81
+2021-2026,Yarra Valley Classic,Hard,P,214304,Vera Lapko,201468,Yaroslava Shvedova,4-6 6-2 6-4,3,R64,138
+2021-2026,Yarra Valley Classic,Hard,P,220714,Elisabetta Cocciaretto,202684,Lin Zhu,0-6 6-3 7-5,3,R64,124
+2021-2026,Yarra Valley Classic,Hard,P,211411,Nina Stojanovic,210886,Mayar Sherif,6-3 6-2,3,R64,65
+2021-2026,Yarra Valley Classic,Hard,P,203389,Danielle Collins,204434,Ysaline Bonaventure,6-3 6-3,3,R64,75
+2021-2026,Yarra Valley Classic,Hard,P,201450,Tsvetana Pironkova,214643,Liudmila Samsonova,6-2 6-1,3,R64,62
+2021-2026,Yarra Valley Classic,Hard,P,201611,Daria Saville,214149,Viktoria Hruncakova,6-2 6-0,3,R64,65
+2021-2026,Yarra Valley Classic,Hard,P,219875,Varvara Gracheva,211878,Lizette Cabrera,2-6 6-4 6-2,3,R64,112
+2021-2026,Yarra Valley Classic,Hard,P,201329,Vera Zvonareva,201697,Kristyna Pliskova,6-4 6-7(4) 6-3,3,R64,118
+2021-2026,Yarra Valley Classic,Hard,P,206408,Nadia Podoroska,215936,Francesca Jones,6-1 6-3,3,R64,86
+2021-2026,Yarra Valley Classic,Hard,P,213889,Greet Minnen,215337,Olga Danilovic,6-4 6-4,3,R64,81
+2021-2026,Yarra Valley Classic,Hard,P,200748,Venus Williams,201551,Arantxa Rus,6-1 6-3,3,R64,65
+2021-2026,Yarra Valley Classic,Hard,P,202421,Alison Van Uytvanck,201444,Su Wei Hsieh,6-2 6-0,3,R64,58
+2021-2026,Yarra Valley Classic,Hard,P,201545,Anastasija Sevastova,201483,Madison Brengle,6-4 6-2,3,R64,65
+2021-2026,Yarra Valley Classic,Hard,P,201499,Anastasia Pavlyuchenkova,201595,Misaki Doi,6-1 6-4,3,R64,67
+2021-2026,Yarra Valley Classic,Hard,P,202468,Jessica Pegula,201540,Kristina Mladenovic,6-4 6-1,3,R64,82
+2021-2026,Yarra Valley Classic,Hard,P,201621,Mona Barthel,214040,Kimberly Birrell,7-5 6-3,3,R64,91
+2021-2026,Yarra Valley Classic,Hard,P,202429,Camila Giorgi,216262,Clara Burel,6-4 6-3,3,R64,80
+2021-2026,Yarra Valley Classic,Hard,P,202458,Ashleigh Barty,202469,Garbine Muguruza,7-6(3) 6-4,3,F,107
+2021-2032,Grampians Trophy,Hard,P,204426,Anett Kontaveit,206289,Maria Sakkari,2-6 6-3 [11-9],3,SF,76
+2021-2032,Grampians Trophy,Hard,P,215983,Ann Li,206108,Jennifer Brady,7-6(5) 6-7(5) [10-6],3,SF,109
+2021-2032,Grampians Trophy,Hard,P,206289,Maria Sakkari,201493,Angelique Kerber,6-4 6-2,3,QF,76
+2021-2032,Grampians Trophy,Hard,P,204426,Anett Kontaveit,201458,Victoria Azarenka,W/O,3,QF,1
+2021-2032,Grampians Trophy,Hard,P,206108,Jennifer Brady,206252,Barbora Krejcikova,7-6(5) 6-4,3,QF,114
+2021-2032,Grampians Trophy,Hard,P,215983,Ann Li,201514,Sorana Cirstea,6-3 6-1,3,QF,61
+2021-2032,Grampians Trophy,Hard,P,206289,Maria Sakkari,220367,Leylah Fernandez,6-2 6-2,3,R16,85
+2021-2032,Grampians Trophy,Hard,P,201493,Angelique Kerber,202460,Ons Jabeur,6-4 6-4,3,R16,79
+2021-2032,Grampians Trophy,Hard,P,201458,Victoria Azarenka,201709,Yulia Putintseva,6-4 1-6 [11-9],3,R16,103
+2021-2032,Grampians Trophy,Hard,P,204426,Anett Kontaveit,201318,Bethanie Mattek Sands,7-5 7-5,3,R16,109
+2021-2032,Grampians Trophy,Hard,P,206108,Jennifer Brady,216146,Marta Kostyuk,6-1 6-4,3,R16,69
+2021-2032,Grampians Trophy,Hard,P,206252,Barbora Krejcikova,214981,Elena Rybakina,4-6 6-2 [10-6],3,R16,104
+2021-2032,Grampians Trophy,Hard,P,215983,Ann Li,206368,Veronika Kudermetova,7-5 6-3,3,R16,84
+2021-2032,Grampians Trophy,Hard,P,201514,Sorana Cirstea,202505,Belinda Bencic,7-5 6-2,3,R16,82
+2021-2032,Grampians Trophy,Hard,P,220367,Leylah Fernandez,201585,Sloane Stephens,6-3 6-1,3,R32,74
+2021-2032,Grampians Trophy,Hard,P,202460,Ons Jabeur,215020,Anna Blinkova,6-1 6-1,3,R32,55
+2021-2032,Grampians Trophy,Hard,P,201493,Angelique Kerber,211701,Katerina Siniakova,6-3 4-6 6-3,3,R32,118
+2021-2032,Grampians Trophy,Hard,P,201709,Yulia Putintseva,202916,Georgina Garcia Perez,7-6(1) 6-4,3,R32,103
+2021-2032,Grampians Trophy,Hard,P,201318,Bethanie Mattek Sands,201366,Barbora Strycova,7-6(3) 6-2,3,R32,104
+2021-2032,Grampians Trophy,Hard,P,204426,Anett Kontaveit,201539,Christina Mchale,6-1 6-3,3,R32,88
+2021-2032,Grampians Trophy,Hard,P,206108,Jennifer Brady,201320,Svetlana Kuznetsova,6-3 6-0,3,R32,60
+2021-2032,Grampians Trophy,Hard,P,216146,Marta Kostyuk,202681,Gabriela Dabrowski,6-0 6-3,3,R32,57
+2021-2032,Grampians Trophy,Hard,P,206252,Barbora Krejcikova,201616,Lauren Davis,6-4 4-6 6-4,3,R32,145
+2021-2032,Grampians Trophy,Hard,P,215983,Ann Li,206391,Ellen Perez,5-3 RET,3,R32,43
+2021-2032,Grampians Trophy,Hard,P,206368,Veronika Kudermetova,201586,Heather Watson,6-2 6-2,3,R32,79
+2021-2032,Grampians Trophy,Hard,P,201514,Sorana Cirstea,202611,Oksana Kalashnikova,6-1 6-1,3,R32,48
+2021-580,Australian Open,Hard,G,202458,Ashleigh Barty,203575,Danka Kovinic,6-0 6-0,3,R128,44
+2021-580,Australian Open,Hard,G,201611,Daria Saville,204427,Sara Sorribes Tormo,6-1 7-5,3,R128,92
+2021-580,Australian Open,Hard,G,206252,Barbora Krejcikova,202453,Saisai Zheng,6-3 2-6 6-2,3,R128,147
+2021-580,Australian Open,Hard,G,206420,Ekaterina Alexandrova,203354,Martina Trevisan,6-3 6-4,3,R128,82
+2021-580,Australian Open,Hard,G,204426,Anett Kontaveit,205925,Aliaksandra Sasnovich,7-5 6-2,3,R128,69
+2021-580,Australian Open,Hard,G,201586,Heather Watson,201697,Kristyna Pliskova,7-6(4) 7-6(3),3,R128,107
+2021-580,Australian Open,Hard,G,201603,Shelby Rogers,215936,Francesca Jones,6-4 6-1,3,R128,67
+2021-580,Australian Open,Hard,G,215337,Olga Danilovic,201549,Petra Martic,7-5 3-6 6-4,3,R128,127
+2021-580,Australian Open,Hard,G,202505,Belinda Bencic,201616,Lauren Davis,6-3 4-6 6-1,3,R128,147
+2021-580,Australian Open,Hard,G,201320,Svetlana Kuznetsova,201366,Barbora Strycova,6-2 6-2,3,R128,85
+2021-580,Australian Open,Hard,G,202684,Lin Zhu,215992,Whitney Osuigwe,6-1 6-1,3,R128,65
+2021-580,Australian Open,Hard,G,210722,Elise Mertens,220367,Leylah Fernandez,6-1 6-3,3,R128,86
+2021-580,Australian Open,Hard,G,214096,Karolina Muchova,211533,Jelena Ostapenko,7-5 6-2,3,R128,98
+2021-580,Australian Open,Hard,G,201621,Mona Barthel,220714,Elisabetta Cocciaretto,3-6 6-4 6-4,3,R128,127
+2021-580,Australian Open,Hard,G,203389,Danielle Collins,202536,Ana Bogdan,6-3 6-1,3,R128,65
+2021-580,Australian Open,Hard,G,201662,Karolina Pliskova,211148,Jasmine Paolini,6-0 6-2,3,R128,47
+2021-580,Australian Open,Hard,G,213550,Sofia Kenin,213666,Maddison Inglis,7-5 6-4,3,R128,86
+2021-580,Australian Open,Hard,G,201466,Kaia Kanepi,201545,Anastasija Sevastova,6-3 6-1,3,R128,58
+2021-580,Australian Open,Hard,G,206408,Nadia Podoroska,201539,Christina Mchale,6-4 6-4,3,R128,96
+2021-580,Australian Open,Hard,G,202499,Donna Vekic,206374,Yafan Wang,4-6 6-3 6-4,3,R128,158
+2021-580,Australian Open,Hard,G,206108,Jennifer Brady,211901,Aliona Bolsova,6-1 6-3,3,R128,59
+2021-580,Australian Open,Hard,G,201483,Madison Brengle,201613,Arina Rodionova,6-1 6-2,3,R128,61
+2021-580,Australian Open,Hard,G,210886,Mayar Sherif,203564,Chloe Paquet,7-5 7-5,3,R128,101
+2021-580,Australian Open,Hard,G,215219,Kaja Juvan,202427,Johanna Konta,4-6 2-0 RET,3,R128,64
+2021-580,Australian Open,Hard,G,202468,Jessica Pegula,201458,Victoria Azarenka,7-5 6-4,3,R128,99
+2021-580,Australian Open,Hard,G,201325,Samantha Stosur,215018,Destanee Aiava,6-4 6-4,3,R128,97
+2021-580,Australian Open,Hard,G,211702,Nao Hibino,206292,Astra Sharma,2-6 6-3 7-5,3,R128,117
+2021-580,Australian Open,Hard,G,201540,Kristina Mladenovic,206289,Maria Sakkari,6-2 0-6 6-3,3,R128,105
+2021-580,Australian Open,Hard,G,201709,Yulia Putintseva,201585,Sloane Stephens,4-6 6-2 6-3,3,R128,130
+2021-580,Australian Open,Hard,G,202421,Alison Van Uytvanck,216262,Clara Burel,4-6 6-3 6-4,3,R128,113
+2021-580,Australian Open,Hard,G,221103,Coco Gauff,213525,Jil Teichmann,6-3 6-2,3,R128,57
+2021-580,Australian Open,Hard,G,202494,Elina Svitolina,213631,Marie Bouzkova,6-3 7-6(5),3,R128,120
+2021-580,Australian Open,Hard,G,215370,Bianca Andreescu,202596,Mihaela Buzarnescu,6-2 4-6 6-3,3,R128,122
+2021-580,Australian Open,Hard,G,201444,Su Wei Hsieh,201450,Tsvetana Pironkova,7-5 6-2,3,R128,76
+2021-580,Australian Open,Hard,G,200748,Venus Williams,201465,Kirsten Flipkens,7-5 6-2,3,R128,92
+2021-580,Australian Open,Hard,G,201506,Sara Errani,202492,Qiang Wang,2-6 6-4 6-4,3,R128,134
+2021-580,Australian Open,Hard,G,214954,Marketa Vondrousova,202490,Rebecca Peterson,2-6 7-5 7-5,3,R128,142
+2021-580,Australian Open,Hard,G,201606,Rebecca Marino,214040,Kimberly Birrell,6-0 7-6(9),3,R128,104
+2021-580,Australian Open,Hard,G,201514,Sorana Cirstea,206255,Patricia Maria Tig,6-2 6-1,3,R128,59
+2021-580,Australian Open,Hard,G,201520,Petra Kvitova,213889,Greet Minnen,6-3 6-4,3,R128,81
+2021-580,Australian Open,Hard,G,202469,Garbine Muguruza,202506,Margarita Gasparyan,6-4 6-0,3,R128,73
+2021-580,Australian Open,Hard,G,214643,Liudmila Samsonova,211651,Paula Badosa,6-7(4) 7-6(4) 7-5,3,R128,158
+2021-580,Australian Open,Hard,G,201610,Zarina Diyas,214461,Tamara Zidansek,6-2 7-5,3,R128,81
+2021-580,Australian Open,Hard,G,211095,Bernarda Pera,201493,Angelique Kerber,6-0 6-4,3,R128,70
+2021-580,Australian Open,Hard,G,202460,Ons Jabeur,201492,Andrea Petkovic,6-3 3-6 6-4,3,R128,121
+2021-580,Australian Open,Hard,G,203533,Anna Karolina Schmiedlova,206349,Mayo Hibi,7-6(2) 6-4,3,R128,143
+2021-580,Australian Open,Hard,G,201614,Caroline Garcia,201555,Polona Hercog,7-6(6) 6-3,3,R128,103
+2021-580,Australian Open,Hard,G,211768,Naomi Osaka,201499,Anastasia Pavlyuchenkova,6-1 6-2,3,R128,68
+2021-580,Australian Open,Hard,G,214544,Aryna Sabalenka,214149,Viktoria Hruncakova,6-0 6-4,3,R128,63
+2021-580,Australian Open,Hard,G,214082,Daria Kasatkina,211107,Katie Boulter,6-1 6-4,3,R128,71
+2021-580,Australian Open,Hard,G,201427,Alize Cornet,202443,Valeria Savinykh,6-2 4-6 7-6(7),3,R128,166
+2021-580,Australian Open,Hard,G,215983,Ann Li,201533,Shuai Zhang,6-2 6-0,3,R128,47
+2021-580,Australian Open,Hard,G,215713,Anastasia Potapova,201590,Alison Riske Amritraj,6-2 6-1,3,R128,51
+2021-580,Australian Open,Hard,G,201693,Timea Babos,204434,Ysaline Bonaventure,7-6(0) 6-4,3,R128,90
+2021-580,Australian Open,Hard,G,211411,Nina Stojanovic,201593,Irina Camelia Begu,6-3 6-4,3,R128,103
+2021-580,Australian Open,Hard,G,200033,Serena Williams,201696,Laura Siegemund,6-1 6-1,3,R128,56
+2021-580,Australian Open,Hard,G,216347,Iga Swiatek,201551,Arantxa Rus,6-1 6-3,3,R128,76
+2021-580,Australian Open,Hard,G,202429,Camila Giorgi,201468,Yaroslava Shvedova,6-3 6-3,3,R128,74
+2021-580,Australian Open,Hard,G,211539,Fiona Ferro,211701,Katerina Siniakova,6-7(5) 6-2 6-4,3,R128,138
+2021-580,Australian Open,Hard,G,214981,Elena Rybakina,201329,Vera Zvonareva,4-6 6-4 6-4,3,R128,124
+2021-580,Australian Open,Hard,G,206368,Veronika Kudermetova,216146,Marta Kostyuk,6-2 7-6(5),3,R128,81
+2021-580,Australian Open,Hard,G,219875,Varvara Gracheva,215020,Anna Blinkova,6-1 3-6 7-6(7),3,R128,165
+2021-580,Australian Open,Hard,G,201548,Ajla Tomljanovic,201595,Misaki Doi,6-2 6-1,3,R128,71
+2021-580,Australian Open,Hard,G,201594,Simona Halep,211878,Lizette Cabrera,6-2 6-1,3,R128,59
+2021-580,Australian Open,Hard,G,202458,Ashleigh Barty,201611,Daria Saville,6-1 7-6(7),3,R64,92
+2021-580,Australian Open,Hard,G,206420,Ekaterina Alexandrova,206252,Barbora Krejcikova,6-3 7-6(4),3,R64,110
+2021-580,Australian Open,Hard,G,204426,Anett Kontaveit,201586,Heather Watson,6-7(5) 6-4 6-2,3,R64,126
+2021-580,Australian Open,Hard,G,201603,Shelby Rogers,215337,Olga Danilovic,6-2 6-3,3,R64,71
+2021-580,Australian Open,Hard,G,202505,Belinda Bencic,201320,Svetlana Kuznetsova,7-5 2-6 6-4,3,R64,159
+2021-580,Australian Open,Hard,G,210722,Elise Mertens,202684,Lin Zhu,7-6(8) 6-1,3,R64,104
+2021-580,Australian Open,Hard,G,214096,Karolina Muchova,201621,Mona Barthel,6-4 6-1,3,R64,73
+2021-580,Australian Open,Hard,G,201662,Karolina Pliskova,203389,Danielle Collins,7-5 6-2,3,R64,85
+2021-580,Australian Open,Hard,G,201466,Kaia Kanepi,213550,Sofia Kenin,6-3 6-2,3,R64,64
+2021-580,Australian Open,Hard,G,202499,Donna Vekic,206408,Nadia Podoroska,6-2 6-2,3,R64,60
+2021-580,Australian Open,Hard,G,206108,Jennifer Brady,201483,Madison Brengle,6-1 6-2,3,R64,52
+2021-580,Australian Open,Hard,G,215219,Kaja Juvan,210886,Mayar Sherif,3-6 7-6(2) 6-3,3,R64,159
+2021-580,Australian Open,Hard,G,202468,Jessica Pegula,201325,Samantha Stosur,6-0 6-1,3,R64,50
+2021-580,Australian Open,Hard,G,201540,Kristina Mladenovic,211702,Nao Hibino,7-5 6-1,3,R64,81
+2021-580,Australian Open,Hard,G,201709,Yulia Putintseva,202421,Alison Van Uytvanck,6-4 1-6 6-2,3,R64,115
+2021-580,Australian Open,Hard,G,202494,Elina Svitolina,221103,Coco Gauff,6-4 6-3,3,R64,77
+2021-580,Australian Open,Hard,G,201444,Su Wei Hsieh,215370,Bianca Andreescu,6-3 6-2,3,R64,83
+2021-580,Australian Open,Hard,G,201506,Sara Errani,200748,Venus Williams,6-1 6-0,3,R64,75
+2021-580,Australian Open,Hard,G,214954,Marketa Vondrousova,201606,Rebecca Marino,6-1 7-5,3,R64,80
+2021-580,Australian Open,Hard,G,201514,Sorana Cirstea,201520,Petra Kvitova,6-4 1-6 6-1,3,R64,123
+2021-580,Australian Open,Hard,G,202469,Garbine Muguruza,214643,Liudmila Samsonova,6-3 6-1,3,R64,64
+2021-580,Australian Open,Hard,G,201610,Zarina Diyas,211095,Bernarda Pera,6-4 3-6 6-3,3,R64,124
+2021-580,Australian Open,Hard,G,202460,Ons Jabeur,203533,Anna Karolina Schmiedlova,6-3 6-2,3,R64,67
+2021-580,Australian Open,Hard,G,211768,Naomi Osaka,201614,Caroline Garcia,6-2 6-3,3,R64,61
+2021-580,Australian Open,Hard,G,214544,Aryna Sabalenka,214082,Daria Kasatkina,7-6(5) 6-3,3,R64,89
+2021-580,Australian Open,Hard,G,215983,Ann Li,201427,Alize Cornet,6-2 7-6(6),3,R64,98
+2021-580,Australian Open,Hard,G,215713,Anastasia Potapova,201693,Timea Babos,6-2 6-4,3,R64,77
+2021-580,Australian Open,Hard,G,200033,Serena Williams,211411,Nina Stojanovic,6-3 6-0,3,R64,69
+2021-580,Australian Open,Hard,G,216347,Iga Swiatek,202429,Camila Giorgi,6-2 6-4,3,R64,80
+2021-580,Australian Open,Hard,G,211539,Fiona Ferro,214981,Elena Rybakina,6-4 6-4,3,R64,94
+2021-580,Australian Open,Hard,G,206368,Veronika Kudermetova,219875,Varvara Gracheva,5-7 6-2 6-2,3,R64,126
+2021-580,Australian Open,Hard,G,201594,Simona Halep,201548,Ajla Tomljanovic,4-6 6-4 7-5,3,R64,154
+2021-580,Australian Open,Hard,G,202458,Ashleigh Barty,206420,Ekaterina Alexandrova,6-2 6-4,3,R32,80
+2021-580,Australian Open,Hard,G,201603,Shelby Rogers,204426,Anett Kontaveit,6-4 6-3,3,R32,83
+2021-580,Australian Open,Hard,G,210722,Elise Mertens,202505,Belinda Bencic,6-2 6-1,3,R32,62
+2021-580,Australian Open,Hard,G,214096,Karolina Muchova,201662,Karolina Pliskova,7-5 7-5,3,R32,114
+2021-580,Australian Open,Hard,G,202499,Donna Vekic,201466,Kaia Kanepi,5-7 7-6(2) 6-4,3,R32,156
+2021-580,Australian Open,Hard,G,206108,Jennifer Brady,215219,Kaja Juvan,6-1 6-3,3,R32,88
+2021-580,Australian Open,Hard,G,202468,Jessica Pegula,201540,Kristina Mladenovic,6-2 6-1,3,R32,68
+2021-580,Australian Open,Hard,G,202494,Elina Svitolina,201709,Yulia Putintseva,6-4 6-0,3,R32,83
+2021-580,Australian Open,Hard,G,201444,Su Wei Hsieh,201506,Sara Errani,6-4 2-6 7-5,3,R32,164
+2021-580,Australian Open,Hard,G,214954,Marketa Vondrousova,201514,Sorana Cirstea,6-2 6-4,3,R32,85
+2021-580,Australian Open,Hard,G,202469,Garbine Muguruza,201610,Zarina Diyas,6-1 6-1,3,R32,56
+2021-580,Australian Open,Hard,G,211768,Naomi Osaka,202460,Ons Jabeur,6-3 6-2,3,R32,78
+2021-580,Australian Open,Hard,G,214544,Aryna Sabalenka,215983,Ann Li,6-3 6-1,3,R32,60
+2021-580,Australian Open,Hard,G,200033,Serena Williams,215713,Anastasia Potapova,7-6(5) 6-2,3,R32,97
+2021-580,Australian Open,Hard,G,216347,Iga Swiatek,211539,Fiona Ferro,6-4 6-3,3,R32,84
+2021-580,Australian Open,Hard,G,201594,Simona Halep,206368,Veronika Kudermetova,6-1 6-3,3,R32,78
+2021-580,Australian Open,Hard,G,202458,Ashleigh Barty,201603,Shelby Rogers,6-3 6-4,3,R16,71
+2021-580,Australian Open,Hard,G,214096,Karolina Muchova,210722,Elise Mertens,7-6(5) 7-5,3,R16,116
+2021-580,Australian Open,Hard,G,206108,Jennifer Brady,202499,Donna Vekic,6-1 7-5,3,R16,94
+2021-580,Australian Open,Hard,G,202468,Jessica Pegula,202494,Elina Svitolina,6-4 3-6 6-3,3,R16,115
+2021-580,Australian Open,Hard,G,201444,Su Wei Hsieh,214954,Marketa Vondrousova,6-4 6-2,3,R16,68
+2021-580,Australian Open,Hard,G,211768,Naomi Osaka,202469,Garbine Muguruza,4-6 6-4 7-5,3,R16,115
+2021-580,Australian Open,Hard,G,200033,Serena Williams,214544,Aryna Sabalenka,6-4 2-6 6-4,3,R16,129
+2021-580,Australian Open,Hard,G,201594,Simona Halep,216347,Iga Swiatek,3-6 6-1 6-4,3,R16,110
+2021-580,Australian Open,Hard,G,214096,Karolina Muchova,202458,Ashleigh Barty,1-6 6-3 6-2,3,QF,117
+2021-580,Australian Open,Hard,G,206108,Jennifer Brady,202468,Jessica Pegula,4-6 6-2 6-1,3,QF,100
+2021-580,Australian Open,Hard,G,211768,Naomi Osaka,201444,Su Wei Hsieh,6-2 6-2,3,QF,66
+2021-580,Australian Open,Hard,G,200033,Serena Williams,201594,Simona Halep,6-3 6-3,3,QF,81
+2021-580,Australian Open,Hard,G,206108,Jennifer Brady,214096,Karolina Muchova,6-4 3-6 6-4,3,SF,115
+2021-580,Australian Open,Hard,G,211768,Naomi Osaka,200033,Serena Williams,6-3 6-4,3,SF,75
+2021-580,Australian Open,Hard,G,211768,Naomi Osaka,206108,Jennifer Brady,6-4 6-3,3,F,77
+2021-2030,Adelaide,Hard,P,216347,Iga Swiatek,202505,Belinda Bencic,6-2 6-2,3,F,66
+2021-2030,Adelaide,Hard,P,216347,Iga Swiatek,213525,Jil Teichmann,6-3 6-2,3,SF,81
+2021-2030,Adelaide,Hard,P,202505,Belinda Bencic,221103,Coco Gauff,7-6(2) 6-7(4) 6-2,3,SF,165
+2021-2030,Adelaide,Hard,P,216347,Iga Swiatek,203389,Danielle Collins,6-2 3-0 RET,3,QF,64
+2021-2030,Adelaide,Hard,P,213525,Jil Teichmann,201545,Anastasija Sevastova,6-4 6-7(8) 7-5,3,QF,177
+2021-2030,Adelaide,Hard,P,221103,Coco Gauff,201603,Shelby Rogers,2-6 6-4 6-4,3,QF,110
+2021-2030,Adelaide,Hard,P,202505,Belinda Bencic,204411,Storm Hunter,6-2 6-4,3,QF,94
+2021-2030,Adelaide,Hard,P,203389,Danielle Collins,202458,Ashleigh Barty,6-3 6-4,3,R16,65
+2021-2030,Adelaide,Hard,P,216347,Iga Swiatek,213666,Maddison Inglis,6-1 6-3,3,R16,73
+2021-2030,Adelaide,Hard,P,201545,Anastasija Sevastova,201539,Christina Mchale,6-4 6-1,3,R16,96
+2021-2030,Adelaide,Hard,P,213525,Jil Teichmann,202492,Qiang Wang,3-6 6-3 6-3,3,R16,120
+2021-2030,Adelaide,Hard,P,221103,Coco Gauff,201549,Petra Martic,5-7 6-3 6-4,3,R16,132
+2021-2030,Adelaide,Hard,P,201603,Shelby Rogers,202427,Johanna Konta,6-2 6-2,3,R16,76
+2021-2030,Adelaide,Hard,P,204411,Storm Hunter,201709,Yulia Putintseva,6-4 5-7 6-1,3,R16,138
+2021-2030,Adelaide,Hard,P,202505,Belinda Bencic,201595,Misaki Doi,6-1 6-3,3,R16,74
+2021-2030,Adelaide,Hard,P,203389,Danielle Collins,202453,Saisai Zheng,7-6(5) 6-1,3,R32,101
+2021-2030,Adelaide,Hard,P,213666,Maddison Inglis,201325,Samantha Stosur,5-7 7-5 6-4,3,R32,166
+2021-2030,Adelaide,Hard,P,216347,Iga Swiatek,201483,Madison Brengle,6-3 6-4,3,R32,76
+2021-2030,Adelaide,Hard,P,201545,Anastasija Sevastova,201614,Caroline Garcia,6-2 6-4,3,R32,81
+2021-2030,Adelaide,Hard,P,213525,Jil Teichmann,201540,Kristina Mladenovic,6-2 7-6(5),3,R32,95
+2021-2030,Adelaide,Hard,P,202492,Qiang Wang,216265,Olivia Gadecki,6-4 6-3,3,R32,81
+2021-2030,Adelaide,Hard,P,201549,Petra Martic,214643,Liudmila Samsonova,4-6 6-0 7-5,3,R32,138
+2021-2030,Adelaide,Hard,P,221103,Coco Gauff,211148,Jasmine Paolini,6-4 6-7(4) 6-2,3,R32,153
+2021-2030,Adelaide,Hard,P,201603,Shelby Rogers,206368,Veronika Kudermetova,6-3 7-6(4),3,R32,106
+2021-2030,Adelaide,Hard,P,201709,Yulia Putintseva,201696,Laura Siegemund,6-4 6-4,3,R32,107
+2021-2030,Adelaide,Hard,P,204411,Storm Hunter,201548,Ajla Tomljanovic,6-1 6-2,3,R32,63
+2021-2030,Adelaide,Hard,P,201595,Misaki Doi,215020,Anna Blinkova,7-6(5) 3-6 6-2,3,R32,148
+2021-1003,Doha,Hard,P,201520,Petra Kvitova,202469,Garbine Muguruza,6-2 6-1,3,F,66
+2021-1003,Doha,Hard,P,202469,Garbine Muguruza,201458,Victoria Azarenka,W/O,3,SF,0
+2021-1003,Doha,Hard,P,201520,Petra Kvitova,202468,Jessica Pegula,6-4 6-4,3,SF,81
+2021-1003,Doha,Hard,P,201458,Victoria Azarenka,202494,Elina Svitolina,6-2 6-4,3,QF,87
+2021-1003,Doha,Hard,P,202469,Garbine Muguruza,206289,Maria Sakkari,6-3 6-1,3,QF,66
+2021-1003,Doha,Hard,P,201520,Petra Kvitova,204426,Anett Kontaveit,6-3 3-6 6-2,3,QF,114
+2021-1003,Doha,Hard,P,202468,Jessica Pegula,201662,Karolina Pliskova,6-3 6-1,3,QF,60
+2021-1003,Doha,Hard,P,202494,Elina Svitolina,201595,Misaki Doi,6-1 6-2,3,R16,64
+2021-1003,Doha,Hard,P,201458,Victoria Azarenka,201696,Laura Siegemund,6-4 6-2,3,R16,114
+2021-1003,Doha,Hard,P,202469,Garbine Muguruza,214544,Aryna Sabalenka,6-2 6-7(5) 6-3,3,R16,146
+2021-1003,Doha,Hard,P,206289,Maria Sakkari,201619,Madison Keys,6-2 6-2,3,R16,68
+2021-1003,Doha,Hard,P,204426,Anett Kontaveit,201493,Angelique Kerber,6-1 6-4,3,R16,58
+2021-1003,Doha,Hard,P,201520,Petra Kvitova,201499,Anastasia Pavlyuchenkova,6-1 6-3,3,R16,73
+2021-1003,Doha,Hard,P,202468,Jessica Pegula,211533,Jelena Ostapenko,6-2 7-5,3,R16,76
+2021-1003,Doha,Hard,P,201662,Karolina Pliskova,202460,Ons Jabeur,6-4 4-6 7-5,3,R16,133
+2021-1003,Doha,Hard,P,201595,Misaki Doi,202453,Saisai Zheng,6-4 6-3,3,R32,87
+2021-1003,Doha,Hard,P,201696,Laura Siegemund,214981,Elena Rybakina,7-6(7) 7-6(5),3,R32,149
+2021-1003,Doha,Hard,P,201458,Victoria Azarenka,201320,Svetlana Kuznetsova,6-2 6-3,3,R32,111
+2021-1003,Doha,Hard,P,202469,Garbine Muguruza,206368,Veronika Kudermetova,6-2 7-6(4),3,R32,106
+2021-1003,Doha,Hard,P,206289,Maria Sakkari,210886,Mayar Sherif,6-0 6-3,3,R32,61
+2021-1003,Doha,Hard,P,201619,Madison Keys,202505,Belinda Bencic,6-4 6-1,3,R32,67
+2021-1003,Doha,Hard,P,204426,Anett Kontaveit,206108,Jennifer Brady,6-1 6-2,3,R32,56
+2021-1003,Doha,Hard,P,201493,Angelique Kerber,201666,Cagla Buyukakcay,6-4 6-2,3,R32,94
+2021-1003,Doha,Hard,P,201499,Anastasia Pavlyuchenkova,201697,Kristyna Pliskova,6-2 6-3,3,R32,77
+2021-1003,Doha,Hard,P,211533,Jelena Ostapenko,202428,Kiki Bertens,6-0 6-2,3,R32,55
+2021-1003,Doha,Hard,P,202468,Jessica Pegula,202492,Qiang Wang,6-3 6-1,3,R32,75
+2021-1003,Doha,Hard,P,202460,Ons Jabeur,215020,Anna Blinkova,6-2 6-2,3,R32,68
+2021-718,Dubai,Hard,P,202469,Garbine Muguruza,206252,Barbora Krejcikova,7-6(6) 6-3,3,F,128
+2021-718,Dubai,Hard,P,206252,Barbora Krejcikova,213525,Jil Teichmann,7-5 6-2,3,SF,103
+2021-718,Dubai,Hard,P,202469,Garbine Muguruza,210722,Elise Mertens,6-4 7-6(5),3,SF,127
+2021-718,Dubai,Hard,P,206252,Barbora Krejcikova,215713,Anastasia Potapova,6-0 6-2,3,QF,62
+2021-718,Dubai,Hard,P,213525,Jil Teichmann,221103,Coco Gauff,6-3 6-3,3,QF,82
+2021-718,Dubai,Hard,P,202469,Garbine Muguruza,214544,Aryna Sabalenka,3-6 6-3 6-2,3,QF,111
+2021-718,Dubai,Hard,P,210722,Elise Mertens,202468,Jessica Pegula,5-7 7-5 6-0,3,QF,167
+2021-718,Dubai,Hard,P,206252,Barbora Krejcikova,201320,Svetlana Kuznetsova,6-3 6-2,3,R16,73
+2021-718,Dubai,Hard,P,215713,Anastasia Potapova,202505,Belinda Bencic,6-1 2-6 7-5,3,R16,137
+2021-718,Dubai,Hard,P,213525,Jil Teichmann,202460,Ons Jabeur,6-3 6-3,3,R16,84
+2021-718,Dubai,Hard,P,221103,Coco Gauff,206124,Tereza Martincova,6-4 6-2,3,R16,66
+2021-718,Dubai,Hard,P,202469,Garbine Muguruza,216347,Iga Swiatek,6-0 6-4,3,R16,69
+2021-718,Dubai,Hard,P,214544,Aryna Sabalenka,204426,Anett Kontaveit,6-3 6-2,3,R16,64
+2021-718,Dubai,Hard,P,210722,Elise Mertens,201614,Caroline Garcia,6-4 6-2,3,R16,92
+2021-718,Dubai,Hard,P,202468,Jessica Pegula,201662,Karolina Pliskova,6-0 6-2,3,R16,53
+2021-718,Dubai,Hard,P,201320,Svetlana Kuznetsova,202494,Elina Svitolina,2-6 6-4 6-1,3,R32,112
+2021-718,Dubai,Hard,P,206252,Barbora Krejcikova,211533,Jelena Ostapenko,6-3 6-1,3,R32,72
+2021-718,Dubai,Hard,P,215713,Anastasia Potapova,201619,Madison Keys,6-4 6-3,3,R32,85
+2021-718,Dubai,Hard,P,202505,Belinda Bencic,206368,Veronika Kudermetova,6-4 5-7 6-4,3,R32,158
+2021-718,Dubai,Hard,P,213525,Jil Teichmann,201520,Petra Kvitova,6-2 3-4 RET,3,R32,78
+2021-718,Dubai,Hard,P,202460,Ons Jabeur,214981,Elena Rybakina,7-6(6) 4-6 6-2,3,R32,138
+2021-718,Dubai,Hard,P,221103,Coco Gauff,214954,Marketa Vondrousova,3-6 6-0 6-4,3,R32,118
+2021-718,Dubai,Hard,P,206124,Tereza Martincova,202428,Kiki Bertens,6-1 6-4,3,R32,78
+2021-718,Dubai,Hard,P,216347,Iga Swiatek,201595,Misaki Doi,6-2 6-4,3,R32,76
+2021-718,Dubai,Hard,P,202469,Garbine Muguruza,216153,Amanda Anisimova,6-4 6-2,3,R32,88
+2021-718,Dubai,Hard,P,204426,Anett Kontaveit,201514,Sorana Cirstea,6-4 7-5,3,R32,102
+2021-718,Dubai,Hard,P,214544,Aryna Sabalenka,201427,Alize Cornet,6-2 6-4,3,R32,87
+2021-718,Dubai,Hard,P,201614,Caroline Garcia,203354,Martina Trevisan,6-2 6-4,3,R32,80
+2021-718,Dubai,Hard,P,210722,Elise Mertens,201603,Shelby Rogers,6-3 6-3,3,R32,84
+2021-718,Dubai,Hard,P,202468,Jessica Pegula,201540,Kristina Mladenovic,6-1 6-2,3,R32,69
+2021-718,Dubai,Hard,P,201662,Karolina Pliskova,201545,Anastasija Sevastova,6-3 6-7(5) 6-2,3,R32,129
+2021-718,Dubai,Hard,P,201320,Svetlana Kuznetsova,202492,Qiang Wang,6-4 1-6 7-5,3,R64,141
+2021-718,Dubai,Hard,P,211533,Jelena Ostapenko,206255,Patricia Maria Tig,6-3 6-3,3,R64,79
+2021-718,Dubai,Hard,P,206252,Barbora Krejcikova,206289,Maria Sakkari,6-2 7-6(4),3,R64,108
+2021-718,Dubai,Hard,P,201619,Madison Keys,215314,En Shuo Liang,6-1 6-1,3,R64,64
+2021-718,Dubai,Hard,P,215713,Anastasia Potapova,201696,Laura Siegemund,6-3 6-2,3,R64,74
+2021-718,Dubai,Hard,P,206368,Veronika Kudermetova,201499,Anastasia Pavlyuchenkova,7-6(3) 6-2,3,R64,106
+2021-718,Dubai,Hard,P,213525,Jil Teichmann,215290,Katarina Zavatska,6-1 6-2,3,R64,66
+2021-718,Dubai,Hard,P,202460,Ons Jabeur,211701,Katerina Siniakova,6-2 6-3,3,R64,65
+2021-718,Dubai,Hard,P,214981,Elena Rybakina,202453,Saisai Zheng,6-0 6-4,3,R64,76
+2021-718,Dubai,Hard,P,214954,Marketa Vondrousova,202536,Ana Bogdan,6-4 6-4,3,R64,93
+2021-718,Dubai,Hard,P,221103,Coco Gauff,206420,Ekaterina Alexandrova,7-6(3) 2-6 7-6(8),3,R64,161
+2021-718,Dubai,Hard,P,206124,Tereza Martincova,201697,Kristyna Pliskova,7-6(5) 6-7(6) 6-3,3,R64,142
+2021-718,Dubai,Hard,P,201595,Misaki Doi,201555,Polona Hercog,6-2 4-6 6-3,3,R64,124
+2021-718,Dubai,Hard,P,216153,Amanda Anisimova,211951,Ana Konjuh,6-2 6-2,3,R64,52
+2021-718,Dubai,Hard,P,202469,Garbine Muguruza,201593,Irina Camelia Begu,6-3 7-5,3,R64,96
+2021-718,Dubai,Hard,P,204426,Anett Kontaveit,201693,Timea Babos,6-2 6-1,3,R64,57
+2021-718,Dubai,Hard,P,201514,Sorana Cirstea,201615,Lesia Tsurenko,6-4 6-4,3,R64,84
+2021-718,Dubai,Hard,P,201427,Alize Cornet,214082,Daria Kasatkina,6-4 3-6 6-1,3,R64,121
+2021-718,Dubai,Hard,P,201614,Caroline Garcia,201493,Angelique Kerber,3-6 6-2 6-4,3,R64,103
+2021-718,Dubai,Hard,P,201603,Shelby Rogers,201466,Kaia Kanepi,7-6(4) 6-2,3,R64,105
+2021-718,Dubai,Hard,P,210722,Elise Mertens,202600,Viktoriya Tomova,4-6 6-2 6-4,3,R64,154
+2021-718,Dubai,Hard,P,201540,Kristina Mladenovic,201549,Petra Martic,7-6(2) 6-4,3,R64,112
+2021-718,Dubai,Hard,P,202468,Jessica Pegula,201468,Yaroslava Shvedova,6-2 6-1,3,R64,81
+2021-718,Dubai,Hard,P,201545,Anastasija Sevastova,211095,Bernarda Pera,6-0 6-3,3,R64,68
+2021-1086,St. Petersburg,Hard,P,214082,Daria Kasatkina,202506,Margarita Gasparyan,6-3 2-1 RET,3,F,55
+2021-1086,St. Petersburg,Hard,P,202506,Margarita Gasparyan,201329,Vera Zvonareva,6-3 7-6(9),3,SF,119
+2021-1086,St. Petersburg,Hard,P,214082,Daria Kasatkina,201320,Svetlana Kuznetsova,1-6 6-0 6-2,3,SF,98
+2021-1086,St. Petersburg,Hard,P,202506,Margarita Gasparyan,206420,Ekaterina Alexandrova,6-2 7-5,3,QF,80
+2021-1086,St. Petersburg,Hard,P,201329,Vera Zvonareva,214181,Anastasia Gasanova,6-3 6-1,3,QF,82
+2021-1086,St. Petersburg,Hard,P,201320,Svetlana Kuznetsova,211713,Jaqueline Cristian,6-7(5) 6-3 6-3,3,QF,135
+2021-1086,St. Petersburg,Hard,P,214082,Daria Kasatkina,206368,Veronika Kudermetova,1-6 6-1 6-2,3,QF,101
+2021-1086,St. Petersburg,Hard,P,206420,Ekaterina Alexandrova,206124,Tereza Martincova,6-3 6-4,3,R16,73
+2021-1086,St. Petersburg,Hard,P,202506,Margarita Gasparyan,211701,Katerina Siniakova,6-4 6-4,3,R16,93
+2021-1086,St. Petersburg,Hard,P,201329,Vera Zvonareva,211539,Fiona Ferro,6-7(6) 7-5 7-6(2),3,R16,190
+2021-1086,St. Petersburg,Hard,P,214181,Anastasia Gasanova,201499,Anastasia Pavlyuchenkova,1-6 7-6(8) 7-6(4),3,R16,188
+2021-1086,St. Petersburg,Hard,P,211713,Jaqueline Cristian,211533,Jelena Ostapenko,6-3 7-6(9),3,R16,119
+2021-1086,St. Petersburg,Hard,P,201320,Svetlana Kuznetsova,216133,Xin Yu Wang,6-1 7-5,3,R16,81
+2021-1086,St. Petersburg,Hard,P,214082,Daria Kasatkina,205925,Aliaksandra Sasnovich,5-7 6-3 7-6(2),3,R16,169
+2021-1086,St. Petersburg,Hard,P,206368,Veronika Kudermetova,215872,Kamilla Rakhimova,7-5 3-6 7-6(5),3,R16,173
+2021-1086,St. Petersburg,Hard,P,206124,Tereza Martincova,201527,Stefanie Voegele,6-0 4-6 6-4,3,R32,131
+2021-1086,St. Petersburg,Hard,P,211701,Katerina Siniakova,201465,Kirsten Flipkens,6-1 6-2,3,R32,63
+2021-1086,St. Petersburg,Hard,P,202506,Margarita Gasparyan,201540,Kristina Mladenovic,6-7(1) 6-1 6-1,3,R32,155
+2021-1086,St. Petersburg,Hard,P,201329,Vera Zvonareva,201613,Arina Rodionova,6-1 6-3,3,R32,82
+2021-1086,St. Petersburg,Hard,P,214181,Anastasia Gasanova,215290,Katarina Zavatska,6-2 6-7(6) 7-5,3,R32,184
+2021-1086,St. Petersburg,Hard,P,201499,Anastasia Pavlyuchenkova,201666,Cagla Buyukakcay,6-4 6-4,3,R32,90
+2021-1086,St. Petersburg,Hard,P,211533,Jelena Ostapenko,211651,Paula Badosa,6-2 6-2,3,R32,55
+2021-1086,St. Petersburg,Hard,P,211713,Jaqueline Cristian,214304,Vera Lapko,6-7(3) 6-4 2-1 RET,3,R32,132
+2021-1086,St. Petersburg,Hard,P,216133,Xin Yu Wang,202600,Viktoriya Tomova,6-1 5-7 7-5,3,R32,132
+2021-1086,St. Petersburg,Hard,P,214082,Daria Kasatkina,220704,Clara Tauson,6-4 7-6(0),3,R32,114
+2021-1086,St. Petersburg,Hard,P,205925,Aliaksandra Sasnovich,202536,Ana Bogdan,2-6 6-2 6-1,3,R32,110
+2021-1086,St. Petersburg,Hard,P,215872,Kamilla Rakhimova,203542,Daria Mironova,6-1 6-7(2) 6-1,3,R32,105
+2021-902,Miami,Hard,P,202458,Ashleigh Barty,215370,Bianca Andreescu,6-3 4-0 RET,3,F,62
+2021-902,Miami,Hard,P,202458,Ashleigh Barty,202494,Elina Svitolina,6-3 6-3,3,SF,89
+2021-902,Miami,Hard,P,215370,Bianca Andreescu,206289,Maria Sakkari,7-6(7) 3-6 7-6(4),3,SF,162
+2021-902,Miami,Hard,P,202458,Ashleigh Barty,214544,Aryna Sabalenka,6-4 6-7(5) 6-3,3,QF,136
+2021-902,Miami,Hard,P,202494,Elina Svitolina,201545,Anastasija Sevastova,6-3 6-2,3,QF,69
+2021-902,Miami,Hard,P,215370,Bianca Andreescu,204427,Sara Sorribes Tormo,6-4 3-6 6-3,3,QF,155
+2021-902,Miami,Hard,P,206289,Maria Sakkari,211768,Naomi Osaka,6-0 6-4,3,QF,69
+2021-902,Miami,Hard,P,202458,Ashleigh Barty,201458,Victoria Azarenka,6-1 1-6 6-2,3,R16,112
+2021-902,Miami,Hard,P,214544,Aryna Sabalenka,214954,Marketa Vondrousova,6-1 6-2,3,R16,67
+2021-902,Miami,Hard,P,201545,Anastasija Sevastova,211951,Ana Konjuh,6-1 7-5,3,R16,104
+2021-902,Miami,Hard,P,202494,Elina Svitolina,201520,Petra Kvitova,2-6 7-5 7-5,3,R16,142
+2021-902,Miami,Hard,P,215370,Bianca Andreescu,202469,Garbine Muguruza,3-6 6-3 6-2,3,R16,131
+2021-902,Miami,Hard,P,204427,Sara Sorribes Tormo,202460,Ons Jabeur,6-4 0-6 6-1,3,R16,120
+2021-902,Miami,Hard,P,206289,Maria Sakkari,202468,Jessica Pegula,6-4 2-6 7-6(6),3,R16,158
+2021-902,Miami,Hard,P,211768,Naomi Osaka,210722,Elise Mertens,6-3 6-3,3,R16,88
+2021-902,Miami,Hard,P,202458,Ashleigh Barty,211533,Jelena Ostapenko,6-3 6-2,3,R32,69
+2021-902,Miami,Hard,P,201458,Victoria Azarenka,201493,Angelique Kerber,7-5 6-2,3,R32,91
+2021-902,Miami,Hard,P,214954,Marketa Vondrousova,202505,Belinda Bencic,4-6 6-4 6-4,3,R32,144
+2021-902,Miami,Hard,P,214544,Aryna Sabalenka,206368,Veronika Kudermetova,7-6(4) 6-4,3,R32,97
+2021-902,Miami,Hard,P,201545,Anastasija Sevastova,201594,Simona Halep,W/O,3,R32,0
+2021-902,Miami,Hard,P,211951,Ana Konjuh,216347,Iga Swiatek,6-4 2-6 6-2,3,R32,134
+2021-902,Miami,Hard,P,201520,Petra Kvitova,202427,Johanna Konta,6-1 6-2,3,R32,58
+2021-902,Miami,Hard,P,202494,Elina Svitolina,206420,Ekaterina Alexandrova,7-6(1) 6-4,3,R32,97
+2021-902,Miami,Hard,P,215370,Bianca Andreescu,216153,Amanda Anisimova,7-6(4) 6-7(2) 6-4,3,R32,164
+2021-902,Miami,Hard,P,202469,Garbine Muguruza,214939,Anna Kalinskaya,4-6 6-3 6-4,3,R32,161
+2021-902,Miami,Hard,P,204427,Sara Sorribes Tormo,214981,Elena Rybakina,6-1 3-6 6-2,3,R32,144
+2021-902,Miami,Hard,P,202460,Ons Jabeur,213550,Sofia Kenin,6-4 4-6 6-4,3,R32,107
+2021-902,Miami,Hard,P,202468,Jessica Pegula,201662,Karolina Pliskova,6-1 4-6 6-4,3,R32,129
+2021-902,Miami,Hard,P,206289,Maria Sakkari,214643,Liudmila Samsonova,6-0 6-1,3,R32,67
+2021-902,Miami,Hard,P,210722,Elise Mertens,204426,Anett Kontaveit,6-2 0-6 6-2,3,R32,107
+2021-902,Miami,Hard,P,211768,Naomi Osaka,211411,Nina Stojanovic,W/O,3,R32,0
+2021-902,Miami,Hard,P,202458,Ashleigh Barty,201568,Kristina Kucova,6-3 4-6 7-5,3,R64,147
+2021-902,Miami,Hard,P,211533,Jelena Ostapenko,201465,Kirsten Flipkens,6-2 5-7 6-3,3,R64,113
+2021-902,Miami,Hard,P,201493,Angelique Kerber,213887,Renata Zarazua,6-0 6-0,3,R64,61
+2021-902,Miami,Hard,P,201458,Victoria Azarenka,201696,Laura Siegemund,W/O,3,R64,0
+2021-902,Miami,Hard,P,202505,Belinda Bencic,201610,Zarina Diyas,6-2 6-1,3,R64,74
+2021-902,Miami,Hard,P,214954,Marketa Vondrousova,202492,Qiang Wang,6-4 6-4,3,R64,80
+2021-902,Miami,Hard,P,206368,Veronika Kudermetova,203389,Danielle Collins,6-3 6-2,3,R64,73
+2021-902,Miami,Hard,P,214544,Aryna Sabalenka,201450,Tsvetana Pironkova,0-6 6-3 7-6(9),3,R64,149
+2021-902,Miami,Hard,P,201594,Simona Halep,201614,Caroline Garcia,3-6 6-4 6-0,3,R64,108
+2021-902,Miami,Hard,P,201545,Anastasija Sevastova,221103,Coco Gauff,1-6 6-2 6-3,3,R64,105
+2021-902,Miami,Hard,P,211951,Ana Konjuh,201619,Madison Keys,6-4 6-2,3,R64,72
+2021-902,Miami,Hard,P,216347,Iga Swiatek,206252,Barbora Krejcikova,6-4 6-2,3,R64,73
+2021-902,Miami,Hard,P,201520,Petra Kvitova,201427,Alize Cornet,6-0 6-4,3,R64,64
+2021-902,Miami,Hard,P,202427,Johanna Konta,202663,Magda Linette,6-4 7-5,3,R64,103
+2021-902,Miami,Hard,P,206420,Ekaterina Alexandrova,206408,Nadia Podoroska,6-0 6-4,3,R64,70
+2021-902,Miami,Hard,P,202494,Elina Svitolina,201603,Shelby Rogers,3-6 7-5 6-3,3,R64,149
+2021-902,Miami,Hard,P,215370,Bianca Andreescu,206124,Tereza Martincova,7-6(5) 6-2,3,R64,112
+2021-902,Miami,Hard,P,216153,Amanda Anisimova,201585,Sloane Stephens,6-3 6-3,3,R64,88
+2021-902,Miami,Hard,P,214939,Anna Kalinskaya,201549,Petra Martic,5-7 6-2 7-6(4),3,R64,151
+2021-902,Miami,Hard,P,202469,Garbine Muguruza,216133,Xin Yu Wang,6-4 6-1,3,R64,65
+2021-902,Miami,Hard,P,204427,Sara Sorribes Tormo,206108,Jennifer Brady,3-6 6-4 6-1,3,R64,142
+2021-902,Miami,Hard,P,214981,Elena Rybakina,201466,Kaia Kanepi,6-4 6-0,3,R64,72
+2021-902,Miami,Hard,P,202460,Ons Jabeur,211651,Paula Badosa,7-6(6) 5-7 7-5,3,R64,156
+2021-902,Miami,Hard,P,213550,Sofia Kenin,201492,Andrea Petkovic,6-7(6) 6-1 6-3,3,R64,119
+2021-902,Miami,Hard,P,201662,Karolina Pliskova,202453,Saisai Zheng,6-2 6-1,3,R64,73
+2021-902,Miami,Hard,P,202468,Jessica Pegula,204411,Storm Hunter,6-3 6-4,3,R64,91
+2021-902,Miami,Hard,P,206289,Maria Sakkari,201551,Arantxa Rus,6-2 6-3,3,R64,74
+2021-902,Miami,Hard,P,214643,Liudmila Samsonova,202428,Kiki Bertens,6-2 6-1,3,R64,55
+2021-902,Miami,Hard,P,210722,Elise Mertens,211107,Katie Boulter,6-4 6-1,3,R64,78
+2021-902,Miami,Hard,P,204426,Anett Kontaveit,201514,Sorana Cirstea,6-3 4-6 6-3,3,R64,105
+2021-902,Miami,Hard,P,211411,Nina Stojanovic,201709,Yulia Putintseva,5-7 7-5 6-2,3,R64,165
+2021-902,Miami,Hard,P,211768,Naomi Osaka,201548,Ajla Tomljanovic,7-6(3) 6-4,3,R64,98
+2021-902,Miami,Hard,P,201568,Kristina Kucova,221024,Hailey Baptiste,6-4 2-6 7-5,3,R128,149
+2021-902,Miami,Hard,P,211533,Jelena Ostapenko,216016,Xiyu Wang,6-4 6-7(4) 6-1,3,R128,132
+2021-902,Miami,Hard,P,213887,Renata Zarazua,211702,Nao Hibino,6-4 4-6 6-1,3,R128,144
+2021-902,Miami,Hard,P,201696,Laura Siegemund,201539,Christina Mchale,6-3 7-5,3,R128,118
+2021-902,Miami,Hard,P,201610,Zarina Diyas,200748,Venus Williams,6-2 7-6(10),3,R128,88
+2021-902,Miami,Hard,P,202492,Qiang Wang,211901,Aliona Bolsova,6-1 3-6 6-3,3,R128,116
+2021-902,Miami,Hard,P,203389,Danielle Collins,201540,Kristina Mladenovic,6-3 6-3,3,R128,82
+2021-902,Miami,Hard,P,201450,Tsvetana Pironkova,216146,Marta Kostyuk,7-6(4) 3-6 6-3,3,R128,148
+2021-902,Miami,Hard,P,201614,Caroline Garcia,202596,Mihaela Buzarnescu,6-1 6-2,3,R128,64
+2021-902,Miami,Hard,P,201545,Anastasija Sevastova,215337,Olga Danilovic,6-1 3-6 7-6(3),3,R128,143
+2021-902,Miami,Hard,P,211951,Ana Konjuh,211701,Katerina Siniakova,7-6(3) 7-5,3,R128,115
+2021-902,Miami,Hard,P,206252,Barbora Krejcikova,215020,Anna Blinkova,6-1 3-6 6-3,3,R128,123
+2021-902,Miami,Hard,P,201427,Alize Cornet,201320,Svetlana Kuznetsova,2-6 6-2 6-1,3,R128,131
+2021-902,Miami,Hard,P,202663,Magda Linette,221905,Robin Montgomery,6-1 3-6 6-0,3,R128,98
+2021-902,Miami,Hard,P,206408,Nadia Podoroska,210886,Mayar Sherif,6-3 6-1,3,R128,71
+2021-902,Miami,Hard,P,201603,Shelby Rogers,201483,Madison Brengle,6-3 6-3,3,R128,67
+2021-902,Miami,Hard,P,206124,Tereza Martincova,201468,Yaroslava Shvedova,6-4 6-2,3,R128,82
+2021-902,Miami,Hard,P,201585,Sloane Stephens,206219,Oceane Dodin,6-7(6) 6-4 6-2,3,R128,151
+2021-902,Miami,Hard,P,214939,Anna Kalinskaya,201593,Irina Camelia Begu,6-4 7-6(5),3,R128,115
+2021-902,Miami,Hard,P,216133,Xin Yu Wang,202490,Rebecca Peterson,6-2 6-2,3,R128,76
+2021-902,Miami,Hard,P,204427,Sara Sorribes Tormo,211095,Bernarda Pera,6-2 2-6 7-5,3,R128,161
+2021-902,Miami,Hard,P,201466,Kaia Kanepi,201616,Lauren Davis,6-3 7-5,3,R128,90
+2021-902,Miami,Hard,P,211651,Paula Badosa,213525,Jil Teichmann,5-6 RET,3,R128,50
+2021-902,Miami,Hard,P,201492,Andrea Petkovic,201533,Shuai Zhang,7-5 6-1,3,R128,67
+2021-902,Miami,Hard,P,202453,Saisai Zheng,211539,Fiona Ferro,2-6 6-4 6-3,3,R128,154
+2021-902,Miami,Hard,P,204411,Storm Hunter,220714,Elisabetta Cocciaretto,6-1 5-7 6-1,3,R128,113
+2021-902,Miami,Hard,P,201551,Arantxa Rus,213631,Marie Bouzkova,6-3 6-2,3,R128,82
+2021-902,Miami,Hard,P,214643,Liudmila Samsonova,202429,Camila Giorgi,6-2 6-4,3,R128,79
+2021-902,Miami,Hard,P,211107,Katie Boulter,201697,Kristyna Pliskova,4-6 6-3 6-3,3,R128,120
+2021-902,Miami,Hard,P,201514,Sorana Cirstea,221512,Katrina Scott,6-2 6-2,3,R128,60
+2021-902,Miami,Hard,P,211411,Nina Stojanovic,201586,Heather Watson,6-4 6-1,3,R128,95
+2021-902,Miami,Hard,P,201548,Ajla Tomljanovic,215713,Anastasia Potapova,7-5 6-0,3,R128,89
+2021-804,Charleston 1,Clay,P,206368,Veronika Kudermetova,203575,Danka Kovinic,6-4 6-2,3,F,96
+2021-804,Charleston 1,Clay,P,206368,Veronika Kudermetova,211651,Paula Badosa,6-3 6-3,3,SF,90
+2021-804,Charleston 1,Clay,P,203575,Danka Kovinic,202460,Ons Jabeur,6-3 6-2,3,SF,78
+2021-804,Charleston 1,Clay,P,211651,Paula Badosa,202458,Ashleigh Barty,6-4 6-3,3,QF,76
+2021-804,Charleston 1,Clay,P,206368,Veronika Kudermetova,201585,Sloane Stephens,6-3 6-4,3,QF,93
+2021-804,Charleston 1,Clay,P,203575,Danka Kovinic,201709,Yulia Putintseva,6-7(2) 7-5 6-1,3,QF,172
+2021-804,Charleston 1,Clay,P,202460,Ons Jabeur,221103,Coco Gauff,6-3 6-3,3,QF,80
+2021-804,Charleston 1,Clay,P,202458,Ashleigh Barty,201603,Shelby Rogers,7-6(3) 4-6 6-4,3,R16,143
+2021-804,Charleston 1,Clay,P,211651,Paula Badosa,216083,Caty Mcnally,6-3 6-3,3,R16,76
+2021-804,Charleston 1,Clay,P,206368,Veronika Kudermetova,201597,Kurumi Nara,6-0 6-3,3,R16,71
+2021-804,Charleston 1,Clay,P,201585,Sloane Stephens,201548,Ajla Tomljanovic,6-3 6-4,3,R16,80
+2021-804,Charleston 1,Clay,P,201709,Yulia Putintseva,202469,Garbine Muguruza,0-6 2-2 RET,3,R16,63
+2021-804,Charleston 1,Clay,P,203575,Danka Kovinic,201520,Petra Kvitova,6-4 6-1,3,R16,76
+2021-804,Charleston 1,Clay,P,202460,Ons Jabeur,201427,Alize Cornet,5-7 6-3 6-3,3,R16,160
+2021-804,Charleston 1,Clay,P,221103,Coco Gauff,201616,Lauren Davis,6-2 7-6(2),3,R16,92
+2021-804,Charleston 1,Clay,P,202458,Ashleigh Barty,201595,Misaki Doi,6-2 6-1,3,R32,61
+2021-804,Charleston 1,Clay,P,201603,Shelby Rogers,216153,Amanda Anisimova,1-6 7-5 6-4,3,R32,129
+2021-804,Charleston 1,Clay,P,216083,Caty Mcnally,201545,Anastasija Sevastova,7-6(3) 2-6 6-4,3,R32,146
+2021-804,Charleston 1,Clay,P,211651,Paula Badosa,202505,Belinda Bencic,6-2 6-7(2) 6-1,3,R32,139
+2021-804,Charleston 1,Clay,P,201597,Kurumi Nara,215992,Whitney Osuigwe,6-1 6-4,3,R32,84
+2021-804,Charleston 1,Clay,P,206368,Veronika Kudermetova,215613,Emma Navarro,6-4 6-4,3,R32,93
+2021-804,Charleston 1,Clay,P,201548,Ajla Tomljanovic,213631,Marie Bouzkova,4-6 7-5 7-5,3,R32,171
+2021-804,Charleston 1,Clay,P,201585,Sloane Stephens,201619,Madison Keys,6-4 6-4,3,R32,92
+2021-804,Charleston 1,Clay,P,202469,Garbine Muguruza,211684,Magdalena Frech,6-1 6-3,3,R32,70
+2021-804,Charleston 1,Clay,P,201709,Yulia Putintseva,201610,Zarina Diyas,6-2 6-2,3,R32,80
+2021-804,Charleston 1,Clay,P,203575,Danka Kovinic,220367,Leylah Fernandez,6-4 3-6 6-3,3,R32,135
+2021-804,Charleston 1,Clay,P,201520,Petra Kvitova,204411,Storm Hunter,7-6(4) 6-2,3,R32,86
+2021-804,Charleston 1,Clay,P,201427,Alize Cornet,210722,Elise Mertens,7-5 6-3,3,R32,126
+2021-804,Charleston 1,Clay,P,202460,Ons Jabeur,221024,Hailey Baptiste,6-3 6-3,3,R32,69
+2021-804,Charleston 1,Clay,P,221103,Coco Gauff,214643,Liudmila Samsonova,4-6 6-1 6-4,3,R32,
+2021-804,Charleston 1,Clay,P,201616,Lauren Davis,213550,Sofia Kenin,4-6 6-3 6-4,3,R32,155
+2021-804,Charleston 1,Clay,P,201595,Misaki Doi,201468,Yaroslava Shvedova,6-3 6-3,3,R64,83
+2021-804,Charleston 1,Clay,P,201603,Shelby Rogers,201540,Kristina Mladenovic,6-4 6-3,3,R64,99
+2021-804,Charleston 1,Clay,P,216153,Amanda Anisimova,202663,Magda Linette,5-7 6-2 6-3,3,R64,120
+2021-804,Charleston 1,Clay,P,216083,Caty Mcnally,214981,Elena Rybakina,6-4 0-0 RET,3,R64,60
+2021-804,Charleston 1,Clay,P,201545,Anastasija Sevastova,215713,Anastasia Potapova,6-3 6-3,3,R64,71
+2021-804,Charleston 1,Clay,P,211651,Paula Badosa,219875,Varvara Gracheva,3-6 7-5 6-1,3,R64,146
+2021-804,Charleston 1,Clay,P,201597,Kurumi Nara,215371,Francesca Di Lorenzo,6-2 6-2,3,R64,83
+2021-804,Charleston 1,Clay,P,215613,Emma Navarro,213887,Renata Zarazua,6-4 6-3,3,R64,92
+2021-804,Charleston 1,Clay,P,206368,Veronika Kudermetova,215305,Desirae Krawczyk,6-1 6-2,3,R64,54
+2021-804,Charleston 1,Clay,P,213631,Marie Bouzkova,201693,Timea Babos,6-2 7-5,3,R64,109
+2021-804,Charleston 1,Clay,P,201548,Ajla Tomljanovic,201539,Christina Mchale,6-3 6-0,3,R64,67
+2021-804,Charleston 1,Clay,P,201585,Sloane Stephens,216133,Xin Yu Wang,6-2 6-4,3,R64,85
+2021-804,Charleston 1,Clay,P,211684,Magdalena Frech,202479,Grace Min,6-2 6-4,3,R64,85
+2021-804,Charleston 1,Clay,P,201610,Zarina Diyas,212001,Natalia Vikhlyantseva,6-3 6-1,3,R64,74
+2021-804,Charleston 1,Clay,P,201709,Yulia Putintseva,211279,Harriet Dart,7-6(8) 6-4,3,R64,123
+2021-804,Charleston 1,Clay,P,220367,Leylah Fernandez,201533,Shuai Zhang,6-3 6-1,3,R64,68
+2021-804,Charleston 1,Clay,P,203575,Danka Kovinic,211342,Gabriela Lee,7-6(2) 6-4,3,R64,107
+2021-804,Charleston 1,Clay,P,204411,Storm Hunter,201534,Asia Muhammad,6-2 6-4,3,R64,82
+2021-804,Charleston 1,Clay,P,201427,Alize Cornet,211095,Bernarda Pera,4-6 6-4 6-4,3,R64,172
+2021-804,Charleston 1,Clay,P,221024,Hailey Baptiste,214452,Caroline Dolehide,6-3 6-3,3,R64,77
+2021-804,Charleston 1,Clay,P,202460,Ons Jabeur,203354,Martina Trevisan,6-2 6-2,3,R64,58
+2021-804,Charleston 1,Clay,P,221103,Coco Gauff,201450,Tsvetana Pironkova,6-3 6-0,3,R64,72
+2021-804,Charleston 1,Clay,P,214643,Liudmila Samsonova,211702,Nao Hibino,6-2 6-1,3,R64,68
+2021-804,Charleston 1,Clay,P,201616,Lauren Davis,201483,Madison Brengle,6-4 6-2,3,R64,92
+2021-1051,Stuttgart,Clay,P,202458,Ashleigh Barty,214544,Aryna Sabalenka,3-6 6-0 6-3,3,F,107
+2021-1051,Stuttgart,Clay,P,202458,Ashleigh Barty,202494,Elina Svitolina,4-6 7-6(5) 6-2,3,SF,125
+2021-1051,Stuttgart,Clay,P,214544,Aryna Sabalenka,201594,Simona Halep,6-3 6-2,3,SF,66
+2021-1051,Stuttgart,Clay,P,202458,Ashleigh Barty,201662,Karolina Pliskova,2-6 6-1 7-5,3,QF,121
+2021-1051,Stuttgart,Clay,P,202494,Elina Svitolina,201520,Petra Kvitova,6-7(4) 7-5 6-2,3,QF,157
+2021-1051,Stuttgart,Clay,P,214544,Aryna Sabalenka,204426,Anett Kontaveit,7-5 4-6 6-1,3,QF,148
+2021-1051,Stuttgart,Clay,P,201594,Simona Halep,206420,Ekaterina Alexandrova,6-1 6-4,3,QF,71
+2021-1051,Stuttgart,Clay,P,202458,Ashleigh Barty,201696,Laura Siegemund,6-0 7-5,3,R16,84
+2021-1051,Stuttgart,Clay,P,201662,Karolina Pliskova,211533,Jelena Ostapenko,6-7(7) 6-4 6-3,3,R16,143
+2021-1051,Stuttgart,Clay,P,202494,Elina Svitolina,201493,Angelique Kerber,7-6(4) 6-3,3,R16,94
+2021-1051,Stuttgart,Clay,P,201520,Petra Kvitova,206289,Maria Sakkari,6-3 3-6 6-3,3,R16,148
+2021-1051,Stuttgart,Clay,P,214544,Aryna Sabalenka,204431,Anna Lena Friedsam,6-4 6-2,3,R16,79
+2021-1051,Stuttgart,Clay,P,204426,Anett Kontaveit,213550,Sofia Kenin,7-5 6-4,3,R16,94
+2021-1051,Stuttgart,Clay,P,206420,Ekaterina Alexandrova,202505,Belinda Bencic,6-1 7-5,3,R16,81
+2021-1051,Stuttgart,Clay,P,201594,Simona Halep,214954,Marketa Vondrousova,6-1 6-3,3,R16,56
+2021-1051,Stuttgart,Clay,P,201696,Laura Siegemund,201621,Mona Barthel,6-4 3-6 6-1,3,R32,131
+2021-1051,Stuttgart,Clay,P,211533,Jelena Ostapenko,201527,Stefanie Voegele,6-4 7-5,3,R32,95
+2021-1051,Stuttgart,Clay,P,201662,Karolina Pliskova,211337,Tamara Korpatsch,7-5 3-6 6-3,3,R32,138
+2021-1051,Stuttgart,Clay,P,201493,Angelique Kerber,202493,Ekaterine Gorgodze,6-2 6-2,3,R32,72
+2021-1051,Stuttgart,Clay,P,206289,Maria Sakkari,201492,Andrea Petkovic,6-2 6-2,3,R32,66
+2021-1051,Stuttgart,Clay,P,201520,Petra Kvitova,206108,Jennifer Brady,6-4 6-3,3,R32,92
+2021-1051,Stuttgart,Clay,P,214544,Aryna Sabalenka,201533,Shuai Zhang,6-2 6-2,3,R32,66
+2021-1051,Stuttgart,Clay,P,204431,Anna Lena Friedsam,205918,Ulrikke Eikeri,6-2 6-0,3,R32,84
+2021-1051,Stuttgart,Clay,P,204426,Anett Kontaveit,221190,Julia Middendorf,6-2 6-3,3,R32,71
+2021-1051,Stuttgart,Clay,P,202505,Belinda Bencic,221768,Nastasja Schunk,6-4 6-2,3,R32,88
+2021-1051,Stuttgart,Clay,P,206420,Ekaterina Alexandrova,214096,Karolina Muchova,4-6 6-2 6-3,3,R32,137
+2021-1051,Stuttgart,Clay,P,214954,Marketa Vondrousova,213631,Marie Bouzkova,6-1 7-6(6),3,R32,109
+2021-1038,Madrid,Clay,P,214544,Aryna Sabalenka,202458,Ashleigh Barty,6-0 3-6 6-4,3,F,99
+2021-1038,Madrid,Clay,P,202458,Ashleigh Barty,211651,Paula Badosa,6-4 6-3,3,SF,75
+2021-1038,Madrid,Clay,P,214544,Aryna Sabalenka,201499,Anastasia Pavlyuchenkova,6-2 6-3,3,SF,63
+2021-1038,Madrid,Clay,P,202458,Ashleigh Barty,201520,Petra Kvitova,6-1 3-6 6-3,3,QF,108
+2021-1038,Madrid,Clay,P,211651,Paula Badosa,202505,Belinda Bencic,6-4 7-5,3,QF,109
+2021-1038,Madrid,Clay,P,214544,Aryna Sabalenka,210722,Elise Mertens,6-1 4-0 RET,3,QF,58
+2021-1038,Madrid,Clay,P,201499,Anastasia Pavlyuchenkova,214096,Karolina Muchova,7-6(4) 7-6(2),3,QF,119
+2021-1038,Madrid,Clay,P,202458,Ashleigh Barty,216347,Iga Swiatek,7-5 6-4,3,R16,101
+2021-1038,Madrid,Clay,P,201520,Petra Kvitova,206368,Veronika Kudermetova,6-3 4-6 6-4,3,R16,121
+2021-1038,Madrid,Clay,P,211651,Paula Badosa,201545,Anastasija Sevastova,6-7(0) 7-6(3) 6-0,3,R16,155
+2021-1038,Madrid,Clay,P,202505,Belinda Bencic,202460,Ons Jabeur,7-6(2) 4-3 RET,3,R16,98
+2021-1038,Madrid,Clay,P,214544,Aryna Sabalenka,202468,Jessica Pegula,6-1 6-2,3,R16,52
+2021-1038,Madrid,Clay,P,210722,Elise Mertens,201594,Simona Halep,4-6 7-5 7-5,3,R16,154
+2021-1038,Madrid,Clay,P,201499,Anastasia Pavlyuchenkova,206108,Jennifer Brady,7-5 6-7(8) 6-3,3,R16,165
+2021-1038,Madrid,Clay,P,214096,Karolina Muchova,206289,Maria Sakkari,6-0 6-7(9) 7-5,3,R16,155
+2021-1038,Madrid,Clay,P,202458,Ashleigh Barty,214461,Tamara Zidansek,6-4 1-6 6-3,3,R32,118
+2021-1038,Madrid,Clay,P,216347,Iga Swiatek,201696,Laura Siegemund,6-3 6-3,3,R32,100
+2021-1038,Madrid,Clay,P,201520,Petra Kvitova,201493,Angelique Kerber,6-4 7-5,3,R32,82
+2021-1038,Madrid,Clay,P,206368,Veronika Kudermetova,202428,Kiki Bertens,6-4 6-3,3,R32,80
+2021-1038,Madrid,Clay,P,211651,Paula Badosa,213525,Jil Teichmann,5-7 6-1 6-2,3,R32,121
+2021-1038,Madrid,Clay,P,201545,Anastasija Sevastova,202427,Johanna Konta,6-3 6-3,3,R32,91
+2021-1038,Madrid,Clay,P,202460,Ons Jabeur,201585,Sloane Stephens,4-6 6-1 6-3,3,R32,116
+2021-1038,Madrid,Clay,P,202505,Belinda Bencic,211095,Bernarda Pera,3-6 6-1 7-6(5),3,R32,160
+2021-1038,Madrid,Clay,P,214544,Aryna Sabalenka,214082,Daria Kasatkina,6-3 6-3,3,R32,79
+2021-1038,Madrid,Clay,P,202468,Jessica Pegula,201458,Victoria Azarenka,W/O,3,R32,0
+2021-1038,Madrid,Clay,P,210722,Elise Mertens,214981,Elena Rybakina,7-6(4) 7-5,3,R32,133
+2021-1038,Madrid,Clay,P,201594,Simona Halep,202453,Saisai Zheng,6-0 6-4,3,R32,79
+2021-1038,Madrid,Clay,P,201499,Anastasia Pavlyuchenkova,201662,Karolina Pliskova,6-0 7-5,3,R32,74
+2021-1038,Madrid,Clay,P,206108,Jennifer Brady,211533,Jelena Ostapenko,6-2 6-1,3,R32,66
+2021-1038,Madrid,Clay,P,206289,Maria Sakkari,204426,Anett Kontaveit,6-3 6-1,3,R32,61
+2021-1038,Madrid,Clay,P,214096,Karolina Muchova,211768,Naomi Osaka,6-4 3-6 6-1,3,R32,109
+2021-1038,Madrid,Clay,P,202458,Ashleigh Barty,201603,Shelby Rogers,6-2 6-1,3,R64,60
+2021-1038,Madrid,Clay,P,214461,Tamara Zidansek,201444,Su Wei Hsieh,6-2 6-4,3,R64,93
+2021-1038,Madrid,Clay,P,201696,Laura Siegemund,203462,Kateryna Baindl,6-4 6-2,3,R64,102
+2021-1038,Madrid,Clay,P,216347,Iga Swiatek,201590,Alison Riske Amritraj,6-1 6-1,3,R64,67
+2021-1038,Madrid,Clay,P,201520,Petra Kvitova,213631,Marie Bouzkova,6-2 2-3 RET,3,R64,79
+2021-1038,Madrid,Clay,P,201493,Angelique Kerber,214954,Marketa Vondrousova,7-6(5) 6-1,3,R64,79
+2021-1038,Madrid,Clay,P,206368,Veronika Kudermetova,201455,Elena Vesnina,6-1 6-4,3,R64,77
+2021-1038,Madrid,Clay,P,202428,Kiki Bertens,223286,Victoria Jimenez Kasintseva,6-4 6-0,3,R64,64
+2021-1038,Madrid,Clay,P,213525,Jil Teichmann,202494,Elina Svitolina,2-6 6-4 7-6(5),3,R64,153
+2021-1038,Madrid,Clay,P,211651,Paula Badosa,206252,Barbora Krejcikova,6-1 7-5,3,R64,76
+2021-1038,Madrid,Clay,P,201545,Anastasija Sevastova,202536,Ana Bogdan,6-0 6-3,3,R64,68
+2021-1038,Madrid,Clay,P,202427,Johanna Konta,201709,Yulia Putintseva,6-4 6-2,3,R64,89
+2021-1038,Madrid,Clay,P,201585,Sloane Stephens,203575,Danka Kovinic,6-4 6-1,3,R64,82
+2021-1038,Madrid,Clay,P,202460,Ons Jabeur,201468,Yaroslava Shvedova,6-2 6-3,3,R64,75
+2021-1038,Madrid,Clay,P,211095,Bernarda Pera,201549,Petra Martic,6-3 6-2,3,R64,76
+2021-1038,Madrid,Clay,P,202505,Belinda Bencic,201540,Kristina Mladenovic,6-4 6-2,3,R64,79
+2021-1038,Madrid,Clay,P,214544,Aryna Sabalenka,201329,Vera Zvonareva,6-1 6-2,3,R64,66
+2021-1038,Madrid,Clay,P,214082,Daria Kasatkina,201593,Irina Camelia Begu,4-6 6-4 7-6(1),3,R64,181
+2021-1038,Madrid,Clay,P,202468,Jessica Pegula,201514,Sorana Cirstea,7-6(5) 6-3,3,R64,88
+2021-1038,Madrid,Clay,P,201458,Victoria Azarenka,206420,Ekaterina Alexandrova,7-5 3-6 6-1,3,R64,123
+2021-1038,Madrid,Clay,P,210722,Elise Mertens,201533,Shuai Zhang,6-3 6-3,3,R64,83
+2021-1038,Madrid,Clay,P,214981,Elena Rybakina,201548,Ajla Tomljanovic,6-4 6-0,3,R64,62
+2021-1038,Madrid,Clay,P,202453,Saisai Zheng,202663,Magda Linette,6-2 3-6 6-1,3,R64,124
+2021-1038,Madrid,Clay,P,201594,Simona Halep,204427,Sara Sorribes Tormo,6-0 7-5,3,R64,83
+2021-1038,Madrid,Clay,P,201662,Karolina Pliskova,221103,Coco Gauff,5-7 6-3 6-2,3,R64,122
+2021-1038,Madrid,Clay,P,201499,Anastasia Pavlyuchenkova,201619,Madison Keys,7-5 6-2,3,R64,88
+2021-1038,Madrid,Clay,P,211533,Jelena Ostapenko,201555,Polona Hercog,6-3 6-1,3,R64,64
+2021-1038,Madrid,Clay,P,206108,Jennifer Brady,200748,Venus Williams,6-2 6-4,3,R64,96
+2021-1038,Madrid,Clay,P,206289,Maria Sakkari,216153,Amanda Anisimova,0-6 6-1 6-4,3,R64,109
+2021-1038,Madrid,Clay,P,204426,Anett Kontaveit,211411,Nina Stojanovic,7-6(4) 7-5,3,R64,121
+2021-1038,Madrid,Clay,P,214096,Karolina Muchova,202492,Qiang Wang,6-1 6-3,3,R64,69
+2021-1038,Madrid,Clay,P,211768,Naomi Osaka,201595,Misaki Doi,7-5 6-2,3,R64,87
+2021-709,Rome,Clay,PM,216347,Iga Swiatek,201662,Karolina Pliskova,6-0 6-0,3,F,46
+2021-709,Rome,Clay,PM,216347,Iga Swiatek,221103,Coco Gauff,7-6(3) 6-3,3,SF,106
+2021-709,Rome,Clay,PM,201662,Karolina Pliskova,201549,Petra Martic,6-1 3-6 6-2,3,SF,114
+2021-709,Rome,Clay,PM,221103,Coco Gauff,202458,Ashleigh Barty,4-6 1-2 RET,3,QF,29
+2021-709,Rome,Clay,PM,216347,Iga Swiatek,202494,Elina Svitolina,6-2 7-5,3,QF,96
+2021-709,Rome,Clay,PM,201662,Karolina Pliskova,211533,Jelena Ostapenko,4-6 7-5 7-6(1),3,QF,140
+2021-709,Rome,Clay,PM,201549,Petra Martic,202468,Jessica Pegula,7-5 6-4,3,QF,100
+2021-709,Rome,Clay,PM,202458,Ashleigh Barty,206368,Veronika Kudermetova,6-3 6-3,3,R16,81
+2021-709,Rome,Clay,PM,221103,Coco Gauff,214544,Aryna Sabalenka,7-5 6-3,3,R16,89
+2021-709,Rome,Clay,PM,216347,Iga Swiatek,206252,Barbora Krejcikova,3-6 7-6(5) 7-5,3,R16,170
+2021-709,Rome,Clay,PM,202494,Elina Svitolina,202469,Garbine Muguruza,6-4 6-2,3,R16,76
+2021-709,Rome,Clay,PM,201662,Karolina Pliskova,201329,Vera Zvonareva,7-5 6-3,3,R16,96
+2021-709,Rome,Clay,PM,211533,Jelena Ostapenko,201493,Angelique Kerber,4-6 6-3 6-4,3,R16,131
+2021-709,Rome,Clay,PM,201549,Petra Martic,206408,Nadia Podoroska,3-6 6-1 6-2,3,R16,119
+2021-709,Rome,Clay,PM,202468,Jessica Pegula,206420,Ekaterina Alexandrova,6-2 6-4,3,R16,71
+2021-709,Rome,Clay,PM,202458,Ashleigh Barty,201468,Yaroslava Shvedova,6-4 6-1,3,R32,78
+2021-709,Rome,Clay,PM,206368,Veronika Kudermetova,201614,Caroline Garcia,6-4 6-4,3,R32,87
+2021-709,Rome,Clay,PM,221103,Coco Gauff,206289,Maria Sakkari,6-1 1-6 6-1,3,R32,105
+2021-709,Rome,Clay,PM,214544,Aryna Sabalenka,204427,Sara Sorribes Tormo,7-5 6-1,3,R32,94
+2021-709,Rome,Clay,PM,206252,Barbora Krejcikova,213550,Sofia Kenin,6-1 6-4,3,R32,73
+2021-709,Rome,Clay,PM,216347,Iga Swiatek,201619,Madison Keys,7-5 6-1,3,R32,84
+2021-709,Rome,Clay,PM,202469,Garbine Muguruza,211095,Bernarda Pera,2-6 6-0 7-5,3,R32,124
+2021-709,Rome,Clay,PM,202494,Elina Svitolina,216153,Amanda Anisimova,2-6 6-3 6-4,3,R32,98
+2021-709,Rome,Clay,PM,201662,Karolina Pliskova,201545,Anastasija Sevastova,6-2 6-3,3,R32,71
+2021-709,Rome,Clay,PM,201329,Vera Zvonareva,201520,Petra Kvitova,6-4 3-6 6-4,3,R32,143
+2021-709,Rome,Clay,PM,211533,Jelena Ostapenko,201548,Ajla Tomljanovic,6-2 7-6(3),3,R32,98
+2021-709,Rome,Clay,PM,201493,Angelique Kerber,201594,Simona Halep,1-6 3-3 RET,3,R32,60
+2021-709,Rome,Clay,PM,206408,Nadia Podoroska,200033,Serena Williams,7-6(6) 7-5,3,R32,118
+2021-709,Rome,Clay,PM,201549,Petra Martic,201540,Kristina Mladenovic,7-5 6-3,3,R32,102
+2021-709,Rome,Clay,PM,206420,Ekaterina Alexandrova,206108,Jennifer Brady,W/O,3,R32,0
+2021-709,Rome,Clay,PM,202468,Jessica Pegula,211768,Naomi Osaka,7-6(2) 6-2,3,R32,87
+2021-709,Rome,Clay,PM,201468,Yaroslava Shvedova,203354,Martina Trevisan,0-6 7-6(4) 7-6(6),3,R64,154
+2021-709,Rome,Clay,PM,201614,Caroline Garcia,220714,Elisabetta Cocciaretto,7-6(8) 6-2,3,R64,97
+2021-709,Rome,Clay,PM,206368,Veronika Kudermetova,210722,Elise Mertens,4-6 6-2 6-3,3,R64,139
+2021-709,Rome,Clay,PM,206289,Maria Sakkari,201555,Polona Hercog,7-6(6) 3-6 6-2,3,R64,168
+2021-709,Rome,Clay,PM,221103,Coco Gauff,201709,Yulia Putintseva,7-5 4-6 6-4,3,R64,177
+2021-709,Rome,Clay,PM,204427,Sara Sorribes Tormo,202429,Camila Giorgi,7-6(4) 6-7(7) 7-5,3,R64,231
+2021-709,Rome,Clay,PM,206252,Barbora Krejcikova,202453,Saisai Zheng,6-2 6-0,3,R64,63
+2021-709,Rome,Clay,PM,201619,Madison Keys,201585,Sloane Stephens,4-6 6-2 7-5,3,R64,150
+2021-709,Rome,Clay,PM,216347,Iga Swiatek,201590,Alison Riske Amritraj,5-4 RET,3,R64,52
+2021-709,Rome,Clay,PM,202469,Garbine Muguruza,206255,Patricia Maria Tig,6-1 6-2,3,R64,66
+2021-709,Rome,Clay,PM,211095,Bernarda Pera,214461,Tamara Zidansek,6-3 6-2,3,R64,77
+2021-709,Rome,Clay,PM,216153,Amanda Anisimova,202492,Qiang Wang,7-5 6-3,3,R64,92
+2021-709,Rome,Clay,PM,201545,Anastasija Sevastova,213525,Jil Teichmann,3-6 6-1 6-3,3,R64,118
+2021-709,Rome,Clay,PM,201329,Vera Zvonareva,201539,Christina Mchale,6-3 6-0,3,R64,84
+2021-709,Rome,Clay,PM,201520,Petra Kvitova,202663,Magda Linette,1-6 6-0 6-2,3,R64,95
+2021-709,Rome,Clay,PM,211533,Jelena Ostapenko,202427,Johanna Konta,6-3 6-1,3,R64,69
+2021-709,Rome,Clay,PM,201548,Ajla Tomljanovic,214954,Marketa Vondrousova,6-4 6-2,3,R64,92
+2021-709,Rome,Clay,PM,201493,Angelique Kerber,201427,Alize Cornet,6-2 7-5,3,R64,95
+2021-709,Rome,Clay,PM,206408,Nadia Podoroska,201696,Laura Siegemund,2-6 7-6(3) 6-1,3,R64,151
+2021-709,Rome,Clay,PM,201549,Petra Martic,201603,Shelby Rogers,5-7 6-3 6-4,3,R64,149
+2021-709,Rome,Clay,PM,201540,Kristina Mladenovic,202505,Belinda Bencic,6-3 6-4,3,R64,108
+2021-709,Rome,Clay,PM,206108,Jennifer Brady,201533,Shuai Zhang,6-1 6-4,3,R64,76
+2021-709,Rome,Clay,PM,206420,Ekaterina Alexandrova,216146,Marta Kostyuk,6-3 6-1,3,R64,75
+2021-709,Rome,Clay,PM,202468,Jessica Pegula,214082,Daria Kasatkina,7-5 6-3,3,R64,96
+2021-520,Roland Garros,Clay,G,202458,Ashleigh Barty,211095,Bernarda Pera,6-4 3-6 6-2,3,R128,120
+2021-520,Roland Garros,Clay,G,202663,Magda Linette,203564,Chloe Paquet,6-3 6-3,3,R128,87
+2021-520,Roland Garros,Clay,G,206292,Astra Sharma,210705,Irina Bara,7-6(5) 6-2,3,R128,84
+2021-520,Roland Garros,Clay,G,202460,Ons Jabeur,201709,Yulia Putintseva,7-5 6-2,3,R128,79
+2021-520,Roland Garros,Clay,G,221103,Coco Gauff,202434,Aleksandra Krunic,7-6(11) 6-4,3,R128,127
+2021-520,Roland Garros,Clay,G,202492,Qiang Wang,201444,Su Wei Hsieh,2-6 6-4 7-5,3,R128,145
+2021-520,Roland Garros,Clay,G,211539,Fiona Ferro,215314,En Shuo Liang,6-1 1-6 6-4,3,R128,101
+2021-520,Roland Garros,Clay,G,206108,Jennifer Brady,201545,Anastasija Sevastova,6-3 6-3,3,R128,79
+2021-520,Roland Garros,Clay,G,201662,Karolina Pliskova,202499,Donna Vekic,7-5 6-4,3,R128,96
+2021-520,Roland Garros,Clay,G,201585,Sloane Stephens,201521,Carla Suarez Navarro,3-6 7-6(4) 6-4,3,R128,144
+2021-520,Roland Garros,Clay,G,201478,Varvara Lepchenko,201533,Shuai Zhang,6-3 6-3,3,R128,91
+2021-520,Roland Garros,Clay,G,214096,Karolina Muchova,201492,Andrea Petkovic,1-6 6-3 6-4,3,R128,130
+2021-520,Roland Garros,Clay,G,206420,Ekaterina Alexandrova,200748,Venus Williams,6-3 6-1,3,R128,56
+2021-520,Roland Garros,Clay,G,206252,Barbora Krejcikova,201697,Kristyna Pliskova,5-7 6-4 6-2,3,R128,129
+2021-520,Roland Garros,Clay,G,215983,Ann Li,202506,Margarita Gasparyan,6-0 6-1,3,R128,46
+2021-520,Roland Garros,Clay,G,202494,Elina Svitolina,221746,Oceane Babel,6-2 7-5,3,R128,76
+2021-520,Roland Garros,Clay,G,213550,Sofia Kenin,211533,Jelena Ostapenko,6-4 4-6 6-3,3,R128,125
+2021-520,Roland Garros,Clay,G,221024,Hailey Baptiste,215020,Anna Blinkova,6-1 6-4,3,R128,71
+2021-520,Roland Garros,Clay,G,206124,Tereza Martincova,211736,Ivana Jorovic,6-3 7-6(6),3,R128,118
+2021-520,Roland Garros,Clay,G,202468,Jessica Pegula,202684,Lin Zhu,6-4 4-6 6-4,3,R128,142
+2021-520,Roland Garros,Clay,G,206289,Maria Sakkari,215290,Katarina Zavatska,6-4 6-1,3,R128,88
+2021-520,Roland Garros,Clay,G,211148,Jasmine Paolini,201527,Stefanie Voegele,7-5 6-1,3,R128,78
+2021-520,Roland Garros,Clay,G,201610,Zarina Diyas,201586,Heather Watson,6-4 7-5,3,R128,113
+2021-520,Roland Garros,Clay,G,210722,Elise Mertens,204411,Storm Hunter,6-4 6-1,3,R128,83
+2021-520,Roland Garros,Clay,G,216146,Marta Kostyuk,202469,Garbine Muguruza,6-1 6-4,3,R128,89
+2021-520,Roland Garros,Clay,G,202453,Saisai Zheng,204427,Sara Sorribes Tormo,4-6 6-4 6-4,3,R128,159
+2021-520,Roland Garros,Clay,G,219875,Varvara Gracheva,202418,Lara Arruabarrena,6-2 6-3,3,R128,74
+2021-520,Roland Garros,Clay,G,202429,Camila Giorgi,201549,Petra Martic,6-2 6-7(5) 6-4,3,R128,137
+2021-520,Roland Garros,Clay,G,204426,Anett Kontaveit,203530,Viktorija Golubic,6-7(4) 7-6(5) 6-0,3,R128,135
+2021-520,Roland Garros,Clay,G,201540,Kristina Mladenovic,203533,Anna Karolina Schmiedlova,6-4 6-0,3,R128,94
+2021-520,Roland Garros,Clay,G,202490,Rebecca Peterson,201603,Shelby Rogers,6-7(3) 7-6(8) 6-2,3,R128,180
+2021-520,Roland Garros,Clay,G,216347,Iga Swiatek,215219,Kaja Juvan,6-0 7-5,3,R128,87
+2021-520,Roland Garros,Clay,G,200033,Serena Williams,201593,Irina Camelia Begu,7-6(6) 6-2,3,R128,102
+2021-520,Roland Garros,Clay,G,202596,Mihaela Buzarnescu,201551,Arantxa Rus,7-5 7-5,3,R128,103
+2021-520,Roland Garros,Clay,G,203389,Danielle Collins,216016,Xiyu Wang,6-2 4-6 6-4,3,R128,135
+2021-520,Roland Garros,Clay,G,211843,Anhelina Kalinina,201493,Angelique Kerber,6-2 6-4,3,R128,86
+2021-520,Roland Garros,Clay,G,214981,Elena Rybakina,221039,Elsa Jacquemot,6-4 6-1,3,R128,72
+2021-520,Roland Garros,Clay,G,211702,Nao Hibino,211411,Nina Stojanovic,7-6(4) 6-2,3,R128,101
+2021-520,Roland Garros,Clay,G,201455,Elena Vesnina,201501,Olga Govortsova,6-1 6-0,3,R128,58
+2021-520,Roland Garros,Clay,G,201520,Petra Kvitova,213889,Greet Minnen,6-7(3) 7-6(5) 6-1,3,R128,136
+2021-520,Roland Garros,Clay,G,201458,Victoria Azarenka,201320,Svetlana Kuznetsova,6-4 2-6 6-3,3,R128,120
+2021-520,Roland Garros,Clay,G,220704,Clara Tauson,202493,Ekaterine Gorgodze,6-4 6-2,3,R128,78
+2021-520,Roland Garros,Clay,G,220367,Leylah Fernandez,215713,Anastasia Potapova,6-2 6-1,3,R128,59
+2021-520,Roland Garros,Clay,G,201619,Madison Keys,206219,Oceane Dodin,6-3 3-6 6-1,3,R128,97
+2021-520,Roland Garros,Clay,G,201499,Anastasia Pavlyuchenkova,201539,Christina Mchale,6-4 6-0,3,R128,79
+2021-520,Roland Garros,Clay,G,201548,Ajla Tomljanovic,203462,Kateryna Baindl,6-2 6-4,3,R128,101
+2021-520,Roland Garros,Clay,G,205925,Aliaksandra Sasnovich,220348,Diane Parry,6-3 3-6 6-3,3,R128,125
+2021-520,Roland Garros,Clay,G,214544,Aryna Sabalenka,211951,Ana Konjuh,6-4 6-3,3,R128,75
+2021-520,Roland Garros,Clay,G,214461,Tamara Zidansek,215370,Bianca Andreescu,6-7(1) 7-6(2) 9-7,3,R128,200
+2021-520,Roland Garros,Clay,G,201483,Madison Brengle,215785,Camila Osorio,7-5 6-4,3,R128,80
+2021-520,Roland Garros,Clay,G,211701,Katerina Siniakova,213631,Marie Bouzkova,6-0 4-6 6-2,3,R128,153
+2021-520,Roland Garros,Clay,G,206368,Veronika Kudermetova,216153,Amanda Anisimova,7-6(5) 6-1,3,R128,82
+2021-520,Roland Garros,Clay,G,201514,Sorana Cirstea,202427,Johanna Konta,7-6(5) 6-2,3,R128,90
+2021-520,Roland Garros,Clay,G,203354,Martina Trevisan,202421,Alison Van Uytvanck,7-5 4-6 6-4,3,R128,173
+2021-520,Roland Garros,Clay,G,214082,Daria Kasatkina,201595,Misaki Doi,6-3 5-7 6-3,3,R128,143
+2021-520,Roland Garros,Clay,G,202505,Belinda Bencic,206408,Nadia Podoroska,6-0 6-3,3,R128,68
+2021-520,Roland Garros,Clay,G,201555,Polona Hercog,202428,Kiki Bertens,6-1 3-6 6-4,3,R128,114
+2021-520,Roland Garros,Clay,G,201614,Caroline Garcia,201696,Laura Siegemund,6-3 6-1,3,R128,67
+2021-520,Roland Garros,Clay,G,211552,Harmony Tan,201427,Alize Cornet,6-4 6-4,3,R128,94
+2021-520,Roland Garros,Clay,G,214954,Marketa Vondrousova,201466,Kaia Kanepi,4-6 6-3 6-0,3,R128,91
+2021-520,Roland Garros,Clay,G,211651,Paula Badosa,201616,Lauren Davis,6-2 7-6(3),3,R128,100
+2021-520,Roland Garros,Clay,G,203575,Danka Kovinic,216262,Clara Burel,6-3 7-6(8),3,R128,131
+2021-520,Roland Garros,Clay,G,202536,Ana Bogdan,220714,Elisabetta Cocciaretto,6-1 6-3,3,R128,66
+2021-520,Roland Garros,Clay,G,211768,Naomi Osaka,206255,Patricia Maria Tig,6-4 7-6(4),3,R128,107
+2021-520,Roland Garros,Clay,G,202663,Magda Linette,202458,Ashleigh Barty,6-1 2-2 RET,3,R64,48
+2021-520,Roland Garros,Clay,G,202460,Ons Jabeur,206292,Astra Sharma,6-2 6-4,3,R64,64
+2021-520,Roland Garros,Clay,G,221103,Coco Gauff,202492,Qiang Wang,6-3 7-6(1),3,R64,94
+2021-520,Roland Garros,Clay,G,206108,Jennifer Brady,211539,Fiona Ferro,6-4 2-6 7-5,3,R64,132
+2021-520,Roland Garros,Clay,G,201585,Sloane Stephens,201662,Karolina Pliskova,7-5 6-1,3,R64,91
+2021-520,Roland Garros,Clay,G,214096,Karolina Muchova,201478,Varvara Lepchenko,6-3 6-4,3,R64,100
+2021-520,Roland Garros,Clay,G,206252,Barbora Krejcikova,206420,Ekaterina Alexandrova,6-2 6-3,3,R64,68
+2021-520,Roland Garros,Clay,G,202494,Elina Svitolina,215983,Ann Li,6-0 6-4,3,R64,74
+2021-520,Roland Garros,Clay,G,213550,Sofia Kenin,221024,Hailey Baptiste,7-5 6-3,3,R64,81
+2021-520,Roland Garros,Clay,G,202468,Jessica Pegula,206124,Tereza Martincova,6-3 6-3,3,R64,79
+2021-520,Roland Garros,Clay,G,206289,Maria Sakkari,211148,Jasmine Paolini,6-2 6-3,3,R64,68
+2021-520,Roland Garros,Clay,G,210722,Elise Mertens,201610,Zarina Diyas,4-6 6-2 6-4,3,R64,147
+2021-520,Roland Garros,Clay,G,216146,Marta Kostyuk,202453,Saisai Zheng,6-3 6-4,3,R64,99
+2021-520,Roland Garros,Clay,G,219875,Varvara Gracheva,202429,Camila Giorgi,7-5 1-6 6-2,3,R64,131
+2021-520,Roland Garros,Clay,G,204426,Anett Kontaveit,201540,Kristina Mladenovic,6-2 6-0,3,R64,51
+2021-520,Roland Garros,Clay,G,216347,Iga Swiatek,202490,Rebecca Peterson,6-1 6-1,3,R64,61
+2021-520,Roland Garros,Clay,G,200033,Serena Williams,202596,Mihaela Buzarnescu,6-3 5-7 6-1,3,R64,123
+2021-520,Roland Garros,Clay,G,203389,Danielle Collins,211843,Anhelina Kalinina,6-0 6-2,3,R64,62
+2021-520,Roland Garros,Clay,G,214981,Elena Rybakina,211702,Nao Hibino,6-3 6-1,3,R64,63
+2021-520,Roland Garros,Clay,G,201455,Elena Vesnina,201520,Petra Kvitova,W/O,3,R64,
+2021-520,Roland Garros,Clay,G,201458,Victoria Azarenka,220704,Clara Tauson,7-5 6-4,3,R64,108
+2021-520,Roland Garros,Clay,G,201619,Madison Keys,220367,Leylah Fernandez,6-1 7-5,3,R64,93
+2021-520,Roland Garros,Clay,G,201499,Anastasia Pavlyuchenkova,201548,Ajla Tomljanovic,6-2 6-3,3,R64,88
+2021-520,Roland Garros,Clay,G,214544,Aryna Sabalenka,205925,Aliaksandra Sasnovich,7-5 6-3,3,R64,89
+2021-520,Roland Garros,Clay,G,214461,Tamara Zidansek,201483,Madison Brengle,6-4 6-1,3,R64,65
+2021-520,Roland Garros,Clay,G,211701,Katerina Siniakova,206368,Veronika Kudermetova,7-6(7) 5-7 7-5,3,R64,172
+2021-520,Roland Garros,Clay,G,201514,Sorana Cirstea,203354,Martina Trevisan,6-4 3-6 6-4,3,R64,157
+2021-520,Roland Garros,Clay,G,214082,Daria Kasatkina,202505,Belinda Bencic,6-2 6-2,3,R64,76
+2021-520,Roland Garros,Clay,G,201555,Polona Hercog,201614,Caroline Garcia,7-5 6-4,3,R64,100
+2021-520,Roland Garros,Clay,G,214954,Marketa Vondrousova,211552,Harmony Tan,6-1 6-3,3,R64,62
+2021-520,Roland Garros,Clay,G,211651,Paula Badosa,203575,Danka Kovinic,6-2 6-0,3,R64,52
+2021-520,Roland Garros,Clay,G,202536,Ana Bogdan,211768,Naomi Osaka,W/O,3,R64,
+2021-520,Roland Garros,Clay,G,202460,Ons Jabeur,202663,Magda Linette,3-6 6-0 6-1,3,R32,86
+2021-520,Roland Garros,Clay,G,221103,Coco Gauff,206108,Jennifer Brady,6-1 0-0 RET,3,R32,23
+2021-520,Roland Garros,Clay,G,201585,Sloane Stephens,214096,Karolina Muchova,6-3 7-5,3,R32,115
+2021-520,Roland Garros,Clay,G,206252,Barbora Krejcikova,202494,Elina Svitolina,6-3 6-2,3,R32,99
+2021-520,Roland Garros,Clay,G,213550,Sofia Kenin,202468,Jessica Pegula,4-6 6-1 6-4,3,R32,116
+2021-520,Roland Garros,Clay,G,206289,Maria Sakkari,210722,Elise Mertens,7-5 6-7(2) 6-2,3,R32,172
+2021-520,Roland Garros,Clay,G,216146,Marta Kostyuk,219875,Varvara Gracheva,6-1 6-2,3,R32,61
+2021-520,Roland Garros,Clay,G,216347,Iga Swiatek,204426,Anett Kontaveit,7-6(4) 6-0,3,R32,82
+2021-520,Roland Garros,Clay,G,200033,Serena Williams,203389,Danielle Collins,6-4 6-4,3,R32,85
+2021-520,Roland Garros,Clay,G,214981,Elena Rybakina,201455,Elena Vesnina,6-1 6-4,3,R32,63
+2021-520,Roland Garros,Clay,G,201458,Victoria Azarenka,201619,Madison Keys,6-2 6-2,3,R32,70
+2021-520,Roland Garros,Clay,G,201499,Anastasia Pavlyuchenkova,214544,Aryna Sabalenka,6-4 2-6 6-0,3,R32,100
+2021-520,Roland Garros,Clay,G,214461,Tamara Zidansek,211701,Katerina Siniakova,0-6 7-6(5) 6-2,3,R32,117
+2021-520,Roland Garros,Clay,G,201514,Sorana Cirstea,214082,Daria Kasatkina,6-3 6-2,3,R32,84
+2021-520,Roland Garros,Clay,G,214954,Marketa Vondrousova,201555,Polona Hercog,6-3 6-3,3,R32,71
+2021-520,Roland Garros,Clay,G,211651,Paula Badosa,202536,Ana Bogdan,2-6 7-6(4) 6-4,3,R32,171
+2021-520,Roland Garros,Clay,G,221103,Coco Gauff,202460,Ons Jabeur,6-3 6-1,3,R16,53
+2021-520,Roland Garros,Clay,G,206252,Barbora Krejcikova,201585,Sloane Stephens,6-2 6-0,3,R16,67
+2021-520,Roland Garros,Clay,G,206289,Maria Sakkari,213550,Sofia Kenin,6-1 6-3,3,R16,68
+2021-520,Roland Garros,Clay,G,216347,Iga Swiatek,216146,Marta Kostyuk,6-3 6-4,3,R16,92
+2021-520,Roland Garros,Clay,G,214981,Elena Rybakina,200033,Serena Williams,6-3 7-5,3,R16,77
+2021-520,Roland Garros,Clay,G,201499,Anastasia Pavlyuchenkova,201458,Victoria Azarenka,5-7 6-3 6-2,3,R16,129
+2021-520,Roland Garros,Clay,G,214461,Tamara Zidansek,201514,Sorana Cirstea,7-6(4) 6-1,3,R16,86
+2021-520,Roland Garros,Clay,G,211651,Paula Badosa,214954,Marketa Vondrousova,6-4 3-6 6-2,3,R16,110
+2021-520,Roland Garros,Clay,G,206252,Barbora Krejcikova,221103,Coco Gauff,7-6(6) 6-3,3,QF,110
+2021-520,Roland Garros,Clay,G,206289,Maria Sakkari,216347,Iga Swiatek,6-4 6-4,3,QF,95
+2021-520,Roland Garros,Clay,G,201499,Anastasia Pavlyuchenkova,214981,Elena Rybakina,6-7(2) 6-2 9-7,3,QF,153
+2021-520,Roland Garros,Clay,G,214461,Tamara Zidansek,211651,Paula Badosa,7-5 4-6 8-6,3,QF,146
+2021-520,Roland Garros,Clay,G,206252,Barbora Krejcikova,206289,Maria Sakkari,7-5 4-6 9-7,3,SF,198
+2021-520,Roland Garros,Clay,G,201499,Anastasia Pavlyuchenkova,214461,Tamara Zidansek,7-5 6-3,3,SF,94
+2021-520,Roland Garros,Clay,G,206252,Barbora Krejcikova,201499,Anastasia Pavlyuchenkova,6-1 2-6 6-4,3,F,118
+2021-2012,Berlin,Grass,P,214643,Liudmila Samsonova,202505,Belinda Bencic,1-6 6-1 6-3,3,F,97
+2021-2012,Berlin,Grass,P,214643,Liudmila Samsonova,201458,Victoria Azarenka,6-4 6-2,3,SF,66
+2021-2012,Berlin,Grass,P,202505,Belinda Bencic,201427,Alize Cornet,7-5 6-4,3,SF,107
+2021-2012,Berlin,Grass,P,214643,Liudmila Samsonova,201619,Madison Keys,7-6(4) 2-6 7-6(0),3,QF,144
+2021-2012,Berlin,Grass,P,201458,Victoria Azarenka,202468,Jessica Pegula,6-2 5-7 6-4,3,QF,109
+2021-2012,Berlin,Grass,P,201427,Alize Cornet,202469,Garbine Muguruza,4-6 6-3 7-6(5),3,QF,160
+2021-2012,Berlin,Grass,P,202505,Belinda Bencic,206420,Ekaterina Alexandrova,6-4 4-6 7-6(4),3,QF,151
+2021-2012,Berlin,Grass,P,201619,Madison Keys,214544,Aryna Sabalenka,6-4 1-6 7-5,3,R16,116
+2021-2012,Berlin,Grass,P,214643,Liudmila Samsonova,206368,Veronika Kudermetova,6-4 6-3,3,R16,80
+2021-2012,Berlin,Grass,P,202468,Jessica Pegula,201662,Karolina Pliskova,7-5 6-2,3,R16,75
+2021-2012,Berlin,Grass,P,201458,Victoria Azarenka,201493,Angelique Kerber,6-3 7-5,3,R16,82
+2021-2012,Berlin,Grass,P,202469,Garbine Muguruza,214981,Elena Rybakina,6-4 6-3,3,R16,102
+2021-2012,Berlin,Grass,P,201427,Alize Cornet,215370,Bianca Andreescu,7-6(2) 7-5,3,R16,125
+2021-2012,Berlin,Grass,P,202505,Belinda Bencic,201549,Petra Martic,6-3 6-4,3,R16,83
+2021-2012,Berlin,Grass,P,206420,Ekaterina Alexandrova,202494,Elina Svitolina,6-4 7-5,3,R16,89
+2021-2012,Berlin,Grass,P,201619,Madison Keys,211684,Magdalena Frech,6-3 6-4,3,R32,75
+2021-2012,Berlin,Grass,P,214643,Liudmila Samsonova,214954,Marketa Vondrousova,6-4 7-6(6),3,R32,101
+2021-2012,Berlin,Grass,P,206368,Veronika Kudermetova,214096,Karolina Muchova,7-6(5) 5-7 6-2,3,R32,147
+2021-2012,Berlin,Grass,P,202468,Jessica Pegula,221024,Hailey Baptiste,6-6 RET,3,R32,54
+2021-2012,Berlin,Grass,P,201493,Angelique Kerber,201595,Misaki Doi,6-2 6-1,3,R32,60
+2021-2012,Berlin,Grass,P,201458,Victoria Azarenka,201492,Andrea Petkovic,6-4 7-6(2),3,R32,105
+2021-2012,Berlin,Grass,P,202469,Garbine Muguruza,201514,Sorana Cirstea,6-3 6-2,3,R32,79
+2021-2012,Berlin,Grass,P,214981,Elena Rybakina,201603,Shelby Rogers,2-6 6-3 6-4,3,R32,103
+2021-2012,Berlin,Grass,P,201427,Alize Cornet,216153,Amanda Anisimova,6-3 6-1,3,R32,74
+2021-2012,Berlin,Grass,P,202505,Belinda Bencic,215898,Jule Niemeier,4-6 6-4 7-5,3,R32,132
+2021-2012,Berlin,Grass,P,201549,Petra Martic,201534,Asia Muhammad,7-6(0) 4-6 6-3,3,R32,131
+2021-2012,Berlin,Grass,P,206420,Ekaterina Alexandrova,214939,Anna Kalinskaya,6-3 6-2,3,R32,63
+2021-540,Wimbledon,Grass,G,202458,Ashleigh Barty,201521,Carla Suarez Navarro,6-1 6-7(1) 6-1,3,R128,104
+2021-540,Wimbledon,Grass,G,215020,Anna Blinkova,201693,Timea Babos,6-2 6-2,3,R128,69
+2021-540,Wimbledon,Grass,G,201535,Coco Vandeweghe,201501,Olga Govortsova,6-4 6-2,3,R128,67
+2021-540,Wimbledon,Grass,G,211701,Katerina Siniakova,206374,Yafan Wang,6-1 6-0,3,R128,55
+2021-540,Wimbledon,Grass,G,216146,Marta Kostyuk,202428,Kiki Bertens,6-3 6-4,3,R128,82
+2021-540,Wimbledon,Grass,G,201545,Anastasija Sevastova,201610,Zarina Diyas,6-4 6-1,3,R128,69
+2021-540,Wimbledon,Grass,G,201492,Andrea Petkovic,211148,Jasmine Paolini,6-4 6-3,3,R128,67
+2021-540,Wimbledon,Grass,G,206252,Barbora Krejcikova,220704,Clara Tauson,6-3 6-2,3,R128,70
+2021-540,Wimbledon,Grass,G,201458,Victoria Azarenka,203462,Kateryna Baindl,6-1 6-3,3,R128,62
+2021-540,Wimbledon,Grass,G,201514,Sorana Cirstea,202425,Samantha Murray,6-3 6-3,3,R128,79
+2021-540,Wimbledon,Grass,G,221054,Emma Raducanu,201554,Vitalia Diatchenko,7-6(4) 6-0,3,R128,117
+2021-540,Wimbledon,Grass,G,214954,Marketa Vondrousova,204426,Anett Kontaveit,2-6 6-4 6-2,3,R128,93
+2021-540,Wimbledon,Grass,G,214082,Daria Kasatkina,206255,Patricia Maria Tig,6-0 3-6 6-3,3,R128,98
+2021-540,Wimbledon,Grass,G,211533,Jelena Ostapenko,220367,Leylah Fernandez,6-1 6-2,3,R128,55
+2021-540,Wimbledon,Grass,G,201548,Ajla Tomljanovic,213889,Greet Minnen,6-2 7-6(5),3,R128,107
+2021-540,Wimbledon,Grass,G,201427,Alize Cornet,215370,Bianca Andreescu,6-2 6-1,3,R128,82
+2021-540,Wimbledon,Grass,G,202494,Elina Svitolina,202421,Alison Van Uytvanck,6-3 2-6 6-3,3,R128,102
+2021-540,Wimbledon,Grass,G,202663,Magda Linette,216153,Amanda Anisimova,2-6 6-3 6-1,3,R128,101
+2021-540,Wimbledon,Grass,G,201709,Yulia Putintseva,201450,Tsvetana Pironkova,6-3 6-1,3,R128,67
+2021-540,Wimbledon,Grass,G,211651,Paula Badosa,211901,Aliona Bolsova,6-2 5-7 6-2,3,R128,105
+2021-540,Wimbledon,Grass,G,214096,Karolina Muchova,201533,Shuai Zhang,6-3 6-3,3,R128,66
+2021-540,Wimbledon,Grass,G,202429,Camila Giorgi,213525,Jil Teichmann,6-2 6-2,3,R128,65
+2021-540,Wimbledon,Grass,G,201697,Kristyna Pliskova,206292,Astra Sharma,3-6 6-4 6-4,3,R128,100
+2021-540,Wimbledon,Grass,G,201499,Anastasia Pavlyuchenkova,202536,Ana Bogdan,6-2 6-2,3,R128,57
+2021-540,Wimbledon,Grass,G,215219,Kaja Juvan,202505,Belinda Bencic,6-3 6-3,3,R128,80
+2021-540,Wimbledon,Grass,G,216262,Clara Burel,206391,Ellen Perez,6-2 6-2,3,R128,59
+2021-540,Wimbledon,Grass,G,201455,Elena Vesnina,203354,Martina Trevisan,7-5 6-1,3,R128,87
+2021-540,Wimbledon,Grass,G,221103,Coco Gauff,215936,Francesca Jones,7-5 6-4,3,R128,97
+2021-540,Wimbledon,Grass,G,201493,Angelique Kerber,211411,Nina Stojanovic,6-4 6-3,3,R128,84
+2021-540,Wimbledon,Grass,G,204427,Sara Sorribes Tormo,211951,Ana Konjuh,6-3 3-6 6-3,3,R128,135
+2021-540,Wimbledon,Grass,G,211702,Nao Hibino,211095,Bernarda Pera,6-1 5-7 6-3,3,R128,121
+2021-540,Wimbledon,Grass,G,205925,Aliaksandra Sasnovich,200033,Serena Williams,3-3 RET,3,R128,34
+2021-540,Wimbledon,Grass,G,201662,Karolina Pliskova,214461,Tamara Zidansek,7-5 6-4,3,R128,77
+2021-540,Wimbledon,Grass,G,202499,Donna Vekic,215713,Anastasia Potapova,6-1 6-4,3,R128,69
+2021-540,Wimbledon,Grass,G,206408,Nadia Podoroska,215983,Ann Li,6-4 7-6(1),3,R128,96
+2021-540,Wimbledon,Grass,G,206124,Tereza Martincova,201590,Alison Riske Amritraj,6-2 4-6 6-1,3,R128,121
+2021-540,Wimbledon,Grass,G,202468,Jessica Pegula,201614,Caroline Garcia,6-3 6-1,3,R128,61
+2021-540,Wimbledon,Grass,G,214643,Liudmila Samsonova,201466,Kaia Kanepi,6-4 6-2,3,R128,63
+2021-540,Wimbledon,Grass,G,201529,Kristie Ahn,201586,Heather Watson,2-6 7-6(3) 8-6,3,R128,183
+2021-540,Wimbledon,Grass,G,201585,Sloane Stephens,201520,Petra Kvitova,6-3 6-4,3,R128,77
+2021-540,Wimbledon,Grass,G,210722,Elise Mertens,211279,Harriet Dart,6-1 6-3,3,R128,77
+2021-540,Wimbledon,Grass,G,202684,Lin Zhu,201621,Mona Barthel,6-7(2) 6-3 6-3,3,R128,132
+2021-540,Wimbledon,Grass,G,201616,Lauren Davis,214839,Jodie Burrage,6-2 6-1,3,R128,55
+2021-540,Wimbledon,Grass,G,201619,Madison Keys,215042,Katie Swan,6-3 6-4,3,R128,73
+2021-540,Wimbledon,Grass,G,203530,Viktorija Golubic,206368,Veronika Kudermetova,3-6 6-1 11-9,3,R128,165
+2021-540,Wimbledon,Grass,G,203389,Danielle Collins,201555,Polona Hercog,4-6 6-3 6-2,3,R128,139
+2021-540,Wimbledon,Grass,G,201483,Madison Brengle,201539,Christina Mchale,3-6 7-5 10-8,3,R128,160
+2021-540,Wimbledon,Grass,G,213550,Sofia Kenin,216133,Xin Yu Wang,6-4 6-2,3,R128,63
+2021-540,Wimbledon,Grass,G,216347,Iga Swiatek,201444,Su Wei Hsieh,6-4 6-4,3,R128,76
+2021-540,Wimbledon,Grass,G,201329,Vera Zvonareva,213631,Marie Bouzkova,7-5 6-4,3,R128,101
+2021-540,Wimbledon,Grass,G,201593,Irina Camelia Begu,220465,Katie Volynets,6-4 7-5,3,R128,98
+2021-540,Wimbledon,Grass,G,201549,Petra Martic,219875,Varvara Gracheva,6-7(3) 6-4 6-3,3,R128,149
+2021-540,Wimbledon,Grass,G,202460,Ons Jabeur,202490,Rebecca Peterson,6-2 6-1,3,R128,61
+2021-540,Wimbledon,Grass,G,200748,Venus Williams,202596,Mihaela Buzarnescu,7-5 4-6 6-3,3,R128,157
+2021-540,Wimbledon,Grass,G,204246,Lesley Pattinama Kerkhove,201320,Svetlana Kuznetsova,6-3 6-3,3,R128,65
+2021-540,Wimbledon,Grass,G,202469,Garbine Muguruza,211539,Fiona Ferro,6-0 6-1,3,R128,50
+2021-540,Wimbledon,Grass,G,206289,Maria Sakkari,201551,Arantxa Rus,6-1 6-1,3,R128,49
+2021-540,Wimbledon,Grass,G,201603,Shelby Rogers,201325,Samantha Stosur,6-1 5-7 6-3,3,R128,111
+2021-540,Wimbledon,Grass,G,214906,Claire Liu,201595,Misaki Doi,2-6 6-3 9-7,3,R128,162
+2021-540,Wimbledon,Grass,G,214981,Elena Rybakina,201540,Kristina Mladenovic,6-4 6-0,3,R128,66
+2021-540,Wimbledon,Grass,G,206420,Ekaterina Alexandrova,201696,Laura Siegemund,6-1 6-3,3,R128,58
+2021-540,Wimbledon,Grass,G,215785,Camila Osorio,214939,Anna Kalinskaya,1-6 6-0 6-4,3,R128,90
+2021-540,Wimbledon,Grass,G,211107,Katie Boulter,203398,Danielle Lao,6-7(6) 6-3 6-4,3,R128,148
+2021-540,Wimbledon,Grass,G,214544,Aryna Sabalenka,201512,Monica Niculescu,6-1 6-4,3,R128,76
+2021-540,Wimbledon,Grass,G,202458,Ashleigh Barty,215020,Anna Blinkova,6-4 6-3,3,R64,90
+2021-540,Wimbledon,Grass,G,211701,Katerina Siniakova,201535,Coco Vandeweghe,4-6 6-2 6-2,3,R64,107
+2021-540,Wimbledon,Grass,G,201545,Anastasija Sevastova,216146,Marta Kostyuk,1-6 6-4 6-3,3,R64,97
+2021-540,Wimbledon,Grass,G,206252,Barbora Krejcikova,201492,Andrea Petkovic,7-5 6-4,3,R64,80
+2021-540,Wimbledon,Grass,G,201514,Sorana Cirstea,201458,Victoria Azarenka,7-6(5) 3-6 6-4,3,R64,139
+2021-540,Wimbledon,Grass,G,221054,Emma Raducanu,214954,Marketa Vondrousova,6-2 6-4,3,R64,72
+2021-540,Wimbledon,Grass,G,211533,Jelena Ostapenko,214082,Daria Kasatkina,6-1 3-6 8-6,3,R64,106
+2021-540,Wimbledon,Grass,G,201548,Ajla Tomljanovic,201427,Alize Cornet,6-4 0-6 6-3,3,R64,127
+2021-540,Wimbledon,Grass,G,202663,Magda Linette,202494,Elina Svitolina,6-3 6-4,3,R64,65
+2021-540,Wimbledon,Grass,G,211651,Paula Badosa,201709,Yulia Putintseva,6-4 6-1,3,R64,80
+2021-540,Wimbledon,Grass,G,214096,Karolina Muchova,202429,Camila Giorgi,6-3 5-7 6-3,3,R64,138
+2021-540,Wimbledon,Grass,G,201499,Anastasia Pavlyuchenkova,201697,Kristyna Pliskova,6-3 6-3,3,R64,67
+2021-540,Wimbledon,Grass,G,215219,Kaja Juvan,216262,Clara Burel,6-3 6-4,3,R64,69
+2021-540,Wimbledon,Grass,G,221103,Coco Gauff,201455,Elena Vesnina,6-4 6-3,3,R64,71
+2021-540,Wimbledon,Grass,G,201493,Angelique Kerber,204427,Sara Sorribes Tormo,7-5 5-7 6-4,3,R64,199
+2021-540,Wimbledon,Grass,G,205925,Aliaksandra Sasnovich,211702,Nao Hibino,6-4 7-6(4),3,R64,98
+2021-540,Wimbledon,Grass,G,201662,Karolina Pliskova,202499,Donna Vekic,6-2 6-2,3,R64,66
+2021-540,Wimbledon,Grass,G,206124,Tereza Martincova,206408,Nadia Podoroska,6-3 7-6(5),3,R64,124
+2021-540,Wimbledon,Grass,G,214643,Liudmila Samsonova,202468,Jessica Pegula,6-4 3-6 6-3,3,R64,125
+2021-540,Wimbledon,Grass,G,201585,Sloane Stephens,201529,Kristie Ahn,7-5 6-3,3,R64,104
+2021-540,Wimbledon,Grass,G,210722,Elise Mertens,202684,Lin Zhu,6-2 6-0,3,R64,58
+2021-540,Wimbledon,Grass,G,201619,Madison Keys,201616,Lauren Davis,6-1 6-4,3,R64,63
+2021-540,Wimbledon,Grass,G,203530,Viktorija Golubic,203389,Danielle Collins,6-2 6-0,3,R64,63
+2021-540,Wimbledon,Grass,G,201483,Madison Brengle,213550,Sofia Kenin,6-2 6-4,3,R64,45
+2021-540,Wimbledon,Grass,G,216347,Iga Swiatek,201329,Vera Zvonareva,6-1 6-3,3,R64,62
+2021-540,Wimbledon,Grass,G,201593,Irina Camelia Begu,201549,Petra Martic,7-5 6-7(7) 6-3,3,R64,154
+2021-540,Wimbledon,Grass,G,202460,Ons Jabeur,200748,Venus Williams,7-5 6-0,3,R64,80
+2021-540,Wimbledon,Grass,G,202469,Garbine Muguruza,204246,Lesley Pattinama Kerkhove,6-1 6-4,3,R64,68
+2021-540,Wimbledon,Grass,G,201603,Shelby Rogers,206289,Maria Sakkari,7-5 6-4,3,R64,108
+2021-540,Wimbledon,Grass,G,214981,Elena Rybakina,214906,Claire Liu,6-4 6-4,3,R64,80
+2021-540,Wimbledon,Grass,G,215785,Camila Osorio,206420,Ekaterina Alexandrova,7-5 6-2,3,R64,85
+2021-540,Wimbledon,Grass,G,214544,Aryna Sabalenka,211107,Katie Boulter,4-6 6-3 6-3,3,R64,126
+2021-540,Wimbledon,Grass,G,202458,Ashleigh Barty,211701,Katerina Siniakova,6-3 7-5,3,R32,97
+2021-540,Wimbledon,Grass,G,206252,Barbora Krejcikova,201545,Anastasija Sevastova,7-6(1) 3-6 7-5,3,R32,151
+2021-540,Wimbledon,Grass,G,221054,Emma Raducanu,201514,Sorana Cirstea,6-3 7-5,3,R32,100
+2021-540,Wimbledon,Grass,G,201548,Ajla Tomljanovic,211533,Jelena Ostapenko,4-6 6-4 6-2,3,R32,115
+2021-540,Wimbledon,Grass,G,211651,Paula Badosa,202663,Magda Linette,5-7 6-2 6-4,3,R32,146
+2021-540,Wimbledon,Grass,G,214096,Karolina Muchova,201499,Anastasia Pavlyuchenkova,7-5 6-3,3,R32,100
+2021-540,Wimbledon,Grass,G,221103,Coco Gauff,215219,Kaja Juvan,6-3 6-3,3,R32,65
+2021-540,Wimbledon,Grass,G,201493,Angelique Kerber,205925,Aliaksandra Sasnovich,2-6 6-0 6-1,3,R32,75
+2021-540,Wimbledon,Grass,G,201662,Karolina Pliskova,206124,Tereza Martincova,6-3 6-3,3,R32,98
+2021-540,Wimbledon,Grass,G,214643,Liudmila Samsonova,201585,Sloane Stephens,6-2 2-6 6-4,3,R32,121
+2021-540,Wimbledon,Grass,G,201619,Madison Keys,210722,Elise Mertens,7-5 6-3,3,R32,75
+2021-540,Wimbledon,Grass,G,203530,Viktorija Golubic,201483,Madison Brengle,6-2 6-1,3,R32,67
+2021-540,Wimbledon,Grass,G,216347,Iga Swiatek,201593,Irina Camelia Begu,6-1 6-0,3,R32,55
+2021-540,Wimbledon,Grass,G,202460,Ons Jabeur,202469,Garbine Muguruza,5-7 6-3 6-2,3,R32,146
+2021-540,Wimbledon,Grass,G,214981,Elena Rybakina,201603,Shelby Rogers,6-1 6-4,3,R32,66
+2021-540,Wimbledon,Grass,G,214544,Aryna Sabalenka,215785,Camila Osorio,6-0 6-3,3,R32,75
+2021-540,Wimbledon,Grass,G,202458,Ashleigh Barty,206252,Barbora Krejcikova,7-5 6-3,3,R16,95
+2021-540,Wimbledon,Grass,G,201548,Ajla Tomljanovic,221054,Emma Raducanu,6-4 3-0 RET,3,R16,75
+2021-540,Wimbledon,Grass,G,214096,Karolina Muchova,211651,Paula Badosa,7-6(6) 6-4,3,R16,93
+2021-540,Wimbledon,Grass,G,201493,Angelique Kerber,221103,Coco Gauff,6-4 6-4,3,R16,76
+2021-540,Wimbledon,Grass,G,201662,Karolina Pliskova,214643,Liudmila Samsonova,6-2 6-3,3,R16,75
+2021-540,Wimbledon,Grass,G,203530,Viktorija Golubic,201619,Madison Keys,7-6(3) 6-3,3,R16,99
+2021-540,Wimbledon,Grass,G,202460,Ons Jabeur,216347,Iga Swiatek,5-7 6-1 6-1,3,R16,101
+2021-540,Wimbledon,Grass,G,214544,Aryna Sabalenka,214981,Elena Rybakina,6-3 4-6 6-3,3,R16,109
+2021-540,Wimbledon,Grass,G,202458,Ashleigh Barty,201548,Ajla Tomljanovic,6-1 6-3,3,QF,66
+2021-540,Wimbledon,Grass,G,201493,Angelique Kerber,214096,Karolina Muchova,6-2 6-3,3,QF,75
+2021-540,Wimbledon,Grass,G,201662,Karolina Pliskova,203530,Viktorija Golubic,6-2 6-2,3,QF,81
+2021-540,Wimbledon,Grass,G,214544,Aryna Sabalenka,202460,Ons Jabeur,6-4 6-3,3,QF,74
+2021-540,Wimbledon,Grass,G,202458,Ashleigh Barty,201493,Angelique Kerber,6-3 7-6(3),3,SF,87
+2021-540,Wimbledon,Grass,G,201662,Karolina Pliskova,214544,Aryna Sabalenka,5-7 6-4 6-4,3,SF,113
+2021-540,Wimbledon,Grass,G,202458,Ashleigh Barty,201662,Karolina Pliskova,6-3 6-7(4) 6-3,3,F,116
+2021-650,Tokyo Olympics,Hard,O,204427,Sara Sorribes Tormo,202458,Ashleigh Barty,6-4 6-3,3,R64,
+2021-650,Tokyo Olympics,Hard,O,211539,Fiona Ferro,201545,Anastasija Sevastova,2-6 6-4 6-2,3,R64,
+2021-650,Tokyo Olympics,Hard,O,204431,Anna Lena Friedsam,201586,Heather Watson,7-6(5) 6-3,3,R64,
+2021-650,Tokyo Olympics,Hard,O,201499,Anastasia Pavlyuchenkova,201506,Sara Errani,6-0 6-1,3,R64,
+2021-650,Tokyo Olympics,Hard,O,202505,Belinda Bencic,202468,Jessica Pegula,6-3 6-3,3,R64,
+2021-650,Tokyo Olympics,Hard,O,201595,Misaki Doi,213887,Renata Zarazua,6-3 6-2,3,R64,
+2021-650,Tokyo Olympics,Hard,O,220367,Leylah Fernandez,215035,Dayana Yastremska,6-3 3-6 6-0,3,R64,
+2021-650,Tokyo Olympics,Hard,O,206252,Barbora Krejcikova,201610,Zarina Diyas,5-2 RET,3,R64,
+2021-650,Tokyo Olympics,Hard,O,214544,Aryna Sabalenka,202663,Magda Linette,6-2 6-1,3,R64,
+2021-650,Tokyo Olympics,Hard,O,202499,Donna Vekic,201614,Caroline Garcia,6-2 6-7(2) 6-3,3,R64,
+2021-650,Tokyo Olympics,Hard,O,202490,Rebecca Peterson,210886,Mayar Sherif,7-5 7-6(1),3,R64,
+2021-650,Tokyo Olympics,Hard,O,214981,Elena Rybakina,201325,Samantha Stosur,6-4 6-2,3,R64,
+2021-650,Tokyo Olympics,Hard,O,201520,Petra Kvitova,211148,Jasmine Paolini,6-4 6-3,3,R64,
+2021-650,Tokyo Olympics,Hard,O,202421,Alison Van Uytvanck,211736,Ivana Jorovic,6-3 6-2,3,R64,
+2021-650,Tokyo Olympics,Hard,O,202492,Qiang Wang,202705,Veronica Cepede Royg,6-4 6-3,3,R64,
+2021-650,Tokyo Olympics,Hard,O,202469,Garbine Muguruza,206368,Veronika Kudermetova,7-5 7-5,3,R64,
+2021-650,Tokyo Olympics,Hard,O,201662,Karolina Pliskova,201427,Alize Cornet,6-1 6-3,3,R64,
+2021-650,Tokyo Olympics,Hard,O,201521,Carla Suarez Navarro,202460,Ons Jabeur,6-4 6-1,3,R64,
+2021-650,Tokyo Olympics,Hard,O,201455,Elena Vesnina,211533,Jelena Ostapenko,6-4 6-7(2) 6-4,3,R64,
+2021-650,Tokyo Olympics,Hard,O,202429,Camila Giorgi,206108,Jennifer Brady,6-3 6-2,3,R64,
+2021-650,Tokyo Olympics,Hard,O,206289,Maria Sakkari,204426,Anett Kontaveit,7-5 6-2,3,R64,
+2021-650,Tokyo Olympics,Hard,O,211411,Nina Stojanovic,211702,Nao Hibino,6-3 6-3,3,R64,
+2021-650,Tokyo Olympics,Hard,O,201548,Ajla Tomljanovic,201468,Yaroslava Shvedova,7-5 3-2 RET,3,R64,
+2021-650,Tokyo Olympics,Hard,O,202494,Elina Svitolina,201696,Laura Siegemund,6-3 5-7 6-4,3,R64,
+2021-650,Tokyo Olympics,Hard,O,216347,Iga Swiatek,201621,Mona Barthel,6-2 6-2,3,R64,
+2021-650,Tokyo Olympics,Hard,O,211651,Paula Badosa,201540,Kristina Mladenovic,6-7(4) 6-3 6-0,3,R64,
+2021-650,Tokyo Olympics,Hard,O,206408,Nadia Podoroska,201709,Yulia Putintseva,7-6(4) 1-3 RET,3,R64,
+2021-650,Tokyo Olympics,Hard,O,206420,Ekaterina Alexandrova,210722,Elise Mertens,4-6 6-4 6-4,3,R64,
+2021-650,Tokyo Olympics,Hard,O,214954,Marketa Vondrousova,202428,Kiki Bertens,6-4 3-6 6-4,3,R64,
+2021-650,Tokyo Olympics,Hard,O,202596,Mihaela Buzarnescu,201590,Alison Riske Amritraj,6-7(0) 7-5 6-4,3,R64,
+2021-650,Tokyo Olympics,Hard,O,203530,Viktorija Golubic,215785,Camila Osorio,6-4 6-1,3,R64,
+2021-650,Tokyo Olympics,Hard,O,211768,Naomi Osaka,202453,Saisai Zheng,6-1 6-4,3,R64,
+2021-650,Tokyo Olympics,Hard,O,204427,Sara Sorribes Tormo,211539,Fiona Ferro,6-1 6-4,3,R32,
+2021-650,Tokyo Olympics,Hard,O,201499,Anastasia Pavlyuchenkova,204431,Anna Lena Friedsam,6-1 6-1,3,R32,
+2021-650,Tokyo Olympics,Hard,O,202505,Belinda Bencic,201595,Misaki Doi,6-2 6-4,3,R32,
+2021-650,Tokyo Olympics,Hard,O,206252,Barbora Krejcikova,220367,Leylah Fernandez,6-2 6-4,3,R32,
+2021-650,Tokyo Olympics,Hard,O,202499,Donna Vekic,214544,Aryna Sabalenka,6-4 3-6 7-6(3),3,R32,
+2021-650,Tokyo Olympics,Hard,O,214981,Elena Rybakina,202490,Rebecca Peterson,6-2 6-3,3,R32,
+2021-650,Tokyo Olympics,Hard,O,202421,Alison Van Uytvanck,201520,Petra Kvitova,5-7 6-3 6-0,3,R32,
+2021-650,Tokyo Olympics,Hard,O,202469,Garbine Muguruza,202492,Qiang Wang,6-3 6-0,3,R32,
+2021-650,Tokyo Olympics,Hard,O,201662,Karolina Pliskova,201521,Carla Suarez Navarro,6-3 6-7(0) 6-1,3,R32,
+2021-650,Tokyo Olympics,Hard,O,202429,Camila Giorgi,201455,Elena Vesnina,6-3 6-1,3,R32,
+2021-650,Tokyo Olympics,Hard,O,206289,Maria Sakkari,211411,Nina Stojanovic,6-1 6-2,3,R32,
+2021-650,Tokyo Olympics,Hard,O,202494,Elina Svitolina,201548,Ajla Tomljanovic,4-6 6-3 6-4,3,R32,
+2021-650,Tokyo Olympics,Hard,O,211651,Paula Badosa,216347,Iga Swiatek,6-3 7-6(4),3,R32,
+2021-650,Tokyo Olympics,Hard,O,206408,Nadia Podoroska,206420,Ekaterina Alexandrova,6-1 6-3,3,R32,
+2021-650,Tokyo Olympics,Hard,O,214954,Marketa Vondrousova,202596,Mihaela Buzarnescu,6-1 6-2,3,R32,
+2021-650,Tokyo Olympics,Hard,O,211768,Naomi Osaka,203530,Viktorija Golubic,6-3 6-2,3,R32,
+2021-650,Tokyo Olympics,Hard,O,201499,Anastasia Pavlyuchenkova,204427,Sara Sorribes Tormo,6-1 6-3,3,R16,
+2021-650,Tokyo Olympics,Hard,O,202505,Belinda Bencic,206252,Barbora Krejcikova,1-6 6-2 6-3,3,R16,
+2021-650,Tokyo Olympics,Hard,O,214981,Elena Rybakina,202499,Donna Vekic,7-6(3) 6-4,3,R16,
+2021-650,Tokyo Olympics,Hard,O,202469,Garbine Muguruza,202421,Alison Van Uytvanck,6-4 6-1,3,R16,
+2021-650,Tokyo Olympics,Hard,O,202429,Camila Giorgi,201662,Karolina Pliskova,6-4 6-2,3,R16,
+2021-650,Tokyo Olympics,Hard,O,202494,Elina Svitolina,206289,Maria Sakkari,5-7 6-3 6-4,3,R16,
+2021-650,Tokyo Olympics,Hard,O,211651,Paula Badosa,206408,Nadia Podoroska,6-2 6-3,3,R16,
+2021-650,Tokyo Olympics,Hard,O,214954,Marketa Vondrousova,211768,Naomi Osaka,6-1 6-4,3,R16,
+2021-650,Tokyo Olympics,Hard,O,202505,Belinda Bencic,201499,Anastasia Pavlyuchenkova,6-0 3-6 6-3,3,QF,
+2021-650,Tokyo Olympics,Hard,O,214981,Elena Rybakina,202469,Garbine Muguruza,7-5 6-1,3,QF,
+2021-650,Tokyo Olympics,Hard,O,202494,Elina Svitolina,202429,Camila Giorgi,6-4 6-4,3,QF,
+2021-650,Tokyo Olympics,Hard,O,214954,Marketa Vondrousova,211651,Paula Badosa,6-3 0-0 RET,3,QF,
+2021-650,Tokyo Olympics,Hard,O,202505,Belinda Bencic,214981,Elena Rybakina,7-6(2) 4-6 6-3,3,SF,
+2021-650,Tokyo Olympics,Hard,O,214954,Marketa Vondrousova,202494,Elina Svitolina,6-3 6-1,3,SF,
+2021-650,Tokyo Olympics,Hard,O,202505,Belinda Bencic,214954,Marketa Vondrousova,7-5 2-6 6-3,3,F,
+2021-650,Tokyo Olympics,Hard,O,202494,Elina Svitolina,214981,Elena Rybakina,1-6 7-6(5) 6-4,3,BR,
+2021-806,Montreal,Hard,P,201662,Karolina Pliskova,214544,Aryna Sabalenka,6-3 6-4,3,SF,81
+2021-806,Montreal,Hard,P,202429,Camila Giorgi,202468,Jessica Pegula,6-3 3-6 6-1,3,SF,131
+2021-806,Montreal,Hard,P,214544,Aryna Sabalenka,201458,Victoria Azarenka,6-2 6-4,3,QF,79
+2021-806,Montreal,Hard,P,201662,Karolina Pliskova,204427,Sara Sorribes Tormo,6-4 6-0,3,QF,80
+2021-806,Montreal,Hard,P,202429,Camila Giorgi,221103,Coco Gauff,6-4 7-6(2),3,QF,99
+2021-806,Montreal,Hard,P,202468,Jessica Pegula,202460,Ons Jabeur,1-6 7-6(4) 6-0,3,QF,88
+2021-806,Montreal,Hard,P,214544,Aryna Sabalenka,201606,Rebecca Marino,6-1 6-3,3,R16,59
+2021-806,Montreal,Hard,P,201458,Victoria Azarenka,206289,Maria Sakkari,6-4 3-6 7-6(2),3,R16,156
+2021-806,Montreal,Hard,P,201662,Karolina Pliskova,216153,Amanda Anisimova,6-1 7-6(8),3,R16,82
+2021-806,Montreal,Hard,P,204427,Sara Sorribes Tormo,211701,Katerina Siniakova,6-7(4) 6-0 6-3,3,R16,170
+2021-806,Montreal,Hard,P,202429,Camila Giorgi,201520,Petra Kvitova,6-4 6-4,3,R16,96
+2021-806,Montreal,Hard,P,221103,Coco Gauff,202427,Johanna Konta,W/O,3,R16,0
+2021-806,Montreal,Hard,P,202468,Jessica Pegula,203389,Danielle Collins,6-4 3-6 7-5,3,R16,148
+2021-806,Montreal,Hard,P,202460,Ons Jabeur,215370,Bianca Andreescu,6-7(5) 6-4 6-1,3,R16,159
+2021-806,Montreal,Hard,P,214544,Aryna Sabalenka,201585,Sloane Stephens,7-6(4) 4-6 6-4,3,R32,145
+2021-806,Montreal,Hard,P,201606,Rebecca Marino,211651,Paula Badosa,1-6 7-5 6-4,3,R32,134
+2021-806,Montreal,Hard,P,206289,Maria Sakkari,206368,Veronika Kudermetova,6-4 5-7 6-4,3,R32,158
+2021-806,Montreal,Hard,P,201458,Victoria Azarenka,201514,Sorana Cirstea,6-2 6-2,3,R32,74
+2021-806,Montreal,Hard,P,201662,Karolina Pliskova,202499,Donna Vekic,4-6 6-3 7-6(2),3,R32,155
+2021-806,Montreal,Hard,P,216153,Amanda Anisimova,206219,Oceane Dodin,6-3 6-3,3,R32,78
+2021-806,Montreal,Hard,P,204427,Sara Sorribes Tormo,214643,Liudmila Samsonova,6-4 6-3,3,R32,94
+2021-806,Montreal,Hard,P,211701,Katerina Siniakova,202469,Garbine Muguruza,6-2 0-6 6-3,3,R32,119
+2021-806,Montreal,Hard,P,201520,Petra Kvitova,211539,Fiona Ferro,6-4 6-4,3,R32,89
+2021-806,Montreal,Hard,P,202429,Camila Giorgi,206408,Nadia Podoroska,6-2 6-4,3,R32,89
+2021-806,Montreal,Hard,P,221103,Coco Gauff,215713,Anastasia Potapova,5-0 RET,3,R32,22
+2021-806,Montreal,Hard,P,202427,Johanna Konta,202494,Elina Svitolina,3-6 6-3 6-2,3,R32,131
+2021-806,Montreal,Hard,P,203389,Danielle Collins,201594,Simona Halep,2-6 6-4 6-4,3,R32,175
+2021-806,Montreal,Hard,P,202468,Jessica Pegula,201499,Anastasia Pavlyuchenkova,1-6 6-3 6-2,3,R32,111
+2021-806,Montreal,Hard,P,202460,Ons Jabeur,214082,Daria Kasatkina,2-6 6-3 6-4,3,R32,128
+2021-806,Montreal,Hard,P,215370,Bianca Andreescu,211279,Harriet Dart,6-1 3-6 6-3,3,R32,122
+2021-806,Montreal,Hard,P,201585,Sloane Stephens,215035,Dayana Yastremska,6-4 1-6 6-4,3,R64,116
+2021-806,Montreal,Hard,P,211651,Paula Badosa,203530,Viktorija Golubic,6-2 6-3,3,R64,90
+2021-806,Montreal,Hard,P,201606,Rebecca Marino,201619,Madison Keys,6-3 6-3,3,R64,66
+2021-806,Montreal,Hard,P,206289,Maria Sakkari,213631,Marie Bouzkova,6-4 3-1 RET,3,R64,91
+2021-806,Montreal,Hard,P,206368,Veronika Kudermetova,201709,Yulia Putintseva,1-6 6-2 6-4,3,R64,124
+2021-806,Montreal,Hard,P,201514,Sorana Cirstea,201590,Alison Riske Amritraj,6-3 6-4,3,R64,92
+2021-806,Montreal,Hard,P,202499,Donna Vekic,202421,Alison Van Uytvanck,6-1 6-2,3,R64,65
+2021-806,Montreal,Hard,P,216153,Amanda Anisimova,206124,Tereza Martincova,6-1 4-3 RET+H64,3,R64,46
+2021-806,Montreal,Hard,P,206219,Oceane Dodin,214096,Karolina Muchova,6-3 1-6 6-2,3,R64,117
+2021-806,Montreal,Hard,P,214643,Liudmila Samsonova,214981,Elena Rybakina,6-4 5-7 6-4,3,R64,128
+2021-806,Montreal,Hard,P,204427,Sara Sorribes Tormo,203475,Carol Zhao,6-2 6-3,3,R64,86
+2021-806,Montreal,Hard,P,211701,Katerina Siniakova,211533,Jelena Ostapenko,6-1 6-3,3,R64,74
+2021-806,Montreal,Hard,P,211539,Fiona Ferro,201548,Ajla Tomljanovic,2-6 6-2,3,R64,84
+2021-806,Montreal,Hard,P,206408,Nadia Podoroska,202663,Magda Linette,6-1 6-2,3,R64,59
+2021-806,Montreal,Hard,P,202429,Camila Giorgi,210722,Elise Mertens,6-3 7-5,3,R64,91
+2021-806,Montreal,Hard,P,221103,Coco Gauff,201545,Anastasija Sevastova,6-1 6-4,3,R64,66
+2021-806,Montreal,Hard,P,215713,Anastasia Potapova,201603,Shelby Rogers,7-6(6) 6-3,3,R64,94
+2021-806,Montreal,Hard,P,202427,Johanna Konta,201533,Shuai Zhang,4-6 5-2 RET,3,R64,80
+2021-806,Montreal,Hard,P,203389,Danielle Collins,213525,Jil Teichmann,4-6 6-1 6-3,3,R64,117
+2021-806,Montreal,Hard,P,202468,Jessica Pegula,204426,Anett Kontaveit,5-7 6-3 6-3,3,R64,117
+2021-806,Montreal,Hard,P,201499,Anastasia Pavlyuchenkova,201614,Caroline Garcia,6-4 6-4,3,R64,89
+2021-806,Montreal,Hard,P,202460,Ons Jabeur,216262,Clara Burel,6-1 6-3,3,R64,55
+2021-806,Montreal,Hard,P,214082,Daria Kasatkina,201549,Petra Martic,7-5 6-3,3,R64,85
+2021-806,Montreal,Hard,P,211279,Harriet Dart,220367,Leylah Fernandez,7-5 7-6(4),3,R64,131
+2021-806,Montreal,Hard,P,202429,Camila Giorgi,201662,Karolina Pliskova,6-3 7-5,3,F,
+2021-1017,Cincinnati,Hard,P,202458,Ashleigh Barty,213525,Jil Teichmann,6-3 6-1,3,F,73
+2021-1017,Cincinnati,Hard,P,202458,Ashleigh Barty,201493,Angelique Kerber,6-2 7-5,3,SF,74
+2021-1017,Cincinnati,Hard,P,213525,Jil Teichmann,201662,Karolina Pliskova,6-2 6-4,3,SF,82
+2021-1017,Cincinnati,Hard,P,202458,Ashleigh Barty,206252,Barbora Krejcikova,6-2 6-4,3,QF,71
+2021-1017,Cincinnati,Hard,P,201493,Angelique Kerber,201520,Petra Kvitova,6-4 3-3 RET,3,QF,78
+2021-1017,Cincinnati,Hard,P,201662,Karolina Pliskova,211651,Paula Badosa,7-5 2-0 RET,3,QF,74
+2021-1017,Cincinnati,Hard,P,213525,Jil Teichmann,202505,Belinda Bencic,6-3 6-2,3,QF,71
+2021-1017,Cincinnati,Hard,P,202458,Ashleigh Barty,201458,Victoria Azarenka,6-0 6-2,3,R16,71
+2021-1017,Cincinnati,Hard,P,206252,Barbora Krejcikova,202469,Garbine Muguruza,6-1 6-7(5) 6-2,3,R16,144
+2021-1017,Cincinnati,Hard,P,201493,Angelique Kerber,211533,Jelena Ostapenko,4-6 6-2 7-5,3,R16,116
+2021-1017,Cincinnati,Hard,P,201520,Petra Kvitova,202460,Ons Jabeur,6-1 6-2,3,R16,63
+2021-1017,Cincinnati,Hard,P,201662,Karolina Pliskova,202468,Jessica Pegula,6-4 7-6(5),3,R16,84
+2021-1017,Cincinnati,Hard,P,211651,Paula Badosa,214981,Elena Rybakina,6-2 7-6(5),3,R16,85
+2021-1017,Cincinnati,Hard,P,202505,Belinda Bencic,214096,Karolina Muchova,7-5 2-1 RET,3,R16,75
+2021-1017,Cincinnati,Hard,P,213525,Jil Teichmann,211768,Naomi Osaka,3-6 6-3 6-3,3,R16,124
+2021-1017,Cincinnati,Hard,P,202458,Ashleigh Barty,201586,Heather Watson,6-4 7-6(3),3,R32,106
+2021-1017,Cincinnati,Hard,P,201458,Victoria Azarenka,201590,Alison Riske Amritraj,6-2 7-5,3,R32,96
+2021-1017,Cincinnati,Hard,P,206252,Barbora Krejcikova,215035,Dayana Yastremska,6-1 7-6(5),3,R32,101
+2021-1017,Cincinnati,Hard,P,202469,Garbine Muguruza,201614,Caroline Garcia,6-4 6-3,3,R32,100
+2021-1017,Cincinnati,Hard,P,201493,Angelique Kerber,202494,Elina Svitolina,7-5 2-6 6-4,3,R32,129
+2021-1017,Cincinnati,Hard,P,211533,Jelena Ostapenko,206108,Jennifer Brady,6-7(2) 5-4 RET,3,R32,111
+2021-1017,Cincinnati,Hard,P,201520,Petra Kvitova,206368,Veronika Kudermetova,6-2 6-4,3,R32,81
+2021-1017,Cincinnati,Hard,P,202460,Ons Jabeur,216347,Iga Swiatek,6-3 6-3,3,R32,78
+2021-1017,Cincinnati,Hard,P,201662,Karolina Pliskova,201709,Yulia Putintseva,6-3 6-2,3,R32,65
+2021-1017,Cincinnati,Hard,P,202468,Jessica Pegula,201594,Simona Halep,W/O,3,R32,0
+2021-1017,Cincinnati,Hard,P,214981,Elena Rybakina,210722,Elise Mertens,6-3 6-2,3,R32,74
+2021-1017,Cincinnati,Hard,P,211651,Paula Badosa,214544,Aryna Sabalenka,5-7 6-2 7-6(4),3,R32,139
+2021-1017,Cincinnati,Hard,P,214096,Karolina Muchova,215370,Bianca Andreescu,6-4 6-2,3,R32,86
+2021-1017,Cincinnati,Hard,P,202505,Belinda Bencic,201603,Shelby Rogers,7-6(1) 6-1,3,R32,98
+2021-1017,Cincinnati,Hard,P,213525,Jil Teichmann,211095,Bernarda Pera,6-1 6-4,3,R32,75
+2021-1017,Cincinnati,Hard,P,211768,Naomi Osaka,221103,Coco Gauff,4-6 6-3 6-4,3,R32,113
+2021-1017,Cincinnati,Hard,P,201586,Heather Watson,205925,Aliaksandra Sasnovich,6-2 3-6 6-1,3,R64,123
+2021-1017,Cincinnati,Hard,P,201590,Alison Riske Amritraj,220367,Leylah Fernandez,6-2 6-2,3,R64,80
+2021-1017,Cincinnati,Hard,P,201458,Victoria Azarenka,214643,Liudmila Samsonova,6-2 6-3,3,R64,69
+2021-1017,Cincinnati,Hard,P,206252,Barbora Krejcikova,214082,Daria Kasatkina,6-3 6-2,3,R64,72
+2021-1017,Cincinnati,Hard,P,215035,Dayana Yastremska,216083,Caty Mcnally,7-6(3) 7-6(1),3,R64,123
+2021-1017,Cincinnati,Hard,P,201614,Caroline Garcia,201585,Sloane Stephens,7-6(7) 4-6 6-4,3,R64,153
+2021-1017,Cincinnati,Hard,P,201493,Angelique Kerber,206289,Maria Sakkari,6-2 6-2,3,R64,69
+2021-1017,Cincinnati,Hard,P,211533,Jelena Ostapenko,214461,Tamara Zidansek,7-5 6-1,3,R64,75
+2021-1017,Cincinnati,Hard,P,206108,Jennifer Brady,206420,Ekaterina Alexandrova,6-3 7-6(3),3,R64,83
+2021-1017,Cincinnati,Hard,P,201520,Petra Kvitova,201619,Madison Keys,7-5 6-4,3,R64,92
+2021-1017,Cincinnati,Hard,P,206368,Veronika Kudermetova,211148,Jasmine Paolini,6-3 6-2,3,R64,69
+2021-1017,Cincinnati,Hard,P,202460,Ons Jabeur,204426,Anett Kontaveit,6-2 4-6 7-5,3,R64,133
+2021-1017,Cincinnati,Hard,P,201709,Yulia Putintseva,201533,Shuai Zhang,6-2 6-0,3,R64,45
+2021-1017,Cincinnati,Hard,P,202468,Jessica Pegula,202429,Camila Giorgi,6-2 6-2,3,R64,72
+2021-1017,Cincinnati,Hard,P,201594,Simona Halep,202663,Magda Linette,6-4 3-6 6-1,3,R64,130
+2021-1017,Cincinnati,Hard,P,210722,Elise Mertens,206408,Nadia Podoroska,6-3 6-4,3,R64,100
+2021-1017,Cincinnati,Hard,P,214981,Elena Rybakina,201325,Samantha Stosur,6-3 6-3,3,R64,70
+2021-1017,Cincinnati,Hard,P,211651,Paula Badosa,201549,Petra Martic,4-6 6-4 7-6(9),3,R64,154
+2021-1017,Cincinnati,Hard,P,214096,Karolina Muchova,202427,Johanna Konta,3-6 7-6(5) 6-2,3,R64,147
+2021-1017,Cincinnati,Hard,P,201603,Shelby Rogers,203389,Danielle Collins,6-4 2-1 RET,3,R64,70
+2021-1017,Cincinnati,Hard,P,202505,Belinda Bencic,214954,Marketa Vondrousova,6-3 7-5,3,R64,87
+2021-1017,Cincinnati,Hard,P,211095,Bernarda Pera,202490,Rebecca Peterson,6-4 6-1,3,R64,81
+2021-1017,Cincinnati,Hard,P,213525,Jil Teichmann,201514,Sorana Cirstea,6-2 6-0,3,R64,59
+2021-1017,Cincinnati,Hard,P,221103,Coco Gauff,201444,Su Wei Hsieh,6-1 6-2,3,R64,60
+2021-560,Us Open,Hard,G,202458,Ashleigh Barty,201329,Vera Zvonareva,6-1 7-6(7),3,R128,88
+2021-560,Us Open,Hard,G,220704,Clara Tauson,216262,Clara Burel,7-5 6-0,3,R128,74
+2021-560,Us Open,Hard,G,201603,Shelby Rogers,201483,Madison Brengle,6-4 6-0,3,R128,55
+2021-560,Us Open,Hard,G,201514,Sorana Cirstea,206368,Veronika Kudermetova,7-6(5) 3-6 6-0,3,R128,122
+2021-560,Us Open,Hard,G,204427,Sara Sorribes Tormo,214096,Karolina Muchova,6-2 7-6(3),3,R128,137
+2021-560,Us Open,Hard,G,201444,Su Wei Hsieh,214906,Claire Liu,6-1 6-4,3,R128,82
+2021-560,Us Open,Hard,G,201533,Shuai Zhang,221024,Hailey Baptiste,6-3 6-4,3,R128,66
+2021-560,Us Open,Hard,G,221054,Emma Raducanu,201527,Stefanie Voegele,6-2 6-3,3,R128,78
+2021-560,Us Open,Hard,G,202505,Belinda Bencic,201551,Arantxa Rus,6-4 6-4,3,R128,90
+2021-560,Us Open,Hard,G,203354,Martina Trevisan,201535,Coco Vandeweghe,6-1 7-5,3,R128,96
+2021-560,Us Open,Hard,G,201595,Misaki Doi,204411,Storm Hunter,7-6(3) 6-3,3,R128,82
+2021-560,Us Open,Hard,G,202468,Jessica Pegula,215713,Anastasia Potapova,6-2 6-2,3,R128,64
+2021-560,Us Open,Hard,G,204426,Anett Kontaveit,201325,Samantha Stosur,6-3 6-0,3,R128,71
+2021-560,Us Open,Hard,G,213525,Jil Teichmann,213710,Cristina Bucsa,6-3 6-4,3,R128,79
+2021-560,Us Open,Hard,G,211539,Fiona Ferro,211702,Nao Hibino,6-1 6-4,3,R128,68
+2021-560,Us Open,Hard,G,216347,Iga Swiatek,211222,Jamie Loeb,6-3 6-4,3,R128,74
+2021-560,Us Open,Hard,G,201662,Karolina Pliskova,216083,Caty Mcnally,6-3 6-4,3,R128,83
+2021-560,Us Open,Hard,G,216153,Amanda Anisimova,201610,Zarina Diyas,7-5 6-2,3,R128,66
+2021-560,Us Open,Hard,G,201548,Ajla Tomljanovic,220465,Katie Volynets,6-3 6-1,3,R128,63
+2021-560,Us Open,Hard,G,201549,Petra Martic,213646,Dalma Galfi,6-3 6-2,3,R128,76
+2021-560,Us Open,Hard,G,211651,Paula Badosa,202421,Alison Van Uytvanck,6-4 6-3,3,R128,80
+2021-560,Us Open,Hard,G,219875,Varvara Gracheva,203463,Nuria Parrizas Diaz,5-7 6-0 6-2,3,R128,140
+2021-560,Us Open,Hard,G,203533,Anna Karolina Schmiedlova,221909,Ashlyn Krueger,7-5 6-7(3) 6-3,3,R128,155
+2021-560,Us Open,Hard,G,201499,Anastasia Pavlyuchenkova,201590,Alison Riske Amritraj,6-4 6-2,3,R128,78
+2021-560,Us Open,Hard,G,201520,Petra Kvitova,201555,Polona Hercog,6-1 6-2,3,R128,61
+2021-560,Us Open,Hard,G,201697,Kristyna Pliskova,203575,Danka Kovinic,6-4 6-3,3,R128,66
+2021-560,Us Open,Hard,G,211701,Katerina Siniakova,201545,Anastasija Sevastova,7-6(6) 6-3,3,R128,116
+2021-560,Us Open,Hard,G,206289,Maria Sakkari,216146,Marta Kostyuk,6-4 6-3,3,R128,91
+2021-560,Us Open,Hard,G,213889,Greet Minnen,206408,Nadia Podoroska,6-4 1-6 6-3,3,R128,137
+2021-560,Us Open,Hard,G,214643,Liudmila Samsonova,211107,Katie Boulter,6-3 6-2,3,R128,72
+2021-560,Us Open,Hard,G,201616,Lauren Davis,202600,Viktoriya Tomova,6-2 2-6 6-3,3,R128,103
+2021-560,Us Open,Hard,G,215370,Bianca Andreescu,203530,Viktorija Golubic,7-5 4-6 7-5,3,R128,169
+2021-560,Us Open,Hard,G,202494,Elina Svitolina,201606,Rebecca Marino,6-2 6-3,3,R128,63
+2021-560,Us Open,Hard,G,214119,Rebeka Masarova,202536,Ana Bogdan,6-7(9) 7-6(2) 7-6(9),3,R128,220
+2021-560,Us Open,Hard,G,214954,Marketa Vondrousova,211817,Elena Gabriela Ruse,7-5 6-0,3,R128,88
+2021-560,Us Open,Hard,G,214082,Daria Kasatkina,201450,Tsvetana Pironkova,6-2 6-1,3,R128,64
+2021-560,Us Open,Hard,G,214981,Elena Rybakina,205925,Aliaksandra Sasnovich,6-2 6-3,3,R128,76
+2021-560,Us Open,Hard,G,201614,Caroline Garcia,211279,Harriet Dart,6-7(6) 6-4 6-2,3,R128,170
+2021-560,Us Open,Hard,G,201568,Kristina Kucova,215983,Ann Li,7-5 6-1,3,R128,79
+2021-560,Us Open,Hard,G,201594,Simona Halep,202429,Camila Giorgi,6-4 7-6(3),3,R128,93
+2021-560,Us Open,Hard,G,201493,Angelique Kerber,215035,Dayana Yastremska,3-6 6-4 7-6(3),3,R128,145
+2021-560,Us Open,Hard,G,211843,Anhelina Kalinina,210886,Mayar Sherif,4-6 6-1 6-1,3,R128,109
+2021-560,Us Open,Hard,G,201585,Sloane Stephens,201619,Madison Keys,6-3 1-6 7-6(7),3,R128,130
+2021-560,Us Open,Hard,G,221103,Coco Gauff,202663,Magda Linette,5-7 6-3 6-4,3,R128,154
+2021-560,Us Open,Hard,G,201466,Kaia Kanepi,201709,Yulia Putintseva,2-6 7-6(4) 6-2,3,R128,139
+2021-560,Us Open,Hard,G,220367,Leylah Fernandez,211951,Ana Konjuh,7-6(3) 6-2,3,R128,105
+2021-560,Us Open,Hard,G,215337,Olga Danilovic,219917,Alycia Parks,6-3 7-5,3,R128,88
+2021-560,Us Open,Hard,G,211768,Naomi Osaka,213631,Marie Bouzkova,6-4 6-1,3,R128,93
+2021-560,Us Open,Hard,G,206252,Barbora Krejcikova,206292,Astra Sharma,6-0 6-4,3,R128,74
+2021-560,Us Open,Hard,G,201539,Christina Mchale,215613,Emma Navarro,6-1 7-6(5),3,R128,100
+2021-560,Us Open,Hard,G,215872,Kamilla Rakhimova,201540,Kristina Mladenovic,2-6 6-2 6-3,3,R128,138
+2021-560,Us Open,Hard,G,206420,Ekaterina Alexandrova,201506,Sara Errani,6-3 6-2,3,R128,86
+2021-560,Us Open,Hard,G,201458,Victoria Azarenka,206124,Tereza Martincova,6-4 6-0,3,R128,70
+2021-560,Us Open,Hard,G,211148,Jasmine Paolini,201468,Yaroslava Shvedova,6-3 6-4,3,R128,66
+2021-560,Us Open,Hard,G,201492,Andrea Petkovic,201593,Irina Camelia Begu,6-2 7-6(3),3,R128,105
+2021-560,Us Open,Hard,G,202469,Garbine Muguruza,202499,Donna Vekic,7-6(4) 7-6(5),3,R128,139
+2021-560,Us Open,Hard,G,210722,Elise Mertens,202490,Rebecca Peterson,3-6 7-6(5) 7-6(5),3,R128,220
+2021-560,Us Open,Hard,G,204394,Valentini Grammatikopoulou,215020,Anna Blinkova,6-3 6-2,3,R128,75
+2021-560,Us Open,Hard,G,215785,Camila Osorio,211736,Ivana Jorovic,6-2 6-2,3,R128,68
+2021-560,Us Open,Hard,G,202460,Ons Jabeur,201427,Alize Cornet,7-5 7-5,3,R128,103
+2021-560,Us Open,Hard,G,203389,Danielle Collins,201521,Carla Suarez Navarro,6-2 6-4,3,R128,68
+2021-560,Us Open,Hard,G,215219,Kaja Juvan,201586,Heather Watson,6-1 6-4,3,R128,69
+2021-560,Us Open,Hard,G,214461,Tamara Zidansek,211095,Bernarda Pera,6-4 7-6(4),3,R128,116
+2021-560,Us Open,Hard,G,214544,Aryna Sabalenka,211411,Nina Stojanovic,6-4 6-7(4) 6-0,3,R128,144
+2021-560,Us Open,Hard,G,202458,Ashleigh Barty,220704,Clara Tauson,6-1 7-5,3,R64,90
+2021-560,Us Open,Hard,G,201603,Shelby Rogers,201514,Sorana Cirstea,7-5 6-2,3,R64,96
+2021-560,Us Open,Hard,G,204427,Sara Sorribes Tormo,201444,Su Wei Hsieh,6-1 6-3,3,R64,78
+2021-560,Us Open,Hard,G,221054,Emma Raducanu,201533,Shuai Zhang,6-2 6-4,3,R64,82
+2021-560,Us Open,Hard,G,202505,Belinda Bencic,203354,Martina Trevisan,6-3 6-1,3,R64,72
+2021-560,Us Open,Hard,G,202468,Jessica Pegula,201595,Misaki Doi,6-3 6-2,3,R64,65
+2021-560,Us Open,Hard,G,204426,Anett Kontaveit,213525,Jil Teichmann,6-4 6-1,3,R64,70
+2021-560,Us Open,Hard,G,216347,Iga Swiatek,211539,Fiona Ferro,3-6 7-6(3) 6-0,3,R64,123
+2021-560,Us Open,Hard,G,201662,Karolina Pliskova,216153,Amanda Anisimova,7-5 6-7(5) 7-6(7),3,R64,141
+2021-560,Us Open,Hard,G,201548,Ajla Tomljanovic,201549,Petra Martic,7-6(6) 6-4,3,R64,99
+2021-560,Us Open,Hard,G,219875,Varvara Gracheva,211651,Paula Badosa,6-4 6-4,3,R64,74
+2021-560,Us Open,Hard,G,201499,Anastasia Pavlyuchenkova,203533,Anna Karolina Schmiedlova,6-2 5-7 6-2,3,R64,152
+2021-560,Us Open,Hard,G,201520,Petra Kvitova,201697,Kristyna Pliskova,7-6(4) 6-2,3,R64,79
+2021-560,Us Open,Hard,G,206289,Maria Sakkari,211701,Katerina Siniakova,6-4 6-2,3,R64,75
+2021-560,Us Open,Hard,G,213889,Greet Minnen,214643,Liudmila Samsonova,6-4 6-4,3,R64,89
+2021-560,Us Open,Hard,G,215370,Bianca Andreescu,201616,Lauren Davis,6-4 6-4,3,R64,96
+2021-560,Us Open,Hard,G,202494,Elina Svitolina,214119,Rebeka Masarova,6-2 7-5,3,R64,75
+2021-560,Us Open,Hard,G,214082,Daria Kasatkina,214954,Marketa Vondrousova,3-6 6-4 6-4,3,R64,137
+2021-560,Us Open,Hard,G,214981,Elena Rybakina,201614,Caroline Garcia,6-1 6-4,3,R64,65
+2021-560,Us Open,Hard,G,201594,Simona Halep,201568,Kristina Kucova,6-3 6-1,3,R64,68
+2021-560,Us Open,Hard,G,201493,Angelique Kerber,211843,Anhelina Kalinina,6-3 6-2,3,R64,66
+2021-560,Us Open,Hard,G,201585,Sloane Stephens,221103,Coco Gauff,6-4 6-2,3,R64,66
+2021-560,Us Open,Hard,G,220367,Leylah Fernandez,201466,Kaia Kanepi,7-5 7-5,3,R64,116
+2021-560,Us Open,Hard,G,211768,Naomi Osaka,215337,Olga Danilovic,W/O,3,R64,
+2021-560,Us Open,Hard,G,206252,Barbora Krejcikova,201539,Christina Mchale,6-3 6-1,3,R64,83
+2021-560,Us Open,Hard,G,215872,Kamilla Rakhimova,206420,Ekaterina Alexandrova,6-4 6-1,3,R64,64
+2021-560,Us Open,Hard,G,201458,Victoria Azarenka,211148,Jasmine Paolini,6-3 7-6(1),3,R64,105
+2021-560,Us Open,Hard,G,202469,Garbine Muguruza,201492,Andrea Petkovic,6-4 6-2,3,R64,89
+2021-560,Us Open,Hard,G,210722,Elise Mertens,204394,Valentini Grammatikopoulou,6-2 6-2,3,R64,80
+2021-560,Us Open,Hard,G,202460,Ons Jabeur,215785,Camila Osorio,6-0 6-1,3,R64,53
+2021-560,Us Open,Hard,G,203389,Danielle Collins,215219,Kaja Juvan,6-4 6-2,3,R64,69
+2021-560,Us Open,Hard,G,214544,Aryna Sabalenka,214461,Tamara Zidansek,6-3 6-1,3,R64,59
+2021-560,Us Open,Hard,G,201603,Shelby Rogers,202458,Ashleigh Barty,6-2 1-6 7-6(5),3,R32,128
+2021-560,Us Open,Hard,G,221054,Emma Raducanu,204427,Sara Sorribes Tormo,6-0 6-1,3,R32,70
+2021-560,Us Open,Hard,G,202505,Belinda Bencic,202468,Jessica Pegula,6-2 6-4,3,R32,74
+2021-560,Us Open,Hard,G,216347,Iga Swiatek,204426,Anett Kontaveit,6-3 4-6 6-3,3,R32,137
+2021-560,Us Open,Hard,G,201662,Karolina Pliskova,201548,Ajla Tomljanovic,6-3 6-2,3,R32,71
+2021-560,Us Open,Hard,G,201499,Anastasia Pavlyuchenkova,219875,Varvara Gracheva,6-1 6-4,3,R32,100
+2021-560,Us Open,Hard,G,206289,Maria Sakkari,201520,Petra Kvitova,6-4 6-3,3,R32,81
+2021-560,Us Open,Hard,G,215370,Bianca Andreescu,213889,Greet Minnen,6-1 6-2,3,R32,67
+2021-560,Us Open,Hard,G,202494,Elina Svitolina,214082,Daria Kasatkina,6-4 6-2,3,R32,74
+2021-560,Us Open,Hard,G,201594,Simona Halep,214981,Elena Rybakina,7-6(11) 4-6 6-3,3,R32,145
+2021-560,Us Open,Hard,G,201493,Angelique Kerber,201585,Sloane Stephens,5-7 6-2 6-3,3,R32,118
+2021-560,Us Open,Hard,G,220367,Leylah Fernandez,211768,Naomi Osaka,5-7 7-6(2) 6-4,3,R32,124
+2021-560,Us Open,Hard,G,206252,Barbora Krejcikova,215872,Kamilla Rakhimova,6-4 6-2,3,R32,73
+2021-560,Us Open,Hard,G,202469,Garbine Muguruza,201458,Victoria Azarenka,6-4 3-6 6-2,3,R32,135
+2021-560,Us Open,Hard,G,210722,Elise Mertens,202460,Ons Jabeur,6-3 7-5,3,R32,88
+2021-560,Us Open,Hard,G,214544,Aryna Sabalenka,203389,Danielle Collins,6-3 6-3,3,R32,89
+2021-560,Us Open,Hard,G,221054,Emma Raducanu,201603,Shelby Rogers,6-2 6-1,3,R16,66
+2021-560,Us Open,Hard,G,202505,Belinda Bencic,216347,Iga Swiatek,7-6(12) 6-3,3,R16,127
+2021-560,Us Open,Hard,G,201662,Karolina Pliskova,201499,Anastasia Pavlyuchenkova,7-5 6-4,3,R16,95
+2021-560,Us Open,Hard,G,206289,Maria Sakkari,215370,Bianca Andreescu,6-7(2) 7-6(6) 6-3,3,R16,210
+2021-560,Us Open,Hard,G,202494,Elina Svitolina,201594,Simona Halep,6-3 6-3,3,R16,76
+2021-560,Us Open,Hard,G,220367,Leylah Fernandez,201493,Angelique Kerber,4-6 7-6(5) 6-2,3,R16,135
+2021-560,Us Open,Hard,G,206252,Barbora Krejcikova,202469,Garbine Muguruza,6-3 7-6(4),3,R16,114
+2021-560,Us Open,Hard,G,214544,Aryna Sabalenka,210722,Elise Mertens,6-4 6-1,3,R16,71
+2021-560,Us Open,Hard,G,221054,Emma Raducanu,202505,Belinda Bencic,6-3 6-4,3,QF,82
+2021-560,Us Open,Hard,G,206289,Maria Sakkari,201662,Karolina Pliskova,6-4 6-4,3,QF,82
+2021-560,Us Open,Hard,G,220367,Leylah Fernandez,202494,Elina Svitolina,6-3 3-6 7-6(5),3,QF,144
+2021-560,Us Open,Hard,G,214544,Aryna Sabalenka,206252,Barbora Krejcikova,6-1 6-4,3,QF,86
+2021-560,Us Open,Hard,G,221054,Emma Raducanu,206289,Maria Sakkari,6-1 6-4,3,SF,84
+2021-560,Us Open,Hard,G,220367,Leylah Fernandez,214544,Aryna Sabalenka,7-6(3) 4-6 6-4,3,SF,141
+2021-560,Us Open,Hard,G,221054,Emma Raducanu,220367,Leylah Fernandez,6-4 6-3,3,F,111
+2021-2025,Ostrava,Hard,P,206289,Maria Sakkari,216347,Iga Swiatek,6-4 7-5,3,SF,111
+2021-2025,Ostrava,Hard,P,204426,Anett Kontaveit,201520,Petra Kvitova,6-0 6-4,3,SF,71
+2021-2025,Ostrava,Hard,P,216347,Iga Swiatek,214981,Elena Rybakina,7-6(5) 6-2,3,QF,101
+2021-2025,Ostrava,Hard,P,206289,Maria Sakkari,206124,Tereza Martincova,7-5 6-3,3,QF,96
+2021-2025,Ostrava,Hard,P,204426,Anett Kontaveit,202505,Belinda Bencic,6-4 6-3,3,QF,74
+2021-2025,Ostrava,Hard,P,201520,Petra Kvitova,213525,Jil Teichmann,6-4 6-4,3,QF,96
+2021-2025,Ostrava,Hard,P,216347,Iga Swiatek,201709,Yulia Putintseva,6-4 6-4,3,R16,107
+2021-2025,Ostrava,Hard,P,214981,Elena Rybakina,202663,Magda Linette,6-3 2-6 6-1,3,R16,97
+2021-2025,Ostrava,Hard,P,206289,Maria Sakkari,211533,Jelena Ostapenko,6-4 6-2,3,R16,83
+2021-2025,Ostrava,Hard,P,206124,Tereza Martincova,201499,Anastasia Pavlyuchenkova,7-6(5) 7-6(6),3,R16,139
+2021-2025,Ostrava,Hard,P,204426,Anett Kontaveit,211651,Paula Badosa,6-3 6-4,3,R16,77
+2021-2025,Ostrava,Hard,P,202505,Belinda Bencic,204427,Sara Sorribes Tormo,6-2 6-3,3,R16,88
+2021-2025,Ostrava,Hard,P,213525,Jil Teichmann,201590,Alison Riske Amritraj,6-3 1-6 6-4,3,R16,119
+2021-2025,Ostrava,Hard,P,201520,Petra Kvitova,215713,Anastasia Potapova,6-1 6-7(4) 6-3,3,R16,125
+2021-2025,Ostrava,Hard,P,201709,Yulia Putintseva,201533,Shuai Zhang,5-7 7-6(7) 6-4,3,R32,204
+2021-2025,Ostrava,Hard,P,202663,Magda Linette,206219,Oceane Dodin,6-2 7-6(3),3,R32,89
+2021-2025,Ostrava,Hard,P,214981,Elena Rybakina,206368,Veronika Kudermetova,6-1 6-3,3,R32,77
+2021-2025,Ostrava,Hard,P,211533,Jelena Ostapenko,215020,Anna Blinkova,6-4 6-0,3,R32,66
+2021-2025,Ostrava,Hard,P,206124,Tereza Martincova,211701,Katerina Siniakova,5-7 6-4 7-6(7),3,R32,186
+2021-2025,Ostrava,Hard,P,201499,Anastasia Pavlyuchenkova,211951,Ana Konjuh,7-6(3) 6-1,3,R32,93
+2021-2025,Ostrava,Hard,P,211651,Paula Badosa,219875,Varvara Gracheva,6-2 6-2,3,R32,73
+2021-2025,Ostrava,Hard,P,204426,Anett Kontaveit,201514,Sorana Cirstea,6-4 6-4,3,R32,89
+2021-2025,Ostrava,Hard,P,204427,Sara Sorribes Tormo,220435,Anastasia Zakharova,6-3 6-3,3,R32,97
+2021-2025,Ostrava,Hard,P,213525,Jil Teichmann,201493,Angelique Kerber,6-2 6-3,3,R32,72
+2021-2025,Ostrava,Hard,P,201590,Alison Riske Amritraj,211539,Fiona Ferro,6-4 1-6 6-4,3,R32,135
+2021-2025,Ostrava,Hard,P,215713,Anastasia Potapova,201614,Caroline Garcia,6-2 7-6(6),3,R32,106
+2021-2025,Ostrava,Hard,P,204426,Anett Kontaveit,206289,Maria Sakkari,6-2 7-5,3,F,95
+2021-2048,Chicago 2,Hard,P,202469,Garbine Muguruza,202460,Ons Jabeur,3-6 6-3 6-0,3,F,97
+2021-2048,Chicago 2,Hard,P,202460,Ons Jabeur,214981,Elena Rybakina,6-4 3-2 RET,3,SF,52
+2021-2048,Chicago 2,Hard,P,202469,Garbine Muguruza,214954,Marketa Vondrousova,W/O,3,SF,0
+2021-2048,Chicago 2,Hard,P,202460,Ons Jabeur,202494,Elina Svitolina,6-4 6-2,3,QF,82
+2021-2048,Chicago 2,Hard,P,214981,Elena Rybakina,202505,Belinda Bencic,6-4 3-1,3,QF,68
+2021-2048,Chicago 2,Hard,P,214954,Marketa Vondrousova,203389,Danielle Collins,6-7(4) 6-0 7-6(3),3,QF,152
+2021-2048,Chicago 2,Hard,P,202469,Garbine Muguruza,215988,Mai Hontama,6-3 6-2,3,QF,100
+2021-2048,Chicago 2,Hard,P,202494,Elina Svitolina,211817,Elena Gabriela Ruse,6-3 6-3,3,R16,108
+2021-2048,Chicago 2,Hard,P,202460,Ons Jabeur,202468,Jessica Pegula,1-6 6-2 6-3,3,R16,94
+2021-2048,Chicago 2,Hard,P,202505,Belinda Bencic,206124,Tereza Martincova,6-2 7-6(5),3,R16,101
+2021-2048,Chicago 2,Hard,P,214981,Elena Rybakina,206368,Veronika Kudermetova,7-6(4) 7-5,3,R16,120
+2021-2048,Chicago 2,Hard,P,203389,Danielle Collins,210722,Elise Mertens,6-2 6-4,3,R16,84
+2021-2048,Chicago 2,Hard,P,214954,Marketa Vondrousova,213525,Jil Teichmann,6-4 6-3,3,R16,79
+2021-2048,Chicago 2,Hard,P,215988,Mai Hontama,201603,Shelby Rogers,6-4 6-7(1) 6-1,3,R16,153
+2021-2048,Chicago 2,Hard,P,202469,Garbine Muguruza,201458,Victoria Azarenka,W/O,3,R16,0
+2021-2048,Chicago 2,Hard,P,202494,Elina Svitolina,216153,Amanda Anisimova,6-4 6-3,3,R32,80
+2021-2048,Chicago 2,Hard,P,211817,Elena Gabriela Ruse,203462,Kateryna Baindl,7-5 6-2,3,R32,114
+2021-2048,Chicago 2,Hard,P,202468,Jessica Pegula,201492,Andrea Petkovic,6-2 7-5,3,R32,91
+2021-2048,Chicago 2,Hard,P,202460,Ons Jabeur,201444,Su Wei Hsieh,6-1 6-0,3,R32,46
+2021-2048,Chicago 2,Hard,P,202505,Belinda Bencic,213666,Maddison Inglis,5-7 6-1 6-0,3,R32,130
+2021-2048,Chicago 2,Hard,P,206124,Tereza Martincova,214461,Tamara Zidansek,6-2 7-5,3,R32,73
+2021-2048,Chicago 2,Hard,P,206368,Veronika Kudermetova,211279,Harriet Dart,6-3 6-4,3,R32,87
+2021-2048,Chicago 2,Hard,P,214981,Elena Rybakina,205925,Aliaksandra Sasnovich,6-4 6-4,3,R32,89
+2021-2048,Chicago 2,Hard,P,210722,Elise Mertens,215035,Dayana Yastremska,6-1 6-3,3,R32,65
+2021-2048,Chicago 2,Hard,P,203389,Danielle Collins,201595,Misaki Doi,4-6 6-3 7-5,3,R32,131
+2021-2048,Chicago 2,Hard,P,213525,Jil Teichmann,202663,Magda Linette,6-2 6-4,3,R32,86
+2021-2048,Chicago 2,Hard,P,214954,Marketa Vondrousova,201499,Anastasia Pavlyuchenkova,6-3 6-2,3,R32,72
+2021-2048,Chicago 2,Hard,P,201603,Shelby Rogers,215370,Bianca Andreescu,6-4 7-5,3,R32,113
+2021-2048,Chicago 2,Hard,P,215988,Mai Hontama,204426,Anett Kontaveit,W/O,3,R32,0
+2021-2048,Chicago 2,Hard,P,201458,Victoria Azarenka,221024,Hailey Baptiste,6-2 4-6 6-3,3,R32,127
+2021-2048,Chicago 2,Hard,P,202469,Garbine Muguruza,215983,Ann Li,6-4 6-4,3,R32,90
+2021-2048,Chicago 2,Hard,P,216153,Amanda Anisimova,203530,Viktorija Golubic,6-0 5-7 6-4,3,R64,121
+2021-2048,Chicago 2,Hard,P,203462,Kateryna Baindl,216146,Marta Kostyuk,6-7(2) 6-3 6-0,3,R64,126
+2021-2048,Chicago 2,Hard,P,211817,Elena Gabriela Ruse,202429,Camila Giorgi,6-4 6-2,3,R64,93
+2021-2048,Chicago 2,Hard,P,202468,Jessica Pegula,211684,Magdalena Frech,6-3 6-0,3,R64,66
+2021-2048,Chicago 2,Hard,P,201492,Andrea Petkovic,201501,Olga Govortsova,6-2 6-2,3,R64,77
+2021-2048,Chicago 2,Hard,P,201444,Su Wei Hsieh,200079,Kim Clijsters,6-3 5-7 6-3,3,R64,138
+2021-2048,Chicago 2,Hard,P,213666,Maddison Inglis,214452,Caroline Dolehide,4-6 6-2 6-4,3,R64,142
+2021-2048,Chicago 2,Hard,P,206124,Tereza Martincova,215785,Camila Osorio,6-3 7-5,3,R64,86
+2021-2048,Chicago 2,Hard,P,214461,Tamara Zidansek,201585,Sloane Stephens,6-2 6-1,3,R64,73
+2021-2048,Chicago 2,Hard,P,206368,Veronika Kudermetova,214939,Anna Kalinskaya,7-6(8) 4-6 6-2,3,R64,147
+2021-2048,Chicago 2,Hard,P,211279,Harriet Dart,206242,Beatriz Haddad Maia,6-1 3-6 6-1,3,R64,129
+2021-2048,Chicago 2,Hard,P,205925,Aliaksandra Sasnovich,201619,Madison Keys,6-4 2-0 RET,3,R64,77
+2021-2048,Chicago 2,Hard,P,215035,Dayana Yastremska,201427,Alize Cornet,7-5 6-1,3,R64,96
+2021-2048,Chicago 2,Hard,P,201595,Misaki Doi,213631,Marie Bouzkova,6-3 6-7(4) 6-3,3,R64,185
+2021-2048,Chicago 2,Hard,P,203389,Danielle Collins,201465,Kirsten Flipkens,6-4 6-2,3,R64,81
+2021-2048,Chicago 2,Hard,P,213525,Jil Teichmann,201466,Kaia Kanepi,7-6(3) 7-5,3,R64,102
+2021-2048,Chicago 2,Hard,P,202663,Magda Linette,201535,Coco Vandeweghe,6-1 6-4,3,R64,74
+2021-2048,Chicago 2,Hard,P,214954,Marketa Vondrousova,201548,Ajla Tomljanovic,6-2 6-1,3,R64,62
+2021-2048,Chicago 2,Hard,P,201603,Shelby Rogers,211878,Lizette Cabrera,6-2 6-1,3,R64,70
+2021-2048,Chicago 2,Hard,P,215988,Mai Hontama,201614,Caroline Garcia,6-3 6-0,3,R64,74
+2021-2048,Chicago 2,Hard,P,204426,Anett Kontaveit,201483,Madison Brengle,6-4 6-3,3,R64,83
+2021-2048,Chicago 2,Hard,P,201458,Victoria Azarenka,201533,Shuai Zhang,6-2 6-1,3,R64,61
+2021-2048,Chicago 2,Hard,P,221024,Hailey Baptiste,211148,Jasmine Paolini,7-5 6-3,3,R64,101
+2021-2048,Chicago 2,Hard,P,215983,Ann Li,202499,Donna Vekic,6-3 6-1,3,R64,68
+2021-609,Indian Wells,Hard,P,211651,Paula Badosa,201458,Victoria Azarenka,7-6(5) 2-6 7-6(2),3,F,184
+2021-609,Indian Wells,Hard,P,211651,Paula Badosa,202460,Ons Jabeur,6-3 6-3,3,SF,81
+2021-609,Indian Wells,Hard,P,201458,Victoria Azarenka,211533,Jelena Ostapenko,3-6 6-3 7-5,3,SF,140
+2021-609,Indian Wells,Hard,P,202460,Ons Jabeur,204426,Anett Kontaveit,7-5 6-3,3,QF,86
+2021-609,Indian Wells,Hard,P,211651,Paula Badosa,201493,Angelique Kerber,6-4 7-5,3,QF,86
+2021-609,Indian Wells,Hard,P,201458,Victoria Azarenka,202468,Jessica Pegula,6-4 6-2,3,QF,94
+2021-609,Indian Wells,Hard,P,211533,Jelena Ostapenko,201603,Shelby Rogers,6-4 4-6 6-3,3,QF,135
+2021-609,Indian Wells,Hard,P,204426,Anett Kontaveit,206242,Beatriz Haddad Maia,6-0 6-2,3,R16,65
+2021-609,Indian Wells,Hard,P,202460,Ons Jabeur,214939,Anna Kalinskaya,6-2 6-2,3,R16,78
+2021-609,Indian Wells,Hard,P,211651,Paula Badosa,206252,Barbora Krejcikova,6-1 7-5,3,R16,85
+2021-609,Indian Wells,Hard,P,201493,Angelique Kerber,201548,Ajla Tomljanovic,6-4 6-1,3,R16,86
+2021-609,Indian Wells,Hard,P,201458,Victoria Azarenka,205925,Aliaksandra Sasnovich,6-3 6-4,3,R16,91
+2021-609,Indian Wells,Hard,P,202468,Jessica Pegula,202494,Elina Svitolina,6-1 6-1,3,R16,68
+2021-609,Indian Wells,Hard,P,201603,Shelby Rogers,220367,Leylah Fernandez,2-6 6-1 7-6(4),3,R16,154
+2021-609,Indian Wells,Hard,P,211533,Jelena Ostapenko,216347,Iga Swiatek,6-4 6-3,3,R16,93
+2021-609,Indian Wells,Hard,P,206242,Beatriz Haddad Maia,201662,Karolina Pliskova,6-3 7-5,3,R32,124
+2021-609,Indian Wells,Hard,P,204426,Anett Kontaveit,215370,Bianca Andreescu,7-6(5) 6-3,3,R32,109
+2021-609,Indian Wells,Hard,P,202460,Ons Jabeur,203389,Danielle Collins,6-1 6-3,3,R32,73
+2021-609,Indian Wells,Hard,P,214939,Anna Kalinskaya,203530,Viktorija Golubic,1-6 6-1 6-3,3,R32,112
+2021-609,Indian Wells,Hard,P,206252,Barbora Krejcikova,216153,Amanda Anisimova,6-2 6-3,3,R32,70
+2021-609,Indian Wells,Hard,P,211651,Paula Badosa,221103,Coco Gauff,6-2 6-2,3,R32,54
+2021-609,Indian Wells,Hard,P,201493,Angelique Kerber,214082,Daria Kasatkina,6-2 1-6 6-4,3,R32,107
+2021-609,Indian Wells,Hard,P,201548,Ajla Tomljanovic,214461,Tamara Zidansek,6-4 6-3,3,R32,96
+2021-609,Indian Wells,Hard,P,201458,Victoria Azarenka,201520,Petra Kvitova,7-5 6-4,3,R32,109
+2021-609,Indian Wells,Hard,P,205925,Aliaksandra Sasnovich,201594,Simona Halep,7-5 6-4,3,R32,98
+2021-609,Indian Wells,Hard,P,202468,Jessica Pegula,211148,Jasmine Paolini,6-4 6-1,3,R32,58
+2021-609,Indian Wells,Hard,P,202494,Elina Svitolina,201514,Sorana Cirstea,4-6 6-4 7-6(3),3,R32,152
+2021-609,Indian Wells,Hard,P,201603,Shelby Rogers,201593,Irina Camelia Begu,6-0 6-2,3,R32,72
+2021-609,Indian Wells,Hard,P,220367,Leylah Fernandez,201499,Anastasia Pavlyuchenkova,5-7 6-3 6-4,3,R32,161
+2021-609,Indian Wells,Hard,P,211533,Jelena Ostapenko,201709,Yulia Putintseva,6-3 2-6 6-3,3,R32,113
+2021-609,Indian Wells,Hard,P,216347,Iga Swiatek,206368,Veronika Kudermetova,6-1 6-0,3,R32,54
+2021-609,Indian Wells,Hard,P,201662,Karolina Pliskova,211684,Magdalena Frech,7-5 6-2,3,R64,80
+2021-609,Indian Wells,Hard,P,206242,Beatriz Haddad Maia,210886,Mayar Sherif,6-3 6-0,3,R64,88
+2021-609,Indian Wells,Hard,P,204426,Anett Kontaveit,203354,Martina Trevisan,6-3 5-2 RET,3,R64,91
+2021-609,Indian Wells,Hard,P,215370,Bianca Andreescu,201590,Alison Riske Amritraj,7-6(2) 5-7 6-2,3,R64,168
+2021-609,Indian Wells,Hard,P,202460,Ons Jabeur,201545,Anastasija Sevastova,6-2 6-7(5) 6-3,3,R64,116
+2021-609,Indian Wells,Hard,P,203389,Danielle Collins,201616,Lauren Davis,6-1 RET,3,R64,28
+2021-609,Indian Wells,Hard,P,214939,Anna Kalinskaya,204427,Sara Sorribes Tormo,6-3 4-6 6-2,3,R64,167
+2021-609,Indian Wells,Hard,P,203530,Viktorija Golubic,206289,Maria Sakkari,5-7 6-3 6-2,3,R64,153
+2021-609,Indian Wells,Hard,P,206252,Barbora Krejcikova,201610,Zarina Diyas,6-4 3-6 6-1,3,R64,123
+2021-609,Indian Wells,Hard,P,216153,Amanda Anisimova,202429,Camila Giorgi,6-4 6-1,3,R64,83
+2021-609,Indian Wells,Hard,P,211651,Paula Badosa,215035,Dayana Yastremska,6-4 2-6 6-2,3,R64,106
+2021-609,Indian Wells,Hard,P,221103,Coco Gauff,201614,Caroline Garcia,6-3 6-7(2) 6-1,3,R64,130
+2021-609,Indian Wells,Hard,P,201493,Angelique Kerber,211701,Katerina Siniakova,6-1 6-7(4) 7-5,3,R64,149
+2021-609,Indian Wells,Hard,P,214082,Daria Kasatkina,206292,Astra Sharma,3-4 RET,3,R64,48
+2021-609,Indian Wells,Hard,P,214461,Tamara Zidansek,211951,Ana Konjuh,6-4 5-7 6-3,3,R64,133
+2021-609,Indian Wells,Hard,P,201548,Ajla Tomljanovic,202469,Garbine Muguruza,6-3 1-6 6-3,3,R64,112
+2021-609,Indian Wells,Hard,P,201520,Petra Kvitova,201551,Arantxa Rus,6-2 6-2,3,R64,76
+2021-609,Indian Wells,Hard,P,201458,Victoria Azarenka,202663,Magda Linette,7-5 3-0 RET,3,R64,79
+2021-609,Indian Wells,Hard,P,205925,Aliaksandra Sasnovich,221054,Emma Raducanu,6-2 6-4,3,R64,85
+2021-609,Indian Wells,Hard,P,201594,Simona Halep,216146,Marta Kostyuk,7-6(2) 6-1,3,R64,93
+2021-609,Indian Wells,Hard,P,211148,Jasmine Paolini,210722,Elise Mertens,3-6 6-4 6-4,3,R64,169
+2021-609,Indian Wells,Hard,P,202468,Jessica Pegula,201585,Sloane Stephens,6-2 6-3,3,R64,67
+2021-609,Indian Wells,Hard,P,201514,Sorana Cirstea,201595,Misaki Doi,6-2 6-3,3,R64,64
+2021-609,Indian Wells,Hard,P,202494,Elina Svitolina,206124,Tereza Martincova,6-2 7-5,3,R64,68
+2021-609,Indian Wells,Hard,P,201603,Shelby Rogers,201568,Kristina Kucova,6-2 6-2,3,R64,61
+2021-609,Indian Wells,Hard,P,201593,Irina Camelia Begu,213525,Jil Teichmann,7-5 6-1,3,R64,96
+2021-609,Indian Wells,Hard,P,220367,Leylah Fernandez,201427,Alize Cornet,6-2 6-3,3,R64,84
+2021-609,Indian Wells,Hard,P,201499,Anastasia Pavlyuchenkova,201619,Madison Keys,6-3 6-1,3,R64,58
+2021-609,Indian Wells,Hard,P,201709,Yulia Putintseva,214981,Elena Rybakina,6-2 7-6(5),3,R64,118
+2021-609,Indian Wells,Hard,P,211533,Jelena Ostapenko,201444,Su Wei Hsieh,6-3 6-0,3,R64,60
+2021-609,Indian Wells,Hard,P,206368,Veronika Kudermetova,214643,Liudmila Samsonova,6-2 6-3,3,R64,70
+2021-609,Indian Wells,Hard,P,216347,Iga Swiatek,201549,Petra Martic,6-1 6-3,3,R64,71
+2021-609,Indian Wells,Hard,P,211684,Magdalena Frech,202453,Saisai Zheng,6-1 6-4,3,R128,85
+2021-609,Indian Wells,Hard,P,210886,Mayar Sherif,203575,Danka Kovinic,6-1 6-3,3,R128,90
+2021-609,Indian Wells,Hard,P,203354,Martina Trevisan,213631,Marie Bouzkova,6-4 6-7(8) 6-4,3,R128,232
+2021-609,Indian Wells,Hard,P,201590,Alison Riske Amritraj,215314,En Shuo Liang,6-2 6-2,3,R128,73
+2021-609,Indian Wells,Hard,P,201545,Anastasija Sevastova,201555,Polona Hercog,3-6 6-2 6-0,3,R128,103
+2021-609,Indian Wells,Hard,P,201616,Lauren Davis,203463,Nuria Parrizas Diaz,6-2 7-5,3,R128,95
+2021-609,Indian Wells,Hard,P,214939,Anna Kalinskaya,214906,Claire Liu,6-3 2-6 6-1,3,R128,127
+2021-609,Indian Wells,Hard,P,203530,Viktorija Golubic,214954,Marketa Vondrousova,6-1 4-6 6-3,3,R128,112
+2021-609,Indian Wells,Hard,P,201610,Zarina Diyas,211702,Nao Hibino,6-3 6-3,3,R128,73
+2021-609,Indian Wells,Hard,P,216153,Amanda Anisimova,221512,Katrina Scott,6-1 6-1,3,R128,53
+2021-609,Indian Wells,Hard,P,215035,Dayana Yastremska,221039,Elsa Jacquemot,6-2 6-4,3,R128,93
+2021-609,Indian Wells,Hard,P,201614,Caroline Garcia,201465,Kirsten Flipkens,5-7 6-4 6-0,3,R128,129
+2021-609,Indian Wells,Hard,P,211701,Katerina Siniakova,200079,Kim Clijsters,6-1 2-6 6-2,3,R128,96
+2021-609,Indian Wells,Hard,P,206292,Astra Sharma,202499,Donna Vekic,6-4 2-6 6-3,3,R128,117
+2021-609,Indian Wells,Hard,P,211951,Ana Konjuh,203533,Anna Karolina Schmiedlova,6-2 6-2,3,R128,84
+2021-609,Indian Wells,Hard,P,201548,Ajla Tomljanovic,213672,Usue Maitane Arconada,6-0 6-2,3,R128,76
+2021-609,Indian Wells,Hard,P,201551,Arantxa Rus,219917,Alycia Parks,6-0 6-1,3,R128,63
+2021-609,Indian Wells,Hard,P,202663,Magda Linette,202490,Rebecca Peterson,3-6 6-3 6-2,3,R128,109
+2021-609,Indian Wells,Hard,P,205925,Aliaksandra Sasnovich,215785,Camila Osorio,6-0 6-4,3,R128,94
+2021-609,Indian Wells,Hard,P,216146,Marta Kostyuk,201533,Shuai Zhang,6-3 1-6 6-2,3,R128,92
+2021-609,Indian Wells,Hard,P,211148,Jasmine Paolini,215988,Mai Hontama,6-0 3-6 6-2,3,R128,102
+2021-609,Indian Wells,Hard,P,201585,Sloane Stephens,201586,Heather Watson,6-7(5) 7-5 6-1,3,R128,170
+2021-609,Indian Wells,Hard,P,201595,Misaki Doi,215983,Ann Li,6-2 5-7 7-5,3,R128,143
+2021-609,Indian Wells,Hard,P,206124,Tereza Martincova,221909,Ashlyn Krueger,6-2 7-6(1),3,R128,93
+2021-609,Indian Wells,Hard,P,201603,Shelby Rogers,211843,Anhelina Kalinina,7-6(2) 6-2,3,R128,125
+2021-609,Indian Wells,Hard,P,201593,Irina Camelia Begu,211539,Fiona Ferro,6-2 7-6(2),3,R128,135
+2021-609,Indian Wells,Hard,P,201427,Alize Cornet,211817,Elena Gabriela Ruse,6-3 7-6(5),3,R128,129
+2021-609,Indian Wells,Hard,P,201619,Madison Keys,201466,Kaia Kanepi,6-0 7-5,3,R128,69
+2021-609,Indian Wells,Hard,P,201709,Yulia Putintseva,201492,Andrea Petkovic,7-6(2) 6-1,3,R128,94
+2021-609,Indian Wells,Hard,P,201444,Su Wei Hsieh,201483,Madison Brengle,6-1 7-6(4),3,R128,83
+2021-609,Indian Wells,Hard,P,214643,Liudmila Samsonova,203462,Kateryna Baindl,6-4 7-6(6),3,R128,124
+2021-609,Indian Wells,Hard,P,201549,Petra Martic,220465,Katie Volynets,6-4 6-4,3,R128,104
+2021-730,Moscow,Hard,P,204426,Anett Kontaveit,206420,Ekaterina Alexandrova,4-6 6-4 7-5,3,F,142
+2021-730,Moscow,Hard,P,206420,Ekaterina Alexandrova,206289,Maria Sakkari,4-1 RET,3,SF,22
+2021-730,Moscow,Hard,P,204426,Anett Kontaveit,214954,Marketa Vondrousova,6-3 6-4,3,SF,74
+2021-730,Moscow,Hard,P,206420,Ekaterina Alexandrova,214544,Aryna Sabalenka,6-3 6-4,3,QF,73
+2021-730,Moscow,Hard,P,206289,Maria Sakkari,201594,Simona Halep,6-4 6-4,3,QF,104
+2021-730,Moscow,Hard,P,214954,Marketa Vondrousova,201499,Anastasia Pavlyuchenkova,6-4 6-2,3,QF,80
+2021-730,Moscow,Hard,P,204426,Anett Kontaveit,202469,Garbine Muguruza,6-1 6-1,3,QF,48
+2021-730,Moscow,Hard,P,214544,Aryna Sabalenka,201548,Ajla Tomljanovic,7-6(2) 4-6 6-1,3,R16,127
+2021-730,Moscow,Hard,P,206420,Ekaterina Alexandrova,211843,Anhelina Kalinina,6-4 6-1,3,R16,79
+2021-730,Moscow,Hard,P,206289,Maria Sakkari,214939,Anna Kalinskaya,6-2 1-0 RET,3,R16,34
+2021-730,Moscow,Hard,P,201594,Simona Halep,206368,Veronika Kudermetova,6-1 7-6(4),3,R16,99
+2021-730,Moscow,Hard,P,214954,Marketa Vondrousova,201615,Lesia Tsurenko,6-3 6-3,3,R16,77
+2021-730,Moscow,Hard,P,201499,Anastasia Pavlyuchenkova,211095,Bernarda Pera,6-2 7-5,3,R16,100
+2021-730,Moscow,Hard,P,204426,Anett Kontaveit,201492,Andrea Petkovic,6-1 6-4,3,R16,69
+2021-730,Moscow,Hard,P,202469,Garbine Muguruza,206124,Tereza Martincova,6-4 4-6 6-3,3,R16,165
+2021-730,Moscow,Hard,P,201548,Ajla Tomljanovic,214643,Liudmila Samsonova,6-2 6-4,3,R32,90
+2021-730,Moscow,Hard,P,211843,Anhelina Kalinina,214082,Daria Kasatkina,6-2 6-3,3,R32,83
+2021-730,Moscow,Hard,P,206420,Ekaterina Alexandrova,202460,Ons Jabeur,6-1 1-0,3,R32,33
+2021-730,Moscow,Hard,P,214939,Anna Kalinskaya,215035,Dayana Yastremska,7-6(5) 6-4,3,R32,129
+2021-730,Moscow,Hard,P,206368,Veronika Kudermetova,221407,Oksana Selekhmeteva,4-6 7-6(3) 6-4,3,R32,140
+2021-730,Moscow,Hard,P,201594,Simona Halep,215713,Anastasia Potapova,6-1 6-4,3,R32,90
+2021-730,Moscow,Hard,P,214954,Marketa Vondrousova,214981,Elena Rybakina,6-4 6-4,3,R32,82
+2021-730,Moscow,Hard,P,201615,Lesia Tsurenko,221012,Qinwen Zheng,6-4 6-3,3,R32,87
+2021-730,Moscow,Hard,P,211095,Bernarda Pera,202434,Aleksandra Krunic,7-6(3) 6-3,3,R32,96
+2021-730,Moscow,Hard,P,204426,Anett Kontaveit,211701,Katerina Siniakova,6-3 6-3,3,R32,73
+2021-730,Moscow,Hard,P,201492,Andrea Petkovic,211533,Jelena Ostapenko,2-6 6-0 2-0 RET,3,R32,88
+2021-730,Moscow,Hard,P,206124,Tereza Martincova,210705,Irina Bara,6-0 7-5,3,R32,79
+2021-808,Guadalajara Finals,Hard,F,206289,Maria Sakkari,214544,Aryna Sabalenka,7-6(1) 6-7(6) 6-3,3,RR,167
+2021-808,Guadalajara Finals,Hard,F,214544,Aryna Sabalenka,216347,Iga Swiatek,2-6 6-2 7-5,3,RR,138
+2021-808,Guadalajara Finals,Hard,F,211651,Paula Badosa,214544,Aryna Sabalenka,6-4 6-0,3,RR,76
+2021-808,Guadalajara Finals,Hard,F,206289,Maria Sakkari,216347,Iga Swiatek,6-2 6-4,3,RR,86
+2021-808,Guadalajara Finals,Hard,F,211651,Paula Badosa,206289,Maria Sakkari,7-6(4) 6-4,3,RR,124
+2021-808,Guadalajara Finals,Hard,F,216347,Iga Swiatek,211651,Paula Badosa,7-5 6-4,3,RR,99
+2021-808,Guadalajara Finals,Hard,F,201662,Karolina Pliskova,206252,Barbora Krejcikova,0-6 6-4 6-4,3,RR,127
+2021-808,Guadalajara Finals,Hard,F,202469,Garbine Muguruza,206252,Barbora Krejcikova,2-6 6-3 6-4,3,RR,130
+2021-808,Guadalajara Finals,Hard,F,204426,Anett Kontaveit,206252,Barbora Krejcikova,6-3 6-4,3,RR,75
+2021-808,Guadalajara Finals,Hard,F,201662,Karolina Pliskova,202469,Garbine Muguruza,4-6 6-2 7-6(6),3,RR,146
+2021-808,Guadalajara Finals,Hard,F,204426,Anett Kontaveit,201662,Karolina Pliskova,6-4 6-0,3,RR,57
+2021-808,Guadalajara Finals,Hard,F,202469,Garbine Muguruza,204426,Anett Kontaveit,6-4 6-4,3,RR,87
+2021-808,Guadalajara Finals,Hard,F,204426,Anett Kontaveit,206289,Maria Sakkari,6-1 3-6 6-3,3,SF,122
+2021-808,Guadalajara Finals,Hard,F,202469,Garbine Muguruza,211651,Paula Badosa,6-3 6-3,3,SF,85
+2021-808,Guadalajara Finals,Hard,F,202469,Garbine Muguruza,204426,Anett Kontaveit,6-3 7-5,3,F,98

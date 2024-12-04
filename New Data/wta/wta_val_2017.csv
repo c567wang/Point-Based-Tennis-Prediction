@@ -1,0 +1,1424 @@
+tourney_id,tourney_name,surface,tourney_level,winner_id,winner_name,loser_id,loser_name,score,best_of,round,minutes
+2017-0602,New Haven,Hard,P,201427,Alize Cornet,201709,Yulia Putintseva,6-0 6-0,3,R32,60
+2017-0602,New Haven,Hard,P,201521,Carla Suarez Navarro,202450,Jana Cepelova,6-4 4-0 RET,3,R32,66
+2017-0602,New Haven,Hard,P,201499,Anastasia Pavlyuchenkova,201539,Christina Mchale,3-6 6-2 6-4,3,R32,125
+2017-0602,New Haven,Hard,P,201533,Shuai Zhang,201520,Petra Kvitova,6-2 6-1,3,R32,67
+2017-0602,New Haven,Hard,P,202663,Magda Linette,201311,Roberta Vinci,6-3 6-1,3,R32,61
+2017-0602,New Haven,Hard,P,210722,Elise Mertens,202428,Kiki Bertens,4-6 6-4 6-2,3,R32,116
+2017-0602,New Haven,Hard,P,214082,Daria Kasatkina,201366,Barbora Strycova,7-5 6-3,3,R32,109
+2017-0602,New Haven,Hard,P,202536,Ana Bogdan,201455,Elena Vesnina,7-5 7-5,3,R32,119
+2017-0602,New Haven,Hard,P,201465,Kirsten Flipkens,201615,Lesia Tsurenko,6-2 6-3,3,R32,65
+2017-0602,New Haven,Hard,P,201611,Daria Saville,201697,Kristyna Pliskova,7-5 4-6 7-5,3,R32,132
+2017-0602,New Haven,Hard,P,201693,Timea Babos,201540,Kristina Mladenovic,7-5 7-5,3,R32,104
+2017-0602,New Haven,Hard,P,201397,Shuai Peng,211701,Katerina Siniakova,1-6 6-3 7-6(3),3,R32,134
+2017-0602,New Haven,Hard,P,200002,Mirjana Lucic,204426,Anett Kontaveit,6-4 6-7(3) 6-3,3,R32,125
+2017-0602,New Haven,Hard,P,202446,Eugenie Bouchard,201616,Lauren Davis,6-1 6-3,3,R32,73
+2017-0602,New Haven,Hard,P,201495,Dominika Cibulkova,201427,Alize Cornet,2-6 6-2 6-4,3,R16,122
+2017-0602,New Haven,Hard,P,201499,Anastasia Pavlyuchenkova,201521,Carla Suarez Navarro,7-6(3) 6-0,3,R16,93
+2017-0602,New Haven,Hard,P,201533,Shuai Zhang,202663,Magda Linette,6-3 6-7(4) 6-3,3,R16,142
+2017-0602,New Haven,Hard,P,210722,Elise Mertens,214082,Daria Kasatkina,6-2 7-5,3,R16,84
+2017-0602,New Haven,Hard,P,201465,Kirsten Flipkens,202536,Ana Bogdan,6-1 7-6(1),3,R16,98
+2017-0602,New Haven,Hard,P,201611,Daria Saville,201693,Timea Babos,7-5 7-6(6),3,R16,132
+2017-0602,New Haven,Hard,P,201397,Shuai Peng,200002,Mirjana Lucic,6-2 6-3,3,R16,77
+2017-0602,New Haven,Hard,P,201474,Agnieszka Radwanska,202446,Eugenie Bouchard,6-3 7-5,3,R16,105
+2017-0602,New Haven,Hard,P,201495,Dominika Cibulkova,201499,Anastasia Pavlyuchenkova,7-5 6-4,3,QF,123
+2017-0602,New Haven,Hard,P,210722,Elise Mertens,201533,Shuai Zhang,W/O,3,QF,0
+2017-0602,New Haven,Hard,P,201611,Daria Saville,201465,Kirsten Flipkens,6-2 6-4,3,QF,105
+2017-0602,New Haven,Hard,P,201474,Agnieszka Radwanska,201397,Shuai Peng,7-5 6-3,3,QF,110
+2017-0602,New Haven,Hard,P,201495,Dominika Cibulkova,210722,Elise Mertens,6-1 6-3,3,SF,69
+2017-0602,New Haven,Hard,P,201611,Daria Saville,201474,Agnieszka Radwanska,6-4 6-4,3,SF,93
+2017-0602,New Haven,Hard,P,201611,Daria Saville,201495,Dominika Cibulkova,4-6 6-3 6-4,3,F,165
+2017-0703,Stanford,Hard,P,201435,Kateryna Bondarenko,201212,Francesca Schiavone,6-3 6-4,3,R32,88
+2017-0703,Stanford,Hard,P,202705,Veronica Cepede Royg,201529,Kristie Ahn,2-6 7-5 6-1,3,R32,130
+2017-0703,Stanford,Hard,P,214263,Catherine Cartan Bellis,201427,Alize Cornet,6-3 6-2,3,R32,76
+2017-0703,Stanford,Hard,P,201590,Alison Riske Amritraj,202663,Magda Linette,6-2 6-4,3,R32,90
+2017-0703,Stanford,Hard,P,202484,Nicole Gibbs,214906,Claire Liu,4-6 6-2 7-6(5),3,R32,138
+2017-0703,Stanford,Hard,P,201535,Coco Vandeweghe,201548,Ajla Tomljanovic,6-2 0-0 RET,3,R32,31
+2017-0703,Stanford,Hard,P,201615,Lesia Tsurenko,202418,Lara Arruabarrena,6-3 6-3,3,R32,72
+2017-0703,Stanford,Hard,P,201345,Maria Sharapova,206108,Jennifer Brady,6-1 4-6 6-0,3,R32,122
+2017-0703,Stanford,Hard,P,214452,Caroline Dolehide,211768,Naomi Osaka,6-4 6-2,3,R32,83
+2017-0703,Stanford,Hard,P,211951,Ana Konjuh,201523,Marina Erakovic,6-3 1-0 RET,3,R32,48
+2017-0703,Stanford,Hard,P,212001,Natalia Vikhlyantseva,203398,Danielle Lao,6-4 6-3,3,R32,98
+2017-0703,Stanford,Hard,P,215037,Kayla Day,201595,Misaki Doi,6-4 6-2,3,R32,85
+2017-0703,Stanford,Hard,P,201520,Petra Kvitova,201435,Kateryna Bondarenko,6-2 6-2,3,R16,60
+2017-0703,Stanford,Hard,P,214263,Catherine Cartan Bellis,202705,Veronica Cepede Royg,7-6(3) 6-2,3,R16,86
+2017-0703,Stanford,Hard,P,201499,Anastasia Pavlyuchenkova,201590,Alison Riske Amritraj,6-4 6-0,3,R16,72
+2017-0703,Stanford,Hard,P,201535,Coco Vandeweghe,202484,Nicole Gibbs,6-0 6-2,3,R16,64
+2017-0703,Stanford,Hard,P,201615,Lesia Tsurenko,201345,Maria Sharapova,W/O,3,R16,0
+2017-0703,Stanford,Hard,P,201619,Madison Keys,214452,Caroline Dolehide,3-6 6-2 6-3,3,R16,95
+2017-0703,Stanford,Hard,P,211951,Ana Konjuh,212001,Natalia Vikhlyantseva,7-5 6-4,3,R16,94
+2017-0703,Stanford,Hard,P,202469,Garbine Muguruza,215037,Kayla Day,6-2 6-0,3,R16,58
+2017-0703,Stanford,Hard,P,214263,Catherine Cartan Bellis,201520,Petra Kvitova,6-2 6-0,3,QF,62
+2017-0703,Stanford,Hard,P,201535,Coco Vandeweghe,201499,Anastasia Pavlyuchenkova,6-2 6-3,3,QF,65
+2017-0703,Stanford,Hard,P,201619,Madison Keys,201615,Lesia Tsurenko,6-4 6-3,3,QF,70
+2017-0703,Stanford,Hard,P,202469,Garbine Muguruza,211951,Ana Konjuh,6-1 6-3,3,QF,62
+2017-0703,Stanford,Hard,P,201535,Coco Vandeweghe,214263,Catherine Cartan Bellis,6-3 6-1,3,SF,65
+2017-0703,Stanford,Hard,P,201619,Madison Keys,202469,Garbine Muguruza,6-3 6-2,3,SF,57
+2017-0703,Stanford,Hard,P,201619,Madison Keys,201535,Coco Vandeweghe,7-6(4) 6-4,3,F,88
+2017-0718,Dubai,Hard,P,201540,Kristina Mladenovic,211701,Katerina Siniakova,6-3 6-3,3,R64,88
+2017-0718,Dubai,Hard,P,202492,Qiang Wang,211533,Jelena Ostapenko,7-6(1) 6-2,3,R64,84
+2017-0718,Dubai,Hard,P,202460,Ons Jabeur,201499,Anastasia Pavlyuchenkova,7-6(6) 2-6 6-4,3,R64,126
+2017-0718,Dubai,Hard,P,201590,Alison Riske Amritraj,201535,Coco Vandeweghe,6-4 6-4,3,R64,106
+2017-0718,Dubai,Hard,P,201545,Anastasija Sevastova,201593,Irina Camelia Begu,6-1 7-5,3,R64,82
+2017-0718,Dubai,Hard,P,201397,Shuai Peng,201615,Lesia Tsurenko,6-1 6-1,3,R64,55
+2017-0718,Dubai,Hard,P,210722,Elise Mertens,201450,Tsvetana Pironkova,6-3 6-2,3,R64,64
+2017-0718,Dubai,Hard,P,201696,Laura Siegemund,201562,Silvia Soler Espinosa,6-7(4) 6-4 7-6(3),3,R64,177
+2017-0718,Dubai,Hard,P,214263,Catherine Cartan Bellis,201709,Yulia Putintseva,6-1 7-5,3,R64,95
+2017-0718,Dubai,Hard,P,201496,Caroline Wozniacki,214082,Daria Kasatkina,6-2 7-5,3,R64,90
+2017-0718,Dubai,Hard,P,203530,Viktorija Golubic,201666,Cagla Buyukakcay,6-7(4) 6-3 6-2,3,R64,163
+2017-0718,Dubai,Hard,P,201435,Kateryna Bondarenko,214544,Aryna Sabalenka,4-6 6-4 6-3,3,R64,100
+2017-0718,Dubai,Hard,P,202453,Saisai Zheng,202418,Lara Arruabarrena,6-4 3-6 6-3,3,R64,140
+2017-0718,Dubai,Hard,P,211768,Naomi Osaka,201578,Kai Chen Chang,6-2 6-4,3,R64,79
+2017-0718,Dubai,Hard,P,201539,Christina Mchale,202428,Kiki Bertens,6-7(5) 6-3 6-4,3,R64,153
+2017-0718,Dubai,Hard,P,201697,Kristyna Pliskova,201311,Roberta Vinci,3-6 7-5 6-3,3,R64,114
+2017-0718,Dubai,Hard,P,201616,Lauren Davis,201605,Mandy Minella,2-6 6-2 6-1,3,R64,98
+2017-0718,Dubai,Hard,P,201505,Kate Makarova,202684,Lin Zhu,6-3 6-1,3,R64,61
+2017-0718,Dubai,Hard,P,201595,Misaki Doi,201483,Madison Brengle,6-2 6-7(4) 6-3,3,R64,126
+2017-0718,Dubai,Hard,P,211951,Ana Konjuh,201533,Shuai Zhang,6-0 6-1,3,R64,49
+2017-0718,Dubai,Hard,P,201325,Samantha Stosur,203576,Kai Lin Zhang,6-3 6-3,3,R64,74
+2017-0718,Dubai,Hard,P,201614,Caroline Garcia,201596,Johanna Larsson,6-3 6-3,3,R64,67
+2017-0718,Dubai,Hard,P,201620,Monica Puig,201468,Yaroslava Shvedova,6-3 4-6 6-4,3,R64,129
+2017-0718,Dubai,Hard,P,201621,Mona Barthel,201347,Jelena Jankovic,6-1 6-3,3,R64,59
+2017-0718,Dubai,Hard,P,201540,Kristina Mladenovic,201662,Karolina Pliskova,6-2 6-4,3,R32,75
+2017-0718,Dubai,Hard,P,202492,Qiang Wang,202460,Ons Jabeur,6-3 6-1,3,R32,63
+2017-0718,Dubai,Hard,P,201545,Anastasija Sevastova,201590,Alison Riske Amritraj,6-4 6-7(3) 6-2,3,R32,149
+2017-0718,Dubai,Hard,P,201397,Shuai Peng,201366,Barbora Strycova,6-3 6-2,3,R32,82
+2017-0718,Dubai,Hard,P,201474,Agnieszka Radwanska,210722,Elise Mertens,6-3 6-2,3,R32,69
+2017-0718,Dubai,Hard,P,214263,Catherine Cartan Bellis,201696,Laura Siegemund,7-5 7-6(3),3,R32,142
+2017-0718,Dubai,Hard,P,201496,Caroline Wozniacki,203530,Viktorija Golubic,6-4 6-2,3,R32,110
+2017-0718,Dubai,Hard,P,201435,Kateryna Bondarenko,202469,Garbine Muguruza,4-1 RET,3,R32,24
+2017-0718,Dubai,Hard,P,202494,Elina Svitolina,202453,Saisai Zheng,7-5 6-1,3,R32,69
+2017-0718,Dubai,Hard,P,201539,Christina Mchale,211768,Naomi Osaka,6-3 6-4,3,R32,92
+2017-0718,Dubai,Hard,P,201616,Lauren Davis,201697,Kristyna Pliskova,1-6 6-1 6-3,3,R32,94
+2017-0718,Dubai,Hard,P,201505,Kate Makarova,201495,Dominika Cibulkova,6-2 4-6 6-2,3,R32,130
+2017-0718,Dubai,Hard,P,201455,Elena Vesnina,201595,Misaki Doi,6-2 7-5,3,R32,78
+2017-0718,Dubai,Hard,P,211951,Ana Konjuh,201325,Samantha Stosur,6-4 6-3,3,R32,83
+2017-0718,Dubai,Hard,P,201620,Monica Puig,201614,Caroline Garcia,6-1 4-6 6-2,3,R32,98
+2017-0718,Dubai,Hard,P,201493,Angelique Kerber,201621,Mona Barthel,6-4 6-3,3,R32,78
+2017-0718,Dubai,Hard,P,202492,Qiang Wang,201540,Kristina Mladenovic,6-1 6-4,3,R16,81
+2017-0718,Dubai,Hard,P,201545,Anastasija Sevastova,201397,Shuai Peng,6-4 6-3,3,R16,79
+2017-0718,Dubai,Hard,P,214263,Catherine Cartan Bellis,201474,Agnieszka Radwanska,6-4 2-6 6-2,3,R16,112
+2017-0718,Dubai,Hard,P,201496,Caroline Wozniacki,201435,Kateryna Bondarenko,3-6 6-2 6-3,3,R16,126
+2017-0718,Dubai,Hard,P,202494,Elina Svitolina,201539,Christina Mchale,4-6 6-4 6-3,3,R16,142
+2017-0718,Dubai,Hard,P,201616,Lauren Davis,201505,Kate Makarova,4-6 6-1 6-3,3,R16,117
+2017-0718,Dubai,Hard,P,211951,Ana Konjuh,201455,Elena Vesnina,3-6 6-4 7-6(4),3,R16,151
+2017-0718,Dubai,Hard,P,201493,Angelique Kerber,201620,Monica Puig,6-2 6-3,3,R16,65
+2017-0718,Dubai,Hard,P,201545,Anastasija Sevastova,202492,Qiang Wang,6-4 7-5,3,QF,81
+2017-0718,Dubai,Hard,P,201496,Caroline Wozniacki,214263,Catherine Cartan Bellis,6-3 6-2,3,QF,67
+2017-0718,Dubai,Hard,P,202494,Elina Svitolina,201616,Lauren Davis,6-0 6-4,3,QF,64
+2017-0718,Dubai,Hard,P,201493,Angelique Kerber,211951,Ana Konjuh,6-3 6-2,3,QF,74
+2017-0718,Dubai,Hard,P,201496,Caroline Wozniacki,201545,Anastasija Sevastova,6-3 6-4,3,SF,86
+2017-0718,Dubai,Hard,P,202494,Elina Svitolina,201493,Angelique Kerber,6-3 7-6(3),3,SF,100
+2017-0718,Dubai,Hard,P,202494,Elina Svitolina,201496,Caroline Wozniacki,6-4 6-2,3,F,88
+2017-0804,Charleston,Clay,P,201590,Alison Riske Amritraj,215037,Kayla Day,7-5 4-6 6-0,3,R64,136
+2017-0804,Charleston,Clay,P,214082,Daria Kasatkina,203575,Danka Kovinic,6-1 6-2,3,R64,59
+2017-0804,Charleston,Clay,P,201620,Monica Puig,211701,Katerina Siniakova,4-6 6-2 4-1 RET,3,R64,121
+2017-0804,Charleston,Clay,P,201593,Irina Camelia Begu,201666,Cagla Buyukakcay,6-0 6-0,3,R64,64
+2017-0804,Charleston,Clay,P,201568,Kristina Kucova,201562,Silvia Soler Espinosa,5-7 7-5 7-6(2),3,R64,190
+2017-0804,Charleston,Clay,P,201347,Jelena Jankovic,206420,Ekaterina Alexandrova,6-0 6-4,3,R64,62
+2017-0804,Charleston,Clay,P,201696,Laura Siegemund,201615,Lesia Tsurenko,6-7(6) 6-2 7-6(4),3,R64,198
+2017-0804,Charleston,Clay,P,201318,Bethanie Mattek Sands,213550,Sofia Kenin,6-4 6-4,3,R64,91
+2017-0804,Charleston,Clay,P,201425,Lucie Safarova,201478,Varvara Lepchenko,7-5 6-7(6) 6-3,3,R64,172
+2017-0804,Charleston,Clay,P,202663,Magda Linette,201709,Yulia Putintseva,4-6 6-2 6-4,3,R64,145
+2017-0804,Charleston,Clay,P,202460,Ons Jabeur,201523,Marina Erakovic,6-4 6-1,3,R64,77
+2017-0804,Charleston,Clay,P,201492,Andrea Petkovic,202418,Lara Arruabarrena,7-5 6-2,3,R64,94
+2017-0804,Charleston,Clay,P,202470,Annika Beck,211635,Louisa Chirico,6-0 3-0 RET,3,R64,40
+2017-0804,Charleston,Clay,P,201370,Anastasia Rodionova,202504,Ying Ying Duan,7-6(3) 6-1,3,R64,72
+2017-0804,Charleston,Clay,P,201506,Sara Errani,202479,Grace Min,6-1 6-1,3,R64,61
+2017-0804,Charleston,Clay,P,206289,Maria Sakkari,201616,Lauren Davis,7-5 6-4,3,R64,103
+2017-0804,Charleston,Clay,P,211533,Jelena Ostapenko,202536,Ana Bogdan,6-4 6-2,3,R64,73
+2017-0804,Charleston,Clay,P,214541,Fanny Stollar,201534,Asia Muhammad,6-3 7-5,3,R64,100
+2017-0804,Charleston,Clay,P,201435,Kateryna Bondarenko,201516,Evgeniya Rodina,6-4 7-5,3,R64,86
+2017-0804,Charleston,Clay,P,201621,Mona Barthel,206108,Jennifer Brady,7-5 6-4,3,R64,91
+2017-0804,Charleston,Clay,P,200002,Mirjana Lucic,202434,Aleksandra Krunic,6-1 4-6 6-3,3,R64,112
+2017-0804,Charleston,Clay,P,201533,Shuai Zhang,201595,Misaki Doi,6-2 6-1,3,R64,63
+2017-0804,Charleston,Clay,P,211768,Naomi Osaka,201596,Johanna Larsson,6-7(4) 6-4 6-2,3,R64,118
+2017-0804,Charleston,Clay,P,201603,Shelby Rogers,202705,Veronica Cepede Royg,6-7(1) 6-3 7-6(6),3,R64,162
+2017-0804,Charleston,Clay,P,201611,Daria Saville,201590,Alison Riske Amritraj,6-3 6-1,3,R32,69
+2017-0804,Charleston,Clay,P,214082,Daria Kasatkina,201620,Monica Puig,6-0 6-7(3) 6-2,3,R32,121
+2017-0804,Charleston,Clay,P,201593,Irina Camelia Begu,201568,Kristina Kucova,4-6 6-2 7-6(6),3,R32,149
+2017-0804,Charleston,Clay,P,201325,Samantha Stosur,201347,Jelena Jankovic,6-1 6-3,3,R32,73
+2017-0804,Charleston,Clay,P,201696,Laura Siegemund,200748,Venus Williams,6-4 6-7(3) 7-5,3,R32,182
+2017-0804,Charleston,Clay,P,201425,Lucie Safarova,201318,Bethanie Mattek Sands,6-3 6-3,3,R32,86
+2017-0804,Charleston,Clay,P,202460,Ons Jabeur,202663,Magda Linette,6-4 6-4,3,R32,80
+2017-0804,Charleston,Clay,P,201545,Anastasija Sevastova,201492,Andrea Petkovic,6-3 6-4,3,R32,83
+2017-0804,Charleston,Clay,P,201496,Caroline Wozniacki,202470,Annika Beck,7-5 6-1,3,R32,0
+2017-0804,Charleston,Clay,P,201370,Anastasia Rodionova,201506,Sara Errani,6-2 6-2,3,R32,61
+2017-0804,Charleston,Clay,P,211533,Jelena Ostapenko,206289,Maria Sakkari,6-2 4-6 6-2,3,R32,115
+2017-0804,Charleston,Clay,P,214541,Fanny Stollar,201455,Elena Vesnina,7-6(7) 7-6(3),3,R32,125
+2017-0804,Charleston,Clay,P,202428,Kiki Bertens,201435,Kateryna Bondarenko,6-2 7-5,3,R32,95
+2017-0804,Charleston,Clay,P,200002,Mirjana Lucic,201621,Mona Barthel,6-3 6-2,3,R32,60
+2017-0804,Charleston,Clay,P,211768,Naomi Osaka,201533,Shuai Zhang,6-4 6-4,3,R32,69
+2017-0804,Charleston,Clay,P,201603,Shelby Rogers,201619,Madison Keys,4-6 6-1 6-1,3,R32,96
+2017-0804,Charleston,Clay,P,214082,Daria Kasatkina,201611,Daria Saville,6-3 4-6 6-0,3,R16,137
+2017-0804,Charleston,Clay,P,201593,Irina Camelia Begu,201325,Samantha Stosur,7-5 6-3,3,R16,99
+2017-0804,Charleston,Clay,P,201696,Laura Siegemund,201425,Lucie Safarova,6-2 6-3,3,R16,80
+2017-0804,Charleston,Clay,P,201545,Anastasija Sevastova,202460,Ons Jabeur,7-5 7-6(6),3,R16,104
+2017-0804,Charleston,Clay,P,201496,Caroline Wozniacki,201370,Anastasia Rodionova,6-3 6-3,3,R16,82
+2017-0804,Charleston,Clay,P,211533,Jelena Ostapenko,214541,Fanny Stollar,6-1 1-0 RET,3,R16,38
+2017-0804,Charleston,Clay,P,200002,Mirjana Lucic,202428,Kiki Bertens,7-6(5) 6-4,3,R16,107
+2017-0804,Charleston,Clay,P,201603,Shelby Rogers,211768,Naomi Osaka,6-4 6-2,3,R16,89
+2017-0804,Charleston,Clay,P,214082,Daria Kasatkina,201593,Irina Camelia Begu,6-4 6-1,3,QF,72
+2017-0804,Charleston,Clay,P,201696,Laura Siegemund,201545,Anastasija Sevastova,6-2 6-4,3,QF,80
+2017-0804,Charleston,Clay,P,211533,Jelena Ostapenko,201496,Caroline Wozniacki,6-2 6-4,3,QF,86
+2017-0804,Charleston,Clay,P,200002,Mirjana Lucic,201603,Shelby Rogers,6-7(7) 6-1 6-1,3,QF,130
+2017-0804,Charleston,Clay,P,214082,Daria Kasatkina,201696,Laura Siegemund,3-6 6-2 6-1,3,SF,138
+2017-0804,Charleston,Clay,P,211533,Jelena Ostapenko,200002,Mirjana Lucic,6-3 5-7 6-4,3,SF,126
+2017-0804,Charleston,Clay,P,214082,Daria Kasatkina,211533,Jelena Ostapenko,6-3 6-1,3,F,66
+2017-0806,Toronto,Hard,P,201517,Magdalena Rybarikova,200002,Mirjana Lucic,7-5 6-0,3,R64,64
+2017-0806,Toronto,Hard,P,201611,Daria Saville,202418,Lara Arruabarrena,6-3 6-3,3,R64,69
+2017-0806,Toronto,Hard,P,201366,Barbora Strycova,201540,Kristina Mladenovic,6-2 6-3,3,R64,75
+2017-0806,Toronto,Hard,P,201478,Varvara Lepchenko,211533,Jelena Ostapenko,1-6 7-6(2) 7-6(5),3,R64,156
+2017-0806,Toronto,Hard,P,201614,Caroline Garcia,201514,Sorana Cirstea,6-2 6-7(4) 6-4,3,R64,140
+2017-0806,Toronto,Hard,P,214263,Catherine Cartan Bellis,201504,Julia Goerges,4-6 6-3 6-2,3,R64,113
+2017-0806,Toronto,Hard,P,201465,Kirsten Flipkens,211951,Ana Konjuh,6-2 0-0 RET,3,R64,35
+2017-0806,Toronto,Hard,P,202458,Ashleigh Barty,206219,Oceane Dodin,5-0 RET,3,R64,22
+2017-0806,Toronto,Hard,P,201455,Elena Vesnina,201590,Alison Riske Amritraj,6-3 6-3,3,R64,72
+2017-0806,Toronto,Hard,P,200748,Venus Williams,201593,Irina Camelia Begu,6-1 3-6 6-3,3,R64,116
+2017-0806,Toronto,Hard,P,211701,Katerina Siniakova,201531,Mariana Duque Marino,4-6 6-0 6-4,3,R64,125
+2017-0806,Toronto,Hard,P,214082,Daria Kasatkina,201311,Roberta Vinci,7-6(3) 7-6(1),3,R64,114
+2017-0806,Toronto,Hard,P,201505,Kate Makarova,201397,Shuai Peng,6-1 6-3,3,R64,72
+2017-0806,Toronto,Hard,P,201425,Lucie Safarova,211796,Francoise Abanda,6-4 6-4,3,R64,88
+2017-0806,Toronto,Hard,P,201495,Dominika Cibulkova,201615,Lesia Tsurenko,7-6(3) 6-4,3,R64,107
+2017-0806,Toronto,Hard,P,201520,Petra Kvitova,201521,Carla Suarez Navarro,6-1 7-6(5),3,R64,93
+2017-0806,Toronto,Hard,P,201585,Sloane Stephens,201709,Yulia Putintseva,6-7(4) 6-0 6-4,3,R64,132
+2017-0806,Toronto,Hard,P,202499,Donna Vekic,202446,Eugenie Bouchard,6-3 6-4,3,R64,94
+2017-0806,Toronto,Hard,P,206420,Ekaterina Alexandrova,203500,Sachia Vickery,6-1 7-6(3),3,R64,75
+2017-0806,Toronto,Hard,P,201693,Timea Babos,215370,Bianca Andreescu,6-4 6-1,3,R64,75
+2017-0806,Toronto,Hard,P,201474,Agnieszka Radwanska,201535,Coco Vandeweghe,6-3 6-2,3,R64,79
+2017-0806,Toronto,Hard,P,201545,Anastasija Sevastova,201616,Lauren Davis,6-1 4-6 6-3,3,R64,113
+2017-0806,Toronto,Hard,P,211768,Naomi Osaka,201586,Heather Watson,6-1 4-1 RET,3,R64,52
+2017-0806,Toronto,Hard,P,201499,Anastasia Pavlyuchenkova,201427,Alize Cornet,6-0 6-1,3,R64,55
+2017-0806,Toronto,Hard,P,201594,Simona Halep,201517,Magdalena Rybarikova,6-3 6-4,3,R32,
+2017-0806,Toronto,Hard,P,201366,Barbora Strycova,201611,Daria Saville,4-6 7-6(5) 6-3,3,R32,171
+2017-0806,Toronto,Hard,P,201614,Caroline Garcia,201478,Varvara Lepchenko,6-1 6-4,3,R32,69
+2017-0806,Toronto,Hard,P,214263,Catherine Cartan Bellis,201320,Svetlana Kuznetsova,6-4 7-5,3,R32,88
+2017-0806,Toronto,Hard,P,202469,Garbine Muguruza,201465,Kirsten Flipkens,7-5 6-2,3,R32,85
+2017-0806,Toronto,Hard,P,202458,Ashleigh Barty,201455,Elena Vesnina,6-3 5-7 6-4,3,R32,
+2017-0806,Toronto,Hard,P,200748,Venus Williams,211701,Katerina Siniakova,7-5 7-5,3,R32,
+2017-0806,Toronto,Hard,P,202494,Elina Svitolina,214082,Daria Kasatkina,7-6(4) 6-4,3,R32,110
+2017-0806,Toronto,Hard,P,201505,Kate Makarova,202427,Johanna Konta,5-7 7-6(4) 6-3,3,R32,
+2017-0806,Toronto,Hard,P,201425,Lucie Safarova,201495,Dominika Cibulkova,6-2 6-4,3,R32,
+2017-0806,Toronto,Hard,P,201585,Sloane Stephens,201520,Petra Kvitova,7-6(4) 3-6 6-2,3,R32,
+2017-0806,Toronto,Hard,P,201493,Angelique Kerber,202499,Donna Vekic,6-4 7-6(5),3,R32,
+2017-0806,Toronto,Hard,P,201496,Caroline Wozniacki,206420,Ekaterina Alexandrova,6-3 6-0,3,R32,60
+2017-0806,Toronto,Hard,P,201474,Agnieszka Radwanska,201693,Timea Babos,6-0 6-1,3,R32,
+2017-0806,Toronto,Hard,P,211768,Naomi Osaka,201545,Anastasija Sevastova,6-3 6-4,3,R32,
+2017-0806,Toronto,Hard,P,201662,Karolina Pliskova,201499,Anastasia Pavlyuchenkova,6-3 6-3,3,R32,
+2017-0806,Toronto,Hard,P,201594,Simona Halep,201366,Barbora Strycova,6-1 6-0,3,R16,59
+2017-0806,Toronto,Hard,P,201614,Caroline Garcia,214263,Catherine Cartan Bellis,6-4 6-2,3,R16,74
+2017-0806,Toronto,Hard,P,202469,Garbine Muguruza,202458,Ashleigh Barty,6-0 3-6 6-2,3,R16,90
+2017-0806,Toronto,Hard,P,202494,Elina Svitolina,200748,Venus Williams,6-2 6-1,3,R16,60
+2017-0806,Toronto,Hard,P,201425,Lucie Safarova,201505,Kate Makarova,6-3 6-7(3) 6-2,3,R16,142
+2017-0806,Toronto,Hard,P,201585,Sloane Stephens,201493,Angelique Kerber,6-2 6-2,3,R16,58
+2017-0806,Toronto,Hard,P,201496,Caroline Wozniacki,201474,Agnieszka Radwanska,6-3 6-1,3,R16,78
+2017-0806,Toronto,Hard,P,201662,Karolina Pliskova,211768,Naomi Osaka,6-2 6-7(4) 1-0 RET,3,R16,106
+2017-0806,Toronto,Hard,P,201594,Simona Halep,201614,Caroline Garcia,6-4 6-2,3,QF,71
+2017-0806,Toronto,Hard,P,202494,Elina Svitolina,202469,Garbine Muguruza,4-6 6-4 6-3,3,QF,128
+2017-0806,Toronto,Hard,P,201585,Sloane Stephens,201425,Lucie Safarova,6-2 1-6 7-5,3,QF,131
+2017-0806,Toronto,Hard,P,201496,Caroline Wozniacki,201662,Karolina Pliskova,7-5 6-7(3) 6-4,3,QF,176
+2017-0806,Toronto,Hard,P,202494,Elina Svitolina,201594,Simona Halep,6-1 6-1,3,SF,56
+2017-0806,Toronto,Hard,P,201496,Caroline Wozniacki,201585,Sloane Stephens,6-2 6-3,3,SF,83
+2017-0806,Toronto,Hard,P,202494,Elina Svitolina,201496,Caroline Wozniacki,6-4 6-0,3,F,77
+2017-0808,Singapore,Hard,F,200748,Venus Williams,211533,Jelena Ostapenko,7-5 6-7(3) 7-5,3,RR,193
+2017-0808,Singapore,Hard,F,211533,Jelena Ostapenko,201662,Karolina Pliskova,6-3 6-1,3,RR,66
+2017-0808,Singapore,Hard,F,201662,Karolina Pliskova,200748,Venus Williams,6-2 6-2,3,RR,72
+2017-0808,Singapore,Hard,F,202469,Garbine Muguruza,211533,Jelena Ostapenko,6-3 6-4,3,RR,85
+2017-0808,Singapore,Hard,F,200748,Venus Williams,202469,Garbine Muguruza,7-5 6-4,3,RR,101
+2017-0808,Singapore,Hard,F,201662,Karolina Pliskova,202469,Garbine Muguruza,6-2 6-2,3,RR,62
+2017-0808,Singapore,Hard,F,201614,Caroline Garcia,201496,Caroline Wozniacki,0-6 6-3 7-5,3,RR,138
+2017-0808,Singapore,Hard,F,201614,Caroline Garcia,202494,Elina Svitolina,6-7(7) 6-3 7-5,3,RR,164
+2017-0808,Singapore,Hard,F,201496,Caroline Wozniacki,202494,Elina Svitolina,6-2 6-0,3,RR,58
+2017-0808,Singapore,Hard,F,201594,Simona Halep,201614,Caroline Garcia,6-4 6-2,3,RR,87
+2017-0808,Singapore,Hard,F,201496,Caroline Wozniacki,201594,Simona Halep,6-0 6-2,3,RR,63
+2017-0808,Singapore,Hard,F,202494,Elina Svitolina,201594,Simona Halep,6-3 6-4,3,RR,70
+2017-0808,Singapore,Hard,F,200748,Venus Williams,201614,Caroline Garcia,6-7(3) 6-2 6-3,3,SF,149
+2017-0808,Singapore,Hard,F,201496,Caroline Wozniacki,201662,Karolina Pliskova,7-6(9) 6-3,3,SF,116
+2017-0808,Singapore,Hard,F,201496,Caroline Wozniacki,200748,Venus Williams,6-4 6-4,3,F,89
+2017-1003,Doha,Hard,P,201614,Caroline Garcia,201483,Madison Brengle,6-2 4-6 6-3,3,R32,109
+2017-1003,Doha,Hard,P,201533,Shuai Zhang,201693,Timea Babos,7-6(3) 6-3,3,R32,91
+2017-1003,Doha,Hard,P,202469,Garbine Muguruza,201666,Cagla Buyukakcay,6-3 6-2,3,R32,75
+2017-1003,Doha,Hard,P,201499,Anastasia Pavlyuchenkova,201347,Jelena Jankovic,6-1 6-4,3,R32,85
+2017-1003,Doha,Hard,P,201325,Samantha Stosur,201545,Anastasija Sevastova,7-5 6-4,3,R32,99
+2017-1003,Doha,Hard,P,201366,Barbora Strycova,201618,Fatma Al Nabhani,6-3 6-0,3,R32,73
+2017-1003,Doha,Hard,P,201455,Elena Vesnina,201539,Christina Mchale,5-7 6-3 7-6(7),3,R32,173
+2017-1003,Doha,Hard,P,201616,Lauren Davis,201311,Roberta Vinci,6-2 6-3,3,R32,85
+2017-1003,Doha,Hard,P,201496,Caroline Wozniacki,202428,Kiki Bertens,6-2 6-3,3,R32,84
+2017-1003,Doha,Hard,P,201709,Yulia Putintseva,201490,Timea Bacsinszky,6-1 0-0 RET,3,R32,35
+2017-1003,Doha,Hard,P,201620,Monica Puig,201696,Laura Siegemund,6-0 6-1,3,R32,40
+2017-1003,Doha,Hard,P,214082,Daria Kasatkina,201593,Irina Camelia Begu,3-6 6-1 7-5,3,R32,142
+2017-1003,Doha,Hard,P,201662,Karolina Pliskova,201614,Caroline Garcia,7-5 6-4,3,R16,69
+2017-1003,Doha,Hard,P,201533,Shuai Zhang,202469,Garbine Muguruza,7-6(3) 3-6 7-5,3,R16,150
+2017-1003,Doha,Hard,P,201495,Dominika Cibulkova,201499,Anastasia Pavlyuchenkova,7-5 2-6 6-2,3,R16,136
+2017-1003,Doha,Hard,P,201325,Samantha Stosur,201366,Barbora Strycova,6-3 3-6 6-4,3,R16,
+2017-1003,Doha,Hard,P,201616,Lauren Davis,201455,Elena Vesnina,7-5 6-2,3,R16,109
+2017-1003,Doha,Hard,P,201496,Caroline Wozniacki,201474,Agnieszka Radwanska,7-5 6-3,3,R16,99
+2017-1003,Doha,Hard,P,201620,Monica Puig,201709,Yulia Putintseva,6-2 4-6 2-1 RET,3,R16,108
+2017-1003,Doha,Hard,P,214082,Daria Kasatkina,201493,Angelique Kerber,6-4 0-6 6-4,3,R16,122
+2017-1003,Doha,Hard,P,201662,Karolina Pliskova,201533,Shuai Zhang,6-2 6-0,3,QF,54
+2017-1003,Doha,Hard,P,201495,Dominika Cibulkova,201325,Samantha Stosur,7-5 6-4,3,QF,99
+2017-1003,Doha,Hard,P,201496,Caroline Wozniacki,201616,Lauren Davis,7-5 6-1,3,QF,119
+2017-1003,Doha,Hard,P,201620,Monica Puig,214082,Daria Kasatkina,4-6 7-5 6-4,3,QF,162
+2017-1003,Doha,Hard,P,201662,Karolina Pliskova,201495,Dominika Cibulkova,6-4 4-6 6-3,3,SF,112
+2017-1003,Doha,Hard,P,201496,Caroline Wozniacki,201620,Monica Puig,6-1 6-2,3,SF,70
+2017-1003,Doha,Hard,P,201662,Karolina Pliskova,201496,Caroline Wozniacki,6-3 6-4,3,F,79
+2017-1051,Stuttgart,Clay,P,201535,Coco Vandeweghe,211533,Jelena Ostapenko,7-6(3) 7-6(3),3,R32,117
+2017-1051,Stuttgart,Clay,P,201696,Laura Siegemund,201533,Shuai Zhang,6-2 7-6(4),3,R32,104
+2017-1051,Stuttgart,Clay,P,201320,Svetlana Kuznetsova,202428,Kiki Bertens,6-3 5-7 6-3,3,R32,153
+2017-1051,Stuttgart,Clay,P,201366,Barbora Strycova,206108,Jennifer Brady,6-2 6-2,3,R32,73
+2017-1051,Stuttgart,Clay,P,201545,Anastasija Sevastova,201325,Samantha Stosur,6-1 4-6 6-3,3,R32,109
+2017-1051,Stuttgart,Clay,P,202427,Johanna Konta,211768,Naomi Osaka,7-6(5) 3-6 6-1,3,R32,118
+2017-1051,Stuttgart,Clay,P,201505,Kate Makarova,201474,Agnieszka Radwanska,6-2 6-4,3,R32,88
+2017-1051,Stuttgart,Clay,P,201345,Maria Sharapova,201311,Roberta Vinci,7-5 6-3,3,R32,103
+2017-1051,Stuttgart,Clay,P,204426,Anett Kontaveit,211951,Ana Konjuh,7-6(5) 6-4,3,R32,87
+2017-1051,Stuttgart,Clay,P,201521,Carla Suarez Navarro,211337,Tamara Korpatsch,6-2 6-4,3,R32,97
+2017-1051,Stuttgart,Clay,P,201455,Elena Vesnina,214082,Daria Kasatkina,7-6(2) 6-2,3,R32,101
+2017-1051,Stuttgart,Clay,P,201540,Kristina Mladenovic,200002,Mirjana Lucic,6-4 6-2,3,R32,74
+2017-1051,Stuttgart,Clay,P,201662,Karolina Pliskova,201535,Coco Vandeweghe,7-6(2) 6-4,3,R16,102
+2017-1051,Stuttgart,Clay,P,201696,Laura Siegemund,201320,Svetlana Kuznetsova,6-4 6-3,3,R16,123
+2017-1051,Stuttgart,Clay,P,201594,Simona Halep,201366,Barbora Strycova,6-2 6-3,3,R16,74
+2017-1051,Stuttgart,Clay,P,201545,Anastasija Sevastova,202427,Johanna Konta,6-3 7-5,3,R16,82
+2017-1051,Stuttgart,Clay,P,201345,Maria Sharapova,201505,Kate Makarova,7-5 6-1,3,R16,79
+2017-1051,Stuttgart,Clay,P,204426,Anett Kontaveit,202469,Garbine Muguruza,2-6 7-6(1) 6-1,3,R16,134
+2017-1051,Stuttgart,Clay,P,201521,Carla Suarez Navarro,201455,Elena Vesnina,6-2 6-4,3,R16,85
+2017-1051,Stuttgart,Clay,P,201540,Kristina Mladenovic,201493,Angelique Kerber,6-2 7-5,3,R16,96
+2017-1051,Stuttgart,Clay,P,201696,Laura Siegemund,201662,Karolina Pliskova,7-6(3) 5-7 6-3,3,QF,189
+2017-1051,Stuttgart,Clay,P,201594,Simona Halep,201545,Anastasija Sevastova,6-3 6-1,3,QF,59
+2017-1051,Stuttgart,Clay,P,201345,Maria Sharapova,204426,Anett Kontaveit,6-3 6-4,3,QF,83
+2017-1051,Stuttgart,Clay,P,201540,Kristina Mladenovic,201521,Carla Suarez Navarro,6-3 6-2,3,QF,74
+2017-1051,Stuttgart,Clay,P,201696,Laura Siegemund,201594,Simona Halep,6-4 7-5,3,SF,102
+2017-1051,Stuttgart,Clay,P,201540,Kristina Mladenovic,201345,Maria Sharapova,3-6 7-5 6-4,3,SF,158
+2017-1051,Stuttgart,Clay,P,201696,Laura Siegemund,201540,Kristina Mladenovic,6-1 2-6 7-6(5),3,F,149
+2017-1052,Birmingham,Grass,P,202494,Elina Svitolina,201586,Heather Watson,6-2 5-7 6-3,3,R32,129
+2017-1052,Birmingham,Grass,P,202429,Camila Giorgi,212001,Natalia Vikhlyantseva,6-3 7-6(4),3,R32,100
+2017-1052,Birmingham,Grass,P,202458,Ashleigh Barty,214954,Marketa Vondrousova,7-5 7-6(1),3,R32,98
+2017-1052,Birmingham,Grass,P,201366,Barbora Strycova,201709,Yulia Putintseva,6-3 6-3,3,R32,82
+2017-1052,Birmingham,Grass,P,202427,Johanna Konta,201615,Lesia Tsurenko,6-3 7-6(6),3,R32,96
+2017-1052,Birmingham,Grass,P,201535,Coco Vandeweghe,201539,Christina Mchale,6-4 6-2,3,R32,78
+2017-1052,Birmingham,Grass,P,201590,Alison Riske Amritraj,202499,Donna Vekic,6-2 7-6(2),3,R32,88
+2017-1052,Birmingham,Grass,P,202469,Garbine Muguruza,206404,Elizaveta Kulichkova,6-3 3-6 6-4,3,R32,117
+2017-1052,Birmingham,Grass,P,201520,Petra Kvitova,202702,Tereza Smitkova,6-2 6-3,3,R32,84
+2017-1052,Birmingham,Grass,P,201648,Naomi Broady,201427,Alize Cornet,7-6(3) 6-0,3,R32,84
+2017-1052,Birmingham,Grass,P,201533,Shuai Zhang,202663,Magda Linette,7-5 7-5,3,R32,99
+2017-1052,Birmingham,Grass,P,201540,Kristina Mladenovic,202504,Ying Ying Duan,6-3 7-6(2),3,R32,98
+2017-1052,Birmingham,Grass,P,201611,Daria Saville,201444,Su Wei Hsieh,6-4 6-4,3,R32,75
+2017-1052,Birmingham,Grass,P,211701,Katerina Siniakova,211702,Nao Hibino,7-5 7-5,3,R32,111
+2017-1052,Birmingham,Grass,P,211768,Naomi Osaka,201616,Lauren Davis,6-1 2-6 7-6(4),3,R32,140
+2017-1052,Birmingham,Grass,P,201425,Lucie Safarova,201495,Dominika Cibulkova,5-7 7-6(7) 7-5,3,R32,160
+2017-1052,Birmingham,Grass,P,202429,Camila Giorgi,202494,Elina Svitolina,6-4 4-6 6-2,3,R16,122
+2017-1052,Birmingham,Grass,P,202458,Ashleigh Barty,201366,Barbora Strycova,6-3 3-6 6-1,3,R16,110
+2017-1052,Birmingham,Grass,P,201535,Coco Vandeweghe,202427,Johanna Konta,6-1 6-3,3,R16,65
+2017-1052,Birmingham,Grass,P,202469,Garbine Muguruza,201590,Alison Riske Amritraj,6-1 6-4,3,R16,94
+2017-1052,Birmingham,Grass,P,201520,Petra Kvitova,201648,Naomi Broady,6-2 6-2,3,R16,62
+2017-1052,Birmingham,Grass,P,201540,Kristina Mladenovic,201533,Shuai Zhang,6-4 7-6(3),3,R16,98
+2017-1052,Birmingham,Grass,P,201611,Daria Saville,211701,Katerina Siniakova,7-5 2-6 6-4,3,R16,144
+2017-1052,Birmingham,Grass,P,201425,Lucie Safarova,211768,Naomi Osaka,6-2 6-4,3,R16,70
+2017-1052,Birmingham,Grass,P,202458,Ashleigh Barty,202429,Camila Giorgi,5-2 RET,3,QF,29
+2017-1052,Birmingham,Grass,P,202469,Garbine Muguruza,201535,Coco Vandeweghe,4-6 6-4 0-0 RET,3,QF,97
+2017-1052,Birmingham,Grass,P,201520,Petra Kvitova,201540,Kristina Mladenovic,6-4 7-6(5),3,QF,103
+2017-1052,Birmingham,Grass,P,201425,Lucie Safarova,201611,Daria Saville,6-7(4) 6-3 7-6(5),3,QF,183
+2017-1052,Birmingham,Grass,P,202458,Ashleigh Barty,202469,Garbine Muguruza,3-6 6-4 6-3,3,SF,109
+2017-1052,Birmingham,Grass,P,201520,Petra Kvitova,201425,Lucie Safarova,6-1 1-0 RET,3,SF,32
+2017-1052,Birmingham,Grass,P,201520,Petra Kvitova,202458,Ashleigh Barty,4-6 6-3 6-2,3,F,107
+2017-1056,Tokyo,Hard,P,202663,Magda Linette,201611,Daria Saville,2-6 6-0 7-6(3),3,R32,140
+2017-1056,Tokyo,Hard,P,214082,Daria Kasatkina,201483,Madison Brengle,3-6 6-2 6-4,3,R32,97
+2017-1056,Tokyo,Hard,P,201493,Angelique Kerber,211768,Naomi Osaka,6-3 6-4,3,R32,82
+2017-1056,Tokyo,Hard,P,201366,Barbora Strycova,201517,Magdalena Rybarikova,7-6(4) 7-6(2),3,R32,135
+2017-1056,Tokyo,Hard,P,201499,Anastasia Pavlyuchenkova,214263,Catherine Cartan Bellis,4-6 6-0 6-4,3,R32,116
+2017-1056,Tokyo,Hard,P,202492,Qiang Wang,201540,Kristina Mladenovic,6-0 6-0,3,R32,48
+2017-1056,Tokyo,Hard,P,201495,Dominika Cibulkova,201521,Carla Suarez Navarro,6-3 6-3,3,R32,82
+2017-1056,Tokyo,Hard,P,211701,Katerina Siniakova,202450,Jana Cepelova,1-6 6-3 6-4,3,R32,114
+2017-1056,Tokyo,Hard,P,201603,Shelby Rogers,203552,Risa Ozaki,6-2 7-6(5),3,R32,113
+2017-1056,Tokyo,Hard,P,201614,Caroline Garcia,205925,Aliaksandra Sasnovich,6-4 6-3,3,R32,84
+2017-1056,Tokyo,Hard,P,201597,Kurumi Nara,201709,Yulia Putintseva,2-6 6-4 6-2,3,R32,149
+2017-1056,Tokyo,Hard,P,201620,Monica Puig,201444,Su Wei Hsieh,2-6 6-1 6-1,3,R32,89
+2017-1056,Tokyo,Hard,P,201662,Karolina Pliskova,202663,Magda Linette,6-2 6-1,3,R16,60
+2017-1056,Tokyo,Hard,P,201493,Angelique Kerber,214082,Daria Kasatkina,7-6(5) 6-3,3,R16,81
+2017-1056,Tokyo,Hard,P,201366,Barbora Strycova,202427,Johanna Konta,7-5 7-6(5),3,R16,143
+2017-1056,Tokyo,Hard,P,201499,Anastasia Pavlyuchenkova,202492,Qiang Wang,6-4 4-6 6-2,3,R16,121
+2017-1056,Tokyo,Hard,P,201495,Dominika Cibulkova,211701,Katerina Siniakova,6-2 6-2,3,R16,68
+2017-1056,Tokyo,Hard,P,201496,Caroline Wozniacki,201603,Shelby Rogers,4-6 6-1 6-4,3,R16,121
+2017-1056,Tokyo,Hard,P,201614,Caroline Garcia,201597,Kurumi Nara,6-1 6-3,3,R16,63
+2017-1056,Tokyo,Hard,P,202469,Garbine Muguruza,201620,Monica Puig,6-4 6-0,3,R16,74
+2017-1056,Tokyo,Hard,P,201493,Angelique Kerber,201662,Karolina Pliskova,7-6(5) 7-5,3,QF,109
+2017-1056,Tokyo,Hard,P,201499,Anastasia Pavlyuchenkova,201366,Barbora Strycova,5-7 6-3 6-1,3,QF,133
+2017-1056,Tokyo,Hard,P,201496,Caroline Wozniacki,201495,Dominika Cibulkova,3-6 7-6(5) 3-1 RET,3,QF,147
+2017-1056,Tokyo,Hard,P,202469,Garbine Muguruza,201614,Caroline Garcia,6-2 6-4,3,QF,81
+2017-1056,Tokyo,Hard,P,201499,Anastasia Pavlyuchenkova,201493,Angelique Kerber,6-0 6-7(4) 6-4,3,SF,128
+2017-1056,Tokyo,Hard,P,201496,Caroline Wozniacki,202469,Garbine Muguruza,6-2 6-0,3,SF,60
+2017-1056,Tokyo,Hard,P,201496,Caroline Wozniacki,201499,Anastasia Pavlyuchenkova,6-0 7-5,3,F,73
+2017-1075,Wuhan,Hard,P,214082,Daria Kasatkina,201590,Alison Riske Amritraj,6-1 2-6 6-3,3,R64,109
+2017-1075,Wuhan,Hard,P,201616,Lauren Davis,201492,Andrea Petkovic,6-3 6-2,3,R64,77
+2017-1075,Wuhan,Hard,P,201505,Kate Makarova,201545,Anastasija Sevastova,6-4 6-2,3,R64,76
+2017-1075,Wuhan,Hard,P,201614,Caroline Garcia,201493,Angelique Kerber,3-6 6-3 6-1,3,R64,108
+2017-1075,Wuhan,Hard,P,201539,Christina Mchale,201311,Roberta Vinci,6-4 6-4,3,R64,83
+2017-1075,Wuhan,Hard,P,213525,Jil Teichmann,201325,Samantha Stosur,6-4 3-6 6-3,3,R64,142
+2017-1075,Wuhan,Hard,P,206289,Maria Sakkari,201709,Yulia Putintseva,1-6 6-4 6-2,3,R64,133
+2017-1075,Wuhan,Hard,P,210722,Elise Mertens,211768,Naomi Osaka,6-4 1-6 6-4,3,R64,113
+2017-1075,Wuhan,Hard,P,201455,Elena Vesnina,202504,Ying Ying Duan,6-3 6-4,3,R64,85
+2017-1075,Wuhan,Hard,P,201478,Varvara Lepchenko,201619,Madison Keys,6-2 7-6(4),3,R64,108
+2017-1075,Wuhan,Hard,P,202428,Kiki Bertens,201512,Monica Niculescu,6-2 6-1,3,R64,87
+2017-1075,Wuhan,Hard,P,201427,Alize Cornet,201499,Anastasia Pavlyuchenkova,6-3 6-2,3,R64,83
+2017-1075,Wuhan,Hard,P,202458,Ashleigh Barty,214263,Catherine Cartan Bellis,7-5 6-0,3,R64,74
+2017-1075,Wuhan,Hard,P,201504,Julia Goerges,201611,Daria Saville,6-4 1-6 6-4,3,R64,144
+2017-1075,Wuhan,Hard,P,201474,Agnieszka Radwanska,201517,Magdalena Rybarikova,6-4 7-5,3,R64,124
+2017-1075,Wuhan,Hard,P,202492,Qiang Wang,201585,Sloane Stephens,6-2 6-2,3,R64,69
+2017-1075,Wuhan,Hard,P,201514,Sorana Cirstea,206374,Yafan Wang,6-3 6-3,3,R64,87
+2017-1075,Wuhan,Hard,P,201533,Shuai Zhang,202499,Donna Vekic,7-5 5-7 6-1,3,R64,142
+2017-1075,Wuhan,Hard,P,201366,Barbora Strycova,202460,Ons Jabeur,6-1 6-3,3,R64,73
+2017-1075,Wuhan,Hard,P,201620,Monica Puig,201621,Mona Barthel,6-0 6-7(0) 6-4,3,R64,106
+2017-1075,Wuhan,Hard,P,201397,Shuai Peng,201520,Petra Kvitova,7-6(7) 6-7(5) 7-6(3),3,R64,214
+2017-1075,Wuhan,Hard,P,211701,Katerina Siniakova,201540,Kristina Mladenovic,6-3 6-2,3,R64,76
+2017-1075,Wuhan,Hard,P,202663,Magda Linette,204426,Anett Kontaveit,7-5 6-4,3,R64,95
+2017-1075,Wuhan,Hard,P,201615,Lesia Tsurenko,201521,Carla Suarez Navarro,6-3 7-6(12),3,R64,134
+2017-1075,Wuhan,Hard,P,214082,Daria Kasatkina,201594,Simona Halep,6-2 6-1,3,R32,72
+2017-1075,Wuhan,Hard,P,201505,Kate Makarova,201616,Lauren Davis,6-2 6-4,3,R32,95
+2017-1075,Wuhan,Hard,P,201614,Caroline Garcia,201539,Christina Mchale,6-1 6-1,3,R32,66
+2017-1075,Wuhan,Hard,P,201495,Dominika Cibulkova,213525,Jil Teichmann,6-2 6-2,3,R32,68
+2017-1075,Wuhan,Hard,P,206289,Maria Sakkari,201496,Caroline Wozniacki,7-5 6-3,3,R32,94
+2017-1075,Wuhan,Hard,P,201455,Elena Vesnina,210722,Elise Mertens,6-2 6-4,3,R32,87
+2017-1075,Wuhan,Hard,P,201478,Varvara Lepchenko,202428,Kiki Bertens,6-4 6-4,3,R32,116
+2017-1075,Wuhan,Hard,P,201427,Alize Cornet,201320,Svetlana Kuznetsova,6-3 6-3,3,R32,78
+2017-1075,Wuhan,Hard,P,202458,Ashleigh Barty,202427,Johanna Konta,6-0 4-6 7-6(3),3,R32,139
+2017-1075,Wuhan,Hard,P,201474,Agnieszka Radwanska,201504,Julia Goerges,7-5 7-5,3,R32,115
+2017-1075,Wuhan,Hard,P,202492,Qiang Wang,201514,Sorana Cirstea,6-3 6-3,3,R32,57
+2017-1075,Wuhan,Hard,P,201662,Karolina Pliskova,201533,Shuai Zhang,6-4 3-6 6-4,3,R32,121
+2017-1075,Wuhan,Hard,P,211533,Jelena Ostapenko,201366,Barbora Strycova,2-6 7-5 6-3,3,R32,150
+2017-1075,Wuhan,Hard,P,201620,Monica Puig,201397,Shuai Peng,4-6 6-3 6-4,3,R32,129
+2017-1075,Wuhan,Hard,P,202663,Magda Linette,211701,Katerina Siniakova,6-1 6-2,3,R32,76
+2017-1075,Wuhan,Hard,P,202469,Garbine Muguruza,201615,Lesia Tsurenko,6-4 6-4,3,R32,106
+2017-1075,Wuhan,Hard,P,201505,Kate Makarova,214082,Daria Kasatkina,6-4 6-4,3,R16,92
+2017-1075,Wuhan,Hard,P,201614,Caroline Garcia,201495,Dominika Cibulkova,6-3 7-5,3,R16,115
+2017-1075,Wuhan,Hard,P,206289,Maria Sakkari,201455,Elena Vesnina,7-6(6) 7-5,3,R16,122
+2017-1075,Wuhan,Hard,P,201427,Alize Cornet,201478,Varvara Lepchenko,3-6 6-4 6-2,3,R16,151
+2017-1075,Wuhan,Hard,P,202458,Ashleigh Barty,201474,Agnieszka Radwanska,4-6 6-0 6-4,3,R16,117
+2017-1075,Wuhan,Hard,P,201662,Karolina Pliskova,202492,Qiang Wang,6-2 6-1,3,R16,48
+2017-1075,Wuhan,Hard,P,211533,Jelena Ostapenko,201620,Monica Puig,6-2 3-6 6-3,3,R16,114
+2017-1075,Wuhan,Hard,P,202469,Garbine Muguruza,202663,Magda Linette,6-2 1-6 6-4,3,R16,123
+2017-1075,Wuhan,Hard,P,201614,Caroline Garcia,201505,Kate Makarova,7-6(3) 6-4,3,QF,108
+2017-1075,Wuhan,Hard,P,206289,Maria Sakkari,201427,Alize Cornet,7-6(2) 7-5,3,QF,145
+2017-1075,Wuhan,Hard,P,202458,Ashleigh Barty,201662,Karolina Pliskova,4-6 7-6(3) 7-6(2),3,QF,151
+2017-1075,Wuhan,Hard,P,211533,Jelena Ostapenko,202469,Garbine Muguruza,1-6 6-3 6-2,3,QF,117
+2017-1075,Wuhan,Hard,P,201614,Caroline Garcia,206289,Maria Sakkari,6-3 6-2,3,SF,79
+2017-1075,Wuhan,Hard,P,202458,Ashleigh Barty,211533,Jelena Ostapenko,6-3 6-0,3,SF,74
+2017-1075,Wuhan,Hard,P,201614,Caroline Garcia,202458,Ashleigh Barty,6-7(3) 7-6(4) 6-2,3,F,163
+2017-1081,Zhuhai,Hard,F,202458,Ashleigh Barty,201493,Angelique Kerber,6-3 6-4,3,RR,71
+2017-1081,Zhuhai,Hard,F,202458,Ashleigh Barty,201499,Anastasia Pavlyuchenkova,6-4 6-1,3,RR,71
+2017-1081,Zhuhai,Hard,F,201499,Anastasia Pavlyuchenkova,201493,Angelique Kerber,6-3 3-6 6-2,3,RR,114
+2017-1081,Zhuhai,Hard,F,201545,Anastasija Sevastova,201366,Barbora Strycova,6-3 6-4,3,RR,81
+2017-1081,Zhuhai,Hard,F,201366,Barbora Strycova,201585,Sloane Stephens,5-0 RET,3,RR,18
+2017-1081,Zhuhai,Hard,F,201545,Anastasija Sevastova,201585,Sloane Stephens,7-5 6-3,3,RR,88
+2017-1081,Zhuhai,Hard,F,201397,Shuai Peng,201455,Elena Vesnina,6-2 1-0 RET,3,RR,44
+2017-1081,Zhuhai,Hard,F,201535,Coco Vandeweghe,201397,Shuai Peng,3-6 6-3 6-2,3,RR,115
+2017-1081,Zhuhai,Hard,F,201535,Coco Vandeweghe,201455,Elena Vesnina,6-3 6-2,3,RR,78
+2017-1081,Zhuhai,Hard,F,201504,Julia Goerges,201517,Magdalena Rybarikova,6-1 7-6(5),3,RR,99
+2017-1081,Zhuhai,Hard,F,201517,Magdalena Rybarikova,201540,Kristina Mladenovic,7-5 1-6 7-6(5),3,RR,168
+2017-1081,Zhuhai,Hard,F,201504,Julia Goerges,201540,Kristina Mladenovic,6-2 7-6(4),3,RR,96
+2017-1081,Zhuhai,Hard,F,201504,Julia Goerges,201545,Anastasija Sevastova,6-3 6-3,3,SF,71
+2017-1081,Zhuhai,Hard,F,201535,Coco Vandeweghe,202458,Ashleigh Barty,6-3 6-3,3,SF,62
+2017-1081,Zhuhai,Hard,F,201504,Julia Goerges,201535,Coco Vandeweghe,7-5 6-1,3,F,80
+2017-1086,St. Petersburg,Hard,P,202499,Donna Vekic,211533,Jelena Ostapenko,6-0 6-4,3,R32,86
+2017-1086,St. Petersburg,Hard,P,201427,Alize Cornet,201465,Kirsten Flipkens,6-4 6-2,3,R32,85
+2017-1086,St. Petersburg,Hard,P,201455,Elena Vesnina,201505,Kate Makarova,6-3 6-1,3,R32,68
+2017-1086,St. Petersburg,Hard,P,201611,Daria Saville,214939,Anna Kalinskaya,6-4 7-5,3,R32,113
+2017-1086,St. Petersburg,Hard,P,201709,Yulia Putintseva,201596,Johanna Larsson,6-0 1-0 RET,3,R32,31
+2017-1086,St. Petersburg,Hard,P,202470,Annika Beck,202428,Kiki Bertens,7-5 3-6 6-4,3,R32,139
+2017-1086,St. Petersburg,Hard,P,201311,Roberta Vinci,201693,Timea Babos,6-3 3-6 6-4,3,R32,124
+2017-1086,St. Petersburg,Hard,P,201492,Andrea Petkovic,201593,Irina Camelia Begu,6-1 7-5,3,R32,96
+2017-1086,St. Petersburg,Hard,P,201540,Kristina Mladenovic,210722,Elise Mertens,7-6(5) 6-4,3,R32,106
+2017-1086,St. Petersburg,Hard,P,214082,Daria Kasatkina,202505,Belinda Bencic,6-2 7-5,3,R32,94
+2017-1086,St. Petersburg,Hard,P,212001,Natalia Vikhlyantseva,201468,Yaroslava Shvedova,6-3 6-4,3,R32,67
+2017-1086,St. Petersburg,Hard,P,211951,Ana Konjuh,201512,Monica Niculescu,1-6 6-3 6-2,3,R32,119
+2017-1086,St. Petersburg,Hard,P,201495,Dominika Cibulkova,202499,Donna Vekic,6-2 6-2,3,R16,73
+2017-1086,St. Petersburg,Hard,P,201455,Elena Vesnina,201427,Alize Cornet,2-6 6-3 6-3,3,R16,128
+2017-1086,St. Petersburg,Hard,P,201320,Svetlana Kuznetsova,201611,Daria Saville,6-1 6-3,3,R16,81
+2017-1086,St. Petersburg,Hard,P,201709,Yulia Putintseva,202470,Annika Beck,6-4 6-0,3,R16,76
+2017-1086,St. Petersburg,Hard,P,201311,Roberta Vinci,201492,Andrea Petkovic,6-4 6-4,3,R16,97
+2017-1086,St. Petersburg,Hard,P,201540,Kristina Mladenovic,200748,Venus Williams,6-3 6-1,3,R16,55
+2017-1086,St. Petersburg,Hard,P,212001,Natalia Vikhlyantseva,214082,Daria Kasatkina,7-6(4) 6-2,3,R16,87
+2017-1086,St. Petersburg,Hard,P,201594,Simona Halep,211951,Ana Konjuh,6-4 7-6(2),3,R16,97
+2017-1086,St. Petersburg,Hard,P,201495,Dominika Cibulkova,201455,Elena Vesnina,6-3 6-3,3,QF,85
+2017-1086,St. Petersburg,Hard,P,201709,Yulia Putintseva,201320,Svetlana Kuznetsova,6-3 6-7(4) 7-5,3,QF,154
+2017-1086,St. Petersburg,Hard,P,201540,Kristina Mladenovic,201311,Roberta Vinci,6-1 6-4,3,QF,77
+2017-1086,St. Petersburg,Hard,P,212001,Natalia Vikhlyantseva,201594,Simona Halep,W/O,3,QF,0
+2017-1086,St. Petersburg,Hard,P,201709,Yulia Putintseva,201495,Dominika Cibulkova,3-6 6-4 6-4,3,SF,140
+2017-1086,St. Petersburg,Hard,P,201540,Kristina Mladenovic,212001,Natalia Vikhlyantseva,4-6 6-2 6-2,3,SF,129
+2017-1086,St. Petersburg,Hard,P,201540,Kristina Mladenovic,201709,Yulia Putintseva,6-2 6-7(3) 6-4,3,F,156
+2017-520,Roland Garros,Clay,G,201505,Kate Makarova,201493,Angelique Kerber,6-2 6-2,3,R128,82
+2017-520,Roland Garros,Clay,G,201615,Lesia Tsurenko,203462,Kateryna Baindl,6-4 6-0,3,R128,84
+2017-520,Roland Garros,Clay,G,211533,Jelena Ostapenko,211635,Louisa Chirico,4-6 6-3 6-2,3,R128,114
+2017-520,Roland Garros,Clay,G,201620,Monica Puig,201311,Roberta Vinci,6-3 3-6 6-2,3,R128,110
+2017-520,Roland Garros,Clay,G,201325,Samantha Stosur,201568,Kristina Kucova,7-5 6-1,3,R128,79
+2017-520,Roland Garros,Clay,G,201465,Kirsten Flipkens,201605,Mandy Minella,6-3 6-3,3,R128,93
+2017-520,Roland Garros,Clay,G,201318,Bethanie Mattek Sands,201516,Evgeniya Rodina,7-5 6-2,3,R128,82
+2017-520,Roland Garros,Clay,G,201520,Petra Kvitova,202426,Julia Boserup,6-3 6-2,3,R128,74
+2017-520,Roland Garros,Clay,G,201496,Caroline Wozniacki,215096,Jaimee Fourlis,6-4 3-6 6-2,3,R128,134
+2017-520,Roland Garros,Clay,G,211796,Francoise Abanda,214219,Tessah Andrianjafitrimo,6-3 6-4,3,R128,88
+2017-520,Roland Garros,Clay,G,214263,Catherine Cartan Bellis,206045,Quirine Lemoine,6-3 3-6 6-1,3,R128,89
+2017-520,Roland Garros,Clay,G,202428,Kiki Bertens,201548,Ajla Tomljanovic,4-6 6-1 6-1,3,R128,91
+2017-520,Roland Garros,Clay,G,201533,Shuai Zhang,202499,Donna Vekic,7-5 6-4,3,R128,116
+2017-520,Roland Garros,Clay,G,205925,Aliaksandra Sasnovich,203530,Viktorija Golubic,4-6 7-5 6-3,3,R128,144
+2017-520,Roland Garros,Clay,G,206219,Oceane Dodin,202429,Camila Giorgi,6-2 6-3,3,R128,65
+2017-520,Roland Garros,Clay,G,201320,Svetlana Kuznetsova,201539,Christina Mchale,7-5 6-4,3,R128,125
+2017-520,Roland Garros,Clay,G,202469,Garbine Muguruza,201212,Francesca Schiavone,6-2 6-4,3,R128,93
+2017-520,Roland Garros,Clay,G,204426,Anett Kontaveit,201512,Monica Niculescu,7-5 6-1,3,R128,81
+2017-520,Roland Garros,Clay,G,201596,Johanna Larsson,212001,Natalia Vikhlyantseva,6-4 6-4,3,R128,90
+2017-520,Roland Garros,Clay,G,201709,Yulia Putintseva,202707,Myrtille Georges,6-3 6-0,3,R128,73
+2017-520,Roland Garros,Clay,G,201666,Cagla Buyukakcay,200002,Mirjana Lucic,6-3 6-3,3,R128,71
+2017-520,Roland Garros,Clay,G,201603,Shelby Rogers,201523,Marina Erakovic,7-6(4) 6-4,3,R128,93
+2017-520,Roland Garros,Clay,G,201506,Sara Errani,201595,Misaki Doi,7-6(7) 6-1,3,R128,104
+2017-520,Roland Garros,Clay,G,201540,Kristina Mladenovic,206108,Jennifer Brady,3-6 6-3 9-7,3,R128,179
+2017-520,Roland Garros,Clay,G,200748,Venus Williams,202492,Qiang Wang,6-4 7-6(3),3,R128,101
+2017-520,Roland Garros,Clay,G,201597,Kurumi Nara,216153,Amanda Anisimova,3-6 7-5 6-4,3,R128,152
+2017-520,Roland Garros,Clay,G,202480,Richel Hogenkamp,201347,Jelena Jankovic,6-2 7-5,3,R128,71
+2017-520,Roland Garros,Clay,G,210722,Elise Mertens,201611,Daria Saville,7-6(4) 1-6 6-4,3,R128,137
+2017-520,Roland Garros,Clay,G,201490,Timea Bacsinszky,204427,Sara Sorribes Tormo,6-1 6-2,3,R128,82
+2017-520,Roland Garros,Clay,G,201483,Madison Brengle,201504,Julia Goerges,1-6 6-3 13-11,3,R128,168
+2017-520,Roland Garros,Clay,G,202460,Ons Jabeur,202536,Ana Bogdan,6-3 6-4,3,R128,83
+2017-520,Roland Garros,Clay,G,201495,Dominika Cibulkova,202418,Lara Arruabarrena,6-2 6-1,3,R128,83
+2017-520,Roland Garros,Clay,G,202494,Elina Svitolina,201468,Yaroslava Shvedova,6-4 6-3,3,R128,77
+2017-520,Roland Garros,Clay,G,201450,Tsvetana Pironkova,201621,Mona Barthel,6-0 6-4,3,R128,72
+2017-520,Roland Garros,Clay,G,202663,Magda Linette,202430,Alize Lim,6-0 7-5,3,R128,84
+2017-520,Roland Garros,Clay,G,211951,Ana Konjuh,203575,Danka Kovinic,7-5 7-6(4),3,R128,114
+2017-520,Roland Garros,Clay,G,201545,Anastasija Sevastova,202470,Annika Beck,6-2 6-4,3,R128,66
+2017-520,Roland Garros,Clay,G,202446,Eugenie Bouchard,203552,Risa Ozaki,2-6 6-3 6-2,3,R128,109
+2017-520,Roland Garros,Clay,G,201549,Petra Martic,201435,Kateryna Bondarenko,6-2 7-5,3,R128,72
+2017-520,Roland Garros,Clay,G,201619,Madison Keys,202458,Ashleigh Barty,6-3 6-2,3,R128,61
+2017-520,Roland Garros,Clay,G,201455,Elena Vesnina,206242,Beatriz Haddad Maia,6-2 3-6 6-4,3,R128,132
+2017-520,Roland Garros,Clay,G,201478,Varvara Lepchenko,201492,Andrea Petkovic,6-4 3-6 6-3,3,R128,111
+2017-520,Roland Garros,Clay,G,201514,Sorana Cirstea,201397,Shuai Peng,6-3 6-1,3,R128,59
+2017-520,Roland Garros,Clay,G,201521,Carla Suarez Navarro,206289,Maria Sakkari,6-4 6-2,3,R128,83
+2017-520,Roland Garros,Clay,G,214082,Daria Kasatkina,201518,Yanina Wickmayer,7-5 6-4,3,R128,86
+2017-520,Roland Garros,Clay,G,214954,Marketa Vondrousova,203281,Amandine Hesse,6-1 6-0,3,R128,54
+2017-520,Roland Garros,Clay,G,213583,Tatjana Maria,202504,Ying Ying Duan,6-4 6-1,3,R128,73
+2017-520,Roland Garros,Clay,G,201594,Simona Halep,202450,Jana Cepelova,6-2 6-3,3,R128,67
+2017-520,Roland Garros,Clay,G,201444,Su Wei Hsieh,202427,Johanna Konta,1-6 7-6(2) 6-4,3,R128,135
+2017-520,Roland Garros,Clay,G,203501,Taylor Townsend,203504,Miyu Kato,6-4 6-0,3,R128,75
+2017-520,Roland Garros,Clay,G,203564,Chloe Paquet,201697,Kristyna Pliskova,6-7(4) 6-2 6-2,3,R128,112
+2017-520,Roland Garros,Clay,G,201614,Caroline Garcia,211702,Nao Hibino,6-2 6-2,3,R128,65
+2017-520,Roland Garros,Clay,G,201366,Barbora Strycova,201590,Alison Riske Amritraj,6-3 6-0,3,R128,81
+2017-520,Roland Garros,Clay,G,201427,Alize Cornet,201693,Timea Babos,6-2 6-7(5) 6-2,3,R128,155
+2017-520,Roland Garros,Clay,G,202421,Alison Van Uytvanck,211768,Naomi Osaka,6-3 7-5,3,R128,86
+2017-520,Roland Garros,Clay,G,201474,Agnieszka Radwanska,211539,Fiona Ferro,6-1 6-1,3,R128,67
+2017-520,Roland Garros,Clay,G,201499,Anastasia Pavlyuchenkova,206255,Patricia Maria Tig,6-1 1-0 RET,3,R128,43
+2017-520,Roland Garros,Clay,G,202705,Veronica Cepede Royg,201425,Lucie Safarova,6-1 6-4,3,R128,63
+2017-520,Roland Garros,Clay,G,201531,Mariana Duque Marino,201593,Irina Camelia Begu,7-6(2) 6-4,3,R128,96
+2017-520,Roland Garros,Clay,G,201517,Magdalena Rybarikova,201535,Coco Vandeweghe,6-1 6-4,3,R128,77
+2017-520,Roland Garros,Clay,G,202489,Carina Witthoeft,201616,Lauren Davis,2-6 6-3 6-3,3,R128,113
+2017-520,Roland Garros,Clay,G,201426,Pauline Parmentier,202701,Irina Khromacheva,6-3 6-0,3,R128,67
+2017-520,Roland Garros,Clay,G,206420,Ekaterina Alexandrova,211701,Katerina Siniakova,6-4 2-6 6-2,3,R128,101
+2017-520,Roland Garros,Clay,G,201662,Karolina Pliskova,202453,Saisai Zheng,7-5 6-2,3,R128,80
+2017-520,Roland Garros,Clay,G,201615,Lesia Tsurenko,201505,Kate Makarova,6-2 6-2,3,R64,71
+2017-520,Roland Garros,Clay,G,211533,Jelena Ostapenko,201620,Monica Puig,6-3 6-2,3,R64,69
+2017-520,Roland Garros,Clay,G,201325,Samantha Stosur,201465,Kirsten Flipkens,6-2 7-6(6),3,R64,92
+2017-520,Roland Garros,Clay,G,201318,Bethanie Mattek Sands,201520,Petra Kvitova,7-6(5) 7-6(5),3,R64,126
+2017-520,Roland Garros,Clay,G,201496,Caroline Wozniacki,211796,Francoise Abanda,6-0 6-0,3,R64,52
+2017-520,Roland Garros,Clay,G,214263,Catherine Cartan Bellis,202428,Kiki Bertens,6-3 7-6(5),3,R64,92
+2017-520,Roland Garros,Clay,G,201533,Shuai Zhang,205925,Aliaksandra Sasnovich,6-2 4-6 6-3,3,R64,129
+2017-520,Roland Garros,Clay,G,201320,Svetlana Kuznetsova,206219,Oceane Dodin,7-6(5) 5-7 6-3,3,R64,147
+2017-520,Roland Garros,Clay,G,202469,Garbine Muguruza,204426,Anett Kontaveit,6-7(4) 6-4 6-2,3,R64,128
+2017-520,Roland Garros,Clay,G,201709,Yulia Putintseva,201596,Johanna Larsson,6-3 1-6 6-3,3,R64,135
+2017-520,Roland Garros,Clay,G,201603,Shelby Rogers,201666,Cagla Buyukakcay,7-6(6) 6-4,3,R64,117
+2017-520,Roland Garros,Clay,G,201540,Kristina Mladenovic,201506,Sara Errani,6-2 6-3,3,R64,78
+2017-520,Roland Garros,Clay,G,200748,Venus Williams,201597,Kurumi Nara,6-3 6-1,3,R64,80
+2017-520,Roland Garros,Clay,G,210722,Elise Mertens,202480,Richel Hogenkamp,6-3 6-4,3,R64,90
+2017-520,Roland Garros,Clay,G,201490,Timea Bacsinszky,201483,Madison Brengle,6-0 6-2,3,R64,64
+2017-520,Roland Garros,Clay,G,202460,Ons Jabeur,201495,Dominika Cibulkova,6-4 6-3,3,R64,85
+2017-520,Roland Garros,Clay,G,202494,Elina Svitolina,201450,Tsvetana Pironkova,3-6 6-3 6-2,3,R64,110
+2017-520,Roland Garros,Clay,G,202663,Magda Linette,211951,Ana Konjuh,6-0 7-5,3,R64,66
+2017-520,Roland Garros,Clay,G,201545,Anastasija Sevastova,202446,Eugenie Bouchard,6-3 6-0,3,R64,59
+2017-520,Roland Garros,Clay,G,201549,Petra Martic,201619,Madison Keys,3-6 6-3 6-1,3,R64,99
+2017-520,Roland Garros,Clay,G,201455,Elena Vesnina,201478,Varvara Lepchenko,4-6 6-3 6-0,3,R64,124
+2017-520,Roland Garros,Clay,G,201521,Carla Suarez Navarro,201514,Sorana Cirstea,7-5 6-4,3,R64,89
+2017-520,Roland Garros,Clay,G,214082,Daria Kasatkina,214954,Marketa Vondrousova,7-6(1) 6-4,3,R64,81
+2017-520,Roland Garros,Clay,G,201594,Simona Halep,213583,Tatjana Maria,6-4 6-3,3,R64,82
+2017-520,Roland Garros,Clay,G,201444,Su Wei Hsieh,203501,Taylor Townsend,6-0 2-6 6-3,3,R64,96
+2017-520,Roland Garros,Clay,G,201614,Caroline Garcia,203564,Chloe Paquet,7-5 6-4,3,R64,101
+2017-520,Roland Garros,Clay,G,201427,Alize Cornet,201366,Barbora Strycova,6-4 6-1,3,R64,107
+2017-520,Roland Garros,Clay,G,201474,Agnieszka Radwanska,202421,Alison Van Uytvanck,6-7(3) 6-2 6-3,3,R64,142
+2017-520,Roland Garros,Clay,G,202705,Veronica Cepede Royg,201499,Anastasia Pavlyuchenkova,7-6(4) 2-6 6-4,3,R64,140
+2017-520,Roland Garros,Clay,G,201531,Mariana Duque Marino,201517,Magdalena Rybarikova,1-6 6-3 8-6,3,R64,134
+2017-520,Roland Garros,Clay,G,202489,Carina Witthoeft,201426,Pauline Parmentier,6-4 7-6(5),3,R64,119
+2017-520,Roland Garros,Clay,G,201662,Karolina Pliskova,206420,Ekaterina Alexandrova,6-2 4-6 6-3,3,R64,101
+2017-520,Roland Garros,Clay,G,211533,Jelena Ostapenko,201615,Lesia Tsurenko,6-1 6-4,3,R32,65
+2017-520,Roland Garros,Clay,G,201325,Samantha Stosur,201318,Bethanie Mattek Sands,6-2 6-2,3,R32,70
+2017-520,Roland Garros,Clay,G,201496,Caroline Wozniacki,214263,Catherine Cartan Bellis,6-2 2-6 6-3,3,R32,111
+2017-520,Roland Garros,Clay,G,201320,Svetlana Kuznetsova,201533,Shuai Zhang,7-6(5) 4-6 7-5,3,R32,189
+2017-520,Roland Garros,Clay,G,202469,Garbine Muguruza,201709,Yulia Putintseva,7-5 6-2,3,R32,100
+2017-520,Roland Garros,Clay,G,201540,Kristina Mladenovic,201603,Shelby Rogers,7-5 4-6 8-6,3,R32,166
+2017-520,Roland Garros,Clay,G,200748,Venus Williams,210722,Elise Mertens,6-3 6-1,3,R32,62
+2017-520,Roland Garros,Clay,G,201490,Timea Bacsinszky,202460,Ons Jabeur,6-2 6-2,3,R32,67
+2017-520,Roland Garros,Clay,G,202494,Elina Svitolina,202663,Magda Linette,6-4 7-5,3,R32,88
+2017-520,Roland Garros,Clay,G,201549,Petra Martic,201545,Anastasija Sevastova,6-1 6-1,3,R32,48
+2017-520,Roland Garros,Clay,G,201521,Carla Suarez Navarro,201455,Elena Vesnina,6-4 6-4,3,R32,103
+2017-520,Roland Garros,Clay,G,201594,Simona Halep,214082,Daria Kasatkina,6-0 7-5,3,R32,78
+2017-520,Roland Garros,Clay,G,201614,Caroline Garcia,201444,Su Wei Hsieh,6-4 4-6 9-7,3,R32,159
+2017-520,Roland Garros,Clay,G,201427,Alize Cornet,201474,Agnieszka Radwanska,6-2 6-1,3,R32,79
+2017-520,Roland Garros,Clay,G,202705,Veronica Cepede Royg,201531,Mariana Duque Marino,3-6 7-6(2) 6-3,3,R32,148
+2017-520,Roland Garros,Clay,G,201662,Karolina Pliskova,202489,Carina Witthoeft,7-5 6-1,3,R32,69
+2017-520,Roland Garros,Clay,G,211533,Jelena Ostapenko,201325,Samantha Stosur,2-6 6-2 6-4,3,R16,118
+2017-520,Roland Garros,Clay,G,201496,Caroline Wozniacki,201320,Svetlana Kuznetsova,6-1 4-6 6-2,3,R16,121
+2017-520,Roland Garros,Clay,G,201540,Kristina Mladenovic,202469,Garbine Muguruza,6-1 3-6 6-3,3,R16,119
+2017-520,Roland Garros,Clay,G,201490,Timea Bacsinszky,200748,Venus Williams,5-7 6-2 6-1,3,R16,132
+2017-520,Roland Garros,Clay,G,202494,Elina Svitolina,201549,Petra Martic,4-6 6-3 7-5,3,R16,125
+2017-520,Roland Garros,Clay,G,201594,Simona Halep,201521,Carla Suarez Navarro,6-1 6-1,3,R16,60
+2017-520,Roland Garros,Clay,G,201614,Caroline Garcia,201427,Alize Cornet,6-2 6-4,3,R16,89
+2017-520,Roland Garros,Clay,G,201662,Karolina Pliskova,202705,Veronica Cepede Royg,2-6 6-3 6-4,3,R16,111
+2017-520,Roland Garros,Clay,G,211533,Jelena Ostapenko,201496,Caroline Wozniacki,4-6 6-2 6-2,3,QF,113
+2017-520,Roland Garros,Clay,G,201490,Timea Bacsinszky,201540,Kristina Mladenovic,6-4 6-4,3,QF,109
+2017-520,Roland Garros,Clay,G,201594,Simona Halep,202494,Elina Svitolina,3-6 7-6(6) 6-0,3,QF,126
+2017-520,Roland Garros,Clay,G,201662,Karolina Pliskova,201614,Caroline Garcia,7-6(3) 6-4,3,QF,111
+2017-520,Roland Garros,Clay,G,211533,Jelena Ostapenko,201490,Timea Bacsinszky,7-6(4) 3-6 6-3,3,SF,144
+2017-520,Roland Garros,Clay,G,201594,Simona Halep,201662,Karolina Pliskova,6-4 3-6 6-3,3,SF,120
+2017-520,Roland Garros,Clay,G,211533,Jelena Ostapenko,201594,Simona Halep,4-6 6-4 6-3,3,F,119
+2017-540,Wimbledon,Grass,G,201493,Angelique Kerber,201604,Irina Falconi,6-4 6-4,3,R128,87
+2017-540,Wimbledon,Grass,G,201465,Kirsten Flipkens,201595,Misaki Doi,6-4 6-3,3,R128,71
+2017-540,Wimbledon,Grass,G,201603,Shelby Rogers,202426,Julia Boserup,6-3 4-6 6-3,3,R128,123
+2017-540,Wimbledon,Grass,G,201425,Lucie Safarova,206219,Oceane Dodin,6-2 6-2,3,R128,51
+2017-540,Wimbledon,Grass,G,201514,Sorana Cirstea,202428,Kiki Bertens,7-6(4) 7-5,3,R128,106
+2017-540,Wimbledon,Grass,G,201318,Bethanie Mattek Sands,202663,Magda Linette,1-6 6-2 6-3,3,R128,98
+2017-540,Wimbledon,Grass,G,201518,Yanina Wickmayer,201435,Kateryna Bondarenko,6-2 7-5,3,R128,76
+2017-540,Wimbledon,Grass,G,202469,Garbine Muguruza,206420,Ekaterina Alexandrova,6-2 6-4,3,R128,60
+2017-540,Wimbledon,Grass,G,201474,Agnieszka Radwanska,201347,Jelena Jankovic,7-6(3) 6-0,3,R128,85
+2017-540,Wimbledon,Grass,G,201539,Christina Mchale,211107,Katie Boulter,3-6 7-5 6-3,3,R128,124
+2017-540,Wimbledon,Grass,G,201568,Kristina Kucova,215370,Bianca Andreescu,6-4 6-3,3,R128,70
+2017-540,Wimbledon,Grass,G,201490,Timea Bacsinszky,201620,Monica Puig,6-1 3-6 6-0,3,R128,80
+2017-540,Wimbledon,Grass,G,201478,Varvara Lepchenko,201616,Lauren Davis,6-4 7-5,3,R128,81
+2017-540,Wimbledon,Grass,G,201555,Polona Hercog,202470,Annika Beck,6-2 6-1,3,R128,65
+2017-540,Wimbledon,Grass,G,201505,Kate Makarova,202421,Alison Van Uytvanck,6-3 6-1,3,R128,56
+2017-540,Wimbledon,Grass,G,201320,Svetlana Kuznetsova,202460,Ons Jabeur,6-3 6-2,3,R128,64
+2017-540,Wimbledon,Grass,G,201662,Karolina Pliskova,201516,Evgeniya Rodina,6-1 6-4,3,R128,70
+2017-540,Wimbledon,Grass,G,201517,Magdalena Rybarikova,201512,Monica Niculescu,6-4 6-1,3,R128,78
+2017-540,Wimbledon,Grass,G,201615,Lesia Tsurenko,201504,Julia Goerges,6-7(5) 7-6(8) 6-4,3,R128,164
+2017-540,Wimbledon,Grass,G,203530,Viktorija Golubic,201533,Shuai Zhang,6-3 6-7(2) 6-1,3,R128,126
+2017-540,Wimbledon,Grass,G,201549,Petra Martic,201611,Daria Saville,6-4 2-6 10-8,3,R128,155
+2017-540,Wimbledon,Grass,G,202653,Denisa Allertova,203552,Risa Ozaki,7-6(5) 2-6 6-3,3,R128,125
+2017-540,Wimbledon,Grass,G,201610,Zarina Diyas,201580,Xinyun Han,6-3 6-4,3,R128,76
+2017-540,Wimbledon,Grass,G,201613,Arina Rodionova,201499,Anastasia Pavlyuchenkova,3-6 7-6(6) 9-7,3,R128,151
+2017-540,Wimbledon,Grass,G,201540,Kristina Mladenovic,201426,Pauline Parmentier,6-1 6-3,3,R128,61
+2017-540,Wimbledon,Grass,G,201590,Alison Riske Amritraj,201585,Sloane Stephens,6-2 7-5,3,R128,72
+2017-540,Wimbledon,Grass,G,213583,Tatjana Maria,215713,Anastasia Potapova,6-3 2-2 RET,3,R128,66
+2017-540,Wimbledon,Grass,G,201535,Coco Vandeweghe,201621,Mona Barthel,7-5 6-2,3,R128,92
+2017-540,Wimbledon,Grass,G,214082,Daria Kasatkina,202453,Saisai Zheng,6-2 6-4,3,R128,71
+2017-540,Wimbledon,Grass,G,204426,Anett Kontaveit,202418,Lara Arruabarrena,6-2 6-4,3,R128,72
+2017-540,Wimbledon,Grass,G,201450,Tsvetana Pironkova,201506,Sara Errani,6-1 6-4,3,R128,68
+2017-540,Wimbledon,Grass,G,201496,Caroline Wozniacki,201693,Timea Babos,6-4 4-6 6-1,3,R128,102
+2017-540,Wimbledon,Grass,G,201495,Dominika Cibulkova,201492,Andrea Petkovic,6-3 3-6 9-7,3,R128,163
+2017-540,Wimbledon,Grass,G,206108,Jennifer Brady,203575,Danka Kovinic,6-3 6-1,3,R128,57
+2017-540,Wimbledon,Grass,G,201593,Irina Camelia Begu,201648,Naomi Broady,6-4 6-2,3,R128,74
+2017-540,Wimbledon,Grass,G,211951,Ana Konjuh,201513,Sabine Lisicki,6-1 6-4,3,R128,59
+2017-540,Wimbledon,Grass,G,201366,Barbora Strycova,202705,Veronica Cepede Royg,6-3 6-3,3,R128,88
+2017-540,Wimbledon,Grass,G,211768,Naomi Osaka,204427,Sara Sorribes Tormo,6-3 7-6(3),3,R128,113
+2017-540,Wimbledon,Grass,G,202492,Qiang Wang,201578,Kai Chen Chang,6-3 6-4,3,R128,66
+2017-540,Wimbledon,Grass,G,200748,Venus Williams,210722,Elise Mertens,7-6(7) 6-4,3,R128,99
+2017-540,Wimbledon,Grass,G,211533,Jelena Ostapenko,205925,Aliaksandra Sasnovich,6-0 1-6 6-3,3,R128,79
+2017-540,Wimbledon,Grass,G,211796,Francoise Abanda,201597,Kurumi Nara,6-2 6-4,3,R128,84
+2017-540,Wimbledon,Grass,G,202429,Camila Giorgi,201427,Alize Cornet,5-7 6-4 6-4,3,R128,147
+2017-540,Wimbledon,Grass,G,201619,Madison Keys,211702,Nao Hibino,6-4 6-2,3,R128,66
+2017-540,Wimbledon,Grass,G,202489,Carina Witthoeft,200002,Mirjana Lucic,6-3 5-7 8-6,3,R128,132
+2017-540,Wimbledon,Grass,G,214544,Aryna Sabalenka,202701,Irina Khromacheva,6-3 6-4,3,R128,71
+2017-540,Wimbledon,Grass,G,201212,Francesca Schiavone,201605,Mandy Minella,6-1 6-1,3,R128,53
+2017-540,Wimbledon,Grass,G,202494,Elina Svitolina,202458,Ashleigh Barty,7-5 7-6(8),3,R128,113
+2017-540,Wimbledon,Grass,G,202427,Johanna Konta,201444,Su Wei Hsieh,6-2 6-2,3,R128,64
+2017-540,Wimbledon,Grass,G,202499,Donna Vekic,212001,Natalia Vikhlyantseva,6-7(6) 6-4 6-1,3,R128,135
+2017-540,Wimbledon,Grass,G,206289,Maria Sakkari,211701,Katerina Siniakova,6-3 6-4,3,R128,66
+2017-540,Wimbledon,Grass,G,201697,Kristyna Pliskova,201311,Roberta Vinci,7-6(6) 6-2,3,R128,73
+2017-540,Wimbledon,Grass,G,201614,Caroline Garcia,202450,Jana Cepelova,6-1 6-1,3,R128,50
+2017-540,Wimbledon,Grass,G,202536,Ana Bogdan,202504,Ying Ying Duan,6-4 6-2,3,R128,67
+2017-540,Wimbledon,Grass,G,201483,Madison Brengle,202480,Richel Hogenkamp,6-3 6-3,3,R128,66
+2017-540,Wimbledon,Grass,G,201520,Petra Kvitova,201596,Johanna Larsson,6-3 6-4,3,R128,84
+2017-540,Wimbledon,Grass,G,201455,Elena Vesnina,215020,Anna Blinkova,6-4 5-7 6-2,3,R128,125
+2017-540,Wimbledon,Grass,G,201458,Victoria Azarenka,214263,Catherine Cartan Bellis,3-6 6-2 6-1,3,R128,105
+2017-540,Wimbledon,Grass,G,201586,Heather Watson,202628,Maryna Zanevska,6-1 7-6(5),3,R128,89
+2017-540,Wimbledon,Grass,G,201545,Anastasija Sevastova,201709,Yulia Putintseva,6-1 7-6(3),3,R128,85
+2017-540,Wimbledon,Grass,G,201521,Carla Suarez Navarro,202446,Eugenie Bouchard,1-6 6-1 6-1,3,R128,88
+2017-540,Wimbledon,Grass,G,201397,Shuai Peng,214954,Marketa Vondrousova,6-7(5) 6-0 6-4,3,R128,123
+2017-540,Wimbledon,Grass,G,206242,Beatriz Haddad Maia,201573,Laura Robson,6-4 6-2,3,R128,65
+2017-540,Wimbledon,Grass,G,201594,Simona Halep,201523,Marina Erakovic,6-4 6-1,3,R128,73
+2017-540,Wimbledon,Grass,G,201493,Angelique Kerber,201465,Kirsten Flipkens,7-5 7-5,3,R64,104
+2017-540,Wimbledon,Grass,G,201603,Shelby Rogers,201425,Lucie Safarova,6-7(4) 6-4 6-3,3,R64,120
+2017-540,Wimbledon,Grass,G,201514,Sorana Cirstea,201318,Bethanie Mattek Sands,4-6 7-6(4) RET,3,R64,126
+2017-540,Wimbledon,Grass,G,202469,Garbine Muguruza,201518,Yanina Wickmayer,6-2 6-4,3,R64,80
+2017-540,Wimbledon,Grass,G,201474,Agnieszka Radwanska,201539,Christina Mchale,5-7 7-6(7) 6-3,3,R64,162
+2017-540,Wimbledon,Grass,G,201490,Timea Bacsinszky,201568,Kristina Kucova,6-1 6-0,3,R64,48
+2017-540,Wimbledon,Grass,G,201555,Polona Hercog,201478,Varvara Lepchenko,6-7(2) 6-2 6-2,3,R64,142
+2017-540,Wimbledon,Grass,G,201320,Svetlana Kuznetsova,201505,Kate Makarova,6-0 7-5,3,R64,69
+2017-540,Wimbledon,Grass,G,201517,Magdalena Rybarikova,201662,Karolina Pliskova,3-6 7-5 6-2,3,R64,137
+2017-540,Wimbledon,Grass,G,201615,Lesia Tsurenko,203530,Viktorija Golubic,6-1 2-6 6-3,3,R64,89
+2017-540,Wimbledon,Grass,G,201549,Petra Martic,202653,Denisa Allertova,6-1 6-4,3,R64,62
+2017-540,Wimbledon,Grass,G,201610,Zarina Diyas,201613,Arina Rodionova,6-4 7-6(4),3,R64,109
+2017-540,Wimbledon,Grass,G,201590,Alison Riske Amritraj,201540,Kristina Mladenovic,2-6 6-4 6-4,3,R64,129
+2017-540,Wimbledon,Grass,G,201535,Coco Vandeweghe,213583,Tatjana Maria,6-4 6-2,3,R64,74
+2017-540,Wimbledon,Grass,G,204426,Anett Kontaveit,214082,Daria Kasatkina,6-3 6-2,3,R64,55
+2017-540,Wimbledon,Grass,G,201496,Caroline Wozniacki,201450,Tsvetana Pironkova,6-3 6-4,3,R64,82
+2017-540,Wimbledon,Grass,G,201495,Dominika Cibulkova,206108,Jennifer Brady,6-4 6-4,3,R64,76
+2017-540,Wimbledon,Grass,G,211951,Ana Konjuh,201593,Irina Camelia Begu,7-6(3) 2-6 6-3,3,R64,133
+2017-540,Wimbledon,Grass,G,211768,Naomi Osaka,201366,Barbora Strycova,6-1 0-6 6-4,3,R64,109
+2017-540,Wimbledon,Grass,G,200748,Venus Williams,202492,Qiang Wang,4-6 6-4 6-1,3,R64,108
+2017-540,Wimbledon,Grass,G,211533,Jelena Ostapenko,211796,Francoise Abanda,4-6 7-6(4) 6-3,3,R64,116
+2017-540,Wimbledon,Grass,G,202429,Camila Giorgi,201619,Madison Keys,6-4 6-7(10) 6-1,3,R64,117
+2017-540,Wimbledon,Grass,G,202489,Carina Witthoeft,214544,Aryna Sabalenka,7-6(5) 3-6 6-3,3,R64,113
+2017-540,Wimbledon,Grass,G,202494,Elina Svitolina,201212,Francesca Schiavone,6-3 6-0,3,R64,50
+2017-540,Wimbledon,Grass,G,202427,Johanna Konta,202499,Donna Vekic,7-6(4) 4-6 10-8,3,R64,190
+2017-540,Wimbledon,Grass,G,206289,Maria Sakkari,201697,Kristyna Pliskova,6-7(6) 6-4 6-4,3,R64,148
+2017-540,Wimbledon,Grass,G,201614,Caroline Garcia,202536,Ana Bogdan,6-4 6-3,3,R64,81
+2017-540,Wimbledon,Grass,G,201483,Madison Brengle,201520,Petra Kvitova,6-3 1-6 6-2,3,R64,103
+2017-540,Wimbledon,Grass,G,201458,Victoria Azarenka,201455,Elena Vesnina,6-3 6-3,3,R64,98
+2017-540,Wimbledon,Grass,G,201586,Heather Watson,201545,Anastasija Sevastova,6-0 6-4,3,R64,61
+2017-540,Wimbledon,Grass,G,201397,Shuai Peng,201521,Carla Suarez Navarro,6-2 6-2,3,R64,62
+2017-540,Wimbledon,Grass,G,201594,Simona Halep,206242,Beatriz Haddad Maia,7-5 6-3,3,R64,90
+2017-540,Wimbledon,Grass,G,201493,Angelique Kerber,201603,Shelby Rogers,4-6 7-6(2) 6-4,3,R32,136
+2017-540,Wimbledon,Grass,G,202469,Garbine Muguruza,201514,Sorana Cirstea,6-2 6-2,3,R32,70
+2017-540,Wimbledon,Grass,G,201474,Agnieszka Radwanska,201490,Timea Bacsinszky,3-6 6-4 6-1,3,R32,129
+2017-540,Wimbledon,Grass,G,201320,Svetlana Kuznetsova,201555,Polona Hercog,6-4 6-0,3,R32,64
+2017-540,Wimbledon,Grass,G,201517,Magdalena Rybarikova,201615,Lesia Tsurenko,6-2 6-1,3,R32,66
+2017-540,Wimbledon,Grass,G,201549,Petra Martic,201610,Zarina Diyas,7-6(6) 6-1,3,R32,89
+2017-540,Wimbledon,Grass,G,201535,Coco Vandeweghe,201590,Alison Riske Amritraj,6-2 6-4,3,R32,74
+2017-540,Wimbledon,Grass,G,201496,Caroline Wozniacki,204426,Anett Kontaveit,3-6 7-6(3) 6-2,3,R32,120
+2017-540,Wimbledon,Grass,G,211951,Ana Konjuh,201495,Dominika Cibulkova,7-6(3) 3-6 6-4,3,R32,156
+2017-540,Wimbledon,Grass,G,200748,Venus Williams,211768,Naomi Osaka,7-6(3) 6-4,3,R32,85
+2017-540,Wimbledon,Grass,G,211533,Jelena Ostapenko,202429,Camila Giorgi,7-5 7-5,3,R32,80
+2017-540,Wimbledon,Grass,G,202494,Elina Svitolina,202489,Carina Witthoeft,6-1 7-5,3,R32,70
+2017-540,Wimbledon,Grass,G,202427,Johanna Konta,206289,Maria Sakkari,6-4 6-1,3,R32,76
+2017-540,Wimbledon,Grass,G,201614,Caroline Garcia,201483,Madison Brengle,6-4 6-3,3,R32,76
+2017-540,Wimbledon,Grass,G,201458,Victoria Azarenka,201586,Heather Watson,3-6 6-1 6-4,3,R32,125
+2017-540,Wimbledon,Grass,G,201594,Simona Halep,201397,Shuai Peng,6-4 7-6(7),3,R32,98
+2017-540,Wimbledon,Grass,G,202469,Garbine Muguruza,201493,Angelique Kerber,4-6 6-4 6-4,3,R16,138
+2017-540,Wimbledon,Grass,G,201320,Svetlana Kuznetsova,201474,Agnieszka Radwanska,6-2 6-4,3,R16,89
+2017-540,Wimbledon,Grass,G,201517,Magdalena Rybarikova,201549,Petra Martic,6-4 2-6 6-3,3,R16,109
+2017-540,Wimbledon,Grass,G,201535,Coco Vandeweghe,201496,Caroline Wozniacki,7-6(4) 6-4,3,R16,63
+2017-540,Wimbledon,Grass,G,200748,Venus Williams,211951,Ana Konjuh,6-3 6-2,3,R16,103
+2017-540,Wimbledon,Grass,G,211533,Jelena Ostapenko,202494,Elina Svitolina,6-3 7-6(6),3,R16,131
+2017-540,Wimbledon,Grass,G,202427,Johanna Konta,201614,Caroline Garcia,7-6(3) 4-6 6-4,3,R16,88
+2017-540,Wimbledon,Grass,G,201594,Simona Halep,201458,Victoria Azarenka,7-6(3) 6-2,3,R16,75
+2017-540,Wimbledon,Grass,G,202469,Garbine Muguruza,201320,Svetlana Kuznetsova,6-3 6-4,3,QF,74
+2017-540,Wimbledon,Grass,G,201517,Magdalena Rybarikova,201535,Coco Vandeweghe,6-3 6-3,3,QF,73
+2017-540,Wimbledon,Grass,G,200748,Venus Williams,211533,Jelena Ostapenko,6-3 7-5,3,QF,158
+2017-540,Wimbledon,Grass,G,202427,Johanna Konta,201594,Simona Halep,6-7(2) 7-6(5) 6-4,3,QF,64
+2017-540,Wimbledon,Grass,G,202469,Garbine Muguruza,201517,Magdalena Rybarikova,6-1 6-1,3,SF,73
+2017-540,Wimbledon,Grass,G,200748,Venus Williams,202427,Johanna Konta,6-4 6-2,3,SF,77
+2017-540,Wimbledon,Grass,G,202469,Garbine Muguruza,200748,Venus Williams,7-5 6-0,3,F,
+2017-560,US Open,Hard,G,201662,Karolina Pliskova,202663,Magda Linette,6-2 6-1,3,R128,78
+2017-560,US Open,Hard,G,202484,Nicole Gibbs,202705,Veronica Cepede Royg,6-0 1-6 6-1,3,R128,116
+2017-560,US Open,Hard,G,203552,Risa Ozaki,203398,Danielle Lao,6-3 6-7(5) 7-6(5),3,R128,182
+2017-560,US Open,Hard,G,201533,Shuai Zhang,201513,Sabine Lisicki,6-7(4) 6-3 6-0,3,R128,109
+2017-560,US Open,Hard,G,201366,Barbora Strycova,201595,Misaki Doi,6-1 6-3,3,R128,80
+2017-560,US Open,Hard,G,206108,Jennifer Brady,201492,Andrea Petkovic,6-4 3-6 6-1,3,R128,133
+2017-560,US Open,Hard,G,202536,Ana Bogdan,203501,Taylor Townsend,6-4 4-6 6-3,3,R128,136
+2017-560,US Open,Hard,G,201512,Monica Niculescu,201540,Kristina Mladenovic,6-3 6-2,3,R128,111
+2017-560,US Open,Hard,G,201474,Agnieszka Radwanska,201549,Petra Martic,6-4 7-6(3),3,R128,93
+2017-560,US Open,Hard,G,201709,Yulia Putintseva,214863,Sofya Zhuk,7-6(3) 6-3,3,R128,99
+2017-560,US Open,Hard,G,202460,Ons Jabeur,219434,Brienne Minor,6-1 7-5,3,R128,63
+2017-560,US Open,Hard,G,201535,Coco Vandeweghe,201590,Alison Riske Amritraj,2-6 6-3 6-4,3,R128,121
+2017-560,US Open,Hard,G,201425,Lucie Safarova,204426,Anett Kontaveit,6-7(5) 6-1 6-4,3,R128,108
+2017-560,US Open,Hard,G,211702,Nao Hibino,214263,Catherine Cartan Bellis,6-3 4-6 7-5,3,R128,116
+2017-560,US Open,Hard,G,201597,Kurumi Nara,204427,Sara Sorribes Tormo,6-1 6-2,3,R128,61
+2017-560,US Open,Hard,G,201320,Svetlana Kuznetsova,214954,Marketa Vondrousova,4-6 6-4 7-6(2),3,R128,151
+2017-560,US Open,Hard,G,202494,Elina Svitolina,211701,Katerina Siniakova,6-0 6-7(5) 6-3,3,R128,143
+2017-560,US Open,Hard,G,201516,Evgeniya Rodina,202446,Eugenie Bouchard,7-6(2) 6-1,3,R128,85
+2017-560,US Open,Hard,G,201603,Shelby Rogers,215037,Kayla Day,6-2 4-6 6-4,3,R128,127
+2017-560,US Open,Hard,G,201611,Daria Saville,213530,Allie Kiick,6-2 6-1,3,R128,60
+2017-560,US Open,Hard,G,201455,Elena Vesnina,215020,Anna Blinkova,6-1 6-3,3,R128,74
+2017-560,US Open,Hard,G,201465,Kirsten Flipkens,201483,Madison Brengle,6-2 6-3,3,R128,62
+2017-560,US Open,Hard,G,213583,Tatjana Maria,214728,Ashley Kratzer,6-1 6-1,3,R128,62
+2017-560,US Open,Hard,G,201619,Madison Keys,210722,Elise Mertens,6-3 7-6(6),3,R128,90
+2017-560,US Open,Hard,G,211533,Jelena Ostapenko,202418,Lara Arruabarrena,6-2 1-6 6-1,3,R128,100
+2017-560,US Open,Hard,G,201514,Sorana Cirstea,204246,Lesley Pattinama Kerkhove,6-1 6-3,3,R128,74
+2017-560,US Open,Hard,G,214082,Daria Kasatkina,202492,Qiang Wang,6-7(7) 6-2 6-3,3,R128,130
+2017-560,US Open,Hard,G,201539,Christina Mchale,201499,Anastasia Pavlyuchenkova,3-6 6-3 6-2,3,R128,119
+2017-560,US Open,Hard,G,201518,Yanina Wickmayer,201615,Lesia Tsurenko,6-3 6-1,3,R128,82
+2017-560,US Open,Hard,G,201466,Kaia Kanepi,201212,Francesca Schiavone,0-6 6-4 6-2,3,R128,135
+2017-560,US Open,Hard,G,202653,Denisa Allertova,202490,Rebecca Peterson,6-2 7-6(5),3,R128,98
+2017-560,US Open,Hard,G,211768,Naomi Osaka,201493,Angelique Kerber,6-3 6-1,3,R128,65
+2017-560,US Open,Hard,G,201496,Caroline Wozniacki,202596,Mihaela Buzarnescu,6-1 7-5,3,R128,81
+2017-560,US Open,Hard,G,201505,Kate Makarova,201621,Mona Barthel,6-2 6-1,3,R128,62
+2017-560,US Open,Hard,G,201521,Carla Suarez Navarro,203567,Ipek Soylu,6-4 6-2,3,R128,73
+2017-560,US Open,Hard,G,200002,Mirjana Lucic,201620,Monica Puig,6-4 6-7(4) 7-6(4),3,R128,147
+2017-560,US Open,Hard,G,206289,Maria Sakkari,202428,Kiki Bertens,6-3 6-4,3,R128,82
+2017-560,US Open,Hard,G,201613,Arina Rodionova,202480,Richel Hogenkamp,7-5 7-5,3,R128,95
+2017-560,US Open,Hard,G,206219,Oceane Dodin,201426,Pauline Parmentier,3-6 6-0 7-6(6),3,R128,130
+2017-560,US Open,Hard,G,200748,Venus Williams,214149,Viktoria Hruncakova,6-3 3-6 6-2,3,R128,103
+2017-560,US Open,Hard,G,201520,Petra Kvitova,201347,Jelena Jankovic,7-5 7-5,3,R128,91
+2017-560,US Open,Hard,G,201427,Alize Cornet,201586,Heather Watson,6-4 6-4,3,R128,96
+2017-560,US Open,Hard,G,206420,Ekaterina Alexandrova,205723,Anna Zaja,6-2 6-3,3,R128,69
+2017-560,US Open,Hard,G,201614,Caroline Garcia,206124,Tereza Martincova,6-0 6-1,3,R128,57
+2017-560,US Open,Hard,G,201517,Magdalena Rybarikova,202429,Camila Giorgi,6-3 6-4,3,R128,78
+2017-560,US Open,Hard,G,201697,Kristyna Pliskova,202685,Misa Eguchi,6-2 6-2,3,R128,57
+2017-560,US Open,Hard,G,202504,Ying Ying Duan,214906,Claire Liu,7-6(8) 7-6(3),3,R128,112
+2017-560,US Open,Hard,G,202469,Garbine Muguruza,201478,Varvara Lepchenko,6-0 6-3,3,R128,63
+2017-560,US Open,Hard,G,202434,Aleksandra Krunic,202427,Johanna Konta,4-6 6-3 6-4,3,R128,137
+2017-560,US Open,Hard,G,201548,Ajla Tomljanovic,201596,Johanna Larsson,7-5 6-4,3,R128,93
+2017-560,US Open,Hard,G,202453,Saisai Zheng,202421,Alison Van Uytvanck,6-4 3-6 6-1,3,R128,142
+2017-560,US Open,Hard,G,201504,Julia Goerges,202470,Annika Beck,6-1 6-0,3,R128,59
+2017-560,US Open,Hard,G,202458,Ashleigh Barty,211951,Ana Konjuh,4-6 6-0 6-1,3,R128,79
+2017-560,US Open,Hard,G,205925,Aliaksandra Sasnovich,202426,Julia Boserup,6-2 6-2,3,R128,70
+2017-560,US Open,Hard,G,201585,Sloane Stephens,201311,Roberta Vinci,7-5 6-1,3,R128,81
+2017-560,US Open,Hard,G,201495,Dominika Cibulkova,202450,Jana Cepelova,6-7(5) 6-3 6-2,3,R128,151
+2017-560,US Open,Hard,G,201545,Anastasija Sevastova,202489,Carina Witthoeft,7-5 6-1,3,R128,79
+2017-560,US Open,Hard,G,203462,Kateryna Baindl,201593,Irina Camelia Begu,6-2 7-6(7),3,R128,112
+2017-560,US Open,Hard,G,202499,Donna Vekic,206242,Beatriz Haddad Maia,6-2 6-1,3,R128,69
+2017-560,US Open,Hard,G,201397,Shuai Peng,203281,Amandine Hesse,6-4 6-1,3,R128,77
+2017-560,US Open,Hard,G,213550,Sofia Kenin,201616,Lauren Davis,7-5 7-5,3,R128,118
+2017-560,US Open,Hard,G,203500,Sachia Vickery,212001,Natalia Vikhlyantseva,4-6 6-4 6-1,3,R128,102
+2017-560,US Open,Hard,G,201693,Timea Babos,203530,Viktorija Golubic,7-5 5-7 7-5,3,R128,155
+2017-560,US Open,Hard,G,201345,Maria Sharapova,201594,Simona Halep,6-4 4-6 6-3,3,R128,164
+2017-560,US Open,Hard,G,201662,Karolina Pliskova,202484,Nicole Gibbs,2-6 6-3 6-4,3,R64,107
+2017-560,US Open,Hard,G,201533,Shuai Zhang,203552,Risa Ozaki,6-0 6-3,3,R64,61
+2017-560,US Open,Hard,G,206108,Jennifer Brady,201366,Barbora Strycova,6-1 6-1,3,R64,56
+2017-560,US Open,Hard,G,201512,Monica Niculescu,202536,Ana Bogdan,6-2 3-6 6-3,3,R64,144
+2017-560,US Open,Hard,G,201474,Agnieszka Radwanska,201709,Yulia Putintseva,7-5 6-2,3,R64,105
+2017-560,US Open,Hard,G,201535,Coco Vandeweghe,202460,Ons Jabeur,7-6(6) 6-2,3,R64,94
+2017-560,US Open,Hard,G,201425,Lucie Safarova,211702,Nao Hibino,6-1 3-6 6-2,3,R64,105
+2017-560,US Open,Hard,G,201597,Kurumi Nara,201320,Svetlana Kuznetsova,6-3 3-6 6-3,3,R64,127
+2017-560,US Open,Hard,G,202494,Elina Svitolina,201516,Evgeniya Rodina,6-4 6-4,3,R64,83
+2017-560,US Open,Hard,G,201603,Shelby Rogers,201611,Daria Saville,7-6(6) 4-6 7-6(5),3,R64,213
+2017-560,US Open,Hard,G,201455,Elena Vesnina,201465,Kirsten Flipkens,6-4 6-4,3,R64,101
+2017-560,US Open,Hard,G,201619,Madison Keys,213583,Tatjana Maria,6-3 6-4,3,R64,84
+2017-560,US Open,Hard,G,211533,Jelena Ostapenko,201514,Sorana Cirstea,6-4 6-4,3,R64,90
+2017-560,US Open,Hard,G,214082,Daria Kasatkina,201539,Christina Mchale,7-5 6-3,3,R64,88
+2017-560,US Open,Hard,G,201466,Kaia Kanepi,201518,Yanina Wickmayer,6-4 6-2,3,R64,80
+2017-560,US Open,Hard,G,211768,Naomi Osaka,202653,Denisa Allertova,6-3 4-6 7-5,3,R64,112
+2017-560,US Open,Hard,G,201505,Kate Makarova,201496,Caroline Wozniacki,6-2 6-7(5) 6-1,3,R64,141
+2017-560,US Open,Hard,G,201521,Carla Suarez Navarro,200002,Mirjana Lucic,4-6 7-6(4) 6-2,3,R64,140
+2017-560,US Open,Hard,G,206289,Maria Sakkari,201613,Arina Rodionova,7-5 6-3,3,R64,93
+2017-560,US Open,Hard,G,200748,Venus Williams,206219,Oceane Dodin,7-5 6-4,3,R64,87
+2017-560,US Open,Hard,G,201520,Petra Kvitova,201427,Alize Cornet,6-1 6-2,3,R64,59
+2017-560,US Open,Hard,G,201614,Caroline Garcia,206420,Ekaterina Alexandrova,4-6 6-3 6-0,3,R64,94
+2017-560,US Open,Hard,G,201517,Magdalena Rybarikova,201697,Kristyna Pliskova,7-6(4) 7-6(3),3,R64,118
+2017-560,US Open,Hard,G,202469,Garbine Muguruza,202504,Ying Ying Duan,6-4 6-0,3,R64,65
+2017-560,US Open,Hard,G,202434,Aleksandra Krunic,201548,Ajla Tomljanovic,6-3 6-2,3,R64,60
+2017-560,US Open,Hard,G,201504,Julia Goerges,202453,Saisai Zheng,6-2 6-1,3,R64,54
+2017-560,US Open,Hard,G,202458,Ashleigh Barty,205925,Aliaksandra Sasnovich,6-1 7-6(7),3,R64,82
+2017-560,US Open,Hard,G,201585,Sloane Stephens,201495,Dominika Cibulkova,6-2 5-7 6-3,3,R64,161
+2017-560,US Open,Hard,G,201545,Anastasija Sevastova,203462,Kateryna Baindl,6-4 6-4,3,R64,82
+2017-560,US Open,Hard,G,202499,Donna Vekic,201397,Shuai Peng,6-0 6-2,3,R64,52
+2017-560,US Open,Hard,G,213550,Sofia Kenin,203500,Sachia Vickery,6-3 4-6 7-6(0),3,R64,158
+2017-560,US Open,Hard,G,201345,Maria Sharapova,201693,Timea Babos,6-7(4) 6-4 6-1,3,R64,139
+2017-560,US Open,Hard,G,201662,Karolina Pliskova,201533,Shuai Zhang,3-6 7-5 6-4,3,R32,140
+2017-560,US Open,Hard,G,206108,Jennifer Brady,201512,Monica Niculescu,6-3 4-6 7-6(3),3,R32,146
+2017-560,US Open,Hard,G,201535,Coco Vandeweghe,201474,Agnieszka Radwanska,7-5 4-6 6-4,3,R32,176
+2017-560,US Open,Hard,G,201425,Lucie Safarova,201597,Kurumi Nara,6-3 6-2,3,R32,70
+2017-560,US Open,Hard,G,202494,Elina Svitolina,201603,Shelby Rogers,6-4 7-5,3,R32,92
+2017-560,US Open,Hard,G,201619,Madison Keys,201455,Elena Vesnina,2-6 6-4 6-1,3,R32,114
+2017-560,US Open,Hard,G,214082,Daria Kasatkina,211533,Jelena Ostapenko,6-3 6-2,3,R32,72
+2017-560,US Open,Hard,G,201466,Kaia Kanepi,211768,Naomi Osaka,6-3 2-6 7-5,3,R32,123
+2017-560,US Open,Hard,G,201521,Carla Suarez Navarro,201505,Kate Makarova,6-1 3-6 6-3,3,R32,101
+2017-560,US Open,Hard,G,200748,Venus Williams,206289,Maria Sakkari,6-3 6-4,3,R32,75
+2017-560,US Open,Hard,G,201520,Petra Kvitova,201614,Caroline Garcia,6-0 6-4,3,R32,73
+2017-560,US Open,Hard,G,202469,Garbine Muguruza,201517,Magdalena Rybarikova,6-1 6-1,3,R32,61
+2017-560,US Open,Hard,G,201504,Julia Goerges,202434,Aleksandra Krunic,6-3 6-3,3,R32,73
+2017-560,US Open,Hard,G,201585,Sloane Stephens,202458,Ashleigh Barty,6-2 6-4,3,R32,77
+2017-560,US Open,Hard,G,201545,Anastasija Sevastova,202499,Donna Vekic,6-2 6-3,3,R32,65
+2017-560,US Open,Hard,G,201345,Maria Sharapova,213550,Sofia Kenin,7-5 6-2,3,R32,103
+2017-560,US Open,Hard,G,201662,Karolina Pliskova,206108,Jennifer Brady,6-1 6-0,3,R16,46
+2017-560,US Open,Hard,G,201535,Coco Vandeweghe,201425,Lucie Safarova,6-4 7-6(2),3,R16,99
+2017-560,US Open,Hard,G,201619,Madison Keys,202494,Elina Svitolina,7-6(2) 1-6 6-4,3,R16,120
+2017-560,US Open,Hard,G,201466,Kaia Kanepi,214082,Daria Kasatkina,6-4 6-4,3,R16,87
+2017-560,US Open,Hard,G,200748,Venus Williams,201521,Carla Suarez Navarro,6-3 3-6 6-1,3,R16,110
+2017-560,US Open,Hard,G,201520,Petra Kvitova,202469,Garbine Muguruza,7-6(3) 6-3,3,R16,106
+2017-560,US Open,Hard,G,201585,Sloane Stephens,201504,Julia Goerges,6-3 3-6 6-1,3,R16,101
+2017-560,US Open,Hard,G,201545,Anastasija Sevastova,201345,Maria Sharapova,5-7 6-4 6-2,3,R16,136
+2017-560,US Open,Hard,G,201535,Coco Vandeweghe,201662,Karolina Pliskova,7-6(4) 6-3,3,QF,94
+2017-560,US Open,Hard,G,201619,Madison Keys,201466,Kaia Kanepi,6-3 6-3,3,QF,68
+2017-560,US Open,Hard,G,200748,Venus Williams,201520,Petra Kvitova,6-3 3-6 7-6(2),3,QF,154
+2017-560,US Open,Hard,G,201585,Sloane Stephens,201545,Anastasija Sevastova,6-3 3-6 7-6(4),3,QF,148
+2017-560,US Open,Hard,G,201619,Madison Keys,201535,Coco Vandeweghe,6-1 6-2,3,SF,66
+2017-560,US Open,Hard,G,201585,Sloane Stephens,200748,Venus Williams,6-1 0-6 7-5,3,SF,127
+2017-560,US Open,Hard,G,201585,Sloane Stephens,201619,Madison Keys,6-3 6-0,3,F,61
+2017-580,Australian Open,Hard,G,201493,Angelique Kerber,201615,Lesia Tsurenko,6-2 5-7 6-2,3,R128,123
+2017-580,Australian Open,Hard,G,202489,Carina Witthoeft,205815,Eri Hozumi,7-5 7-6(6),3,R128,113
+2017-580,Australian Open,Hard,G,201697,Kristyna Pliskova,203530,Viktorija Golubic,6-3 2-6 6-4,3,R128,126
+2017-580,Australian Open,Hard,G,201593,Irina Camelia Begu,201468,Yaroslava Shvedova,5-7 6-3 6-4,3,R128,138
+2017-580,Australian Open,Hard,G,201397,Shuai Peng,214082,Daria Kasatkina,6-0 7-6(5),3,R128,88
+2017-580,Australian Open,Hard,G,202446,Eugenie Bouchard,211635,Louisa Chirico,6-0 6-4,3,R128,55
+2017-580,Australian Open,Hard,G,201426,Pauline Parmentier,201595,Misaki Doi,7-5 7-5,3,R128,101
+2017-580,Australian Open,Hard,G,201535,Coco Vandeweghe,201311,Roberta Vinci,6-1 7-6(3),3,R128,96
+2017-580,Australian Open,Hard,G,201521,Carla Suarez Navarro,202450,Jana Cepelova,6-2 6-2,3,R128,72
+2017-580,Australian Open,Hard,G,201514,Sorana Cirstea,202701,Irina Khromacheva,6-2 6-1,3,R128,71
+2017-580,Australian Open,Hard,G,201590,Alison Riske Amritraj,201483,Madison Brengle,7-5 6-3,3,R128,88
+2017-580,Australian Open,Hard,G,201533,Shuai Zhang,205925,Aliaksandra Sasnovich,6-0 6-3,3,R128,50
+2017-580,Australian Open,Hard,G,201545,Anastasija Sevastova,211702,Nao Hibino,6-4 RET,3,R128,36
+2017-580,Australian Open,Hard,G,201568,Kristina Kucova,201539,Christina Mchale,6-4 6-0,3,R128,87
+2017-580,Australian Open,Hard,G,202496,Samantha Crawford,201616,Lauren Davis,4-6 6-3 6-0,3,R128,110
+2017-580,Australian Open,Hard,G,202469,Garbine Muguruza,201523,Marina Erakovic,7-5 6-4,3,R128,97
+2017-580,Australian Open,Hard,G,201603,Shelby Rogers,201594,Simona Halep,6-3 6-1,3,R128,75
+2017-580,Australian Open,Hard,G,202458,Ashleigh Barty,202470,Annika Beck,6-4 7-5,3,R128,100
+2017-580,Australian Open,Hard,G,201621,Mona Barthel,215018,Destanee Aiava,6-3 7-6(4),3,R128,91
+2017-580,Australian Open,Hard,G,201620,Monica Puig,206255,Patricia Maria Tig,6-0 6-1,3,R128,53
+2017-580,Australian Open,Hard,G,201478,Varvara Lepchenko,202428,Kiki Bertens,7-5 7-6(5),3,R128,125
+2017-580,Australian Open,Hard,G,202504,Ying Ying Duan,211685,Rebecca Sramkova,6-3 6-4,3,R128,64
+2017-580,Australian Open,Hard,G,201527,Stefanie Voegele,201597,Kurumi Nara,2-6 6-2 6-3,3,R128,113
+2017-580,Australian Open,Hard,G,200748,Venus Williams,203462,Kateryna Baindl,7-6(5) 7-5,3,R128,119
+2017-580,Australian Open,Hard,G,202494,Elina Svitolina,201448,Galina Voskoboeva,6-0 6-2,3,R128,67
+2017-580,Australian Open,Hard,G,202426,Julia Boserup,201212,Francesca Schiavone,6-2 6-4,3,R128,74
+2017-580,Australian Open,Hard,G,212001,Natalia Vikhlyantseva,201447,Vania King,6-3 6-2,3,R128,60
+2017-580,Australian Open,Hard,G,201499,Anastasia Pavlyuchenkova,201516,Evgeniya Rodina,6-1 7-6(2),3,R128,84
+2017-580,Australian Open,Hard,G,201347,Jelena Jankovic,201696,Laura Siegemund,6-1 1-6 6-4,3,R128,157
+2017-580,Australian Open,Hard,G,201504,Julia Goerges,211701,Katerina Siniakova,3-6 6-3 6-4,3,R128,122
+2017-580,Australian Open,Hard,G,215096,Jaimee Fourlis,201588,Anna Tatishvili,6-4 6-3,3,R128,102
+2017-580,Australian Open,Hard,G,201320,Svetlana Kuznetsova,201531,Mariana Duque Marino,6-0 6-1,3,R128,56
+2017-580,Australian Open,Hard,G,201662,Karolina Pliskova,204427,Sara Sorribes Tormo,6-2 6-0,3,R128,60
+2017-580,Australian Open,Hard,G,215020,Anna Blinkova,201512,Monica Niculescu,6-2 4-6 6-4,3,R128,135
+2017-580,Australian Open,Hard,G,211533,Jelena Ostapenko,202684,Lin Zhu,6-4 6-0,3,R128,66
+2017-580,Australian Open,Hard,G,201709,Yulia Putintseva,202418,Lara Arruabarrena,7-6(7) 7-6(10),3,R128,167
+2017-580,Australian Open,Hard,G,201611,Daria Saville,201648,Naomi Broady,3-6 6-4 7-5,3,R128,116
+2017-580,Australian Open,Hard,G,211951,Ana Konjuh,201540,Kristina Mladenovic,6-4 6-2,3,R128,81
+2017-580,Australian Open,Hard,G,203575,Danka Kovinic,202453,Saisai Zheng,6-0 6-4,3,R128,67
+2017-580,Australian Open,Hard,G,201490,Timea Bacsinszky,202429,Camila Giorgi,6-4 3-6 7-5,3,R128,150
+2017-580,Australian Open,Hard,G,201455,Elena Vesnina,202536,Ana Bogdan,7-5 6-2,3,R128,82
+2017-580,Australian Open,Hard,G,201605,Mandy Minella,202663,Magda Linette,7-5 6-4,3,R128,88
+2017-580,Australian Open,Hard,G,206108,Jennifer Brady,202628,Maryna Zanevska,6-3 6-2,3,R128,72
+2017-580,Australian Open,Hard,G,201586,Heather Watson,201325,Samantha Stosur,6-3 3-6 6-0,3,R128,135
+2017-580,Australian Open,Hard,G,201427,Alize Cornet,202707,Myrtille Georges,6-3 4-6 6-1,3,R128,120
+2017-580,Australian Open,Hard,G,206289,Maria Sakkari,204426,Anett Kontaveit,6-0 6-4,3,R128,64
+2017-580,Australian Open,Hard,G,200002,Mirjana Lucic,202492,Qiang Wang,4-6 6-3 6-4,3,R128,116
+2017-580,Australian Open,Hard,G,201474,Agnieszka Radwanska,201450,Tsvetana Pironkova,6-1 4-6 6-1,3,R128,104
+2017-580,Australian Open,Hard,G,201495,Dominika Cibulkova,202653,Denisa Allertova,7-5 6-2,3,R128,101
+2017-580,Australian Open,Hard,G,201444,Su Wei Hsieh,201498,Karin Knapp,6-3 2-0 RET,3,R128,57
+2017-580,Australian Open,Hard,G,201506,Sara Errani,203552,Risa Ozaki,7-5 6-1,3,R128,111
+2017-580,Australian Open,Hard,G,201505,Kate Makarova,206420,Ekaterina Alexandrova,6-0 4-6 6-1,3,R128,85
+2017-580,Australian Open,Hard,G,201496,Caroline Wozniacki,201613,Arina Rodionova,6-1 6-2,3,R128,66
+2017-580,Australian Open,Hard,G,202499,Donna Vekic,211878,Lizette Cabrera,7-5 6-2,3,R128,84
+2017-580,Australian Open,Hard,G,211768,Naomi Osaka,202503,Luksika Kumkhum,6-7(2) 6-4 7-5,3,R128,145
+2017-580,Australian Open,Hard,G,202427,Johanna Konta,201465,Kirsten Flipkens,7-5 6-2,3,R128,96
+2017-580,Australian Open,Hard,G,201366,Barbora Strycova,206404,Elizaveta Kulichkova,6-3 6-2,3,R128,75
+2017-580,Australian Open,Hard,G,201492,Andrea Petkovic,215037,Kayla Day,6-3 6-2,3,R128,77
+2017-580,Australian Open,Hard,G,206219,Oceane Dodin,201666,Cagla Buyukakcay,7-5 6-7(1) 6-2,3,R128,142
+2017-580,Australian Open,Hard,G,201614,Caroline Garcia,201435,Kateryna Bondarenko,7-6(4) 6-4,3,R128,98
+2017-580,Australian Open,Hard,G,202484,Nicole Gibbs,201693,Timea Babos,7-6(3) 6-4,3,R128,102
+2017-580,Australian Open,Hard,G,201604,Irina Falconi,201580,Xinyun Han,6-1 7-5,3,R128,96
+2017-580,Australian Open,Hard,G,201425,Lucie Safarova,201518,Yanina Wickmayer,3-6 7-6(7) 6-1,3,R128,126
+2017-580,Australian Open,Hard,G,200033,Serena Williams,202505,Belinda Bencic,6-4 6-3,3,R128,79
+2017-580,Australian Open,Hard,G,201493,Angelique Kerber,202489,Carina Witthoeft,6-2 6-7(3) 6-2,3,R64,128
+2017-580,Australian Open,Hard,G,201697,Kristyna Pliskova,201593,Irina Camelia Begu,6-4 7-6(8),3,R64,97
+2017-580,Australian Open,Hard,G,202446,Eugenie Bouchard,201397,Shuai Peng,7-6(5) 6-2,3,R64,89
+2017-580,Australian Open,Hard,G,201535,Coco Vandeweghe,201426,Pauline Parmentier,6-4 7-6(5),3,R64,108
+2017-580,Australian Open,Hard,G,201514,Sorana Cirstea,201521,Carla Suarez Navarro,7-6(1) 6-3,3,R64,93
+2017-580,Australian Open,Hard,G,201590,Alison Riske Amritraj,201533,Shuai Zhang,7-6(7) 4-6 6-1,3,R64,165
+2017-580,Australian Open,Hard,G,201545,Anastasija Sevastova,201568,Kristina Kucova,6-3 6-4,3,R64,76
+2017-580,Australian Open,Hard,G,202469,Garbine Muguruza,202496,Samantha Crawford,7-5 6-4,3,R64,94
+2017-580,Australian Open,Hard,G,202458,Ashleigh Barty,201603,Shelby Rogers,7-5 6-1,3,R64,68
+2017-580,Australian Open,Hard,G,201621,Mona Barthel,201620,Monica Puig,6-4 6-4,3,R64,80
+2017-580,Australian Open,Hard,G,202504,Ying Ying Duan,201478,Varvara Lepchenko,6-1 3-6 10-8,3,R64,147
+2017-580,Australian Open,Hard,G,200748,Venus Williams,201527,Stefanie Voegele,6-3 6-2,3,R64,83
+2017-580,Australian Open,Hard,G,202494,Elina Svitolina,202426,Julia Boserup,6-4 6-1,3,R64,76
+2017-580,Australian Open,Hard,G,201499,Anastasia Pavlyuchenkova,212001,Natalia Vikhlyantseva,6-2 6-2,3,R64,77
+2017-580,Australian Open,Hard,G,201347,Jelena Jankovic,201504,Julia Goerges,6-3 6-4,3,R64,88
+2017-580,Australian Open,Hard,G,201320,Svetlana Kuznetsova,215096,Jaimee Fourlis,6-2 6-1,3,R64,83
+2017-580,Australian Open,Hard,G,201662,Karolina Pliskova,215020,Anna Blinkova,6-0 6-2,3,R64,59
+2017-580,Australian Open,Hard,G,211533,Jelena Ostapenko,201709,Yulia Putintseva,6-3 6-1,3,R64,72
+2017-580,Australian Open,Hard,G,201611,Daria Saville,211951,Ana Konjuh,6-2 1-6 6-4,3,R64,121
+2017-580,Australian Open,Hard,G,201490,Timea Bacsinszky,203575,Danka Kovinic,6-1 7-6(5),3,R64,100
+2017-580,Australian Open,Hard,G,201455,Elena Vesnina,201605,Mandy Minella,6-3 6-3,3,R64,80
+2017-580,Australian Open,Hard,G,206108,Jennifer Brady,201586,Heather Watson,2-6 7-6(3) 10-8,3,R64,163
+2017-580,Australian Open,Hard,G,206289,Maria Sakkari,201427,Alize Cornet,7-5 4-6 6-1,3,R64,160
+2017-580,Australian Open,Hard,G,200002,Mirjana Lucic,201474,Agnieszka Radwanska,6-3 6-2,3,R64,62
+2017-580,Australian Open,Hard,G,201495,Dominika Cibulkova,201444,Su Wei Hsieh,6-4 7-6(8),3,R64,103
+2017-580,Australian Open,Hard,G,201505,Kate Makarova,201506,Sara Errani,6-2 3-2 RET,3,R64,65
+2017-580,Australian Open,Hard,G,201496,Caroline Wozniacki,202499,Donna Vekic,6-1 6-3,3,R64,76
+2017-580,Australian Open,Hard,G,202427,Johanna Konta,211768,Naomi Osaka,6-4 6-2,3,R64,69
+2017-580,Australian Open,Hard,G,201366,Barbora Strycova,201492,Andrea Petkovic,6-0 7-5,3,R64,103
+2017-580,Australian Open,Hard,G,201614,Caroline Garcia,206219,Oceane Dodin,6-7(3) 6-4 6-4,3,R64,136
+2017-580,Australian Open,Hard,G,202484,Nicole Gibbs,201604,Irina Falconi,6-4 6-1,3,R64,77
+2017-580,Australian Open,Hard,G,200033,Serena Williams,201425,Lucie Safarova,6-3 6-4,3,R64,85
+2017-580,Australian Open,Hard,G,201493,Angelique Kerber,201697,Kristyna Pliskova,6-0 6-4,3,R32,55
+2017-580,Australian Open,Hard,G,201535,Coco Vandeweghe,202446,Eugenie Bouchard,6-4 3-6 7-5,3,R32,141
+2017-580,Australian Open,Hard,G,201514,Sorana Cirstea,201590,Alison Riske Amritraj,6-2 7-6(2),3,R32,90
+2017-580,Australian Open,Hard,G,202469,Garbine Muguruza,201545,Anastasija Sevastova,6-4 6-2,3,R32,63
+2017-580,Australian Open,Hard,G,201621,Mona Barthel,202458,Ashleigh Barty,6-4 3-6 6-3,3,R32,
+2017-580,Australian Open,Hard,G,200748,Venus Williams,202504,Ying Ying Duan,6-1 6-0,3,R32,58
+2017-580,Australian Open,Hard,G,201499,Anastasia Pavlyuchenkova,202494,Elina Svitolina,7-5 4-6 6-3,3,R32,151
+2017-580,Australian Open,Hard,G,201320,Svetlana Kuznetsova,201347,Jelena Jankovic,6-4 5-7 9-7,3,R32,216
+2017-580,Australian Open,Hard,G,201662,Karolina Pliskova,211533,Jelena Ostapenko,4-6 6-0 10-8,3,R32,125
+2017-580,Australian Open,Hard,G,201611,Daria Saville,201490,Timea Bacsinszky,6-3 5-7 6-4,3,R32,153
+2017-580,Australian Open,Hard,G,206108,Jennifer Brady,201455,Elena Vesnina,7-6(4) 6-2,3,R32,84
+2017-580,Australian Open,Hard,G,200002,Mirjana Lucic,206289,Maria Sakkari,3-6 6-2 6-3,3,R32,108
+2017-580,Australian Open,Hard,G,201505,Kate Makarova,201495,Dominika Cibulkova,6-2 6-7(3) 6-3,3,R32,173
+2017-580,Australian Open,Hard,G,202427,Johanna Konta,201496,Caroline Wozniacki,6-3 6-1,3,R32,75
+2017-580,Australian Open,Hard,G,201366,Barbora Strycova,201614,Caroline Garcia,6-2 7-5,3,R32,87
+2017-580,Australian Open,Hard,G,200033,Serena Williams,202484,Nicole Gibbs,6-1 6-3,3,R32,63
+2017-580,Australian Open,Hard,G,201535,Coco Vandeweghe,201493,Angelique Kerber,6-2 6-3,3,R16,68
+2017-580,Australian Open,Hard,G,202469,Garbine Muguruza,201514,Sorana Cirstea,6-2 6-3,3,R16,65
+2017-580,Australian Open,Hard,G,200748,Venus Williams,201621,Mona Barthel,6-3 7-5,3,R16,96
+2017-580,Australian Open,Hard,G,201499,Anastasia Pavlyuchenkova,201320,Svetlana Kuznetsova,6-3 6-3,3,R16,68
+2017-580,Australian Open,Hard,G,201662,Karolina Pliskova,201611,Daria Saville,6-3 6-3,3,R16,72
+2017-580,Australian Open,Hard,G,200002,Mirjana Lucic,206108,Jennifer Brady,6-4 6-2,3,R16,70
+2017-580,Australian Open,Hard,G,202427,Johanna Konta,201505,Kate Makarova,6-1 6-4,3,R16,68
+2017-580,Australian Open,Hard,G,200033,Serena Williams,201366,Barbora Strycova,7-5 6-4,3,R16,105
+2017-580,Australian Open,Hard,G,201535,Coco Vandeweghe,202469,Garbine Muguruza,6-4 6-0,3,QF,83
+2017-580,Australian Open,Hard,G,200748,Venus Williams,201499,Anastasia Pavlyuchenkova,6-4 7-6(3),3,QF,107
+2017-580,Australian Open,Hard,G,200002,Mirjana Lucic,201662,Karolina Pliskova,6-4 3-6 6-4,3,QF,107
+2017-580,Australian Open,Hard,G,200033,Serena Williams,202427,Johanna Konta,6-2 6-3,3,QF,75
+2017-580,Australian Open,Hard,G,200748,Venus Williams,201535,Coco Vandeweghe,6-7(3) 6-2 6-3,3,SF,145
+2017-580,Australian Open,Hard,G,200033,Serena Williams,200002,Mirjana Lucic,6-2 6-1,3,SF,50
+2017-580,Australian Open,Hard,G,200033,Serena Williams,200748,Venus Williams,6-4 6-4,3,F,81
+2017-M006,Indian Wells,Hard,PM,201492,Andrea Petkovic,201447,Vania King,6-0 2-0 RET,3,R128,43
+2017-M006,Indian Wells,Hard,PM,201426,Pauline Parmentier,206219,Oceane Dodin,6-2 6-4,3,R128,71
+2017-M006,Indian Wells,Hard,PM,201478,Varvara Lepchenko,201468,Yaroslava Shvedova,4-6 6-2 6-4,3,R128,133
+2017-M006,Indian Wells,Hard,PM,201603,Shelby Rogers,206108,Jennifer Brady,6-4 7-6(4),3,R128,108
+2017-M006,Indian Wells,Hard,PM,201347,Jelena Jankovic,201604,Irina Falconi,6-2 3-6 6-3,3,R128,122
+2017-M006,Indian Wells,Hard,PM,201425,Lucie Safarova,202418,Lara Arruabarrena,6-3 6-2,3,R128,90
+2017-M006,Indian Wells,Hard,PM,201397,Shuai Peng,201615,Lesia Tsurenko,6-2 2-6 7-5,3,R128,137
+2017-M006,Indian Wells,Hard,PM,204427,Sara Sorribes Tormo,201505,Kate Makarova,6-4 6-2,3,R128,78
+2017-M006,Indian Wells,Hard,PM,202499,Donna Vekic,201590,Alison Riske Amritraj,6-3 7-6(2),3,R128,102
+2017-M006,Indian Wells,Hard,PM,202470,Annika Beck,202446,Eugenie Bouchard,3-6 6-2 6-2,3,R128,134
+2017-M006,Indian Wells,Hard,PM,201616,Lauren Davis,203530,Viktorija Golubic,6-4 4-6 7-5,3,R128,162
+2017-M006,Indian Wells,Hard,PM,201504,Julia Goerges,201548,Ajla Tomljanovic,7-5 6-2,3,R128,92
+2017-M006,Indian Wells,Hard,PM,202663,Magda Linette,203501,Taylor Townsend,6-4 6-2,3,R128,78
+2017-M006,Indian Wells,Hard,PM,211701,Katerina Siniakova,201621,Mona Barthel,4-6 6-4 6-4,3,R128,144
+2017-M006,Indian Wells,Hard,PM,211768,Naomi Osaka,203552,Risa Ozaki,6-4 6-2,3,R128,70
+2017-M006,Indian Wells,Hard,PM,201531,Mariana Duque Marino,206255,Patricia Maria Tig,6-4 0-6 6-4,3,R128,130
+2017-M006,Indian Wells,Hard,PM,201596,Johanna Larsson,202429,Camila Giorgi,7-6(3) 6-3,3,R128,100
+2017-M006,Indian Wells,Hard,PM,201483,Madison Brengle,213583,Tatjana Maria,6-4 6-2,3,R128,79
+2017-M006,Indian Wells,Hard,PM,201516,Evgeniya Rodina,201539,Christina Mchale,6-1 6-0,3,R128,62
+2017-M006,Indian Wells,Hard,PM,201586,Heather Watson,202484,Nicole Gibbs,4-6 6-2 6-2,3,R128,110
+2017-M006,Indian Wells,Hard,PM,201506,Sara Errani,201605,Mandy Minella,1-6 6-4 7-5,3,R128,164
+2017-M006,Indian Wells,Hard,PM,204426,Anett Kontaveit,201595,Misaki Doi,7-5 6-4,3,R128,78
+2017-M006,Indian Wells,Hard,PM,201697,Kristyna Pliskova,201318,Bethanie Mattek Sands,6-0 6-3,3,R128,69
+2017-M006,Indian Wells,Hard,PM,211533,Jelena Ostapenko,203575,Danka Kovinic,6-4 2-6 7-6(3),3,R128,145
+2017-M006,Indian Wells,Hard,PM,201465,Kirsten Flipkens,214263,Catherine Cartan Bellis,4-6 6-1 6-4,3,R128,118
+2017-M006,Indian Wells,Hard,PM,215037,Kayla Day,201597,Kurumi Nara,6-3 6-4,3,R128,94
+2017-M006,Indian Wells,Hard,PM,201518,Yanina Wickmayer,201696,Laura Siegemund,6-3 3-6 6-4,3,R128,177
+2017-M006,Indian Wells,Hard,PM,202492,Qiang Wang,201435,Kateryna Bondarenko,5-7 6-4 6-4,3,R128,153
+2017-M006,Indian Wells,Hard,PM,201512,Monica Niculescu,201514,Sorana Cirstea,4-6 6-3 6-1,3,R128,110
+2017-M006,Indian Wells,Hard,PM,202505,Belinda Bencic,201450,Tsvetana Pironkova,6-4 6-1,3,R128,66
+2017-M006,Indian Wells,Hard,PM,211635,Louisa Chirico,201212,Francesca Schiavone,6-3 6-3,3,R128,76
+2017-M006,Indian Wells,Hard,PM,201620,Monica Puig,203389,Danielle Collins,6-0 6-2,3,R128,69
+2017-M006,Indian Wells,Hard,PM,201493,Angelique Kerber,201492,Andrea Petkovic,6-2 6-1,3,R64,58
+2017-M006,Indian Wells,Hard,PM,201426,Pauline Parmentier,201709,Yulia Putintseva,6-2 6-3,3,R64,73
+2017-M006,Indian Wells,Hard,PM,201693,Timea Babos,201478,Varvara Lepchenko,4-6 7-6(2) 6-2,3,R64,175
+2017-M006,Indian Wells,Hard,PM,201455,Elena Vesnina,201603,Shelby Rogers,6-4 7-5,3,R64,100
+2017-M006,Indian Wells,Hard,PM,200748,Venus Williams,201347,Jelena Jankovic,1-6 7-6(5) 6-1,3,R64,106
+2017-M006,Indian Wells,Hard,PM,201425,Lucie Safarova,201535,Coco Vandeweghe,4-6 6-4 6-1,3,R64,118
+2017-M006,Indian Wells,Hard,PM,201397,Shuai Peng,211951,Ana Konjuh,6-4 6-2,3,R64,81
+2017-M006,Indian Wells,Hard,PM,201474,Agnieszka Radwanska,204427,Sara Sorribes Tormo,6-3 6-4,3,R64,103
+2017-M006,Indian Wells,Hard,PM,201594,Simona Halep,202499,Donna Vekic,6-4 6-1,3,R64,71
+2017-M006,Indian Wells,Hard,PM,201540,Kristina Mladenovic,202470,Annika Beck,6-0 7-5,3,R64,102
+2017-M006,Indian Wells,Hard,PM,201616,Lauren Davis,201545,Anastasija Sevastova,7-5 6-3,3,R64,97
+2017-M006,Indian Wells,Hard,PM,201504,Julia Goerges,201325,Samantha Stosur,4-6 6-4 6-4,3,R64,125
+2017-M006,Indian Wells,Hard,PM,201496,Caroline Wozniacki,202663,Magda Linette,6-3 6-0,3,R64,76
+2017-M006,Indian Wells,Hard,PM,211701,Katerina Siniakova,201521,Carla Suarez Navarro,6-3 7-5,3,R64,99
+2017-M006,Indian Wells,Hard,PM,211768,Naomi Osaka,201533,Shuai Zhang,6-4 6-2,3,R64,74
+2017-M006,Indian Wells,Hard,PM,201619,Madison Keys,201531,Mariana Duque Marino,6-1 7-5,3,R64,89
+2017-M006,Indian Wells,Hard,PM,201320,Svetlana Kuznetsova,201596,Johanna Larsson,7-6(3) 6-4,3,R64,94
+2017-M006,Indian Wells,Hard,PM,201311,Roberta Vinci,201483,Madison Brengle,7-6(5) 6-4,3,R64,108
+2017-M006,Indian Wells,Hard,PM,201614,Caroline Garcia,201516,Evgeniya Rodina,6-3 6-3,3,R64,63
+2017-M006,Indian Wells,Hard,PM,202427,Johanna Konta,201586,Heather Watson,6-4 6-4,3,R64,94
+2017-M006,Indian Wells,Hard,PM,201366,Barbora Strycova,201506,Sara Errani,6-4 5-7 6-2,3,R64,156
+2017-M006,Indian Wells,Hard,PM,201499,Anastasia Pavlyuchenkova,204426,Anett Kontaveit,6-4 6-4,3,R64,83
+2017-M006,Indian Wells,Hard,PM,201697,Kristyna Pliskova,214082,Daria Kasatkina,6-0 6-3,3,R64,64
+2017-M006,Indian Wells,Hard,PM,201495,Dominika Cibulkova,211533,Jelena Ostapenko,6-4 3-6 6-3,3,R64,131
+2017-M006,Indian Wells,Hard,PM,202469,Garbine Muguruza,201465,Kirsten Flipkens,6-2 6-3,3,R64,90
+2017-M006,Indian Wells,Hard,PM,215037,Kayla Day,200002,Mirjana Lucic,6-4 5-7 7-5,3,R64,135
+2017-M006,Indian Wells,Hard,PM,201611,Daria Saville,201518,Yanina Wickmayer,6-2 7-6(5),3,R64,104
+2017-M006,Indian Wells,Hard,PM,202494,Elina Svitolina,202492,Qiang Wang,3-6 6-3 7-6(3),3,R64,158
+2017-M006,Indian Wells,Hard,PM,201490,Timea Bacsinszky,201512,Monica Niculescu,7-5 6-2,3,R64,107
+2017-M006,Indian Wells,Hard,PM,202428,Kiki Bertens,202505,Belinda Bencic,6-2 6-2,3,R64,67
+2017-M006,Indian Wells,Hard,PM,201593,Irina Camelia Begu,211635,Louisa Chirico,6-1 7-5,3,R64,110
+2017-M006,Indian Wells,Hard,PM,201662,Karolina Pliskova,201620,Monica Puig,1-6 6-4 6-4,3,R64,119
+2017-M006,Indian Wells,Hard,PM,201493,Angelique Kerber,201426,Pauline Parmentier,7-5 3-6 7-5,3,R32,153
+2017-M006,Indian Wells,Hard,PM,201455,Elena Vesnina,201693,Timea Babos,6-4 1-6 6-4,3,R32,136
+2017-M006,Indian Wells,Hard,PM,200748,Venus Williams,201425,Lucie Safarova,6-4 6-2,3,R32,72
+2017-M006,Indian Wells,Hard,PM,201397,Shuai Peng,201474,Agnieszka Radwanska,6-4 6-4,3,R32,89
+2017-M006,Indian Wells,Hard,PM,201540,Kristina Mladenovic,201594,Simona Halep,6-3 6-3,3,R32,102
+2017-M006,Indian Wells,Hard,PM,201616,Lauren Davis,201504,Julia Goerges,6-1 6-4,3,R32,91
+2017-M006,Indian Wells,Hard,PM,201496,Caroline Wozniacki,211701,Katerina Siniakova,6-3 6-1,3,R32,79
+2017-M006,Indian Wells,Hard,PM,201619,Madison Keys,211768,Naomi Osaka,6-1 6-4,3,R32,58
+2017-M006,Indian Wells,Hard,PM,201320,Svetlana Kuznetsova,201311,Roberta Vinci,6-2 2-6 6-1,3,R32,96
+2017-M006,Indian Wells,Hard,PM,201614,Caroline Garcia,202427,Johanna Konta,3-6 6-3 7-6(1),3,R32,131
+2017-M006,Indian Wells,Hard,PM,201499,Anastasia Pavlyuchenkova,201366,Barbora Strycova,6-3 6-2,3,R32,77
+2017-M006,Indian Wells,Hard,PM,201495,Dominika Cibulkova,201697,Kristyna Pliskova,2-6 7-6(5) 7-6(4),3,R32,167
+2017-M006,Indian Wells,Hard,PM,202469,Garbine Muguruza,215037,Kayla Day,3-6 7-5 6-2,3,R32,124
+2017-M006,Indian Wells,Hard,PM,202494,Elina Svitolina,201611,Daria Saville,6-2 6-1,3,R32,64
+2017-M006,Indian Wells,Hard,PM,201490,Timea Bacsinszky,202428,Kiki Bertens,6-3 5-7 7-6(8),3,R32,202
+2017-M006,Indian Wells,Hard,PM,201662,Karolina Pliskova,201593,Irina Camelia Begu,6-4 7-6(2),3,R32,120
+2017-M006,Indian Wells,Hard,PM,201455,Elena Vesnina,201493,Angelique Kerber,6-3 6-3,3,R16,84
+2017-M006,Indian Wells,Hard,PM,200748,Venus Williams,201397,Shuai Peng,3-6 6-1 6-3,3,R16,116
+2017-M006,Indian Wells,Hard,PM,201540,Kristina Mladenovic,201616,Lauren Davis,6-3 6-3,3,R16,87
+2017-M006,Indian Wells,Hard,PM,201496,Caroline Wozniacki,201619,Madison Keys,6-4 6-4,3,R16,92
+2017-M006,Indian Wells,Hard,PM,201320,Svetlana Kuznetsova,201614,Caroline Garcia,6-1 6-4,3,R16,71
+2017-M006,Indian Wells,Hard,PM,201499,Anastasia Pavlyuchenkova,201495,Dominika Cibulkova,6-4 3-6 6-2,3,R16,127
+2017-M006,Indian Wells,Hard,PM,202469,Garbine Muguruza,202494,Elina Svitolina,7-6(5) 1-6 6-0,3,R16,113
+2017-M006,Indian Wells,Hard,PM,201662,Karolina Pliskova,201490,Timea Bacsinszky,5-1 RET,3,R16,29
+2017-M006,Indian Wells,Hard,PM,201455,Elena Vesnina,200748,Venus Williams,6-2 4-6 6-3,3,QF,131
+2017-M006,Indian Wells,Hard,PM,201540,Kristina Mladenovic,201496,Caroline Wozniacki,3-6 7-6(4) 6-2,3,QF,153
+2017-M006,Indian Wells,Hard,PM,201320,Svetlana Kuznetsova,201499,Anastasia Pavlyuchenkova,6-3 6-2,3,QF,63
+2017-M006,Indian Wells,Hard,PM,201662,Karolina Pliskova,202469,Garbine Muguruza,7-6(2) 7-6(5),3,QF,116
+2017-M006,Indian Wells,Hard,PM,201455,Elena Vesnina,201540,Kristina Mladenovic,6-3 6-4,3,SF,84
+2017-M006,Indian Wells,Hard,PM,201320,Svetlana Kuznetsova,201662,Karolina Pliskova,7-6(5) 7-6(2),3,SF,115
+2017-M006,Indian Wells,Hard,PM,201455,Elena Vesnina,201320,Svetlana Kuznetsova,6-7(6) 7-5 6-4,3,F,181
+2017-M007,Miami,Hard,PM,201483,Madison Brengle,211533,Jelena Ostapenko,6-3 3-6 6-2,3,R128,119
+2017-M007,Miami,Hard,PM,202489,Carina Witthoeft,202484,Nicole Gibbs,6-3 6-3,3,R128,79
+2017-M007,Miami,Hard,PM,202450,Jana Cepelova,201492,Andrea Petkovic,6-2 6-4,3,R128,72
+2017-M007,Miami,Hard,PM,201596,Johanna Larsson,201512,Monica Niculescu,6-3 6-1,3,R128,86
+2017-M007,Miami,Hard,PM,201318,Bethanie Mattek Sands,211701,Katerina Siniakova,6-3 4-6 6-4,3,R128,146
+2017-M007,Miami,Hard,PM,201468,Yaroslava Shvedova,201347,Jelena Jankovic,4-6 6-4 7-6(3),3,R128,148
+2017-M007,Miami,Hard,PM,201435,Kateryna Bondarenko,211651,Paula Badosa,6-4 7-5,3,R128,83
+2017-M007,Miami,Hard,PM,202492,Qiang Wang,202499,Donna Vekic,0-6 6-4 6-2,3,R128,104
+2017-M007,Miami,Hard,PM,202705,Veronica Cepede Royg,201595,Misaki Doi,6-2 6-4,3,R128,83
+2017-M007,Miami,Hard,PM,201465,Kirsten Flipkens,206108,Jennifer Brady,3-6 6-3 7-5,3,R128,141
+2017-M007,Miami,Hard,PM,201425,Lucie Safarova,201518,Yanina Wickmayer,7-6(2) 6-4,3,R128,115
+2017-M007,Miami,Hard,PM,201548,Ajla Tomljanovic,202663,Magda Linette,6-2 1-6 6-2,3,R128,105
+2017-M007,Miami,Hard,PM,201478,Varvara Lepchenko,201616,Lauren Davis,6-3 6-3,3,R128,78
+2017-M007,Miami,Hard,PM,201514,Sorana Cirstea,201620,Monica Puig,6-2 6-4,3,R128,69
+2017-M007,Miami,Hard,PM,201506,Sara Errani,202505,Belinda Bencic,6-3 4-6 6-3,3,R128,126
+2017-M007,Miami,Hard,PM,201539,Christina Mchale,202470,Annika Beck,6-7(2) 7-5 6-0,3,R128,180
+2017-M007,Miami,Hard,PM,203530,Viktorija Golubic,201450,Tsvetana Pironkova,3-6 6-1 6-1,3,R128,112
+2017-M007,Miami,Hard,PM,202418,Lara Arruabarrena,212001,Natalia Vikhlyantseva,7-5 6-1,3,R128,79
+2017-M007,Miami,Hard,PM,201426,Pauline Parmentier,206219,Oceane Dodin,6-2 6-1,3,R128,49
+2017-M007,Miami,Hard,PM,205925,Aliaksandra Sasnovich,201427,Alize Cornet,6-4 1-6 6-4,3,R128,157
+2017-M007,Miami,Hard,PM,202458,Ashleigh Barty,202446,Eugenie Bouchard,6-4 5-7 6-3,3,R128,125
+2017-M007,Miami,Hard,PM,201397,Shuai Peng,203575,Danka Kovinic,6-2 0-0 RET,3,R128,49
+2017-M007,Miami,Hard,PM,204426,Anett Kontaveit,201597,Kurumi Nara,6-2 6-1,3,R128,57
+2017-M007,Miami,Hard,PM,211768,Naomi Osaka,201568,Kristina Kucova,6-2 6-3,3,R128,71
+2017-M007,Miami,Hard,PM,201605,Mandy Minella,201697,Kristyna Pliskova,7-6(4) 5-7 7-5,3,R128,158
+2017-M007,Miami,Hard,PM,203501,Taylor Townsend,216153,Amanda Anisimova,2-6 6-2 6-3,3,R128,117
+2017-M007,Miami,Hard,PM,206255,Patricia Maria Tig,201586,Heather Watson,7-6(4) 6-1,3,R128,84
+2017-M007,Miami,Hard,PM,206242,Beatriz Haddad Maia,201615,Lesia Tsurenko,3-2 RET,3,R128,27
+2017-M007,Miami,Hard,PM,203552,Risa Ozaki,211635,Louisa Chirico,3-6 7-5 6-1,3,R128,126
+2017-M007,Miami,Hard,PM,201504,Julia Goerges,201590,Alison Riske Amritraj,7-5 6-3,3,R128,93
+2017-M007,Miami,Hard,PM,201603,Shelby Rogers,201523,Marina Erakovic,4-6 6-3 7-6(4),3,R128,159
+2017-M007,Miami,Hard,PM,202504,Ying Ying Duan,201696,Laura Siegemund,7-6(6) 6-3,3,R128,116
+2017-M007,Miami,Hard,PM,201662,Karolina Pliskova,201483,Madison Brengle,6-1 6-3,3,R64,59
+2017-M007,Miami,Hard,PM,201709,Yulia Putintseva,202489,Carina Witthoeft,6-4 6-4,3,R64,118
+2017-M007,Miami,Hard,PM,202450,Jana Cepelova,201535,Coco Vandeweghe,6-2 3-6 6-1,3,R64,109
+2017-M007,Miami,Hard,PM,201366,Barbora Strycova,201596,Johanna Larsson,4-6 6-3 7-6(3),3,R64,189
+2017-M007,Miami,Hard,PM,201318,Bethanie Mattek Sands,202494,Elina Svitolina,7-5 6-4,3,R64,108
+2017-M007,Miami,Hard,PM,201499,Anastasia Pavlyuchenkova,201468,Yaroslava Shvedova,6-7(3) 6-2 6-0,3,R64,119
+2017-M007,Miami,Hard,PM,200002,Mirjana Lucic,201435,Kateryna Bondarenko,6-2 2-6 7-6(2),3,R64,108
+2017-M007,Miami,Hard,PM,201474,Agnieszka Radwanska,202492,Qiang Wang,7-6(3) 6-1,3,R64,103
+2017-M007,Miami,Hard,PM,201495,Dominika Cibulkova,202705,Veronica Cepede Royg,6-3 6-2,3,R64,93
+2017-M007,Miami,Hard,PM,201465,Kirsten Flipkens,211951,Ana Konjuh,7-6(4) 6-7(6) 6-2,3,R64,168
+2017-M007,Miami,Hard,PM,201425,Lucie Safarova,201611,Daria Saville,6-2 6-2,3,R64,73
+2017-M007,Miami,Hard,PM,201548,Ajla Tomljanovic,201455,Elena Vesnina,3-6 6-4 7-5,3,R64,132
+2017-M007,Miami,Hard,PM,201496,Caroline Wozniacki,201478,Varvara Lepchenko,6-1 6-2,3,R64,65
+2017-M007,Miami,Hard,PM,201514,Sorana Cirstea,201545,Anastasija Sevastova,7-6(4) 3-6 6-3,3,R64,132
+2017-M007,Miami,Hard,PM,201533,Shuai Zhang,201506,Sara Errani,4-6 6-4 7-5,3,R64,164
+2017-M007,Miami,Hard,PM,202469,Garbine Muguruza,201539,Christina Mchale,0-6 7-6(6) 6-4,3,R64,142
+2017-M007,Miami,Hard,PM,201619,Madison Keys,203530,Viktorija Golubic,6-1 6-2,3,R64,67
+2017-M007,Miami,Hard,PM,202418,Lara Arruabarrena,201593,Irina Camelia Begu,3-6 6-4 6-3,3,R64,126
+2017-M007,Miami,Hard,PM,201426,Pauline Parmentier,201693,Timea Babos,6-7(1) 6-2 6-0,3,R64,173
+2017-M007,Miami,Hard,PM,202427,Johanna Konta,205925,Aliaksandra Sasnovich,6-2 6-7(5) 6-4,3,R64,159
+2017-M007,Miami,Hard,PM,201325,Samantha Stosur,202458,Ashleigh Barty,6-4 6-4,3,R64,80
+2017-M007,Miami,Hard,PM,201397,Shuai Peng,201614,Caroline Garcia,6-4 6-0,3,R64,75
+2017-M007,Miami,Hard,PM,204426,Anett Kontaveit,201505,Kate Makarova,6-7(1) 6-2 6-2,3,R64,133
+2017-M007,Miami,Hard,PM,201594,Simona Halep,211768,Naomi Osaka,6-4 2-6 6-3,3,R64,113
+2017-M007,Miami,Hard,PM,201320,Svetlana Kuznetsova,201605,Mandy Minella,6-2 6-2,3,R64,66
+2017-M007,Miami,Hard,PM,203501,Taylor Townsend,201311,Roberta Vinci,6-3 6-2,3,R64,63
+2017-M007,Miami,Hard,PM,206255,Patricia Maria Tig,201540,Kristina Mladenovic,7-6(4) 6-2,3,R64,120
+2017-M007,Miami,Hard,PM,200748,Venus Williams,206242,Beatriz Haddad Maia,6-4 6-3,3,R64,90
+2017-M007,Miami,Hard,PM,203552,Risa Ozaki,202428,Kiki Bertens,6-4 4-6 6-1,3,R64,139
+2017-M007,Miami,Hard,PM,201504,Julia Goerges,201521,Carla Suarez Navarro,6-4 7-6(5),3,R64,109
+2017-M007,Miami,Hard,PM,201603,Shelby Rogers,214082,Daria Kasatkina,6-4 5-7 6-0,3,R64,140
+2017-M007,Miami,Hard,PM,201493,Angelique Kerber,202504,Ying Ying Duan,7-6(3) 6-2,3,R64,83
+2017-M007,Miami,Hard,PM,201662,Karolina Pliskova,201709,Yulia Putintseva,7-5 6-3,3,R32,95
+2017-M007,Miami,Hard,PM,201366,Barbora Strycova,202450,Jana Cepelova,6-2 6-4,3,R32,86
+2017-M007,Miami,Hard,PM,201318,Bethanie Mattek Sands,201499,Anastasia Pavlyuchenkova,4-6 6-0 6-3,3,R32,126
+2017-M007,Miami,Hard,PM,200002,Mirjana Lucic,201474,Agnieszka Radwanska,6-0 6-3,3,R32,65
+2017-M007,Miami,Hard,PM,201495,Dominika Cibulkova,201465,Kirsten Flipkens,6-2 6-3,3,R32,78
+2017-M007,Miami,Hard,PM,201425,Lucie Safarova,201548,Ajla Tomljanovic,6-1 6-3,3,R32,60
+2017-M007,Miami,Hard,PM,201496,Caroline Wozniacki,201514,Sorana Cirstea,6-4 6-2,3,R32,81
+2017-M007,Miami,Hard,PM,202469,Garbine Muguruza,201533,Shuai Zhang,4-6 6-2 6-2,3,R32,124
+2017-M007,Miami,Hard,PM,202418,Lara Arruabarrena,201619,Madison Keys,7-5 7-5,3,R32,105
+2017-M007,Miami,Hard,PM,202427,Johanna Konta,201426,Pauline Parmentier,6-4 6-0,3,R32,63
+2017-M007,Miami,Hard,PM,201325,Samantha Stosur,201397,Shuai Peng,4-6 6-3 7-5,3,R32,147
+2017-M007,Miami,Hard,PM,201594,Simona Halep,204426,Anett Kontaveit,6-3 6-0,3,R32,55
+2017-M007,Miami,Hard,PM,201320,Svetlana Kuznetsova,203501,Taylor Townsend,6-4 6-2,3,R32,78
+2017-M007,Miami,Hard,PM,200748,Venus Williams,206255,Patricia Maria Tig,6-3 6-0,3,R32,70
+2017-M007,Miami,Hard,PM,203552,Risa Ozaki,201504,Julia Goerges,7-6(5) 6-3,3,R32,109
+2017-M007,Miami,Hard,PM,201493,Angelique Kerber,201603,Shelby Rogers,6-4 7-5,3,R32,89
+2017-M007,Miami,Hard,PM,201662,Karolina Pliskova,201366,Barbora Strycova,6-1 6-4,3,R16,70
+2017-M007,Miami,Hard,PM,200002,Mirjana Lucic,201318,Bethanie Mattek Sands,7-5 6-4,3,R16,94
+2017-M007,Miami,Hard,PM,201425,Lucie Safarova,201495,Dominika Cibulkova,7-6(5) 6-1,3,R16,109
+2017-M007,Miami,Hard,PM,201496,Caroline Wozniacki,202469,Garbine Muguruza,7-6(1) 0-0 RET,3,R16,75
+2017-M007,Miami,Hard,PM,202427,Johanna Konta,202418,Lara Arruabarrena,7-5 6-1,3,R16,77
+2017-M007,Miami,Hard,PM,201594,Simona Halep,201325,Samantha Stosur,4-6 7-5 6-2,3,R16,130
+2017-M007,Miami,Hard,PM,200748,Venus Williams,201320,Svetlana Kuznetsova,6-3 7-6(4),3,R16,95
+2017-M007,Miami,Hard,PM,201493,Angelique Kerber,203552,Risa Ozaki,6-2 6-2,3,R16,62
+2017-M007,Miami,Hard,PM,201662,Karolina Pliskova,200002,Mirjana Lucic,6-3 6-4,3,QF,72
+2017-M007,Miami,Hard,PM,201496,Caroline Wozniacki,201425,Lucie Safarova,6-4 6-3,3,QF,110
+2017-M007,Miami,Hard,PM,202427,Johanna Konta,201594,Simona Halep,3-6 7-6(7) 6-2,3,QF,150
+2017-M007,Miami,Hard,PM,200748,Venus Williams,201493,Angelique Kerber,7-5 6-3,3,QF,99
+2017-M007,Miami,Hard,PM,201496,Caroline Wozniacki,201662,Karolina Pliskova,5-7 6-1 6-1,3,SF,136
+2017-M007,Miami,Hard,PM,202427,Johanna Konta,200748,Venus Williams,6-4 7-5,3,SF,123
+2017-M007,Miami,Hard,PM,202427,Johanna Konta,201496,Caroline Wozniacki,6-4 6-3,3,F,95
+2017-M009,Rome,Clay,P,201616,Lauren Davis,201521,Carla Suarez Navarro,6-2 5-7 6-3,3,R64,147
+2017-M009,Rome,Clay,P,201490,Timea Bacsinszky,201693,Timea Babos,6-2 6-2,3,R64,73
+2017-M009,Rome,Clay,P,201366,Barbora Strycova,214082,Daria Kasatkina,4-6 4-3 RET,3,R64,105
+2017-M009,Rome,Clay,P,202492,Qiang Wang,201455,Elena Vesnina,6-2 6-4,3,R64,70
+2017-M009,Rome,Clay,P,201621,Mona Barthel,201397,Shuai Peng,6-1 3-6 6-3,3,R64,101
+2017-M009,Rome,Clay,P,201427,Alize Cornet,201506,Sara Errani,6-3 6-4,3,R64,113
+2017-M009,Rome,Clay,P,211533,Jelena Ostapenko,201603,Shelby Rogers,6-3 6-4,3,R64,85
+2017-M009,Rome,Clay,P,201347,Jelena Jankovic,201590,Alison Riske Amritraj,6-3 6-3,3,R64,82
+2017-M009,Rome,Clay,P,201504,Julia Goerges,201540,Kristina Mladenovic,7-6(6) 7-5,3,R64,112
+2017-M009,Rome,Clay,P,200748,Venus Williams,201468,Yaroslava Shvedova,6-4 7-6(4),3,R64,91
+2017-M009,Rome,Clay,P,201615,Lesia Tsurenko,211328,Deborah Chiesa,7-5 6-2,3,R64,90
+2017-M009,Rome,Clay,P,201709,Yulia Putintseva,201620,Monica Puig,6-2 7-5,3,R64,100
+2017-M009,Rome,Clay,P,211701,Katerina Siniakova,201533,Shuai Zhang,5-7 6-3 7-6(6),3,R64,148
+2017-M009,Rome,Clay,P,201614,Caroline Garcia,202499,Donna Vekic,7-6(2) 3-6 7-6(6),3,R64,160
+2017-M009,Rome,Clay,P,201611,Daria Saville,201619,Madison Keys,2-6 7-5 7-5,3,R64,145
+2017-M009,Rome,Clay,P,202428,Kiki Bertens,201512,Monica Niculescu,2-6 6-2 6-1,3,R64,118
+2017-M009,Rome,Clay,P,214263,Catherine Cartan Bellis,201595,Misaki Doi,6-4 7-6(6),3,R64,99
+2017-M009,Rome,Clay,P,201505,Kate Makarova,201311,Roberta Vinci,6-2 6-1,3,R64,79
+2017-M009,Rome,Clay,P,201696,Laura Siegemund,211768,Naomi Osaka,6-2 6-4,3,R64,90
+2017-M009,Rome,Clay,P,201545,Anastasija Sevastova,201593,Irina Camelia Begu,6-4 6-4,3,R64,94
+2017-M009,Rome,Clay,P,201499,Anastasia Pavlyuchenkova,201325,Samantha Stosur,6-4 6-7(5) 6-1,3,R64,155
+2017-M009,Rome,Clay,P,200002,Mirjana Lucic,201425,Lucie Safarova,7-5 4-6 6-3,3,R64,120
+2017-M009,Rome,Clay,P,201345,Maria Sharapova,201539,Christina Mchale,6-4 6-2,3,R64,95
+2017-M009,Rome,Clay,P,204426,Anett Kontaveit,201492,Andrea Petkovic,6-3 6-4,3,R64,88
+2017-M009,Rome,Clay,P,201662,Karolina Pliskova,201616,Lauren Davis,6-1 6-1,3,R32,57
+2017-M009,Rome,Clay,P,201490,Timea Bacsinszky,201366,Barbora Strycova,6-4 6-2,3,R32,101
+2017-M009,Rome,Clay,P,201621,Mona Barthel,202492,Qiang Wang,6-3 6-4,3,R32,83
+2017-M009,Rome,Clay,P,202494,Elina Svitolina,201427,Alize Cornet,6-4 7-6(11),3,R32,142
+2017-M009,Rome,Clay,P,202469,Garbine Muguruza,211533,Jelena Ostapenko,2-6 6-2 6-1,3,R32,107
+2017-M009,Rome,Clay,P,201504,Julia Goerges,201347,Jelena Jankovic,2-6 7-6(2) 6-1,3,R32,139
+2017-M009,Rome,Clay,P,200748,Venus Williams,201615,Lesia Tsurenko,6-4 6-3,3,R32,90
+2017-M009,Rome,Clay,P,202427,Johanna Konta,201709,Yulia Putintseva,6-3 6-0,3,R32,108
+2017-M009,Rome,Clay,P,201320,Svetlana Kuznetsova,211701,Katerina Siniakova,6-1 7-6(3),3,R32,111
+2017-M009,Rome,Clay,P,201611,Daria Saville,201614,Caroline Garcia,7-5 3-6 6-3,3,R32,129
+2017-M009,Rome,Clay,P,202428,Kiki Bertens,214263,Catherine Cartan Bellis,6-4 6-0,3,R32,70
+2017-M009,Rome,Clay,P,201505,Kate Makarova,201495,Dominika Cibulkova,1-6 6-1 6-3,3,R32,109
+2017-M009,Rome,Clay,P,201594,Simona Halep,201696,Laura Siegemund,6-4 6-4,3,R32,100
+2017-M009,Rome,Clay,P,201499,Anastasia Pavlyuchenkova,201545,Anastasija Sevastova,7-6(4) 6-2,3,R32,93
+2017-M009,Rome,Clay,P,200002,Mirjana Lucic,201345,Maria Sharapova,6-4 3-6 1-2 RET,3,R32,104
+2017-M009,Rome,Clay,P,204426,Anett Kontaveit,201493,Angelique Kerber,6-4 6-0,3,R32,56
+2017-M009,Rome,Clay,P,201662,Karolina Pliskova,201490,Timea Bacsinszky,6-1 7-5,3,R16,80
+2017-M009,Rome,Clay,P,202494,Elina Svitolina,201621,Mona Barthel,3-6 6-0 6-0,3,R16,101
+2017-M009,Rome,Clay,P,202469,Garbine Muguruza,201504,Julia Goerges,7-5 6-4,3,R16,107
+2017-M009,Rome,Clay,P,200748,Venus Williams,202427,Johanna Konta,6-1 3-6 6-1,3,R16,109
+2017-M009,Rome,Clay,P,201611,Daria Saville,201320,Svetlana Kuznetsova,2-6 7-5 6-4,3,R16,143
+2017-M009,Rome,Clay,P,202428,Kiki Bertens,201505,Kate Makarova,7-6(3) 6-1,3,R16,109
+2017-M009,Rome,Clay,P,201594,Simona Halep,201499,Anastasia Pavlyuchenkova,6-1 4-6 6-0,3,R16,97
+2017-M009,Rome,Clay,P,204426,Anett Kontaveit,200002,Mirjana Lucic,6-1 6-1,3,R16,54
+2017-M009,Rome,Clay,P,202494,Elina Svitolina,201662,Karolina Pliskova,6-2 7-6(9),3,QF,92
+2017-M009,Rome,Clay,P,202469,Garbine Muguruza,200748,Venus Williams,6-2 3-6 6-2,3,QF,103
+2017-M009,Rome,Clay,P,202428,Kiki Bertens,201611,Daria Saville,6-3 6-3,3,QF,87
+2017-M009,Rome,Clay,P,201594,Simona Halep,204426,Anett Kontaveit,6-2 6-4,3,QF,80
+2017-M009,Rome,Clay,P,202494,Elina Svitolina,202469,Garbine Muguruza,4-1 RET,3,SF,22
+2017-M009,Rome,Clay,P,201594,Simona Halep,202428,Kiki Bertens,7-5 6-1,3,SF,77
+2017-M009,Rome,Clay,P,202494,Elina Svitolina,201594,Simona Halep,4-6 7-5 6-1,3,F,127
+2017-M015,Beijing,Hard,PM,201594,Simona Halep,201590,Alison Riske Amritraj,6-3 3-6 6-2,3,R64,132
+2017-M015,Beijing,Hard,PM,201517,Magdalena Rybarikova,202446,Eugenie Bouchard,6-4 6-3,3,R64,94
+2017-M015,Beijing,Hard,PM,201505,Kate Makarova,206108,Jennifer Brady,6-3 6-3,3,R64,58
+2017-M015,Beijing,Hard,PM,201345,Maria Sharapova,201545,Anastasija Sevastova,7-6(3) 5-7 7-6(7),3,R64,185
+2017-M015,Beijing,Hard,PM,201474,Agnieszka Radwanska,202489,Carina Witthoeft,7-5 6-3,3,R64,115
+2017-M015,Beijing,Hard,PM,201533,Shuai Zhang,201709,Yulia Putintseva,6-4 6-4,3,R64,93
+2017-M015,Beijing,Hard,PM,214082,Daria Kasatkina,212001,Natalia Vikhlyantseva,7-6(5) 6-1,3,R64,102
+2017-M015,Beijing,Hard,PM,202418,Lara Arruabarrena,201320,Svetlana Kuznetsova,6-7(2) 7-5 6-1,3,R64,143
+2017-M015,Beijing,Hard,PM,201662,Karolina Pliskova,201521,Carla Suarez Navarro,6-3 6-4,3,R64,71
+2017-M015,Beijing,Hard,PM,201492,Andrea Petkovic,202428,Kiki Bertens,6-4 6-0,3,R64,70
+2017-M015,Beijing,Hard,PM,201514,Sorana Cirstea,201621,Mona Barthel,7-6(4) 6-1,3,R64,82
+2017-M015,Beijing,Hard,PM,201539,Christina Mchale,201585,Sloane Stephens,6-3 6-0,3,R64,62
+2017-M015,Beijing,Hard,PM,201325,Samantha Stosur,211701,Katerina Siniakova,6-3 6-2,3,R64,72
+2017-M015,Beijing,Hard,PM,201397,Shuai Peng,201603,Shelby Rogers,7-6(3) 3-6 7-5,3,R64,168
+2017-M015,Beijing,Hard,PM,201512,Monica Niculescu,202427,Johanna Konta,6-1 6-2,3,R64,64
+2017-M015,Beijing,Hard,PM,210722,Elise Mertens,201495,Dominika Cibulkova,7-6(4) 6-1,3,R64,82
+2017-M015,Beijing,Hard,PM,201427,Alize Cornet,206374,Yafan Wang,6-3 7-5,3,R64,109
+2017-M015,Beijing,Hard,PM,201493,Angelique Kerber,211768,Naomi Osaka,6-2 7-5,3,R64,88
+2017-M015,Beijing,Hard,PM,202504,Ying Ying Duan,201540,Kristina Mladenovic,7-5 6-4,3,R64,92
+2017-M015,Beijing,Hard,PM,201455,Elena Vesnina,202663,Magda Linette,6-0 0-0 RET,3,R64,34
+2017-M015,Beijing,Hard,PM,202494,Elina Svitolina,202684,Lin Zhu,6-3 6-2,3,R64,75
+2017-M015,Beijing,Hard,PM,201496,Caroline Wozniacki,202492,Qiang Wang,6-1 6-7(4) 6-1,3,R64,115
+2017-M015,Beijing,Hard,PM,201499,Anastasia Pavlyuchenkova,201616,Lauren Davis,6-1 6-1,3,R64,57
+2017-M015,Beijing,Hard,PM,201478,Varvara Lepchenko,201615,Lesia Tsurenko,5-7 6-4 6-2,3,R64,159
+2017-M015,Beijing,Hard,PM,201520,Petra Kvitova,201697,Kristyna Pliskova,6-3 7-5,3,R64,82
+2017-M015,Beijing,Hard,PM,201535,Coco Vandeweghe,202499,Donna Vekic,6-2 6-2,3,R64,68
+2017-M015,Beijing,Hard,PM,201611,Daria Saville,204426,Anett Kontaveit,7-5 7-5,3,R64,112
+2017-M015,Beijing,Hard,PM,201504,Julia Goerges,201483,Madison Brengle,6-4 6-3,3,R64,77
+2017-M015,Beijing,Hard,PM,201366,Barbora Strycova,202469,Garbine Muguruza,6-1 2-0 RET,3,R64,39
+2017-M015,Beijing,Hard,PM,201594,Simona Halep,201517,Magdalena Rybarikova,6-1 2-1 RET,3,R32,58
+2017-M015,Beijing,Hard,PM,201345,Maria Sharapova,201505,Kate Makarova,6-4 4-6 6-1,3,R32,132
+2017-M015,Beijing,Hard,PM,201474,Agnieszka Radwanska,201533,Shuai Zhang,7-5 7-5,3,R32,108
+2017-M015,Beijing,Hard,PM,214082,Daria Kasatkina,202418,Lara Arruabarrena,6-4 7-5,3,R32,95
+2017-M015,Beijing,Hard,PM,201662,Karolina Pliskova,201492,Andrea Petkovic,6-4 6-4,3,R32,99
+2017-M015,Beijing,Hard,PM,201514,Sorana Cirstea,201539,Christina Mchale,7-6(4) 6-0,3,R32,84
+2017-M015,Beijing,Hard,PM,211533,Jelena Ostapenko,201325,Samantha Stosur,6-3 7-5,3,R32,108
+2017-M015,Beijing,Hard,PM,201397,Shuai Peng,201512,Monica Niculescu,6-3 6-2,3,R32,98
+2017-M015,Beijing,Hard,PM,201614,Caroline Garcia,210722,Elise Mertens,7-6(4) 6-4,3,R32,98
+2017-M015,Beijing,Hard,PM,201427,Alize Cornet,201493,Angelique Kerber,6-4 6-4,3,R32,91
+2017-M015,Beijing,Hard,PM,201455,Elena Vesnina,202504,Ying Ying Duan,6-3 6-2,3,R32,72
+2017-M015,Beijing,Hard,PM,202494,Elina Svitolina,202458,Ashleigh Barty,6-4 6-2,3,R32,74
+2017-M015,Beijing,Hard,PM,201496,Caroline Wozniacki,201499,Anastasia Pavlyuchenkova,6-2 6-2,3,R32,78
+2017-M015,Beijing,Hard,PM,201520,Petra Kvitova,201478,Varvara Lepchenko,6-4 6-4,3,R32,77
+2017-M015,Beijing,Hard,PM,201611,Daria Saville,201535,Coco Vandeweghe,6-3 2-0 RET,3,R32,48
+2017-M015,Beijing,Hard,PM,201366,Barbora Strycova,201504,Julia Goerges,6-4 6-2,3,R32,89
+2017-M015,Beijing,Hard,PM,201594,Simona Halep,201345,Maria Sharapova,6-2 6-2,3,R16,72
+2017-M015,Beijing,Hard,PM,214082,Daria Kasatkina,201474,Agnieszka Radwanska,4-6 7-5 6-2,3,R16,152
+2017-M015,Beijing,Hard,PM,201514,Sorana Cirstea,201662,Karolina Pliskova,6-1 7-5,3,R16,83
+2017-M015,Beijing,Hard,PM,211533,Jelena Ostapenko,201397,Shuai Peng,3-0 RET,3,R16,15
+2017-M015,Beijing,Hard,PM,201614,Caroline Garcia,201427,Alize Cornet,6-2 6-1,3,R16,75
+2017-M015,Beijing,Hard,PM,202494,Elina Svitolina,201455,Elena Vesnina,6-2 7-5,3,R16,109
+2017-M015,Beijing,Hard,PM,201520,Petra Kvitova,201496,Caroline Wozniacki,6-1 6-4,3,R16,73
+2017-M015,Beijing,Hard,PM,201366,Barbora Strycova,201611,Daria Saville,6-0 6-4,3,R16,94
+2017-M015,Beijing,Hard,PM,201594,Simona Halep,214082,Daria Kasatkina,6-2 6-1,3,QF,69
+2017-M015,Beijing,Hard,PM,211533,Jelena Ostapenko,201514,Sorana Cirstea,6-4 6-4,3,QF,84
+2017-M015,Beijing,Hard,PM,201614,Caroline Garcia,202494,Elina Svitolina,6-7(5) 7-5 7-6(6),3,QF,201
+2017-M015,Beijing,Hard,PM,201520,Petra Kvitova,201366,Barbora Strycova,6-3 6-4,3,QF,90
+2017-M015,Beijing,Hard,PM,201594,Simona Halep,211533,Jelena Ostapenko,6-2 6-4,3,SF,75
+2017-M015,Beijing,Hard,PM,201614,Caroline Garcia,201520,Petra Kvitova,6-3 7-5,3,SF,90
+2017-M015,Beijing,Hard,PM,201614,Caroline Garcia,201594,Simona Halep,6-4 7-6(3),3,F,112
+2017-M016,Eastbourne,Grass,P,202504,Ying Ying Duan,201539,Christina Mchale,6-3 4-0 RET,3,R64,65
+2017-M016,Eastbourne,Grass,P,201512,Monica Niculescu,200002,Mirjana Lucic,6-4 5-7 7-5,3,R64,137
+2017-M016,Eastbourne,Grass,P,202705,Veronica Cepede Royg,201444,Su Wei Hsieh,4-6 6-3 6-3,3,R64,108
+2017-M016,Eastbourne,Grass,P,211768,Naomi Osaka,203552,Risa Ozaki,6-0 6-1,3,R64,54
+2017-M016,Eastbourne,Grass,P,201586,Heather Watson,201615,Lesia Tsurenko,6-3 4-6 6-4,3,R64,179
+2017-M016,Eastbourne,Grass,P,210722,Elise Mertens,201693,Timea Babos,6-1 6-1,3,R64,67
+2017-M016,Eastbourne,Grass,P,201366,Barbora Strycova,202446,Eugenie Bouchard,6-3 3-6 6-2,3,R64,133
+2017-M016,Eastbourne,Grass,P,201616,Lauren Davis,201568,Kristina Kucova,6-4 6-2,3,R64,72
+2017-M016,Eastbourne,Grass,P,201621,Mona Barthel,211951,Ana Konjuh,6-4 1-0 RET,3,R64,52
+2017-M016,Eastbourne,Grass,P,201533,Shuai Zhang,201478,Varvara Lepchenko,6-2 6-1,3,R64,58
+2017-M016,Eastbourne,Grass,P,201397,Shuai Peng,201212,Francesca Schiavone,6-3 6-4,3,R64,93
+2017-M016,Eastbourne,Grass,P,201590,Alison Riske Amritraj,201427,Alize Cornet,6-4 7-5,3,R64,119
+2017-M016,Eastbourne,Grass,P,201514,Sorana Cirstea,211701,Katerina Siniakova,6-3 6-2,3,R64,59
+2017-M016,Eastbourne,Grass,P,201521,Carla Suarez Navarro,201505,Kate Makarova,6-3 6-1,3,R64,62
+2017-M016,Eastbourne,Grass,P,202418,Lara Arruabarrena,201709,Yulia Putintseva,6-4 6-7(2) 2-1 RET,3,R64,137
+2017-M016,Eastbourne,Grass,P,201697,Kristyna Pliskova,201648,Naomi Broady,6-2 6-7(7) 6-1,3,R64,118
+2017-M016,Eastbourne,Grass,P,201594,Simona Halep,202504,Ying Ying Duan,3-6 6-3 6-2,3,R32,
+2017-M016,Eastbourne,Grass,P,201450,Tsvetana Pironkova,201512,Monica Niculescu,6-0 6-4,3,R32,62
+2017-M016,Eastbourne,Grass,P,201455,Elena Vesnina,202705,Veronica Cepede Royg,6-3 6-3,3,R32,68
+2017-M016,Eastbourne,Grass,P,201496,Caroline Wozniacki,211768,Naomi Osaka,6-2 7-6(5),3,R32,99
+2017-M016,Eastbourne,Grass,P,201586,Heather Watson,201495,Dominika Cibulkova,7-5 6-4,3,R32,102
+2017-M016,Eastbourne,Grass,P,201499,Anastasia Pavlyuchenkova,210722,Elise Mertens,3-6 6-4 6-1,3,R32,132
+2017-M016,Eastbourne,Grass,P,201366,Barbora Strycova,202469,Garbine Muguruza,6-1 6-0,3,R32,61
+2017-M016,Eastbourne,Grass,P,201616,Lauren Davis,201474,Agnieszka Radwanska,7-6(1) 6-1,3,R32,
+2017-M016,Eastbourne,Grass,P,201320,Svetlana Kuznetsova,201621,Mona Barthel,4-6 7-5 6-2,3,R32,
+2017-M016,Eastbourne,Grass,P,201540,Kristina Mladenovic,201533,Shuai Zhang,6-0 6-4,3,R32,58
+2017-M016,Eastbourne,Grass,P,201397,Shuai Peng,201490,Timea Bacsinszky,7-6(7) 2-6 6-4,3,R32,136
+2017-M016,Eastbourne,Grass,P,201662,Karolina Pliskova,201590,Alison Riske Amritraj,6-4 6-3,3,R32,68
+2017-M016,Eastbourne,Grass,P,202427,Johanna Konta,201514,Sorana Cirstea,6-2 6-2,3,R32,72
+2017-M016,Eastbourne,Grass,P,211533,Jelena Ostapenko,201521,Carla Suarez Navarro,6-3 0-6 6-4,3,R32,99
+2017-M016,Eastbourne,Grass,P,202418,Lara Arruabarrena,201611,Daria Saville,2-6 6-2 6-3,3,R32,128
+2017-M016,Eastbourne,Grass,P,201493,Angelique Kerber,201697,Kristyna Pliskova,4-6 6-1 7-5,3,R32,93
+2017-M016,Eastbourne,Grass,P,201594,Simona Halep,201450,Tsvetana Pironkova,6-7(6) 7-6(4) 7-5,3,R16,160
+2017-M016,Eastbourne,Grass,P,201496,Caroline Wozniacki,201455,Elena Vesnina,6-1 6-2,3,R16,63
+2017-M016,Eastbourne,Grass,P,201586,Heather Watson,201499,Anastasia Pavlyuchenkova,6-4 6-3,3,R16,84
+2017-M016,Eastbourne,Grass,P,201366,Barbora Strycova,201616,Lauren Davis,7-5 6-2,3,R16,102
+2017-M016,Eastbourne,Grass,P,201320,Svetlana Kuznetsova,201540,Kristina Mladenovic,6-4 2-6 6-3,3,R16,101
+2017-M016,Eastbourne,Grass,P,201662,Karolina Pliskova,201397,Shuai Peng,7-6(3) 6-4,3,R16,98
+2017-M016,Eastbourne,Grass,P,202427,Johanna Konta,211533,Jelena Ostapenko,7-5 3-6 6-4,3,R16,138
+2017-M016,Eastbourne,Grass,P,201493,Angelique Kerber,202418,Lara Arruabarrena,6-2 6-1,3,R16,61
+2017-M016,Eastbourne,Grass,P,201496,Caroline Wozniacki,201594,Simona Halep,5-7 6-4 6-1,3,QF,113
+2017-M016,Eastbourne,Grass,P,201586,Heather Watson,201366,Barbora Strycova,6-1 1-6 6-4,3,QF,119
+2017-M016,Eastbourne,Grass,P,201662,Karolina Pliskova,201320,Svetlana Kuznetsova,6-7(7) 6-2 6-4,3,QF,136
+2017-M016,Eastbourne,Grass,P,202427,Johanna Konta,201493,Angelique Kerber,6-3 6-4,3,QF,86
+2017-M016,Eastbourne,Grass,P,201496,Caroline Wozniacki,201586,Heather Watson,6-2 3-6 7-5,3,SF,129
+2017-M016,Eastbourne,Grass,P,201662,Karolina Pliskova,202427,Johanna Konta,W/O,3,SF,0
+2017-M016,Eastbourne,Grass,P,201662,Karolina Pliskova,201496,Caroline Wozniacki,6-4 6-4,3,F,81
+2017-M021,Madrid,Clay,PM,201662,Karolina Pliskova,201615,Lesia Tsurenko,7-6(5) 2-6 6-2,3,R64,129
+2017-M021,Madrid,Clay,PM,201545,Anastasija Sevastova,201533,Shuai Zhang,6-2 6-4,3,R64,59
+2017-M021,Madrid,Clay,PM,202418,Lara Arruabarrena,201539,Christina Mchale,4-6 7-6(1) 6-2,3,R64,143
+2017-M021,Madrid,Clay,PM,201366,Barbora Strycova,201425,Lucie Safarova,5-7 6-3 6-3,3,R64,153
+2017-M021,Madrid,Clay,PM,201593,Irina Camelia Begu,201455,Elena Vesnina,6-4 6-4,3,R64,93
+2017-M021,Madrid,Clay,PM,201596,Johanna Larsson,201212,Francesca Schiavone,5-7 6-3 6-1,3,R64,127
+2017-M021,Madrid,Clay,PM,202428,Kiki Bertens,201505,Kate Makarova,6-1 7-6(4),3,R64,91
+2017-M021,Madrid,Clay,PM,201490,Timea Bacsinszky,202469,Garbine Muguruza,6-1 6-3,3,R64,66
+2017-M021,Madrid,Clay,PM,201594,Simona Halep,201697,Kristyna Pliskova,6-1 6-2,3,R64,57
+2017-M021,Madrid,Clay,PM,201311,Roberta Vinci,214082,Daria Kasatkina,6-1 1-6 6-1,3,R64,79
+2017-M021,Madrid,Clay,PM,201531,Mariana Duque Marino,201504,Julia Goerges,6-3 6-4,3,R64,78
+2017-M021,Madrid,Clay,PM,201325,Samantha Stosur,204427,Sara Sorribes Tormo,6-2 6-0,3,R64,59
+2017-M021,Madrid,Clay,PM,201496,Caroline Wozniacki,201512,Monica Niculescu,7-5 6-7(3) 6-4,3,R64,207
+2017-M021,Madrid,Clay,PM,201521,Carla Suarez Navarro,201397,Shuai Peng,3-6 7-5 6-0,3,R64,125
+2017-M021,Madrid,Clay,PM,201535,Coco Vandeweghe,204426,Anett Kontaveit,6-4 7-6(7),3,R64,96
+2017-M021,Madrid,Clay,PM,201696,Laura Siegemund,202427,Johanna Konta,3-6 7-5 6-4,3,R64,147
+2017-M021,Madrid,Clay,PM,201595,Misaki Doi,201619,Madison Keys,6-4 4-6 6-4,3,R64,135
+2017-M021,Madrid,Clay,PM,202499,Donna Vekic,201709,Yulia Putintseva,6-3 6-4,3,R64,84
+2017-M021,Madrid,Clay,PM,214263,Catherine Cartan Bellis,201611,Daria Saville,7-5 5-7 6-2,3,R64,134
+2017-M021,Madrid,Clay,PM,201514,Sorana Cirstea,201499,Anastasia Pavlyuchenkova,6-1 3-6 7-6(5),3,R64,145
+2017-M021,Madrid,Clay,PM,201540,Kristina Mladenovic,211951,Ana Konjuh,5-7 6-3 0-0 RET,3,R64,79
+2017-M021,Madrid,Clay,PM,201616,Lauren Davis,201620,Monica Puig,6-3 4-6 7-6(3),3,R64,168
+2017-M021,Madrid,Clay,PM,206219,Oceane Dodin,201492,Andrea Petkovic,6-3 6-4,3,R64,102
+2017-M021,Madrid,Clay,PM,201495,Dominika Cibulkova,201347,Jelena Jankovic,6-4 5-7 7-5,3,R64,167
+2017-M021,Madrid,Clay,PM,201320,Svetlana Kuznetsova,201468,Yaroslava Shvedova,6-4 6-3,3,R64,72
+2017-M021,Madrid,Clay,PM,201590,Alison Riske Amritraj,203530,Viktorija Golubic,6-2 6-4,3,R64,91
+2017-M021,Madrid,Clay,PM,202492,Qiang Wang,201614,Caroline Garcia,6-4 6-3,3,R64,77
+2017-M021,Madrid,Clay,PM,202453,Saisai Zheng,202494,Elina Svitolina,2-6 7-6(4) 6-3,3,R64,159
+2017-M021,Madrid,Clay,PM,201345,Maria Sharapova,200002,Mirjana Lucic,4-6 6-4 6-0,3,R64,132
+2017-M021,Madrid,Clay,PM,202446,Eugenie Bouchard,201427,Alize Cornet,6-4 4-6 6-1,3,R64,122
+2017-M021,Madrid,Clay,PM,211701,Katerina Siniakova,201426,Pauline Parmentier,6-1 6-0,3,R64,63
+2017-M021,Madrid,Clay,PM,201493,Angelique Kerber,201693,Timea Babos,6-4 6-2,3,R64,80
+2017-M021,Madrid,Clay,PM,201545,Anastasija Sevastova,201662,Karolina Pliskova,6-3 6-3,3,R32,78
+2017-M021,Madrid,Clay,PM,202418,Lara Arruabarrena,201366,Barbora Strycova,3-6 6-3 6-3,3,R32,136
+2017-M021,Madrid,Clay,PM,201593,Irina Camelia Begu,201596,Johanna Larsson,4-6 7-6(5) 6-3,3,R32,145
+2017-M021,Madrid,Clay,PM,202428,Kiki Bertens,201490,Timea Bacsinszky,6-2 6-2,3,R32,73
+2017-M021,Madrid,Clay,PM,201594,Simona Halep,201311,Roberta Vinci,6-3 2-6 7-6(2),3,R32,115
+2017-M021,Madrid,Clay,PM,201325,Samantha Stosur,201531,Mariana Duque Marino,6-3 7-5,3,R32,80
+2017-M021,Madrid,Clay,PM,201521,Carla Suarez Navarro,201496,Caroline Wozniacki,6-4 2-6 6-2,3,R32,134
+2017-M021,Madrid,Clay,PM,201535,Coco Vandeweghe,201696,Laura Siegemund,6-2 4-6 6-3,3,R32,134
+2017-M021,Madrid,Clay,PM,201595,Misaki Doi,202499,Donna Vekic,6-1 6-2,3,R32,51
+2017-M021,Madrid,Clay,PM,201514,Sorana Cirstea,214263,Catherine Cartan Bellis,6-3 6-2,3,R32,60
+2017-M021,Madrid,Clay,PM,201540,Kristina Mladenovic,201616,Lauren Davis,6-3 1-6 7-6(1),3,R32,145
+2017-M021,Madrid,Clay,PM,206219,Oceane Dodin,201495,Dominika Cibulkova,6-2 6-4,3,R32,80
+2017-M021,Madrid,Clay,PM,201320,Svetlana Kuznetsova,201590,Alison Riske Amritraj,2-6 7-6(9) 6-2,3,R32,144
+2017-M021,Madrid,Clay,PM,202492,Qiang Wang,202453,Saisai Zheng,6-2 3-6 6-2,3,R32,59
+2017-M021,Madrid,Clay,PM,202446,Eugenie Bouchard,201345,Maria Sharapova,7-5 2-6 6-4,3,R32,171
+2017-M021,Madrid,Clay,PM,201493,Angelique Kerber,211701,Katerina Siniakova,6-2 1-6 7-5,3,R32,119
+2017-M021,Madrid,Clay,PM,201545,Anastasija Sevastova,202418,Lara Arruabarrena,7-5 6-2,3,R16,82
+2017-M021,Madrid,Clay,PM,202428,Kiki Bertens,201593,Irina Camelia Begu,6-1 7-5,3,R16,87
+2017-M021,Madrid,Clay,PM,201594,Simona Halep,201325,Samantha Stosur,6-4 4-6 6-4,3,R16,111
+2017-M021,Madrid,Clay,PM,201535,Coco Vandeweghe,201521,Carla Suarez Navarro,5-7 6-4 7-5,3,R16,147
+2017-M021,Madrid,Clay,PM,201514,Sorana Cirstea,201595,Misaki Doi,7-5 3-6 6-1,3,R16,116
+2017-M021,Madrid,Clay,PM,201540,Kristina Mladenovic,206219,Oceane Dodin,6-2 6-1,3,R16,58
+2017-M021,Madrid,Clay,PM,201320,Svetlana Kuznetsova,202492,Qiang Wang,6-4 7-5,3,R16,88
+2017-M021,Madrid,Clay,PM,202446,Eugenie Bouchard,201493,Angelique Kerber,6-3 5-0 RET,3,R16,57
+2017-M021,Madrid,Clay,PM,201545,Anastasija Sevastova,202428,Kiki Bertens,6-3 6-3,3,QF,70
+2017-M021,Madrid,Clay,PM,201594,Simona Halep,201535,Coco Vandeweghe,6-1 6-1,3,QF,59
+2017-M021,Madrid,Clay,PM,201540,Kristina Mladenovic,201514,Sorana Cirstea,6-4 6-4,3,QF,76
+2017-M021,Madrid,Clay,PM,201320,Svetlana Kuznetsova,202446,Eugenie Bouchard,6-4 6-0,3,QF,77
+2017-M021,Madrid,Clay,PM,201594,Simona Halep,201545,Anastasija Sevastova,6-2 6-3,3,SF,73
+2017-M021,Madrid,Clay,PM,201540,Kristina Mladenovic,201320,Svetlana Kuznetsova,6-4 7-6(4),3,SF,103
+2017-M021,Madrid,Clay,PM,201594,Simona Halep,201540,Kristina Mladenovic,7-5 6-7(5) 6-2,3,F,164
+2017-M024,Cincinnati,Hard,P,203501,Taylor Townsend,201620,Monica Puig,3-6 6-3 6-2,3,R64,110
+2017-M024,Cincinnati,Hard,P,201311,Roberta Vinci,201693,Timea Babos,7-5 7-5,3,R64,90
+2017-M024,Cincinnati,Hard,P,201545,Anastasija Sevastova,201397,Shuai Peng,3-6 6-4 6-2,3,R64,126
+2017-M024,Cincinnati,Hard,P,201495,Dominika Cibulkova,211951,Ana Konjuh,5-7 7-5 6-2,3,R64,140
+2017-M024,Cincinnati,Hard,P,201427,Alize Cornet,214263,Catherine Cartan Bellis,7-6(5) 3-6 6-2,3,R64,139
+2017-M024,Cincinnati,Hard,P,202428,Kiki Bertens,206219,Oceane Dodin,6-3 6-0,3,R64,49
+2017-M024,Cincinnati,Hard,P,201505,Kate Makarova,201366,Barbora Strycova,6-4 6-1,3,R64,77
+2017-M024,Cincinnati,Hard,P,201585,Sloane Stephens,201425,Lucie Safarova,6-4 7-6(5),3,R64,96
+2017-M024,Cincinnati,Hard,P,201520,Petra Kvitova,204426,Anett Kontaveit,1-6 7-6(2) 6-3,3,R64,121
+2017-M024,Cincinnati,Hard,P,201504,Julia Goerges,201474,Agnieszka Radwanska,6-4 6-4,3,R64,97
+2017-M024,Cincinnati,Hard,P,211796,Francoise Abanda,202663,Magda Linette,3-6 6-4 6-2,3,R64,122
+2017-M024,Cincinnati,Hard,P,201615,Lesia Tsurenko,201499,Anastasia Pavlyuchenkova,5-7 7-6(6) 6-0,3,R64,161
+2017-M024,Cincinnati,Hard,P,201709,Yulia Putintseva,202705,Veronica Cepede Royg,6-4 3-6 6-3,3,R64,127
+2017-M024,Cincinnati,Hard,P,201521,Carla Suarez Navarro,200002,Mirjana Lucic,6-3 7-5,3,R64,86
+2017-M024,Cincinnati,Hard,P,202434,Aleksandra Krunic,211533,Jelena Ostapenko,6-4 6-2,3,R64,80
+2017-M024,Cincinnati,Hard,P,201619,Madison Keys,201535,Coco Vandeweghe,6-4 3-6 6-3,3,R64,116
+2017-M024,Cincinnati,Hard,P,214082,Daria Kasatkina,205925,Aliaksandra Sasnovich,6-4 6-2,3,R64,66
+2017-M024,Cincinnati,Hard,P,206242,Beatriz Haddad Maia,201616,Lauren Davis,6-3 6-2,3,R64,84
+2017-M024,Cincinnati,Hard,P,201455,Elena Vesnina,201614,Caroline Garcia,4-6 6-4 6-4,3,R64,124
+2017-M024,Cincinnati,Hard,P,202458,Ashleigh Barty,201478,Varvara Lepchenko,6-4 6-4,3,R64,84
+2017-M024,Cincinnati,Hard,P,200748,Venus Williams,201590,Alison Riske Amritraj,6-2 6-0,3,R64,66
+2017-M024,Cincinnati,Hard,P,201611,Daria Saville,201540,Kristina Mladenovic,6-0 7-6(6),3,R64,96
+2017-M024,Cincinnati,Hard,P,202429,Camila Giorgi,211701,Katerina Siniakova,6-2 6-2,3,R64,66
+2017-M024,Cincinnati,Hard,P,212001,Natalia Vikhlyantseva,202499,Donna Vekic,6-3 2-6 6-3,3,R64,123
+2017-M024,Cincinnati,Hard,P,201594,Simona Halep,203501,Taylor Townsend,6-4 6-1,3,R32,66
+2017-M024,Cincinnati,Hard,P,201545,Anastasija Sevastova,201311,Roberta Vinci,6-2 7-5,3,R32,92
+2017-M024,Cincinnati,Hard,P,201495,Dominika Cibulkova,201427,Alize Cornet,6-1 6-4,3,R32,81
+2017-M024,Cincinnati,Hard,P,202427,Johanna Konta,202428,Kiki Bertens,6-3 6-3,3,R32,76
+2017-M024,Cincinnati,Hard,P,201505,Kate Makarova,201493,Angelique Kerber,6-4 1-6 7-6(11),3,R32,158
+2017-M024,Cincinnati,Hard,P,201585,Sloane Stephens,201520,Petra Kvitova,6-2 6-3,3,R32,71
+2017-M024,Cincinnati,Hard,P,201504,Julia Goerges,211796,Francoise Abanda,6-4 6-4,3,R32,81
+2017-M024,Cincinnati,Hard,P,202494,Elina Svitolina,201615,Lesia Tsurenko,6-1 6-4,3,R32,101
+2017-M024,Cincinnati,Hard,P,201320,Svetlana Kuznetsova,201709,Yulia Putintseva,6-3 6-4,3,R32,80
+2017-M024,Cincinnati,Hard,P,201521,Carla Suarez Navarro,202434,Aleksandra Krunic,6-2 6-2,3,R32,65
+2017-M024,Cincinnati,Hard,P,201619,Madison Keys,214082,Daria Kasatkina,6-2 6-1,3,R32,50
+2017-M024,Cincinnati,Hard,P,202469,Garbine Muguruza,206242,Beatriz Haddad Maia,6-2 6-0,3,R32,52
+2017-M024,Cincinnati,Hard,P,201496,Caroline Wozniacki,201455,Elena Vesnina,6-2 6-4,3,R32,82
+2017-M024,Cincinnati,Hard,P,202458,Ashleigh Barty,200748,Venus Williams,6-3 2-6 6-2,3,R32,110
+2017-M024,Cincinnati,Hard,P,202429,Camila Giorgi,201611,Daria Saville,7-6(1) 5-7 6-3,3,R32,154
+2017-M024,Cincinnati,Hard,P,201662,Karolina Pliskova,212001,Natalia Vikhlyantseva,6-2 6-3,3,R32,67
+2017-M024,Cincinnati,Hard,P,201594,Simona Halep,201545,Anastasija Sevastova,6-4 6-3,3,R16,78
+2017-M024,Cincinnati,Hard,P,202427,Johanna Konta,201495,Dominika Cibulkova,6-3 6-4,3,R16,102
+2017-M024,Cincinnati,Hard,P,201585,Sloane Stephens,201505,Kate Makarova,2-6 6-3 6-4,3,R16,118
+2017-M024,Cincinnati,Hard,P,201504,Julia Goerges,202494,Elina Svitolina,7-5 6-4,3,R16,98
+2017-M024,Cincinnati,Hard,P,201320,Svetlana Kuznetsova,201521,Carla Suarez Navarro,6-2 6-4,3,R16,77
+2017-M024,Cincinnati,Hard,P,202469,Garbine Muguruza,201619,Madison Keys,6-4 3-6 7-6(3),3,R16,138
+2017-M024,Cincinnati,Hard,P,201496,Caroline Wozniacki,202458,Ashleigh Barty,6-4 6-2,3,R16,67
+2017-M024,Cincinnati,Hard,P,201662,Karolina Pliskova,202429,Camila Giorgi,6-3 4-6 6-0,3,R16,1094
+2017-M024,Cincinnati,Hard,P,201594,Simona Halep,202427,Johanna Konta,6-4 7-6(1),3,QF,109
+2017-M024,Cincinnati,Hard,P,201585,Sloane Stephens,201504,Julia Goerges,6-1 7-6(3),3,QF,86
+2017-M024,Cincinnati,Hard,P,202469,Garbine Muguruza,201320,Svetlana Kuznetsova,6-2 5-7 7-5,3,QF,165
+2017-M024,Cincinnati,Hard,P,201662,Karolina Pliskova,201496,Caroline Wozniacki,6-2 6-4,3,QF,67
+2017-M024,Cincinnati,Hard,P,201594,Simona Halep,201585,Sloane Stephens,6-2 6-1,3,SF,54
+2017-M024,Cincinnati,Hard,P,202469,Garbine Muguruza,201662,Karolina Pliskova,6-3 6-2,3,SF,79
+2017-M024,Cincinnati,Hard,P,202469,Garbine Muguruza,201594,Simona Halep,6-1 6-0,3,F,56

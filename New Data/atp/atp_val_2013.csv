@@ -1,0 +1,1404 @@
+tourney_id,tourney_name,surface,tourney_level,winner_id,winner_name,loser_id,loser_name,score,best_of,round,minutes
+2013-580,Australian Open,Hard,G,104925,Novak Djokovic,103908,Paul Henri Mathieu,6-2 6-4 7-5,5,R128,102
+2013-580,Australian Open,Hard,G,105992,Ryan Harrison,105053,Santiago Giraldo,2-6 6-4 7-5 6-4,5,R128,157
+2013-580,Australian Open,Hard,G,103852,Feliciano Lopez,104516,Arnau Brugues Davi,6-3 6-2 6-4,5,R128,84
+2013-580,Australian Open,Hard,G,103285,Radek Stepanek,104678,Viktor Troicki,5-7 4-6 6-3 6-3 7-5,5,R128,239
+2013-580,Australian Open,Hard,G,105023,Sam Querrey,103926,Daniel Munoz de la Nava,6-7(2) 6-4 6-2 6-4,5,R128,133
+2013-580,Australian Open,Hard,G,104548,Brian Baker,104166,Alex Bogomolov Jr,7-6(4) 6-3 6-7(0) 3-6 6-2,5,R128,222
+2013-580,Australian Open,Hard,G,104735,Tobias Kamke,104262,Flavio Cipolla,6-1 6-4 6-1,5,R128,118
+2013-580,Australian Open,Hard,G,104527,Stan Wawrinka,105649,Cedrik Marcel Stebe,6-2 6-4 6-3,5,R128,89
+2013-580,Australian Open,Hard,G,105723,Andrey Kuznetsov,104338,Juan Monaco,7-6(3) 6-1 6-1,5,R128,115
+2013-580,Australian Open,Hard,G,104731,Kevin Anderson,103893,Paolo Lorenzi,3-6 7-6(3) 6-3 6-4,5,R128,174
+2013-580,Australian Open,Hard,G,103598,Xavier Malisse,104665,Pablo Andujar,6-3 6-1 6-2,5,R128,113
+2013-580,Australian Open,Hard,G,104269,Fernando Verdasco,105676,David Goffin,6-3 3-6 4-6 6-3 6-4,5,R128,202
+2013-580,Australian Open,Hard,G,103781,Jurgen Melzer,105062,Mikhail Kukushkin,6-1 6-1 6-2,5,R128,82
+2013-580,Australian Open,Hard,G,105138,Roberto Bautista Agut,104926,Fabio Fognini,6-0 2-6 6-4 3-6 6-1,5,R128,149
+2013-580,Australian Open,Hard,G,105558,Guillaume Rufin,104714,Julian Reister,4-6 7-6(4) 6-1 6-2,5,R128,161
+2013-580,Australian Open,Hard,G,104607,Tomas Berdych,103188,Michael Russell,6-3 7-5 6-3,5,R128,131
+2013-580,Australian Open,Hard,G,103970,David Ferrer,103694,Olivier Rochus,6-3 6-4 6-2,5,R128,110
+2013-580,Australian Open,Hard,G,105065,Tim Smyczek,103333,Ivo Karlovic,6-4 7-6(5) 7-5,5,R128,138
+2013-580,Australian Open,Hard,G,105147,Tatsuma Ito,105357,John Millman,6-4 6-4 3-6 0-6 7-5,5,R128,209
+2013-580,Australian Open,Hard,G,104571,Marcos Baghdatis,105077,Albert Ramos,6-7(0) 7-6(4) 6-4 3-6 6-3,5,R128,255
+2013-580,Australian Open,Hard,G,104022,Mikhail Youzhny,105051,Matthew Ebden,4-6 6-7(0) 6-2 7-6(4) 6-3,5,R128,239
+2013-580,Australian Open,Hard,G,105539,Evgeny Donskoy,104494,Adrian Ungur,6-4 6-4 6-2,5,R128,121
+2013-580,Australian Open,Hard,G,104122,Carlos Berlocq,104893,Maxime Authom,1-6 7-6(5) 7-6(4) 6-2,5,R128,205
+2013-580,Australian Open,Hard,G,105453,Kei Nishikori,103812,Victor Hanescu,6-7(5) 6-3 6-1 6-3,5,R128,159
+2013-580,Australian Open,Hard,G,104597,Nicolas Almagro,105449,Steve Johnson,7-5 6-7(4) 6-2 6-7(6) 6-2,5,R128,190
+2013-580,Australian Open,Hard,G,104593,Daniel Gimeno Traver,103997,Lukasz Kubot,6-7(4) 6-4 6-0 4-6 6-4,5,R128,197
+2013-580,Australian Open,Hard,G,104500,Somdev Devvarman,103451,Bjorn Phau,6-3 6-2 6-3,5,R128,110
+2013-580,Australian Open,Hard,G,105668,Jerzy Janowicz,104620,Simone Bolelli,7-5 6-4 6-3,5,R128,135
+2013-580,Australian Open,Hard,G,103898,Julien Benneteau,105777,Grigor Dimitrov,6-4 6-2 6-4,5,R128,106
+2013-580,Australian Open,Hard,G,104273,Edouard Roger Vasselin,105074,Ruben Bemelmans,6-3 6-7(5) 2-6 7-5 11-9,5,R128,265
+2013-580,Australian Open,Hard,G,105041,Lukas Lacko,104180,Gilles Muller,6-2 6-4 7-6(3),5,R128,119
+2013-580,Australian Open,Hard,G,104386,Janko Tipsarevic,103720,Lleyton Hewitt,7-6(4) 7-5 6-3,5,R128,182
+2013-580,Australian Open,Hard,G,105223,Juan Martin del Potro,105173,Adrian Mannarino,6-1 6-2 6-2,5,R128,76
+2013-580,Australian Open,Hard,G,103794,Benjamin Becker,105379,Aljaz Bedene,4-6 6-3 7-5 7-6(1),5,R128,185
+2013-580,Australian Open,Hard,G,104871,Jeremy Chardy,104629,Adrian Menendez Maceiras,7-6(5) 6-7(3) 6-2 6-1,5,R128,177
+2013-580,Australian Open,Hard,G,104719,Marcel Granollers,104813,Grega Zemlja,7-6(6) 7-6(5) 1-0 RET,5,R128,131
+2013-580,Australian Open,Hard,G,104312,Andreas Seppi,104547,Horacio Zeballos,6-2 6-4 6-2,5,R128,89
+2013-580,Australian Open,Hard,G,104797,Denis Istomin,104997,Igor Sijsling,4-6 6-3 6-4 6-2,5,R128,120
+2013-580,Australian Open,Hard,G,104330,Rajeev Ram,104198,Guillermo Garcia Lopez,6-4 6-4 3-6 6-2,5,R128,157
+2013-580,Australian Open,Hard,G,105227,Marin Cilic,104594,Marinko Matosevic,6-4 7-5 6-2,5,R128,142
+2013-580,Australian Open,Hard,G,104468,Gilles Simon,103835,Filippo Volandri,2-6 6-3 6-2 6-2,5,R128,124
+2013-580,Australian Open,Hard,G,105028,Jesse Levine,103990,Tommy Robredo,7-6(5) 6-7(2) 6-4 6-4,5,R128,188
+2013-580,Australian Open,Hard,G,104229,Yen Hsun Lu,103105,Ruben Ramirez Hidalgo,6-2 6-1 4-6 6-1,5,R128,121
+2013-580,Australian Open,Hard,G,104792,Gael Monfils,105238,Alexandr Dolgopolov,6-7(7) 7-6(4) 6-3 6-3,5,R128,165
+2013-580,Australian Open,Hard,G,104252,Florian Mayer,105733,Rhyne Williams,2-6 3-6 6-2 7-6(12) 6-1,5,R128,202
+2013-580,Australian Open,Hard,G,105575,Ricardas Berankis,104660,Sergiy Stakhovsky,6-2 7-6(4) 7-5,5,R128,127
+2013-580,Australian Open,Hard,G,105311,Joao Sousa,105441,John Patrick Smith,6-4 6-1 6-4,5,R128,112
+2013-580,Australian Open,Hard,G,104918,Andy Murray,104898,Robin Haase,6-3 6-1 6-3,5,R128,97
+2013-580,Australian Open,Hard,G,104542,Jo-Wilfried Tsonga,103566,Michael Llodra,6-4 7-5 6-2,5,R128,106
+2013-580,Australian Open,Hard,G,104424,Go Soeda,106291,Luke Saville,6-7(4) 6-3 6-2 6-3,5,R128,173
+2013-580,Australian Open,Hard,G,105902,James Duckworth,106093,Benjamin Mitchell,6-4 7-6(8) 4-6 5-7 8-6,5,R128,266
+2013-580,Australian Open,Hard,G,104882,Blaz Kavcic,105064,Thomaz Bellucci,6-3 6-1 6-3,5,R128,120
+2013-580,Australian Open,Hard,G,103813,Jarkko Nieminen,103163,Tommy Haas,7-6(3) 4-6 6-3 4-6 8-6,5,R128,222
+2013-580,Australian Open,Hard,G,104471,Ivan Dodig,105842,Di Wu,7-5 4-6 6-3 6-3,5,R128,194
+2013-580,Australian Open,Hard,G,104268,Alejandro Falla,104721,Josselin Ouanna,6-4 7-5 6-4,5,R128,135
+2013-580,Australian Open,Hard,G,104755,Richard Gasquet,103656,Albert Montanes,7-5 6-2 6-1,5,R128,96
+2013-580,Australian Open,Hard,G,105683,Milos Raonic,104225,Jan Hajek,3-6 6-1 6-2 7-6(0),5,R128,145
+2013-580,Australian Open,Hard,G,104586,Lukas Rosol,104779,Jamie Baker,7-6(5) 7-5 6-2,5,R128,121
+2013-580,Australian Open,Hard,G,104804,Amir Weintraub,105550,Guido Pella,7-6(2) 7-5 6-2,5,R128,117
+2013-580,Australian Open,Hard,G,104259,Philipp Kohlschreiber,104327,Steve Darcis,6-2 6-3 6-4,5,R128,106
+2013-580,Australian Open,Hard,G,104978,Daniel Brands,105373,Martin Klizan,6-3 3-6 6-3 6-4,5,R128,109
+2013-580,Australian Open,Hard,G,106071,Bernard Tomic,104919,Leonardo Mayer,6-3 6-2 6-3,5,R128,92
+2013-580,Australian Open,Hard,G,103786,Nikolay Davydenko,104534,Dudi Sela,3-6 6-1 7-5 6-3,5,R128,162
+2013-580,Australian Open,Hard,G,103819,Roger Federer,105332,Benoit Paire,6-2 6-4 6-1,5,R128,83
+2013-580,Australian Open,Hard,G,104925,Novak Djokovic,105992,Ryan Harrison,6-1 6-2 6-3,5,R64,91
+2013-580,Australian Open,Hard,G,103285,Radek Stepanek,103852,Feliciano Lopez,6-2 6-2 6-4,5,R64,115
+2013-580,Australian Open,Hard,G,105023,Sam Querrey,104548,Brian Baker,6-7(2) 1-1 RET,5,R64,66
+2013-580,Australian Open,Hard,G,104527,Stan Wawrinka,104735,Tobias Kamke,6-3 7-6(4) RET,5,R64,108
+2013-580,Australian Open,Hard,G,104731,Kevin Anderson,105723,Andrey Kuznetsov,6-1 7-5 6-4,5,R64,106
+2013-580,Australian Open,Hard,G,104269,Fernando Verdasco,103598,Xavier Malisse,6-1 6-3 6-2,5,R64,117
+2013-580,Australian Open,Hard,G,103781,Jurgen Melzer,105138,Roberto Bautista Agut,6-7(4) 6-3 6-7(3) 6-3 6-2,5,R64,229
+2013-580,Australian Open,Hard,G,104607,Tomas Berdych,105558,Guillaume Rufin,6-2 6-2 6-4,5,R64,120
+2013-580,Australian Open,Hard,G,103970,David Ferrer,105065,Tim Smyczek,6-0 7-5 4-6 6-3,5,R64,158
+2013-580,Australian Open,Hard,G,104571,Marcos Baghdatis,105147,Tatsuma Ito,3-6 6-3 6-2 6-2,5,R64,133
+2013-580,Australian Open,Hard,G,105539,Evgeny Donskoy,104022,Mikhail Youzhny,3-6 7-6(4) 6-2 3-6 6-3,5,R64,225
+2013-580,Australian Open,Hard,G,105453,Kei Nishikori,104122,Carlos Berlocq,7-6(4) 6-4 6-1,5,R64,138
+2013-580,Australian Open,Hard,G,104597,Nicolas Almagro,104593,Daniel Gimeno Traver,6-4 6-1 6-2,5,R64,101
+2013-580,Australian Open,Hard,G,105668,Jerzy Janowicz,104500,Somdev Devvarman,6-7(10) 3-6 6-1 6-0 7-5,5,R64,240
+2013-580,Australian Open,Hard,G,103898,Julien Benneteau,104273,Edouard Roger Vasselin,4-6 7-5 7-6(5) 7-6(5),5,R64,214
+2013-580,Australian Open,Hard,G,104386,Janko Tipsarevic,105041,Lukas Lacko,6-3 6-4 3-6 4-6 7-5,5,R64,231
+2013-580,Australian Open,Hard,G,105223,Juan Martin del Potro,103794,Benjamin Becker,6-2 6-4 6-2,5,R64,104
+2013-580,Australian Open,Hard,G,104871,Jeremy Chardy,104719,Marcel Granollers,6-3 3-6 6-1 6-2,5,R64,136
+2013-580,Australian Open,Hard,G,104312,Andreas Seppi,104797,Denis Istomin,7-6(4) 5-7 6-7(3) 7-6(3) 6-2,5,R64,247
+2013-580,Australian Open,Hard,G,105227,Marin Cilic,104330,Rajeev Ram,7-5 6-2 6-4,5,R64,119
+2013-580,Australian Open,Hard,G,104468,Gilles Simon,105028,Jesse Levine,2-6 6-3 7-6(4) 6-2,5,R64,170
+2013-580,Australian Open,Hard,G,104792,Gael Monfils,104229,Yen Hsun Lu,7-6(5) 4-6 0-6 6-1 8-6,5,R64,217
+2013-580,Australian Open,Hard,G,105575,Ricardas Berankis,104252,Florian Mayer,6-2 6-3 6-1,5,R64,77
+2013-580,Australian Open,Hard,G,104918,Andy Murray,105311,Joao Sousa,6-2 6-2 6-4,5,R64,101
+2013-580,Australian Open,Hard,G,104542,Jo-Wilfried Tsonga,104424,Go Soeda,6-3 7-6(1) 6-3,5,R64,123
+2013-580,Australian Open,Hard,G,104882,Blaz Kavcic,105902,James Duckworth,3-6 6-3 6-4 6-7(3) 10-8,5,R64,292
+2013-580,Australian Open,Hard,G,104471,Ivan Dodig,103813,Jarkko Nieminen,6-3 6-7(4) 6-3 6-7(4) 6-1,5,R64,198
+2013-580,Australian Open,Hard,G,104755,Richard Gasquet,104268,Alejandro Falla,6-3 6-2 6-2,5,R64,100
+2013-580,Australian Open,Hard,G,105683,Milos Raonic,104586,Lukas Rosol,7-6(2) 6-2 6-3,5,R64,108
+2013-580,Australian Open,Hard,G,104259,Philipp Kohlschreiber,104804,Amir Weintraub,6-2 7-6(4) 6-4,5,R64,109
+2013-580,Australian Open,Hard,G,106071,Bernard Tomic,104978,Daniel Brands,6-7(4) 7-5 7-6(3) 7-6(8),5,R64,175
+2013-580,Australian Open,Hard,G,103819,Roger Federer,103786,Nikolay Davydenko,6-3 6-4 6-4,5,R64,119
+2013-580,Australian Open,Hard,G,104925,Novak Djokovic,103285,Radek Stepanek,6-4 6-3 7-5,5,R32,142
+2013-580,Australian Open,Hard,G,104527,Stan Wawrinka,105023,Sam Querrey,7-6(6) 7-5 6-4,5,R32,129
+2013-580,Australian Open,Hard,G,104731,Kevin Anderson,104269,Fernando Verdasco,4-6 6-3 4-6 7-6(4) 6-2,5,R32,226
+2013-580,Australian Open,Hard,G,104607,Tomas Berdych,103781,Jurgen Melzer,6-3 6-2 6-2,5,R32,109
+2013-580,Australian Open,Hard,G,103970,David Ferrer,104571,Marcos Baghdatis,6-4 6-2 6-3,5,R32,117
+2013-580,Australian Open,Hard,G,105453,Kei Nishikori,105539,Evgeny Donskoy,7-6(3) 6-2 6-3,5,R32,126
+2013-580,Australian Open,Hard,G,104597,Nicolas Almagro,105668,Jerzy Janowicz,7-6(3) 7-6(4) 6-1,5,R32,125
+2013-580,Australian Open,Hard,G,104386,Janko Tipsarevic,103898,Julien Benneteau,3-6 6-4 2-6 6-4 6-3,5,R32,209
+2013-580,Australian Open,Hard,G,104871,Jeremy Chardy,105223,Juan Martin del Potro,6-3 6-3 6-7(3) 3-6 6-3,5,R32,225
+2013-580,Australian Open,Hard,G,104312,Andreas Seppi,105227,Marin Cilic,6-7(2) 6-3 2-6 6-4 6-2,5,R32,218
+2013-580,Australian Open,Hard,G,104468,Gilles Simon,104792,Gael Monfils,6-4 6-4 4-6 1-6 8-6,5,R32,283
+2013-580,Australian Open,Hard,G,104918,Andy Murray,105575,Ricardas Berankis,6-3 6-4 7-5,5,R32,132
+2013-580,Australian Open,Hard,G,104542,Jo-Wilfried Tsonga,104882,Blaz Kavcic,6-2 6-1 6-4,5,R32,79
+2013-580,Australian Open,Hard,G,104755,Richard Gasquet,104471,Ivan Dodig,4-6 6-3 7-6(2) 6-0,5,R32,145
+2013-580,Australian Open,Hard,G,105683,Milos Raonic,104259,Philipp Kohlschreiber,7-6(4) 6-3 6-4,5,R32,112
+2013-580,Australian Open,Hard,G,103819,Roger Federer,106071,Bernard Tomic,6-4 7-6(5) 6-1,5,R32,118
+2013-580,Australian Open,Hard,G,104925,Novak Djokovic,104527,Stan Wawrinka,1-6 7-5 6-4 6-7(5) 12-10,5,R16,302
+2013-580,Australian Open,Hard,G,104607,Tomas Berdych,104731,Kevin Anderson,6-3 6-2 7-6(13),5,R16,164
+2013-580,Australian Open,Hard,G,103970,David Ferrer,105453,Kei Nishikori,6-2 6-1 6-4,5,R16,130
+2013-580,Australian Open,Hard,G,104597,Nicolas Almagro,104386,Janko Tipsarevic,6-2 5-1 RET,5,R16,62
+2013-580,Australian Open,Hard,G,104871,Jeremy Chardy,104312,Andreas Seppi,5-7 6-3 6-2 6-2,5,R16,162
+2013-580,Australian Open,Hard,G,104918,Andy Murray,104468,Gilles Simon,6-3 6-1 6-3,5,R16,95
+2013-580,Australian Open,Hard,G,104542,Jo-Wilfried Tsonga,104755,Richard Gasquet,6-4 3-6 6-3 6-2,5,R16,140
+2013-580,Australian Open,Hard,G,103819,Roger Federer,105683,Milos Raonic,6-4 7-6(4) 6-2,5,R16,113
+2013-580,Australian Open,Hard,G,104925,Novak Djokovic,104607,Tomas Berdych,6-1 4-6 6-1 6-4,5,QF,151
+2013-580,Australian Open,Hard,G,103970,David Ferrer,104597,Nicolas Almagro,4-6 4-6 7-5 7-6(4) 6-2,5,QF,224
+2013-580,Australian Open,Hard,G,104918,Andy Murray,104871,Jeremy Chardy,6-4 6-1 6-2,5,QF,111
+2013-580,Australian Open,Hard,G,103819,Roger Federer,104542,Jo-Wilfried Tsonga,7-6(4) 4-6 7-6(4) 3-6 6-3,5,QF,214
+2013-580,Australian Open,Hard,G,104925,Novak Djokovic,103970,David Ferrer,6-2 6-2 6-1,5,SF,89
+2013-580,Australian Open,Hard,G,104918,Andy Murray,103819,Roger Federer,6-4 6-7(5) 6-3 6-7(2) 6-2,5,SF,240
+2013-580,Australian Open,Hard,G,104925,Novak Djokovic,104918,Andy Murray,6-7(2) 7-6(3) 6-3 6-2,5,F,220
+2013-D067,Davis Cup G1 R1: IND vs KOR,Hard,D,104856,Min Hyoek Cho,104615,Ranjeet Virali Murugesan,6-1 6-0 6-1,5,RR,
+2013-D067,Davis Cup G1 R1: IND vs KOR,Hard,D,106158,Suk Young Jeong,105482,Vijayant Malik,6-4 7-5 3-0,5,RR,
+2013-D067,Davis Cup G1 R1: IND vs KOR,Hard,D,106158,Suk Young Jeong,104615,Ranjeet Virali Murugesan,6-4 6-4 6-2,5,RR,
+2013-D067,Davis Cup G1 R1: IND vs KOR,Hard,D,106227,Ji Sung Nam,105482,Vijayant Malik,6-2 6-4,3,RR,
+2013-D068,Davis Cup G1 R1: JPN vs INA,Hard,D,105147,Tatsuma Ito,105464,Christopher Rungkat,6-2 6-2 6-4,5,RR,
+2013-D068,Davis Cup G1 R1: JPN vs INA,Hard,D,104424,Go Soeda,106309,Wisnu Adi Nugroho,6-0 6-0 6-1,5,RR,
+2013-D068,Davis Cup G1 R1: JPN vs INA,Hard,D,105216,Yuichi Sugita,105464,Christopher Rungkat,6-1 6-3,3,RR,
+2013-D068,Davis Cup G1 R1: JPN vs INA,Hard,D,106034,Yasutaka Uchiyama,106309,Wisnu Adi Nugroho,6-1 6-3,3,RR,
+2013-D023,Davis Cup G1 R1: POL vs SLO,Hard,D,105668,Jerzy Janowicz,104882,Blaz Kavcic,6-3 6-3 7-5,5,RR,
+2013-D023,Davis Cup G1 R1: POL vs SLO,Hard,D,103997,Lukasz Kubot,104813,Grega Zemlja,6-3 6-3 6-0,5,RR,
+2013-D023,Davis Cup G1 R1: POL vs SLO,Hard,D,105668,Jerzy Janowicz,104813,Grega Zemlja,7-6(4) 6-3 6-3,5,RR,
+2013-D023,Davis Cup G1 R1: POL vs SLO,Hard,D,105630,Tomislav Ternar,103586,Mariusz Fyrstenberg,4-6 7-5 7-5,3,RR,
+2013-D024,Davis Cup G1 R1: ROU vs DEN,Hard,D,105657,Marius Copil,104233,Frederik Nielsen,6-3 7-6(7) 6-4,5,RR,
+2013-D024,Davis Cup G1 R1: ROU vs DEN,Hard,D,104494,Adrian Ungur,104952,Martin Pedersen,6-2 7-6(3) 4-6 4-6 6-2,5,RR,
+2013-D024,Davis Cup G1 R1: ROU vs DEN,Hard,D,104494,Adrian Ungur,104934,Thomas Kromann,6-3 6-4,3,RR,
+2013-D024,Davis Cup G1 R1: ROU vs DEN,Hard,D,105657,Marius Copil,109698,Christoffer Konigsfeldt,6-4 6-3,3,RR,
+2013-D065,Davis Cup G1 R1: TPE vs AUS,Hard,D,103720,Lleyton Hewitt,105738,Tsung Hua Yang,6-4 6-4 6-4,5,RR,
+2013-D065,Davis Cup G1 R1: TPE vs AUS,Hard,D,105051,Matthew Ebden,104251,Ti Chen,6-3 6-4 7-5,5,RR,
+2013-D065,Davis Cup G1 R1: TPE vs AUS,Hard,D,104594,Marinko Matosevic,104251,Ti Chen,7-6(5) 6-3,3,RR,
+2013-D065,Davis Cup G1 R1: TPE vs AUS,Hard,D,105051,Matthew Ebden,105738,Tsung Hua Yang,6-1 6-2,3,RR,
+2013-D025,Davis Cup G1 R1: UKR vs SVK,Hard,D,105238,Alexandr Dolgopolov,105413,Andrej Martin,6-2 6-2 7-5,5,RR,
+2013-D025,Davis Cup G1 R1: UKR vs SVK,Hard,D,105041,Lukas Lacko,104660,Sergiy Stakhovsky,6-2 5-7 7-6(5) 6-4,5,RR,
+2013-D025,Davis Cup G1 R1: UKR vs SVK,Hard,D,105238,Alexandr Dolgopolov,105041,Lukas Lacko,3-6 6-3 6-2 6-1,5,RR,
+2013-D025,Davis Cup G1 R1: UKR vs SVK,Hard,D,105011,Illya Marchenko,105413,Andrej Martin,7-5 7-6(5) 6-4,5,RR,
+2013-D016,Davis Cup G1 R1: URU vs DOM,Clay,D,104395,Marcel Felder,106232,Roberto Cid,6-3 6-3 6-2,5,RR,
+2013-D016,Davis Cup G1 R1: URU vs DOM,Clay,D,105497,Jose Hernandez,105899,Martin Cuevas,6-4 6-1 6-3,5,RR,
+2013-D016,Davis Cup G1 R1: URU vs DOM,Clay,D,104395,Marcel Felder,105497,Jose Hernandez,6-3 3-6 6-3 5-7 6-2,5,RR,
+2013-D066,Davis Cup G1 R1: UZB vs CHN,Clay,D,104797,Denis Istomin,105842,Di Wu,4-6 4-6 7-6(4) 7-5 6-2,5,RR,
+2013-D066,Davis Cup G1 R1: UZB vs CHN,Clay,D,104736,Farrukh Dustov,105585,Ze Zhang,4-6 7-6(8) 6-4 3-6 6-4,5,RR,
+2013-D066,Davis Cup G1 R1: UZB vs CHN,Clay,D,104479,Sarvar Ikramov,105585,Ze Zhang,6-3 7-5,3,RR,
+2013-D066,Davis Cup G1 R1: UZB vs CHN,Clay,D,105842,Di Wu,106381,Temur Ismailov,6-0 6-2,3,RR,
+2013-D052,Davis Cup G2 R1: BIH vs LUX,Hard,D,106000,Damir Dzumhur,103877,Mike Scheidweiler,6-4 6-4 6-0,5,RR,
+2013-D052,Davis Cup G2 R1: BIH vs LUX,Hard,D,105060,Aldin Setkic,111167,Ugo Nastasi,6-4 6-0 6-3,5,RR,
+2013-D052,Davis Cup G2 R1: BIH vs LUX,Hard,D,111167,Ugo Nastasi,123983,Nerman Fatic,4-6 6-4 6-1,3,RR,
+2013-D052,Davis Cup G2 R1: BIH vs LUX,Hard,D,105060,Aldin Setkic,107552,Laurent Bram,6-3 6-1,3,RR,
+2013-D047,Davis Cup G2 R1: BUL vs FIN,Hard,D,105777,Grigor Dimitrov,104768,Juho Paukku,6-1 6-1 6-0,5,RR,
+2013-D047,Davis Cup G2 R1: BUL vs FIN,Hard,D,106100,Micke Kontinen,105586,Alexandar Lazov,7-6(4) 6-3 6-4,5,RR,
+2013-D047,Davis Cup G2 R1: BUL vs FIN,Hard,D,105777,Grigor Dimitrov,106100,Micke Kontinen,6-0 6-3 6-1,5,RR,
+2013-D047,Davis Cup G2 R1: BUL vs FIN,Hard,D,105349,Harri Heliovaara,105586,Alexandar Lazov,4-6 7-6(4) 6-4 6-3,5,RR,
+2013-D020,Davis Cup G2 R1: ESA vs BAR,Clay,D,104763,Rafael Arevalo,105985,Darian King,6-3 6-7(1) 6-2 6-4,5,RR,
+2013-D020,Davis Cup G2 R1: ESA vs BAR,Clay,D,105656,Marcelo Arevalo,108785,Anthony Marshall,6-1 6-1 6-1,5,RR,
+2013-D020,Davis Cup G2 R1: ESA vs BAR,Clay,D,105985,Darian King,105292,Alejandro Gonzalez,6-1 6-2,3,RR,
+2013-D020,Davis Cup G2 R1: ESA vs BAR,Clay,D,104763,Rafael Arevalo,108786,Seanon Williams,6-2 6-2,3,RR,
+2013-D048,Davis Cup G2 R1: IRL vs EST,Hard,D,104945,James Mcgee,122260,Jaan Kononov,6-0 6-1 6-3,5,RR,
+2013-D048,Davis Cup G2 R1: IRL vs EST,Hard,D,104901,Vladimir Ivanov,105909,Sam Barry,3-6 6-2 6-3 7-6(3),5,RR,
+2013-D048,Davis Cup G2 R1: IRL vs EST,Hard,D,104901,Vladimir Ivanov,104945,James Mcgee,6-4 6-3 1-6 4-6 6-1,5,RR,
+2013-D048,Davis Cup G2 R1: IRL vs EST,Hard,D,105909,Sam Barry,122261,Marek Marksoo,6-2 6-1 6-3,5,RR,
+2013-D032,Davis Cup G2 R1: KUW vs THA,Hard,D,103821,Danai Udomchoke,103600,Mohammad Ghareeb,6-1 6-1 4-6 4-6 6-4,5,RR,
+2013-D032,Davis Cup G2 R1: KUW vs THA,Hard,D,104895,Abdullah Maqdas,105579,Kittipong Wachiramanowong,6-4 7-6(7) 3-6 3-6 6-1,5,RR,
+2013-D032,Davis Cup G2 R1: KUW vs THA,Hard,D,103821,Danai Udomchoke,104895,Abdullah Maqdas,2-6 3-0 RET,5,RR,
+2013-D032,Davis Cup G2 R1: KUW vs THA,Hard,D,111181,Pruchya Isarow,121908,Naser Al Obaidly,6-2 6-1,3,RR,
+2013-D053,Davis Cup G2 R1: LTU vs CYP,Hard,D,106024,Dovydas Sakinis,108735,Rares Cuzdriorean,6-2 6-2 1-6 6-3,5,RR,
+2013-D053,Davis Cup G2 R1: LTU vs CYP,Hard,D,105575,Ricardas Berankis,117365,Petros Chrysochos,6-1 6-4 6-0,5,RR,
+2013-D053,Davis Cup G2 R1: LTU vs CYP,Hard,D,105575,Ricardas Berankis,125574,Soteris Hadjistyllis,6-3 6-2 6-1,5,RR,
+2013-D053,Davis Cup G2 R1: LTU vs CYP,Hard,D,108748,Lukas Mugevicius,108778,Christos Hadjigeorgiou,6-3 6-3,3,RR,
+2013-D051,Davis Cup G2 R1: MDA vs HUN,Hard,D,106201,Maxim Dubarenco,105916,Marton Fucsovics,3-6 6-3 6-4 6-4,5,RR,
+2013-D051,Davis Cup G2 R1: MDA vs HUN,Hard,D,105430,Radu Albot,105852,Viktor Filipenko,6-1 6-3 6-3,5,RR,
+2013-D051,Davis Cup G2 R1: MDA vs HUN,Hard,D,105916,Marton Fucsovics,105430,Radu Albot,1-6 6-4 6-1 6-1,5,RR,
+2013-D051,Davis Cup G2 R1: MDA vs HUN,Hard,D,106201,Maxim Dubarenco,105852,Viktor Filipenko,4-6 6-3 6-4 7-6(4),5,RR,
+2013-D019,Davis Cup G2 R1: MEX vs PUR,Hard,D,104960,Miguel Angel Reyes Varela,105541,Alex Llompart,7-6(2) 6-3 7-6(4),5,RR,
+2013-D019,Davis Cup G2 R1: MEX vs PUR,Hard,D,104535,Daniel Garza,125571,Christian Garay,6-2 6-0 6-3,5,RR,
+2013-D019,Davis Cup G2 R1: MEX vs PUR,Hard,D,104535,Daniel Garza,105541,Alex Llompart,7-5 6-3,3,RR,
+2013-D019,Davis Cup G2 R1: MEX vs PUR,Hard,D,125571,Christian Garay,106412,Lucas Gomez,6-3 6-4,3,RR,
+2013-D050,Davis Cup G2 R1: MON vs BLR,Clay,D,104112,Benjamin Balleret,105299,Dzmitry Zhyrmont,6-7(6) 6-1 6-3 6-3,5,RR,
+2013-D050,Davis Cup G2 R1: MON vs BLR,Clay,D,105590,Uladzimir Ignatik,103444,Jean Rene Lisnard,6-4 6-4 6-0,5,RR,
+2013-D050,Davis Cup G2 R1: MON vs BLR,Clay,D,104112,Benjamin Balleret,105590,Uladzimir Ignatik,6-3 3-6 7-6(9) 6-4,5,RR,
+2013-D030,Davis Cup G2 R1: NZL vs LIB,Hard,D,104368,Daniel King Turner,125573,Michael Massih,6-1 6-1 6-0,5,RR,
+2013-D030,Davis Cup G2 R1: NZL vs LIB,Hard,D,104677,Artem Sitak,108618,Karim Alayli,6-2 6-1 6-0,5,RR,
+2013-D030,Davis Cup G2 R1: NZL vs LIB,Hard,D,104368,Daniel King Turner,108972,Ibrahim Abou Chahine,6-0 6-1,3,RR,
+2013-D030,Davis Cup G2 R1: NZL vs LIB,Hard,D,104677,Artem Sitak,125573,Michael Massih,6-0 6-0,3,RR,
+2013-D022,Davis Cup G2 R1: PER vs HAI,Clay,D,105935,Duilio Beretta,125572,Hillel Rousseau,6-2 6-2 6-0,5,RR,
+2013-D022,Davis Cup G2 R1: PER vs HAI,Clay,D,105273,Mauricio Echazu,104863,Olivier Sajous,6-4 6-3 7-5,5,RR,
+2013-D022,Davis Cup G2 R1: PER vs HAI,Clay,D,105456,Sergio Galdos,104863,Olivier Sajous,6-2 3-6 6-3,3,RR,
+2013-D022,Davis Cup G2 R1: PER vs HAI,Clay,D,106410,Jorge Brian Panta Herreros,125572,Hillel Rousseau,6-1 6-0,3,RR,
+2013-D033,Davis Cup G2 R1: PHI vs SYR,Clay,D,108594,Johnny Arcilla,105372,Issam Al Tawil,6-4 5-7 6-1 6-2,5,RR,
+2013-D033,Davis Cup G2 R1: PHI vs SYR,Clay,D,104604,Ruben Gonzales,105201,Marc Abdulnour,6-4 7-6(1) 6-2,5,RR,
+2013-D033,Davis Cup G2 R1: PHI vs SYR,Clay,D,105372,Issam Al Tawil,108718,Vicente Elberto Anasta,6-7(8) 6-1 6-4,3,RR,
+2013-D033,Davis Cup G2 R1: PHI vs SYR,Clay,D,105201,Marc Abdulnour,104600,Treat Conrad Huey,7-6(2) 6-2,3,RR,
+2013-D054,Davis Cup G2 R1: POR vs BEN,Clay,D,105311,Joao Sousa,119511,Loic Didavi,6-1 6-3 6-0,5,RR,
+2013-D054,Davis Cup G2 R1: POR vs BEN,Clay,D,105155,Pedro Sousa,105278,Alexis Klegou,4-6 6-1 6-4 6-2,5,RR,
+2013-D054,Davis Cup G2 R1: POR vs BEN,Clay,D,104349,Rui Machado,105278,Alexis Klegou,2-6 6-2 6-0,3,RR,
+2013-D054,Davis Cup G2 R1: POR vs BEN,Clay,D,106350,Andre Gaspar Murta,121648,Tunde Segodo,6-1 6-2,3,RR,
+2013-D031,Davis Cup G2 R1: SRI vs PAK,Clay,D,103499,Aqeel Khan,108747,Dineshkanthan Thangarajah,4-6 6-1 4-2,3,RR,
+2013-D031,Davis Cup G2 R1: SRI vs PAK,Clay,D,104631,Harshana Godamanna,103529,Aisam Ul Haq Qureshi,7-6(3) 7-5 7-6(3),5,RR,
+2013-D031,Davis Cup G2 R1: SRI vs PAK,Clay,D,104631,Harshana Godamanna,103499,Aqeel Khan,6-4 6-3 6-4,5,RR,
+2013-D031,Davis Cup G2 R1: SRI vs PAK,Clay,D,103529,Aisam Ul Haq Qureshi,108747,Dineshkanthan Thangarajah,6-2 3-6 6-3 6-3,5,RR,
+2013-D049,Davis Cup G2 R1: TUN vs LAT,Hard,D,104557,Andis Juska,104580,Haithem Abid,7-6(7) 6-3 6-0,5,RR,
+2013-D049,Davis Cup G2 R1: TUN vs LAT,Hard,D,105208,Ernests Gulbis,108760,Slim Hamza,6-1 6-2 6-0,5,RR,
+2013-D021,Davis Cup G2 R1: VEN vs GUA,Hard,D,105961,David Souto,105442,Sebastien Vidal,6-2 6-1 7-6(5),5,RR,
+2013-D021,Davis Cup G2 R1: VEN vs GUA,Hard,D,106175,Ricardo Rodriguez,105499,Christopher Diaz Figueroa,6-3 7-5 3-6 6-1,5,RR,
+2013-D021,Davis Cup G2 R1: VEN vs GUA,Hard,D,105499,Christopher Diaz Figueroa,104887,Piero Luisi,6-3 7-6(6),3,RR,
+2013-D021,Davis Cup G2 R1: VEN vs GUA,Hard,D,106175,Ricardo Rodriguez,111751,Andres Bucaro,6-4 6-3,3,RR,
+2013-D006,Davis Cup WG R1: ARG vs GER,Clay,D,104122,Carlos Berlocq,104259,Philipp Kohlschreiber,3-6 7-5 2-6 6-4 4-5,5,RR,
+2013-D006,Davis Cup WG R1: ARG vs GER,Clay,D,104338,Juan Monaco,104252,Florian Mayer,6-7(4) 6-3 6-3 6-4,5,RR,
+2013-D006,Davis Cup WG R1: ARG vs GER,Clay,D,104338,Juan Monaco,104735,Tobias Kamke,6-4 7-6(2),3,RR,
+2013-D006,Davis Cup WG R1: ARG vs GER,Clay,D,104122,Carlos Berlocq,103577,Christopher Kas,6-2 6-4,3,RR,
+2013-D003,Davis Cup WG R1: BEL vs SRB,Clay,D,104678,Viktor Troicki,105676,David Goffin,1-6 3-6 7-6(5) 6-4 6-4,5,RR,
+2013-D003,Davis Cup WG R1: BEL vs SRB,Clay,D,104925,Novak Djokovic,103694,Olivier Rochus,6-3 6-2 6-2,5,RR,
+2013-D003,Davis Cup WG R1: BEL vs SRB,Clay,D,105676,David Goffin,104081,Boris Pashanski,6-4 2-6 6-2,3,RR,
+2013-D003,Davis Cup WG R1: BEL vs SRB,Clay,D,104327,Steve Darcis,102800,Nenad Zimonjic,6-2 6-4,3,RR,
+2013-D001,Davis Cup WG R1: CAN vs ESP,Hard,D,105683,Milos Raonic,105077,Albert Ramos,6-7(5) 6-4 6-4 6-4,5,RR,
+2013-D001,Davis Cup WG R1: CAN vs ESP,Hard,D,104433,Frank Dancevic,104719,Marcel Granollers,6-1 6-2 6-2,5,RR,
+2013-D001,Davis Cup WG R1: CAN vs ESP,Hard,D,105683,Milos Raonic,104198,Guillermo Garcia Lopez,6-3 6-4 6-2,5,RR,
+2013-D001,Davis Cup WG R1: CAN vs ESP,Hard,D,105077,Albert Ramos,104433,Frank Dancevic,7-5 6-4,3,RR,
+2013-D005,Davis Cup WG R1: FRA vs ISR,Hard,D,104542,Jo-Wilfried Tsonga,104804,Amir Weintraub,6-3 6-3 4-6 7-5,5,RR,
+2013-D005,Davis Cup WG R1: FRA vs ISR,Hard,D,104755,Richard Gasquet,104534,Dudi Sela,6-3 6-2 6-2,5,RR,
+2013-D005,Davis Cup WG R1: FRA vs ISR,Hard,D,103566,Michael Llodra,103174,Noam Okun,6-3 7-6(5),3,RR,
+2013-D005,Davis Cup WG R1: FRA vs ISR,Hard,D,104755,Richard Gasquet,104804,Amir Weintraub,6-4 6-3,3,RR,
+2013-D002,Davis Cup WG R1: ITA vs CRO,Clay,D,105227,Marin Cilic,103893,Paolo Lorenzi,6-1 6-7(6) 4-6 6-3 6-2,5,RR,
+2013-D002,Davis Cup WG R1: ITA vs CRO,Clay,D,104312,Andreas Seppi,104471,Ivan Dodig,6-2 6-7(2) 6-4 6-4,5,RR,
+2013-D002,Davis Cup WG R1: ITA vs CRO,Clay,D,105227,Marin Cilic,104312,Andreas Seppi,6-3 6-3 7-5,5,RR,
+2013-D002,Davis Cup WG R1: ITA vs CRO,Clay,D,104926,Fabio Fognini,104471,Ivan Dodig,4-6 6-4 6-4 6-4,5,RR,
+2013-D007,Davis Cup WG R1: KAZ vs AUT,Clay,D,104979,Andrey Golubev,104890,Andreas Haider Maurer,7-6(2) 6-3 7-6(5),5,RR,
+2013-D007,Davis Cup WG R1: KAZ vs AUT,Clay,D,105095,Evgeny Korolev,103781,Jurgen Melzer,7-6(4) 6-3 6-2,5,RR,
+2013-D007,Davis Cup WG R1: KAZ vs AUT,Clay,D,104979,Andrey Golubev,103781,Jurgen Melzer,4-6 6-3 6-4 6-2,5,RR,
+2013-D008,Davis Cup WG R1: SUI vs CZE,Hard,D,104527,Stan Wawrinka,104586,Lukas Rosol,6-4 6-3 6-4,5,RR,
+2013-D008,Davis Cup WG R1: SUI vs CZE,Hard,D,104607,Tomas Berdych,105967,Henri Laaksonen,6-3 6-2 6-7(5) 6-1,5,RR,
+2013-D008,Davis Cup WG R1: SUI vs CZE,Hard,D,104607,Tomas Berdych,104527,Stan Wawrinka,6-3 6-4 3-6 7-6(5),5,RR,
+2013-D008,Davis Cup WG R1: SUI vs CZE,Hard,D,105967,Henri Laaksonen,106210,Jiri Vesely,0-6 6-3 6-1,3,RR,
+2013-D004,Davis Cup WG R1: USA vs BRA,Hard,D,105023,Sam Querrey,105064,Thomaz Bellucci,6-3 6-4 6-4,5,RR,
+2013-D004,Davis Cup WG R1: USA vs BRA,Hard,D,104545,John Isner,103999,Thiago Alves,6-3 7-6(4) 6-3,5,RR,
+2013-D004,Davis Cup WG R1: USA vs BRA,Hard,D,105064,Thomaz Bellucci,104545,John Isner,2-6 6-4 6-7(7) 6-4 6-3,5,RR,
+2013-D004,Davis Cup WG R1: USA vs BRA,Hard,D,105023,Sam Querrey,103999,Thiago Alves,4-6 6-3 6-4 7-6(3),5,RR,
+2013-404,Indian Wells Masters,Hard,M,104926,Fabio Fognini,105379,Aljaz Bedene,6-4 6-3,3,R128,81
+2013-404,Indian Wells Masters,Hard,M,105051,Matthew Ebden,105723,Andrey Kuznetsov,6-3 4-6 6-4,3,R128,113
+2013-404,Indian Wells Masters,Hard,M,103333,Ivo Karlovic,106058,Jack Sock,3-6 7-6(8) 6-2,3,R128,113
+2013-404,Indian Wells Masters,Hard,M,104594,Marinko Matosevic,103990,Tommy Robredo,7-5 6-2,3,R128,87
+2013-404,Indian Wells Masters,Hard,M,105077,Albert Ramos,104547,Horacio Zeballos,6-3 6-3,3,R128,74
+2013-404,Indian Wells Masters,Hard,M,103566,Michael Llodra,103926,Daniel Munoz de la Nava,7-5 6-3,3,R128,63
+2013-404,Indian Wells Masters,Hard,M,104035,Bobby Reynolds,103794,Benjamin Becker,6-3 3-6 6-4,3,R128,121
+2013-404,Indian Wells Masters,Hard,M,103484,James Blake,104898,Robin Haase,6-3 6-4,3,R128,60
+2013-404,Indian Wells Masters,Hard,M,105539,Evgeny Donskoy,105147,Tatsuma Ito,6-2 6-1,3,R128,68
+2013-404,Indian Wells Masters,Hard,M,104229,Yen Hsun Lu,105065,Tim Smyczek,2-6 6-2 6-2,3,R128,103
+2013-404,Indian Wells Masters,Hard,M,104122,Carlos Berlocq,105053,Santiago Giraldo,6-0 2-6 7-5,3,R128,124
+2013-404,Indian Wells Masters,Hard,M,104332,Philipp Petzschner,104098,Dmitry Tursunov,6-4 6-4,3,R128,98
+2013-404,Indian Wells Masters,Hard,M,104593,Daniel Gimeno Traver,105041,Lukas Lacko,6-1 6-4,3,R128,59
+2013-404,Indian Wells Masters,Hard,M,104665,Pablo Andujar,105449,Steve Johnson,2-6 6-1 6-4,3,R128,103
+2013-404,Indian Wells Masters,Hard,M,103451,Bjorn Phau,104268,Alejandro Falla,7-6(1) 6-2,3,R128,75
+2013-404,Indian Wells Masters,Hard,M,103786,Nikolay Davydenko,103908,Paul Henri Mathieu,7-6(1) 6-2,3,R128,90
+2013-404,Indian Wells Masters,Hard,M,104999,Mischa Zverev,103781,Jurgen Melzer,3-6 6-3 7-6(3),3,R128,140
+2013-404,Indian Wells Masters,Hard,M,105676,David Goffin,104678,Viktor Troicki,4-6 6-3 6-4,3,R128,118
+2013-404,Indian Wells Masters,Hard,M,103900,David Nalbandian,104719,Marcel Granollers,6-4 6-2,3,R128,106
+2013-404,Indian Wells Masters,Hard,M,106071,Bernard Tomic,105064,Thomaz Bellucci,6-4 6-3,3,R128,68
+2013-404,Indian Wells Masters,Hard,M,103893,Paolo Lorenzi,104180,Gilles Muller,7-5 6-4,3,R128,96
+2013-404,Indian Wells Masters,Hard,M,105332,Benoit Paire,103997,Lukasz Kubot,5-7 7-5 6-2,3,R128,129
+2013-404,Indian Wells Masters,Hard,M,103813,Jarkko Nieminen,104997,Igor Sijsling,4-6 6-3 6-3,3,R128,101
+2013-404,Indian Wells Masters,Hard,M,104731,Kevin Anderson,103812,Victor Hanescu,7-6(6) 6-3,3,R128,89
+2013-404,Indian Wells Masters,Hard,M,105992,Ryan Harrison,104424,Go Soeda,6-0 4-6 6-3,3,R128,107
+2013-404,Indian Wells Masters,Hard,M,104919,Leonardo Mayer,103598,Xavier Malisse,6-2 3-6 6-4,3,R128,111
+2013-404,Indian Wells Masters,Hard,M,104978,Daniel Brands,104571,Marcos Baghdatis,6-0 7-6(3),3,R128,88
+2013-404,Indian Wells Masters,Hard,M,105208,Ernests Gulbis,103852,Feliciano Lopez,6-3 6-2,3,R128,73
+2013-404,Indian Wells Masters,Hard,M,103720,Lleyton Hewitt,104586,Lukas Rosol,6-4 3-6 6-1,3,R128,95
+2013-404,Indian Wells Masters,Hard,M,104639,Wayne Odesnik,105138,Roberto Bautista Agut,7-5 7-5,3,R128,91
+2013-404,Indian Wells Masters,Hard,M,104471,Ivan Dodig,105550,Guido Pella,6-1 6-2,3,R128,45
+2013-404,Indian Wells Masters,Hard,M,104797,Denis Istomin,105577,Vasek Pospisil,7-6(5) 6-3,3,R128,97
+2013-404,Indian Wells Masters,Hard,M,104925,Novak Djokovic,104926,Fabio Fognini,6-0 5-7 6-2,3,R64,110
+2013-404,Indian Wells Masters,Hard,M,105777,Grigor Dimitrov,105051,Matthew Ebden,6-4 6-4,3,R64,67
+2013-404,Indian Wells Masters,Hard,M,105023,Sam Querrey,103333,Ivo Karlovic,6-3 6-4,3,R64,63
+2013-404,Indian Wells Masters,Hard,M,104594,Marinko Matosevic,104338,Juan Monaco,7-5 6-0,3,R64,86
+2013-404,Indian Wells Masters,Hard,M,105227,Marin Cilic,105077,Albert Ramos,7-6(7) 6-2,3,R64,90
+2013-404,Indian Wells Masters,Hard,M,105683,Milos Raonic,103566,Michael Llodra,W/O,3,R64,
+2013-404,Indian Wells Masters,Hard,M,103888,Mardy Fish,104035,Bobby Reynolds,6-3 3-6 6-4,3,R64,117
+2013-404,Indian Wells Masters,Hard,M,104542,Jo-Wilfried Tsonga,103484,James Blake,7-6(6) 6-4,3,R64,104
+2013-404,Indian Wells Masters,Hard,M,104918,Andy Murray,105539,Evgeny Donskoy,5-7 6-2 6-2,3,R64,137
+2013-404,Indian Wells Masters,Hard,M,104229,Yen Hsun Lu,105373,Martin Klizan,7-6(5) 7-6(5),3,R64,117
+2013-404,Indian Wells Masters,Hard,M,104122,Carlos Berlocq,105238,Alexandr Dolgopolov,6-3 6-7(5) 6-3,3,R64,150
+2013-404,Indian Wells Masters,Hard,M,105453,Kei Nishikori,104332,Philipp Petzschner,6-3 6-2,3,R64,72
+2013-404,Indian Wells Masters,Hard,M,104597,Nicolas Almagro,104593,Daniel Gimeno Traver,7-5 6-1,3,R64,71
+2013-404,Indian Wells Masters,Hard,M,103163,Tommy Haas,104665,Pablo Andujar,6-3 7-6(0),3,R64,99
+2013-404,Indian Wells Masters,Hard,M,103451,Bjorn Phau,104871,Jeremy Chardy,6-2 2-6 6-4,3,R64,102
+2013-404,Indian Wells Masters,Hard,M,105223,Juan Martin del Potro,103786,Nikolay Davydenko,6-3 6-4,3,R64,79
+2013-404,Indian Wells Masters,Hard,M,104607,Tomas Berdych,104999,Mischa Zverev,6-2 6-4,3,R64,93
+2013-404,Indian Wells Masters,Hard,M,104252,Florian Mayer,105676,David Goffin,6-4 6-2,3,R64,70
+2013-404,Indian Wells Masters,Hard,M,105668,Jerzy Janowicz,103900,David Nalbandian,7-6(4) 4-6 6-3,3,R64,150
+2013-404,Indian Wells Masters,Hard,M,104755,Richard Gasquet,106071,Bernard Tomic,7-6(1) 6-2,3,R64,88
+2013-404,Indian Wells Masters,Hard,M,104468,Gilles Simon,103893,Paolo Lorenzi,6-3 3-6 7-5,3,R64,146
+2013-404,Indian Wells Masters,Hard,M,105332,Benoit Paire,104259,Philipp Kohlschreiber,6-4 6-2,3,R64,51
+2013-404,Indian Wells Masters,Hard,M,103813,Jarkko Nieminen,104269,Fernando Verdasco,6-1 6-0,3,R64,57
+2013-404,Indian Wells Masters,Hard,M,104731,Kevin Anderson,103970,David Ferrer,3-6 6-4 6-3,3,R64,116
+2013-404,Indian Wells Masters,Hard,M,104745,Rafael Nadal,105992,Ryan Harrison,7-6(3) 6-2,3,R64,94
+2013-404,Indian Wells Masters,Hard,M,104919,Leonardo Mayer,104022,Mikhail Youzhny,6-2 6-3,3,R64,84
+2013-404,Indian Wells Masters,Hard,M,104312,Andreas Seppi,104978,Daniel Brands,7-5 6-4,3,R64,77
+2013-404,Indian Wells Masters,Hard,M,105208,Ernests Gulbis,104386,Janko Tipsarevic,6-2 6-0,3,R64,48
+2013-404,Indian Wells Masters,Hard,M,103720,Lleyton Hewitt,104545,John Isner,6-7(6) 6-3 6-4,3,R64,143
+2013-404,Indian Wells Masters,Hard,M,104527,Stan Wawrinka,104639,Wayne Odesnik,3-6 6-2 6-1,3,R64,87
+2013-404,Indian Wells Masters,Hard,M,104471,Ivan Dodig,103898,Julien Benneteau,6-4 6-2,3,R64,82
+2013-404,Indian Wells Masters,Hard,M,103819,Roger Federer,104797,Denis Istomin,6-2 6-3,3,R64,58
+2013-404,Indian Wells Masters,Hard,M,104925,Novak Djokovic,105777,Grigor Dimitrov,7-6(4) 6-1,3,R32,68
+2013-404,Indian Wells Masters,Hard,M,105023,Sam Querrey,104594,Marinko Matosevic,7-6(5) 6-7(7) 7-5,3,R32,167
+2013-404,Indian Wells Masters,Hard,M,105683,Milos Raonic,105227,Marin Cilic,3-6 6-4 6-3,3,R32,117
+2013-404,Indian Wells Masters,Hard,M,104542,Jo-Wilfried Tsonga,103888,Mardy Fish,7-6(4) 7-6(0),3,R32,129
+2013-404,Indian Wells Masters,Hard,M,104918,Andy Murray,104229,Yen Hsun Lu,6-3 6-2,3,R32,89
+2013-404,Indian Wells Masters,Hard,M,104122,Carlos Berlocq,105453,Kei Nishikori,6-2 6-2,3,R32,73
+2013-404,Indian Wells Masters,Hard,M,103163,Tommy Haas,104597,Nicolas Almagro,6-3 6-7(2) 7-6(2),3,R32,155
+2013-404,Indian Wells Masters,Hard,M,105223,Juan Martin del Potro,103451,Bjorn Phau,6-2 7-5,3,R32,94
+2013-404,Indian Wells Masters,Hard,M,104607,Tomas Berdych,104252,Florian Mayer,6-4 6-1,3,R32,68
+2013-404,Indian Wells Masters,Hard,M,104755,Richard Gasquet,105668,Jerzy Janowicz,6-1 6-4,3,R32,66
+2013-404,Indian Wells Masters,Hard,M,104468,Gilles Simon,105332,Benoit Paire,3-6 7-6(5) 6-4,3,R32,135
+2013-404,Indian Wells Masters,Hard,M,104731,Kevin Anderson,103813,Jarkko Nieminen,6-3 6-1,3,R32,61
+2013-404,Indian Wells Masters,Hard,M,104745,Rafael Nadal,104919,Leonardo Mayer,W/O,3,R32,
+2013-404,Indian Wells Masters,Hard,M,105208,Ernests Gulbis,104312,Andreas Seppi,5-7 6-3 6-4,3,R32,128
+2013-404,Indian Wells Masters,Hard,M,104527,Stan Wawrinka,103720,Lleyton Hewitt,6-4 7-5,3,R32,84
+2013-404,Indian Wells Masters,Hard,M,103819,Roger Federer,104471,Ivan Dodig,6-3 6-1,3,R32,61
+2013-404,Indian Wells Masters,Hard,M,104925,Novak Djokovic,105023,Sam Querrey,6-0 7-6(6),3,R16,87
+2013-404,Indian Wells Masters,Hard,M,104542,Jo-Wilfried Tsonga,105683,Milos Raonic,4-6 7-5 6-4,3,R16,114
+2013-404,Indian Wells Masters,Hard,M,104918,Andy Murray,104122,Carlos Berlocq,7-6(4) 6-4,3,R16,116
+2013-404,Indian Wells Masters,Hard,M,105223,Juan Martin del Potro,103163,Tommy Haas,6-1 6-2,3,R16,66
+2013-404,Indian Wells Masters,Hard,M,104607,Tomas Berdych,104755,Richard Gasquet,6-1 7-5,3,R16,101
+2013-404,Indian Wells Masters,Hard,M,104731,Kevin Anderson,104468,Gilles Simon,6-3 1-6 6-4,3,R16,108
+2013-404,Indian Wells Masters,Hard,M,104745,Rafael Nadal,105208,Ernests Gulbis,4-6 6-4 7-5,3,R16,153
+2013-404,Indian Wells Masters,Hard,M,103819,Roger Federer,104527,Stan Wawrinka,6-3 6-7(4) 7-5,3,R16,140
+2013-404,Indian Wells Masters,Hard,M,104925,Novak Djokovic,104542,Jo-Wilfried Tsonga,6-3 6-1,3,QF,55
+2013-404,Indian Wells Masters,Hard,M,105223,Juan Martin del Potro,104918,Andy Murray,6-7(5) 6-3 6-1,3,QF,153
+2013-404,Indian Wells Masters,Hard,M,104607,Tomas Berdych,104731,Kevin Anderson,6-4 6-4,3,QF,91
+2013-404,Indian Wells Masters,Hard,M,104745,Rafael Nadal,103819,Roger Federer,6-4 6-2,3,QF,85
+2013-404,Indian Wells Masters,Hard,M,105223,Juan Martin del Potro,104925,Novak Djokovic,4-6 6-4 6-4,3,SF,170
+2013-404,Indian Wells Masters,Hard,M,104745,Rafael Nadal,104607,Tomas Berdych,6-4 7-5,3,SF,104
+2013-404,Indian Wells Masters,Hard,M,104745,Rafael Nadal,105223,Juan Martin del Potro,4-6 6-3 6-4,3,F,150
+2013-403,Miami Masters,Hard,M,104586,Lukas Rosol,104180,Gilles Muller,7-5 6-4,3,R128,83
+2013-403,Miami Masters,Hard,M,104500,Somdev Devvarman,105539,Evgeny Donskoy,4-6 7-6(5) 6-2,3,R128,149
+2013-403,Miami Masters,Hard,M,103786,Nikolay Davydenko,103893,Paolo Lorenzi,6-0 2-6 6-0,3,R128,91
+2013-403,Miami Masters,Hard,M,104997,Igor Sijsling,104919,Leonardo Mayer,3-2 RET,3,R128,19
+2013-403,Miami Masters,Hard,M,103720,Lleyton Hewitt,105311,Joao Sousa,6-1 7-6(3),3,R128,107
+2013-403,Miami Masters,Hard,M,104813,Grega Zemlja,105138,Roberto Bautista Agut,3-6 RET,3,R128,40
+2013-403,Miami Masters,Hard,M,104547,Horacio Zeballos,105217,Thiemo De Bakker,6-1 3-6 6-3,3,R128,99
+2013-403,Miami Masters,Hard,M,104534,Dudi Sela,104594,Marinko Matosevic,6-2 1-6 6-4,3,R128,118
+2013-403,Miami Masters,Hard,M,104098,Dmitry Tursunov,105065,Tim Smyczek,7-6(4) 7-5,3,R128,105
+2013-403,Miami Masters,Hard,M,103566,Michael Llodra,105332,Benoit Paire,7-6(7) 6-2,3,R128,79
+2013-403,Miami Masters,Hard,M,103598,Xavier Malisse,104330,Rajeev Ram,6-4 6-7(6) 6-4,3,R128,154
+2013-403,Miami Masters,Hard,M,103812,Victor Hanescu,105723,Andrey Kuznetsov,4-6 6-3 4-1 RET,3,R128,90
+2013-403,Miami Masters,Hard,M,105077,Albert Ramos,104225,Jan Hajek,6-3 6-1,3,R128,75
+2013-403,Miami Masters,Hard,M,103484,James Blake,105992,Ryan Harrison,6-2 6-2,3,R128,58
+2013-403,Miami Masters,Hard,M,103781,Jurgen Melzer,105575,Ricardas Berankis,3-6 6-3 7-6(1),3,R128,126
+2013-403,Miami Masters,Hard,M,104735,Tobias Kamke,104882,Blaz Kavcic,7-6(5) 6-3,3,R128,102
+2013-403,Miami Masters,Hard,M,103694,Olivier Rochus,105147,Tatsuma Ito,4-6 6-4 3-1 RET,3,R128,100
+2013-403,Miami Masters,Hard,M,104229,Yen Hsun Lu,104068,Robby Ginepri,7-5 6-1,3,R128,75
+2013-403,Miami Masters,Hard,M,105676,David Goffin,104898,Robin Haase,7-6(4) 3-6 6-1,3,R128,120
+2013-403,Miami Masters,Hard,M,105550,Guido Pella,104122,Carlos Berlocq,2-1 RET,3,R128,11
+2013-403,Miami Masters,Hard,M,105558,Guillaume Rufin,105657,Marius Copil,6-4 4-6 6-1,3,R128,113
+2013-403,Miami Masters,Hard,M,103997,Lukasz Kubot,104433,Frank Dancevic,4-6 6-4 6-3,3,R128,136
+2013-403,Miami Masters,Hard,M,104268,Alejandro Falla,104424,Go Soeda,7-5 6-1,3,R128,76
+2013-403,Miami Masters,Hard,M,104593,Daniel Gimeno Traver,104797,Denis Istomin,6-2 6-4,3,R128,59
+2013-403,Miami Masters,Hard,M,104678,Viktor Troicki,104665,Pablo Andujar,6-2 6-3,3,R128,66
+2013-403,Miami Masters,Hard,M,103813,Jarkko Nieminen,103900,David Nalbandian,2-6 6-4 6-3,3,R128,109
+2013-403,Miami Masters,Hard,M,104471,Ivan Dodig,105041,Lukas Lacko,4-6 6-0 6-4,3,R128,112
+2013-403,Miami Masters,Hard,M,105053,Santiago Giraldo,105733,Rhyne Williams,6-2 6-4,3,R128,72
+2013-403,Miami Masters,Hard,M,105379,Aljaz Bedene,103794,Benjamin Becker,6-4 6-3,3,R128,77
+2013-403,Miami Masters,Hard,M,105064,Thomaz Bellucci,104978,Daniel Brands,2-6 6-4 6-2,3,R128,106
+2013-403,Miami Masters,Hard,M,104620,Simone Bolelli,105028,Jesse Levine,4-6 6-3 7-6(4),3,R128,142
+2013-403,Miami Masters,Hard,M,106071,Bernard Tomic,102967,Marc Gicquel,7-5 7-6(3),3,R128,84
+2013-403,Miami Masters,Hard,M,104925,Novak Djokovic,104586,Lukas Rosol,6-1 6-0,3,R64,53
+2013-403,Miami Masters,Hard,M,104500,Somdev Devvarman,104273,Edouard Roger Vasselin,4-6 6-4 7-5,3,R64,140
+2013-403,Miami Masters,Hard,M,105238,Alexandr Dolgopolov,103786,Nikolay Davydenko,6-2 6-3,3,R64,61
+2013-403,Miami Masters,Hard,M,103163,Tommy Haas,104997,Igor Sijsling,6-0 5-7 6-3,3,R64,90
+2013-403,Miami Masters,Hard,M,104468,Gilles Simon,103720,Lleyton Hewitt,6-3 6-3,3,R64,77
+2013-403,Miami Masters,Hard,M,104813,Grega Zemlja,104252,Florian Mayer,6-3 7-6(3),3,R64,77
+2013-403,Miami Masters,Hard,M,104731,Kevin Anderson,104547,Horacio Zeballos,6-3 7-6(4),3,R64,80
+2013-403,Miami Masters,Hard,M,104386,Janko Tipsarevic,104534,Dudi Sela,6-2 6-4,3,R64,74
+2013-403,Miami Masters,Hard,M,103970,David Ferrer,104098,Dmitry Tursunov,W/O,3,R64,
+2013-403,Miami Masters,Hard,M,104926,Fabio Fognini,103566,Michael Llodra,6-4 6-1,3,R64,47
+2013-403,Miami Masters,Hard,M,103598,Xavier Malisse,104871,Jeremy Chardy,6-3 6-2,3,R64,74
+2013-403,Miami Masters,Hard,M,105453,Kei Nishikori,103812,Victor Hanescu,6-3 6-3,3,R64,81
+2013-403,Miami Masters,Hard,M,105077,Albert Ramos,104338,Juan Monaco,6-2 4-6 6-3,3,R64,127
+2013-403,Miami Masters,Hard,M,103484,James Blake,103898,Julien Benneteau,6-2 6-3,3,R64,61
+2013-403,Miami Masters,Hard,M,103781,Jurgen Melzer,104719,Marcel Granollers,6-3 6-4,3,R64,84
+2013-403,Miami Masters,Hard,M,104735,Tobias Kamke,105223,Juan Martin del Potro,7-6(5) 6-1,3,R64,111
+2013-403,Miami Masters,Hard,M,104755,Richard Gasquet,103694,Olivier Rochus,7-5 6-2,3,R64,88
+2013-403,Miami Masters,Hard,M,104022,Mikhail Youzhny,104229,Yen Hsun Lu,6-3 1-6 6-0,3,R64,103
+2013-403,Miami Masters,Hard,M,105676,David Goffin,104259,Philipp Kohlschreiber,7-6(5) 4-6 6-2,3,R64,135
+2013-403,Miami Masters,Hard,M,104597,Nicolas Almagro,105550,Guido Pella,6-0 6-3,3,R64,48
+2013-403,Miami Masters,Hard,M,105683,Milos Raonic,105558,Guillaume Rufin,6-2 6-4,3,R64,64
+2013-403,Miami Masters,Hard,M,105023,Sam Querrey,103997,Lukasz Kubot,4-6 6-3 6-3,3,R64,98
+2013-403,Miami Masters,Hard,M,104268,Alejandro Falla,104269,Fernando Verdasco,6-3 7-6(6),3,R64,104
+2013-403,Miami Masters,Hard,M,104607,Tomas Berdych,104593,Daniel Gimeno Traver,5-7 7-6(3) 6-2,3,R64,135
+2013-403,Miami Masters,Hard,M,104542,Jo-Wilfried Tsonga,104678,Viktor Troicki,7-6(6) 6-3,3,R64,97
+2013-403,Miami Masters,Hard,M,103813,Jarkko Nieminen,105373,Martin Klizan,6-2 6-2,3,R64,76
+2013-403,Miami Masters,Hard,M,104545,John Isner,104471,Ivan Dodig,4-6 7-5 7-6(5),3,R64,129
+2013-403,Miami Masters,Hard,M,105227,Marin Cilic,105053,Santiago Giraldo,6-2 7-6(6),3,R64,94
+2013-403,Miami Masters,Hard,M,104312,Andreas Seppi,105379,Aljaz Bedene,7-5 5-7 7-5,3,R64,158
+2013-403,Miami Masters,Hard,M,105064,Thomaz Bellucci,105668,Jerzy Janowicz,7-6(5) 3-6 6-3,3,R64,146
+2013-403,Miami Masters,Hard,M,105777,Grigor Dimitrov,104620,Simone Bolelli,6-4 1-1 RET,3,R64,55
+2013-403,Miami Masters,Hard,M,104918,Andy Murray,106071,Bernard Tomic,6-3 6-1,3,R64,57
+2013-403,Miami Masters,Hard,M,104925,Novak Djokovic,104500,Somdev Devvarman,6-2 6-4,3,R32,69
+2013-403,Miami Masters,Hard,M,103163,Tommy Haas,105238,Alexandr Dolgopolov,6-3 6-2,3,R32,77
+2013-403,Miami Masters,Hard,M,104468,Gilles Simon,104813,Grega Zemlja,6-4 6-4,3,R32,96
+2013-403,Miami Masters,Hard,M,104386,Janko Tipsarevic,104731,Kevin Anderson,4-6 7-6(5) 6-0,3,R32,148
+2013-403,Miami Masters,Hard,M,103970,David Ferrer,104926,Fabio Fognini,6-1 7-5,3,R32,74
+2013-403,Miami Masters,Hard,M,105453,Kei Nishikori,103598,Xavier Malisse,6-2 7-5,3,R32,85
+2013-403,Miami Masters,Hard,M,105077,Albert Ramos,103484,James Blake,6-4 2-6 7-5,3,R32,111
+2013-403,Miami Masters,Hard,M,103781,Jurgen Melzer,104735,Tobias Kamke,6-7(3) 6-3 6-4,3,R32,150
+2013-403,Miami Masters,Hard,M,104755,Richard Gasquet,104022,Mikhail Youzhny,6-3 6-4,3,R32,87
+2013-403,Miami Masters,Hard,M,104597,Nicolas Almagro,105676,David Goffin,6-3 6-4,3,R32,73
+2013-403,Miami Masters,Hard,M,105023,Sam Querrey,105683,Milos Raonic,W/O,3,R32,
+2013-403,Miami Masters,Hard,M,104607,Tomas Berdych,104268,Alejandro Falla,2-6 7-6(6) 6-4,3,R32,142
+2013-403,Miami Masters,Hard,M,104542,Jo-Wilfried Tsonga,103813,Jarkko Nieminen,6-3 6-3,3,R32,66
+2013-403,Miami Masters,Hard,M,105227,Marin Cilic,104545,John Isner,6-3 7-6(3),3,R32,78
+2013-403,Miami Masters,Hard,M,104312,Andreas Seppi,105064,Thomaz Bellucci,7-5 4-6 6-2,3,R32,124
+2013-403,Miami Masters,Hard,M,104918,Andy Murray,105777,Grigor Dimitrov,7-6(3) 6-3,3,R32,115
+2013-403,Miami Masters,Hard,M,103163,Tommy Haas,104925,Novak Djokovic,6-2 6-4,3,R16,80
+2013-403,Miami Masters,Hard,M,104468,Gilles Simon,104386,Janko Tipsarevic,5-7 6-2 6-2,3,R16,150
+2013-403,Miami Masters,Hard,M,103970,David Ferrer,105453,Kei Nishikori,6-4 6-2,3,R16,82
+2013-403,Miami Masters,Hard,M,103781,Jurgen Melzer,105077,Albert Ramos,2-6 6-3 6-3,3,R16,107
+2013-403,Miami Masters,Hard,M,104755,Richard Gasquet,104597,Nicolas Almagro,6-7(3) 7-5 7-6(3),3,R16,160
+2013-403,Miami Masters,Hard,M,104607,Tomas Berdych,105023,Sam Querrey,6-1 6-1,3,R16,51
+2013-403,Miami Masters,Hard,M,105227,Marin Cilic,104542,Jo-Wilfried Tsonga,7-5 7-6(4),3,R16,109
+2013-403,Miami Masters,Hard,M,104918,Andy Murray,104312,Andreas Seppi,6-2 6-4,3,R16,86
+2013-403,Miami Masters,Hard,M,103163,Tommy Haas,104468,Gilles Simon,6-3 6-1,3,QF,64
+2013-403,Miami Masters,Hard,M,103970,David Ferrer,103781,Jurgen Melzer,4-6 6-3 6-0,3,QF,115
+2013-403,Miami Masters,Hard,M,104755,Richard Gasquet,104607,Tomas Berdych,6-3 6-3,3,QF,75
+2013-403,Miami Masters,Hard,M,104918,Andy Murray,105227,Marin Cilic,6-4 6-3,3,QF,103
+2013-403,Miami Masters,Hard,M,103970,David Ferrer,103163,Tommy Haas,4-6 6-2 6-3,3,SF,122
+2013-403,Miami Masters,Hard,M,104918,Andy Murray,104755,Richard Gasquet,6-7(3) 6-1 6-2,3,SF,119
+2013-403,Miami Masters,Hard,M,104918,Andy Murray,103970,David Ferrer,2-6 6-4 7-6(1),3,F,165
+2013-D071,Davis Cup G1 PO: CHN vs TPE,Hard,D,105842,Di Wu,104251,Ti Chen,1-6 6-0 6-1 6-4,5,RR,
+2013-D071,Davis Cup G1 PO: CHN vs TPE,Hard,D,105585,Ze Zhang,105738,Tsung Hua Yang,7-5 6-1 6-1,5,RR,
+2013-D071,Davis Cup G1 PO: CHN vs TPE,Hard,D,105585,Ze Zhang,104251,Ti Chen,7-6(7) 6-1,3,RR,
+2013-D071,Davis Cup G1 PO: CHN vs TPE,Hard,D,105842,Di Wu,105946,Liang Chi Huang,6-7(5) 6-4 6-1,3,RR,
+2013-D072,Davis Cup G1 PO: IND vs INA,Hard,D,104500,Somdev Devvarman,106309,Wisnu Adi Nugroho,6-1 6-2 6-2,5,RR,
+2013-D072,Davis Cup G1 PO: IND vs INA,Hard,D,106026,Yuki Bhambri,105464,Christopher Rungkat,6-3 6-2 6-2,5,RR,
+2013-D072,Davis Cup G1 PO: IND vs INA,Hard,D,104500,Somdev Devvarman,105812,David Agung Susanto,6-3 6-1,3,RR,
+2013-D072,Davis Cup G1 PO: IND vs INA,Hard,D,106026,Yuki Bhambri,106309,Wisnu Adi Nugroho,6-0 6-1,3,RR,
+2013-D018,Davis Cup G1 R2: COL vs URU,Hard,D,105053,Santiago Giraldo,104395,Marcel Felder,6-2 3-6 6-1 6-2,5,RR,
+2013-D018,Davis Cup G1 R2: COL vs URU,Hard,D,104268,Alejandro Falla,105431,Ariel Behar,6-2 6-0 6-2,5,RR,
+2013-D018,Davis Cup G1 R2: COL vs URU,Hard,D,104268,Alejandro Falla,122687,Rodrigo Senattore,6-0 6-1,3,RR,
+2013-D018,Davis Cup G1 R2: COL vs URU,Hard,D,108701,Juan Sebastian Cabal,124063,Santiago Maresca,6-1 6-0,3,RR,
+2013-D017,Davis Cup G1 R2: ECU vs CHI,Hard,D,104673,Julio Cesar Campozano,106426,Cristian Garin,4-6 6-2 4-6 6-2 9-7,5,RR,
+2013-D017,Davis Cup G1 R2: ECU vs CHI,Hard,D,104154,Paul Capdeville,105877,Emilio Gomez,7-5 6-1 7-5,5,RR,
+2013-D017,Davis Cup G1 R2: ECU vs CHI,Hard,D,104673,Julio Cesar Campozano,104154,Paul Capdeville,4-6 7-6(5) 6-2 4-1 RET,5,RR,
+2013-D017,Davis Cup G1 R2: ECU vs CHI,Hard,D,105877,Emilio Gomez,106426,Cristian Garin,6-4 4-6 6-3 7-6(1),5,RR,
+2013-D026,Davis Cup G1 R2: GBR vs RUS,Hard,D,104098,Dmitry Tursunov,105554,Daniel Evans,6-4 6-7(5) 6-4 5-7 6-4,5,RR,
+2013-D026,Davis Cup G1 R2: GBR vs RUS,Hard,D,105539,Evgeny Donskoy,104868,James Ward,4-6 4-6 7-5 6-3 8-6,5,RR,
+2013-D026,Davis Cup G1 R2: GBR vs RUS,Hard,D,104868,James Ward,104098,Dmitry Tursunov,6-4 5-7 5-7 6-4 6-4,5,RR,
+2013-D026,Davis Cup G1 R2: GBR vs RUS,Hard,D,105554,Daniel Evans,105539,Evgeny Donskoy,6-4 6-4 6-1,5,RR,
+2013-D070,Davis Cup G1 R2: JPN vs KOR,Hard,D,105147,Tatsuma Ito,106158,Suk Young Jeong,6-1 6-4 6-4,5,RR,
+2013-D070,Davis Cup G1 R2: JPN vs KOR,Hard,D,104424,Go Soeda,104856,Min Hyoek Cho,5-7 2-6 6-4 6-4 6-2,5,RR,
+2013-D070,Davis Cup G1 R2: JPN vs KOR,Hard,D,105790,Yong Kyu Lim,104424,Go Soeda,5-7 7-6(5) 6-4 6-3,5,RR,
+2013-D070,Davis Cup G1 R2: JPN vs KOR,Hard,D,105147,Tatsuma Ito,104856,Min Hyoek Cho,6-3 6-3 6-0,5,RR,
+2013-D027,Davis Cup G1 R2: POL vs RSA,Hard,D,105668,Jerzy Janowicz,105169,Jean Andersen,6-4 6-3 6-3,5,RR,
+2013-D027,Davis Cup G1 R2: POL vs RSA,Hard,D,103573,Rik De Voest,103997,Lukasz Kubot,6-3 6-7(3) 7-5 6-4,5,RR,
+2013-D027,Davis Cup G1 R2: POL vs RSA,Hard,D,105668,Jerzy Janowicz,105434,Ruan Roelofse,4-6 6-3 6-1 6-1,5,RR,
+2013-D028,Davis Cup G1 R2: ROU vs NED,Hard,D,104898,Robin Haase,104494,Adrian Ungur,6-4 6-4 3-6 6-3,5,RR,
+2013-D028,Davis Cup G1 R2: ROU vs NED,Hard,D,104997,Igor Sijsling,103812,Victor Hanescu,6-4 7-6(5) 2-6 6-7(5) 6-2,5,RR,
+2013-D028,Davis Cup G1 R2: ROU vs NED,Hard,D,105217,Thiemo De Bakker,105657,Marius Copil,7-6(4) 7-6(2),3,RR,
+2013-D028,Davis Cup G1 R2: ROU vs NED,Hard,D,104997,Igor Sijsling,104494,Adrian Ungur,1-6 6-3 6-4,3,RR,
+2013-D029,Davis Cup G1 R2: UKR vs SWE,Hard,D,105238,Alexandr Dolgopolov,106035,Isak Arvidsson,6-2 6-0 7-6(5),5,RR,
+2013-D029,Davis Cup G1 R2: UKR vs SWE,Hard,D,105436,Markus Eriksson,104920,Denys Molchanov,7-5 4-6 6-4 6-4,5,RR,
+2013-D029,Davis Cup G1 R2: UKR vs SWE,Hard,D,105238,Alexandr Dolgopolov,105436,Markus Eriksson,3-6 6-1 6-4 6-3,5,RR,
+2013-D029,Davis Cup G1 R2: UKR vs SWE,Hard,D,104660,Sergiy Stakhovsky,106035,Isak Arvidsson,6-2 6-3 7-5,5,RR,
+2013-D069,Davis Cup G1 R2: UZB vs AUS,Clay,D,106071,Bernard Tomic,104736,Farrukh Dustov,7-6(6) 6-4 6-4,5,RR,
+2013-D069,Davis Cup G1 R2: UZB vs AUS,Clay,D,104797,Denis Istomin,104594,Marinko Matosevic,6-4 7-6(1) 3-6 6-4,5,RR,
+2013-D069,Davis Cup G1 R2: UZB vs AUS,Clay,D,106071,Bernard Tomic,104797,Denis Istomin,4-6 6-2 6-2 6-3,5,RR,
+2013-D043,Davis Cup G2 PO: BAR vs PUR,Hard,D,105985,Darian King,125571,Christian Garay,6-2 6-1 6-0,5,RR,
+2013-D043,Davis Cup G2 PO: BAR vs PUR,Hard,D,105541,Alex Llompart,108786,Seanon Williams,6-2 6-3 6-1,5,RR,
+2013-D043,Davis Cup G2 PO: BAR vs PUR,Hard,D,105985,Darian King,105541,Alex Llompart,5-7 6-3 6-4 6-3,5,RR,
+2013-D061,Davis Cup G2 PO: BUL vs EST,Clay,D,104910,Tihomir Grozdanov,104901,Vladimir Ivanov,6-4 6-1 6-3,5,RR,
+2013-D061,Davis Cup G2 PO: BUL vs EST,Clay,D,106220,Dimitar Kuzmanov,123814,Markus Kerner,6-2 6-1 6-2,5,RR,
+2013-D064,Davis Cup G2 PO: CYP vs BEN,Hard,D,104571,Marcos Baghdatis,119506,Jean Segodo,6-1 6-1 6-1,5,RR,
+2013-D064,Davis Cup G2 PO: CYP vs BEN,Hard,D,105278,Alexis Klegou,117365,Petros Chrysochos,4-6 6-1 6-4 6-2,5,RR,
+2013-D064,Davis Cup G2 PO: CYP vs BEN,Hard,D,105278,Alexis Klegou,108735,Rares Cuzdriorean,6-2 4-6 6-3 6-2,5,RR,
+2013-D064,Davis Cup G2 PO: CYP vs BEN,Hard,D,117365,Petros Chrysochos,125783,Magloire Yakpa,6-1 6-1 6-0,5,RR,
+2013-D044,Davis Cup G2 PO: GUA vs HAI,Hard,D,105499,Christopher Diaz Figueroa,125572,Hillel Rousseau,6-3 6-1 6-1,5,RR,
+2013-D044,Davis Cup G2 PO: GUA vs HAI,Hard,D,104863,Olivier Sajous,105442,Sebastien Vidal,7-6(5) 7-5 6-1,5,RR,
+2013-D044,Davis Cup G2 PO: GUA vs HAI,Hard,D,105499,Christopher Diaz Figueroa,104863,Olivier Sajous,6-2 6-1 6-4,5,RR,
+2013-D044,Davis Cup G2 PO: GUA vs HAI,Hard,D,122047,Luciano Ramazzini,125572,Hillel Rousseau,6-0 6-1,3,RR,
+2013-D063,Davis Cup G2 PO: HUN vs LUX,Hard,D,105226,Attila Balazs,111167,Ugo Nastasi,6-4 7-6(3) 6-1,5,RR,
+2013-D063,Davis Cup G2 PO: HUN vs LUX,Hard,D,104180,Gilles Muller,105916,Marton Fucsovics,6-3 6-4 6-0,5,RR,
+2013-D063,Davis Cup G2 PO: HUN vs LUX,Hard,D,104180,Gilles Muller,105226,Attila Balazs,6-7(1) 6-2 6-3 4-6 9-7,5,RR,
+2013-D063,Davis Cup G2 PO: HUN vs LUX,Hard,D,107098,Gilles Kremer,105852,Viktor Filipenko,6-7(7) 6-4 7-6(5),3,RR,
+2013-D046,Davis Cup G2 PO: KUW vs SYR,Hard,D,105372,Issam Al Tawil,121908,Naser Al Obaidly,6-1 7-5 6-0,5,RR,
+2013-D046,Davis Cup G2 PO: KUW vs SYR,Hard,D,103600,Mohammad Ghareeb,105201,Marc Abdulnour,6-4 6-3 6-4,5,RR,
+2013-D046,Davis Cup G2 PO: KUW vs SYR,Hard,D,103600,Mohammad Ghareeb,105372,Issam Al Tawil,6-7(4) 6-3 6-2 6-3,5,RR,
+2013-D046,Davis Cup G2 PO: KUW vs SYR,Hard,D,105201,Marc Abdulnour,121908,Naser Al Obaidly,6-3 6-4,3,RR,
+2013-D045,Davis Cup G2 PO: LIB vs SRI,Clay,D,105255,Bassam Beidas,108747,Dineshkanthan Thangarajah,6-1 6-2 6-1,5,RR,
+2013-D045,Davis Cup G2 PO: LIB vs SRI,Clay,D,104631,Harshana Godamanna,108618,Karim Alayli,6-3 6-3 6-2,5,RR,
+2013-D045,Davis Cup G2 PO: LIB vs SRI,Clay,D,105255,Bassam Beidas,104631,Harshana Godamanna,6-4 6-7(5) 6-3 6-3,5,RR,
+2013-D045,Davis Cup G2 PO: LIB vs SRI,Clay,D,108747,Dineshkanthan Thangarajah,108618,Karim Alayli,6-2 6-4 6-1,5,RR,
+2013-D062,Davis Cup G2 PO: TUN vs BLR,Clay,D,105590,Uladzimir Ignatik,104580,Haithem Abid,6-3 6-3 7-5,5,RR,
+2013-D062,Davis Cup G2 PO: TUN vs BLR,Clay,D,104291,Malek Jaziri,106078,Egor Gerasimov,7-5 3-6 6-0 6-3,5,RR,
+2013-D062,Davis Cup G2 PO: TUN vs BLR,Clay,D,104291,Malek Jaziri,105590,Uladzimir Ignatik,6-4 6-1 6-1,5,RR,
+2013-D062,Davis Cup G2 PO: TUN vs BLR,Clay,D,106078,Egor Gerasimov,104580,Haithem Abid,6-7(5) 6-4 6-1 5-7 6-4,5,RR,
+2013-D057,Davis Cup G2 R2: BIH vs MDA,Clay,D,105430,Radu Albot,105493,Tomislav Brkic,6-3 7-6(3) 6-3,5,RR,
+2013-D057,Davis Cup G2 R2: BIH vs MDA,Clay,D,106000,Damir Dzumhur,106201,Maxim Dubarenco,6-3 2-6 5-7 6-3 6-4,5,RR,
+2013-D057,Davis Cup G2 R2: BIH vs MDA,Clay,D,105430,Radu Albot,106000,Damir Dzumhur,6-7(4) 4-6 6-4 6-3 6-3,5,RR,
+2013-D037,Davis Cup G2 R2: ESA vs MEX,Hard,D,105656,Marcelo Arevalo,104535,Daniel Garza,6-4 6-4 6-7(7) 6-2,5,RR,
+2013-D037,Davis Cup G2 R2: ESA vs MEX,Hard,D,104763,Rafael Arevalo,103746,Miguel Gallardo Valles,6-2 6-3 7-5,5,RR,
+2013-D037,Davis Cup G2 R2: ESA vs MEX,Hard,D,103746,Miguel Gallardo Valles,105292,Alejandro Gonzalez,6-0 6-3,3,RR,
+2013-D037,Davis Cup G2 R2: ESA vs MEX,Hard,D,125781,Rogelio Siller,108762,Andres Weisskopf,6-2 6-4,3,RR,
+2013-D055,Davis Cup G2 R2: IRL vs FIN,Hard,D,105349,Harri Heliovaara,104945,James Mcgee,4-6 6-4 7-6(1) 6-7(4) 6-4,5,RR,
+2013-D055,Davis Cup G2 R2: IRL vs FIN,Hard,D,103813,Jarkko Nieminen,104352,Colin Obrien,6-1 6-2 6-0,5,RR,
+2013-D055,Davis Cup G2 R2: IRL vs FIN,Hard,D,105239,Daniel Glancy,106100,Micke Kontinen,6-2 2-6 6-2,3,RR,
+2013-D055,Davis Cup G2 R2: IRL vs FIN,Hard,D,104352,Colin Obrien,105349,Harri Heliovaara,W/O,5,RR,
+2013-D056,Davis Cup G2 R2: MON vs LAT,Clay,D,105208,Ernests Gulbis,103444,Jean Rene Lisnard,6-2 6-3 6-3,5,RR,
+2013-D056,Davis Cup G2 R2: MON vs LAT,Clay,D,104112,Benjamin Balleret,104557,Andis Juska,3-6 6-2 6-4 6-3,5,RR,
+2013-D056,Davis Cup G2 R2: MON vs LAT,Clay,D,105208,Ernests Gulbis,104112,Benjamin Balleret,6-2 6-0 6-1,5,RR,
+2013-D056,Davis Cup G2 R2: MON vs LAT,Clay,D,104557,Andis Juska,103444,Jean Rene Lisnard,2-6 6-4 6-1 3-0 RET,5,RR,
+2013-D034,Davis Cup G2 R2: PAK vs NZL,Grass,D,103499,Aqeel Khan,104677,Artem Sitak,7-5 3-6 6-2 7-5,5,RR,
+2013-D034,Davis Cup G2 R2: PAK vs NZL,Grass,D,104368,Daniel King Turner,103529,Aisam Ul Haq Qureshi,2-6 6-3 0-3 Default,3,RR,
+2013-D034,Davis Cup G2 R2: PAK vs NZL,Grass,D,104368,Daniel King Turner,103499,Aqeel Khan,W/O,5,RR,
+2013-D034,Davis Cup G2 R2: PAK vs NZL,Grass,D,104677,Artem Sitak,103529,Aisam Ul Haq Qureshi,W/O,5,RR,
+2013-D038,Davis Cup G2 R2: PER vs VEN,Clay,D,106175,Ricardo Rodriguez,105935,Duilio Beretta,7-5 6-2 6-2,5,RR,
+2013-D038,Davis Cup G2 R2: PER vs VEN,Clay,D,105961,David Souto,105273,Mauricio Echazu,4-6 6-2 6-4 7-5,5,RR,
+2013-D038,Davis Cup G2 R2: PER vs VEN,Clay,D,105334,Luis David Martinez,106410,Jorge Brian Panta Herreros,3-6 7-6(4) 6-3,3,RR,
+2013-D038,Davis Cup G2 R2: PER vs VEN,Clay,D,105273,Mauricio Echazu,104887,Piero Luisi,6-2 7-5,3,RR,
+2013-D035,Davis Cup G2 R2: PHI vs THA,Clay,D,104604,Ruben Gonzales,106397,Wishaya Trongcharoenchaikul,6-7(6) 6-4 3-0 RET,5,RR,
+2013-D035,Davis Cup G2 R2: PHI vs THA,Clay,D,103821,Danai Udomchoke,108594,Johnny Arcilla,6-3 6-2 1-6 6-2,5,RR,
+2013-D035,Davis Cup G2 R2: PHI vs THA,Clay,D,104604,Ruben Gonzales,103821,Danai Udomchoke,6-4 6-3 6-2,5,RR,
+2013-D035,Davis Cup G2 R2: PHI vs THA,Clay,D,108717,Francis Casey Alcantara,106397,Wishaya Trongcharoenchaikul,6-4 4-6 6-0,3,RR,
+2013-D058,Davis Cup G2 R2: POR vs LTU,Clay,D,105671,Gastao Elias,108748,Lukas Mugevicius,6-0 6-1 6-2,5,RR,
+2013-D058,Davis Cup G2 R2: POR vs LTU,Clay,D,105155,Pedro Sousa,106024,Dovydas Sakinis,6-2 6-4 6-0,5,RR,
+2013-D058,Davis Cup G2 R2: POR vs LTU,Clay,D,104523,Frederico Gil,125782,Kasparas Zemaitelis,6-1 6-3,3,RR,
+2013-D058,Davis Cup G2 R2: POR vs LTU,Clay,D,104349,Rui Machado,108748,Lukas Mugevicius,6-2 6-0,3,RR,
+2013-D011,Davis Cup WG QF: ARG vs FRA,Clay,D,104542,Jo-Wilfried Tsonga,104122,Carlos Berlocq,4-6 6-2 6-3 5-7 6-2,5,RR,
+2013-D011,Davis Cup WG QF: ARG vs FRA,Clay,D,104338,Juan Monaco,104468,Gilles Simon,7-6(2) 6-2 6-4,5,RR,
+2013-D011,Davis Cup WG QF: ARG vs FRA,Clay,D,104542,Jo-Wilfried Tsonga,104338,Juan Monaco,6-3 6-3 6-0,5,RR,
+2013-D011,Davis Cup WG QF: ARG vs FRA,Clay,D,104122,Carlos Berlocq,104468,Gilles Simon,6-4 5-7 6-4 6-4,5,RR,
+2013-D009,Davis Cup WG QF: CAN vs ITA,Hard,D,104312,Andreas Seppi,105577,Vasek Pospisil,5-7 4-6 6-4 6-3 6-3,5,RR,
+2013-D009,Davis Cup WG QF: CAN vs ITA,Hard,D,105683,Milos Raonic,104926,Fabio Fognini,6-4 7-6(4) 7-5,5,RR,
+2013-D009,Davis Cup WG QF: CAN vs ITA,Hard,D,105683,Milos Raonic,104312,Andreas Seppi,6-4 6-4 3-6 7-5,5,RR,
+2013-D012,Davis Cup WG QF: KAZ vs CZE,Clay,D,104225,Jan Hajek,105062,Mikhail Kukushkin,6-3 6-2 6-4,5,RR,
+2013-D012,Davis Cup WG QF: KAZ vs CZE,Clay,D,104586,Lukas Rosol,104979,Andrey Golubev,4-6 6-4 6-2 7-6(6),5,RR,
+2013-D012,Davis Cup WG QF: KAZ vs CZE,Clay,D,104586,Lukas Rosol,105095,Evgeny Korolev,7-6(5) 6-7(2) 7-6(5) 6-2,5,RR,
+2013-D010,Davis Cup WG QF: USA vs SRB,Hard,D,104925,Novak Djokovic,104545,John Isner,7-6(5) 6-2 7-5,5,RR,
+2013-D010,Davis Cup WG QF: USA vs SRB,Hard,D,105023,Sam Querrey,104678,Viktor Troicki,7-6(1) 3-6 4-6 6-1 6-4,5,RR,
+2013-D010,Davis Cup WG QF: USA vs SRB,Hard,D,104925,Novak Djokovic,105023,Sam Querrey,7-5 6-7(4) 6-1 6-0,5,RR,
+2013-410,Monte Carlo Masters,Clay,M,104022,Mikhail Youzhny,104593,Daniel Gimeno Traver,6-4 6-0,3,R64,69
+2013-410,Monte Carlo Masters,Clay,M,105208,Ernests Gulbis,104545,John Isner,4-6 6-2 6-3,3,R64,109
+2013-410,Monte Carlo Masters,Clay,M,104338,Juan Monaco,105373,Martin Klizan,6-4 6-0,3,R64,66
+2013-410,Monte Carlo Masters,Clay,M,105683,Milos Raonic,103898,Julien Benneteau,6-1 6-4,3,R64,72
+2013-410,Monte Carlo Masters,Clay,M,103813,Jarkko Nieminen,104678,Viktor Troicki,6-1 6-2,3,R64,63
+2013-410,Monte Carlo Masters,Clay,M,105238,Alexandr Dolgopolov,106071,Bernard Tomic,6-2 6-4,3,R64,60
+2013-410,Monte Carlo Masters,Clay,M,104719,Marcel Granollers,103812,Victor Hanescu,6-7(8) 6-3 6-1,3,R64,122
+2013-410,Monte Carlo Masters,Clay,M,105077,Albert Ramos,103285,Radek Stepanek,6-3 6-3,3,R64,74
+2013-410,Monte Carlo Masters,Clay,M,104926,Fabio Fognini,104312,Andreas Seppi,3-6 6-4 6-4,3,R64,118
+2013-410,Monte Carlo Masters,Clay,M,105227,Marin Cilic,104547,Horacio Zeballos,6-2 6-7(6) 6-2,3,R64,124
+2013-410,Monte Carlo Masters,Clay,M,104731,Kevin Anderson,105668,Jerzy Janowicz,7-5 7-6(9),3,R64,108
+2013-410,Monte Carlo Masters,Clay,M,105332,Benoit Paire,104471,Ivan Dodig,6-4 6-4,3,R64,76
+2013-410,Monte Carlo Masters,Clay,M,105777,Grigor Dimitrov,103598,Xavier Malisse,6-3 6-2,3,R64,77
+2013-410,Monte Carlo Masters,Clay,M,104252,Florian Mayer,104112,Benjamin Balleret,5-7 6-1 6-2,3,R64,113
+2013-410,Monte Carlo Masters,Clay,M,105138,Roberto Bautista Agut,104468,Gilles Simon,6-3 7-6(6),3,R64,116
+2013-410,Monte Carlo Masters,Clay,M,104259,Philipp Kohlschreiber,105064,Thomaz Bellucci,6-4 6-2,3,R64,75
+2013-410,Monte Carlo Masters,Clay,M,104665,Pablo Andujar,104871,Jeremy Chardy,6-7(4) 7-5 6-2,3,R64,169
+2013-410,Monte Carlo Masters,Clay,M,104594,Marinko Matosevic,104269,Fernando Verdasco,7-5 6-3,3,R64,111
+2013-410,Monte Carlo Masters,Clay,M,103786,Nikolay Davydenko,104978,Daniel Brands,6-3 6-4,3,R64,82
+2013-410,Monte Carlo Masters,Clay,M,103781,Jurgen Melzer,104619,Jesse Huta Galung,1-6 6-3 6-2,3,R64,90
+2013-410,Monte Carlo Masters,Clay,M,104597,Nicolas Almagro,105676,David Goffin,2-6 6-1 6-3,3,R64,102
+2013-410,Monte Carlo Masters,Clay,M,104527,Stan Wawrinka,104797,Denis Istomin,6-3 7-5,3,R64,71
+2013-410,Monte Carlo Masters,Clay,M,103656,Albert Montanes,104792,Gael Monfils,6-2 2-6 6-4,3,R64,108
+2013-410,Monte Carlo Masters,Clay,M,104273,Edouard Roger Vasselin,104898,Robin Haase,6-3 6-2,3,R64,70
+2013-410,Monte Carlo Masters,Clay,M,104925,Novak Djokovic,104022,Mikhail Youzhny,4-6 6-1 6-4,3,R32,135
+2013-410,Monte Carlo Masters,Clay,M,104338,Juan Monaco,105208,Ernests Gulbis,6-0 3-6 6-3,3,R32,118
+2013-410,Monte Carlo Masters,Clay,M,103813,Jarkko Nieminen,105683,Milos Raonic,6-3 1-6 7-6(3),3,R32,115
+2013-410,Monte Carlo Masters,Clay,M,105223,Juan Martin del Potro,105238,Alexandr Dolgopolov,1-6 6-4 6-3,3,R32,121
+2013-410,Monte Carlo Masters,Clay,M,104607,Tomas Berdych,104719,Marcel Granollers,7-5 6-4,3,R32,104
+2013-410,Monte Carlo Masters,Clay,M,104926,Fabio Fognini,105077,Albert Ramos,6-3 7-5,3,R32,96
+2013-410,Monte Carlo Masters,Clay,M,105227,Marin Cilic,104731,Kevin Anderson,6-2 6-3,3,R32,75
+2013-410,Monte Carlo Masters,Clay,M,104755,Richard Gasquet,105332,Benoit Paire,6-1 3-6 6-1,3,R32,87
+2013-410,Monte Carlo Masters,Clay,M,105777,Grigor Dimitrov,104386,Janko Tipsarevic,7-6(3) 6-1,3,R32,94
+2013-410,Monte Carlo Masters,Clay,M,104252,Florian Mayer,105138,Roberto Bautista Agut,5-7 6-4 6-4,3,R32,133
+2013-410,Monte Carlo Masters,Clay,M,104259,Philipp Kohlschreiber,104665,Pablo Andujar,6-2 2-6 7-6(3),3,R32,133
+2013-410,Monte Carlo Masters,Clay,M,104745,Rafael Nadal,104594,Marinko Matosevic,6-1 6-2,3,R32,63
+2013-410,Monte Carlo Masters,Clay,M,104542,Jo-Wilfried Tsonga,103786,Nikolay Davydenko,7-6(3) 6-2,3,R32,87
+2013-410,Monte Carlo Masters,Clay,M,103781,Jurgen Melzer,104597,Nicolas Almagro,6-4 6-2,3,R32,74
+2013-410,Monte Carlo Masters,Clay,M,104527,Stan Wawrinka,103656,Albert Montanes,6-1 6-1,3,R32,54
+2013-410,Monte Carlo Masters,Clay,M,104918,Andy Murray,104273,Edouard Roger Vasselin,6-1 6-4,3,R32,73
+2013-410,Monte Carlo Masters,Clay,M,104925,Novak Djokovic,104338,Juan Monaco,4-6 6-2 6-2,3,R16,122
+2013-410,Monte Carlo Masters,Clay,M,103813,Jarkko Nieminen,105223,Juan Martin del Potro,6-4 4-6 7-6(4),3,R16,158
+2013-410,Monte Carlo Masters,Clay,M,104926,Fabio Fognini,104607,Tomas Berdych,6-4 6-2,3,R16,79
+2013-410,Monte Carlo Masters,Clay,M,104755,Richard Gasquet,105227,Marin Cilic,7-5 6-4,3,R16,100
+2013-410,Monte Carlo Masters,Clay,M,105777,Grigor Dimitrov,104252,Florian Mayer,6-2 6-4,3,R16,67
+2013-410,Monte Carlo Masters,Clay,M,104745,Rafael Nadal,104259,Philipp Kohlschreiber,6-2 6-4,3,R16,81
+2013-410,Monte Carlo Masters,Clay,M,104542,Jo-Wilfried Tsonga,103781,Jurgen Melzer,6-3 6-0,3,R16,58
+2013-410,Monte Carlo Masters,Clay,M,104527,Stan Wawrinka,104918,Andy Murray,6-1 6-2,3,R16,58
+2013-410,Monte Carlo Masters,Clay,M,104925,Novak Djokovic,103813,Jarkko Nieminen,6-4 6-3,3,QF,77
+2013-410,Monte Carlo Masters,Clay,M,104926,Fabio Fognini,104755,Richard Gasquet,7-6(0) 6-2,3,QF,87
+2013-410,Monte Carlo Masters,Clay,M,104745,Rafael Nadal,105777,Grigor Dimitrov,6-2 2-6 6-4,3,QF,129
+2013-410,Monte Carlo Masters,Clay,M,104542,Jo-Wilfried Tsonga,104527,Stan Wawrinka,2-6 6-3 6-4,3,QF,131
+2013-410,Monte Carlo Masters,Clay,M,104925,Novak Djokovic,104926,Fabio Fognini,6-2 6-1,3,SF,52
+2013-410,Monte Carlo Masters,Clay,M,104745,Rafael Nadal,104542,Jo-Wilfried Tsonga,6-3 7-6(3),3,SF,97
+2013-410,Monte Carlo Masters,Clay,M,104925,Novak Djokovic,104745,Rafael Nadal,6-2 7-6(1),3,F,112
+2013-1536,Madrid Masters,Clay,M,105777,Grigor Dimitrov,105894,Javier Marti,6-2 6-4,3,R64,70
+2013-1536,Madrid Masters,Clay,M,105053,Santiago Giraldo,105373,Martin Klizan,6-2 6-4,3,R64,91
+2013-1536,Madrid Masters,Clay,M,104527,Stan Wawrinka,105657,Marius Copil,6-4 6-4,3,R64,61
+2013-1536,Madrid Masters,Clay,M,105683,Milos Raonic,103786,Nikolay Davydenko,7-5 7-6(5),3,R64,99
+2013-1536,Madrid Masters,Clay,M,104269,Fernando Verdasco,105676,David Goffin,7-6(2) 6-2,3,R64,94
+2013-1536,Madrid Masters,Clay,M,104898,Robin Haase,105238,Alexandr Dolgopolov,6-3 6-7(6) 6-2,3,R64,117
+2013-1536,Madrid Masters,Clay,M,104252,Florian Mayer,104594,Marinko Matosevic,6-2 6-7(3) 6-4,3,R64,142
+2013-1536,Madrid Masters,Clay,M,104871,Jeremy Chardy,104547,Horacio Zeballos,6-4 7-6(3),3,R64,91
+2013-1536,Madrid Masters,Clay,M,104468,Gilles Simon,103898,Julien Benneteau,2-6 7-5 6-3,3,R64,127
+2013-1536,Madrid Masters,Clay,M,104338,Juan Monaco,104386,Janko Tipsarevic,7-6(5) 6-3,3,R64,101
+2013-1536,Madrid Masters,Clay,M,104731,Kevin Anderson,105028,Jesse Levine,6-2 6-2,3,R64,53
+2013-1536,Madrid Masters,Clay,M,105668,Jerzy Janowicz,105023,Sam Querrey,6-3 6-4,3,R64,69
+2013-1536,Madrid Masters,Clay,M,105332,Benoit Paire,105154,Joao Souza,6-1 7-6(0),3,R64,85
+2013-1536,Madrid Masters,Clay,M,104022,Mikhail Youzhny,104926,Fabio Fognini,7-6(4) 2-6 7-6(5),3,R64,145
+2013-1536,Madrid Masters,Clay,M,104597,Nicolas Almagro,104735,Tobias Kamke,6-4 RET,3,R64,42
+2013-1536,Madrid Masters,Clay,M,103163,Tommy Haas,104312,Andreas Seppi,6-1 6-2,3,R64,51
+2013-1536,Madrid Masters,Clay,M,103990,Tommy Robredo,104571,Marcos Baghdatis,6-4 6-2,3,R64,80
+2013-1536,Madrid Masters,Clay,M,104797,Denis Istomin,103598,Xavier Malisse,6-3 6-2,3,R64,65
+2013-1536,Madrid Masters,Clay,M,104593,Daniel Gimeno Traver,103852,Feliciano Lopez,2-6 6-4 6-2,3,R64,109
+2013-1536,Madrid Masters,Clay,M,104545,John Isner,104198,Guillermo Garcia Lopez,7-5 7-6(8),3,R64,102
+2013-1536,Madrid Masters,Clay,M,104665,Pablo Andujar,105227,Marin Cilic,6-7(6) 6-4 6-1,3,R64,125
+2013-1536,Madrid Masters,Clay,M,105453,Kei Nishikori,103781,Jurgen Melzer,6-3 6-2,3,R64,62
+2013-1536,Madrid Masters,Clay,M,104678,Viktor Troicki,104719,Marcel Granollers,7-5 4-6 6-2,3,R64,131
+2013-1536,Madrid Masters,Clay,M,103285,Radek Stepanek,106071,Bernard Tomic,6-3 6-2,3,R64,64
+2013-1536,Madrid Masters,Clay,M,105777,Grigor Dimitrov,104925,Novak Djokovic,7-6(6) 6-7(8) 6-3,3,R32,186
+2013-1536,Madrid Masters,Clay,M,104527,Stan Wawrinka,105053,Santiago Giraldo,6-3 6-3,3,R32,63
+2013-1536,Madrid Masters,Clay,M,104269,Fernando Verdasco,105683,Milos Raonic,6-4 2-6 7-6(7),3,R32,155
+2013-1536,Madrid Masters,Clay,M,104542,Jo-Wilfried Tsonga,104898,Robin Haase,7-6(5) 7-6(2),3,R32,106
+2013-1536,Madrid Masters,Clay,M,104918,Andy Murray,104252,Florian Mayer,7-6(11) 7-6(3),3,R32,124
+2013-1536,Madrid Masters,Clay,M,104468,Gilles Simon,104871,Jeremy Chardy,6-4 7-6(5),3,R32,97
+2013-1536,Madrid Masters,Clay,M,104731,Kevin Anderson,104338,Juan Monaco,7-6(5) 3-6 6-4,3,R32,145
+2013-1536,Madrid Masters,Clay,M,104607,Tomas Berdych,105668,Jerzy Janowicz,6-7(3) 6-3 6-2,3,R32,135
+2013-1536,Madrid Masters,Clay,M,104745,Rafael Nadal,105332,Benoit Paire,6-3 6-4,3,R32,87
+2013-1536,Madrid Masters,Clay,M,104022,Mikhail Youzhny,104597,Nicolas Almagro,7-6(4) 4-6 6-2,3,R32,177
+2013-1536,Madrid Masters,Clay,M,103163,Tommy Haas,103990,Tommy Robredo,6-3 7-5,3,R32,101
+2013-1536,Madrid Masters,Clay,M,103970,David Ferrer,104797,Denis Istomin,7-5 6-2,3,R32,79
+2013-1536,Madrid Masters,Clay,M,104593,Daniel Gimeno Traver,104755,Richard Gasquet,7-5 3-6 6-4,3,R32,140
+2013-1536,Madrid Masters,Clay,M,104665,Pablo Andujar,104545,John Isner,6-4 6-4,3,R32,75
+2013-1536,Madrid Masters,Clay,M,105453,Kei Nishikori,104678,Viktor Troicki,7-5 6-2,3,R32,91
+2013-1536,Madrid Masters,Clay,M,103819,Roger Federer,103285,Radek Stepanek,6-3 6-3,3,R32,81
+2013-1536,Madrid Masters,Clay,M,104527,Stan Wawrinka,105777,Grigor Dimitrov,3-6 6-4 6-1,3,R16,102
+2013-1536,Madrid Masters,Clay,M,104542,Jo-Wilfried Tsonga,104269,Fernando Verdasco,4-6 6-3 6-2,3,R16,110
+2013-1536,Madrid Masters,Clay,M,104918,Andy Murray,104468,Gilles Simon,2-6 6-4 7-6(6),3,R16,177
+2013-1536,Madrid Masters,Clay,M,104607,Tomas Berdych,104731,Kevin Anderson,7-6(5) 7-5,3,R16,113
+2013-1536,Madrid Masters,Clay,M,104745,Rafael Nadal,104022,Mikhail Youzhny,6-2 6-3,3,R16,75
+2013-1536,Madrid Masters,Clay,M,103970,David Ferrer,103163,Tommy Haas,7-5 4-6 6-4,3,R16,130
+2013-1536,Madrid Masters,Clay,M,104665,Pablo Andujar,104593,Daniel Gimeno Traver,5-5 RET,3,R16,47
+2013-1536,Madrid Masters,Clay,M,105453,Kei Nishikori,103819,Roger Federer,6-4 1-6 6-2,3,R16,95
+2013-1536,Madrid Masters,Clay,M,104527,Stan Wawrinka,104542,Jo-Wilfried Tsonga,6-2 6-7(9) 6-4,3,QF,137
+2013-1536,Madrid Masters,Clay,M,104607,Tomas Berdych,104918,Andy Murray,7-6(3) 6-4,3,QF,122
+2013-1536,Madrid Masters,Clay,M,104745,Rafael Nadal,103970,David Ferrer,4-6 7-6(3) 6-0,3,QF,157
+2013-1536,Madrid Masters,Clay,M,104665,Pablo Andujar,105453,Kei Nishikori,6-3 7-5,3,QF,112
+2013-1536,Madrid Masters,Clay,M,104527,Stan Wawrinka,104607,Tomas Berdych,6-3 4-6 6-4,3,SF,115
+2013-1536,Madrid Masters,Clay,M,104745,Rafael Nadal,104665,Pablo Andujar,6-0 6-4,3,SF,77
+2013-1536,Madrid Masters,Clay,M,104745,Rafael Nadal,104527,Stan Wawrinka,6-2 6-4,3,F,72
+2013-416,Rome Masters,Clay,M,103656,Albert Montanes,105373,Martin Klizan,3-6 7-5 6-3,3,R64,122
+2013-416,Rome Masters,Clay,M,105238,Alexandr Dolgopolov,104970,Matteo Viola,6-4 6-3,3,R64,64
+2013-416,Rome Masters,Clay,M,104527,Stan Wawrinka,104122,Carlos Berlocq,5-7 6-3 6-3,3,R64,133
+2013-416,Rome Masters,Clay,M,105227,Marin Cilic,104979,Andrey Golubev,6-4 6-2,3,R64,74
+2013-416,Rome Masters,Clay,M,104731,Kevin Anderson,103781,Jurgen Melzer,6-1 6-2,3,R64,73
+2013-416,Rome Masters,Clay,M,104797,Denis Istomin,104545,John Isner,5-7 7-6(5) 6-3,3,R64,131
+2013-416,Rome Masters,Clay,M,104269,Fernando Verdasco,104547,Horacio Zeballos,6-3 3-6 6-3,3,R64,100
+2013-416,Rome Masters,Clay,M,105077,Albert Ramos,104225,Jan Hajek,7-5 6-0,3,R64,83
+2013-416,Rome Masters,Clay,M,104259,Philipp Kohlschreiber,105683,Milos Raonic,7-6(2) 6-4,3,R64,78
+2013-416,Rome Masters,Clay,M,104678,Viktor Troicki,104586,Lukas Rosol,3-6 6-1 6-4,3,R64,116
+2013-416,Rome Masters,Clay,M,105208,Ernests Gulbis,103813,Jarkko Nieminen,6-2 7-6(6),3,R64,99
+2013-416,Rome Masters,Clay,M,104926,Fabio Fognini,104312,Andreas Seppi,6-4 6-1,3,R64,70
+2013-416,Rome Masters,Clay,M,105723,Andrey Kuznetsov,103598,Xavier Malisse,6-2 3-1 RET,3,R64,50
+2013-416,Rome Masters,Clay,M,105332,Benoit Paire,104338,Juan Monaco,7-6(4) 1-6 6-4,3,R64,119
+2013-416,Rome Masters,Clay,M,103898,Julien Benneteau,104597,Nicolas Almagro,7-6(2) 6-4,3,R64,84
+2013-416,Rome Masters,Clay,M,105453,Kei Nishikori,103893,Paolo Lorenzi,6-2 6-4,3,R64,88
+2013-416,Rome Masters,Clay,M,104871,Jeremy Chardy,103852,Feliciano Lopez,3-6 7-5 7-6(4),3,R64,153
+2013-416,Rome Masters,Clay,M,104719,Marcel Granollers,103786,Nikolay Davydenko,6-3 6-4,3,R64,81
+2013-416,Rome Masters,Clay,M,105668,Jerzy Janowicz,105053,Santiago Giraldo,7-5 6-2,3,R64,86
+2013-416,Rome Masters,Clay,M,105777,Grigor Dimitrov,104571,Marcos Baghdatis,6-3 6-4,3,R64,67
+2013-416,Rome Masters,Clay,M,104755,Richard Gasquet,105023,Sam Querrey,6-2 7-6(8),3,R64,90
+2013-416,Rome Masters,Clay,M,104022,Mikhail Youzhny,103163,Tommy Haas,6-4 6-3,3,R64,81
+2013-416,Rome Masters,Clay,M,104468,Gilles Simon,103835,Filippo Volandri,6-3 2-6 6-4,3,R64,125
+2013-416,Rome Masters,Clay,M,103808,Potito Starace,103285,Radek Stepanek,4-6 6-4 6-3,3,R64,132
+2013-416,Rome Masters,Clay,M,104925,Novak Djokovic,103656,Albert Montanes,6-2 6-3,3,R32,71
+2013-416,Rome Masters,Clay,M,105238,Alexandr Dolgopolov,104527,Stan Wawrinka,W/O,3,R32,
+2013-416,Rome Masters,Clay,M,104731,Kevin Anderson,105227,Marin Cilic,6-3 7-6(7),3,R32,109
+2013-416,Rome Masters,Clay,M,104607,Tomas Berdych,104797,Denis Istomin,6-4 6-0,3,R32,68
+2013-416,Rome Masters,Clay,M,103970,David Ferrer,104269,Fernando Verdasco,5-7 7-5 6-3,3,R32,147
+2013-416,Rome Masters,Clay,M,104259,Philipp Kohlschreiber,105077,Albert Ramos,6-4 6-1,3,R32,77
+2013-416,Rome Masters,Clay,M,105208,Ernests Gulbis,104678,Viktor Troicki,6-1 6-1,3,R32,71
+2013-416,Rome Masters,Clay,M,104745,Rafael Nadal,104926,Fabio Fognini,6-1 6-3,3,R32,61
+2013-416,Rome Masters,Clay,M,105223,Juan Martin del Potro,105723,Andrey Kuznetsov,6-3 6-2,3,R32,75
+2013-416,Rome Masters,Clay,M,105332,Benoit Paire,103898,Julien Benneteau,6-7(3) 6-4 7-6(4),3,R32,155
+2013-416,Rome Masters,Clay,M,104871,Jeremy Chardy,105453,Kei Nishikori,6-4 6-1,3,R32,70
+2013-416,Rome Masters,Clay,M,104719,Marcel Granollers,104918,Andy Murray,6-3 6-7(5) RET,3,R32,111
+2013-416,Rome Masters,Clay,M,105668,Jerzy Janowicz,104542,Jo-Wilfried Tsonga,6-4 7-6(5),3,R32,87
+2013-416,Rome Masters,Clay,M,104755,Richard Gasquet,105777,Grigor Dimitrov,6-4 6-4,3,R32,74
+2013-416,Rome Masters,Clay,M,104468,Gilles Simon,104022,Mikhail Youzhny,7-5 6-3,3,R32,106
+2013-416,Rome Masters,Clay,M,103819,Roger Federer,103808,Potito Starace,6-1 6-2,3,R32,51
+2013-416,Rome Masters,Clay,M,104925,Novak Djokovic,105238,Alexandr Dolgopolov,6-1 6-4,3,R16,61
+2013-416,Rome Masters,Clay,M,104607,Tomas Berdych,104731,Kevin Anderson,7-5 6-2,3,R16,84
+2013-416,Rome Masters,Clay,M,103970,David Ferrer,104259,Philipp Kohlschreiber,W/O,3,R16,
+2013-416,Rome Masters,Clay,M,104745,Rafael Nadal,105208,Ernests Gulbis,1-6 7-5 6-4,3,R16,158
+2013-416,Rome Masters,Clay,M,105332,Benoit Paire,105223,Juan Martin del Potro,6-4 7-6(3),3,R16,82
+2013-416,Rome Masters,Clay,M,104719,Marcel Granollers,104871,Jeremy Chardy,6-4 1-6 7-5,3,R16,131
+2013-416,Rome Masters,Clay,M,105668,Jerzy Janowicz,104755,Richard Gasquet,3-6 7-6(2) 6-4,3,R16,142
+2013-416,Rome Masters,Clay,M,103819,Roger Federer,104468,Gilles Simon,6-1 6-2,3,R16,63
+2013-416,Rome Masters,Clay,M,104607,Tomas Berdych,104925,Novak Djokovic,2-6 7-5 6-4,3,QF,142
+2013-416,Rome Masters,Clay,M,104745,Rafael Nadal,103970,David Ferrer,6-4 4-6 6-2,3,QF,166
+2013-416,Rome Masters,Clay,M,105332,Benoit Paire,104719,Marcel Granollers,6-1 6-0,3,QF,57
+2013-416,Rome Masters,Clay,M,103819,Roger Federer,105668,Jerzy Janowicz,6-4 7-6(2),3,QF,86
+2013-416,Rome Masters,Clay,M,104745,Rafael Nadal,104607,Tomas Berdych,6-2 6-4,3,SF,78
+2013-416,Rome Masters,Clay,M,103819,Roger Federer,105332,Benoit Paire,7-6(5) 6-4,3,SF,88
+2013-416,Rome Masters,Clay,M,104745,Rafael Nadal,103819,Roger Federer,6-1 6-3,3,F,69
+2013-520,Roland Garros,Clay,G,104925,Novak Djokovic,105676,David Goffin,7-6(5) 6-4 7-5,5,R128,133
+2013-520,Roland Garros,Clay,G,105550,Guido Pella,104471,Ivan Dodig,4-6 6-4 6-3 2-6 12-10,5,R128,204
+2013-520,Roland Garros,Clay,G,106298,Lucas Pouille,104864,Alex Kuznetsov,6-1 7-6(2) 6-2,5,R128,128
+2013-520,Roland Garros,Clay,G,105777,Grigor Dimitrov,104268,Alejandro Falla,6-4 1-0 RET,5,R128,58
+2013-520,Roland Garros,Clay,G,104098,Dmitry Tursunov,105238,Alexandr Dolgopolov,7-6(7) 6-4 7-6(7),5,R128,139
+2013-520,Roland Garros,Clay,G,103812,Victor Hanescu,106071,Bernard Tomic,7-5 7-6(8) 2-1 RET,5,R128,113
+2013-520,Roland Garros,Clay,G,104229,Yen Hsun Lu,104620,Simone Bolelli,6-4 6-4 2-1 RET,5,R128,98
+2013-520,Roland Garros,Clay,G,104259,Philipp Kohlschreiber,106210,Jiri Vesely,7-6(3) 1-6 7-5 6-2,5,R128,154
+2013-520,Roland Garros,Clay,G,103163,Tommy Haas,105558,Guillaume Rufin,7-6(4) 6-1 6-3,5,R128,116
+2013-520,Roland Garros,Clay,G,106058,Jack Sock,104198,Guillermo Garcia Lopez,6-2 6-2 7-5,5,R128,119
+2013-520,Roland Garros,Clay,G,105992,Ryan Harrison,105723,Andrey Kuznetsov,6-3 6-4 7-6(4),5,R128,121
+2013-520,Roland Garros,Clay,G,104545,John Isner,104122,Carlos Berlocq,6-3 6-4 6-4,5,R128,116
+2013-520,Roland Garros,Clay,G,104022,Mikhail Youzhny,104665,Pablo Andujar,4-6 6-4 6-2 6-3,5,R128,193
+2013-520,Roland Garros,Clay,G,105643,Federico Delbonis,104714,Julian Reister,6-7(2) 6-1 6-0 6-4,5,R128,138
+2013-520,Roland Garros,Clay,G,104269,Fernando Verdasco,102967,Marc Gicquel,6-2 6-3 6-1,5,R128,91
+2013-520,Roland Garros,Clay,G,104386,Janko Tipsarevic,103917,Nicolas Mahut,6-2 7-6(4) 6-1,5,R128,117
+2013-520,Roland Garros,Clay,G,104745,Rafael Nadal,104978,Daniel Brands,4-6 7-6(4) 6-4 6-3,5,R128,174
+2013-520,Roland Garros,Clay,G,105373,Martin Klizan,103188,Michael Russell,3-6 6-3 6-1 RET,5,R128,123
+2013-520,Roland Garros,Clay,G,104586,Lukas Rosol,105137,Pere Riba,6-3 6-4 6-4,5,R128,98
+2013-520,Roland Garros,Clay,G,104926,Fabio Fognini,104676,Andreas Beck,6-3 7-5 6-3,5,R128,138
+2013-520,Roland Garros,Clay,G,105332,Benoit Paire,104571,Marcos Baghdatis,3-6 7-6(1) 6-4 6-4,5,R128,173
+2013-520,Roland Garros,Clay,G,103997,Lukasz Kubot,105270,Maxime Teixeira,6-4 5-7 7-6(7) 6-2,5,R128,207
+2013-520,Roland Garros,Clay,G,104813,Grega Zemlja,105053,Santiago Giraldo,6-1 6-4 6-1,5,R128,99
+2013-520,Roland Garros,Clay,G,105453,Kei Nishikori,105028,Jesse Levine,6-3 6-2 6-0,5,R128,91
+2013-520,Roland Garros,Clay,G,104527,Stan Wawrinka,105217,Thiemo De Bakker,7-5 6-3 6-7(1) 7-5,5,R128,151
+2013-520,Roland Garros,Clay,G,104547,Horacio Zeballos,105577,Vasek Pospisil,7-6(9) 6-4 6-7(4) 2-6 8-6,5,R128,274
+2013-520,Roland Garros,Clay,G,104898,Robin Haase,104932,Kenny De Schepper,6-4 7-6(3) 2-6 6-3,5,R128,171
+2013-520,Roland Garros,Clay,G,105668,Jerzy Janowicz,105077,Albert Ramos,7-6(3) 7-5 6-3,5,R128,143
+2013-520,Roland Garros,Clay,G,104797,Denis Istomin,104252,Florian Mayer,4-6 6-3 7-5 RET,5,R128,109
+2013-520,Roland Garros,Clay,G,103786,Nikolay Davydenko,103722,Florent Serra,6-3 6-4 7-5,5,R128,99
+2013-520,Roland Garros,Clay,G,104308,Michal Przysiezny,105733,Rhyne Williams,6-3 6-7(5) 7-5 7-5,5,R128,191
+2013-520,Roland Garros,Clay,G,104755,Richard Gasquet,104660,Sergiy Stakhovsky,6-1 6-4 6-3,5,R128,91
+2013-520,Roland Garros,Clay,G,104792,Gael Monfils,104607,Tomas Berdych,7-6(8) 6-4 6-7(3) 6-7(4) 7-5,5,R128,243
+2013-520,Roland Garros,Clay,G,105208,Ernests Gulbis,104297,Rogerio Dutra Silva,6-1 7-6(4) 6-3,5,R128,120
+2013-520,Roland Garros,Clay,G,104997,Igor Sijsling,103781,Jurgen Melzer,6-4 6-3 6-2,5,R128,94
+2013-520,Roland Garros,Clay,G,103990,Tommy Robredo,105132,Jurgen Zopp,6-3 6-2 6-1,5,R128,100
+2013-520,Roland Garros,Clay,G,104312,Andreas Seppi,104919,Leonardo Mayer,6-7(4) 6-4 6-3 6-7(2) 6-4,5,R128,229
+2013-520,Roland Garros,Clay,G,104882,Blaz Kavcic,105902,James Duckworth,6-2 6-2 6-2,5,R128,106
+2013-520,Roland Garros,Clay,G,104273,Edouard Roger Vasselin,104651,Martin Alund,6-2 4-6 6-1 6-0,5,R128,130
+2013-520,Roland Garros,Clay,G,104597,Nicolas Almagro,104890,Andreas Haider Maurer,4-6 6-4 6-3 6-3,5,R128,135
+2013-520,Roland Garros,Clay,G,105683,Milos Raonic,103598,Xavier Malisse,6-2 6-1 4-6 6-4,5,R128,116
+2013-520,Roland Garros,Clay,G,103566,Michael Llodra,104327,Steve Darcis,6-4 4-6 6-1 6-4,5,R128,147
+2013-520,Roland Garros,Clay,G,105539,Evgeny Donskoy,105526,Jan Lennard Struff,7-6(7) 2-6 7-6(2) 6-2,5,R128,175
+2013-520,Roland Garros,Clay,G,104731,Kevin Anderson,105011,Illya Marchenko,6-3 7-5 6-4,5,R128,136
+2013-520,Roland Garros,Clay,G,103852,Feliciano Lopez,104719,Marcel Granollers,7-5 2-6 6-4 4-6 6-4,5,R128,221
+2013-520,Roland Garros,Clay,G,105311,Joao Sousa,104424,Go Soeda,6-1 6-3 6-2,5,R128,88
+2013-520,Roland Garros,Clay,G,103656,Albert Montanes,105449,Steve Johnson,6-4 3-6 6-3 3-6 6-1,5,R128,162
+2013-520,Roland Garros,Clay,G,103970,David Ferrer,104594,Marinko Matosevic,6-4 6-3 6-4,5,R128,112
+2013-520,Roland Garros,Clay,G,104542,Jo-Wilfried Tsonga,105379,Aljaz Bedene,6-2 6-2 6-3,5,R128,107
+2013-520,Roland Garros,Clay,G,103813,Jarkko Nieminen,103908,Paul Henri Mathieu,6-4 4-6 7-6(9) 4-6 6-2,5,R128,222
+2013-520,Roland Garros,Clay,G,105138,Roberto Bautista Agut,104180,Gilles Muller,6-3 6-4 6-2,5,R128,116
+2013-520,Roland Garros,Clay,G,104871,Jeremy Chardy,103794,Benjamin Becker,6-4 6-2 7-5,5,R128,118
+2013-520,Roland Garros,Clay,G,104593,Daniel Gimeno Traver,104338,Juan Monaco,4-6 4-6 7-6(4) 6-4 6-4,5,R128,225
+2013-520,Roland Garros,Clay,G,104678,Viktor Troicki,103484,James Blake,6-4 6-2 6-2,5,R128,88
+2013-520,Roland Garros,Clay,G,106401,Nick Kyrgios,103285,Radek Stepanek,7-6(4) 7-6(8) 7-6(11),5,R128,171
+2013-520,Roland Garros,Clay,G,105227,Marin Cilic,104332,Philipp Petzschner,6-1 6-2 6-3,5,R128,92
+2013-520,Roland Garros,Clay,G,104468,Gilles Simon,103720,Lleyton Hewitt,3-6 1-6 6-4 6-1 7-5,5,R128,199
+2013-520,Roland Garros,Clay,G,104655,Pablo Cuevas,105173,Adrian Mannarino,6-3 2-6 6-3 5-7 7-5,5,R128,219
+2013-520,Roland Garros,Clay,G,104225,Jan Hajek,106045,Denis Kudla,6-2 5-7 6-0 6-4,5,R128,128
+2013-520,Roland Garros,Clay,G,105023,Sam Querrey,105041,Lukas Lacko,6-3 6-4 6-4,5,R128,93
+2013-520,Roland Garros,Clay,G,103898,Julien Benneteau,105575,Ricardas Berankis,7-6(5) 6-3 5-7 7-6(5),5,R128,192
+2013-520,Roland Garros,Clay,G,104735,Tobias Kamke,103893,Paolo Lorenzi,6-3 6-3 3-6 0-6 6-3,5,R128,214
+2013-520,Roland Garros,Clay,G,104500,Somdev Devvarman,103926,Daniel Munoz de la Nava,6-3 6-3 7-5,5,R128,159
+2013-520,Roland Garros,Clay,G,103819,Roger Federer,105807,Pablo Carreno Busta,6-2 6-2 6-3,5,R128,80
+2013-520,Roland Garros,Clay,G,104925,Novak Djokovic,105550,Guido Pella,6-2 6-0 6-2,5,R64,86
+2013-520,Roland Garros,Clay,G,105777,Grigor Dimitrov,106298,Lucas Pouille,6-1 7-6(4) 6-1,5,R64,108
+2013-520,Roland Garros,Clay,G,103812,Victor Hanescu,104098,Dmitry Tursunov,6-4 6-6 RET,5,R64,78
+2013-520,Roland Garros,Clay,G,104259,Philipp Kohlschreiber,104229,Yen Hsun Lu,W/O,5,R64,
+2013-520,Roland Garros,Clay,G,103163,Tommy Haas,106058,Jack Sock,7-6(3) 6-2 7-5,5,R64,137
+2013-520,Roland Garros,Clay,G,104545,John Isner,105992,Ryan Harrison,5-7 6-7(7) 6-3 6-1 8-6,5,R64,230
+2013-520,Roland Garros,Clay,G,104022,Mikhail Youzhny,105643,Federico Delbonis,6-3 6-7(5) 7-5 6-4,5,R64,194
+2013-520,Roland Garros,Clay,G,104386,Janko Tipsarevic,104269,Fernando Verdasco,7-6(3) 6-1 3-6 5-7 8-6,5,R64,274
+2013-520,Roland Garros,Clay,G,104745,Rafael Nadal,105373,Martin Klizan,4-6 6-3 6-3 6-3,5,R64,164
+2013-520,Roland Garros,Clay,G,104926,Fabio Fognini,104586,Lukas Rosol,6-2 7-6(3) 2-6 6-1,5,R64,128
+2013-520,Roland Garros,Clay,G,105332,Benoit Paire,103997,Lukasz Kubot,7-6(2) 6-2 6-4,5,R64,104
+2013-520,Roland Garros,Clay,G,105453,Kei Nishikori,104813,Grega Zemlja,6-1 5-7 6-1 6-4,5,R64,151
+2013-520,Roland Garros,Clay,G,104527,Stan Wawrinka,104547,Horacio Zeballos,6-2 7-6(2) 6-4,5,R64,121
+2013-520,Roland Garros,Clay,G,105668,Jerzy Janowicz,104898,Robin Haase,6-4 4-6 6-4 6-3,5,R64,157
+2013-520,Roland Garros,Clay,G,103786,Nikolay Davydenko,104797,Denis Istomin,6-4 7-5 6-2,5,R64,114
+2013-520,Roland Garros,Clay,G,104755,Richard Gasquet,104308,Michal Przysiezny,6-3 6-3 6-0,5,R64,88
+2013-520,Roland Garros,Clay,G,104792,Gael Monfils,105208,Ernests Gulbis,6-7(5) 6-4 7-6(4) 6-2,5,R64,195
+2013-520,Roland Garros,Clay,G,103990,Tommy Robredo,104997,Igor Sijsling,6-7(2) 4-6 6-3 6-1 6-1,5,R64,180
+2013-520,Roland Garros,Clay,G,104312,Andreas Seppi,104882,Blaz Kavcic,6-0 7-6(3) 6-7(2) 4-6 6-3,5,R64,225
+2013-520,Roland Garros,Clay,G,104597,Nicolas Almagro,104273,Edouard Roger Vasselin,6-2 6-4 6-3,5,R64,110
+2013-520,Roland Garros,Clay,G,105683,Milos Raonic,103566,Michael Llodra,7-5 3-6 7-6(3) 6-2,5,R64,160
+2013-520,Roland Garros,Clay,G,104731,Kevin Anderson,105539,Evgeny Donskoy,6-7(8) 6-1 7-5 6-2,5,R64,171
+2013-520,Roland Garros,Clay,G,103852,Feliciano Lopez,105311,Joao Sousa,3-6 6-3 6-4 6-4,5,R64,156
+2013-520,Roland Garros,Clay,G,103970,David Ferrer,103656,Albert Montanes,6-2 6-1 6-3,5,R64,101
+2013-520,Roland Garros,Clay,G,104542,Jo-Wilfried Tsonga,103813,Jarkko Nieminen,7-6(6) 6-4 6-3,5,R64,116
+2013-520,Roland Garros,Clay,G,104871,Jeremy Chardy,105138,Roberto Bautista Agut,6-1 7-5 6-4,5,R64,122
+2013-520,Roland Garros,Clay,G,104678,Viktor Troicki,104593,Daniel Gimeno Traver,4-6 7-6(4) 6-0 6-7(7) 6-4,5,R64,215
+2013-520,Roland Garros,Clay,G,105227,Marin Cilic,106401,Nick Kyrgios,6-4 6-2 6-2,5,R64,98
+2013-520,Roland Garros,Clay,G,104468,Gilles Simon,104655,Pablo Cuevas,6-7(2) 6-1 6-1 6-1,5,R64,160
+2013-520,Roland Garros,Clay,G,105023,Sam Querrey,104225,Jan Hajek,6-4 7-5 6-4,5,R64,119
+2013-520,Roland Garros,Clay,G,103898,Julien Benneteau,104735,Tobias Kamke,7-6(9) 7-5 5-7 0-6 6-4,5,R64,239
+2013-520,Roland Garros,Clay,G,103819,Roger Federer,104500,Somdev Devvarman,6-2 6-1 6-1,5,R64,82
+2013-520,Roland Garros,Clay,G,104925,Novak Djokovic,105777,Grigor Dimitrov,6-2 6-2 6-3,5,R32,104
+2013-520,Roland Garros,Clay,G,104259,Philipp Kohlschreiber,103812,Victor Hanescu,6-0 7-6(0) 6-1,5,R32,109
+2013-520,Roland Garros,Clay,G,103163,Tommy Haas,104545,John Isner,7-5 7-6(4) 4-6 6-7(10) 10-8,5,R32,277
+2013-520,Roland Garros,Clay,G,104022,Mikhail Youzhny,104386,Janko Tipsarevic,6-4 6-4 6-3,5,R32,124
+2013-520,Roland Garros,Clay,G,104745,Rafael Nadal,104926,Fabio Fognini,7-6(5) 6-4 6-4,5,R32,165
+2013-520,Roland Garros,Clay,G,105453,Kei Nishikori,105332,Benoit Paire,6-3 6-7(3) 6-4 6-1,5,R32,161
+2013-520,Roland Garros,Clay,G,104527,Stan Wawrinka,105668,Jerzy Janowicz,6-3 6-7(2) 6-3 6-3,5,R32,162
+2013-520,Roland Garros,Clay,G,104755,Richard Gasquet,103786,Nikolay Davydenko,6-4 6-4 6-3,5,R32,124
+2013-520,Roland Garros,Clay,G,103990,Tommy Robredo,104792,Gael Monfils,2-6 6-7(5) 6-2 7-6(3) 6-2,5,R32,226
+2013-520,Roland Garros,Clay,G,104597,Nicolas Almagro,104312,Andreas Seppi,7-6(1) 6-0 6-4,5,R32,104
+2013-520,Roland Garros,Clay,G,104731,Kevin Anderson,105683,Milos Raonic,7-5 7-6(4) 6-3,5,R32,144
+2013-520,Roland Garros,Clay,G,103970,David Ferrer,103852,Feliciano Lopez,6-1 7-5 6-4,5,R32,125
+2013-520,Roland Garros,Clay,G,104542,Jo-Wilfried Tsonga,104871,Jeremy Chardy,6-1 6-2 7-5,5,R32,102
+2013-520,Roland Garros,Clay,G,104678,Viktor Troicki,105227,Marin Cilic,7-6(12) 6-4 7-5,5,R32,163
+2013-520,Roland Garros,Clay,G,104468,Gilles Simon,105023,Sam Querrey,2-6 6-3 2-6 7-6(2) 6-2,5,R32,173
+2013-520,Roland Garros,Clay,G,103819,Roger Federer,103898,Julien Benneteau,6-3 6-4 7-5,5,R32,91
+2013-520,Roland Garros,Clay,G,104925,Novak Djokovic,104259,Philipp Kohlschreiber,4-6 6-3 6-4 6-4,5,R16,162
+2013-520,Roland Garros,Clay,G,103163,Tommy Haas,104022,Mikhail Youzhny,6-1 6-1 6-3,5,R16,84
+2013-520,Roland Garros,Clay,G,104745,Rafael Nadal,105453,Kei Nishikori,6-4 6-1 6-3,5,R16,122
+2013-520,Roland Garros,Clay,G,104527,Stan Wawrinka,104755,Richard Gasquet,6-7(5) 4-6 6-4 7-5 8-6,5,R16,256
+2013-520,Roland Garros,Clay,G,103990,Tommy Robredo,104597,Nicolas Almagro,6-7(5) 3-6 6-4 6-4 6-4,5,R16,229
+2013-520,Roland Garros,Clay,G,103970,David Ferrer,104731,Kevin Anderson,6-3 6-1 6-1,5,R16,105
+2013-520,Roland Garros,Clay,G,104542,Jo-Wilfried Tsonga,104678,Viktor Troicki,6-3 6-3 6-3,5,R16,105
+2013-520,Roland Garros,Clay,G,103819,Roger Federer,104468,Gilles Simon,6-1 4-6 2-6 6-2 6-3,5,R16,179
+2013-520,Roland Garros,Clay,G,104925,Novak Djokovic,103163,Tommy Haas,6-3 7-6(5) 7-5,5,QF,133
+2013-520,Roland Garros,Clay,G,104745,Rafael Nadal,104527,Stan Wawrinka,6-2 6-3 6-1,5,QF,116
+2013-520,Roland Garros,Clay,G,103970,David Ferrer,103990,Tommy Robredo,6-2 6-1 6-1,5,QF,85
+2013-520,Roland Garros,Clay,G,104542,Jo-Wilfried Tsonga,103819,Roger Federer,7-5 6-3 6-3,5,QF,111
+2013-520,Roland Garros,Clay,G,104745,Rafael Nadal,104925,Novak Djokovic,6-4 3-6 6-1 6-7(3) 9-7,5,SF,277
+2013-520,Roland Garros,Clay,G,103970,David Ferrer,104542,Jo-Wilfried Tsonga,6-1 7-6(3) 6-2,5,SF,124
+2013-520,Roland Garros,Clay,G,104745,Rafael Nadal,103970,David Ferrer,6-3 6-2 6-3,5,F,136
+2013-540,Wimbledon,Grass,G,104925,Novak Djokovic,104252,Florian Mayer,6-3 7-5 6-4,5,R128,116
+2013-540,Wimbledon,Grass,G,104035,Bobby Reynolds,105449,Steve Johnson,1-6 7-6(4) 6-3 6-7(4) 6-4,5,R128,200
+2013-540,Wimbledon,Grass,G,105526,Jan Lennard Struff,104882,Blaz Kavcic,6-4 6-1 6-3,5,R128,96
+2013-540,Wimbledon,Grass,G,104871,Jeremy Chardy,105992,Ryan Harrison,7-6(4) 4-6 7-5 6-2,5,R128,170
+2013-540,Wimbledon,Grass,G,103852,Feliciano Lopez,104468,Gilles Simon,6-2 6-4 7-6(11),5,R128,122
+2013-540,Wimbledon,Grass,G,103908,Paul Henri Mathieu,105575,Ricardas Berankis,7-6(4) 7-5 6-7(3) 6-4,5,R128,183
+2013-540,Wimbledon,Grass,G,104499,Jimmy Wang,104639,Wayne Odesnik,7-6(5) 4-6 6-2 3-6 7-5,5,R128,233
+2013-540,Wimbledon,Grass,G,103163,Tommy Haas,104098,Dmitry Tursunov,6-3 7-5 7-5,5,R128,121
+2013-540,Wimbledon,Grass,G,104755,Richard Gasquet,104719,Marcel Granollers,6-7(2) 6-4 7-5 6-4,5,R128,176
+2013-540,Wimbledon,Grass,G,104424,Go Soeda,104890,Andreas Haider Maurer,7-6(6) 7-5 6-1,5,R128,116
+2013-540,Wimbledon,Grass,G,103484,James Blake,105217,Thiemo De Bakker,6-1 6-3 6-2,5,R128,71
+2013-540,Wimbledon,Grass,G,106071,Bernard Tomic,105023,Sam Querrey,7-6(6) 7-6(3) 3-6 2-6 6-3,5,R128,154
+2013-540,Wimbledon,Grass,G,104731,Kevin Anderson,103694,Olivier Rochus,6-4 6-2 6-1,5,R128,78
+2013-540,Wimbledon,Grass,G,104308,Michal Przysiezny,104332,Philipp Petzschner,6-3 7-6(6) 6-0,5,R128,94
+2013-540,Wimbledon,Grass,G,104978,Daniel Brands,104593,Daniel Gimeno Traver,7-6(5) 6-7(4) 6-7(5) 6-1 6-4,5,R128,182
+2013-540,Wimbledon,Grass,G,104607,Tomas Berdych,105373,Martin Klizan,6-3 6-4 6-4,5,R128,110
+2013-540,Wimbledon,Grass,G,103970,David Ferrer,104651,Martin Alund,6-1 4-6 7-5 6-2,5,R128,129
+2013-540,Wimbledon,Grass,G,105138,Roberto Bautista Agut,104559,Teymuraz Gabashvili,6-3 6-4 7-6(3),5,R128,149
+2013-540,Wimbledon,Grass,G,105053,Santiago Giraldo,104547,Horacio Zeballos,3-6 7-6(4) 6-7(6) 6-1 6-3,5,R128,186
+2013-540,Wimbledon,Grass,G,105238,Alexandr Dolgopolov,105671,Gastao Elias,6-1 7-6(2) 6-2,5,R128,80
+2013-540,Wimbledon,Grass,G,105683,Milos Raonic,104122,Carlos Berlocq,6-4 6-3 6-3,5,R128,106
+2013-540,Wimbledon,Grass,G,104997,Igor Sijsling,104864,Alex Kuznetsov,6-3 6-4 6-4,5,R128,93
+2013-540,Wimbledon,Grass,G,106045,Denis Kudla,105902,James Duckworth,6-4 6-2 3-6 4-6 6-1,5,R128,161
+2013-540,Wimbledon,Grass,G,104471,Ivan Dodig,104259,Philipp Kohlschreiber,4-6 6-7(6) 7-6(3) 6-3 2-1 RET,5,R128,184
+2013-540,Wimbledon,Grass,G,105453,Kei Nishikori,105051,Matthew Ebden,6-2 6-4 6-3,5,R128,101
+2013-540,Wimbledon,Grass,G,104919,Leonardo Mayer,105379,Aljaz Bedene,6-2 6-3 6-4,5,R128,117
+2013-540,Wimbledon,Grass,G,103566,Michael Llodra,103813,Jarkko Nieminen,7-6(3) 6-4 6-3,5,R128,93
+2013-540,Wimbledon,Grass,G,104312,Andreas Seppi,104797,Denis Istomin,7-6(6) 7-6(3) 5-7 3-6 6-3,5,R128,198
+2013-540,Wimbledon,Grass,G,105777,Grigor Dimitrov,104620,Simone Bolelli,6-1 6-4 6-3,5,R128,82
+2013-540,Wimbledon,Grass,G,104813,Grega Zemlja,103188,Michael Russell,6-7(3) 6-4 6-4 6-1,5,R128,150
+2013-540,Wimbledon,Grass,G,105028,Jesse Levine,105550,Guido Pella,6-4 6-2 4-6 3-6 4-3 RET,5,R128,167
+2013-540,Wimbledon,Grass,G,105223,Juan Martin del Potro,105077,Albert Ramos,6-2 7-5 6-1,5,R128,108
+2013-540,Wimbledon,Grass,G,104327,Steve Darcis,104745,Rafael Nadal,7-6(4) 7-6(8) 6-4,5,R128,175
+2013-540,Wimbledon,Grass,G,103997,Lukasz Kubot,104214,Igor Andreev,6-1 7-5 6-2,5,R128,100
+2013-540,Wimbledon,Grass,G,103565,Stephane Robert,104268,Alejandro Falla,6-3 7-6(5) 7-5,5,R128,125
+2013-540,Wimbledon,Grass,G,105332,Benoit Paire,104494,Adrian Ungur,6-4 4-6 6-3 6-1,5,R128,111
+2013-540,Wimbledon,Grass,G,104545,John Isner,105539,Evgeny Donskoy,6-1 7-6(5) 7-6(3),5,R128,103
+2013-540,Wimbledon,Grass,G,105173,Adrian Mannarino,104665,Pablo Andujar,6-1 6-2 6-3,5,R128,90
+2013-540,Wimbledon,Grass,G,104460,Dustin Brown,104198,Guillermo Garcia Lopez,6-3 6-3 6-3,5,R128,75
+2013-540,Wimbledon,Grass,G,103720,Lleyton Hewitt,104527,Stan Wawrinka,6-4 7-5 6-3,5,R128,132
+2013-540,Wimbledon,Grass,G,104597,Nicolas Almagro,105132,Jurgen Zopp,6-4 7-6(2) 7-5,5,R128,112
+2013-540,Wimbledon,Grass,G,105558,Guillaume Rufin,104594,Marinko Matosevic,6-1 4-6 6-4 6-3,5,R128,155
+2013-540,Wimbledon,Grass,G,103285,Radek Stepanek,105591,Matt Reid,6-2 6-2 6-4,5,R128,92
+2013-540,Wimbledon,Grass,G,105668,Jerzy Janowicz,106378,Kyle Edmund,6-2 6-2 6-4,5,R128,87
+2013-540,Wimbledon,Grass,G,103781,Jurgen Melzer,104926,Fabio Fognini,6-7(5) 7-5 6-3 6-2,5,R128,150
+2013-540,Wimbledon,Grass,G,104714,Julian Reister,104586,Lukas Rosol,6-3 4-6 7-6(5) 6-7(4) 6-4,5,R128,210
+2013-540,Wimbledon,Grass,G,104660,Sergiy Stakhovsky,104297,Rogerio Dutra Silva,6-4 6-0 6-4,5,R128,80
+2013-540,Wimbledon,Grass,G,103819,Roger Federer,103812,Victor Hanescu,6-3 6-2 6-0,5,R128,69
+2013-540,Wimbledon,Grass,G,104542,Jo-Wilfried Tsonga,105676,David Goffin,7-6(4) 6-4 6-3,5,R128,114
+2013-540,Wimbledon,Grass,G,105208,Ernests Gulbis,104273,Edouard Roger Vasselin,7-6(1) 6-4 7-5,5,R128,147
+2013-540,Wimbledon,Grass,G,104269,Fernando Verdasco,103598,Xavier Malisse,6-7(5) 6-1 6-4 6-3,5,R128,139
+2013-540,Wimbledon,Grass,G,103898,Julien Benneteau,104735,Tobias Kamke,6-4 6-7(5) 6-4 6-2,5,R128,162
+2013-540,Wimbledon,Grass,G,104338,Juan Monaco,104226,Bastian Knittel,6-4 6-2 6-3,5,R128,97
+2013-540,Wimbledon,Grass,G,104330,Rajeev Ram,105041,Lukas Lacko,7-5 6-4 6-7(2) 6-2,5,R128,147
+2013-540,Wimbledon,Grass,G,104932,Kenny De Schepper,103893,Paolo Lorenzi,7-6(6) 6-4 6-2,5,R128,124
+2013-540,Wimbledon,Grass,G,105227,Marin Cilic,104571,Marcos Baghdatis,6-3 6-4 6-4,5,R128,93
+2013-540,Wimbledon,Grass,G,104678,Viktor Troicki,104386,Janko Tipsarevic,6-3 6-4 7-6(5),5,R128,114
+2013-540,Wimbledon,Grass,G,105723,Andrey Kuznetsov,103656,Albert Montanes,6-3 6-4 3-6 6-3,5,R128,114
+2013-540,Wimbledon,Grass,G,105577,Vasek Pospisil,102967,Marc Gicquel,6-3 6-2 7-6(3),5,R128,108
+2013-540,Wimbledon,Grass,G,104022,Mikhail Youzhny,104898,Robin Haase,6-4 7-5 7-5,5,R128,138
+2013-540,Wimbledon,Grass,G,103990,Tommy Robredo,104166,Alex Bogomolov Jr,6-2 6-2 6-4,5,R128,87
+2013-540,Wimbledon,Grass,G,103917,Nicolas Mahut,104225,Jan Hajek,6-2 6-4 6-3,5,R128,90
+2013-540,Wimbledon,Grass,G,104229,Yen Hsun Lu,104868,James Ward,6-7(4) 6-4 7-6(11) 7-6(4),5,R128,215
+2013-540,Wimbledon,Grass,G,104918,Andy Murray,103794,Benjamin Becker,6-4 6-3 6-2,5,R128,113
+2013-540,Wimbledon,Grass,G,104925,Novak Djokovic,104035,Bobby Reynolds,7-6(2) 6-3 6-1,5,R64,114
+2013-540,Wimbledon,Grass,G,104871,Jeremy Chardy,105526,Jan Lennard Struff,6-2 5-7 7-6(6) 7-6(4),5,R64,181
+2013-540,Wimbledon,Grass,G,103852,Feliciano Lopez,103908,Paul Henri Mathieu,6-3 5-1 RET,5,R64,56
+2013-540,Wimbledon,Grass,G,103163,Tommy Haas,104499,Jimmy Wang,6-3 6-2 7-5,5,R64,91
+2013-540,Wimbledon,Grass,G,104755,Richard Gasquet,104424,Go Soeda,6-0 6-3 6-7(5) 6-3,5,R64,148
+2013-540,Wimbledon,Grass,G,106071,Bernard Tomic,103484,James Blake,6-3 6-4 7-5,5,R64,96
+2013-540,Wimbledon,Grass,G,104731,Kevin Anderson,104308,Michal Przysiezny,6-4 7-6(2) 6-4,5,R64,111
+2013-540,Wimbledon,Grass,G,104607,Tomas Berdych,104978,Daniel Brands,7-6(6) 6-4 6-2,5,R64,111
+2013-540,Wimbledon,Grass,G,103970,David Ferrer,105138,Roberto Bautista Agut,6-3 3-6 7-6(4) 7-5,5,R64,179
+2013-540,Wimbledon,Grass,G,105238,Alexandr Dolgopolov,105053,Santiago Giraldo,6-4 7-5 6-3,5,R64,95
+2013-540,Wimbledon,Grass,G,104997,Igor Sijsling,105683,Milos Raonic,7-5 6-4 7-6(4),5,R64,129
+2013-540,Wimbledon,Grass,G,104471,Ivan Dodig,106045,Denis Kudla,6-1 7-6(4) 7-5,5,R64,126
+2013-540,Wimbledon,Grass,G,105453,Kei Nishikori,104919,Leonardo Mayer,7-6(5) 6-4 6-2,5,R64,142
+2013-540,Wimbledon,Grass,G,104312,Andreas Seppi,103566,Michael Llodra,7-5 RET,5,R64,49
+2013-540,Wimbledon,Grass,G,104813,Grega Zemlja,105777,Grigor Dimitrov,3-6 7-6(4) 3-6 6-4 11-9,5,R64,244
+2013-540,Wimbledon,Grass,G,105223,Juan Martin del Potro,105028,Jesse Levine,6-2 7-6(7) 6-3,5,R64,119
+2013-540,Wimbledon,Grass,G,103997,Lukasz Kubot,104327,Steve Darcis,W/O,5,R64,
+2013-540,Wimbledon,Grass,G,105332,Benoit Paire,103565,Stephane Robert,6-4 7-5 6-4,5,R64,100
+2013-540,Wimbledon,Grass,G,105173,Adrian Mannarino,104545,John Isner,1-1 RET,5,R64,15
+2013-540,Wimbledon,Grass,G,104460,Dustin Brown,103720,Lleyton Hewitt,6-4 6-4 6-7(3) 6-2,5,R64,146
+2013-540,Wimbledon,Grass,G,104597,Nicolas Almagro,105558,Guillaume Rufin,7-5 6-7(6) 6-3 6-4,5,R64,149
+2013-540,Wimbledon,Grass,G,105668,Jerzy Janowicz,103285,Radek Stepanek,6-2 5-3 RET,5,R64,75
+2013-540,Wimbledon,Grass,G,103781,Jurgen Melzer,104714,Julian Reister,3-6 7-6(2) 7-6(5) 6-2,5,R64,166
+2013-540,Wimbledon,Grass,G,104660,Sergiy Stakhovsky,103819,Roger Federer,6-7(5) 7-6(5) 7-5 7-6(5),5,R64,180
+2013-540,Wimbledon,Grass,G,105208,Ernests Gulbis,104542,Jo-Wilfried Tsonga,3-6 6-3 6-3 RET,5,R64,119
+2013-540,Wimbledon,Grass,G,104269,Fernando Verdasco,103898,Julien Benneteau,7-6(1) 7-6(4) 6-4,5,R64,153
+2013-540,Wimbledon,Grass,G,104338,Juan Monaco,104330,Rajeev Ram,5-7 6-2 6-4 6-2,5,R64,136
+2013-540,Wimbledon,Grass,G,104932,Kenny De Schepper,105227,Marin Cilic,W/O,5,R64,
+2013-540,Wimbledon,Grass,G,104678,Viktor Troicki,105723,Andrey Kuznetsov,6-4 6-3 6-4,5,R64,89
+2013-540,Wimbledon,Grass,G,104022,Mikhail Youzhny,105577,Vasek Pospisil,6-2 6-7(3) 7-6(7) 3-6 6-4,5,R64,216
+2013-540,Wimbledon,Grass,G,103990,Tommy Robredo,103917,Nicolas Mahut,7-6(3) 6-1 7-6(5),5,R64,123
+2013-540,Wimbledon,Grass,G,104918,Andy Murray,104229,Yen Hsun Lu,6-3 6-3 7-5,5,R64,121
+2013-540,Wimbledon,Grass,G,104925,Novak Djokovic,104871,Jeremy Chardy,6-3 6-2 6-2,5,R32,86
+2013-540,Wimbledon,Grass,G,103163,Tommy Haas,103852,Feliciano Lopez,4-6 6-2 7-5 6-4,5,R32,142
+2013-540,Wimbledon,Grass,G,106071,Bernard Tomic,104755,Richard Gasquet,7-6(7) 5-7 7-5 7-6(5),5,R32,166
+2013-540,Wimbledon,Grass,G,104607,Tomas Berdych,104731,Kevin Anderson,3-6 6-3 6-4 7-5,5,R32,176
+2013-540,Wimbledon,Grass,G,103970,David Ferrer,105238,Alexandr Dolgopolov,6-7(6) 7-6(2) 2-6 6-1 6-2,5,R32,192
+2013-540,Wimbledon,Grass,G,104471,Ivan Dodig,104997,Igor Sijsling,6-0 6-1 1-0 RET,5,R32,46
+2013-540,Wimbledon,Grass,G,104312,Andreas Seppi,105453,Kei Nishikori,3-6 6-2 6-7(4) 6-1 6-4,5,R32,184
+2013-540,Wimbledon,Grass,G,105223,Juan Martin del Potro,104813,Grega Zemlja,7-5 7-6(3) 6-0,5,R32,115
+2013-540,Wimbledon,Grass,G,103997,Lukasz Kubot,105332,Benoit Paire,6-1 6-3 6-4,5,R32,114
+2013-540,Wimbledon,Grass,G,105173,Adrian Mannarino,104460,Dustin Brown,6-4 6-2 7-5,5,R32,99
+2013-540,Wimbledon,Grass,G,105668,Jerzy Janowicz,104597,Nicolas Almagro,7-6(6) 6-3 6-4,5,R32,107
+2013-540,Wimbledon,Grass,G,103781,Jurgen Melzer,104660,Sergiy Stakhovsky,6-2 2-6 7-5 6-3,5,R32,135
+2013-540,Wimbledon,Grass,G,104269,Fernando Verdasco,105208,Ernests Gulbis,6-2 6-4 6-4,5,R32,105
+2013-540,Wimbledon,Grass,G,104932,Kenny De Schepper,104338,Juan Monaco,6-4 7-6(8) 6-4,5,R32,130
+2013-540,Wimbledon,Grass,G,104022,Mikhail Youzhny,104678,Viktor Troicki,6-3 6-4 7-5,5,R32,125
+2013-540,Wimbledon,Grass,G,104918,Andy Murray,103990,Tommy Robredo,6-2 6-4 7-5,5,R32,121
+2013-540,Wimbledon,Grass,G,104925,Novak Djokovic,103163,Tommy Haas,6-1 6-4 7-6(4),5,R16,132
+2013-540,Wimbledon,Grass,G,104607,Tomas Berdych,106071,Bernard Tomic,7-6(4) 6-7(5) 6-4 6-4,5,R16,179
+2013-540,Wimbledon,Grass,G,103970,David Ferrer,104471,Ivan Dodig,6-7(3) 7-6(6) 6-1 6-1,5,R16,167
+2013-540,Wimbledon,Grass,G,105223,Juan Martin del Potro,104312,Andreas Seppi,6-4 7-6(2) 6-3,5,R16,142
+2013-540,Wimbledon,Grass,G,103997,Lukasz Kubot,105173,Adrian Mannarino,4-6 6-3 3-6 6-3 6-4,5,R16,198
+2013-540,Wimbledon,Grass,G,105668,Jerzy Janowicz,103781,Jurgen Melzer,3-6 7-6(1) 6-4 4-6 6-4,5,R16,192
+2013-540,Wimbledon,Grass,G,104269,Fernando Verdasco,104932,Kenny De Schepper,6-4 6-4 6-4,5,R16,109
+2013-540,Wimbledon,Grass,G,104918,Andy Murray,104022,Mikhail Youzhny,6-4 7-6(5) 6-1,5,R16,157
+2013-540,Wimbledon,Grass,G,104925,Novak Djokovic,104607,Tomas Berdych,7-6(5) 6-4 6-3,5,QF,135
+2013-540,Wimbledon,Grass,G,105223,Juan Martin del Potro,103970,David Ferrer,6-2 6-4 7-6(5),5,QF,136
+2013-540,Wimbledon,Grass,G,105668,Jerzy Janowicz,103997,Lukasz Kubot,7-5 6-4 6-4,5,QF,127
+2013-540,Wimbledon,Grass,G,104918,Andy Murray,104269,Fernando Verdasco,4-6 3-6 6-1 6-4 7-5,5,QF,207
+2013-540,Wimbledon,Grass,G,104925,Novak Djokovic,105223,Juan Martin del Potro,7-5 4-6 7-6(2) 6-7(6) 6-3,5,SF,283
+2013-540,Wimbledon,Grass,G,104918,Andy Murray,105668,Jerzy Janowicz,6-7(2) 6-4 6-4 6-3,5,SF,172
+2013-540,Wimbledon,Grass,G,104918,Andy Murray,104925,Novak Djokovic,6-4 7-5 6-4,5,F,189
+2013-421,Canada Masters,Hard,M,104252,Florian Mayer,106071,Bernard Tomic,5-7 6-3 6-3,3,R64,97
+2013-421,Canada Masters,Hard,M,106290,Filip Peliwo,103813,Jarkko Nieminen,3-6 7-5 3-1 RET,3,R64,117
+2013-421,Canada Masters,Hard,M,104797,Denis Istomin,104386,Janko Tipsarevic,6-4 6-3,3,R64,80
+2013-421,Canada Masters,Hard,M,105453,Kei Nishikori,105166,Peter Polansky,4-6 6-4 6-2,3,R64,121
+2013-421,Canada Masters,Hard,M,104312,Andreas Seppi,104586,Lukas Rosol,6-4 4-6 7-6(4),3,R64,127
+2013-421,Canada Masters,Hard,M,105373,Martin Klizan,105064,Thomaz Bellucci,5-7 6-4 7-6(6),3,R64,154
+2013-421,Canada Masters,Hard,M,105028,Jesse Levine,103598,Xavier Malisse,6-4 7-6(4),3,R64,95
+2013-421,Canada Masters,Hard,M,104433,Frank Dancevic,104229,Yen Hsun Lu,5-7 7-6(6) 6-1,3,R64,132
+2013-421,Canada Masters,Hard,M,105668,Jerzy Janowicz,103898,Julien Benneteau,3-6 6-3 7-5,3,R64,122
+2013-421,Canada Masters,Hard,M,103163,Tommy Haas,105676,David Goffin,7-6(4) 6-3,3,R64,88
+2013-421,Canada Masters,Hard,M,104594,Marinko Matosevic,103794,Benjamin Becker,6-2 6-3,3,R64,62
+2013-421,Canada Masters,Hard,M,105332,Benoit Paire,104259,Philipp Kohlschreiber,7-6(1) 7-5,3,R64,88
+2013-421,Canada Masters,Hard,M,105238,Alexandr Dolgopolov,104731,Kevin Anderson,7-6(0) 6-4,3,R64,104
+2013-421,Canada Masters,Hard,M,105577,Vasek Pospisil,104545,John Isner,5-7 7-6(5) 7-6(4),3,R64,152
+2013-421,Canada Masters,Hard,M,103285,Radek Stepanek,104597,Nicolas Almagro,6-3 6-7(4) 6-3,3,R64,106
+2013-421,Canada Masters,Hard,M,103786,Nikolay Davydenko,104468,Gilles Simon,2-6 6-1 6-1,3,R64,91
+2013-421,Canada Masters,Hard,M,104665,Pablo Andujar,104804,Amir Weintraub,6-1 7-6(5),3,R64,89
+2013-421,Canada Masters,Hard,M,104166,Alex Bogomolov Jr,103566,Michael Llodra,6-2 4-6 6-3,3,R64,100
+2013-421,Canada Masters,Hard,M,104471,Ivan Dodig,104813,Grega Zemlja,6-1 6-1,3,R64,49
+2013-421,Canada Masters,Hard,M,104022,Mikhail Youzhny,103781,Jurgen Melzer,6-4 7-6(3),3,R64,91
+2013-421,Canada Masters,Hard,M,105683,Milos Raonic,104871,Jeremy Chardy,6-3 4-6 7-5,3,R64,129
+2013-421,Canada Masters,Hard,M,104926,Fabio Fognini,104571,Marcos Baghdatis,1-6 6-1 6-1,3,R64,79
+2013-421,Canada Masters,Hard,M,105208,Ernests Gulbis,103852,Feliciano Lopez,7-6(4) 6-4,3,R64,100
+2013-421,Canada Masters,Hard,M,104719,Marcel Granollers,105777,Grigor Dimitrov,6-4 6-4,3,R64,81
+2013-421,Canada Masters,Hard,M,104925,Novak Djokovic,104252,Florian Mayer,6-2 6-1,3,R32,56
+2013-421,Canada Masters,Hard,M,104797,Denis Istomin,106290,Filip Peliwo,6-3 3-6 6-3,3,R32,129
+2013-421,Canada Masters,Hard,M,105453,Kei Nishikori,104312,Andreas Seppi,4-6 7-5 6-1,3,R32,127
+2013-421,Canada Masters,Hard,M,104755,Richard Gasquet,105373,Martin Klizan,6-3 6-2,3,R32,85
+2013-421,Canada Masters,Hard,M,104745,Rafael Nadal,105028,Jesse Levine,6-2 6-0,3,R32,72
+2013-421,Canada Masters,Hard,M,105668,Jerzy Janowicz,104433,Frank Dancevic,7-6(5) 3-6 6-4,3,R32,142
+2013-421,Canada Masters,Hard,M,104594,Marinko Matosevic,103163,Tommy Haas,5-0 RET,3,R32,20
+2013-421,Canada Masters,Hard,M,105332,Benoit Paire,104527,Stan Wawrinka,6-2 7-6(2),3,R32,74
+2013-421,Canada Masters,Hard,M,104607,Tomas Berdych,105238,Alexandr Dolgopolov,6-3 6-4,3,R32,77
+2013-421,Canada Masters,Hard,M,105577,Vasek Pospisil,103285,Radek Stepanek,6-2 6-4,3,R32,75
+2013-421,Canada Masters,Hard,M,103786,Nikolay Davydenko,104665,Pablo Andujar,6-1 4-6 6-3,3,R32,118
+2013-421,Canada Masters,Hard,M,104166,Alex Bogomolov Jr,103970,David Ferrer,6-2 6-4,3,R32,85
+2013-421,Canada Masters,Hard,M,105223,Juan Martin del Potro,104471,Ivan Dodig,6-4 4-6 7-5,3,R32,139
+2013-421,Canada Masters,Hard,M,105683,Milos Raonic,104022,Mikhail Youzhny,6-4 6-4,3,R32,74
+2013-421,Canada Masters,Hard,M,105208,Ernests Gulbis,104926,Fabio Fognini,6-3 1-6 6-1,3,R32,103
+2013-421,Canada Masters,Hard,M,104918,Andy Murray,104719,Marcel Granollers,6-4 7-6(2),3,R32,111
+2013-421,Canada Masters,Hard,M,104925,Novak Djokovic,104797,Denis Istomin,2-6 6-4 6-4,3,R16,128
+2013-421,Canada Masters,Hard,M,104755,Richard Gasquet,105453,Kei Nishikori,1-6 6-3 6-3,3,R16,117
+2013-421,Canada Masters,Hard,M,104745,Rafael Nadal,105668,Jerzy Janowicz,7-6(6) 6-4,3,R16,110
+2013-421,Canada Masters,Hard,M,104594,Marinko Matosevic,105332,Benoit Paire,7-6(7) 6-7(10) 6-3,3,R16,151
+2013-421,Canada Masters,Hard,M,105577,Vasek Pospisil,104607,Tomas Berdych,7-5 2-6 7-6(5),3,R16,157
+2013-421,Canada Masters,Hard,M,103786,Nikolay Davydenko,104166,Alex Bogomolov Jr,6-4 6-3,3,R16,83
+2013-421,Canada Masters,Hard,M,105683,Milos Raonic,105223,Juan Martin del Potro,7-5 6-4,3,R16,108
+2013-421,Canada Masters,Hard,M,105208,Ernests Gulbis,104918,Andy Murray,6-4 6-3,3,R16,89
+2013-421,Canada Masters,Hard,M,104925,Novak Djokovic,104755,Richard Gasquet,6-1 6-2,3,QF,52
+2013-421,Canada Masters,Hard,M,104745,Rafael Nadal,104594,Marinko Matosevic,6-2 6-4,3,QF,79
+2013-421,Canada Masters,Hard,M,105577,Vasek Pospisil,103786,Nikolay Davydenko,3-0 RET,3,QF,21
+2013-421,Canada Masters,Hard,M,105683,Milos Raonic,105208,Ernests Gulbis,7-6(3) 4-6 6-4,3,QF,146
+2013-421,Canada Masters,Hard,M,104745,Rafael Nadal,104925,Novak Djokovic,6-4 3-6 7-6(2),3,SF,149
+2013-421,Canada Masters,Hard,M,105683,Milos Raonic,105577,Vasek Pospisil,6-4 1-6 7-6(4),3,SF,136
+2013-421,Canada Masters,Hard,M,104745,Rafael Nadal,105683,Milos Raonic,6-2 6-2,3,F,68
+2013-422,Cincinnati Masters,Hard,M,104338,Juan Monaco,103781,Jurgen Melzer,6-3 6-2,3,R64,59
+2013-422,Cincinnati Masters,Hard,M,105676,David Goffin,111456,Mackenzie Mcdonald,6-1 6-1,3,R64,53
+2013-422,Cincinnati Masters,Hard,M,105577,Vasek Pospisil,104468,Gilles Simon,6-3 1-1 RET,3,R64,43
+2013-422,Cincinnati Masters,Hard,M,105683,Milos Raonic,106058,Jack Sock,3-6 6-4 6-3,3,R64,114
+2013-422,Cincinnati Masters,Hard,M,104386,Janko Tipsarevic,105023,Sam Querrey,6-7(5) 6-3 6-4,3,R64,116
+2013-422,Cincinnati Masters,Hard,M,104545,John Isner,104252,Florian Mayer,6-3 6-4,3,R64,62
+2013-422,Cincinnati Masters,Hard,M,105992,Ryan Harrison,105238,Alexandr Dolgopolov,7-6(3) 6-4,3,R64,74
+2013-422,Cincinnati Masters,Hard,M,104098,Dmitry Tursunov,105373,Martin Klizan,4-6 7-6(6) 6-4,3,R64,152
+2013-422,Cincinnati Masters,Hard,M,103484,James Blake,105668,Jerzy Janowicz,6-1 7-5,3,R64,83
+2013-422,Cincinnati Masters,Hard,M,103852,Feliciano Lopez,105453,Kei Nishikori,6-4 7-6(4),3,R64,92
+2013-422,Cincinnati Masters,Hard,M,104871,Jeremy Chardy,105173,Adrian Mannarino,6-4 6-3,3,R64,75
+2013-422,Cincinnati Masters,Hard,M,103786,Nikolay Davydenko,105332,Benoit Paire,7-6(8) 6-3,3,R64,83
+2013-422,Cincinnati Masters,Hard,M,104259,Philipp Kohlschreiber,103888,Mardy Fish,7-5 6-2,3,R64,85
+2013-422,Cincinnati Masters,Hard,M,104719,Marcel Granollers,104586,Lukas Rosol,5-7 6-4 6-0,3,R64,104
+2013-422,Cincinnati Masters,Hard,M,103163,Tommy Haas,104731,Kevin Anderson,6-4 6-4,3,R64,70
+2013-422,Cincinnati Masters,Hard,M,105777,Grigor Dimitrov,104597,Nicolas Almagro,7-6(3) 6-4,3,R64,87
+2013-422,Cincinnati Masters,Hard,M,104548,Brian Baker,104797,Denis Istomin,7-5 6-3,3,R64,80
+2013-422,Cincinnati Masters,Hard,M,103794,Benjamin Becker,104665,Pablo Andujar,6-1 6-4,3,R64,64
+2013-422,Cincinnati Masters,Hard,M,103813,Jarkko Nieminen,104273,Edouard Roger Vasselin,6-3 6-4,3,R64,72
+2013-422,Cincinnati Masters,Hard,M,103990,Tommy Robredo,105064,Thomaz Bellucci,6-7(6) 7-6(7) 6-2,3,R64,144
+2013-422,Cincinnati Masters,Hard,M,104527,Stan Wawrinka,104312,Andreas Seppi,6-3 6-4,3,R64,68
+2013-422,Cincinnati Masters,Hard,M,103285,Radek Stepanek,104926,Fabio Fognini,6-2 6-4,3,R64,68
+2013-422,Cincinnati Masters,Hard,M,103898,Julien Benneteau,104571,Marcos Baghdatis,6-3 6-2,3,R64,66
+2013-422,Cincinnati Masters,Hard,M,104022,Mikhail Youzhny,105208,Ernests Gulbis,7-5 6-3,3,R64,87
+2013-422,Cincinnati Masters,Hard,M,104925,Novak Djokovic,104338,Juan Monaco,7-5 6-2,3,R32,78
+2013-422,Cincinnati Masters,Hard,M,105676,David Goffin,105577,Vasek Pospisil,7-5 1-6 7-6(6),3,R32,147
+2013-422,Cincinnati Masters,Hard,M,105683,Milos Raonic,104386,Janko Tipsarevic,6-4 7-6(4),3,R32,100
+2013-422,Cincinnati Masters,Hard,M,104545,John Isner,104755,Richard Gasquet,7-6(6) 6-2,3,R32,82
+2013-422,Cincinnati Masters,Hard,M,103970,David Ferrer,105992,Ryan Harrison,7-6(5) 3-6 6-4,3,R32,162
+2013-422,Cincinnati Masters,Hard,M,104098,Dmitry Tursunov,103484,James Blake,6-4 6-4,3,R32,90
+2013-422,Cincinnati Masters,Hard,M,103852,Feliciano Lopez,104871,Jeremy Chardy,6-4 2-2 RET,3,R32,64
+2013-422,Cincinnati Masters,Hard,M,105223,Juan Martin del Potro,103786,Nikolay Davydenko,7-5 7-5,3,R32,102
+2013-422,Cincinnati Masters,Hard,M,103819,Roger Federer,104259,Philipp Kohlschreiber,6-3 7-6(7),3,R32,87
+2013-422,Cincinnati Masters,Hard,M,103163,Tommy Haas,104719,Marcel Granollers,6-4 6-1,3,R32,75
+2013-422,Cincinnati Masters,Hard,M,105777,Grigor Dimitrov,104548,Brian Baker,6-3 6-2,3,R32,56
+2013-422,Cincinnati Masters,Hard,M,104745,Rafael Nadal,103794,Benjamin Becker,6-2 6-2,3,R32,78
+2013-422,Cincinnati Masters,Hard,M,104607,Tomas Berdych,103813,Jarkko Nieminen,6-3 6-2,3,R32,68
+2013-422,Cincinnati Masters,Hard,M,103990,Tommy Robredo,104527,Stan Wawrinka,7-5 3-6 6-3,3,R32,124
+2013-422,Cincinnati Masters,Hard,M,103898,Julien Benneteau,103285,Radek Stepanek,6-2 5-7 7-6(4),3,R32,161
+2013-422,Cincinnati Masters,Hard,M,104918,Andy Murray,104022,Mikhail Youzhny,6-2 6-3,3,R32,71
+2013-422,Cincinnati Masters,Hard,M,104925,Novak Djokovic,105676,David Goffin,6-2 6-0,3,R16,50
+2013-422,Cincinnati Masters,Hard,M,104545,John Isner,105683,Milos Raonic,7-6(5) 6-4,3,R16,97
+2013-422,Cincinnati Masters,Hard,M,104098,Dmitry Tursunov,103970,David Ferrer,6-2 6-4,3,R16,76
+2013-422,Cincinnati Masters,Hard,M,105223,Juan Martin del Potro,103852,Feliciano Lopez,6-4 1-6 6-4,3,R16,122
+2013-422,Cincinnati Masters,Hard,M,103819,Roger Federer,103163,Tommy Haas,1-6 7-5 6-3,3,R16,113
+2013-422,Cincinnati Masters,Hard,M,104745,Rafael Nadal,105777,Grigor Dimitrov,6-2 5-7 6-2,3,R16,122
+2013-422,Cincinnati Masters,Hard,M,104607,Tomas Berdych,103990,Tommy Robredo,6-3 6-0,3,R16,61
+2013-422,Cincinnati Masters,Hard,M,104918,Andy Murray,103898,Julien Benneteau,6-2 6-2,3,R16,69
+2013-422,Cincinnati Masters,Hard,M,104545,John Isner,104925,Novak Djokovic,7-6(5) 3-6 7-5,3,QF,144
+2013-422,Cincinnati Masters,Hard,M,105223,Juan Martin del Potro,104098,Dmitry Tursunov,6-4 3-6 6-1,3,QF,107
+2013-422,Cincinnati Masters,Hard,M,104745,Rafael Nadal,103819,Roger Federer,5-7 6-4 6-3,3,QF,134
+2013-422,Cincinnati Masters,Hard,M,104607,Tomas Berdych,104918,Andy Murray,6-3 6-4,3,QF,93
+2013-422,Cincinnati Masters,Hard,M,104545,John Isner,105223,Juan Martin del Potro,6-7(5) 7-6(9) 6-3,3,SF,168
+2013-422,Cincinnati Masters,Hard,M,104745,Rafael Nadal,104607,Tomas Berdych,7-5 7-6(4),3,SF,126
+2013-422,Cincinnati Masters,Hard,M,104745,Rafael Nadal,104545,John Isner,7-6(8) 7-6(3),3,F,115
+2013-560,US Open,Hard,G,104925,Novak Djokovic,105575,Ricardas Berankis,6-1 6-2 6-2,5,R128,82
+2013-560,US Open,Hard,G,103794,Benjamin Becker,104586,Lukas Rosol,6-3 3-6 6-3 6-4,5,R128,136
+2013-560,US Open,Hard,G,103813,Jarkko Nieminen,103997,Lukasz Kubot,7-5 7-5 6-2,5,R128,138
+2013-560,US Open,Hard,G,105311,Joao Sousa,105777,Grigor Dimitrov,3-6 6-3 6-4 5-7 6-2,5,R128,171
+2013-560,US Open,Hard,G,104166,Alex Bogomolov Jr,105332,Benoit Paire,7-5 2-6 6-4 5-7 7-6(5),5,R128,241
+2013-560,US Open,Hard,G,105065,Tim Smyczek,105902,James Duckworth,3-6 6-2 6-4 6-1,5,R128,176
+2013-560,US Open,Hard,G,104719,Marcel Granollers,105132,Jurgen Zopp,6-1 3-6 1-6 6-3 6-4,5,R128,179
+2013-560,US Open,Hard,G,104330,Rajeev Ram,104926,Fabio Fognini,6-1 6-2 6-2,5,R128,87
+2013-560,US Open,Hard,G,103163,Tommy Haas,103908,Paul Henri Mathieu,6-4 6-4 6-1,5,R128,94
+2013-560,US Open,Hard,G,104229,Yen Hsun Lu,104593,Daniel Gimeno Traver,6-4 7-6(5) 6-3,5,R128,130
+2013-560,US Open,Hard,G,105238,Alexandr Dolgopolov,105676,David Goffin,6-2 6-4 6-4,5,R128,114
+2013-560,US Open,Hard,G,104022,Mikhail Youzhny,103917,Nicolas Mahut,6-4 6-4 7-6(4),5,R128,151
+2013-560,US Open,Hard,G,105539,Evgeny Donskoy,103781,Jurgen Melzer,7-5 6-3 7-6(3),5,R128,151
+2013-560,US Open,Hard,G,105376,Peter Gojowczyk,104997,Igor Sijsling,7-6(7) 2-6 6-4 6-1,5,R128,124
+2013-560,US Open,Hard,G,103720,Lleyton Hewitt,104548,Brian Baker,6-3 4-6 6-3 6-4,5,R128,186
+2013-560,US Open,Hard,G,105223,Juan Martin del Potro,104198,Guillermo Garcia Lopez,6-3 6-7(5) 6-4 7-6(7),5,R128,253
+2013-560,US Open,Hard,G,104918,Andy Murray,103566,Michael Llodra,6-2 6-4 6-3,5,R128,98
+2013-560,US Open,Hard,G,104919,Leonardo Mayer,103812,Victor Hanescu,7-6(4) 6-4 3-6 7-6(4),5,R128,235
+2013-560,US Open,Hard,G,105385,Donald Young,105373,Martin Klizan,6-1 6-0 6-1,5,R128,80
+2013-560,US Open,Hard,G,104252,Florian Mayer,104338,Juan Monaco,6-4 6-2 3-0 RET,5,R128,84
+2013-560,US Open,Hard,G,104312,Andreas Seppi,103598,Xavier Malisse,6-3 3-6 7-5 7-5,5,R128,179
+2013-560,US Open,Hard,G,104500,Somdev Devvarman,105041,Lukas Lacko,4-6 6-1 6-2 4-6 6-4,5,R128,191
+2013-560,US Open,Hard,G,104735,Tobias Kamke,105449,Steve Johnson,6-7(4) 6-4 7-6(7) 6-2,5,R128,192
+2013-560,US Open,Hard,G,104797,Denis Istomin,104597,Nicolas Almagro,6-3 6-1 4-6 6-3,5,R128,115
+2013-560,US Open,Hard,G,104527,Stan Wawrinka,103285,Radek Stepanek,7-6(2) 6-3 6-2,5,R128,152
+2013-560,US Open,Hard,G,103333,Ivo Karlovic,103484,James Blake,6-7(2) 3-6 6-4 7-6(2) 7-6(2),5,R128,204
+2013-560,US Open,Hard,G,104571,Marcos Baghdatis,104424,Go Soeda,6-4 6-3 6-1,5,R128,91
+2013-560,US Open,Hard,G,104731,Kevin Anderson,104978,Daniel Brands,7-5 4-6 6-2 6-3,5,R128,165
+2013-560,US Open,Hard,G,103898,Julien Benneteau,104308,Michal Przysiezny,6-4 5-7 6-4 6-4,5,R128,164
+2013-560,US Open,Hard,G,104871,Jeremy Chardy,104660,Sergiy Stakhovsky,6-4 4-6 6-2 4-6 6-4,5,R128,218
+2013-560,US Open,Hard,G,106045,Denis Kudla,106210,Jiri Vesely,6-2 6-2 6-7(6) 7-5,5,R128,164
+2013-560,US Open,Hard,G,104607,Tomas Berdych,103893,Paolo Lorenzi,6-1 6-4 6-1,5,R128,103
+2013-560,US Open,Hard,G,104755,Richard Gasquet,103188,Michael Russell,6-3 6-4 6-2,5,R128,124
+2013-560,US Open,Hard,G,103565,Stephane Robert,105874,Albano Olivetti,6-3 6-3 6-4,5,R128,94
+2013-560,US Open,Hard,G,105558,Guillaume Rufin,105526,Jan Lennard Struff,7-6(4) 6-3 2-6 2-6 6-1,5,R128,185
+2013-560,US Open,Hard,G,104098,Dmitry Tursunov,105379,Aljaz Bedene,7-5 4-6 6-3 6-0,5,R128,150
+2013-560,US Open,Hard,G,103852,Feliciano Lopez,103722,Florent Serra,6-7(4) 6-2 6-3 6-3,5,R128,158
+2013-560,US Open,Hard,G,105614,Bradley Klahn,104932,Kenny De Schepper,6-7(5) 6-2 7-6(0) 7-6(4),5,R128,181
+2013-560,US Open,Hard,G,104665,Pablo Andujar,105217,Thiemo De Bakker,6-4 6-4 6-4,5,R128,127
+2013-560,US Open,Hard,G,105683,Milos Raonic,105341,Thomas Fabbiano,6-3 7-6(6) 6-3,5,R128,132
+2013-560,US Open,Hard,G,104216,Maximo Gonzalez,105668,Jerzy Janowicz,6-4 6-4 6-2,5,R128,135
+2013-560,US Open,Hard,G,106058,Jack Sock,104332,Philipp Petzschner,7-6(2) 3-6 5-2 RET,5,R128,132
+2013-560,US Open,Hard,G,104534,Dudi Sela,105723,Andrey Kuznetsov,7-6(2) 6-3 6-7(2) 5-7 6-4,5,R128,239
+2013-560,US Open,Hard,G,104386,Janko Tipsarevic,104655,Pablo Cuevas,6-3 6-7(5) 6-3 RET,5,R128,129
+2013-560,US Open,Hard,G,104890,Andreas Haider Maurer,105208,Ernests Gulbis,3-6 6-3 1-6 7-6(4) 6-4,5,R128,216
+2013-560,US Open,Hard,G,105062,Mikhail Kukushkin,105413,Andrej Martin,6-4 7-6(2) 7-5,5,R128,145
+2013-560,US Open,Hard,G,105138,Roberto Bautista Agut,105064,Thomaz Bellucci,6-3 6-2 6-2,5,R128,102
+2013-560,US Open,Hard,G,103970,David Ferrer,106401,Nick Kyrgios,7-5 6-3 6-2,5,R128,111
+2013-560,US Open,Hard,G,103819,Roger Federer,104813,Grega Zemlja,6-3 6-2 7-5,5,R128,93
+2013-560,US Open,Hard,G,104122,Carlos Berlocq,105053,Santiago Giraldo,6-3 3-6 6-7(6) 6-4 6-2,5,R128,246
+2013-560,US Open,Hard,G,105173,Adrian Mannarino,104547,Horacio Zeballos,4-6 6-4 6-2 6-1,5,R128,153
+2013-560,US Open,Hard,G,105023,Sam Querrey,105550,Guido Pella,7-6(3) 4-6 6-1 6-2,5,R128,139
+2013-560,US Open,Hard,G,103990,Tommy Robredo,104594,Marinko Matosevic,6-3 6-7(6) 6-3 6-2,5,R128,181
+2013-560,US Open,Hard,G,104433,Frank Dancevic,104898,Robin Haase,7-6(5) 3-6 7-5 7-6(3),5,R128,194
+2013-560,US Open,Hard,G,106071,Bernard Tomic,105077,Albert Ramos,6-3 3-6 4-6 7-6(1) 6-3,5,R128,236
+2013-560,US Open,Hard,G,105554,Daniel Evans,105453,Kei Nishikori,6-4 6-4 6-2,5,R128,117
+2013-560,US Open,Hard,G,104545,John Isner,103835,Filippo Volandri,6-0 6-2 6-3,5,R128,76
+2013-560,US Open,Hard,G,104792,Gael Monfils,104494,Adrian Ungur,6-1 6-2 6-0,5,R128,67
+2013-560,US Open,Hard,G,104273,Edouard Roger Vasselin,103656,Albert Montanes,6-3 6-2 6-4,5,R128,88
+2013-560,US Open,Hard,G,104259,Philipp Kohlschreiber,123768,Collin Altamirano,6-1 6-3 6-1,5,R128,85
+2013-560,US Open,Hard,G,104471,Ivan Dodig,104269,Fernando Verdasco,6-3 7-5 1-6 4-6 6-3,5,R128,198
+2013-560,US Open,Hard,G,103786,Nikolay Davydenko,105733,Rhyne Williams,6-3 4-6 1-6 7-5 6-0,5,R128,208
+2013-560,US Open,Hard,G,104297,Rogerio Dutra Silva,105577,Vasek Pospisil,4-6 3-6 7-6(9) 6-2 7-6(10),5,R128,241
+2013-560,US Open,Hard,G,104745,Rafael Nadal,105992,Ryan Harrison,6-4 6-2 6-2,5,R128,126
+2013-560,US Open,Hard,G,104925,Novak Djokovic,103794,Benjamin Becker,7-6(2) 6-2 6-2,5,R64,111
+2013-560,US Open,Hard,G,105311,Joao Sousa,103813,Jarkko Nieminen,1-6 6-3 3-6 6-3 6-4,5,R64,174
+2013-560,US Open,Hard,G,105065,Tim Smyczek,104166,Alex Bogomolov Jr,3-6 7-6(6) 2-6 6-4 6-4,5,R64,239
+2013-560,US Open,Hard,G,104719,Marcel Granollers,104330,Rajeev Ram,3-6 4-6 6-2 6-3 7-5,5,R64,201
+2013-560,US Open,Hard,G,103163,Tommy Haas,104229,Yen Hsun Lu,6-3 6-4 7-6(3),5,R64,141
+2013-560,US Open,Hard,G,104022,Mikhail Youzhny,105238,Alexandr Dolgopolov,7-5 6-1 6-3,5,R64,116
+2013-560,US Open,Hard,G,105539,Evgeny Donskoy,105376,Peter Gojowczyk,6-3 6-4 3-6 4-6 6-3,5,R64,210
+2013-560,US Open,Hard,G,103720,Lleyton Hewitt,105223,Juan Martin del Potro,6-4 5-7 3-6 7-6(2) 6-1,5,R64,243
+2013-560,US Open,Hard,G,104918,Andy Murray,104919,Leonardo Mayer,7-5 6-1 3-6 6-1,5,R64,161
+2013-560,US Open,Hard,G,104252,Florian Mayer,105385,Donald Young,7-5 6-3 6-4,5,R64,143
+2013-560,US Open,Hard,G,104312,Andreas Seppi,104500,Somdev Devvarman,7-6(8) 6-4 7-5,5,R64,160
+2013-560,US Open,Hard,G,104797,Denis Istomin,104735,Tobias Kamke,6-4 6-2 6-2,5,R64,102
+2013-560,US Open,Hard,G,104527,Stan Wawrinka,103333,Ivo Karlovic,7-5 7-6(8) 6-4,5,R64,137
+2013-560,US Open,Hard,G,104571,Marcos Baghdatis,104731,Kevin Anderson,6-2 6-2 6-2,5,R64,85
+2013-560,US Open,Hard,G,103898,Julien Benneteau,104871,Jeremy Chardy,6-4 6-3 6-4,5,R64,115
+2013-560,US Open,Hard,G,104607,Tomas Berdych,106045,Denis Kudla,7-6(3) 7-6(3) 6-3,5,R64,165
+2013-560,US Open,Hard,G,104755,Richard Gasquet,103565,Stephane Robert,6-3 7-5 7-5,5,R64,132
+2013-560,US Open,Hard,G,104098,Dmitry Tursunov,105558,Guillaume Rufin,7-6(4) 1-1 RET,5,R64,72
+2013-560,US Open,Hard,G,103852,Feliciano Lopez,105614,Bradley Klahn,6-4 7-6(4) 4-6 7-5,5,R64,177
+2013-560,US Open,Hard,G,105683,Milos Raonic,104665,Pablo Andujar,6-1 6-2 6-4,5,R64,122
+2013-560,US Open,Hard,G,106058,Jack Sock,104216,Maximo Gonzalez,7-6(3) 1-6 7-5 6-2,5,R64,152
+2013-560,US Open,Hard,G,104386,Janko Tipsarevic,104534,Dudi Sela,6-4 6-4 6-1,5,R64,132
+2013-560,US Open,Hard,G,105062,Mikhail Kukushkin,104890,Andreas Haider Maurer,6-4 6-4 7-5,5,R64,132
+2013-560,US Open,Hard,G,103970,David Ferrer,105138,Roberto Bautista Agut,6-3 6-7(5) 6-1 6-2,5,R64,166
+2013-560,US Open,Hard,G,103819,Roger Federer,104122,Carlos Berlocq,6-3 6-2 6-1,5,R64,95
+2013-560,US Open,Hard,G,105173,Adrian Mannarino,105023,Sam Querrey,7-6(4) 7-6(5) 6-7(5) 6-4,5,R64,195
+2013-560,US Open,Hard,G,103990,Tommy Robredo,104433,Frank Dancevic,6-4 6-4 6-1,5,R64,100
+2013-560,US Open,Hard,G,105554,Daniel Evans,106071,Bernard Tomic,1-6 6-3 7-6(4) 6-3,5,R64,140
+2013-560,US Open,Hard,G,104545,John Isner,104792,Gael Monfils,7-5 6-2 4-6 7-6(4),5,R64,175
+2013-560,US Open,Hard,G,104259,Philipp Kohlschreiber,104273,Edouard Roger Vasselin,6-3 6-2 5-7 6-2,5,R64,153
+2013-560,US Open,Hard,G,104471,Ivan Dodig,103786,Nikolay Davydenko,6-1 6-4 6-4,5,R64,103
+2013-560,US Open,Hard,G,104745,Rafael Nadal,104297,Rogerio Dutra Silva,6-2 6-1 6-0,5,R64,92
+2013-560,US Open,Hard,G,104925,Novak Djokovic,105311,Joao Sousa,6-0 6-2 6-2,5,R32,100
+2013-560,US Open,Hard,G,104719,Marcel Granollers,105065,Tim Smyczek,6-4 4-6 0-6 6-3 7-5,5,R32,204
+2013-560,US Open,Hard,G,104022,Mikhail Youzhny,103163,Tommy Haas,6-3 6-2 2-6 6-3,5,R32,149
+2013-560,US Open,Hard,G,103720,Lleyton Hewitt,105539,Evgeny Donskoy,6-3 7-6(5) 3-6 6-1,5,R32,175
+2013-560,US Open,Hard,G,104918,Andy Murray,104252,Florian Mayer,7-6(2) 6-2 6-2,5,R32,119
+2013-560,US Open,Hard,G,104797,Denis Istomin,104312,Andreas Seppi,6-3 6-4 2-6 3-6 6-1,5,R32,185
+2013-560,US Open,Hard,G,104527,Stan Wawrinka,104571,Marcos Baghdatis,6-3 6-2 6-7(1) 7-6(7),5,R32,201
+2013-560,US Open,Hard,G,104607,Tomas Berdych,103898,Julien Benneteau,6-0 6-3 6-2,5,R32,114
+2013-560,US Open,Hard,G,104755,Richard Gasquet,104098,Dmitry Tursunov,6-3 2-6 6-4 4-2 RET,5,R32,148
+2013-560,US Open,Hard,G,105683,Milos Raonic,103852,Feliciano Lopez,6-7(4) 6-4 6-3 6-4,5,R32,157
+2013-560,US Open,Hard,G,104386,Janko Tipsarevic,106058,Jack Sock,3-6 7-6(1) 6-1 6-2,5,R32,153
+2013-560,US Open,Hard,G,103970,David Ferrer,105062,Mikhail Kukushkin,6-4 6-3 4-6 6-4,5,R32,171
+2013-560,US Open,Hard,G,103819,Roger Federer,105173,Adrian Mannarino,6-3 6-0 6-2,5,R32,81
+2013-560,US Open,Hard,G,103990,Tommy Robredo,105554,Daniel Evans,7-6(6) 6-1 4-6 7-5,5,R32,193
+2013-560,US Open,Hard,G,104259,Philipp Kohlschreiber,104545,John Isner,6-4 3-6 7-5 7-6(5),5,R32,167
+2013-560,US Open,Hard,G,104745,Rafael Nadal,104471,Ivan Dodig,6-4 6-3 6-3,5,R32,128
+2013-560,US Open,Hard,G,104925,Novak Djokovic,104719,Marcel Granollers,6-3 6-0 6-0,5,R16,79
+2013-560,US Open,Hard,G,104022,Mikhail Youzhny,103720,Lleyton Hewitt,6-3 3-6 6-7(3) 6-4 7-5,5,R16,238
+2013-560,US Open,Hard,G,104918,Andy Murray,104797,Denis Istomin,6-7(5) 6-1 6-4 6-4,5,R16,187
+2013-560,US Open,Hard,G,104527,Stan Wawrinka,104607,Tomas Berdych,3-6 6-1 7-6(6) 6-2,5,R16,167
+2013-560,US Open,Hard,G,104755,Richard Gasquet,105683,Milos Raonic,6-7(4) 7-6(4) 2-6 7-6(9) 7-5,5,R16,280
+2013-560,US Open,Hard,G,103970,David Ferrer,104386,Janko Tipsarevic,7-6(2) 3-6 7-5 7-6(3),5,R16,237
+2013-560,US Open,Hard,G,103990,Tommy Robredo,103819,Roger Federer,7-6(3) 6-3 6-4,5,R16,144
+2013-560,US Open,Hard,G,104745,Rafael Nadal,104259,Philipp Kohlschreiber,6-7(4) 6-4 6-3 6-1,5,R16,192
+2013-560,US Open,Hard,G,104925,Novak Djokovic,104022,Mikhail Youzhny,6-3 6-2 3-6 6-0,5,QF,154
+2013-560,US Open,Hard,G,104527,Stan Wawrinka,104918,Andy Murray,6-4 6-3 6-2,5,QF,135
+2013-560,US Open,Hard,G,104755,Richard Gasquet,103970,David Ferrer,6-3 6-1 4-6 2-6 6-3,5,QF,203
+2013-560,US Open,Hard,G,104745,Rafael Nadal,103990,Tommy Robredo,6-0 6-2 6-2,5,QF,100
+2013-560,US Open,Hard,G,104925,Novak Djokovic,104527,Stan Wawrinka,2-6 7-6(4) 3-6 6-3 6-4,5,SF,249
+2013-560,US Open,Hard,G,104745,Rafael Nadal,104755,Richard Gasquet,6-4 7-6(1) 6-2,5,SF,141
+2013-560,US Open,Hard,G,104745,Rafael Nadal,104925,Novak Djokovic,6-2 3-6 6-4 6-1,5,F,201
+2013-D080,Davis Cup WG PO: BEL vs ISR,Clay,D,104327,Steve Darcis,104534,Dudi Sela,6-1 6-2 6-2,5,RR,
+2013-D080,Davis Cup WG PO: BEL vs ISR,Clay,D,104804,Amir Weintraub,105074,Ruben Bemelmans,6-3 2-6 6-7(2) 7-6(4) 6-4,5,RR,
+2013-D080,Davis Cup WG PO: BEL vs ISR,Clay,D,105074,Ruben Bemelmans,104534,Dudi Sela,7-5 3-6 6-0 6-4,5,RR,
+2013-D080,Davis Cup WG PO: BEL vs ISR,Clay,D,104327,Steve Darcis,104804,Amir Weintraub,6-2 6-2 6-2,5,RR,
+2013-D040,Davis Cup G1 PO: DOM vs CHI,Hard,D,105497,Jose Hernandez,104154,Paul Capdeville,6-4 7-6(3) 7-5,5,RR,
+2013-D040,Davis Cup G1 PO: DOM vs CHI,Hard,D,103607,Victor Estrella,106426,Cristian Garin,7-5 6-2 6-4,5,RR,
+2013-D040,Davis Cup G1 PO: DOM vs CHI,Hard,D,106232,Roberto Cid,111797,Nicolas Jarry,6-4 2-2,3,RR,
+2013-D040,Davis Cup G1 PO: DOM vs CHI,Hard,D,106426,Cristian Garin,126209,Peter Bertran,7-5 7-5,3,RR,
+2013-D041,Davis Cup G1 PO: SLO vs RSA,Clay,D,105641,Blaz Rola,103573,Rik De Voest,6-1 6-4 6-4,5,RR,
+2013-D041,Davis Cup G1 PO: SLO vs RSA,Clay,D,104882,Blaz Kavcic,105434,Ruan Roelofse,6-1 6-3 6-4,5,RR,
+2013-D041,Davis Cup G1 PO: SLO vs RSA,Clay,D,105386,Janez Semrajc,103573,Rik De Voest,6-2 6-4,3,RR,
+2013-D041,Davis Cup G1 PO: SLO vs RSA,Clay,D,105707,Nicolaas Scholtz,105641,Blaz Rola,2-3 RET,3,RR,
+2013-D042,Davis Cup G1 PO: SVK vs SWE,Hard,D,105413,Andrej Martin,106035,Isak Arvidsson,6-2 6-3 6-4,5,RR,
+2013-D042,Davis Cup G1 PO: SVK vs SWE,Hard,D,105041,Lukas Lacko,105436,Markus Eriksson,6-2 6-3 6-4,5,RR,
+2013-D042,Davis Cup G1 PO: SVK vs SWE,Hard,D,105436,Markus Eriksson,105413,Andrej Martin,6-7(3) 6-2 7-5 6-4,5,RR,
+2013-D042,Davis Cup G1 PO: SVK vs SWE,Hard,D,105041,Lukas Lacko,106035,Isak Arvidsson,6-2 6-3 6-3,5,RR,
+2013-D073,Davis Cup G1 PO: TPE vs INA,Hard,D,105946,Liang Chi Huang,106309,Wisnu Adi Nugroho,6-0 6-1 6-3,5,RR,
+2013-D073,Davis Cup G1 PO: TPE vs INA,Hard,D,104251,Ti Chen,105464,Christopher Rungkat,6-2 6-3 6-1,5,RR,
+2013-D073,Davis Cup G1 PO: TPE vs INA,Hard,D,105946,Liang Chi Huang,105464,Christopher Rungkat,2-6 6-3 6-2,3,RR,
+2013-D073,Davis Cup G1 PO: TPE vs INA,Hard,D,104251,Ti Chen,105812,David Agung Susanto,6-3 6-4,3,RR,
+2013-D039,Davis Cup G2 R3: ESA vs VEN,Hard,D,104763,Rafael Arevalo,105961,David Souto,5-7 6-3 7-6(3) 6-1,5,RR,
+2013-D039,Davis Cup G2 R3: ESA vs VEN,Hard,D,106175,Ricardo Rodriguez,105656,Marcelo Arevalo,1-6 7-6(4) 6-2 6-4,5,RR,
+2013-D039,Davis Cup G2 R3: ESA vs VEN,Hard,D,105961,David Souto,105656,Marcelo Arevalo,6-7(3) 6-3 7-6(3) 6-3,5,RR,
+2013-D059,Davis Cup G2 R3: LAT vs FIN,Hard,D,106100,Micke Kontinen,108761,Mikelis Libietis,6-4 4-6 6-3 6-4,5,RR,
+2013-D059,Davis Cup G2 R3: LAT vs FIN,Hard,D,105208,Ernests Gulbis,109520,Herkko Pollanen,6-2 6-4 6-1,5,RR,
+2013-D059,Davis Cup G2 R3: LAT vs FIN,Hard,D,105208,Ernests Gulbis,104768,Juho Paukku,6-3 6-4 6-4,5,RR,
+2013-D059,Davis Cup G2 R3: LAT vs FIN,Hard,D,109520,Herkko Pollanen,106342,Martins Podzus,6-4 6-4,3,RR,
+2013-D060,Davis Cup G2 R3: MDA vs POR,Hard,D,105430,Radu Albot,105671,Gastao Elias,6-3 2-6 6-4 6-4,5,RR,
+2013-D060,Davis Cup G2 R3: MDA vs POR,Hard,D,105311,Joao Sousa,106201,Maxim Dubarenco,6-7(4) 7-6(4) 6-1 6-3,5,RR,
+2013-D060,Davis Cup G2 R3: MDA vs POR,Hard,D,105430,Radu Albot,105311,Joao Sousa,3-6 3-6 6-3 6-4 11-9,5,RR,
+2013-D060,Davis Cup G2 R3: MDA vs POR,Hard,D,104349,Rui Machado,106201,Maxim Dubarenco,7-5 6-1 6-3,5,RR,
+2013-D036,Davis Cup G2 R3: PHI vs NZL,Clay,D,105030,Michael Venus,104604,Ruben Gonzales,4-6 6-3 4-6 7-6(4) 6-0,5,RR,
+2013-D036,Davis Cup G2 R3: PHI vs NZL,Clay,D,104907,Jose Rubin Statham,108594,Johnny Arcilla,6-4 6-2 6-4,5,RR,
+2013-D036,Davis Cup G2 R3: PHI vs NZL,Clay,D,104604,Ruben Gonzales,104907,Jose Rubin Statham,7-6(2) 4-6 1-6 7-5 8-6,5,RR,
+2013-D036,Davis Cup G2 R3: PHI vs NZL,Clay,D,105030,Michael Venus,104600,Treat Conrad Huey,5-7 4-6 6-3 6-1 6-3,5,RR,
+2013-D076,Davis Cup WG PO: CRO vs GBR,Clay,D,104918,Andy Murray,106432,Borna Coric,6-3 6-0 6-3,5,RR,
+2013-D076,Davis Cup WG PO: CRO vs GBR,Clay,D,104471,Ivan Dodig,105554,Daniel Evans,6-3 6-2 6-3,5,RR,
+2013-D076,Davis Cup WG PO: CRO vs GBR,Clay,D,104918,Andy Murray,104471,Ivan Dodig,6-4 6-2 6-4,5,RR,
+2013-D076,Davis Cup WG PO: CRO vs GBR,Clay,D,105554,Daniel Evans,106207,Mate Pavic,6-4 7-6(4),3,RR,
+2013-D074,Davis Cup WG PO: ESP vs UKR,Clay,D,104269,Fernando Verdasco,105238,Alexandr Dolgopolov,3-6 6-4 6-4 6-2,5,RR,
+2013-D074,Davis Cup WG PO: ESP vs UKR,Clay,D,104745,Rafael Nadal,104660,Sergiy Stakhovsky,6-0 6-0 6-4,5,RR,
+2013-D074,Davis Cup WG PO: ESP vs UKR,Clay,D,104043,Marc Lopez,104920,Denys Molchanov,6-3 6-3,3,RR,
+2013-D074,Davis Cup WG PO: ESP vs UKR,Clay,D,104269,Fernando Verdasco,106169,Vladyslav Manafov,6-2 6-1,3,RR,
+2013-D078,Davis Cup WG PO: GER vs BRA,Hard,D,104259,Philipp Kohlschreiber,104297,Rogerio Dutra Silva,6-3 7-5 6-4,5,RR,
+2013-D078,Davis Cup WG PO: GER vs BRA,Hard,D,104252,Florian Mayer,105064,Thomaz Bellucci,6-4 6-1 6-2,5,RR,
+2013-D078,Davis Cup WG PO: GER vs BRA,Hard,D,104978,Daniel Brands,105064,Thomaz Bellucci,6-4 6-2 6-3,5,RR,
+2013-D078,Davis Cup WG PO: GER vs BRA,Hard,D,104252,Florian Mayer,104297,Rogerio Dutra Silva,6-4 6-4,3,RR,
+2013-D081,Davis Cup WG PO: JPN vs COL,Hard,D,105453,Kei Nishikori,104268,Alejandro Falla,6-3 6-4 6-4,5,RR,
+2013-D081,Davis Cup WG PO: JPN vs COL,Hard,D,105053,Santiago Giraldo,104424,Go Soeda,6-4 3-6 7-5 3-6 6-1,5,RR,
+2013-D081,Davis Cup WG PO: JPN vs COL,Hard,D,105453,Kei Nishikori,105053,Santiago Giraldo,6-1 6-2 6-4,5,RR,
+2013-D081,Davis Cup WG PO: JPN vs COL,Hard,D,104424,Go Soeda,104268,Alejandro Falla,4-6 6-4 6-3 6-3,5,RR,
+2013-D075,Davis Cup WG PO: NED vs AUT,Clay,D,104898,Robin Haase,103594,Oliver Marach,6-4 6-3 6-1,5,RR,
+2013-D075,Davis Cup WG PO: NED vs AUT,Clay,D,105217,Thiemo De Bakker,103781,Jurgen Melzer,5-7 7-5 5-7 6-4 6-1,5,RR,
+2013-D075,Davis Cup WG PO: NED vs AUT,Clay,D,104619,Jesse Huta Galung,103781,Jurgen Melzer,3-6 7-5 6-3,3,RR,
+2013-D075,Davis Cup WG PO: NED vs AUT,Clay,D,105217,Thiemo De Bakker,103594,Oliver Marach,W/O,5,RR,
+2013-D079,Davis Cup WG PO: POL vs AUS,Clay,D,103720,Lleyton Hewitt,103997,Lukasz Kubot,6-1 6-3 6-2,5,RR,
+2013-D079,Davis Cup WG PO: POL vs AUS,Clay,D,106071,Bernard Tomic,104308,Michal Przysiezny,7-5 7-6(1) 6-4,5,RR,
+2013-D079,Davis Cup WG PO: POL vs AUS,Clay,D,106071,Bernard Tomic,103997,Lukasz Kubot,6-4 7-6(5) 6-3,5,RR,
+2013-D079,Davis Cup WG PO: POL vs AUS,Clay,D,106401,Nick Kyrgios,104308,Michal Przysiezny,4-1 RET,3,RR,
+2013-D077,Davis Cup WG PO: SUI vs ECU,Hard,D,104527,Stan Wawrinka,105877,Emilio Gomez,6-4 6-3 6-3,5,RR,
+2013-D077,Davis Cup WG PO: SUI vs ECU,Hard,D,103843,Marco Chiudinelli,104673,Julio Cesar Campozano,3-6 6-1 6-3 7-6(7),5,RR,
+2013-D077,Davis Cup WG PO: SUI vs ECU,Hard,D,103967,Michael Lammer,105933,Roberto Quiroz,6-3 2-6 6-2,3,RR,
+2013-D077,Davis Cup WG PO: SUI vs ECU,Hard,D,105271,Gonzalo Escobar,103843,Marco Chiudinelli,6-0 7-5,3,RR,
+2013-D014,Davis Cup WG SF: CZE vs ARG,Hard,D,103285,Radek Stepanek,104338,Juan Monaco,7-6(3) 6-3 6-2,5,RR,
+2013-D014,Davis Cup WG SF: CZE vs ARG,Hard,D,104607,Tomas Berdych,104919,Leonardo Mayer,6-4 4-6 6-3 6-4,5,RR,
+2013-D014,Davis Cup WG SF: CZE vs ARG,Hard,D,104547,Horacio Zeballos,104586,Lukas Rosol,4-6 7-6(6) 6-4,3,RR,
+2013-D014,Davis Cup WG SF: CZE vs ARG,Hard,D,104919,Leonardo Mayer,106210,Jiri Vesely,6-4 6-4,3,RR,
+2013-D013,Davis Cup WG SF: SRB vs CAN,Clay,D,104925,Novak Djokovic,105577,Vasek Pospisil,6-2 6-0 6-4,5,RR,
+2013-D013,Davis Cup WG SF: SRB vs CAN,Clay,D,105683,Milos Raonic,104386,Janko Tipsarevic,5-7 6-3 3-6 6-3 10-8,5,RR,
+2013-D013,Davis Cup WG SF: SRB vs CAN,Clay,D,104925,Novak Djokovic,105683,Milos Raonic,7-6(1) 6-2 6-2,5,RR,
+2013-D013,Davis Cup WG SF: SRB vs CAN,Clay,D,104386,Janko Tipsarevic,105577,Vasek Pospisil,7-6(3) 6-2 7-6(6),5,RR,
+2013-5014,Shanghai Masters,Hard,M,104719,Marcel Granollers,104386,Janko Tipsarevic,6-4 6-4,3,R64,85
+2013-5014,Shanghai Masters,Hard,M,104926,Fabio Fognini,103893,Paolo Lorenzi,4-6 7-6(5) 6-4,3,R64,153
+2013-5014,Shanghai Masters,Hard,M,103990,Tommy Robredo,103656,Albert Montanes,6-4 6-1,3,R64,56
+2013-5014,Shanghai Masters,Hard,M,105577,Vasek Pospisil,104755,Richard Gasquet,6-3 6-4,3,R64,70
+2013-5014,Shanghai Masters,Hard,M,104792,Gael Monfils,105147,Tatsuma Ito,6-3 6-2,3,R64,54
+2013-5014,Shanghai Masters,Hard,M,104312,Andreas Seppi,103720,Lleyton Hewitt,6-4 6-2,3,R64,81
+2013-5014,Shanghai Masters,Hard,M,104586,Lukas Rosol,103898,Julien Benneteau,6-3 1-6 6-3,3,R64,96
+2013-5014,Shanghai Masters,Hard,M,104252,Florian Mayer,105842,Di Wu,6-3 6-3,3,R64,68
+2013-5014,Shanghai Masters,Hard,M,105332,Benoit Paire,104468,Gilles Simon,6-4 6-3,3,R64,69
+2013-5014,Shanghai Masters,Hard,M,105453,Kei Nishikori,105777,Grigor Dimitrov,6-3 6-4,3,R64,82
+2013-5014,Shanghai Masters,Hard,M,103781,Jurgen Melzer,104471,Ivan Dodig,4-6 6-3 6-4,3,R64,109
+2013-5014,Shanghai Masters,Hard,M,104665,Pablo Andujar,104022,Mikhail Youzhny,5-2 RET,3,R64,34
+2013-5014,Shanghai Masters,Hard,M,104259,Philipp Kohlschreiber,105001,Mao Xin Gong,7-5 6-2,3,R64,61
+2013-5014,Shanghai Masters,Hard,M,104978,Daniel Brands,104268,Alejandro Falla,7-6(3) 7-5,3,R64,83
+2013-5014,Shanghai Masters,Hard,M,103163,Tommy Haas,105023,Sam Querrey,6-4 6-4,3,R64,62
+2013-5014,Shanghai Masters,Hard,M,104597,Nicolas Almagro,104424,Go Soeda,7-6(5) 6-2,3,R64,74
+2013-5014,Shanghai Masters,Hard,M,104871,Jeremy Chardy,106071,Bernard Tomic,7-5 6-2,3,R64,86
+2013-5014,Shanghai Masters,Hard,M,103852,Feliciano Lopez,103813,Jarkko Nieminen,7-6(2) 4-6 6-3,3,R64,116
+2013-5014,Shanghai Masters,Hard,M,104731,Kevin Anderson,103812,Victor Hanescu,4-6 7-6(5) 7-6(4),3,R64,143
+2013-5014,Shanghai Masters,Hard,M,104269,Fernando Verdasco,105585,Ze Zhang,7-5 6-2,3,R64,70
+2013-5014,Shanghai Masters,Hard,M,105683,Milos Raonic,104308,Michal Przysiezny,6-4 6-4,3,R64,72
+2013-5014,Shanghai Masters,Hard,M,104545,John Isner,105053,Santiago Giraldo,4-6 7-5 7-5,3,R64,138
+2013-5014,Shanghai Masters,Hard,M,104122,Carlos Berlocq,104098,Dmitry Tursunov,4-6 6-4 6-4,3,R64,126
+2013-5014,Shanghai Masters,Hard,M,105238,Alexandr Dolgopolov,103188,Michael Russell,6-1 6-3,3,R64,61
+2013-5014,Shanghai Masters,Hard,M,104925,Novak Djokovic,104719,Marcel Granollers,6-2 6-0,3,R32,71
+2013-5014,Shanghai Masters,Hard,M,104926,Fabio Fognini,103990,Tommy Robredo,7-6(3) 2-1 RET,3,R32,76
+2013-5014,Shanghai Masters,Hard,M,104792,Gael Monfils,105577,Vasek Pospisil,7-5 7-6(4),3,R32,111
+2013-5014,Shanghai Masters,Hard,M,103819,Roger Federer,104312,Andreas Seppi,6-4 6-3,3,R32,74
+2013-5014,Shanghai Masters,Hard,M,103970,David Ferrer,104586,Lukas Rosol,6-3 6-4,3,R32,72
+2013-5014,Shanghai Masters,Hard,M,104252,Florian Mayer,105332,Benoit Paire,7-6(1) 7-5,3,R32,84
+2013-5014,Shanghai Masters,Hard,M,105453,Kei Nishikori,103781,Jurgen Melzer,6-4 3-6 6-1,3,R32,108
+2013-5014,Shanghai Masters,Hard,M,104542,Jo-Wilfried Tsonga,104665,Pablo Andujar,6-3 6-2,3,R32,65
+2013-5014,Shanghai Masters,Hard,M,105223,Juan Martin del Potro,104259,Philipp Kohlschreiber,3-6 6-3 7-6(4),3,R32,125
+2013-5014,Shanghai Masters,Hard,M,103163,Tommy Haas,104978,Daniel Brands,6-4 6-4,3,R32,72
+2013-5014,Shanghai Masters,Hard,M,104597,Nicolas Almagro,104871,Jeremy Chardy,6-3 6-4,3,R32,68
+2013-5014,Shanghai Masters,Hard,M,104607,Tomas Berdych,103852,Feliciano Lopez,7-6(5) 6-2,3,R32,90
+2013-5014,Shanghai Masters,Hard,M,104527,Stan Wawrinka,104731,Kevin Anderson,6-4 3-6 7-6(5),3,R32,136
+2013-5014,Shanghai Masters,Hard,M,105683,Milos Raonic,104269,Fernando Verdasco,7-6(1) 3-6 6-3,3,R32,122
+2013-5014,Shanghai Masters,Hard,M,104122,Carlos Berlocq,104545,John Isner,6-4 7-6(4),3,R32,82
+2013-5014,Shanghai Masters,Hard,M,104745,Rafael Nadal,105238,Alexandr Dolgopolov,6-3 6-2,3,R32,59
+2013-5014,Shanghai Masters,Hard,M,104925,Novak Djokovic,104926,Fabio Fognini,6-3 6-3,3,R16,70
+2013-5014,Shanghai Masters,Hard,M,104792,Gael Monfils,103819,Roger Federer,6-4 6-7(5) 6-3,3,R16,129
+2013-5014,Shanghai Masters,Hard,M,104252,Florian Mayer,103970,David Ferrer,6-4 6-3,3,R16,80
+2013-5014,Shanghai Masters,Hard,M,104542,Jo-Wilfried Tsonga,105453,Kei Nishikori,7-6(5) 6-0,3,R16,90
+2013-5014,Shanghai Masters,Hard,M,105223,Juan Martin del Potro,103163,Tommy Haas,W/O,3,R16,
+2013-5014,Shanghai Masters,Hard,M,104597,Nicolas Almagro,104607,Tomas Berdych,6-7(6) 6-3 7-6(4),3,R16,156
+2013-5014,Shanghai Masters,Hard,M,104527,Stan Wawrinka,105683,Milos Raonic,7-6(2) 6-4,3,R16,81
+2013-5014,Shanghai Masters,Hard,M,104745,Rafael Nadal,104122,Carlos Berlocq,6-1 7-6(5),3,R16,110
+2013-5014,Shanghai Masters,Hard,M,104925,Novak Djokovic,104792,Gael Monfils,6-7(4) 6-2 6-4,3,QF,143
+2013-5014,Shanghai Masters,Hard,M,104542,Jo-Wilfried Tsonga,104252,Florian Mayer,6-2 6-3,3,QF,64
+2013-5014,Shanghai Masters,Hard,M,105223,Juan Martin del Potro,104597,Nicolas Almagro,6-3 6-3,3,QF,71
+2013-5014,Shanghai Masters,Hard,M,104745,Rafael Nadal,104527,Stan Wawrinka,7-6(10) 6-1,3,QF,106
+2013-5014,Shanghai Masters,Hard,M,104925,Novak Djokovic,104542,Jo-Wilfried Tsonga,6-2 7-5,3,SF,94
+2013-5014,Shanghai Masters,Hard,M,105223,Juan Martin del Potro,104745,Rafael Nadal,6-2 6-4,3,SF,106
+2013-5014,Shanghai Masters,Hard,M,104925,Novak Djokovic,105223,Juan Martin del Potro,6-1 3-6 7-6(3),3,F,152
+2013-D082,Davis Cup G1 PO: RUS vs RSA,Hard,D,111575,Karen Khachanov,105547,Dean Obrien,7-5 6-1 6-3,5,RR,
+2013-D082,Davis Cup G1 PO: RUS vs RSA,Hard,D,104166,Alex Bogomolov Jr,126116,Jacob Coenraad De Klerk,6-7(3) 6-0 6-4 6-1,5,RR,
+2013-D082,Davis Cup G1 PO: RUS vs RSA,Hard,D,105723,Andrey Kuznetsov,105547,Dean Obrien,6-2 6-3,3,RR,
+2013-D082,Davis Cup G1 PO: RUS vs RSA,Hard,D,104505,Konstantin Kravchuk,126116,Jacob Coenraad De Klerk,4-1 RET,5,RR,
+2013-352,Paris Masters,Hard,M,104719,Marcel Granollers,104098,Dmitry Tursunov,6-4 6-4,3,R64,90
+2013-352,Paris Masters,Hard,M,105053,Santiago Giraldo,105173,Adrian Mannarino,6-3 2-6 6-4,3,R64,123
+2013-352,Paris Masters,Hard,M,104269,Fernando Verdasco,105208,Ernests Gulbis,7-6(3) 7-6(5),3,R64,114
+2013-352,Paris Masters,Hard,M,105453,Kei Nishikori,103898,Julien Benneteau,6-4 6-2,3,R64,69
+2013-352,Paris Masters,Hard,M,104586,Lukas Rosol,104871,Jeremy Chardy,6-3 6-4,3,R64,81
+2013-352,Paris Masters,Hard,M,103917,Nicolas Mahut,105238,Alexandr Dolgopolov,7-6(6) 6-1,3,R64,80
+2013-352,Paris Masters,Hard,M,104898,Robin Haase,104797,Denis Istomin,7-6(8) 6-3,3,R64,84
+2013-352,Paris Masters,Hard,M,104665,Pablo Andujar,105577,Vasek Pospisil,6-4 2-6 6-4,3,R64,138
+2013-352,Paris Masters,Hard,M,104731,Kevin Anderson,104022,Mikhail Youzhny,4-6 7-6 2-1 RET,3,R64,111
+2013-352,Paris Masters,Hard,M,104259,Philipp Kohlschreiber,104312,Andreas Seppi,6-3 3-6 6-4,3,R64,118
+2013-352,Paris Masters,Hard,M,105777,Grigor Dimitrov,103566,Michael Llodra,6-7(5) 6-3 6-3,3,R64,111
+2013-352,Paris Masters,Hard,M,105227,Marin Cilic,104997,Igor Sijsling,5-7 6-1 6-4,3,R64,101
+2013-352,Paris Masters,Hard,M,103852,Feliciano Lopez,106071,Bernard Tomic,6-4 6-7(4) 7-6(1),3,R64,143
+2013-352,Paris Masters,Hard,M,104471,Ivan Dodig,104273,Edouard Roger Vasselin,7-6(6) 6-4,3,R64,98
+2013-352,Paris Masters,Hard,M,104308,Michal Przysiezny,103813,Jarkko Nieminen,6-3 7-6(6),3,R64,77
+2013-352,Paris Masters,Hard,M,105732,Pierre Hugues Herbert,105332,Benoit Paire,6-2 6-2,3,R64,59
+2013-352,Paris Masters,Hard,M,104745,Rafael Nadal,104719,Marcel Granollers,7-5 7-5,3,R32,102
+2013-352,Paris Masters,Hard,M,105668,Jerzy Janowicz,105053,Santiago Giraldo,7-6(3) 6-3,3,R32,87
+2013-352,Paris Masters,Hard,M,104755,Richard Gasquet,104269,Fernando Verdasco,7-5 6-7(6) 6-3,3,R32,161
+2013-352,Paris Masters,Hard,M,105453,Kei Nishikori,104542,Jo-Wilfried Tsonga,1-6 7-6(4) 7-6(7),3,R32,148
+2013-352,Paris Masters,Hard,M,103970,David Ferrer,104586,Lukas Rosol,6-0 2-6 6-3,3,R32,87
+2013-352,Paris Masters,Hard,M,104468,Gilles Simon,103917,Nicolas Mahut,6-4 6-7(5) 7-6(3),3,R32,180
+2013-352,Paris Masters,Hard,M,105683,Milos Raonic,104898,Robin Haase,6-3 6-4,3,R32,59
+2013-352,Paris Masters,Hard,M,104607,Tomas Berdych,104665,Pablo Andujar,6-2 7-5,3,R32,81
+2013-352,Paris Masters,Hard,M,103819,Roger Federer,104731,Kevin Anderson,6-4 6-4,3,R32,83
+2013-352,Paris Masters,Hard,M,104259,Philipp Kohlschreiber,103163,Tommy Haas,6-2 6-2,3,R32,74
+2013-352,Paris Masters,Hard,M,105777,Grigor Dimitrov,104926,Fabio Fognini,6-3 5-7 6-2,3,R32,112
+2013-352,Paris Masters,Hard,M,105223,Juan Martin del Potro,105227,Marin Cilic,6-4 7-6(3),3,R32,109
+2013-352,Paris Masters,Hard,M,104527,Stan Wawrinka,103852,Feliciano Lopez,6-3 3-6 6-3,3,R32,107
+2013-352,Paris Masters,Hard,M,104597,Nicolas Almagro,104471,Ivan Dodig,6-4 6-3,3,R32,66
+2013-352,Paris Masters,Hard,M,104545,John Isner,104308,Michal Przysiezny,7-6(3) 4-6 6-3,3,R32,118
+2013-352,Paris Masters,Hard,M,104925,Novak Djokovic,105732,Pierre Hugues Herbert,7-6(3) 6-3,3,R32,93
+2013-352,Paris Masters,Hard,M,104745,Rafael Nadal,105668,Jerzy Janowicz,7-5 6-4,3,R16,103
+2013-352,Paris Masters,Hard,M,104755,Richard Gasquet,105453,Kei Nishikori,6-3 6-2,3,R16,86
+2013-352,Paris Masters,Hard,M,103970,David Ferrer,104468,Gilles Simon,6-2 6-3,3,R16,77
+2013-352,Paris Masters,Hard,M,104607,Tomas Berdych,105683,Milos Raonic,7-6(13) 6-4,3,R16,116
+2013-352,Paris Masters,Hard,M,103819,Roger Federer,104259,Philipp Kohlschreiber,6-3 6-4,3,R16,64
+2013-352,Paris Masters,Hard,M,105223,Juan Martin del Potro,105777,Grigor Dimitrov,3-6 6-3 6-4,3,R16,106
+2013-352,Paris Masters,Hard,M,104527,Stan Wawrinka,104597,Nicolas Almagro,6-3 6-2,3,R16,75
+2013-352,Paris Masters,Hard,M,104925,Novak Djokovic,104545,John Isner,6-7(5) 6-1 6-2,3,R16,110
+2013-352,Paris Masters,Hard,M,104745,Rafael Nadal,104755,Richard Gasquet,6-4 6-1,3,QF,67
+2013-352,Paris Masters,Hard,M,103970,David Ferrer,104607,Tomas Berdych,4-6 7-5 6-3,3,QF,124
+2013-352,Paris Masters,Hard,M,103819,Roger Federer,105223,Juan Martin del Potro,6-3 4-6 6-3,3,QF,104
+2013-352,Paris Masters,Hard,M,104925,Novak Djokovic,104527,Stan Wawrinka,6-1 6-4,3,QF,81
+2013-352,Paris Masters,Hard,M,103970,David Ferrer,104745,Rafael Nadal,6-3 7-5,3,SF,98
+2013-352,Paris Masters,Hard,M,104925,Novak Djokovic,103819,Roger Federer,4-6 6-3 6-2,3,SF,121
+2013-352,Paris Masters,Hard,M,104925,Novak Djokovic,103970,David Ferrer,7-5 7-5,3,F,112
+2013-605,Tour Finals,Hard,F,104745,Rafael Nadal,104527,Stan Wawrinka,7-6(5) 7-6(6),3,RR,133
+2013-605,Tour Finals,Hard,F,104745,Rafael Nadal,104607,Tomas Berdych,6-4 1-6 6-3,3,RR,111
+2013-605,Tour Finals,Hard,F,104745,Rafael Nadal,103970,David Ferrer,6-3 6-2,3,RR,75
+2013-605,Tour Finals,Hard,F,104925,Novak Djokovic,104755,Richard Gasquet,7-6(5) 4-6 6-3,3,RR,129
+2013-605,Tour Finals,Hard,F,104925,Novak Djokovic,103819,Roger Federer,6-4 6-7(2) 6-2,3,RR,142
+2013-605,Tour Finals,Hard,F,104925,Novak Djokovic,105223,Juan Martin del Potro,6-3 3-6 6-3,3,RR,114
+2013-605,Tour Finals,Hard,F,104527,Stan Wawrinka,104607,Tomas Berdych,6-3 6-7(0) 6-3,3,RR,146
+2013-605,Tour Finals,Hard,F,103819,Roger Federer,105223,Juan Martin del Potro,4-6 7-6(2) 7-5,3,RR,147
+2013-605,Tour Finals,Hard,F,105223,Juan Martin del Potro,104755,Richard Gasquet,6-7(4) 6-3 7-5,3,RR,144
+2013-605,Tour Finals,Hard,F,103819,Roger Federer,104755,Richard Gasquet,6-4 6-3,3,RR,82
+2013-605,Tour Finals,Hard,F,104607,Tomas Berdych,103970,David Ferrer,6-4 6-4,3,RR,84
+2013-605,Tour Finals,Hard,F,104527,Stan Wawrinka,103970,David Ferrer,6-7(3) 6-4 6-1,3,RR,139
+2013-605,Tour Finals,Hard,F,104925,Novak Djokovic,104527,Stan Wawrinka,6-3 6-3,3,SF,85
+2013-605,Tour Finals,Hard,F,104745,Rafael Nadal,103819,Roger Federer,7-5 6-3,3,SF,80
+2013-605,Tour Finals,Hard,F,104925,Novak Djokovic,104745,Rafael Nadal,6-3 6-4,3,F,96
+2013-D015,Davis Cup WG F: SRB vs CZE,Hard,D,104925,Novak Djokovic,103285,Radek Stepanek,7-5 6-1 6-4,5,RR,
+2013-D015,Davis Cup WG F: SRB vs CZE,Hard,D,104607,Tomas Berdych,105583,Dusan Lajovic,6-3 6-4 6-3,5,RR,
+2013-D015,Davis Cup WG F: SRB vs CZE,Hard,D,104925,Novak Djokovic,104607,Tomas Berdych,6-4 7-6(5) 6-2,5,RR,
+2013-D015,Davis Cup WG F: SRB vs CZE,Hard,D,103285,Radek Stepanek,105583,Dusan Lajovic,6-3 6-1 6-1,5,RR,

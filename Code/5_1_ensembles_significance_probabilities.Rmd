@@ -1,0 +1,1049 @@
+---
+title: "Ensembles & Significance for Probabilities"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Individual Results
+
+```{r}
+atp14.basic <- readRDS("../Results/Individual/atp14_basic")
+atp14.oaf <- readRDS("../Results/Individual/atp14_oaf")
+atp14.co <- readRDS("../Results/Individual/atp14_co")
+atp14.co.binary <- readRDS("../Results/Individual/atp14_co_binary")
+atp14.h2h <- readRDS("../Results/Individual/atp14_h2h")
+atp14.h2h.binary <- readRDS("../Results/Individual/atp14_h2h_binary")
+wta14.basic <- readRDS("../Results/Individual/wta14_basic")
+wta14.oaf <- readRDS("../Results/Individual/wta14_oaf")
+wta14.co <- readRDS("../Results/Individual/wta14_co")
+wta14.co.binary <- readRDS("../Results/Individual/wta14_co_binary")
+wta14.h2h <- readRDS("../Results/Individual/wta14_h2h")
+wta14.h2h.binary <- readRDS("../Results/Individual/wta14_h2h_binary")
+
+atp18.basic <- readRDS("../Results/Individual/atp18_basic")
+atp18.oaf <- readRDS("../Results/Individual/atp18_oaf")
+atp18.co <- readRDS("../Results/Individual/atp18_co")
+atp18.co.binary <- readRDS("../Results/Individual/atp18_co_binary")
+atp18.h2h <- readRDS("../Results/Individual/atp18_h2h")
+atp18.h2h.binary <- readRDS("../Results/Individual/atp18_h2h_binary")
+wta18.basic <- readRDS("../Results/Individual/wta18_basic")
+wta18.oaf <- readRDS("../Results/Individual/wta18_oaf")
+wta18.co <- readRDS("../Results/Individual/wta18_co")
+wta18.co.binary <- readRDS("../Results/Individual/wta18_co_binary")
+wta18.h2h <- readRDS("../Results/Individual/wta18_h2h")
+wta18.h2h.binary <- readRDS("../Results/Individual/wta18_h2h_binary")
+
+atp22.basic <- readRDS("../Results/Individual/atp22_basic")
+atp22.oaf <- readRDS("../Results/Individual/atp22_oaf")
+atp22.co <- readRDS("../Results/Individual/atp22_co")
+atp22.co.binary <- readRDS("../Results/Individual/atp22_co_binary")
+atp22.h2h <- readRDS("../Results/Individual/atp22_h2h")
+atp22.h2h.binary <- readRDS("../Results/Individual/atp22_h2h_binary")
+wta22.basic <- readRDS("../Results/Individual/wta22_basic")
+wta22.oaf <- readRDS("../Results/Individual/wta22_oaf")
+wta22.co <- readRDS("../Results/Individual/wta22_co")
+wta22.co.binary <- readRDS("../Results/Individual/wta22_co_binary")
+wta22.h2h <- readRDS("../Results/Individual/wta22_h2h")
+wta22.h2h.binary <- readRDS("../Results/Individual/wta22_h2h_binary")
+
+atp14.h2h.valid <- atp14.h2h[which(atp14.h2h>0)]
+wta14.h2h.valid <- wta14.h2h[which(wta14.h2h>0)]
+atp18.h2h.valid <- atp18.h2h[which(atp18.h2h>0)]
+wta18.h2h.valid <- wta18.h2h[which(wta18.h2h>0)]
+atp22.h2h.valid <- atp22.h2h[which(atp22.h2h>0)]
+wta22.h2h.valid <- wta22.h2h[which(wta22.h2h>0)]
+
+atp14.co.valid <- atp14.co[which(atp14.co>0)]
+wta14.co.valid <- wta14.co[which(wta14.co>0)]
+atp18.co.valid <- atp18.co[which(atp18.co>0)]
+wta18.co.valid <- wta18.co[which(wta18.co>0)]
+atp22.co.valid <- atp22.co[which(atp22.co>0)]
+wta22.co.valid <- wta22.co[which(wta22.co>0)]
+```
+
+## Significance of Individuals wrt Basic Baselines
+
+```{r}
+# H0: OAF less than or equal to basic
+prop.test(c(sum(atp14.basic>0.5),sum(atp14.oaf>0.5)),c(length(atp14.basic),length(atp14.oaf)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.basic>0.5),sum(wta14.oaf>0.5)),c(length(wta14.basic),length(wta14.oaf)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.basic>0.5),sum(atp18.oaf>0.5)),c(length(atp18.basic),length(atp18.oaf)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.basic>0.5),sum(wta18.oaf>0.5)),c(length(wta18.basic),length(wta18.oaf)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.basic>0.5),sum(atp22.oaf>0.5)),c(length(atp22.basic),length(atp22.oaf)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta22.basic>0.5),sum(wta22.oaf>0.5)),c(length(wta22.basic),length(wta22.oaf)),
+          alternative="less",correct=FALSE)$p.value
+```
+
+```{r}
+# H0: CO less than or equal to basic
+prop.test(c(sum(atp14.basic>0.5),sum(atp14.co.valid>0.5)),
+          c(length(atp14.basic),length(atp14.co.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.basic>0.5),sum(wta14.co.valid>0.5)),
+          c(length(wta14.basic),length(wta14.co.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.basic>0.5),sum(atp18.co.valid>0.5)),
+          c(length(atp18.basic),length(atp18.co.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.basic>0.5),sum(wta18.co.valid>0.5)),
+          c(length(wta18.basic),length(wta18.co.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.basic>0.5),sum(atp22.co.valid>0.5)),
+          c(length(atp22.basic),length(atp22.co.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta22.basic>0.5),sum(wta22.co.valid>0.5)),
+          c(length(wta22.basic),length(wta22.co.valid)),
+          alternative="less",correct=FALSE)$p.value
+```
+
+```{r}
+# H0: H2H less than or equal to basic
+prop.test(c(sum(atp14.basic>0.5),sum(atp14.h2h.valid>0.5)),
+          c(length(atp14.basic),length(atp14.h2h.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.basic>0.5),sum(wta14.h2h.valid>0.5)),
+          c(length(wta14.basic),length(wta14.h2h.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.basic>0.5),sum(atp18.h2h.valid>0.5)),
+          c(length(atp18.basic),length(atp18.h2h.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.basic>0.5),sum(wta18.h2h.valid>0.5)),
+          c(length(wta18.basic),length(wta18.h2h.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.basic>0.5),sum(atp22.h2h.valid>0.5)),
+          c(length(atp22.basic),length(atp22.h2h.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta22.basic>0.5),sum(wta22.h2h.valid>0.5)),
+          c(length(wta22.basic),length(wta22.h2h.valid)),
+          alternative="less",correct=FALSE)$p.value
+```
+Since the one.sided p-values add to one for the less than, greater than in H0, we have significant evidence of a decrease with H2H in WTA 2022, some evidence pointing to change points backed up by the pandemic.
+
+## CO(OAF) and Significance (to Basic then OAF)
+
+```{r}
+atp14.co.oaf <- readRDS("../Results/Ensembles/atp14_co(oaf)")
+atp14.co.oaf.binary <- readRDS("../Results/Ensembles/atp14_co(oaf)_binary")
+wta14.co.oaf <- readRDS("../Results/Ensembles/wta14_co(oaf)")
+wta14.co.oaf.binary <- readRDS("../Results/Ensembles/wta14_co(oaf)_binary")
+atp18.co.oaf <- readRDS("../Results/Ensembles/atp18_co(oaf)")
+atp18.co.oaf.binary <- readRDS("../Results/Ensembles/atp18_co(oaf)_binary")
+wta18.co.oaf <- readRDS("../Results/Ensembles/wta18_co(oaf)")
+wta18.co.oaf.binary <- readRDS("../Results/Ensembles/wta18_co(oaf)_binary")
+atp22.co.oaf <- readRDS("../Results/Ensembles/atp22_co(oaf)")
+atp22.co.oaf.binary <- readRDS("../Results/Ensembles/atp22_co(oaf)_binary")
+wta22.co.oaf <- readRDS("../Results/Ensembles/wta22_co(oaf)")
+wta22.co.oaf.binary <- readRDS("../Results/Ensembles/wta22_co(oaf)_binary")
+atp14.co.oaf.valid <- atp14.co.oaf[which(atp14.co.oaf>0)]
+wta14.co.oaf.valid <- wta14.co.oaf[which(wta14.co.oaf>0)]
+atp18.co.oaf.valid <- atp18.co.oaf[which(atp18.co.oaf>0)]
+wta18.co.oaf.valid <- wta18.co.oaf[which(wta18.co.oaf>0)]
+atp22.co.oaf.valid <- atp22.co.oaf[which(atp22.co.oaf>0)]
+wta22.co.oaf.valid <- wta22.co.oaf[which(wta22.co.oaf>0)]
+```
+```{r}
+# H0: CO(OAF) less than or equal to basic
+prop.test(c(sum(atp14.basic>0.5),sum(atp14.co.oaf.valid>0.5)),
+          c(length(atp14.basic),length(atp14.co.oaf.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.basic>0.5),sum(wta14.co.oaf.valid>0.5)),
+          c(length(wta14.basic),length(wta14.co.oaf.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.basic>0.5),sum(atp18.co.oaf.valid>0.5)),
+          c(length(atp18.basic),length(atp18.co.oaf.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.basic>0.5),sum(wta18.co.oaf.valid>0.5)),
+          c(length(wta18.basic),length(wta18.co.oaf.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.basic>0.5),sum(atp22.co.oaf.valid>0.5)),
+          c(length(atp22.basic),length(atp22.co.oaf.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta22.basic>0.5),sum(wta22.co.oaf.valid>0.5)),
+          c(length(wta22.basic),length(wta22.co.oaf.valid)),
+          alternative="less",correct=FALSE)$p.value
+```
+```{r}
+# H0: CO(OAF) less than or equal to OAF
+prop.test(c(sum(atp14.oaf>0.5),sum(atp14.co.oaf.valid>0.5)),
+          c(length(atp14.oaf),length(atp14.co.oaf.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.oaf>0.5),sum(wta14.co.oaf.valid>0.5)),
+          c(length(wta14.oaf),length(wta14.co.oaf.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.oaf>0.5),sum(atp18.co.oaf.valid>0.5)),
+          c(length(atp18.oaf),length(atp18.co.oaf.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.oaf>0.5),sum(wta18.co.oaf.valid>0.5)),
+          c(length(wta18.oaf),length(wta18.co.oaf.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.oaf>0.5),sum(atp22.co.oaf.valid>0.5)),
+          c(length(atp22.oaf),length(atp22.co.oaf.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta22.oaf>0.5),sum(wta22.co.oaf.valid>0.5)),
+          c(length(wta22.oaf),length(wta22.co.oaf.valid)),
+          alternative="less",correct=FALSE)$p.value
+```
+
+## Overlays and Significance
+
+```{r}
+two.layer <- function(l1,l2){
+  # l1/l2, e.g., in H2H/G, H2H is l1 and G is l2
+  l1.valid <- which(!(l1==-1))
+  res <- l2
+  res[l1.valid] <- l1[l1.valid]
+  return(res)
+}
+three.layer <- function(l1,l2,l3){
+  # same as above, l3 is bottom layer with full coverage
+  l1.valid <- which(!(l1==-1))
+  l2.valid <- which(!(l2==-1))
+  res <- l3
+  res[l2.valid] <- l2[l2.valid]
+  res[l1.valid] <- l1[l1.valid]
+  return(res)
+}
+```
+
+### H2H/OAF
+
+```{r}
+res <- two.layer(atp14.h2h.binary,atp14.oaf>0.5)
+mean(res)
+print("p-value:")
+prop.test(c(sum(atp14.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp14.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+res <- two.layer(wta14.h2h.binary,wta14.oaf>0.5)
+mean(res)
+print("p-value:")
+prop.test(c(sum(wta14.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+
+res <- two.layer(atp18.h2h.binary,atp18.oaf>0.5)
+mean(res)
+print("p-value:")
+prop.test(c(sum(atp18.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+res <- two.layer(wta18.h2h.binary,wta18.oaf>0.5)
+mean(res)
+print("p-value:")
+prop.test(c(sum(wta18.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+
+res <- two.layer(atp22.h2h.binary,atp22.oaf>0.5)
+mean(res)
+print("p-value:")
+prop.test(c(sum(atp22.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+res <- two.layer(wta22.h2h.binary,wta22.oaf>0.5)
+mean(res)
+print("p-value:")
+prop.test(c(sum(wta22.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta22.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+```
+
+### CO/OAF
+
+```{r}
+res <- two.layer(atp14.co.binary,atp14.oaf>0.5)
+mean(res)
+print("p-value:")
+prop.test(c(sum(atp14.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp14.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+res <- two.layer(wta14.co.binary,wta14.oaf>0.5)
+mean(res)
+print("p-value:")
+prop.test(c(sum(wta14.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+
+res <- two.layer(atp18.co.binary,atp18.oaf>0.5)
+mean(res)
+print("p-value:")
+prop.test(c(sum(atp18.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+res <- two.layer(wta18.co.binary,wta18.oaf>0.5)
+mean(res)
+print("p-value:")
+prop.test(c(sum(wta18.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+
+res <- two.layer(atp22.co.binary,atp22.oaf>0.5)
+mean(res)
+print("p-value:")
+prop.test(c(sum(atp22.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+res <- two.layer(wta22.co.binary,wta22.oaf>0.5)
+mean(res)
+print("p-value:")
+prop.test(c(sum(wta22.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta22.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+```
+
+### CO(OAF)/OAF
+
+```{r}
+res <- two.layer(atp14.co.oaf.binary,atp14.oaf>0.5)
+mean(res)
+print("p-value:")
+prop.test(c(sum(atp14.basic),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp14.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+res <- two.layer(wta14.co.oaf.binary,wta14.oaf>0.5)
+mean(res)
+print("p-value:")
+prop.test(c(sum(wta14.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+
+res <- two.layer(atp18.co.oaf.binary,atp18.oaf>0.5)
+mean(res)
+print("p-value:")
+prop.test(c(sum(atp18.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+res <- two.layer(wta18.co.oaf.binary,wta18.oaf>0.5)
+mean(res)
+print("p-value:")
+prop.test(c(sum(wta18.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+
+res <- two.layer(atp22.co.oaf.binary,atp22.oaf>0.5)
+mean(res)
+print("p-value:")
+prop.test(c(sum(atp22.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+res <- two.layer(wta22.co.oaf.binary,wta22.oaf>0.5)
+mean(res)
+print("p-value:")
+prop.test(c(sum(wta22.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta22.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+```
+
+### H2H/CO/OAF
+
+```{r}
+res <- three.layer(atp14.h2h.binary,atp14.co.binary,atp14.oaf>0.5)
+mean(res)
+print("p-value")
+prop.test(c(sum(atp14.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp14.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+res <- three.layer(wta14.h2h.binary,wta14.co.binary,wta14.oaf>0.5)
+mean(res)
+print("p-value")
+prop.test(c(sum(wta14.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+
+res <- three.layer(atp18.h2h.binary,atp18.co.binary,atp18.oaf>0.5)
+mean(res)
+print("p-value")
+prop.test(c(sum(atp18.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+res <- three.layer(wta18.h2h.binary,wta18.co.binary,wta18.oaf>0.5)
+mean(res)
+print("p-value")
+prop.test(c(sum(wta18.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+
+res <- three.layer(atp22.h2h.binary,atp22.co.binary,atp22.oaf>0.5)
+mean(res)
+print("p-value")
+prop.test(c(sum(atp22.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+res <- three.layer(wta22.h2h.binary,wta22.co.binary,wta22.oaf>0.5)
+mean(res)
+print("p-value")
+prop.test(c(sum(wta14.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+```
+
+### H2H/CO(OAF)/OAF
+
+```{r}
+res <- three.layer(atp14.h2h.binary,atp14.co.oaf.binary,atp14.oaf>0.5)
+mean(res)
+print("p-value")
+prop.test(c(sum(atp14.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp14.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+res <- three.layer(wta14.h2h.binary,wta14.co.oaf.binary,wta14.oaf>0.5)
+mean(res)
+print("p-value")
+prop.test(c(sum(wta14.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+
+res <- three.layer(atp18.h2h.binary,atp18.co.oaf.binary,atp18.oaf>0.5)
+mean(res)
+print("p-value")
+prop.test(c(sum(atp18.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+res <- three.layer(wta18.h2h.binary,wta18.co.oaf.binary,wta18.oaf>0.5)
+mean(res)
+print("p-value")
+prop.test(c(sum(wta18.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+
+res <- three.layer(atp22.h2h.binary,atp22.co.oaf.binary,atp22.oaf>0.5)
+mean(res)
+print("p-value")
+prop.test(c(sum(atp22.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+print("------")
+res <- three.layer(wta22.h2h.binary,wta22.co.oaf.binary,wta22.oaf>0.5)
+mean(res)
+print("p-value")
+prop.test(c(sum(wta14.basic>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.oaf>0.5),sum(res)),rep(length(res),2),
+          alternative="less",correct=FALSE)$p.value
+```
+
+## Consensus and Significance
+
+```{r}
+consensus.2 <- function(res1,res2){
+  ind <- res1==res2 & res1>=0
+  return(res1[ind])
+}
+
+consensus.3 <- function(res1,res2,res3){
+  ind <- res1==res2 & res2==res3 & res1>=0
+  return(res1[ind])
+}
+```
+
+### H2H&&CO
+
+```{r}
+res <- consensus.2(atp14.h2h.binary,atp14.co.binary)
+mean(res)
+prop.test(c(sum(atp14.basic>0.5),sum(res)),
+          c(length(atp14.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp14.oaf>0.5),sum(res)),
+          c(length(atp14.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.2(wta14.h2h.binary,wta14.co.binary)
+mean(res)
+prop.test(c(sum(wta14.basic>0.5),sum(res)),
+          c(length(wta14.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.oaf>0.5),sum(res)),
+          c(length(wta14.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+
+res <- consensus.2(atp18.h2h.binary,atp18.co.binary)
+mean(res)
+prop.test(c(sum(atp18.basic>0.5),sum(res)),
+          c(length(atp18.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.oaf>0.5),sum(res)),
+          c(length(atp18.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.2(wta18.h2h.binary,wta18.co.binary)
+mean(res)
+prop.test(c(sum(wta18.basic>0.5),sum(res)),
+          c(length(wta18.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.oaf>0.5),sum(res)),
+          c(length(wta18.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+
+res <- consensus.2(atp22.h2h.binary,atp22.co.binary)
+mean(res)
+prop.test(c(sum(atp22.basic>0.5),sum(res)),
+          c(length(atp22.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.oaf>0.5),sum(res)),
+          c(length(atp22.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.2(wta22.h2h.binary,wta22.co.binary)
+mean(res)
+prop.test(c(sum(wta22.basic>0.5),sum(res)),
+          c(length(wta22.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta22.oaf>0.5),sum(res)),
+          c(length(wta22.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+```
+
+### H2H&&CO(OAF)
+
+```{r}
+res <- consensus.2(atp14.h2h.binary,atp14.co.oaf.binary)
+mean(res)
+prop.test(c(sum(atp14.basic>0.5),sum(res)),
+          c(length(atp14.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp14.oaf>0.5),sum(res)),
+          c(length(atp14.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.2(wta14.h2h.binary,wta14.co.oaf.binary)
+mean(res)
+prop.test(c(sum(wta14.basic>0.5),sum(res)),
+          c(length(wta14.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.oaf>0.5),sum(res)),
+          c(length(wta14.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+
+res <- consensus.2(atp18.h2h.binary,atp18.co.oaf.binary)
+mean(res)
+prop.test(c(sum(atp18.basic>0.5),sum(res)),
+          c(length(atp18.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.oaf>0.5),sum(res)),
+          c(length(atp18.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.2(wta18.h2h.binary,wta18.co.oaf.binary)
+mean(res)
+prop.test(c(sum(wta18.basic>0.5),sum(res)),
+          c(length(wta18.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.oaf>0.5),sum(res)),
+          c(length(wta18.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+
+res <- consensus.2(atp22.h2h.binary,atp22.co.oaf.binary)
+mean(res)
+prop.test(c(sum(atp22.basic>0.5),sum(res)),
+          c(length(atp22.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.oaf>0.5),sum(res)),
+          c(length(atp22.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.2(wta22.h2h.binary,wta22.co.oaf.binary)
+mean(res)
+prop.test(c(sum(wta22.basic>0.5),sum(res)),
+          c(length(wta22.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta22.oaf>0.5),sum(res)),
+          c(length(wta22.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+```
+
+### H2H&&OAF
+
+```{r}
+res <- consensus.2(atp14.h2h.binary,atp14.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp14.basic>0.5),sum(res)),
+          c(length(atp14.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp14.oaf>0.5),sum(res)),
+          c(length(atp14.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.2(wta14.h2h.binary,wta14.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta14.basic>0.5),sum(res)),
+          c(length(wta14.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.oaf>0.5),sum(res)),
+          c(length(wta14.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+
+res <- consensus.2(atp18.h2h.binary,atp18.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp18.basic>0.5),sum(res)),
+          c(length(atp18.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.oaf>0.5),sum(res)),
+          c(length(atp18.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.2(wta18.h2h.binary,wta18.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta18.basic>0.5),sum(res)),
+          c(length(wta18.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.oaf>0.5),sum(res)),
+          c(length(wta18.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+
+res <- consensus.2(atp22.h2h.binary,atp22.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp22.basic>0.5),sum(res)),
+          c(length(atp22.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.oaf>0.5),sum(res)),
+          c(length(atp22.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.2(wta22.h2h.binary,wta22.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta22.basic>0.5),sum(res)),
+          c(length(wta22.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta22.oaf>0.5),sum(res)),
+          c(length(wta22.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+```
+
+### CO&&OAF
+
+```{r}
+res <- consensus.2(atp14.co.binary,atp14.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp14.basic>0.5),sum(res)),
+          c(length(atp14.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp14.oaf>0.5),sum(res)),
+          c(length(atp14.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.2(wta14.co.binary,wta14.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta14.basic>0.5),sum(res)),
+          c(length(wta14.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.oaf>0.5),sum(res)),
+          c(length(wta14.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+
+res <- consensus.2(atp18.co.binary,atp18.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp18.basic>0.5),sum(res)),
+          c(length(atp18.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.oaf>0.5),sum(res)),
+          c(length(atp18.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.2(wta18.co.binary,wta18.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta18.basic>0.5),sum(res)),
+          c(length(wta18.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.oaf>0.5),sum(res)),
+          c(length(wta18.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+
+res <- consensus.2(atp22.co.binary,atp22.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp22.basic>0.5),sum(res)),
+          c(length(atp22.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.oaf>0.5),sum(res)),
+          c(length(atp22.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.2(wta22.co.binary,wta22.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta22.basic>0.5),sum(res)),
+          c(length(wta22.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta22.oaf>0.5),sum(res)),
+          c(length(wta22.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+```
+
+### CO(OAF)&&OAF
+
+```{r}
+res <- consensus.2(atp14.co.oaf.binary,atp14.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp14.basic>0.5),sum(res)),
+          c(length(atp14.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp14.oaf>0.5),sum(res)),
+          c(length(atp14.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.2(wta14.co.oaf.binary,wta14.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta14.basic>0.5),sum(res)),
+          c(length(wta14.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.oaf>0.5),sum(res)),
+          c(length(wta14.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+
+res <- consensus.2(atp18.co.oaf.binary,atp18.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp18.basic>0.5),sum(res)),
+          c(length(atp18.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.oaf>0.5),sum(res)),
+          c(length(atp18.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.2(wta18.co.oaf.binary,wta18.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta18.basic>0.5),sum(res)),
+          c(length(wta18.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.oaf>0.5),sum(res)),
+          c(length(wta18.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+
+res <- consensus.2(atp22.co.oaf.binary,atp22.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp22.basic>0.5),sum(res)),
+          c(length(atp22.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.oaf>0.5),sum(res)),
+          c(length(atp22.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.2(wta22.co.oaf.binary,wta22.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta22.basic>0.5),sum(res)),
+          c(length(wta22.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta22.oaf>0.5),sum(res)),
+          c(length(wta22.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+```
+
+### H2H&&CO&&OAF
+
+```{r}
+res <- consensus.3(atp14.h2h.binary,atp14.co.binary,atp14.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp14.basic>0.5),sum(res)),
+          c(length(atp14.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp14.oaf>0.5),sum(res)),
+          c(length(atp14.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.3(wta14.h2h.binary,wta14.co.binary,wta14.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta14.basic>0.5),sum(res)),
+          c(length(wta14.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.oaf>0.5),sum(res)),
+          c(length(wta14.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+
+res <- consensus.3(atp18.h2h.binary,atp18.co.binary,atp18.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp18.basic>0.5),sum(res)),
+          c(length(atp18.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.oaf>0.5),sum(res)),
+          c(length(atp18.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.3(wta18.h2h.binary,wta18.co.binary,wta18.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta18.basic>0.5),sum(res)),
+          c(length(wta18.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.oaf>0.5),sum(res)),
+          c(length(wta18.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+
+res <- consensus.3(atp22.h2h.binary,atp22.co.binary,atp22.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp22.basic>0.5),sum(res)),
+          c(length(atp22.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.oaf>0.5),sum(res)),
+          c(length(atp22.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.3(wta22.h2h.binary,wta22.co.binary,wta22.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta22.basic>0.5),sum(res)),
+          c(length(wta22.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta22.oaf>0.5),sum(res)),
+          c(length(wta22.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+```
+
+### H2H&&CO(OAF)&&OAF
+
+```{r}
+res <- consensus.3(atp14.h2h.binary,atp14.co.oaf.binary,atp14.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp14.basic>0.5),sum(res)),
+          c(length(atp14.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp14.oaf>0.5),sum(res)),
+          c(length(atp14.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.3(wta14.h2h.binary,wta14.co.oaf.binary,wta14.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta14.basic>0.5),sum(res)),
+          c(length(wta14.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.oaf>0.5),sum(res)),
+          c(length(wta14.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+
+res <- consensus.3(atp18.h2h.binary,atp18.co.oaf.binary,atp18.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp18.basic>0.5),sum(res)),
+          c(length(atp18.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.oaf>0.5),sum(res)),
+          c(length(atp18.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.3(wta18.h2h.binary,wta18.co.oaf.binary,wta18.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta18.basic>0.5),sum(res)),
+          c(length(wta18.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.oaf>0.5),sum(res)),
+          c(length(wta18.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+
+res <- consensus.3(atp22.h2h.binary,atp22.co.oaf.binary,atp22.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp22.basic>0.5),sum(res)),
+          c(length(atp22.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.oaf>0.5),sum(res)),
+          c(length(atp22.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- consensus.3(wta22.h2h.binary,wta22.co.oaf.binary,wta22.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta22.basic>0.5),sum(res)),
+          c(length(wta22.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta22.oaf>0.5),sum(res)),
+          c(length(wta22.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+```
+
+## Majority and Significance
+
+```{r}
+majority <- function(res1,res2,res3){
+  # as with consensus functions, res1-3 have same length with -1 marking invalid
+  n <- length(res1)
+  res <- c()
+  for (i in 1:n){
+    if (res1[i]==res2[i] & res1[i]>=0){
+      res <- c(res,res1[i])
+    } else if (res1[i]==res3[i] & res1[i]>=0){
+      res <- c(res,res1[i])
+    } else if (res2[i]==res3[i] & res2[i]>=0){ # still else if since we can have 1/0/-1
+      res <- c(res,res2[i])
+    }
+  }
+  return(res)
+}
+```
+
+### H2H&CO&OAF
+
+```{r}
+res <- majority(atp14.h2h.binary,atp14.co.binary,atp14.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp14.basic>0.5),sum(res)),
+          c(length(atp14.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp14.oaf>0.5),sum(res)),
+          c(length(atp14.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- majority(wta14.h2h.binary,wta14.co.binary,wta14.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta14.basic>0.5),sum(res)),
+          c(length(wta14.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.oaf>0.5),sum(res)),
+          c(length(wta14.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+
+res <- majority(atp18.h2h.binary,atp18.co.binary,atp18.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp18.basic>0.5),sum(res)),
+          c(length(atp18.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.oaf>0.5),sum(res)),
+          c(length(atp18.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- majority(wta18.h2h.binary,wta18.co.binary,wta18.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta18.basic>0.5),sum(res)),
+          c(length(wta18.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.oaf>0.5),sum(res)),
+          c(length(wta18.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+
+res <- majority(atp22.h2h.binary,atp22.co.binary,atp22.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp22.basic>0.5),sum(res)),
+          c(length(atp22.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.oaf>0.5),sum(res)),
+          c(length(atp22.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- majority(wta22.h2h.binary,wta22.co.binary,wta22.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta22.basic>0.5),sum(res)),
+          c(length(wta22.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta22.oaf>0.5),sum(res)),
+          c(length(wta22.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+```
+
+### H2H&CO(OAF)&OAF
+
+```{r}
+res <- majority(atp14.h2h.binary,atp14.co.oaf.binary,atp14.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp14.basic>0.5),sum(res)),
+          c(length(atp14.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp14.oaf>0.5),sum(res)),
+          c(length(atp14.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- majority(wta14.h2h.binary,wta14.co.oaf.binary,wta14.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta14.basic>0.5),sum(res)),
+          c(length(wta14.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.oaf>0.5),sum(res)),
+          c(length(wta14.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+
+res <- majority(atp18.h2h.binary,atp18.co.oaf.binary,atp18.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp18.basic>0.5),sum(res)),
+          c(length(atp18.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.oaf>0.5),sum(res)),
+          c(length(atp18.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- majority(wta18.h2h.binary,wta18.co.oaf.binary,wta18.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta18.basic>0.5),sum(res)),
+          c(length(wta18.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.oaf>0.5),sum(res)),
+          c(length(wta18.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+
+res <- majority(atp22.h2h.binary,atp22.co.oaf.binary,atp22.oaf>0.5)
+mean(res)
+prop.test(c(sum(atp22.basic>0.5),sum(res)),
+          c(length(atp22.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.oaf>0.5),sum(res)),
+          c(length(atp22.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+res <- majority(wta22.h2h.binary,wta22.co.oaf.binary,wta22.oaf>0.5)
+mean(res)
+prop.test(c(sum(wta22.basic>0.5),sum(res)),
+          c(length(wta22.basic),length(res)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta22.oaf>0.5),sum(res)),
+          c(length(wta22.oaf),length(res)),
+          alternative="less",correct=FALSE)$p.value
+```
+
+## Merges
+
+```{r}
+add.when.valid.2 <- function(res1,res2){
+  n <- length(res1)
+  res <- rep(0,n)
+  for (i in 1:n){
+    if (res1[i]==-1){
+      res[i] <- res2[i]
+    } else if (res2[i]==-1){
+      res[i] <- res1[i]
+    } else {
+      res[i] <- (res1[i]+res2[i])/2
+    }
+  }
+  return(res)
+}
+
+add.when.valid.3 <- function(res1,res2,res3){
+  n <- length(res1)
+  res <- rep(0,n)
+  for (i in 1:n){
+    if (res1[i]==-1){
+      res[i] <- add.when.valid.2(res2[i],res3[i])
+    } else if (res2[i]==-1){
+      res[i] <- add.when.valid.2(res1[i],res3[i])
+    } else if (res3[i]==-1){
+      res[i] <- add.when.valid.2(res1[i],res2[i])
+    } else {
+      res[i] <- mean(res1[i],res2[i],res3[i])
+    }
+  }
+  return(res)
+}
+```

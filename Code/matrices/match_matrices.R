@@ -81,3 +81,45 @@ set.to.match.of5 <- function(p.b.A,p.h.A,q.b.A,q.h.A,p.b.B,p.h.B,q.b.B,q.h.B,
   
   return(list("Q"=Q,"R"=R))
 }
+
+set.to.match.bo3.matrices <- function(p.s,p.d){
+  # p.s probability of player A winning non-deciding set
+  # p.d probability of player A winning deciding set
+  # this version includes set breaks for duration estimation
+  
+  Q <- matrix(0,nrow=6,ncol=6)
+  p.s.idx <- rbind(c(2,3),c(4,5))
+  cp.s.idx <- rbind(c(2,4),c(3,5))
+  one.idx <- rbind(c(1,2),c(5,6))
+  Q[p.s.idx] <- p.s
+  Q[cp.s.idx] <- 1-p.s
+  Q[one.idx] <- 1
+  R <- matrix(0,nrow=6,ncol=2)
+  R[3,1] <- p.s
+  R[4,2] <- 1-p.s
+  R[6,1] <- p.d
+  R[6,2] <- 1-p.d
+  return(list("Q"=Q,"R"=R))
+}
+
+set.to.match.bo5.matrices <- function(p.s,p.d){
+  # p.s probability of player A winning non-deciding set
+  # p.d probability of player A winning deciding set
+  # this version includes set breaks for duration estimation
+  
+  Q <- matrix(0,nrow=16,ncol=16)
+  p.s.idx <- rbind(c(2,3),c(3,5),c(4,6),c(9,11),c(10,12),c(14,15))
+  cp.s.idx <- rbind(c(2,4),c(3,6),c(4,7),c(8,11),c(9,12),c(13,15))
+  one.idx <- rbind(c(1,2),c(5,8),c(6,9),c(7,10),c(11,13),c(12,14),c(15,16))
+  Q[p.s.idx] <- p.s
+  Q[cp.s.idx] <- 1-p.s
+  Q[one.idx] <- 1
+  R <- matrix(0,nrow=16,ncol=2)
+  R[8,1] <- p.s
+  R[10,2] <- 1-p.s
+  R[13,1] <- p.s
+  R[14,2] <- 1-p.s
+  R[16,1] <- p.d
+  R[16,2] <- 1-p.d
+  return(list("Q"=Q,"R"=R))
+}

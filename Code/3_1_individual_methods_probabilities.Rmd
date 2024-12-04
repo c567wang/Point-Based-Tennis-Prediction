@@ -1,0 +1,581 @@
+---
+title: "Individual Methodologies"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Note get.prob function has to be changed according to whether test set is pre or post 2022.
+
+```{r}
+source("2_1_hierarchical_model_probabilities.R")
+grand.slams <- c("Australian Open","Roland Garros","Wimbledon","Us Open")
+# "Us Open" specific to 2022 test sets
+get.prob.pre.2022 <- function(p1,p2,match,atp=TRUE){
+  if (is.na(p1)||is.na(p2)){
+    return(NA)
+  }
+  if (match %in% grand.slams){
+    if (match=="US Open"){
+      ret <- match.win.prob.nonpw(p1,p2,format=0+atp)
+    } else {
+      ret <- match.win.prob.nonpw(p1,p2,format=4+atp)
+    }
+  } else {
+    ret <- match.win.prob.nonpw(p1,p2,format=0)
+  }
+  return(ret)
+}
+get.prob.post.2022 <- function(p1,p2,match,atp=TRUE){
+  if (is.na(p1)||is.na(p2)){
+    return(NA)
+  }
+  if (match %in% grand.slams){
+    ret <- match.win.prob.nonpw(p1,p2,format=2+atp)
+  } else {
+    ret <- match.win.prob.nonpw(p1,p2,format=0)
+  }
+  return(ret)
+}
+```
+
+## Data
+
+```{r}
+# testing data
+# if Error: no more error handlers available (recursive errors?); invoking 'abort' restart
+# Warning: type 29 is unimplemented in 'type2char'Error in pmatch(rw, c("read", "write"), 0L) : 
+# INTEGER() can only be applied to a 'integer', not a 'unknown type #29'
+# just run again
+atp.test <- read.csv('../New Data/atp/atp_testing_2022.csv')
+wta.test <- read.csv('../New Data/wta/wta_testing_2022.csv')
+```
+```{r}
+# following function highlights matches that were incomplete
+# this is determined by if the score has letters ("W/O","Def.","RET" etc.)
+# takes as input the score column of a dataset and returns indexes
+ic.match <- function(score) grep("[A-Za-z]",score)
+ic.atp <- ic.match(atp.test$score)
+ic.wta <- ic.match(wta.test$score)
+```
+```{r}
+# training data
+atp.basic <- read.csv('../New Data/atp/2019-2021_atp_individual.csv')
+wta.basic <- read.csv('../New Data/wta/2019-2021_wta_individual.csv')
+atp.h2h <- read.csv('../New Data/atp/2019-2021_atp_h2h.csv')
+wta.h2h <- read.csv('../New Data/wta/2019-2021_wta_h2h.csv')
+atp.co <- read.csv('../New Data/atp/2019-2021_atp_co.csv')
+wta.co <- read.csv('../New Data/wta/2019-2021_wta_co.csv')
+# for the match specific datasets, they also need ic entries removed
+atp.h2h <- atp.h2h[-ic.atp,]
+wta.h2h <- wta.h2h[-ic.wta,]
+atp.co <- atp.co[-ic.atp,]
+wta.co <- wta.co[-ic.wta,]
+# remove incomplete matches for test sets
+atp.test <- atp.test[-ic.atp,]
+wta.test <- wta.test[-ic.wta,]
+# reset indices after row removals
+row.names(atp.h2h) <- NULL
+row.names(atp.co) <- NULL
+row.names(wta.h2h) <- NULL
+row.names(wta.co) <- NULL
+row.names(atp.test) <- NULL
+row.names(wta.test) <- NULL
+```
+
+Testing set sizes: ATP 2022 (1220) / WTA 2022 (1371) / ATP 2018 (1304) / WTA 2018 (1457) / ATP 2014 (1330) / WTA 2014 (1467)
+
+## Individual Methods
+
+### Basic
+
+```{r}
+# ad-hoc code used to check na rate, don't uncomment
+# wta.basic$total_pts_served <- wta.basic$grass_pts_served + 
+#   wta.basic$clay_pts_served + wta.basic$hard_pts_served
+# wta.basic$total_service_pts_won <- wta.basic$grass_service_pts_won +
+#   wta.basic$hard_service_pts_won + wta.basic$clay_service_pts_won
+# wta.basic$p.estimate <- wta.basic$total_service_pts_won/wta.basic$total_pts_served
+# ids <- unique(c(wta.test$winner_id,wta.test$loser_id))
+# wta.na.check <- wta.basic$p.estimate[which(wta.basic$player_id %in% ids)]
+# length(which(is.na(wta.na.check)))/length(wta.na.check)
+# sum(wta.basic$grass_pts_served)+sum(wta.basic$clay_pts_served)+sum(wta.basic$hard_pts_served)
+```
+
+```{r}
+# ad-hoc code used to check na rate, don't uncomment
+# atp.basic$total_pts_served <- atp.basic$grass_pts_served + 
+#   atp.basic$clay_pts_served + atp.basic$hard_pts_served
+# atp.basic$total_service_pts_won <- atp.basic$grass_service_pts_won +
+#   atp.basic$hard_service_pts_won + atp.basic$clay_service_pts_won
+# atp.basic$p.estimate <- atp.basic$total_service_pts_won/atp.basic$total_pts_served
+# ids <- unique(c(atp.test$winner_id,atp.test$loser_id))
+# atp.na.check <- atp.basic$p.estimate[which(atp.basic$player_id %in% ids)]
+# length(which(is.na(atp.na.check)))/length(atp.na.check)
+# sum(atp.basic$grass_pts_served)+sum(atp.basic$clay_pts_served)+sum(atp.basic$hard_pts_served)
+```
+
+```{r}
+# augmentations to training set
+atp.basic$total_pts_served <- atp.basic$grass_pts_served + 
+  atp.basic$clay_pts_served + atp.basic$hard_pts_served
+atp.basic$total_service_pts_won <- atp.basic$grass_service_pts_won +
+  atp.basic$hard_service_pts_won + atp.basic$clay_service_pts_won
+atp.basic$p.estimate <- atp.basic$total_service_pts_won/atp.basic$total_pts_served
+# since using id's we have all players, most have NA p estimates
+# plug in average of other p's
+atp.basic$p.estimate[which(is.na(atp.basic$p.estimate))] <-
+  mean(atp.basic$p.estimate[-which(is.na(atp.basic$p.estimate))])
+
+wta.basic$total_pts_served <- wta.basic$grass_pts_served + 
+  wta.basic$clay_pts_served + wta.basic$hard_pts_served
+wta.basic$total_service_pts_won <- wta.basic$grass_service_pts_won +
+  wta.basic$hard_service_pts_won + wta.basic$clay_service_pts_won
+wta.basic$p.estimate <- wta.basic$total_service_pts_won/wta.basic$total_pts_served
+# since using id's we have all players, most have NA p estimates
+# plug in average of other p's
+wta.basic$p.estimate[which(is.na(wta.basic$p.estimate))] <-
+  mean(wta.basic$p.estimate[-which(is.na(wta.basic$p.estimate))])
+```
+
+Plug in values: ATP 2022 (0.595843) / WTA 2022 (0.5227285) / ATP 2018 (0.5921587) / WTA 2018 (0.5178595) / ATP 2014 (0.585246) / WTA 2014 (0.5145110)
+
+```{r}
+n <- nrow(atp.test)
+res1 <- rep(0,n)
+exact.res1 <- rep(0,n) # for merges etc.
+for (i in 1:n){
+  winner <- atp.test$winner_id[i]
+  loser <- atp.test$loser_id[i]
+  winner.idx <- which(atp.basic$player_id==winner)
+  loser.idx <- which(atp.basic$player_id==loser)
+  if (atp.basic$p.estimate[winner.idx]>atp.basic$p.estimate[loser.idx]) res1[i]<-1
+  exact.res1[i] <- get.prob.post.2022(atp.basic$p.estimate[winner.idx],
+                                     atp.basic$p.estimate[loser.idx],
+                                     atp.test$tourney_name[i],atp=TRUE)
+}
+saveRDS(exact.res1,"../Results/Individual/atp22_basic")
+mean(res1)
+```
+
+ATP 2022 (0.6081967) / ATP 2018 (0.6173313) / ATP 2014 (0.5902256)
+
+```{r}
+n <- nrow(wta.test)
+res2 <- rep(0,n)
+exact.res2 <- rep(0,n)
+for (i in 1:n){
+  winner <- wta.test$winner_id[i]
+  loser <- wta.test$loser_id[i]
+  winner.idx <- which(wta.basic$player_id==winner)
+  loser.idx <- which(wta.basic$player_id==loser)
+  if (wta.basic$p.estimate[winner.idx]>wta.basic$p.estimate[loser.idx]) res2[i]<-1
+  exact.res2[i] <- get.prob.post.2022(wta.basic$p.estimate[winner.idx],
+                                     wta.basic$p.estimate[loser.idx],
+                                     wta.test$tourney_name[i])
+}
+saveRDS(exact.res2,"../Results/Individual/wta22_basic")
+mean(res2)
+```
+
+WTA 2022 (0.6017505) / WTA 2018 (0.6012354) / WTA 2014 (0.6203136)
+
+### Opponent-Adjusted Formula
+
+```{r}
+# same augmentation as [1]
+# augmentations to training set
+# reload set after experiment
+atp.basic$total_pts_served <- atp.basic$grass_pts_served + 
+  atp.basic$clay_pts_served + atp.basic$hard_pts_served
+atp.basic$total_service_pts_won <- atp.basic$grass_service_pts_won +
+  atp.basic$hard_service_pts_won + atp.basic$clay_service_pts_won
+atp.basic$p.estimate <- atp.basic$total_service_pts_won/atp.basic$total_pts_served
+atp.basic$p.estimate[which(is.na(atp.basic$p.estimate))] <-
+  mean(atp.basic$p.estimate[-which(is.na(atp.basic$p.estimate))])
+# get q estimates as well
+atp.basic$total_pts_received <- atp.basic$grass_pts_received +
+  atp.basic$hard_pts_received + atp.basic$clay_pts_received
+atp.basic$total_receiving_pts_won <- atp.basic$grass_receiving_pts_won +
+  atp.basic$hard_receiving_pts_won + atp.basic$clay_receiving_pts_won
+atp.basic$q.estimate <- atp.basic$total_receiving_pts_won/atp.basic$total_pts_received
+q.bar <- mean(atp.basic$q.estimate[-which(is.na(atp.basic$q.estimate))])
+atp.basic$q.estimate[which(is.na(atp.basic$q.estimate))] <- q.bar
+
+n <- nrow(atp.test)
+res3 <- rep(0,n)
+exact.res3 <- rep(0,n) # for merges etc.
+for (i in 1:n){
+  winner <- atp.test$winner_id[i]
+  loser <- atp.test$loser_id[i]
+  winner.idx <- which(atp.basic$player_id==winner)
+  loser.idx <- which(atp.basic$player_id==loser)
+  winner.adj.p <- atp.basic$p.estimate[winner.idx]-(atp.basic$q.estimate[loser.idx]-q.bar)
+  loser.adj.p <- atp.basic$p.estimate[loser.idx]-(atp.basic$q.estimate[winner.idx]-q.bar)
+  res3[i] <- winner.adj.p > loser.adj.p
+  exact.res3[i] <- get.prob.post.2022(winner.adj.p,loser.adj.p,                         
+                                      atp.test$tourney_name[i],atp=TRUE)
+}
+mean(res3)
+saveRDS(exact.res3,"../Results/Individual/atp22_oaf")
+```
+
+ATP 2022 (0.6516393) / ATP 2018 (0.6395706) / ATP 2014 (0.6383459)
+
+```{r}
+# same augmentation as [1]
+# augmentations to training set
+# reload set after experiment
+wta.basic$total_pts_served <- wta.basic$grass_pts_served + 
+  wta.basic$clay_pts_served + wta.basic$hard_pts_served
+wta.basic$total_service_pts_won <- wta.basic$grass_service_pts_won +
+  wta.basic$hard_service_pts_won + wta.basic$clay_service_pts_won
+wta.basic$p.estimate <- wta.basic$total_service_pts_won/wta.basic$total_pts_served
+wta.basic$p.estimate[which(is.na(wta.basic$p.estimate))] <-
+  mean(wta.basic$p.estimate[-which(is.na(wta.basic$p.estimate))])
+# get q estimates as well
+wta.basic$total_pts_received <- wta.basic$grass_pts_received +
+  wta.basic$hard_pts_received + wta.basic$clay_pts_received
+wta.basic$total_receiving_pts_won <- wta.basic$grass_receiving_pts_won +
+  wta.basic$hard_receiving_pts_won + wta.basic$clay_receiving_pts_won
+wta.basic$q.estimate <- wta.basic$total_receiving_pts_won/wta.basic$total_pts_received
+q.bar <-  mean(wta.basic$q.estimate[-which(is.na(wta.basic$q.estimate))])
+wta.basic$q.estimate[which(is.na(wta.basic$q.estimate))] <- q.bar
+
+n <- nrow(wta.test)
+res4 <- rep(0,n)
+exact.res4 <- rep(0,n) # for merges etc.
+for (i in 1:n){
+  winner <- wta.test$winner_id[i]
+  loser <- wta.test$loser_id[i]
+  winner.idx <- which(wta.basic$player_id==winner)
+  loser.idx <- which(wta.basic$player_id==loser)
+  winner.adj.p <- wta.basic$p.estimate[winner.idx]-(wta.basic$q.estimate[loser.idx]-q.bar)
+  loser.adj.p <- wta.basic$p.estimate[loser.idx]-(wta.basic$q.estimate[winner.idx]-q.bar)
+  res4[i] <- winner.adj.p > loser.adj.p
+  exact.res4[i] <- get.prob.post.2022(winner.adj.p,loser.adj.p,                         
+                                      wta.test$tourney_name[i])
+}
+mean(res4)
+saveRDS(exact.res4,"../Results/Individual/wta22_oaf")
+```
+
+WTA 2022 (0.6316557) / WTA 2018 (0.6300618) / WTA 2014 (0.6625767)
+
+### Head-to-Head
+
+```{r}
+# in h2h/co datasets, p1 is always the winner
+atp.h2h$w_total_pts_served <- atp.h2h$grass_pts_served1 + 
+  atp.h2h$hard_pts_served1 + atp.h2h$clay_pts_served1
+atp.h2h$w_total_service_pts_won <- atp.h2h$grass_service_pts_won1 +
+  atp.h2h$hard_service_pts_won1 + atp.h2h$clay_service_pts_won1
+atp.h2h$w_p <- atp.h2h$w_total_service_pts_won/atp.h2h$w_total_pts_served
+atp.h2h$l_total_pts_served <- atp.h2h$grass_pts_served2 + 
+  atp.h2h$hard_pts_served2 + atp.h2h$clay_pts_served2
+atp.h2h$l_total_service_pts_won <- atp.h2h$grass_service_pts_won2 +
+  atp.h2h$hard_service_pts_won2 + atp.h2h$clay_service_pts_won2
+atp.h2h$l_p <- atp.h2h$l_total_service_pts_won/atp.h2h$l_total_pts_served
+# first see accuracy for entries where h2h data is available
+h2h.valid <- which(!is.na(atp.h2h$w_p)) #l_p also works
+res5 <- rep(0,length(h2h.valid))
+exact.res5 <- rep(0,length(h2h.valid))
+for (i in 1:length(h2h.valid)){
+  res5[i] <- atp.h2h$w_p[h2h.valid[i]] > atp.h2h$l_p[h2h.valid[i]]
+  exact.res5[i] <- get.prob.post.2022(atp.h2h$w_p[h2h.valid[i]],atp.h2h$l_p[h2h.valid[i]],
+                                      atp.test$tourney_name[h2h.valid[i]],atp=TRUE)
+}
+mean(res5)
+```
+
+ATP 2022 (0.6167401) / ATP 2018 (0.6412214) / ATP 2014 (0.6433962)
+
+```{r}
+res5.sv <- rep(-1,nrow(atp.test))
+res5.sv[h2h.valid] <- res5
+exact.res5.sv <- rep(-1,nrow(atp.test))
+exact.res5.sv[h2h.valid] <- exact.res5
+saveRDS(res5.sv,"../Results/Individual/atp22_h2h_binary")
+saveRDS(exact.res5.sv,"../Results/Individual/atp22_h2h")
+```
+
+```{r}
+# in h2h/co datasets, p1 is always the winner
+wta.h2h$w_total_pts_served <- wta.h2h$grass_pts_served1 + 
+  wta.h2h$hard_pts_served1 + wta.h2h$clay_pts_served1
+wta.h2h$w_total_service_pts_won <- wta.h2h$grass_service_pts_won1 +
+  wta.h2h$hard_service_pts_won1 + wta.h2h$clay_service_pts_won1
+wta.h2h$w_p <- wta.h2h$w_total_service_pts_won/wta.h2h$w_total_pts_served
+wta.h2h$l_total_pts_served <- wta.h2h$grass_pts_served2 + 
+  wta.h2h$hard_pts_served2 + wta.h2h$clay_pts_served2
+wta.h2h$l_total_service_pts_won <- wta.h2h$grass_service_pts_won2 +
+  wta.h2h$hard_service_pts_won2 + wta.h2h$clay_service_pts_won2
+wta.h2h$l_p <- wta.h2h$l_total_service_pts_won/wta.h2h$l_total_pts_served
+# first see accuracy for entries where h2h data is available
+h2h.valid <- which(!is.na(wta.h2h$w_p)) #l_p also works
+res6 <- rep(0,length(h2h.valid))
+exact.res6 <- rep(0,length(h2h.valid))
+for (i in 1:length(h2h.valid)){
+  res6[i] <- wta.h2h$w_p[h2h.valid[i]] > wta.h2h$l_p[h2h.valid[i]]
+  exact.res6[i] <- get.prob.post.2022(wta.h2h$w_p[h2h.valid[i]],wta.h2h$l_p[h2h.valid[i]],
+                                      wta.test$tourney_name[h2h.valid[i]])
+}
+mean(res6)
+```
+
+WTA 2022 (0.5237154) / WTA 2018 (0.5906977) / WTA 2014 (0.6268657)
+
+```{r}
+res6.sv <- rep(-1,nrow(wta.test))
+res6.sv[h2h.valid] <- res6
+exact.res6.sv <- rep(-1,nrow(wta.test))
+exact.res6.sv[h2h.valid] <- exact.res6
+saveRDS(res6.sv,"../Results/Individual/wta22_h2h_binary")
+saveRDS(exact.res6.sv,"../Results/Individual/wta22_h2h")
+```
+
+### Common Opponents (No Surface Filtering)
+
+```{r}
+# in h2h/co datasets, p1 is always the winner
+atp.co$w_total_pts_served <- atp.co$grass_pts_served1 + 
+  atp.co$hard_pts_served1 + atp.co$clay_pts_served1
+atp.co$w_total_service_pts_won <- atp.co$grass_service_pts_won1 +
+  atp.co$hard_service_pts_won1 + atp.co$clay_service_pts_won1
+atp.co$w_p <- atp.co$w_total_service_pts_won/atp.co$w_total_pts_served
+atp.co$l_total_pts_served <- atp.co$grass_pts_served2 + 
+  atp.co$hard_pts_served2 + atp.co$clay_pts_served2
+atp.co$l_total_service_pts_won <- atp.co$grass_service_pts_won2 +
+  atp.co$hard_service_pts_won2 + atp.co$clay_service_pts_won2
+atp.co$l_p <- atp.co$l_total_service_pts_won/atp.co$l_total_pts_served
+# first see accuracy for entries where co data is available
+co.valid <- which(!is.na(atp.co$w_p) & !is.na(atp.co$l_p))
+res7 <- rep(0,length(co.valid))
+exact.res7 <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res7[i] <- atp.co$w_p[co.valid[i]] > atp.co$l_p[co.valid[i]]
+  exact.res7[i] <- get.prob.post.2022(atp.co$w_p[co.valid[i]],atp.co$l_p[co.valid[i]],
+                                      atp.test$tourney_name[co.valid[i]],atp=TRUE)
+}
+mean(res7)
+```
+
+ATP 2022 (0.6147144) / ATP 2018 (0.633945) / ATP 2014 (0.6341463)
+
+```{r}
+res7.sv <- rep(-1,nrow(atp.test))
+res7.sv[co.valid] <- res7
+exact.res7.sv <- rep(-1,nrow(atp.test))
+exact.res7.sv[co.valid] <- exact.res7
+saveRDS(res7.sv,"../Results/Individual/atp22_co_binary")
+saveRDS(exact.res7.sv,"../Results/Individual/atp22_co")
+```
+
+```{r}
+# in h2h/co datasets, p1 is always the winner
+wta.co$w_total_pts_served <- wta.co$grass_pts_served1 + 
+  wta.co$hard_pts_served1 + wta.co$clay_pts_served1
+wta.co$w_total_service_pts_won <- wta.co$grass_service_pts_won1 +
+  wta.co$hard_service_pts_won1 + wta.co$clay_service_pts_won1
+wta.co$w_p <- wta.co$w_total_service_pts_won/wta.co$w_total_pts_served
+wta.co$l_total_pts_served <- wta.co$grass_pts_served2 + 
+  wta.co$hard_pts_served2 + wta.co$clay_pts_served2
+wta.co$l_total_service_pts_won <- wta.co$grass_service_pts_won2 +
+  wta.co$hard_service_pts_won2 + wta.co$clay_service_pts_won2
+wta.co$l_p <- wta.co$l_total_service_pts_won/wta.co$l_total_pts_served
+# first see accuracy for entries where co data is available
+co.valid <- which(!is.na(wta.co$w_p) & !is.na(wta.co$l_p))
+res8 <- rep(0,length(co.valid))
+exact.res8 <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res8[i] <- wta.co$w_p[co.valid[i]] > wta.co$l_p[co.valid[i]]
+  exact.res8[i] <- get.prob.post.2022(wta.co$w_p[co.valid[i]],wta.co$l_p[co.valid[i]],
+                                      wta.test$tourney_name[co.valid[i]])
+}
+mean(res8)
+```
+
+WTA 2022 (0.5905512) / WTA 2018 (0.5813783) / WTA 2014 (0.6184408)
+
+```{r}
+res8.sv <- rep(-1,nrow(wta.test))
+res8.sv[co.valid] <- res8
+exact.res8.sv <- rep(-1,nrow(wta.test))
+exact.res8.sv[co.valid] <- exact.res8
+saveRDS(res8.sv,"../Results/Individual/wta22_co_binary")
+saveRDS(exact.res8.sv,"../Results/Individual/wta22_co")
+```
+
+### Common Opponents with Opponent-Adjusted Formula
+
+```{r}
+# in h2h/co datasets, p1 is always the winner
+atp.co$w_total_pts_served <- atp.co$grass_pts_served1 + 
+  atp.co$hard_pts_served1 + atp.co$clay_pts_served1
+atp.co$w_total_service_pts_won <- atp.co$grass_service_pts_won1 +
+  atp.co$hard_service_pts_won1 + atp.co$clay_service_pts_won1
+atp.co$w_p <- atp.co$w_total_service_pts_won/atp.co$w_total_pts_served
+atp.co$l_total_pts_served <- atp.co$grass_pts_served2 + 
+  atp.co$hard_pts_served2 + atp.co$clay_pts_served2
+atp.co$l_total_service_pts_won <- atp.co$grass_service_pts_won2 +
+  atp.co$hard_service_pts_won2 + atp.co$clay_service_pts_won2
+atp.co$l_p <- atp.co$l_total_service_pts_won/atp.co$l_total_pts_served
+
+atp.co$w_total_pts_received <- atp.co$grass_pts_received1 + 
+  atp.co$hard_pts_received1 + atp.co$clay_pts_received1
+atp.co$w_total_receiving_pts_won <- atp.co$grass_receiving_pts_won1 +
+  atp.co$hard_receiving_pts_won1 + atp.co$clay_receiving_pts_won1
+atp.co$w_q <- atp.co$w_total_receiving_pts_won/atp.co$w_total_pts_received
+atp.co$l_total_pts_received <- atp.co$grass_pts_received2 + 
+  atp.co$hard_pts_received2 + atp.co$clay_pts_received2
+atp.co$l_total_receiving_pts_won <- atp.co$grass_receiving_pts_won2 +
+  atp.co$hard_receiving_pts_won2 + atp.co$clay_receiving_pts_won2
+atp.co$l_q <- atp.co$l_total_receiving_pts_won/atp.co$l_total_pts_received
+q.bar <- mean(c(atp.co$w_q[which(!is.na(atp.co$w_q))],
+                atp.co$l_q[which(!is.na(atp.co$l_q))]))
+# For CO(OAF) already dealing with incomplete coverage,
+# no further imputation needed
+
+co.valid <- which(!is.na(atp.co$w_p) & !is.na(atp.co$l_p))
+resY <- rep(0,length(co.valid))
+exact.resY <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  exact.resY[i] <- get.prob.post.2022(atp.co$w_p[co.valid[i]]-(atp.co$l_q[co.valid[i]]-q.bar),
+                                      atp.co$l_p[co.valid[i]]-(atp.co$w_q[co.valid[i]]-q.bar),
+                                      atp.test$tourney_name[co.valid[i]],atp=TRUE)
+  resY[i] <- exact.resY[i] > 0.5
+}
+mean(resY)
+```
+
+ATP 2014 (0.684803) / ATP 2018 (0.666055) / ATP 2022 (0.6360116)
+
+```{r}
+resY.sv <- rep(-1,nrow(atp.test))
+resY.sv[co.valid] <- resY
+exact.resY.sv <- rep(-1,nrow(atp.test))
+exact.resY.sv[co.valid] <- exact.resY
+saveRDS(resY.sv,"../Results/Ensembles/atp22_co(oaf)_binary")
+saveRDS(exact.resY.sv,"../Results/Ensembles/atp22_co(oaf)")
+```
+
+```{r}
+# in h2h/co datasets, p1 is always the winner
+wta.co$w_total_pts_served <- wta.co$grass_pts_served1 + 
+  wta.co$hard_pts_served1 + wta.co$clay_pts_served1
+wta.co$w_total_service_pts_won <- wta.co$grass_service_pts_won1 +
+  wta.co$hard_service_pts_won1 + wta.co$clay_service_pts_won1
+wta.co$w_p <- wta.co$w_total_service_pts_won/wta.co$w_total_pts_served
+wta.co$l_total_pts_served <- wta.co$grass_pts_served2 + 
+  wta.co$hard_pts_served2 + wta.co$clay_pts_served2
+wta.co$l_total_service_pts_won <- wta.co$grass_service_pts_won2 +
+  wta.co$hard_service_pts_won2 + wta.co$clay_service_pts_won2
+wta.co$l_p <- wta.co$l_total_service_pts_won/wta.co$l_total_pts_served
+
+wta.co$w_total_pts_received <- wta.co$grass_pts_received1 + 
+  wta.co$hard_pts_received1 + wta.co$clay_pts_received1
+wta.co$w_total_receiving_pts_won <- wta.co$grass_receiving_pts_won1 +
+  wta.co$hard_receiving_pts_won1 + wta.co$clay_receiving_pts_won1
+wta.co$w_q <- wta.co$w_total_receiving_pts_won/wta.co$w_total_pts_received
+wta.co$l_total_pts_received <- wta.co$grass_pts_received2 + 
+  wta.co$hard_pts_received2 + wta.co$clay_pts_received2
+wta.co$l_total_receiving_pts_won <- wta.co$grass_receiving_pts_won2 +
+  wta.co$hard_receiving_pts_won2 + wta.co$clay_receiving_pts_won2
+wta.co$l_q <- wta.co$l_total_receiving_pts_won/wta.co$l_total_pts_received
+q.bar <- mean(c(wta.co$w_q[which(!is.na(wta.co$w_q))],
+                wta.co$l_q[which(!is.na(wta.co$l_q))]))
+# For CO(OAF) already dealing with incomplete coverage,
+# no further imputation needed
+
+co.valid <- which(!is.na(wta.co$w_p) & !is.na(wta.co$l_p))
+resX <- rep(0,length(co.valid))
+exact.resX <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  exact.resX[i] <- get.prob.post.2022(wta.co$w_p[co.valid[i]]-(wta.co$l_q[co.valid[i]]-q.bar),
+                                      wta.co$l_p[co.valid[i]]-(wta.co$w_q[co.valid[i]]-q.bar),
+                                      wta.test$tourney_name[co.valid[i]])
+  resX[i] <- exact.resX[i] > 0.5
+}
+mean(resX)
+```
+
+WTA 2014 (0.6484258) / WTA 2018 (0.6129032) / WTA 2022 (0.6102362)
+
+```{r}
+resX.sv <- rep(-1,nrow(wta.test))
+resX.sv[co.valid] <- resX
+exact.resX.sv <- rep(-1,nrow(wta.test))
+exact.resX.sv[co.valid] <- exact.resX
+saveRDS(resX.sv,"../Results/Ensembles/wta22_co(oaf)_binary")
+saveRDS(exact.resX.sv,"../Results/Ensembles/wta22_co(oaf)")
+```
+
+### Below may move to surface/time horizon notebook later
+
+### Common Opponents (Surface Filter to Opponent List Only)
+
+```{r}
+atp.co$w_p_2nsf <- atp.co$co2nsf_service_pts_won1/atp.co$co2nsf_pts_served1
+atp.co$l_p_2nsf <- atp.co$co2nsf_service_pts_won2/atp.co$co2nsf_pts_served2
+# first see accuracy for entries where co data is available
+co.valid <- which(!is.na(atp.co$w_p_2nsf) & !is.na(atp.co$l_p_2nsf))
+res9 <- rep(0,length(co.valid))
+# exact.res7 <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res9[i] <- atp.co$w_p_2nsf[co.valid[i]] > atp.co$l_p_2nsf[co.valid[i]]
+  # exact.res7[i] <- get.prob.post.2022(atp.co$w_p[co.valid[i]],atp.co$l_p[co.valid[i]],
+  #                                     atp.test$tourney_name[co.valid[i]],atp=TRUE)
+}
+mean(res9)
+```
+
+ATP 2022 (0.6042155) / ATP 2018 (0.620985) / ATP 2014 (0.631068)
+
+```{r}
+wta.co$w_p_2nsf <- wta.co$co2nsf_service_pts_won1/wta.co$co2nsf_pts_served1
+wta.co$l_p_2nsf <- wta.co$co2nsf_service_pts_won2/wta.co$co2nsf_pts_served2
+# first see accuracy for entries where co data is available
+co.valid <- which(!is.na(wta.co$w_p_2nsf) & !is.na(wta.co$l_p_2nsf))
+res10 <- rep(0,length(co.valid))
+# exact.res7 <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res10[i] <- wta.co$w_p_2nsf[co.valid[i]] > wta.co$l_p_2nsf[co.valid[i]]
+  # exact.res7[i] <- get.prob.post.2022(wta.co$w_p[co.valid[i]],wta.co$l_p[co.valid[i]],
+  #                                     wta.test$tourney_name[co.valid[i]])
+}
+mean(res10)
+```
+
+WTA 2022 (0.5740561) / WTA 2018 (0.5733445) / WTA 2014 (0.6214286)
+
+### Common Opponents (Surface Filtered to All)
+
+```{r}
+atp.co$w_p_2 <- atp.co$co2_service_pts_won1/atp.co$co2_pts_served1
+atp.co$l_p_2 <- atp.co$co2_service_pts_won2/atp.co$co2_pts_served2
+# first see accuracy for entries where co data is available
+co.valid <- which(!is.na(atp.co$w_p_2) & !is.na(atp.co$l_p_2))
+res11 <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res11[i] <- atp.co$w_p_2[co.valid[i]] > atp.co$l_p_2[co.valid[i]]
+}
+mean(res11)
+```
+
+ATP 2022 (0.6049238) / ATP 2018 (0.6199143) / ATP 2014 (0.6245955)
+
+```{r}
+wta.co$w_p_2 <- wta.co$co2_service_pts_won1/wta.co$co2_pts_served1
+wta.co$l_p_2 <- wta.co$co2_service_pts_won2/wta.co$co2_pts_served2
+# first see accuracy for entries where co data is available
+co.valid <- which(!is.na(wta.co$w_p_2) & !is.na(wta.co$l_p_2))
+res12 <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res12[i] <- wta.co$w_p_2[co.valid[i]] > wta.co$l_p_2[co.valid[i]]
+}
+mean(res12)
+```
+
+WTA 2022 (0.5650485) / WTA 2018 (0.5759866) / WTA 2014 (0.618231)

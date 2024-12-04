@@ -59,3 +59,90 @@ special.set.matrices <- function(p,q){
   
   return(list("Q"=Q,"R"=R,"P"=P))
 }
+
+game.to.set.matrices.adv <- function(p,q){
+  # This version has the advantage sets in the same DTMC
+  # A is the server of the first game of the set
+  # p: probability A wins their serving game
+  # q: probability B wins their serving game
+  
+  Q <- matrix(0,nrow=41,ncol=41)
+  p.idx <- rbind(c(1,2),c(4,7),c(5,8),c(6,9),c(11,16),c(12,17),c(13,18),
+                 c(14,19),c(15,20),c(23,27),c(24,28),c(25,29),c(26,30),c(32,34),
+                 c(33,35),c(36,37),c(39,40))
+  cp.idx <- rbind(c(1,3),c(4,8),c(5,9),c(6,10),c(11,17),c(12,18),c(13,19),
+                  c(14,20),c(15,21),c(22,27),c(23,28),c(24,29),c(25,30),c(31,34),
+                  c(32,35),c(36,38),c(39,41))
+  q.idx <- rbind(c(2,5),c(3,6),c(7,12),c(8,13),c(9,14),c(10,15),c(16,22),
+                 c(17,23),c(18,24),c(19,25),c(20,26),c(27,31),c(28,32),c(29,33),
+                 c(34,36),c(37,39),c(40,39))
+  cq.idx <- rbind(c(2,4),c(3,5),c(7,11),c(8,12),c(9,13),c(10,14),c(17,22),
+                  c(18,23),c(19,24),c(20,25),c(21,26),c(28,31),c(29,32),c(30,33),
+                  c(35,36),c(38,39),c(41,39))
+  Q[p.idx] <- p
+  Q[cp.idx] <- 1-p
+  Q[q.idx] <- q
+  Q[cq.idx] <- 1-q
+  
+  R <- matrix(0,nrow=41,ncol=4)
+  R[16,2] <- 1-q
+  R[21,3] <- q
+  R[22,1] <- p
+  R[26,4] <- 1-p
+  R[27,2] <- 1-q
+  R[30,3] <- q
+  R[31,1] <- p
+  R[33,4] <- 1-p
+  R[34,2] <- 1-q
+  R[35,3] <- q
+  R[37,2] <- 1-q
+  R[38,3] <- q
+  R[40,2] <- 1-q
+  R[41,3] <- q
+  
+  return(list("Q"=Q,"R"=R))
+}
+
+game.to.set.matrices.tb <- function(p,q,p.t){
+  # This version has the tiebreak in the same DTMC
+  # A is the server of the first game of the set
+  # p: probability A wins their serving game
+  # q: probability B wins their serving game
+  # p.t: probability of A winning tiebreak
+  
+  Q <- matrix(0,nrow=39,ncol=39)
+  p.idx <- rbind(c(1,2),c(4,7),c(5,8),c(6,9),c(11,16),c(12,17),c(13,18),
+                 c(14,19),c(15,20),c(23,27),c(24,28),c(25,29),c(26,30),c(32,34),
+                 c(33,35),c(36,37))
+  cp.idx <- rbind(c(1,3),c(4,8),c(5,9),c(6,10),c(11,17),c(12,18),c(13,19),
+                  c(14,20),c(15,21),c(22,27),c(23,28),c(24,29),c(25,30),c(31,34),
+                  c(32,35),c(36,38))
+  q.idx <- rbind(c(2,5),c(3,6),c(7,12),c(8,13),c(9,14),c(10,15),c(16,22),
+                 c(17,23),c(18,24),c(19,25),c(20,26),c(27,31),c(28,32),c(29,33),
+                 c(34,36),c(37,39))
+  cq.idx <- rbind(c(2,4),c(3,5),c(7,11),c(8,12),c(9,13),c(10,14),c(17,22),
+                  c(18,23),c(19,24),c(20,25),c(21,26),c(28,31),c(29,32),c(30,33),
+                  c(35,36),c(38,39))
+  Q[p.idx] <- p
+  Q[cp.idx] <- 1-p
+  Q[q.idx] <- q
+  Q[cq.idx] <- 1-q
+  
+  R <- matrix(0,nrow=39,ncol=2)
+  R[16,1] <- 1-q
+  R[21,2] <- q
+  R[22,1] <- p
+  R[26,2] <- 1-p
+  R[27,1] <- 1-q
+  R[30,2] <- q
+  R[31,1] <- p
+  R[33,2] <- 1-p
+  R[34,1] <- 1-q
+  R[35,2] <- q
+  R[37,1] <- 1-q
+  R[38,2] <- q
+  R[39,1] <- p.t
+  R[39,2] <- 1-p.t
+  
+  return(list("Q"=Q,"R"=R))
+}

@@ -1,0 +1,314 @@
+---
+title: "Ensembles & Significance for Durations"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Earlier Individual Results & Test Data
+
+```{r}
+# testing data
+# if Error: no more error handlers available (recursive errors?); invoking 'abort' restart
+# Warning: type 29 is unimplemented in 'type2char'Error in pmatch(rw, c("read", "write"), 0L) : 
+# INTEGER() can only be applied to a 'integer', not a 'unknown type #29'
+# just run again
+atp14.test <- read.csv('../New Data/atp/atp_testing_2014.csv')
+atp18.test <- read.csv('../New Data/atp/atp_testing_2018.csv')
+wta18.test <- read.csv('../New Data/wta/wta_testing_2018.csv')
+atp22.test <- read.csv('../New Data/atp/atp_testing_2022.csv')
+wta22.test <- read.csv('../New Data/wta/wta_testing_2022.csv')
+ic.match <- function(score) grep("[A-Za-z]",score)
+ic.atp14 <- ic.match(atp14.test$score)
+ic.atp18 <- ic.match(atp18.test$score)
+ic.wta18 <- ic.match(wta18.test$score)
+ic.atp22 <- ic.match(atp22.test$score)
+ic.wta22 <- ic.match(wta22.test$score)
+atp14.test <- atp14.test[-ic.atp14,]
+atp18.test <- atp18.test[-ic.atp18,]
+wta18.test <- wta18.test[-ic.wta18,]
+atp22.test <- atp22.test[-ic.atp22,]
+wta22.test <- wta22.test[-ic.wta22,]
+# reset indices after row removals
+row.names(atp14.test) <- NULL
+row.names(atp18.test) <- NULL
+row.names(wta18.test) <- NULL
+row.names(atp22.test) <- NULL
+row.names(wta22.test) <- NULL
+ind.atp14 <- which(!is.na(atp14.test$minutes))
+ind.atp18 <- which(!is.na(atp18.test$minutes))
+ind.wta18 <- which(!is.na(wta18.test$minutes))
+ind.atp22 <- which(!is.na(atp22.test$minutes))
+ind.wta22 <- which(!is.na(wta22.test$minutes))
+atp14.test <- atp14.test[ind.atp14,]
+atp18.test <- atp18.test[ind.atp18,]
+wta18.test <- wta18.test[ind.wta18,]
+atp22.test <- atp22.test[ind.atp22,]
+wta22.test <- wta22.test[ind.wta22,]
+```
+```{r}
+atp14.basic <- readRDS("../Results/Individual/t_atp14_basic")
+atp14.oaf <- readRDS("../Results/Individual/t_atp14_oaf")
+atp14.h2h <- readRDS("../Results/Individual/t_atp14_h2h")
+atp14.co <- readRDS("../Results/Individual/t_atp14_co")
+atp14.cooaf <- readRDS("../Results/Individual/t_atp14_co(oaf)")
+atp14.basic <- atp14.basic[ind.atp14]
+atp14.oaf <- atp14.oaf[ind.atp14]
+atp14.h2h <- atp14.h2h[ind.atp14]
+atp14.co <- atp14.co[ind.atp14]
+atp14.cooaf <- atp14.cooaf[ind.atp14]
+wta18.basic <- readRDS("../Results/Individual/t_wta18_basic")
+wta18.oaf <- readRDS("../Results/Individual/t_wta18_oaf")
+wta18.h2h <- readRDS("../Results/Individual/t_wta18_h2h")
+wta18.co <- readRDS("../Results/Individual/t_wta18_co")
+wta18.cooaf <- readRDS("../Results/Individual/t_wta18_co(oaf)")
+wta18.basic <- wta18.basic[ind.wta18]
+wta18.oaf <- wta18.oaf[ind.wta18]
+wta18.h2h <- wta18.h2h[ind.wta18]
+wta18.co <- wta18.co[ind.wta18]
+wta18.cooaf <- wta18.cooaf[ind.wta18]
+atp18.basic <- readRDS("../Results/Individual/t_atp18_basic")
+atp18.oaf <- readRDS("../Results/Individual/t_atp18_oaf")
+atp18.h2h <- readRDS("../Results/Individual/t_atp18_h2h")
+atp18.co <- readRDS("../Results/Individual/t_atp18_co")
+atp18.cooaf <- readRDS("../Results/Individual/t_atp18_co(oaf)")
+atp18.basic <- atp18.basic[ind.atp18]
+atp18.oaf <- atp18.oaf[ind.atp18]
+atp18.h2h <- atp18.h2h[ind.atp18]
+atp18.co <- atp18.co[ind.atp18]
+atp18.cooaf <- atp18.cooaf[ind.atp18]
+wta22.basic <- readRDS("../Results/Individual/t_wta22_basic")
+wta22.oaf <- readRDS("../Results/Individual/t_wta22_oaf")
+wta22.h2h <- readRDS("../Results/Individual/t_wta22_h2h")
+wta22.co <- readRDS("../Results/Individual/t_wta22_co")
+wta22.cooaf <- readRDS("../Results/Individual/t_wta22_co(oaf)")
+wta22.basic <- wta22.basic[ind.wta22]
+wta22.oaf <- wta22.oaf[ind.wta22]
+wta22.h2h <- wta22.h2h[ind.wta22]
+wta22.co <- wta22.co[ind.wta22]
+wta22.cooaf <- wta22.cooaf[ind.wta22]
+atp22.basic <- readRDS("../Results/Individual/t_atp22_basic")
+atp22.oaf <- readRDS("../Results/Individual/t_atp22_oaf")
+atp22.h2h <- readRDS("../Results/Individual/t_atp22_h2h")
+atp22.co <- readRDS("../Results/Individual/t_atp22_co")
+atp22.cooaf <- readRDS("../Results/Individual/t_atp22_co(oaf)")
+atp22.basic <- atp22.basic[ind.atp22]
+atp22.oaf <- atp22.oaf[ind.atp22]
+atp22.h2h <- atp22.h2h[ind.atp22]
+atp22.co <- atp22.co[ind.atp22]
+atp22.cooaf <- atp22.cooaf[ind.atp22]
+```
+
+## Averages
+
+### Functions
+
+```{r}
+average.valid.estimates.2 <- function(res1,res2){
+  # res1, res2 same length
+  n <- length(res1)
+  ind.res1.valid <- which(res1>0)
+  ind.res2.valid <- which(res2>0)
+  ind.valid <- unique(c(ind.res1.valid,ind.res2.valid))
+  res <- rep(0,n) # will cut down later with ind.valid
+  for (i in ind.valid){
+    res[i] <- mean(c(res1[i],res2[i]))
+  }
+  res <- res[ind.valid]
+  return(list("ind"=ind.valid,
+              "res"=res))
+}
+
+average.valid.estimates.3 <- function(res1,res2,res3){
+  # all input have same length
+  n <- length(res1)
+  ind.res1.valid <- which(res1>0)
+  ind.res2.valid <- which(res2>0)
+  ind.res3.valid <- which(res3>0)
+  ind.valid <- unique(c(ind.res1.valid,ind.res2.valid,ind.res3.valid))
+  res <- rep(0,n) # will cut down later with ind.valid
+  for (i in ind.valid){
+    res[i] <- mean(c(res1[i],res2[i],res3[i]))
+  }
+  res <- res[ind.valid]
+  return(list("ind"=ind.valid,
+              "res"=res))
+}
+
+average.valid.estimates.4 <- function(res1,res2,res3,res4){
+  # all input have same length
+  n <- length(res1)
+  ind.res1.valid <- which(res1>0)
+  ind.res2.valid <- which(res2>0)
+  ind.res3.valid <- which(res3>0)
+  ind.res4.valid <- which(res4>0)
+  ind.valid <- unique(c(ind.res1.valid,ind.res2.valid,
+                        ind.res3.valid,ind.res4.valid))
+  res <- rep(0,n) # will cut down later with ind.valid
+  for (i in ind.valid){
+    res[i] <- mean(c(res1[i],res2[i],res3[i],res4[i]))
+  }
+  res <- res[ind.valid]
+  return(list("ind"=ind.valid,
+              "res"=res))
+}
+```
+
+### OAF, CO
+
+```{r}
+atp14 <- average.valid.estimates.2(atp14.oaf,atp14.co)
+test <- atp14.test$minutes[atp14$ind]
+atp14 <- atp14$res
+(sqrt(mean((atp14-test)^2)))
+t.test((atp14.basic-atp14.test$minutes)^2,(atp14-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+summary(atp14-test)
+t.test((atp14.oaf-atp14.test$minutes)^2,(atp14-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+```
+
+```{r}
+wta18 <- average.valid.estimates.2(wta18.oaf,wta18.co)
+test <- wta18.test$minutes[wta18$ind]
+wta18 <- wta18$res
+(sqrt(mean((wta18-test)^2)))
+t.test((wta18.basic-wta18.test$minutes)^2,(wta18-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+summary(wta18-test)
+t.test((wta18.oaf-wta18.test$minutes)^2,(wta18-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+```
+
+### H2H, CO
+
+```{r}
+atp14 <- average.valid.estimates.2(atp14.h2h,atp14.co)
+test <- atp14.test$minutes[atp14$ind]
+atp14 <- atp14$res
+(sqrt(mean((atp14-test)^2)))
+t.test((atp14.basic-atp14.test$minutes)^2,(atp14-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+summary(atp14-test)
+t.test((atp14.oaf-atp14.test$minutes)^2,(atp14-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+```
+
+```{r}
+wta18 <- average.valid.estimates.2(wta18.h2h,wta18.co)
+test <- wta18.test$minutes[wta18$ind]
+wta18 <- wta18$res
+(sqrt(mean((wta18-test)^2)))
+t.test((wta18.basic-wta18.test$minutes)^2,(wta18-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+summary(wta18-test)
+t.test((wta18.oaf-wta18.test$minutes)^2,(wta18-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+```
+
+### Basic, H2H
+
+```{r}
+atp14 <- average.valid.estimates.2(atp14.h2h,atp14.basic)
+test <- atp14.test$minutes[atp14$ind]
+atp14 <- atp14$res
+(sqrt(mean((atp14-test)^2)))
+t.test((atp14.basic-atp14.test$minutes)^2,(atp14-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+summary(atp14-test)
+t.test((atp14.oaf-atp14.test$minutes)^2,(atp14-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+```
+
+```{r}
+wta18 <- average.valid.estimates.2(wta18.h2h,wta18.basic)
+test <- wta18.test$minutes[wta18$ind]
+wta18 <- wta18$res
+(sqrt(mean((wta18-test)^2)))
+t.test((wta18.basic-wta18.test$minutes)^2,(wta18-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+summary(wta18-test)
+t.test((wta18.oaf-wta18.test$minutes)^2,(wta18-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+```
+
+### Basic, OAF, CO
+
+```{r}
+atp14 <- average.valid.estimates.3(atp14.basic,atp14.co,atp14.oaf)
+test <- atp14.test$minutes[atp14$ind]
+atp14 <- atp14$res
+(sqrt(mean((atp14-test)^2)))
+t.test((atp14.basic-atp14.test$minutes)^2,(atp14-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+summary(atp14-test)
+t.test((atp14.oaf-atp14.test$minutes)^2,(atp14-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+```
+
+```{r}
+wta18 <- average.valid.estimates.3(wta18.basic,wta18.co,wta18.oaf)
+test <- wta18.test$minutes[wta18$ind]
+wta18 <- wta18$res
+(sqrt(mean((wta18-test)^2)))
+t.test((wta18.basic-wta18.test$minutes)^2,(wta18-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+summary(wta18-test)
+t.test((wta18.oaf-wta18.test$minutes)^2,(wta18-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+```
+
+### Basic, CO, H2H
+
+```{r}
+atp14 <- average.valid.estimates.3(atp14.basic,atp14.co,atp14.h2h)
+test <- atp14.test$minutes[atp14$ind]
+atp14 <- atp14$res
+(sqrt(mean((atp14-test)^2)))
+t.test((atp14.basic-atp14.test$minutes)^2,(atp14-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+summary(atp14-test)
+t.test((atp14.oaf-atp14.test$minutes)^2,(atp14-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+```
+
+```{r}
+wta18 <- average.valid.estimates.3(wta18.basic,wta18.co,wta18.h2h)
+test <- wta18.test$minutes[wta18$ind]
+wta18 <- wta18$res
+(sqrt(mean((wta18-test)^2)))
+t.test((wta18.basic-wta18.test$minutes)^2,(wta18-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+summary(wta18-test)
+t.test((wta18.oaf-wta18.test$minutes)^2,(wta18-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+```
+
+### Basic, OAF, CO, H2H
+
+```{r}
+atp14 <- average.valid.estimates.4(atp14.h2h,atp14.basic,atp14.co,atp14.oaf)
+test <- atp14.test$minutes[atp14$ind]
+atp14 <- atp14$res
+(sqrt(mean((atp14-test)^2)))
+t.test((atp14.basic-atp14.test$minutes)^2,(atp14-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+summary(atp14-test)
+t.test((atp14.oaf-atp14.test$minutes)^2,(atp14-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+```
+
+
+```{r}
+wta18 <- average.valid.estimates.4(wta18.h2h,wta18.basic,wta18.co,wta18.oaf)
+test <- wta18.test$minutes[wta18$ind]
+wta18 <- wta18$res
+(sqrt(mean((wta18-test)^2)))
+t.test((wta18.basic-wta18.test$minutes)^2,(wta18-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+summary(wta18-test)
+t.test((wta18.oaf-wta18.test$minutes)^2,(wta18-test)^2,
+       var.equal=TRUE,alternative="greater")$p.value
+```

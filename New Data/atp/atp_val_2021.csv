@@ -1,0 +1,1165 @@
+tourney_id,tourney_name,surface,tourney_level,winner_id,winner_name,loser_id,loser_name,score,best_of,round,minutes
+2021-0352,Paris Masters,Hard,M,125802,Ilya Ivashka,105077,Albert Ramos,6-3 7-6(2),3,R64,94
+2021-0352,Paris Masters,Hard,M,105227,Marin Cilic,200221,Alejandro Davidovich Fokina,6-3 6-4,3,R64,87
+2021-0352,Paris Masters,Hard,M,200624,Sebastian Korda,106234,Aslan Karatsev,6-2 6-7(9) 7-6(5),3,R64,172
+2021-0352,Paris Masters,Hard,M,105807,Pablo Carreno Busta,105332,Benoit Paire,6-3 6-4,3,R64,87
+2021-0352,Paris Masters,Hard,M,200384,Hugo Gaston,126239,Arthur Rinderknech,4-6 6-4 6-3,3,R64,134
+2021-0352,Paris Masters,Hard,M,207989,Carlos Alcaraz,105732,Pierre Hugues Herbert,6-7(4) 7-6(2) 7-5,3,R64,173
+2021-0352,Paris Masters,Hard,M,105583,Dusan Lajovic,111456,Mackenzie Mcdonald,6-3 6-4,3,R64,67
+2021-0352,Paris Masters,Hard,M,111575,Karen Khachanov,144707,Mikael Ymer,6-4 7-5,3,R64,108
+2021-0352,Paris Masters,Hard,M,105777,Grigor Dimitrov,104755,Richard Gasquet,6-1 4-6 6-2,3,R64,105
+2021-0352,Paris Masters,Hard,M,106043,Diego Schwartzman,105357,John Millman,7-6(2) 5-7 6-2,3,R64,178
+2021-0352,Paris Masters,Hard,M,106218,Marcos Giron,126207,Frances Tiafoe,6-7(5) 6-4 6-3,3,R64,120
+2021-0352,Paris Masters,Hard,M,122330,Alexander Bublik,105554,Daniel Evans,2-6 7-5 7-5,3,R64,134
+2021-0352,Paris Masters,Hard,M,126205,Tommy Paul,105526,Jan Lennard Struff,6-3 6-4,3,R64,75
+2021-0352,Paris Masters,Hard,M,136440,Dominik Koepfer,104918,Andy Murray,6-4 5-7 7-6(9),3,R64,181
+2021-0352,Paris Masters,Hard,M,200000,Felix Auger Aliassime,126149,Gianluca Mager,4-6 6-4 6-1,3,R64,117
+2021-0352,Paris Masters,Hard,M,105902,James Duckworth,105138,Roberto Bautista Agut,6-4 5-7 7-6(4),3,R64,155
+2021-0352,Paris Masters,Hard,M,207518,Lorenzo Musetti,111513,Laslo Djere,4-6 7-6(5) 6-4,3,R64,155
+2021-0352,Paris Masters,Hard,M,200615,Alexei Popyrin,200282,Alex De Minaur,6-0 6-3,3,R64,56
+2021-0352,Paris Masters,Hard,M,126203,Taylor Fritz,132283,Lorenzo Sonego,3-6 6-2 6-3,3,R64,110
+2021-0352,Paris Masters,Hard,M,124187,Reilly Opelka,105936,Filip Krajinovic,6-3 7-6(4),3,R64,79
+2021-0352,Paris Masters,Hard,M,111815,Cameron Norrie,105643,Federico Delbonis,6-2 6-1,3,R64,72
+2021-0352,Paris Masters,Hard,M,104792,Gael Monfils,200175,Miomir Kecmanovic,4-6 7-5 6-3,3,R64,129
+2021-0352,Paris Masters,Hard,M,105173,Adrian Mannarino,105932,Nikoloz Basilashvili,6-2 6-4,3,R64,75
+2021-0352,Paris Masters,Hard,M,105916,Marton Fucsovics,104926,Fabio Fognini,6-1 6-7(6) 7-6(5),3,R64,164
+2021-0352,Paris Masters,Hard,M,106421,Daniil Medvedev,125802,Ilya Ivashka,7-5 6-4,3,R32,90
+2021-0352,Paris Masters,Hard,M,200624,Sebastian Korda,105227,Marin Cilic,6-2 6-4,3,R32,71
+2021-0352,Paris Masters,Hard,M,200384,Hugo Gaston,105807,Pablo Carreno Busta,6-7(3) 6-4 7-5,3,R32,155
+2021-0352,Paris Masters,Hard,M,207989,Carlos Alcaraz,206173,Jannik Sinner,7-6(1) 7-5,3,R32,127
+2021-0352,Paris Masters,Hard,M,100644,Alexander Zverev,105583,Dusan Lajovic,6-3 7-6(5),3,R32,100
+2021-0352,Paris Masters,Hard,M,105777,Grigor Dimitrov,111575,Karen Khachanov,4-6 6-2 6-0,3,R32,115
+2021-0352,Paris Masters,Hard,M,106218,Marcos Giron,106043,Diego Schwartzman,7-6(2) 7-6(4),3,R32,131
+2021-0352,Paris Masters,Hard,M,134770,Casper Ruud,122330,Alexander Bublik,6-4 6-0,3,R32,77
+2021-0352,Paris Masters,Hard,M,128034,Hubert Hurkacz,126205,Tommy Paul,7-5 7-6(4),3,R32,107
+2021-0352,Paris Masters,Hard,M,136440,Dominik Koepfer,200000,Felix Auger Aliassime,6-3 7-5,3,R32,98
+2021-0352,Paris Masters,Hard,M,105902,James Duckworth,207518,Lorenzo Musetti,6-3 3-6 6-3,3,R32,124
+2021-0352,Paris Masters,Hard,M,200615,Alexei Popyrin,126774,Stefanos Tsitsipas,4-2 RET,3,R32,27
+2021-0352,Paris Masters,Hard,M,126203,Taylor Fritz,126094,Andrey Rublev,7-5 7-6(2),3,R32,79
+2021-0352,Paris Masters,Hard,M,111815,Cameron Norrie,124187,Reilly Opelka,6-3 6-4,3,R32,73
+2021-0352,Paris Masters,Hard,M,104792,Gael Monfils,105173,Adrian Mannarino,2-6 7-6(4) 6-2,3,R32,146
+2021-0352,Paris Masters,Hard,M,104925,Novak Djokovic,105916,Marton Fucsovics,6-2 4-6 6-3,3,R32,120
+2021-0352,Paris Masters,Hard,M,106421,Daniil Medvedev,200624,Sebastian Korda,4-6 6-1 6-3,3,R16,109
+2021-0352,Paris Masters,Hard,M,200384,Hugo Gaston,207989,Carlos Alcaraz,6-4 7-5,3,R16,103
+2021-0352,Paris Masters,Hard,M,100644,Alexander Zverev,105777,Grigor Dimitrov,7-6(4) 6-7(3) 6-3,3,R16,165
+2021-0352,Paris Masters,Hard,M,134770,Casper Ruud,106218,Marcos Giron,6-2 6-1,3,R16,67
+2021-0352,Paris Masters,Hard,M,128034,Hubert Hurkacz,136440,Dominik Koepfer,4-6 7-5 6-2,3,R16,126
+2021-0352,Paris Masters,Hard,M,105902,James Duckworth,200615,Alexei Popyrin,7-6(6) 6-4,3,R16,106
+2021-0352,Paris Masters,Hard,M,126203,Taylor Fritz,111815,Cameron Norrie,6-3 7-6(3),3,R16,93
+2021-0352,Paris Masters,Hard,M,104925,Novak Djokovic,104792,Gael Monfils,W/O,3,R16,0
+2021-0352,Paris Masters,Hard,M,106421,Daniil Medvedev,200384,Hugo Gaston,7-6(7) 6-4,3,QF,105
+2021-0352,Paris Masters,Hard,M,100644,Alexander Zverev,134770,Casper Ruud,7-5 6-4,3,QF,94
+2021-0352,Paris Masters,Hard,M,128034,Hubert Hurkacz,105902,James Duckworth,6-2 6-7(4) 7-5,3,QF,132
+2021-0352,Paris Masters,Hard,M,104925,Novak Djokovic,126203,Taylor Fritz,6-4 6-3,3,QF,73
+2021-0352,Paris Masters,Hard,M,106421,Daniil Medvedev,100644,Alexander Zverev,6-2 6-2,3,SF,80
+2021-0352,Paris Masters,Hard,M,104925,Novak Djokovic,128034,Hubert Hurkacz,3-6 6-0 7-6(5),3,SF,137
+2021-0352,Paris Masters,Hard,M,104925,Novak Djokovic,106421,Daniil Medvedev,4-6 6-3 6-3,3,F,135
+2021-0403,Miami Masters,Hard,M,106000,Damir Dzumhur,104731,Kevin Anderson,7-6(6) 7-5,3,R128,116
+2021-0403,Miami Masters,Hard,M,105379,Aljaz Bedene,105341,Thomas Fabbiano,7-6(5) 1-6 6-3,3,R128,156
+2021-0403,Miami Masters,Hard,M,106216,Bjorn Fratangelo,104269,Fernando Verdasco,6-4 6-4,3,R128,90
+2021-0403,Miami Masters,Hard,M,123755,Daniel Elahi Galan,205734,Thiago Seyboth Wild,6-3 6-4,3,R128,95
+2021-0403,Miami Masters,Hard,M,111442,Jordan Thompson,105643,Federico Delbonis,7-6(6) 6-4,3,R128,132
+2021-0403,Miami Masters,Hard,M,105311,Joao Sousa,106331,Christopher Oconnell,7-6(6) 6-7(8) 7-5,3,R128,170
+2021-0403,Miami Masters,Hard,M,106045,Denis Kudla,104871,Jeremy Chardy,3-6 6-3 6-4,3,R128,114
+2021-0403,Miami Masters,Hard,M,125802,Ilya Ivashka,126952,Soon Woo Kwon,7-6(4) 6-7(4) 7-6(3),3,R128,198
+2021-0403,Miami Masters,Hard,M,105815,Tennys Sandgren,124079,Pedro Martinez,6-4 2-0 RET,3,R128,46
+2021-0403,Miami Masters,Hard,M,106423,Thanasi Kokkinakis,208278,Shintaro Mochizuki,6-3 6-3,3,R128,83
+2021-0403,Miami Masters,Hard,M,207518,Lorenzo Musetti,111581,Michael Mmoh,6-4 6-4,3,R128,98
+2021-0403,Miami Masters,Hard,M,105227,Marin Cilic,105948,Federico Coria,6-3 2-6 6-4,3,R128,123
+2021-0403,Miami Masters,Hard,M,200624,Sebastian Korda,105430,Radu Albot,6-3 6-0,3,R128,74
+2021-0403,Miami Masters,Hard,M,105062,Mikhail Kukushkin,207733,Jack Draper,7-5 0-0 RET,3,R128,81
+2021-0403,Miami Masters,Hard,M,200175,Miomir Kecmanovic,106281,Liam Broady,7-5 6-7(5) 6-1,3,R128,144
+2021-0403,Miami Masters,Hard,M,106034,Yasutaka Uchiyama,106099,Salvatore Caruso,6-3 6-4,3,R128,95
+2021-0403,Miami Masters,Hard,M,105902,James Duckworth,104999,Mischa Zverev,6-2 4-6 6-4,3,R128,132
+2021-0403,Miami Masters,Hard,M,111513,Laslo Djere,106210,Jiri Vesely,6-3 5-7 6-1,3,R128,103
+2021-0403,Miami Masters,Hard,M,106218,Marcos Giron,126205,Tommy Paul,7-6(5) 6-4,3,R128,115
+2021-0403,Miami Masters,Hard,M,111815,Cameron Norrie,106415,Yoshihito Nishioka,6-1 3-6 7-5,3,R128,135
+2021-0403,Miami Masters,Hard,M,105870,Yannick Hanfmann,105449,Steve Johnson,7-5 6-2,3,R128,84
+2021-0403,Miami Masters,Hard,M,200384,Hugo Gaston,136440,Dominik Koepfer,6-1 6-4,3,R128,71
+2021-0403,Miami Masters,Hard,M,144707,Mikael Ymer,126214,Alejandro Tabilo,6-3 6-1,3,R128,64
+2021-0403,Miami Masters,Hard,M,200325,Emil Ruusuvuori,207989,Carlos Alcaraz,6-4 2-6 7-5,3,R128,131
+2021-0403,Miami Masters,Hard,M,144750,Lloyd Harris,207182,Emilio Nava,6-4 7-6(7),3,R128,92
+2021-0403,Miami Masters,Hard,M,105575,Ricardas Berankis,105943,Federico Gaio,7-6(4) 6-2,3,R128,81
+2021-0403,Miami Masters,Hard,M,111456,Mackenzie Mcdonald,105577,Vasek Pospisil,6-3 4-6 6-3,3,R128,122
+2021-0403,Miami Masters,Hard,M,105732,Pierre Hugues Herbert,105155,Pedro Sousa,6-1 6-3,3,R128,65
+2021-0403,Miami Masters,Hard,M,124014,Ernesto Escobedo,103893,Paolo Lorenzi,6-3 6-2,3,R128,91
+2021-0403,Miami Masters,Hard,M,126207,Frances Tiafoe,105882,Stefano Travaglia,5-7 6-4 6-2,3,R128,134
+2021-0403,Miami Masters,Hard,M,200615,Alexei Popyrin,103852,Feliciano Lopez,6-4 7-6(4),3,R128,82
+2021-0403,Miami Masters,Hard,M,104229,Yen Hsun Lu,105023,Sam Querrey,6-3 6-4,3,R128,70
+2021-0403,Miami Masters,Hard,M,126774,Stefanos Tsitsipas,106000,Damir Dzumhur,6-1 6-4,3,R64,68
+2021-0403,Miami Masters,Hard,M,105453,Kei Nishikori,105379,Aljaz Bedene,7-6(6) 5-7 6-4,3,R64,170
+2021-0403,Miami Masters,Hard,M,132283,Lorenzo Sonego,106216,Bjorn Fratangelo,6-4 7-6(5),3,R64,105
+2021-0403,Miami Masters,Hard,M,123755,Daniel Elahi Galan,200282,Alex De Minaur,4-6 6-3 6-4,3,R64,155
+2021-0403,Miami Masters,Hard,M,105683,Milos Raonic,111442,Jordan Thompson,6-2 6-1,3,R64,59
+2021-0403,Miami Masters,Hard,M,200005,Ugo Humbert,105311,Joao Sousa,6-1 6-4,3,R64,73
+2021-0403,Miami Masters,Hard,M,128034,Hubert Hurkacz,106045,Denis Kudla,7-6(5) 6-4,3,R64,94
+2021-0403,Miami Masters,Hard,M,133430,Denis Shapovalov,125802,Ilya Ivashka,6-7(5) 6-4 6-4,3,R64,186
+2021-0403,Miami Masters,Hard,M,126094,Andrey Rublev,105815,Tennys Sandgren,6-1 6-2,3,R64,69
+2021-0403,Miami Masters,Hard,M,105916,Marton Fucsovics,106423,Thanasi Kokkinakis,7-6(3) 6-7(4) 6-4,3,R64,191
+2021-0403,Miami Masters,Hard,M,207518,Lorenzo Musetti,105332,Benoit Paire,6-3 6-3,3,R64,60
+2021-0403,Miami Masters,Hard,M,105227,Marin Cilic,106426,Cristian Garin,3-6 7-5 7-6(5),3,R64,164
+2021-0403,Miami Masters,Hard,M,200624,Sebastian Korda,104926,Fabio Fognini,1-6 6-4 6-2,3,R64,106
+2021-0403,Miami Masters,Hard,M,106234,Aslan Karatsev,105062,Mikhail Kukushkin,6-4 6-3,3,R64,81
+2021-0403,Miami Masters,Hard,M,105173,Adrian Mannarino,200175,Miomir Kecmanovic,6-3 6-4,3,R64,90
+2021-0403,Miami Masters,Hard,M,106043,Diego Schwartzman,106034,Yasutaka Uchiyama,6-3 6-3,3,R64,82
+2021-0403,Miami Masters,Hard,M,105902,James Duckworth,105676,David Goffin,6-3 6-1,3,R64,76
+2021-0403,Miami Masters,Hard,M,122330,Alexander Bublik,111513,Laslo Djere,6-3 6-4,3,R64,84
+2021-0403,Miami Masters,Hard,M,126203,Taylor Fritz,106218,Marcos Giron,6-2 6-2,3,R64,55
+2021-0403,Miami Masters,Hard,M,111815,Cameron Norrie,105777,Grigor Dimitrov,7-5 7-5,3,R64,117
+2021-0403,Miami Masters,Hard,M,111575,Karen Khachanov,105870,Yannick Hanfmann,6-3 6-2,3,R64,70
+2021-0403,Miami Masters,Hard,M,206173,Jannik Sinner,200384,Hugo Gaston,6-2 6-2,3,R64,62
+2021-0403,Miami Masters,Hard,M,144707,Mikael Ymer,105932,Nikoloz Basilashvili,6-3 4-6 6-4,3,R64,132
+2021-0403,Miami Masters,Hard,M,200325,Emil Ruusuvuori,100644,Alexander Zverev,1-6 6-3 6-1,3,R64,124
+2021-0403,Miami Masters,Hard,M,105138,Roberto Bautista Agut,144750,Lloyd Harris,W/O,3,R64,0
+2021-0403,Miami Masters,Hard,M,105526,Jan Lennard Struff,105575,Ricardas Berankis,6-3 6-4,3,R64,99
+2021-0403,Miami Masters,Hard,M,104545,John Isner,111456,Mackenzie Mcdonald,2-6 6-3 7-5,3,R64,108
+2021-0403,Miami Masters,Hard,M,200000,Felix Auger Aliassime,105732,Pierre Hugues Herbert,6-4 6-4,3,R64,92
+2021-0403,Miami Masters,Hard,M,105583,Dusan Lajovic,124014,Ernesto Escobedo,6-2 6-3,3,R64,73
+2021-0403,Miami Masters,Hard,M,126207,Frances Tiafoe,105554,Daniel Evans,6-7(5) 6-3 6-3,3,R64,170
+2021-0403,Miami Masters,Hard,M,200615,Alexei Popyrin,124187,Reilly Opelka,6-4 6-2,3,R64,65
+2021-0403,Miami Masters,Hard,M,106421,Daniil Medvedev,104229,Yen Hsun Lu,6-2 6-2,3,R64,56
+2021-0403,Miami Masters,Hard,M,126774,Stefanos Tsitsipas,105453,Kei Nishikori,6-3 3-6 6-1,3,R32,116
+2021-0403,Miami Masters,Hard,M,132283,Lorenzo Sonego,123755,Daniel Elahi Galan,7-6(6) 6-3,3,R32,111
+2021-0403,Miami Masters,Hard,M,105683,Milos Raonic,200005,Ugo Humbert,6-4 7-5,3,R32,99
+2021-0403,Miami Masters,Hard,M,128034,Hubert Hurkacz,133430,Denis Shapovalov,6-3 7-6(6),3,R32,92
+2021-0403,Miami Masters,Hard,M,126094,Andrey Rublev,105916,Marton Fucsovics,6-2 6-1,3,R32,52
+2021-0403,Miami Masters,Hard,M,105227,Marin Cilic,207518,Lorenzo Musetti,6-3 6-4,3,R32,74
+2021-0403,Miami Masters,Hard,M,200624,Sebastian Korda,106234,Aslan Karatsev,6-3 6-0,3,R32,67
+2021-0403,Miami Masters,Hard,M,106043,Diego Schwartzman,105173,Adrian Mannarino,6-1 6-4,3,R32,75
+2021-0403,Miami Masters,Hard,M,122330,Alexander Bublik,105902,James Duckworth,6-4 6-4,3,R32,83
+2021-0403,Miami Masters,Hard,M,126203,Taylor Fritz,111815,Cameron Norrie,6-4 3-6 6-1,3,R32,111
+2021-0403,Miami Masters,Hard,M,206173,Jannik Sinner,111575,Karen Khachanov,4-6 7-6(2) 6-4,3,R32,170
+2021-0403,Miami Masters,Hard,M,200325,Emil Ruusuvuori,144707,Mikael Ymer,4-6 6-1 7-5,3,R32,137
+2021-0403,Miami Masters,Hard,M,105138,Roberto Bautista Agut,105526,Jan Lennard Struff,4-6 6-3 6-2,3,R32,111
+2021-0403,Miami Masters,Hard,M,104545,John Isner,200000,Felix Auger Aliassime,7-6(5) 7-6(5),3,R32,109
+2021-0403,Miami Masters,Hard,M,126207,Frances Tiafoe,105583,Dusan Lajovic,1-6 7-5 6-3,3,R32,119
+2021-0403,Miami Masters,Hard,M,106421,Daniil Medvedev,200615,Alexei Popyrin,7-6(3) 6-7(7) 6-4,3,R32,157
+2021-0403,Miami Masters,Hard,M,126774,Stefanos Tsitsipas,132283,Lorenzo Sonego,6-2 7-6(2),3,R16,91
+2021-0403,Miami Masters,Hard,M,128034,Hubert Hurkacz,105683,Milos Raonic,4-6 6-3 7-6(4),3,R16,140
+2021-0403,Miami Masters,Hard,M,126094,Andrey Rublev,105227,Marin Cilic,6-4 6-4,3,R16,81
+2021-0403,Miami Masters,Hard,M,200624,Sebastian Korda,106043,Diego Schwartzman,6-3 4-6 7-5,3,R16,155
+2021-0403,Miami Masters,Hard,M,122330,Alexander Bublik,126203,Taylor Fritz,6-7(5) 6-3 6-4,3,R16,132
+2021-0403,Miami Masters,Hard,M,206173,Jannik Sinner,200325,Emil Ruusuvuori,6-3 6-2,3,R16,69
+2021-0403,Miami Masters,Hard,M,105138,Roberto Bautista Agut,104545,John Isner,6-3 4-6 7-6(7),3,R16,138
+2021-0403,Miami Masters,Hard,M,106421,Daniil Medvedev,126207,Frances Tiafoe,6-4 6-3,3,R16,92
+2021-0403,Miami Masters,Hard,M,128034,Hubert Hurkacz,126774,Stefanos Tsitsipas,2-6 6-3 6-4,3,QF,140
+2021-0403,Miami Masters,Hard,M,126094,Andrey Rublev,200624,Sebastian Korda,7-5 7-6(7),3,QF,102
+2021-0403,Miami Masters,Hard,M,206173,Jannik Sinner,122330,Alexander Bublik,7-6(5) 6-4,3,QF,100
+2021-0403,Miami Masters,Hard,M,105138,Roberto Bautista Agut,106421,Daniil Medvedev,6-4 6-2,3,QF,92
+2021-0403,Miami Masters,Hard,M,128034,Hubert Hurkacz,126094,Andrey Rublev,6-3 6-4,3,SF,87
+2021-0403,Miami Masters,Hard,M,206173,Jannik Sinner,105138,Roberto Bautista Agut,5-7 6-4 6-4,3,SF,148
+2021-0403,Miami Masters,Hard,M,128034,Hubert Hurkacz,206173,Jannik Sinner,7-6(4) 6-4,3,F,103
+2021-0404,Indian Wells Masters,Hard,M,124079,Pedro Martinez,105406,Roberto Marcora,6-4 6-0,3,R128,75
+2021-0404,Indian Wells Masters,Hard,M,105526,Jan Lennard Struff,123755,Daniel Elahi Galan,7-6(4) 6-3,3,R128,91
+2021-0404,Indian Wells Masters,Hard,M,126846,Aleksandar Vukic,104665,Pablo Andujar,7-5 6-4,3,R128,95
+2021-0404,Indian Wells Masters,Hard,M,124014,Ernesto Escobedo,208029,Holger Rune,6-4 6-1,3,R128,72
+2021-0404,Indian Wells Masters,Hard,M,105877,Emilio Gomez,105487,Facundo Bagnis,6-3 6-1,3,R128,89
+2021-0404,Indian Wells Masters,Hard,M,200325,Emil Ruusuvuori,136440,Dominik Koepfer,6-7(3) 6-2 6-0,3,R128,134
+2021-0404,Indian Wells Masters,Hard,M,111153,Christopher Eubanks,106078,Egor Gerasimov,6-3 6-3,3,R128,62
+2021-0404,Indian Wells Masters,Hard,M,105077,Albert Ramos,207518,Lorenzo Musetti,6-1 6-3,3,R128,86
+2021-0404,Indian Wells Masters,Hard,M,202385,Jenson Brooksby,117356,Cem Ilkel,7-6(5) 6-4,3,R128,103
+2021-0404,Indian Wells Masters,Hard,M,104918,Andy Murray,105173,Adrian Mannarino,6-3 6-2,3,R128,83
+2021-0404,Indian Wells Masters,Hard,M,104731,Kevin Anderson,111442,Jordan Thompson,7-5 6-2,3,R128,83
+2021-0404,Indian Wells Masters,Hard,M,126149,Gianluca Mager,105916,Marton Fucsovics,1-6 6-3 6-2,3,R128,101
+2021-0404,Indian Wells Masters,Hard,M,105357,John Millman,106058,Jack Sock,7-5 4-6 6-3,3,R128,150
+2021-0404,Indian Wells Masters,Hard,M,106415,Yoshihito Nishioka,105643,Federico Delbonis,6-3 3-6 7-6(2),3,R128,137
+2021-0404,Indian Wells Masters,Hard,M,206909,Brandon Nakashima,105948,Federico Coria,6-3 6-2,3,R128,78
+2021-0404,Indian Wells Masters,Hard,M,126214,Alejandro Tabilo,106045,Denis Kudla,6-1 7-6(0),3,R128,96
+2021-0404,Indian Wells Masters,Hard,M,106148,Roberto Carballes Baena,105952,Renzo Olivo,7-5 7-5,3,R128,134
+2021-0404,Indian Wells Masters,Hard,M,200221,Alejandro Davidovich Fokina,105449,Steve Johnson,6-7(5) 6-3 7-5,3,R128,147
+2021-0404,Indian Wells Masters,Hard,M,105453,Kei Nishikori,105311,Joao Sousa,6-7(5) 6-3 6-2,3,R128,142
+2021-0404,Indian Wells Masters,Hard,M,202195,Maxime Cressy,111513,Laslo Djere,6-7(3) 6-1 7-5,3,R128,143
+2021-0404,Indian Wells Masters,Hard,M,105550,Guido Pella,126952,Soon Woo Kwon,1-6 6-3 6-4,3,R128,131
+2021-0404,Indian Wells Masters,Hard,M,105815,Tennys Sandgren,106329,Thiago Monteiro,6-4 6-3,3,R128,108
+2021-0404,Indian Wells Masters,Hard,M,126205,Tommy Paul,103852,Feliciano Lopez,6-3 7-6(3),3,R128,88
+2021-0404,Indian Wells Masters,Hard,M,126535,Carlos Taberner,144719,Jaume Munar,6-3 6-3,3,R128,94
+2021-0404,Indian Wells Masters,Hard,M,200615,Alexei Popyrin,200175,Miomir Kecmanovic,6-3 7-6(4),3,R128,88
+2021-0404,Indian Wells Masters,Hard,M,126207,Frances Tiafoe,105332,Benoit Paire,6-4 6-4,3,R128,62
+2021-0404,Indian Wells Masters,Hard,M,106099,Salvatore Caruso,208260,Zachary Svajda,6-3 6-1,3,R128,77
+2021-0404,Indian Wells Masters,Hard,M,105577,Vasek Pospisil,200670,J J Wolf,6-4 4-6 6-4,3,R128,137
+2021-0404,Indian Wells Masters,Hard,M,106121,Taro Daniel,104259,Philipp Kohlschreiber,6-2 6-4,3,R128,99
+2021-0404,Indian Wells Masters,Hard,M,127157,Daniel Altmaier,105023,Sam Querrey,6-2 6-4,3,R128,62
+2021-0404,Indian Wells Masters,Hard,M,106218,Marcos Giron,122298,Botic Van De Zandschulp,6-7(7) 6-2 6-4,3,R128,154
+2021-0404,Indian Wells Masters,Hard,M,111456,Mackenzie Mcdonald,105902,James Duckworth,6-3 6-3,3,R128,75
+2021-0404,Indian Wells Masters,Hard,M,126774,Stefanos Tsitsipas,124079,Pedro Martinez,6-2 6-4,3,R64,94
+2021-0404,Indian Wells Masters,Hard,M,104926,Fabio Fognini,105526,Jan Lennard Struff,6-4 4-6 6-3,3,R64,128
+2021-0404,Indian Wells Masters,Hard,M,200282,Alex De Minaur,126846,Aleksandar Vukic,6-4 7-5,3,R64,94
+2021-0404,Indian Wells Masters,Hard,M,106426,Cristian Garin,124014,Ernesto Escobedo,7-5 6-2,3,R64,94
+2021-0404,Indian Wells Masters,Hard,M,105807,Pablo Carreno Busta,105877,Emilio Gomez,6-1 6-4,3,R64,70
+2021-0404,Indian Wells Masters,Hard,M,111575,Karen Khachanov,200325,Emil Ruusuvuori,6-2 7-5,3,R64,96
+2021-0404,Indian Wells Masters,Hard,M,105932,Nikoloz Basilashvili,111153,Christopher Eubanks,6-4 6-3,3,R64,74
+2021-0404,Indian Wells Masters,Hard,M,105077,Albert Ramos,200000,Felix Auger Aliassime,6-4 6-2,3,R64,76
+2021-0404,Indian Wells Masters,Hard,M,100644,Alexander Zverev,202385,Jenson Brooksby,6-4 3-6 6-1,3,R64,106
+2021-0404,Indian Wells Masters,Hard,M,104918,Andy Murray,207989,Carlos Alcaraz,5-7 6-3 6-2,3,R64,183
+2021-0404,Indian Wells Masters,Hard,M,104731,Kevin Anderson,132283,Lorenzo Sonego,7-6(7) 7-6(3),3,R64,127
+2021-0404,Indian Wells Masters,Hard,M,104792,Gael Monfils,126149,Gianluca Mager,6-4 6-2,3,R64,70
+2021-0404,Indian Wells Masters,Hard,M,206173,Jannik Sinner,105357,John Millman,6-2 6-2,3,R64,74
+2021-0404,Indian Wells Masters,Hard,M,104545,John Isner,106415,Yoshihito Nishioka,6-3 6-4,3,R64,69
+2021-0404,Indian Wells Masters,Hard,M,126203,Taylor Fritz,206909,Brandon Nakashima,6-3 6-4,3,R64,80
+2021-0404,Indian Wells Masters,Hard,M,126610,Matteo Berrettini,126214,Alejandro Tabilo,6-4 7-5,3,R64,90
+2021-0404,Indian Wells Masters,Hard,M,134770,Casper Ruud,106148,Roberto Carballes Baena,6-1 6-2,3,R64,71
+2021-0404,Indian Wells Masters,Hard,M,144750,Lloyd Harris,200221,Alejandro Davidovich Fokina,6-3 6-3,3,R64,69
+2021-0404,Indian Wells Masters,Hard,M,105554,Daniel Evans,105453,Kei Nishikori,4-6 6-3 6-4,3,R64,167
+2021-0404,Indian Wells Masters,Hard,M,106043,Diego Schwartzman,202195,Maxime Cressy,6-2 3-6 7-5,3,R64,158
+2021-0404,Indian Wells Masters,Hard,M,105138,Roberto Bautista Agut,105550,Guido Pella,7-5 6-3,3,R64,116
+2021-0404,Indian Wells Masters,Hard,M,111815,Cameron Norrie,105815,Tennys Sandgren,6-4 5-7 6-0,3,R64,134
+2021-0404,Indian Wells Masters,Hard,M,126205,Tommy Paul,105583,Dusan Lajovic,6-2 6-3,3,R64,60
+2021-0404,Indian Wells Masters,Hard,M,126094,Andrey Rublev,126535,Carlos Taberner,6-3 6-4,3,R64,96
+2021-0404,Indian Wells Masters,Hard,M,128034,Hubert Hurkacz,200615,Alexei Popyrin,6-1 7-5,3,R64,86
+2021-0404,Indian Wells Masters,Hard,M,126207,Frances Tiafoe,200624,Sebastian Korda,6-0 6-4,3,R64,80
+2021-0404,Indian Wells Masters,Hard,M,106234,Aslan Karatsev,106099,Salvatore Caruso,6-0 6-2,3,R64,69
+2021-0404,Indian Wells Masters,Hard,M,133430,Denis Shapovalov,105577,Vasek Pospisil,3-0 RET,3,R64,26
+2021-0404,Indian Wells Masters,Hard,M,124187,Reilly Opelka,106121,Taro Daniel,7-5 6-3,3,R64,89
+2021-0404,Indian Wells Masters,Hard,M,105777,Grigor Dimitrov,127157,Daniel Altmaier,6-4 6-2,3,R64,86
+2021-0404,Indian Wells Masters,Hard,M,105936,Filip Krajinovic,106218,Marcos Giron,7-6(2) 7-5,3,R64,106
+2021-0404,Indian Wells Masters,Hard,M,106421,Daniil Medvedev,111456,Mackenzie Mcdonald,6-4 6-2,3,R64,72
+2021-0404,Indian Wells Masters,Hard,M,126774,Stefanos Tsitsipas,104926,Fabio Fognini,2-6 6-3 6-4,3,R32,122
+2021-0404,Indian Wells Masters,Hard,M,200282,Alex De Minaur,106426,Cristian Garin,6-4 6-2,3,R32,92
+2021-0404,Indian Wells Masters,Hard,M,111575,Karen Khachanov,105807,Pablo Carreno Busta,6-0 6-4,3,R32,64
+2021-0404,Indian Wells Masters,Hard,M,105932,Nikoloz Basilashvili,105077,Albert Ramos,4-6 7-6(2) 6-2,3,R32,143
+2021-0404,Indian Wells Masters,Hard,M,100644,Alexander Zverev,104918,Andy Murray,6-4 7-6(4),3,R32,127
+2021-0404,Indian Wells Masters,Hard,M,104792,Gael Monfils,104731,Kevin Anderson,7-5 6-2,3,R32,99
+2021-0404,Indian Wells Masters,Hard,M,206173,Jannik Sinner,104545,John Isner,W/O,3,R32,
+2021-0404,Indian Wells Masters,Hard,M,126203,Taylor Fritz,126610,Matteo Berrettini,6-4 6-3,3,R32,81
+2021-0404,Indian Wells Masters,Hard,M,134770,Casper Ruud,144750,Lloyd Harris,6-7(4) 6-4 6-4,3,R32,171
+2021-0404,Indian Wells Masters,Hard,M,106043,Diego Schwartzman,105554,Daniel Evans,5-7 6-4 6-0,3,R32,139
+2021-0404,Indian Wells Masters,Hard,M,111815,Cameron Norrie,105138,Roberto Bautista Agut,6-4 5-7 6-3,3,R32,164
+2021-0404,Indian Wells Masters,Hard,M,126205,Tommy Paul,126094,Andrey Rublev,6-4 3-6 7-5,3,R32,144
+2021-0404,Indian Wells Masters,Hard,M,128034,Hubert Hurkacz,126207,Frances Tiafoe,6-3 6-2,3,R32,71
+2021-0404,Indian Wells Masters,Hard,M,106234,Aslan Karatsev,133430,Denis Shapovalov,7-5 6-2,3,R32,96
+2021-0404,Indian Wells Masters,Hard,M,105777,Grigor Dimitrov,124187,Reilly Opelka,6-3 6-4,3,R32,73
+2021-0404,Indian Wells Masters,Hard,M,106421,Daniil Medvedev,105936,Filip Krajinovic,6-2 7-6(1),3,R32,90
+2021-0404,Indian Wells Masters,Hard,M,126774,Stefanos Tsitsipas,200282,Alex De Minaur,6-7(3) 7-6(3) 6-2,3,R16,163
+2021-0404,Indian Wells Masters,Hard,M,105932,Nikoloz Basilashvili,111575,Karen Khachanov,6-4 7-6(6),3,R16,115
+2021-0404,Indian Wells Masters,Hard,M,100644,Alexander Zverev,104792,Gael Monfils,6-1 6-3,3,R16,61
+2021-0404,Indian Wells Masters,Hard,M,126203,Taylor Fritz,206173,Jannik Sinner,6-4 6-3,3,R16,100
+2021-0404,Indian Wells Masters,Hard,M,106043,Diego Schwartzman,134770,Casper Ruud,6-3 6-3,3,R16,103
+2021-0404,Indian Wells Masters,Hard,M,111815,Cameron Norrie,126205,Tommy Paul,6-4 4-6 6-2,3,R16,135
+2021-0404,Indian Wells Masters,Hard,M,128034,Hubert Hurkacz,106234,Aslan Karatsev,6-1 6-3,3,R16,63
+2021-0404,Indian Wells Masters,Hard,M,105777,Grigor Dimitrov,106421,Daniil Medvedev,4-6 6-4 6-3,3,R16,134
+2021-0404,Indian Wells Masters,Hard,M,105932,Nikoloz Basilashvili,126774,Stefanos Tsitsipas,6-4 2-6 6-4,3,QF,129
+2021-0404,Indian Wells Masters,Hard,M,126203,Taylor Fritz,100644,Alexander Zverev,4-6 6-3 7-6(3),3,QF,140
+2021-0404,Indian Wells Masters,Hard,M,111815,Cameron Norrie,106043,Diego Schwartzman,6-0 6-2,3,QF,73
+2021-0404,Indian Wells Masters,Hard,M,105777,Grigor Dimitrov,128034,Hubert Hurkacz,3-6 6-4 7-6(2),3,QF,157
+2021-0404,Indian Wells Masters,Hard,M,105932,Nikoloz Basilashvili,126203,Taylor Fritz,7-6(5) 6-3,3,SF,101
+2021-0404,Indian Wells Masters,Hard,M,111815,Cameron Norrie,105777,Grigor Dimitrov,6-2 6-4,3,SF,86
+2021-0404,Indian Wells Masters,Hard,M,111815,Cameron Norrie,105932,Nikoloz Basilashvili,3-6 6-4 6-1,3,F,109
+2021-0410,Monte Carlo Masters,Clay,M,105936,Filip Krajinovic,105932,Nikoloz Basilashvili,6-1 2-0 RET,3,R64,35
+2021-0410,Monte Carlo Masters,Clay,M,111442,Jordan Thompson,105332,Benoit Paire,6-4 6-7(3) 7-6(5),3,R64,183
+2021-0410,Monte Carlo Masters,Clay,M,104926,Fabio Fognini,200175,Miomir Kecmanovic,6-2 7-5,3,R64,85
+2021-0410,Monte Carlo Masters,Clay,M,105807,Pablo Carreno Busta,105882,Stefano Travaglia,7-5 7-6(4),3,R64,123
+2021-0410,Monte Carlo Masters,Clay,M,111575,Karen Khachanov,111513,Laslo Djere,6-4 6-1,3,R64,77
+2021-0410,Monte Carlo Masters,Clay,M,134770,Casper Ruud,208029,Holger Rune,6-2 6-1,3,R64,63
+2021-0410,Monte Carlo Masters,Clay,M,105643,Federico Delbonis,105173,Adrian Mannarino,7-5 6-1,3,R64,87
+2021-0410,Monte Carlo Masters,Clay,M,104871,Jeremy Chardy,122330,Alexander Bublik,6-4 0-6 7-5,3,R64,101
+2021-0410,Monte Carlo Masters,Clay,M,105777,Grigor Dimitrov,105526,Jan Lennard Struff,6-3 6-4,3,R64,77
+2021-0410,Monte Carlo Masters,Clay,M,105138,Roberto Bautista Agut,126203,Taylor Fritz,6-2 7-5,3,R64,75
+2021-0410,Monte Carlo Masters,Clay,M,126205,Tommy Paul,124079,Pedro Martinez,4-1 RET,3,R64,28
+2021-0410,Monte Carlo Masters,Clay,M,106099,Salvatore Caruso,200031,Lucas Catarina,6-7(3) 7-6(5) 6-3,3,R64,188
+2021-0410,Monte Carlo Masters,Clay,M,200221,Alejandro Davidovich Fokina,200282,Alex De Minaur,6-4 7-6(3),3,R64,127
+2021-0410,Monte Carlo Masters,Clay,M,106298,Lucas Pouille,105550,Guido Pella,6-3 6-4,3,R64,84
+2021-0410,Monte Carlo Masters,Clay,M,200615,Alexei Popyrin,104665,Pablo Andujar,0-6 6-2 7-6(3),3,R64,117
+2021-0410,Monte Carlo Masters,Clay,M,106426,Cristian Garin,200000,Felix Auger Aliassime,7-6(3) 6-1,3,R64,126
+2021-0410,Monte Carlo Masters,Clay,M,105357,John Millman,200005,Ugo Humbert,6-3 6-3,3,R64,88
+2021-0410,Monte Carlo Masters,Clay,M,106234,Aslan Karatsev,207518,Lorenzo Musetti,6-3 6-4,3,R64,88
+2021-0410,Monte Carlo Masters,Clay,M,132283,Lorenzo Sonego,105916,Marton Fucsovics,6-3 6-4,3,R64,102
+2021-0410,Monte Carlo Masters,Clay,M,106065,Marco Cecchinato,136440,Dominik Koepfer,6-4 6-3,3,R64,88
+2021-0410,Monte Carlo Masters,Clay,M,105676,David Goffin,105227,Marin Cilic,6-4 3-6 6-0,3,R64,131
+2021-0410,Monte Carlo Masters,Clay,M,128034,Hubert Hurkacz,105341,Thomas Fabbiano,6-3 3-6 6-3,3,R64,115
+2021-0410,Monte Carlo Masters,Clay,M,105554,Daniel Evans,105583,Dusan Lajovic,6-3 6-7(11) 6-2,3,R64,173
+2021-0410,Monte Carlo Masters,Clay,M,206173,Jannik Sinner,105077,Albert Ramos,6-3 6-4,3,R64,83
+2021-0410,Monte Carlo Masters,Clay,M,105936,Filip Krajinovic,106228,Juan Ignacio Londero,6-0 6-3,3,R32,53
+2021-0410,Monte Carlo Masters,Clay,M,104926,Fabio Fognini,111442,Jordan Thompson,6-3 6-3,3,R32,81
+2021-0410,Monte Carlo Masters,Clay,M,105807,Pablo Carreno Busta,111575,Karen Khachanov,6-2 6-3,3,R32,71
+2021-0410,Monte Carlo Masters,Clay,M,134770,Casper Ruud,106043,Diego Schwartzman,6-3 6-3,3,R32,65
+2021-0410,Monte Carlo Masters,Clay,M,104745,Rafael Nadal,105643,Federico Delbonis,6-1 6-2,3,R32,80
+2021-0410,Monte Carlo Masters,Clay,M,105777,Grigor Dimitrov,104871,Jeremy Chardy,7-6(3) 6-4,3,R32,102
+2021-0410,Monte Carlo Masters,Clay,M,105138,Roberto Bautista Agut,126205,Tommy Paul,6-3 6-4,3,R32,90
+2021-0410,Monte Carlo Masters,Clay,M,126094,Andrey Rublev,106099,Salvatore Caruso,6-3 6-2,3,R32,68
+2021-0410,Monte Carlo Masters,Clay,M,200221,Alejandro Davidovich Fokina,126610,Matteo Berrettini,7-5 6-3,3,R32,90
+2021-0410,Monte Carlo Masters,Clay,M,106298,Lucas Pouille,200615,Alexei Popyrin,7-5 2-6 6-3,3,R32,121
+2021-0410,Monte Carlo Masters,Clay,M,106426,Cristian Garin,105357,John Millman,6-1 6-4,3,R32,99
+2021-0410,Monte Carlo Masters,Clay,M,126774,Stefanos Tsitsipas,106234,Aslan Karatsev,6-3 6-4,3,R32,84
+2021-0410,Monte Carlo Masters,Clay,M,100644,Alexander Zverev,132283,Lorenzo Sonego,6-3 6-3,3,R32,98
+2021-0410,Monte Carlo Masters,Clay,M,105676,David Goffin,106065,Marco Cecchinato,6-4 6-0,3,R32,63
+2021-0410,Monte Carlo Masters,Clay,M,105554,Daniel Evans,128034,Hubert Hurkacz,6-4 6-1,3,R32,64
+2021-0410,Monte Carlo Masters,Clay,M,104925,Novak Djokovic,206173,Jannik Sinner,6-4 6-2,3,R32,94
+2021-0410,Monte Carlo Masters,Clay,M,104926,Fabio Fognini,105936,Filip Krajinovic,6-2 7-6(1),3,R16,87
+2021-0410,Monte Carlo Masters,Clay,M,134770,Casper Ruud,105807,Pablo Carreno Busta,7-6(4) 5-7 7-5,3,R16,172
+2021-0410,Monte Carlo Masters,Clay,M,104745,Rafael Nadal,105777,Grigor Dimitrov,6-1 6-1,3,R16,55
+2021-0410,Monte Carlo Masters,Clay,M,126094,Andrey Rublev,105138,Roberto Bautista Agut,7-6(2) 5-7 6-3,3,R16,164
+2021-0410,Monte Carlo Masters,Clay,M,200221,Alejandro Davidovich Fokina,106298,Lucas Pouille,6-2 7-6(2),3,R16,105
+2021-0410,Monte Carlo Masters,Clay,M,126774,Stefanos Tsitsipas,106426,Cristian Garin,6-3 6-4,3,R16,100
+2021-0410,Monte Carlo Masters,Clay,M,105676,David Goffin,100644,Alexander Zverev,6-4 7-6(7),3,R16,111
+2021-0410,Monte Carlo Masters,Clay,M,105554,Daniel Evans,104925,Novak Djokovic,6-4 7-5,3,R16,126
+2021-0410,Monte Carlo Masters,Clay,M,134770,Casper Ruud,104926,Fabio Fognini,6-4 6-3,3,QF,96
+2021-0410,Monte Carlo Masters,Clay,M,126094,Andrey Rublev,104745,Rafael Nadal,6-2 4-6 6-2,3,QF,152
+2021-0410,Monte Carlo Masters,Clay,M,126774,Stefanos Tsitsipas,200221,Alejandro Davidovich Fokina,7-5 0-0 RET,3,QF,60
+2021-0410,Monte Carlo Masters,Clay,M,105554,Daniel Evans,105676,David Goffin,5-7 6-3 6-4,3,QF,161
+2021-0410,Monte Carlo Masters,Clay,M,126094,Andrey Rublev,134770,Casper Ruud,6-3 7-5,3,SF,80
+2021-0410,Monte Carlo Masters,Clay,M,126774,Stefanos Tsitsipas,105554,Daniel Evans,6-2 6-1,3,SF,69
+2021-0410,Monte Carlo Masters,Clay,M,126774,Stefanos Tsitsipas,126094,Andrey Rublev,6-3 6-3,3,F,71
+2021-0416,Rome Masters,Clay,M,206173,Jannik Sinner,200005,Ugo Humbert,6-2 6-4,3,R64,90
+2021-0416,Rome Masters,Clay,M,105882,Stefano Travaglia,105332,Benoit Paire,6-4 6-3,3,R64,78
+2021-0416,Rome Masters,Clay,M,133430,Denis Shapovalov,111794,Kamil Majchrzak,6-1 6-3,3,R64,66
+2021-0416,Rome Masters,Clay,M,105807,Pablo Carreno Busta,111513,Laslo Djere,4-6 6-3 6-1,3,R64,132
+2021-0416,Rome Masters,Clay,M,105453,Kei Nishikori,104926,Fabio Fognini,6-3 6-4,3,R64,79
+2021-0416,Rome Masters,Clay,M,106198,Hugo Dellien,105173,Adrian Mannarino,2-6 7-5 6-2,3,R64,136
+2021-0416,Rome Masters,Clay,M,106234,Aslan Karatsev,200175,Miomir Kecmanovic,7-6(2) 6-4,3,R64,102
+2021-0416,Rome Masters,Clay,M,124187,Reilly Opelka,104755,Richard Gasquet,6-1 7-5,3,R64,65
+2021-0416,Rome Masters,Clay,M,207518,Lorenzo Musetti,128034,Hubert Hurkacz,6-4 2-0 RET,3,R64,49
+2021-0416,Rome Masters,Clay,M,105676,David Goffin,106099,Salvatore Caruso,6-4 6-1,3,R64,82
+2021-0416,Rome Masters,Clay,M,105643,Federico Delbonis,111575,Karen Khachanov,3-6 6-4 6-0,3,R64,101
+2021-0416,Rome Masters,Clay,M,200000,Felix Auger Aliassime,105936,Filip Krajinovic,6-3 6-7(5) 6-4,3,R64,165
+2021-0416,Rome Masters,Clay,M,105526,Jan Lennard Struff,105379,Aljaz Bedene,6-3 6-1,3,R64,66
+2021-0416,Rome Masters,Clay,M,106426,Cristian Garin,144750,Lloyd Harris,7-5 6-2,3,R64,97
+2021-0416,Rome Masters,Clay,M,105138,Roberto Bautista Agut,126205,Tommy Paul,6-3 6-4,3,R64,91
+2021-0416,Rome Masters,Clay,M,132283,Lorenzo Sonego,104792,Gael Monfils,6-4 5-7 6-4,3,R64,168
+2021-0416,Rome Masters,Clay,M,126149,Gianluca Mager,200282,Alex De Minaur,6-4 6-3,3,R64,78
+2021-0416,Rome Masters,Clay,M,105916,Marton Fucsovics,106415,Yoshihito Nishioka,6-0 6-2,3,R64,56
+2021-0416,Rome Masters,Clay,M,105227,Marin Cilic,122330,Alexander Bublik,4-6 6-2 6-3,3,R64,103
+2021-0416,Rome Masters,Clay,M,105357,John Millman,105583,Dusan Lajovic,6-3 6-4,3,R64,85
+2021-0416,Rome Masters,Clay,M,126610,Matteo Berrettini,105932,Nikoloz Basilashvili,4-6 6-2 6-4,3,R64,122
+2021-0416,Rome Masters,Clay,M,200221,Alejandro Davidovich Fokina,105777,Grigor Dimitrov,6-4 7-6(2),3,R64,102
+2021-0416,Rome Masters,Clay,M,111815,Cameron Norrie,106148,Roberto Carballes Baena,6-4 6-4,3,R64,102
+2021-0416,Rome Masters,Clay,M,126203,Taylor Fritz,105554,Daniel Evans,6-3 6-2,3,R64,76
+2021-0416,Rome Masters,Clay,M,104745,Rafael Nadal,206173,Jannik Sinner,7-5 6-4,3,R32,130
+2021-0416,Rome Masters,Clay,M,133430,Denis Shapovalov,105882,Stefano Travaglia,7-6(2) 6-3,3,R32,95
+2021-0416,Rome Masters,Clay,M,105453,Kei Nishikori,105807,Pablo Carreno Busta,W/O,3,R32,0
+2021-0416,Rome Masters,Clay,M,100644,Alexander Zverev,106198,Hugo Dellien,6-2 6-2,3,R32,80
+2021-0416,Rome Masters,Clay,M,106234,Aslan Karatsev,106421,Daniil Medvedev,6-2 6-4,3,R32,77
+2021-0416,Rome Masters,Clay,M,124187,Reilly Opelka,207518,Lorenzo Musetti,6-4 6-4,3,R32,72
+2021-0416,Rome Masters,Clay,M,105643,Federico Delbonis,105676,David Goffin,6-2 6-1,3,R32,67
+2021-0416,Rome Masters,Clay,M,200000,Felix Auger Aliassime,106043,Diego Schwartzman,6-1 6-3,3,R32,63
+2021-0416,Rome Masters,Clay,M,126094,Andrey Rublev,105526,Jan Lennard Struff,6-7(7) 6-1 6-4,3,R32,137
+2021-0416,Rome Masters,Clay,M,105138,Roberto Bautista Agut,106426,Cristian Garin,7-6(5) 6-3,3,R32,121
+2021-0416,Rome Masters,Clay,M,132283,Lorenzo Sonego,126149,Gianluca Mager,6-4 6-4,3,R32,87
+2021-0416,Rome Masters,Clay,M,106233,Dominic Thiem,105916,Marton Fucsovics,3-6 7-6(5) 6-0,3,R32,152
+2021-0416,Rome Masters,Clay,M,126774,Stefanos Tsitsipas,105227,Marin Cilic,7-5 6-2,3,R32,103
+2021-0416,Rome Masters,Clay,M,126610,Matteo Berrettini,105357,John Millman,6-4 6-2,3,R32,79
+2021-0416,Rome Masters,Clay,M,200221,Alejandro Davidovich Fokina,111815,Cameron Norrie,6-2 6-3,3,R32,78
+2021-0416,Rome Masters,Clay,M,104925,Novak Djokovic,126203,Taylor Fritz,6-3 7-6(5),3,R32,98
+2021-0416,Rome Masters,Clay,M,104745,Rafael Nadal,133430,Denis Shapovalov,3-6 6-4 7-6(3),3,R16,207
+2021-0416,Rome Masters,Clay,M,100644,Alexander Zverev,105453,Kei Nishikori,4-6 6-3 6-4,3,R16,172
+2021-0416,Rome Masters,Clay,M,124187,Reilly Opelka,106234,Aslan Karatsev,7-6(6) 6-4,3,R16,97
+2021-0416,Rome Masters,Clay,M,105643,Federico Delbonis,200000,Felix Auger Aliassime,7-6(3) 6-1,3,R16,111
+2021-0416,Rome Masters,Clay,M,126094,Andrey Rublev,105138,Roberto Bautista Agut,6-4 6-4,3,R16,90
+2021-0416,Rome Masters,Clay,M,132283,Lorenzo Sonego,106233,Dominic Thiem,6-4 6-7(5) 7-6(5),3,R16,204
+2021-0416,Rome Masters,Clay,M,126774,Stefanos Tsitsipas,126610,Matteo Berrettini,7-6(3) 6-2,3,R16,96
+2021-0416,Rome Masters,Clay,M,104925,Novak Djokovic,200221,Alejandro Davidovich Fokina,6-2 6-1,3,R16,70
+2021-0416,Rome Masters,Clay,M,104745,Rafael Nadal,100644,Alexander Zverev,6-3 6-4,3,QF,119
+2021-0416,Rome Masters,Clay,M,124187,Reilly Opelka,105643,Federico Delbonis,7-5 7-6(2),3,QF,101
+2021-0416,Rome Masters,Clay,M,132283,Lorenzo Sonego,126094,Andrey Rublev,3-6 6-4 6-3,3,QF,153
+2021-0416,Rome Masters,Clay,M,104925,Novak Djokovic,126774,Stefanos Tsitsipas,4-6 7-5 7-5,3,QF,196
+2021-0416,Rome Masters,Clay,M,104745,Rafael Nadal,124187,Reilly Opelka,6-4 6-4,3,SF,92
+2021-0416,Rome Masters,Clay,M,104925,Novak Djokovic,132283,Lorenzo Sonego,6-3 6-7(5) 6-2,3,SF,164
+2021-0416,Rome Masters,Clay,M,104745,Rafael Nadal,104925,Novak Djokovic,7-5 1-6 6-3,3,F,169
+2021-0421,Canada Masters,Hard,M,144750,Lloyd Harris,111790,Brayden Schnur,6-3 6-2,3,R64,77
+2021-0421,Canada Masters,Hard,M,124187,Reilly Opelka,106401,Nick Kyrgios,4-6 7-6(4) 6-4,3,R64,117
+2021-0421,Canada Masters,Hard,M,126205,Tommy Paul,105577,Vasek Pospisil,6-7(5) 6-2 6-3,3,R64,141
+2021-0421,Canada Masters,Hard,M,105332,Benoit Paire,111456,Mackenzie Mcdonald,6-3 6-4,3,R64,78
+2021-0421,Canada Masters,Hard,M,200005,Ugo Humbert,132283,Lorenzo Sonego,6-3 6-4,3,R64,99
+2021-0421,Canada Masters,Hard,M,111575,Karen Khachanov,111815,Cameron Norrie,6-4 5-7 6-4,3,R64,153
+2021-0421,Canada Masters,Hard,M,105583,Dusan Lajovic,200325,Emil Ruusuvuori,3-6 6-3 6-3,3,R64,127
+2021-0421,Canada Masters,Hard,M,105227,Marin Cilic,105077,Albert Ramos,6-2 4-6 6-3,3,R64,133
+2021-0421,Canada Masters,Hard,M,126207,Frances Tiafoe,106415,Yoshihito Nishioka,6-4 6-3,3,R64,75
+2021-0421,Canada Masters,Hard,M,105357,John Millman,105575,Ricardas Berankis,6-3 7-6(4),3,R64,95
+2021-0421,Canada Masters,Hard,M,104545,John Isner,200221,Alejandro Davidovich Fokina,6-4 6-1,3,R64,64
+2021-0421,Canada Masters,Hard,M,104926,Fabio Fognini,105526,Jan Lennard Struff,6-7(2) 6-2 6-4,3,R64,144
+2021-0421,Canada Masters,Hard,M,105453,Kei Nishikori,200175,Miomir Kecmanovic,6-4 6-7(5) 6-2,3,R64,127
+2021-0421,Canada Masters,Hard,M,105932,Nikoloz Basilashvili,202385,Jenson Brooksby,2-6 6-0 6-4,3,R64,111
+2021-0421,Canada Masters,Hard,M,105902,James Duckworth,126203,Taylor Fritz,7-6(2) 6-3,3,R64,115
+2021-0421,Canada Masters,Hard,M,122330,Alexander Bublik,105554,Daniel Evans,6-4 6-4,3,R64,100
+2021-0421,Canada Masters,Hard,M,144750,Lloyd Harris,103852,Feliciano Lopez,6-2 6-3,3,R32,64
+2021-0421,Canada Masters,Hard,M,124187,Reilly Opelka,105777,Grigor Dimitrov,6-3 6-4,3,R32,74
+2021-0421,Canada Masters,Hard,M,105138,Roberto Bautista Agut,126205,Tommy Paul,6-3 6-4,3,R32,79
+2021-0421,Canada Masters,Hard,M,106043,Diego Schwartzman,105332,Benoit Paire,7-5 6-1,3,R32,80
+2021-0421,Canada Masters,Hard,M,126774,Stefanos Tsitsipas,200005,Ugo Humbert,6-3 6-7(13) 6-1,3,R32,154
+2021-0421,Canada Masters,Hard,M,111575,Karen Khachanov,106234,Aslan Karatsev,7-6(7) 6-4,3,R32,131
+2021-0421,Canada Masters,Hard,M,105583,Dusan Lajovic,200000,Felix Auger Aliassime,7-5 6-4,3,R32,98
+2021-0421,Canada Masters,Hard,M,134770,Casper Ruud,105227,Marin Cilic,6-3 3-6 6-3,3,R32,123
+2021-0421,Canada Masters,Hard,M,126207,Frances Tiafoe,133430,Denis Shapovalov,6-1 6-4,3,R32,75
+2021-0421,Canada Masters,Hard,M,104792,Gael Monfils,105357,John Millman,3-6 6-3 6-4,3,R32,113
+2021-0421,Canada Masters,Hard,M,104545,John Isner,106426,Cristian Garin,4-6 6-3 6-4,3,R32,133
+2021-0421,Canada Masters,Hard,M,126094,Andrey Rublev,104926,Fabio Fognini,7-6(4) 6-3,3,R32,92
+2021-0421,Canada Masters,Hard,M,128034,Hubert Hurkacz,105453,Kei Nishikori,W/O,3,R32,0
+2021-0421,Canada Masters,Hard,M,105932,Nikoloz Basilashvili,200282,Alex De Minaur,6-1 6-1,3,R32,56
+2021-0421,Canada Masters,Hard,M,105902,James Duckworth,206173,Jannik Sinner,6-3 6-4,3,R32,76
+2021-0421,Canada Masters,Hard,M,106421,Daniil Medvedev,122330,Alexander Bublik,4-6 6-3 6-4,3,R32,122
+2021-0421,Canada Masters,Hard,M,124187,Reilly Opelka,144750,Lloyd Harris,4-6 7-6(6) 7-6(4),3,R16,165
+2021-0421,Canada Masters,Hard,M,105138,Roberto Bautista Agut,106043,Diego Schwartzman,6-3 3-6 7-5,3,R16,165
+2021-0421,Canada Masters,Hard,M,126774,Stefanos Tsitsipas,111575,Karen Khachanov,6-3 6-2,3,R16,79
+2021-0421,Canada Masters,Hard,M,134770,Casper Ruud,105583,Dusan Lajovic,6-4 6-3,3,R16,74
+2021-0421,Canada Masters,Hard,M,104792,Gael Monfils,126207,Frances Tiafoe,6-1 7-6(2),3,R16,87
+2021-0421,Canada Masters,Hard,M,104545,John Isner,126094,Andrey Rublev,7-5 7-6(5),3,R16,103
+2021-0421,Canada Masters,Hard,M,128034,Hubert Hurkacz,105932,Nikoloz Basilashvili,6-7(7) 6-4 6-4,3,R16,158
+2021-0421,Canada Masters,Hard,M,106421,Daniil Medvedev,105902,James Duckworth,6-2 6-4,3,R16,68
+2021-0421,Canada Masters,Hard,M,124187,Reilly Opelka,105138,Roberto Bautista Agut,6-3 7-6(1),3,QF,83
+2021-0421,Canada Masters,Hard,M,126774,Stefanos Tsitsipas,134770,Casper Ruud,6-1 6-4,3,QF,74
+2021-0421,Canada Masters,Hard,M,104545,John Isner,104792,Gael Monfils,7-6(5) 6-4,3,QF,93
+2021-0421,Canada Masters,Hard,M,106421,Daniil Medvedev,128034,Hubert Hurkacz,2-6 7-6(6) 7-6(5),3,QF,136
+2021-0421,Canada Masters,Hard,M,124187,Reilly Opelka,126774,Stefanos Tsitsipas,6-7(2) 7-6(4) 6-4,3,SF,152
+2021-0421,Canada Masters,Hard,M,106421,Daniil Medvedev,104545,John Isner,6-2 6-2,3,SF,54
+2021-0421,Canada Masters,Hard,M,106421,Daniil Medvedev,124187,Reilly Opelka,6-4 6-3,3,F,85
+2021-0422,Cincinnati Masters,Hard,M,200624,Sebastian Korda,111513,Laslo Djere,6-4 6-4,3,R64,81
+2021-0422,Cincinnati Masters,Hard,M,132283,Lorenzo Sonego,207989,Carlos Alcaraz,6-3 7-6(6),3,R64,131
+2021-0422,Cincinnati Masters,Hard,M,126205,Tommy Paul,106426,Cristian Garin,4-6 6-3 6-4,3,R64,144
+2021-0422,Cincinnati Masters,Hard,M,200000,Felix Auger Aliassime,105916,Marton Fucsovics,7-6(0) 6-3,3,R64,140
+2021-0422,Cincinnati Masters,Hard,M,111575,Karen Khachanov,104731,Kevin Anderson,6-2 6-4,3,R64,85
+2021-0422,Cincinnati Masters,Hard,M,105077,Albert Ramos,126203,Taylor Fritz,4-6 6-4 6-4,3,R64,135
+2021-0422,Cincinnati Masters,Hard,M,144750,Lloyd Harris,106415,Yoshihito Nishioka,6-3 6-4,3,R64,83
+2021-0422,Cincinnati Masters,Hard,M,104926,Fabio Fognini,105932,Nikoloz Basilashvili,7-6(3) 6-3,3,R64,98
+2021-0422,Cincinnati Masters,Hard,M,105550,Guido Pella,105676,David Goffin,6-3 6-3,3,R64,
+2021-0422,Cincinnati Masters,Hard,M,106043,Diego Schwartzman,105554,Daniel Evans,6-2 4-6 6-3,3,R64,127
+2021-0422,Cincinnati Masters,Hard,M,126207,Frances Tiafoe,200005,Ugo Humbert,7-5 7-6(9),3,R64,98
+2021-0422,Cincinnati Masters,Hard,M,124187,Reilly Opelka,144895,Corentin Moutet,7-6(3) 4-6 6-4,3,R64,141
+2021-0422,Cincinnati Masters,Hard,M,105332,Benoit Paire,200175,Miomir Kecmanovic,5-7 6-3 6-2,3,R64,
+2021-0422,Cincinnati Masters,Hard,M,104545,John Isner,111815,Cameron Norrie,4-6 7-6(5) 6-4,3,R64,119
+2021-0422,Cincinnati Masters,Hard,M,206173,Jannik Sinner,105643,Federico Delbonis,6-2 7-5,3,R64,98
+2021-0422,Cincinnati Masters,Hard,M,200282,Alex De Minaur,105936,Filip Krajinovic,0-6 6-4 6-4,3,R64,128
+2021-0422,Cincinnati Masters,Hard,M,104792,Gael Monfils,105583,Dusan Lajovic,7-6(0) 6-2,3,R64,91
+2021-0422,Cincinnati Masters,Hard,M,105227,Marin Cilic,106234,Aslan Karatsev,7-5 6-3,3,R64,111
+2021-0422,Cincinnati Masters,Hard,M,136440,Dominik Koepfer,105526,Jan Lennard Struff,7-6(2) 5-7 6-3,3,R64,150
+2021-0422,Cincinnati Masters,Hard,M,104918,Andy Murray,104755,Richard Gasquet,6-4 6-4,3,R64,110
+2021-0422,Cincinnati Masters,Hard,M,128034,Hubert Hurkacz,200221,Alejandro Davidovich Fokina,6-1 6-7(3) 6-1,3,R64,125
+2021-0422,Cincinnati Masters,Hard,M,105777,Grigor Dimitrov,105138,Roberto Bautista Agut,6-3 6-4,3,R64,81
+2021-0422,Cincinnati Masters,Hard,M,122330,Alexander Bublik,106218,Marcos Giron,3-6 6-3 7-6(5),3,R64,125
+2021-0422,Cincinnati Masters,Hard,M,111456,Mackenzie Mcdonald,206909,Brandon Nakashima,7-5 6-2,3,R64,90
+2021-0422,Cincinnati Masters,Hard,M,126774,Stefanos Tsitsipas,200624,Sebastian Korda,7-6(5) 6-3,3,R32,99
+2021-0422,Cincinnati Masters,Hard,M,132283,Lorenzo Sonego,126205,Tommy Paul,7-6(9) 6-2,3,R32,114
+2021-0422,Cincinnati Masters,Hard,M,200000,Felix Auger Aliassime,111575,Karen Khachanov,6-7(5) 6-3 6-4,3,R32,172
+2021-0422,Cincinnati Masters,Hard,M,126610,Matteo Berrettini,105077,Albert Ramos,6-7(5) 6-3 7-5,3,R32,140
+2021-0422,Cincinnati Masters,Hard,M,100644,Alexander Zverev,144750,Lloyd Harris,7-6(3) 6-2,3,R32,76
+2021-0422,Cincinnati Masters,Hard,M,105550,Guido Pella,104926,Fabio Fognini,6-1 7-5,3,R32,89
+2021-0422,Cincinnati Masters,Hard,M,106043,Diego Schwartzman,126207,Frances Tiafoe,6-1 4-6 6-4,3,R32,131
+2021-0422,Cincinnati Masters,Hard,M,134770,Casper Ruud,124187,Reilly Opelka,6-7(5) 6-0 7-6(4),3,R32,145
+2021-0422,Cincinnati Masters,Hard,M,105332,Benoit Paire,133430,Denis Shapovalov,6-3 4-6 7-5,3,R32,134
+2021-0422,Cincinnati Masters,Hard,M,104545,John Isner,206173,Jannik Sinner,5-7 7-6(4) 6-4,3,R32,155
+2021-0422,Cincinnati Masters,Hard,M,104792,Gael Monfils,200282,Alex De Minaur,6-3 7-5,3,R32,104
+2021-0422,Cincinnati Masters,Hard,M,126094,Andrey Rublev,105227,Marin Cilic,5-7 6-3 6-1,3,R32,121
+2021-0422,Cincinnati Masters,Hard,M,105807,Pablo Carreno Busta,136440,Dominik Koepfer,6-4 6-2,3,R32,80
+2021-0422,Cincinnati Masters,Hard,M,128034,Hubert Hurkacz,104918,Andy Murray,7-6(4) 6-3,3,R32,102
+2021-0422,Cincinnati Masters,Hard,M,105777,Grigor Dimitrov,122330,Alexander Bublik,6-3 7-5,3,R32,83
+2021-0422,Cincinnati Masters,Hard,M,106421,Daniil Medvedev,111456,Mackenzie Mcdonald,6-2 6-2,3,R32,59
+2021-0422,Cincinnati Masters,Hard,M,126774,Stefanos Tsitsipas,132283,Lorenzo Sonego,5-7 6-3 6-4,3,R16,145
+2021-0422,Cincinnati Masters,Hard,M,200000,Felix Auger Aliassime,126610,Matteo Berrettini,6-4 6-3,3,R16,94
+2021-0422,Cincinnati Masters,Hard,M,100644,Alexander Zverev,105550,Guido Pella,6-2 6-3,3,R16,73
+2021-0422,Cincinnati Masters,Hard,M,134770,Casper Ruud,106043,Diego Schwartzman,6-4 6-3,3,R16,80
+2021-0422,Cincinnati Masters,Hard,M,105332,Benoit Paire,104545,John Isner,7-6(1) 6-7(2) 6-1,3,R16,138
+2021-0422,Cincinnati Masters,Hard,M,126094,Andrey Rublev,104792,Gael Monfils,7-6(2) 7-6(5),3,R16,108
+2021-0422,Cincinnati Masters,Hard,M,105807,Pablo Carreno Busta,128034,Hubert Hurkacz,7-6(6) 7-6(3),3,R16,131
+2021-0422,Cincinnati Masters,Hard,M,106421,Daniil Medvedev,105777,Grigor Dimitrov,6-3 6-3,3,R16,89
+2021-0422,Cincinnati Masters,Hard,M,126774,Stefanos Tsitsipas,200000,Felix Auger Aliassime,6-2 5-7 6-1,3,QF,131
+2021-0422,Cincinnati Masters,Hard,M,100644,Alexander Zverev,134770,Casper Ruud,6-1 6-3,3,QF,59
+2021-0422,Cincinnati Masters,Hard,M,126094,Andrey Rublev,105332,Benoit Paire,6-2 3-6 6-3,3,QF,99
+2021-0422,Cincinnati Masters,Hard,M,106421,Daniil Medvedev,105807,Pablo Carreno Busta,6-1 6-1,3,QF,54
+2021-0422,Cincinnati Masters,Hard,M,100644,Alexander Zverev,126774,Stefanos Tsitsipas,6-4 3-6 7-6(4),3,SF,161
+2021-0422,Cincinnati Masters,Hard,M,126094,Andrey Rublev,106421,Daniil Medvedev,2-6 6-3 6-3,3,SF,141
+2021-0422,Cincinnati Masters,Hard,M,100644,Alexander Zverev,126094,Andrey Rublev,6-2 6-3,3,F,59
+2021-0605,Tour Finals,Hard,F,206173,Jannik Sinner,128034,Hubert Hurkacz,6-2 6-2,3,RR,85
+2021-0605,Tour Finals,Hard,F,100644,Alexander Zverev,128034,Hubert Hurkacz,6-2 6-4,3,RR,62
+2021-0605,Tour Finals,Hard,F,100644,Alexander Zverev,126610,Matteo Berrettini,7-6(7) 1-0 RET,3,RR,101
+2021-0605,Tour Finals,Hard,F,106421,Daniil Medvedev,128034,Hubert Hurkacz,6-7(5) 6-3 6-4,3,RR,120
+2021-0605,Tour Finals,Hard,F,106421,Daniil Medvedev,206173,Jannik Sinner,6-0 6-7(5) 7-6(8),3,RR,149
+2021-0605,Tour Finals,Hard,F,106421,Daniil Medvedev,100644,Alexander Zverev,6-3 6-7(3) 7-6(6),3,RR,155
+2021-0605,Tour Finals,Hard,F,134770,Casper Ruud,126094,Andrey Rublev,2-6 7-5 7-6(5),3,RR,143
+2021-0605,Tour Finals,Hard,F,134770,Casper Ruud,111815,Cameron Norrie,1-6 6-3 6-4,3,RR,111
+2021-0605,Tour Finals,Hard,F,126094,Andrey Rublev,126774,Stefanos Tsitsipas,6-4 6-4,3,RR,91
+2021-0605,Tour Finals,Hard,F,104925,Novak Djokovic,134770,Casper Ruud,7-6(4) 6-2,3,RR,90
+2021-0605,Tour Finals,Hard,F,104925,Novak Djokovic,126094,Andrey Rublev,6-3 6-2,3,RR,68
+2021-0605,Tour Finals,Hard,F,104925,Novak Djokovic,111815,Cameron Norrie,6-2 6-1,3,RR,66
+2021-0605,Tour Finals,Hard,F,106421,Daniil Medvedev,134770,Casper Ruud,6-4 6-2,3,SF,79
+2021-0605,Tour Finals,Hard,F,100644,Alexander Zverev,104925,Novak Djokovic,7-6(4) 4-6 6-3,3,SF,148
+2021-0605,Tour Finals,Hard,F,100644,Alexander Zverev,106421,Daniil Medvedev,6-4 6-4,3,F,75
+2021-1536,Madrid Masters,Clay,M,200221,Alejandro Davidovich Fokina,105732,Pierre Hugues Herbert,6-7(5) 7-6(4) 7-6(4),3,R64,178
+2021-1536,Madrid Masters,Clay,M,136440,Dominik Koepfer,124187,Reilly Opelka,6-4 6-4,3,R64,76
+2021-1536,Madrid Masters,Clay,M,106426,Cristian Garin,104269,Fernando Verdasco,6-1 6-4,3,R64,87
+2021-1536,Madrid Masters,Clay,M,105643,Federico Delbonis,105807,Pablo Carreno Busta,3-6 6-4 6-3,3,R64,121
+2021-1536,Madrid Masters,Clay,M,105077,Albert Ramos,126203,Taylor Fritz,7-5 5-7 6-4,3,R64,149
+2021-1536,Madrid Masters,Clay,M,104926,Fabio Fognini,126535,Carlos Taberner,7-6(4) 2-6 6-3,3,R64,135
+2021-1536,Madrid Masters,Clay,M,105332,Benoit Paire,105932,Nikoloz Basilashvili,6-4 7-5,3,R64,73
+2021-1536,Madrid Masters,Clay,M,106415,Yoshihito Nishioka,105936,Filip Krajinovic,6-2 6-4,3,R64,78
+2021-1536,Madrid Masters,Clay,M,134770,Casper Ruud,200000,Felix Auger Aliassime,6-1 6-4,3,R64,91
+2021-1536,Madrid Masters,Clay,M,133430,Denis Shapovalov,105583,Dusan Lajovic,6-1 6-3,3,R64,62
+2021-1536,Madrid Masters,Clay,M,122330,Alexander Bublik,105916,Marton Fucsovics,7-6(5) 6-3,3,R64,86
+2021-1536,Madrid Masters,Clay,M,106234,Aslan Karatsev,200005,Ugo Humbert,7-5 6-4,3,R64,91
+2021-1536,Madrid Masters,Clay,M,126205,Tommy Paul,124079,Pedro Martinez,6-4 7-5,3,R64,94
+2021-1536,Madrid Masters,Clay,M,104545,John Isner,200175,Miomir Kecmanovic,6-4 7-6(6),3,R64,79
+2021-1536,Madrid Masters,Clay,M,105138,Roberto Bautista Agut,106065,Marco Cecchinato,6-2 6-7(3) 7-5,3,R64,149
+2021-1536,Madrid Masters,Clay,M,144750,Lloyd Harris,105777,Grigor Dimitrov,6-3 3-6 7-6(5),3,R64,151
+2021-1536,Madrid Masters,Clay,M,200282,Alex De Minaur,144719,Jaume Munar,4-6 7-5 6-1,3,R64,142
+2021-1536,Madrid Masters,Clay,M,106218,Marcos Giron,104665,Pablo Andujar,6-7(8) 7-6(4) 7-5,3,R64,206
+2021-1536,Madrid Masters,Clay,M,105453,Kei Nishikori,111575,Karen Khachanov,6-7(6) 6-2 6-2,3,R64,138
+2021-1536,Madrid Masters,Clay,M,105554,Daniel Evans,104871,Jeremy Chardy,7-6(6) 6-7(7) 6-2,3,R64,166
+2021-1536,Madrid Masters,Clay,M,105357,John Millman,128034,Hubert Hurkacz,5-7 7-6(7) 6-3,3,R64,141
+2021-1536,Madrid Masters,Clay,M,206173,Jannik Sinner,105550,Guido Pella,6-2 4-4 RET,3,R64,64
+2021-1536,Madrid Masters,Clay,M,200615,Alexei Popyrin,105526,Jan Lennard Struff,6-3 7-6(4),3,R64,88
+2021-1536,Madrid Masters,Clay,M,207989,Carlos Alcaraz,105173,Adrian Mannarino,6-4 6-0,3,R64,71
+2021-1536,Madrid Masters,Clay,M,106421,Daniil Medvedev,200221,Alejandro Davidovich Fokina,4-6 6-4 6-2,3,R32,132
+2021-1536,Madrid Masters,Clay,M,106426,Cristian Garin,136440,Dominik Koepfer,6-3 6-4,3,R32,98
+2021-1536,Madrid Masters,Clay,M,105643,Federico Delbonis,105077,Albert Ramos,7-6(5) 6-3,3,R32,99
+2021-1536,Madrid Masters,Clay,M,126610,Matteo Berrettini,104926,Fabio Fognini,6-3 6-4,3,R32,81
+2021-1536,Madrid Masters,Clay,M,126774,Stefanos Tsitsipas,105332,Benoit Paire,6-1 6-2,3,R32,54
+2021-1536,Madrid Masters,Clay,M,134770,Casper Ruud,106415,Yoshihito Nishioka,6-1 6-2,3,R32,57
+2021-1536,Madrid Masters,Clay,M,122330,Alexander Bublik,133430,Denis Shapovalov,6-4 5-7 6-4,3,R32,139
+2021-1536,Madrid Masters,Clay,M,106234,Aslan Karatsev,106043,Diego Schwartzman,2-6 6-4 6-1,3,R32,108
+2021-1536,Madrid Masters,Clay,M,126094,Andrey Rublev,126205,Tommy Paul,6-7(5) 6-3 6-4,3,R32,139
+2021-1536,Madrid Masters,Clay,M,104545,John Isner,105138,Roberto Bautista Agut,6-4 6-7(4) 7-6(6),3,R32,142
+2021-1536,Madrid Masters,Clay,M,200282,Alex De Minaur,144750,Lloyd Harris,6-2 3-0 RET,3,R32,42
+2021-1536,Madrid Masters,Clay,M,106233,Dominic Thiem,106218,Marcos Giron,6-1 6-3,3,R32,57
+2021-1536,Madrid Masters,Clay,M,100644,Alexander Zverev,105453,Kei Nishikori,6-3 6-2,3,R32,74
+2021-1536,Madrid Masters,Clay,M,105554,Daniel Evans,105357,John Millman,6-7(5) 6-2 6-3,3,R32,153
+2021-1536,Madrid Masters,Clay,M,200615,Alexei Popyrin,206173,Jannik Sinner,7-6(5) 6-2,3,R32,94
+2021-1536,Madrid Masters,Clay,M,104745,Rafael Nadal,207989,Carlos Alcaraz,6-1 6-2,3,R32,77
+2021-1536,Madrid Masters,Clay,M,106426,Cristian Garin,106421,Daniil Medvedev,6-4 6-7(2) 6-1,3,R16,149
+2021-1536,Madrid Masters,Clay,M,126610,Matteo Berrettini,105643,Federico Delbonis,7-6(4) 6-4,3,R16,96
+2021-1536,Madrid Masters,Clay,M,134770,Casper Ruud,126774,Stefanos Tsitsipas,7-6(4) 6-4,3,R16,93
+2021-1536,Madrid Masters,Clay,M,122330,Alexander Bublik,106234,Aslan Karatsev,6-4 6-3,3,R16,74
+2021-1536,Madrid Masters,Clay,M,104545,John Isner,126094,Andrey Rublev,7-6(4) 3-6 7-6(4),3,R16,125
+2021-1536,Madrid Masters,Clay,M,106233,Dominic Thiem,200282,Alex De Minaur,7-6(7) 6-4,3,R16,111
+2021-1536,Madrid Masters,Clay,M,100644,Alexander Zverev,105554,Daniel Evans,6-3 7-6(3),3,R16,97
+2021-1536,Madrid Masters,Clay,M,104745,Rafael Nadal,200615,Alexei Popyrin,6-3 6-3,3,R16,79
+2021-1536,Madrid Masters,Clay,M,126610,Matteo Berrettini,106426,Cristian Garin,5-7 6-3 6-0,3,QF,126
+2021-1536,Madrid Masters,Clay,M,134770,Casper Ruud,122330,Alexander Bublik,7-5 6-1,3,QF,68
+2021-1536,Madrid Masters,Clay,M,106233,Dominic Thiem,104545,John Isner,3-6 6-3 6-4,3,QF,115
+2021-1536,Madrid Masters,Clay,M,100644,Alexander Zverev,104745,Rafael Nadal,6-4 6-4,3,QF,104
+2021-1536,Madrid Masters,Clay,M,126610,Matteo Berrettini,134770,Casper Ruud,6-4 6-4,3,SF,81
+2021-1536,Madrid Masters,Clay,M,100644,Alexander Zverev,106233,Dominic Thiem,6-3 6-4,3,SF,97
+2021-1536,Madrid Masters,Clay,M,100644,Alexander Zverev,126610,Matteo Berrettini,6-7(8) 6-4 6-3,3,F,160
+2021-520,Roland Garros,Clay,G,104925,Novak Djokovic,105815,Tennys Sandgren,6-2 6-4 6-2,5,R128,118
+2021-520,Roland Garros,Clay,G,104655,Pablo Cuevas,106298,Lucas Pouille,6-3 6-1 6-3,5,R128,109
+2021-520,Roland Garros,Clay,G,105902,James Duckworth,106099,Salvatore Caruso,6-4 3-6 7-6(4) 6-2,5,R128,209
+2021-520,Roland Garros,Clay,G,105575,Ricardas Berankis,200005,Ugo Humbert,6-4 6-4 2-6 6-4,5,R128,181
+2021-520,Roland Garros,Clay,G,200282,Alex De Minaur,105882,Stefano Travaglia,6-2 6-4 7-6(4),5,R128,148
+2021-520,Roland Garros,Clay,G,106065,Marco Cecchinato,106034,Yasutaka Uchiyama,3-6 6-1 6-2 6-4,5,R128,138
+2021-520,Roland Garros,Clay,G,106415,Yoshihito Nishioka,104542,Jo-Wilfried Tsonga,6-4 6-2 3-6 7-6(5),5,R128,172
+2021-520,Roland Garros,Clay,G,207518,Lorenzo Musetti,105676,David Goffin,6-0 7-5 7-6(3),5,R128,138
+2021-520,Roland Garros,Clay,G,126610,Matteo Berrettini,106121,Taro Daniel,6-0 6-4 4-6 6-4,5,R128,142
+2021-520,Roland Garros,Clay,G,105948,Federico Coria,103852,Feliciano Lopez,6-3 7-6(4) 6-2,5,R128,118
+2021-520,Roland Garros,Clay,G,126952,Soon Woo Kwon,104731,Kevin Anderson,7-5 6-4 2-6 7-6(4),5,R128,189
+2021-520,Roland Garros,Clay,G,104312,Andreas Seppi,200000,Felix Auger Aliassime,6-3 7-6(8) 4-6 6-4,5,R128,213
+2021-520,Roland Garros,Clay,G,126203,Taylor Fritz,105311,Joao Sousa,6-4 6-2 6-4,5,R128,101
+2021-520,Roland Garros,Clay,G,136440,Dominik Koepfer,106288,Mathias Bourgue,6-3 6-3 6-4,5,R128,124
+2021-520,Roland Garros,Clay,G,105227,Marin Cilic,126239,Arthur Rinderknech,7-6(6) 6-1 6-2,5,R128,138
+2021-520,Roland Garros,Clay,G,103819,Roger Federer,104797,Denis Istomin,6-2 6-4 6-3,5,R128,93
+2021-520,Roland Garros,Clay,G,104745,Rafael Nadal,200615,Alexei Popyrin,6-3 6-2 7-6(3),5,R128,143
+2021-520,Roland Garros,Clay,G,104755,Richard Gasquet,200384,Hugo Gaston,6-1 6-4 6-2,5,R128,99
+2021-520,Roland Garros,Clay,G,111815,Cameron Norrie,106216,Bjorn Fratangelo,7-5 7-6(5) 6-2,5,R128,151
+2021-520,Roland Garros,Clay,G,144750,Lloyd Harris,132283,Lorenzo Sonego,7-5 6-4 6-4,5,R128,138
+2021-520,Roland Garros,Clay,G,206173,Jannik Sinner,105732,Pierre Hugues Herbert,6-1 4-6 6-7(4) 7-5 6-4,5,R128,212
+2021-520,Roland Garros,Clay,G,126149,Gianluca Mager,105376,Peter Gojowczyk,6-2 3-6 6-4 7-5,5,R128,156
+2021-520,Roland Garros,Clay,G,144707,Mikael Ymer,106148,Roberto Carballes Baena,6-4 0-6 4-6 6-2 6-2,5,R128,216
+2021-520,Roland Garros,Clay,G,104792,Gael Monfils,105077,Albert Ramos,1-6 7-6(6) 6-4 6-4,5,R128,181
+2021-520,Roland Garros,Clay,G,106043,Diego Schwartzman,104229,Yen Hsun Lu,6-2 6-2 6-3,5,R128,103
+2021-520,Roland Garros,Clay,G,105379,Aljaz Bedene,105173,Adrian Mannarino,7-5 3-6 7-5 6-2,5,R128,209
+2021-520,Roland Garros,Clay,G,104259,Philipp Kohlschreiber,104269,Fernando Verdasco,7-6(3) 6-2 2-6 6-4,5,R128,172
+2021-520,Roland Garros,Clay,G,106234,Aslan Karatsev,202385,Jenson Brooksby,6-3 6-4 6-4,5,R128,119
+2021-520,Roland Garros,Clay,G,105932,Nikoloz Basilashvili,105583,Dusan Lajovic,6-4 6-3 0-6 6-2,5,R128,126
+2021-520,Roland Garros,Clay,G,207989,Carlos Alcaraz,126523,Bernabe Zapata Miralles,6-3 2-6 6-1 7-6(4),5,R128,188
+2021-520,Roland Garros,Clay,G,105487,Facundo Bagnis,126127,Benjamin Bonzi,7-5 6-3 6-4,5,R128,152
+2021-520,Roland Garros,Clay,G,105526,Jan Lennard Struff,126094,Andrey Rublev,6-3 7-6(6) 4-6 3-6 6-4,5,R128,226
+2021-520,Roland Garros,Clay,G,100644,Alexander Zverev,106214,Oscar Otte,3-6 3-6 6-2 6-2 6-0,5,R128,169
+2021-520,Roland Garros,Clay,G,126128,Roman Safiullin,126535,Carlos Taberner,7-6(4) 1-6 6-0 6-2,5,R128,165
+2021-520,Roland Garros,Clay,G,111513,Laslo Djere,144895,Corentin Moutet,6-3 6-7(10) 7-6(2) 7-5,5,R128,267
+2021-520,Roland Garros,Clay,G,200175,Miomir Kecmanovic,105554,Daniel Evans,1-6 6-3 6-3 6-4,5,R128,184
+2021-520,Roland Garros,Clay,G,111575,Karen Khachanov,106210,Jiri Vesely,6-1 6-2 6-3,5,R128,93
+2021-520,Roland Garros,Clay,G,105453,Kei Nishikori,105561,Alessandro Giannessi,6-4 6-7(4) 6-3 4-6 6-4,5,R128,243
+2021-520,Roland Garros,Clay,G,105967,Henri Laaksonen,105870,Yannick Hanfmann,6-1 6-3 4-6 6-2,5,R128,133
+2021-520,Roland Garros,Clay,G,105138,Roberto Bautista Agut,106408,Mario Vilella Martinez,6-4 6-4 6-2,5,R128,118
+2021-520,Roland Garros,Clay,G,134770,Casper Ruud,105332,Benoit Paire,5-7 6-2 6-1 7-6(4),5,R128,180
+2021-520,Roland Garros,Clay,G,111794,Kamil Majchrzak,209070,Arthur Cazaux,6-4 2-6 6-4 6-4,5,R128,210
+2021-520,Roland Garros,Clay,G,200221,Alejandro Davidovich Fokina,105062,Mikhail Kukushkin,6-4 6-4 6-3,5,R128,117
+2021-520,Roland Garros,Clay,G,122298,Botic Van De Zandschulp,128034,Hubert Hurkacz,6-7(5) 6-7(4) 6-2 6-2 6-4,5,R128,221
+2021-520,Roland Garros,Clay,G,104926,Fabio Fognini,106296,Gregoire Barrere,6-4 6-1 6-4,5,R128,127
+2021-520,Roland Garros,Clay,G,105916,Marton Fucsovics,104468,Gilles Simon,6-4 6-1 7-6(5),5,R128,193
+2021-520,Roland Garros,Clay,G,105643,Federico Delbonis,105430,Radu Albot,6-1 2-6 6-0 6-1,5,R128,125
+2021-520,Roland Garros,Clay,G,104665,Pablo Andujar,106233,Dominic Thiem,4-6 5-7 6-3 6-4 6-4,5,R128,268
+2021-520,Roland Garros,Clay,G,126774,Stefanos Tsitsipas,104871,Jeremy Chardy,7-6(6) 6-3 6-1,5,R128,124
+2021-520,Roland Garros,Clay,G,124079,Pedro Martinez,200624,Sebastian Korda,6-4 6-2 6-2,5,R128,135
+2021-520,Roland Garros,Clay,G,105936,Filip Krajinovic,109739,Maximilian Marterer,6-4 6-1 7-6(3),5,R128,132
+2021-520,Roland Garros,Clay,G,104545,John Isner,105023,Sam Querrey,7-6(2) 6-3 6-4,5,R128,105
+2021-520,Roland Garros,Clay,G,106329,Thiago Monteiro,202103,Francisco Cerundolo,6-3 6-4 6-3,5,R128,126
+2021-520,Roland Garros,Clay,G,105449,Steve Johnson,126207,Frances Tiafoe,6-7(5) 3-6 6-4 6-2 6-1,5,R128,191
+2021-520,Roland Garros,Clay,G,111505,Enzo Couacaud,106078,Egor Gerasimov,7-6(3) 6-4 6-3,5,R128,135
+2021-520,Roland Garros,Clay,G,105807,Pablo Carreno Busta,105613,Norbert Gombos,6-3 6-4 6-3,5,R128,103
+2021-520,Roland Garros,Clay,G,106218,Marcos Giron,105777,Grigor Dimitrov,2-6 4-6 7-5 3-0 RET,5,R128,151
+2021-520,Roland Garros,Clay,G,105550,Guido Pella,123755,Daniel Elahi Galan,6-3 7-6(4) 7-5,5,R128,165
+2021-520,Roland Garros,Clay,G,111456,Mackenzie Mcdonald,200325,Emil Ruusuvuori,4-6 6-3 7-6(4) 6-3,5,R128,188
+2021-520,Roland Garros,Clay,G,106426,Cristian Garin,106228,Juan Ignacio Londero,3-6 6-4 7-6(6) 6-2,5,R128,189
+2021-520,Roland Garros,Clay,G,124187,Reilly Opelka,105413,Andrej Martin,6-3 6-2 6-4,5,R128,112
+2021-520,Roland Garros,Clay,G,144719,Jaume Munar,111442,Jordan Thompson,6-7(6) 6-1 7-6(5) 6-4,5,R128,263
+2021-520,Roland Garros,Clay,G,126205,Tommy Paul,106331,Christopher Oconnell,6-2 6-4 4-6 4-6 10-8,5,R128,213
+2021-520,Roland Garros,Clay,G,106421,Daniil Medvedev,122330,Alexander Bublik,6-3 6-3 7-5,5,R128,114
+2021-520,Roland Garros,Clay,G,104925,Novak Djokovic,104655,Pablo Cuevas,6-3 6-2 6-4,5,R64,126
+2021-520,Roland Garros,Clay,G,105575,Ricardas Berankis,105902,James Duckworth,7-5 2-6 7-6(4) 6-0,5,R64,159
+2021-520,Roland Garros,Clay,G,106065,Marco Cecchinato,200282,Alex De Minaur,6-4 6-1 3-6 6-1,5,R64,148
+2021-520,Roland Garros,Clay,G,207518,Lorenzo Musetti,106415,Yoshihito Nishioka,7-5 6-3 6-2,5,R64,129
+2021-520,Roland Garros,Clay,G,126610,Matteo Berrettini,105948,Federico Coria,6-3 6-3 6-2,5,R64,118
+2021-520,Roland Garros,Clay,G,126952,Soon Woo Kwon,104312,Andreas Seppi,6-4 7-5 7-5,5,R64,158
+2021-520,Roland Garros,Clay,G,136440,Dominik Koepfer,126203,Taylor Fritz,6-3 6-2 3-6 6-4,5,R64,155
+2021-520,Roland Garros,Clay,G,103819,Roger Federer,105227,Marin Cilic,6-2 2-6 7-6(4) 6-2,5,R64,155
+2021-520,Roland Garros,Clay,G,104745,Rafael Nadal,104755,Richard Gasquet,6-0 7-5 6-2,5,R64,134
+2021-520,Roland Garros,Clay,G,111815,Cameron Norrie,144750,Lloyd Harris,4-6 6-3 6-3 6-2,5,R64,135
+2021-520,Roland Garros,Clay,G,206173,Jannik Sinner,126149,Gianluca Mager,6-1 7-5 3-6 6-3,5,R64,139
+2021-520,Roland Garros,Clay,G,144707,Mikael Ymer,104792,Gael Monfils,6-0 2-6 6-4 6-3,5,R64,144
+2021-520,Roland Garros,Clay,G,106043,Diego Schwartzman,105379,Aljaz Bedene,6-4 6-2 6-4,5,R64,141
+2021-520,Roland Garros,Clay,G,104259,Philipp Kohlschreiber,106234,Aslan Karatsev,6-3 7-6(4) 4-6 6-1,5,R64,179
+2021-520,Roland Garros,Clay,G,207989,Carlos Alcaraz,105932,Nikoloz Basilashvili,6-4 6-2 6-4,5,R64,116
+2021-520,Roland Garros,Clay,G,105526,Jan Lennard Struff,105487,Facundo Bagnis,7-5 7-6(1) 6-4,5,R64,138
+2021-520,Roland Garros,Clay,G,100644,Alexander Zverev,126128,Roman Safiullin,7-6(4) 6-3 7-6(1),5,R64,147
+2021-520,Roland Garros,Clay,G,111513,Laslo Djere,200175,Miomir Kecmanovic,4-6 4-6 6-3 6-2 6-3,5,R64,211
+2021-520,Roland Garros,Clay,G,105453,Kei Nishikori,111575,Karen Khachanov,4-6 6-2 2-6 6-4 6-4,5,R64,239
+2021-520,Roland Garros,Clay,G,105967,Henri Laaksonen,105138,Roberto Bautista Agut,6-3 2-6 6-3 6-2,5,R64,141
+2021-520,Roland Garros,Clay,G,134770,Casper Ruud,111794,Kamil Majchrzak,6-3 6-2 6-4,5,R64,113
+2021-520,Roland Garros,Clay,G,200221,Alejandro Davidovich Fokina,122298,Botic Van De Zandschulp,6-4 6-4 5-7 2-6 6-4,5,R64,222
+2021-520,Roland Garros,Clay,G,104926,Fabio Fognini,105916,Marton Fucsovics,7-6(6) 6-1 6-2,5,R64,136
+2021-520,Roland Garros,Clay,G,105643,Federico Delbonis,104665,Pablo Andujar,4-6 6-1 3-6 6-3 6-2,5,R64,203
+2021-520,Roland Garros,Clay,G,126774,Stefanos Tsitsipas,124079,Pedro Martinez,6-3 6-4 6-3,5,R64,147
+2021-520,Roland Garros,Clay,G,104545,John Isner,105936,Filip Krajinovic,7-6(6) 6-1 7-6(5),5,R64,132
+2021-520,Roland Garros,Clay,G,105449,Steve Johnson,106329,Thiago Monteiro,6-3 6-7(2) 7-6(2) 3-6 6-3,5,R64,229
+2021-520,Roland Garros,Clay,G,105807,Pablo Carreno Busta,111505,Enzo Couacaud,2-6 6-3 6-4 6-4,5,R64,148
+2021-520,Roland Garros,Clay,G,106218,Marcos Giron,105550,Guido Pella,7-6(2) 6-1 6-7(3) 6-4,5,R64,195
+2021-520,Roland Garros,Clay,G,106426,Cristian Garin,111456,Mackenzie Mcdonald,4-6 4-6 7-6(7) 6-3 8-6,5,R64,254
+2021-520,Roland Garros,Clay,G,124187,Reilly Opelka,144719,Jaume Munar,6-3 6-2 3-6 7-5,5,R64,159
+2021-520,Roland Garros,Clay,G,106421,Daniil Medvedev,126205,Tommy Paul,3-6 6-1 6-4 6-3,5,R64,138
+2021-520,Roland Garros,Clay,G,104925,Novak Djokovic,105575,Ricardas Berankis,6-1 6-4 6-1,5,R32,92
+2021-520,Roland Garros,Clay,G,207518,Lorenzo Musetti,106065,Marco Cecchinato,3-6 6-4 6-3 3-6 6-3,5,R32,187
+2021-520,Roland Garros,Clay,G,126610,Matteo Berrettini,126952,Soon Woo Kwon,7-6(6) 6-3 6-4,5,R32,131
+2021-520,Roland Garros,Clay,G,103819,Roger Federer,136440,Dominik Koepfer,7-6(5) 6-7(3) 7-6(4) 7-5,5,R32,215
+2021-520,Roland Garros,Clay,G,104745,Rafael Nadal,111815,Cameron Norrie,6-3 6-3 6-3,5,R32,127
+2021-520,Roland Garros,Clay,G,206173,Jannik Sinner,144707,Mikael Ymer,6-1 7-5 6-3,5,R32,142
+2021-520,Roland Garros,Clay,G,106043,Diego Schwartzman,104259,Philipp Kohlschreiber,6-4 6-2 6-1,5,R32,122
+2021-520,Roland Garros,Clay,G,105526,Jan Lennard Struff,207989,Carlos Alcaraz,6-4 7-6(3) 6-2,5,R32,136
+2021-520,Roland Garros,Clay,G,100644,Alexander Zverev,111513,Laslo Djere,6-2 7-5 6-2,5,R32,128
+2021-520,Roland Garros,Clay,G,105453,Kei Nishikori,105967,Henri Laaksonen,7-5 0-0 RET,5,R32,58
+2021-520,Roland Garros,Clay,G,200221,Alejandro Davidovich Fokina,134770,Casper Ruud,7-6(3) 2-6 7-6(6) 0-6 7-5,5,R32,275
+2021-520,Roland Garros,Clay,G,105643,Federico Delbonis,104926,Fabio Fognini,6-4 6-1 6-3,5,R32,126
+2021-520,Roland Garros,Clay,G,126774,Stefanos Tsitsipas,104545,John Isner,5-7 6-3 7-6(3) 6-1,5,R32,158
+2021-520,Roland Garros,Clay,G,105807,Pablo Carreno Busta,105449,Steve Johnson,6-4 6-4 6-2,5,R32,122
+2021-520,Roland Garros,Clay,G,106426,Cristian Garin,106218,Marcos Giron,6-1 5-7 6-2 6-2,5,R32,151
+2021-520,Roland Garros,Clay,G,106421,Daniil Medvedev,124187,Reilly Opelka,6-4 6-2 6-4,5,R32,98
+2021-520,Roland Garros,Clay,G,104925,Novak Djokovic,207518,Lorenzo Musetti,6-7(7) 6-7(2) 6-1 6-0 4-0 RET,5,R16,207
+2021-520,Roland Garros,Clay,G,126610,Matteo Berrettini,103819,Roger Federer,W/O,5,R16,
+2021-520,Roland Garros,Clay,G,104745,Rafael Nadal,206173,Jannik Sinner,7-5 6-3 6-0,5,R16,137
+2021-520,Roland Garros,Clay,G,106043,Diego Schwartzman,105526,Jan Lennard Struff,7-6(9) 6-4 7-5,5,R16,182
+2021-520,Roland Garros,Clay,G,100644,Alexander Zverev,105453,Kei Nishikori,6-4 6-1 6-1,5,R16,114
+2021-520,Roland Garros,Clay,G,200221,Alejandro Davidovich Fokina,105643,Federico Delbonis,6-4 6-4 4-6 6-4,5,R16,176
+2021-520,Roland Garros,Clay,G,126774,Stefanos Tsitsipas,105807,Pablo Carreno Busta,6-3 6-2 7-5,5,R16,127
+2021-520,Roland Garros,Clay,G,106421,Daniil Medvedev,106426,Cristian Garin,6-2 6-1 7-5,5,R16,124
+2021-520,Roland Garros,Clay,G,104925,Novak Djokovic,126610,Matteo Berrettini,6-3 6-2 6-7(5) 7-5,5,QF,208
+2021-520,Roland Garros,Clay,G,104745,Rafael Nadal,106043,Diego Schwartzman,6-3 4-6 6-4 6-0,5,QF,165
+2021-520,Roland Garros,Clay,G,100644,Alexander Zverev,200221,Alejandro Davidovich Fokina,6-4 6-1 6-1,5,QF,96
+2021-520,Roland Garros,Clay,G,126774,Stefanos Tsitsipas,106421,Daniil Medvedev,6-3 7-6(3) 7-5,5,QF,139
+2021-520,Roland Garros,Clay,G,104925,Novak Djokovic,104745,Rafael Nadal,3-6 6-3 7-6(4) 6-2,5,SF,251
+2021-520,Roland Garros,Clay,G,126774,Stefanos Tsitsipas,100644,Alexander Zverev,6-3 6-3 4-6 4-6 6-3,5,SF,217
+2021-520,Roland Garros,Clay,G,104925,Novak Djokovic,126774,Stefanos Tsitsipas,6-7(6) 2-6 6-3 6-2 6-4,5,F,251
+2021-540,Wimbledon,Grass,G,104925,Novak Djokovic,207733,Jack Draper,4-6 6-1 6-2 6-2,5,R128,120
+2021-540,Wimbledon,Grass,G,104731,Kevin Anderson,144642,Tomas Barrios Vera,6-7(4) 6-4 6-4 7-6(4),5,R128,187
+2021-540,Wimbledon,Grass,G,104312,Andreas Seppi,105311,Joao Sousa,4-6 6-4 7-5 6-2,5,R128,192
+2021-540,Wimbledon,Grass,G,106045,Denis Kudla,200221,Alejandro Davidovich Fokina,5-7 4-6 7-6(4) 6-3 6-3,5,R128,198
+2021-540,Wimbledon,Grass,G,106426,Cristian Garin,126523,Bernabe Zapata Miralles,6-7(6) 6-3 3-6 6-3 6-2,5,R128,190
+2021-540,Wimbledon,Grass,G,117360,Marc Polmans,104229,Yen Hsun Lu,6-2 7-5 4-6 6-1,5,R128,147
+2021-540,Wimbledon,Grass,G,124079,Pedro Martinez,105882,Stefano Travaglia,6-3 2-6 6-4 6-4,5,R128,163
+2021-540,Wimbledon,Grass,G,104792,Gael Monfils,106331,Christopher Oconnell,4-6 6-2 7-6(5) 4-6 6-4,5,R128,205
+2021-540,Wimbledon,Grass,G,106043,Diego Schwartzman,105332,Benoit Paire,6-3 6-4 6-0,5,R128,91
+2021-540,Wimbledon,Grass,G,106281,Liam Broady,106065,Marco Cecchinato,6-3 6-4 6-0,5,R128,108
+2021-540,Wimbledon,Grass,G,106210,Jiri Vesely,105870,Yannick Hanfmann,6-1 7-5 7-6(5),5,R128,133
+2021-540,Wimbledon,Grass,G,105916,Marton Fucsovics,206173,Jannik Sinner,5-7 6-3 7-5 6-3,5,R128,184
+2021-540,Wimbledon,Grass,G,104926,Fabio Fognini,105077,Albert Ramos,7-6(4) 6-2 6-4,5,R128,117
+2021-540,Wimbledon,Grass,G,111513,Laslo Djere,104655,Pablo Cuevas,5-7 6-4 6-4 6-4,5,R128,138
+2021-540,Wimbledon,Grass,G,144750,Lloyd Harris,105575,Ricardas Berankis,6-3 6-4 7-6(6),5,R128,150
+2021-540,Wimbledon,Grass,G,126094,Andrey Rublev,105643,Federico Delbonis,4-6 6-4 6-1 6-2,5,R128,135
+2021-540,Wimbledon,Grass,G,126207,Frances Tiafoe,126774,Stefanos Tsitsipas,6-4 6-4 6-3,5,R128,122
+2021-540,Wimbledon,Grass,G,105577,Vasek Pospisil,106148,Roberto Carballes Baena,6-3 6-3 6-3,5,R128,104
+2021-540,Wimbledon,Grass,G,106078,Egor Gerasimov,126652,Jay Clarke,6-3 3-6 7-6(5) 6-2,5,R128,166
+2021-540,Wimbledon,Grass,G,111575,Karen Khachanov,111456,Mackenzie Mcdonald,3-6 6-3 6-4 7-6(3),5,R128,170
+2021-540,Wimbledon,Grass,G,105554,Daniel Evans,103852,Feliciano Lopez,7-6(4) 6-2 7-5,5,R128,124
+2021-540,Wimbledon,Grass,G,105583,Dusan Lajovic,104468,Gilles Simon,6-4 7-5 3-6 4-6 6-3,5,R128,241
+2021-540,Wimbledon,Grass,G,126156,Antoine Hoang,111190,Zhizhen Zhang,4-6 7-6(5) 6-7(5) 6-3 6-2,5,R128,221
+2021-540,Wimbledon,Grass,G,200624,Sebastian Korda,200282,Alex De Minaur,6-3 6-4 6-7(5) 7-6(5),5,R128,205
+2021-540,Wimbledon,Grass,G,133430,Denis Shapovalov,104259,Philipp Kohlschreiber,6-4 4-6 6-3 5-7 6-4,5,R128,215
+2021-540,Wimbledon,Grass,G,104665,Pablo Andujar,105732,Pierre Hugues Herbert,7-6(7) 4-6 7-6(7) 5-7 8-6,5,R128,302
+2021-540,Wimbledon,Grass,G,106214,Oscar Otte,126239,Arthur Rinderknech,4-6 6-3 6-2 6-7(5) 13-12(2),5,R128,237
+2021-540,Wimbledon,Grass,G,104918,Andy Murray,105932,Nikoloz Basilashvili,6-4 6-3 5-7 6-3,5,R128,212
+2021-540,Wimbledon,Grass,G,136440,Dominik Koepfer,124187,Reilly Opelka,6-4 7-6(3) 6-2,5,R128,119
+2021-540,Wimbledon,Grass,G,126952,Soon Woo Kwon,109054,Daniel Masur,6-7(2) 6-3 6-4 6-4,5,R128,154
+2021-540,Wimbledon,Grass,G,200175,Miomir Kecmanovic,105487,Facundo Bagnis,6-4 3-6 6-3 7-6(1),5,R128,162
+2021-540,Wimbledon,Grass,G,105138,Roberto Bautista Agut,105357,John Millman,6-2 3-6 6-3 7-6(4),5,R128,183
+2021-540,Wimbledon,Grass,G,126610,Matteo Berrettini,105550,Guido Pella,6-4 3-6 6-4 6-0,5,R128,136
+2021-540,Wimbledon,Grass,G,122298,Botic Van De Zandschulp,106296,Gregoire Barrere,6-2 6-7(4) 6-1 7-6(3),5,R128,160
+2021-540,Wimbledon,Grass,G,105379,Aljaz Bedene,144895,Corentin Moutet,6-4 6-4 6-0,5,R128,102
+2021-540,Wimbledon,Grass,G,106415,Yoshihito Nishioka,104545,John Isner,7-6(5) 2-6 6-3 6-7(3) 6-4,5,R128,198
+2021-540,Wimbledon,Grass,G,104871,Jeremy Chardy,106234,Aslan Karatsev,7-6(4) 7-6(6) 6-3,5,R128,147
+2021-540,Wimbledon,Grass,G,125802,Ilya Ivashka,144719,Jaume Munar,6-1 7-5 7-6(5),5,R128,146
+2021-540,Wimbledon,Grass,G,105453,Kei Nishikori,200615,Alexei Popyrin,6-4 6-4 6-4,5,R128,118
+2021-540,Wimbledon,Grass,G,111442,Jordan Thompson,134770,Casper Ruud,7-6(6) 7-6(3) 2-6 2-6 6-2,5,R128,243
+2021-540,Wimbledon,Grass,G,200000,Felix Auger Aliassime,106329,Thiago Monteiro,6-3 6-3 6-3,5,R128,127
+2021-540,Wimbledon,Grass,G,144707,Mikael Ymer,104542,Jo-Wilfried Tsonga,7-5 6-7(4) 5-7 6-4 6-3,5,R128,240
+2021-540,Wimbledon,Grass,G,126149,Gianluca Mager,106228,Juan Ignacio Londero,7-6(3) 6-0 4-6 6-3,5,R128,146
+2021-540,Wimbledon,Grass,G,106401,Nick Kyrgios,200005,Ugo Humbert,6-4 4-6 3-6 6-1 9-7,5,R128,206
+2021-540,Wimbledon,Grass,G,126203,Taylor Fritz,206909,Brandon Nakashima,7-5 3-6 6-4 7-5,5,R128,155
+2021-540,Wimbledon,Grass,G,105449,Steve Johnson,110602,Dennis Novak,7-6(7) 6-2 7-5,5,R128,119
+2021-540,Wimbledon,Grass,G,105815,Tennys Sandgren,105613,Norbert Gombos,6-4 6-7(5) 6-1 6-3,5,R128,152
+2021-540,Wimbledon,Grass,G,100644,Alexander Zverev,134868,Tallon Griekspoor,6-3 6-4 6-1,5,R128,89
+2021-540,Wimbledon,Grass,G,103819,Roger Federer,105173,Adrian Mannarino,6-4 6-7(3) 3-6 6-2 0-0 RET,5,R128,164
+2021-540,Wimbledon,Grass,G,104755,Richard Gasquet,105216,Yuichi Sugita,7-6(4) 4-6 6-2 6-1,5,R128,140
+2021-540,Wimbledon,Grass,G,106109,Alex Bolt,105936,Filip Krajinovic,7-6(5) 6-4 7-5,5,R128,126
+2021-540,Wimbledon,Grass,G,111815,Cameron Norrie,106298,Lucas Pouille,6-7(6) 7-5 6-2 7-5,5,R128,165
+2021-540,Wimbledon,Grass,G,132283,Lorenzo Sonego,105155,Pedro Sousa,6-2 7-5 6-0,5,R128,108
+2021-540,Wimbledon,Grass,G,123755,Daniel Elahi Galan,105948,Federico Coria,6-4 4-6 7-5 7-5,5,R128,172
+2021-540,Wimbledon,Grass,G,105902,James Duckworth,105430,Radu Albot,6-4 6-4 6-1,5,R128,126
+2021-540,Wimbledon,Grass,G,105023,Sam Querrey,105807,Pablo Carreno Busta,7-6(6) 6-4 7-5,5,R128,115
+2021-540,Wimbledon,Grass,G,128034,Hubert Hurkacz,207518,Lorenzo Musetti,6-4 7-6(5) 6-1,5,R128,110
+2021-540,Wimbledon,Grass,G,106218,Marcos Giron,200325,Emil Ruusuvuori,6-4 2-6 6-2 0-6 6-4,5,R128,165
+2021-540,Wimbledon,Grass,G,122330,Alexander Bublik,105062,Mikhail Kukushkin,6-4 6-2 6-1,5,R128,79
+2021-540,Wimbledon,Grass,G,105777,Grigor Dimitrov,104269,Fernando Verdasco,3-6 6-3 6-4 6-4,5,R128,143
+2021-540,Wimbledon,Grass,G,105227,Marin Cilic,106099,Salvatore Caruso,7-6(5) 7-6(1) 6-1,5,R128,160
+2021-540,Wimbledon,Grass,G,126127,Benjamin Bonzi,105477,Marco Trungelliti,6-1 1-6 4-6 6-3 6-4,5,R128,151
+2021-540,Wimbledon,Grass,G,207989,Carlos Alcaraz,106034,Yasutaka Uchiyama,6-3 6-7(4) 6-2 3-6 6-3,5,R128,258
+2021-540,Wimbledon,Grass,G,106421,Daniil Medvedev,105526,Jan Lennard Struff,6-4 6-1 4-6 7-6(3),5,R128,151
+2021-540,Wimbledon,Grass,G,104925,Novak Djokovic,104731,Kevin Anderson,6-3 6-3 6-3,5,R64,101
+2021-540,Wimbledon,Grass,G,106045,Denis Kudla,104312,Andreas Seppi,6-2 6-4 6-2,5,R64,92
+2021-540,Wimbledon,Grass,G,106426,Cristian Garin,117360,Marc Polmans,7-6(3) 6-2 2-6 7-6(5),5,R64,201
+2021-540,Wimbledon,Grass,G,124079,Pedro Martinez,104792,Gael Monfils,6-3 6-4 4-6 7-6(5),5,R64,189
+2021-540,Wimbledon,Grass,G,106043,Diego Schwartzman,106281,Liam Broady,4-6 6-2 6-1 6-4,5,R64,194
+2021-540,Wimbledon,Grass,G,105916,Marton Fucsovics,106210,Jiri Vesely,6-3 5-4 RET,5,R64,98
+2021-540,Wimbledon,Grass,G,104926,Fabio Fognini,111513,Laslo Djere,6-3 6-4 0-6 6-4,5,R64,135
+2021-540,Wimbledon,Grass,G,126094,Andrey Rublev,144750,Lloyd Harris,6-1 6-2 7-5,5,R64,82
+2021-540,Wimbledon,Grass,G,126207,Frances Tiafoe,105577,Vasek Pospisil,6-4 6-4 6-4,5,R64,123
+2021-540,Wimbledon,Grass,G,111575,Karen Khachanov,106078,Egor Gerasimov,6-1 7-6(3) 6-3,5,R64,108
+2021-540,Wimbledon,Grass,G,105554,Daniel Evans,105583,Dusan Lajovic,6-3 6-3 6-4,5,R64,116
+2021-540,Wimbledon,Grass,G,200624,Sebastian Korda,126156,Antoine Hoang,7-5 6-4 6-4,5,R64,168
+2021-540,Wimbledon,Grass,G,133430,Denis Shapovalov,104665,Pablo Andujar,W/O,5,R64,
+2021-540,Wimbledon,Grass,G,104918,Andy Murray,106214,Oscar Otte,6-3 4-6 4-6 6-4 6-2,5,R64,231
+2021-540,Wimbledon,Grass,G,136440,Dominik Koepfer,126952,Soon Woo Kwon,6-3 6-7(8) 7-6(2) 5-7 6-3,5,R64,235
+2021-540,Wimbledon,Grass,G,105138,Roberto Bautista Agut,200175,Miomir Kecmanovic,6-3 6-3 6-7(3) 3-6 6-3,5,R64,213
+2021-540,Wimbledon,Grass,G,126610,Matteo Berrettini,122298,Botic Van De Zandschulp,6-3 6-4 7-6(4),5,R64,135
+2021-540,Wimbledon,Grass,G,105379,Aljaz Bedene,106415,Yoshihito Nishioka,6-1 6-0 6-2,5,R64,84
+2021-540,Wimbledon,Grass,G,125802,Ilya Ivashka,104871,Jeremy Chardy,4-6 6-3 6-2 6-4,5,R64,144
+2021-540,Wimbledon,Grass,G,111442,Jordan Thompson,105453,Kei Nishikori,7-5 6-4 5-7 6-3,5,R64,185
+2021-540,Wimbledon,Grass,G,200000,Felix Auger Aliassime,144707,Mikael Ymer,6-4 4-6 7-6(4) 6-1,5,R64,159
+2021-540,Wimbledon,Grass,G,106401,Nick Kyrgios,126149,Gianluca Mager,7-6(7) 6-4 6-4,5,R64,111
+2021-540,Wimbledon,Grass,G,126203,Taylor Fritz,105449,Steve Johnson,6-4 7-6(4) 4-6 6-7(4) 6-4,5,R64,227
+2021-540,Wimbledon,Grass,G,100644,Alexander Zverev,105815,Tennys Sandgren,7-5 6-2 6-3,5,R64,105
+2021-540,Wimbledon,Grass,G,103819,Roger Federer,104755,Richard Gasquet,7-6(1) 6-1 6-4,5,R64,111
+2021-540,Wimbledon,Grass,G,111815,Cameron Norrie,106109,Alex Bolt,6-3 6-1 6-2,5,R64,95
+2021-540,Wimbledon,Grass,G,132283,Lorenzo Sonego,123755,Daniel Elahi Galan,4-6 6-3 7-6(3) 6-1,5,R64,164
+2021-540,Wimbledon,Grass,G,105902,James Duckworth,105023,Sam Querrey,7-5 6-7(4) 6-3 6-2,5,R64,140
+2021-540,Wimbledon,Grass,G,128034,Hubert Hurkacz,106218,Marcos Giron,6-3 6-2 6-4,5,R64,104
+2021-540,Wimbledon,Grass,G,122330,Alexander Bublik,105777,Grigor Dimitrov,6-4 7-6(6) 7-6(4),5,R64,146
+2021-540,Wimbledon,Grass,G,105227,Marin Cilic,126127,Benjamin Bonzi,6-4 3-6 6-3 7-6(5),5,R64,184
+2021-540,Wimbledon,Grass,G,106421,Daniil Medvedev,207989,Carlos Alcaraz,6-4 6-1 6-2,5,R64,95
+2021-540,Wimbledon,Grass,G,104925,Novak Djokovic,106045,Denis Kudla,6-4 6-3 7-6(7),5,R32,137
+2021-540,Wimbledon,Grass,G,106426,Cristian Garin,124079,Pedro Martinez,6-4 6-3 4-6 6-4,5,R32,176
+2021-540,Wimbledon,Grass,G,105916,Marton Fucsovics,106043,Diego Schwartzman,6-3 6-3 6-7(6) 6-4,5,R32,199
+2021-540,Wimbledon,Grass,G,126094,Andrey Rublev,104926,Fabio Fognini,6-3 5-7 6-4 6-2,5,R32,179
+2021-540,Wimbledon,Grass,G,111575,Karen Khachanov,126207,Frances Tiafoe,6-3 6-4 6-4,5,R32,106
+2021-540,Wimbledon,Grass,G,200624,Sebastian Korda,105554,Daniel Evans,6-3 3-6 6-3 6-4,5,R32,144
+2021-540,Wimbledon,Grass,G,133430,Denis Shapovalov,104918,Andy Murray,6-4 6-2 6-2,5,R32,137
+2021-540,Wimbledon,Grass,G,105138,Roberto Bautista Agut,136440,Dominik Koepfer,7-5 6-1 7-6(4),5,R32,140
+2021-540,Wimbledon,Grass,G,126610,Matteo Berrettini,105379,Aljaz Bedene,6-4 6-4 6-4,5,R32,102
+2021-540,Wimbledon,Grass,G,125802,Ilya Ivashka,111442,Jordan Thompson,6-4 6-4 6-4,5,R32,122
+2021-540,Wimbledon,Grass,G,200000,Felix Auger Aliassime,106401,Nick Kyrgios,2-6 6-1 RET,5,R32,58
+2021-540,Wimbledon,Grass,G,100644,Alexander Zverev,126203,Taylor Fritz,6-7(3) 6-4 6-3 7-6(4),5,R32,158
+2021-540,Wimbledon,Grass,G,103819,Roger Federer,111815,Cameron Norrie,6-4 6-4 5-7 6-4,5,R32,155
+2021-540,Wimbledon,Grass,G,132283,Lorenzo Sonego,105902,James Duckworth,6-3 6-4 6-4,5,R32,107
+2021-540,Wimbledon,Grass,G,128034,Hubert Hurkacz,122330,Alexander Bublik,6-3 6-4 6-2,5,R32,84
+2021-540,Wimbledon,Grass,G,106421,Daniil Medvedev,105227,Marin Cilic,6-7(3) 3-6 6-3 6-3 6-2,5,R32,216
+2021-540,Wimbledon,Grass,G,104925,Novak Djokovic,106426,Cristian Garin,6-2 6-4 6-2,5,R16,109
+2021-540,Wimbledon,Grass,G,105916,Marton Fucsovics,126094,Andrey Rublev,6-3 4-6 4-6 6-0 6-3,5,R16,161
+2021-540,Wimbledon,Grass,G,111575,Karen Khachanov,200624,Sebastian Korda,3-6 6-4 6-3 5-7 10-8,5,R16,229
+2021-540,Wimbledon,Grass,G,133430,Denis Shapovalov,105138,Roberto Bautista Agut,6-1 6-3 7-5,5,R16,127
+2021-540,Wimbledon,Grass,G,126610,Matteo Berrettini,125802,Ilya Ivashka,6-4 6-3 6-1,5,R16,107
+2021-540,Wimbledon,Grass,G,200000,Felix Auger Aliassime,100644,Alexander Zverev,6-4 7-6(6) 3-6 3-6 6-4,5,R16,242
+2021-540,Wimbledon,Grass,G,103819,Roger Federer,132283,Lorenzo Sonego,7-5 6-4 6-2,5,R16,131
+2021-540,Wimbledon,Grass,G,128034,Hubert Hurkacz,106421,Daniil Medvedev,2-6 7-6(2) 3-6 6-3 6-3,5,R16,182
+2021-540,Wimbledon,Grass,G,104925,Novak Djokovic,105916,Marton Fucsovics,6-3 6-4 6-4,5,QF,137
+2021-540,Wimbledon,Grass,G,133430,Denis Shapovalov,111575,Karen Khachanov,6-4 3-6 5-7 6-1 6-4,5,QF,206
+2021-540,Wimbledon,Grass,G,126610,Matteo Berrettini,200000,Felix Auger Aliassime,6-3 5-7 7-5 6-3,5,QF,184
+2021-540,Wimbledon,Grass,G,128034,Hubert Hurkacz,103819,Roger Federer,6-3 7-6(4) 6-0,5,QF,109
+2021-540,Wimbledon,Grass,G,104925,Novak Djokovic,133430,Denis Shapovalov,7-6(3) 7-5 7-5,5,SF,164
+2021-540,Wimbledon,Grass,G,126610,Matteo Berrettini,128034,Hubert Hurkacz,6-3 6-0 6-7(3) 6-4,5,SF,157
+2021-540,Wimbledon,Grass,G,104925,Novak Djokovic,126610,Matteo Berrettini,6-7(4) 6-4 6-4 6-3,5,F,204
+2021-560,Us Open,Hard,G,104925,Novak Djokovic,208029,Holger Rune,6-1 6-7(5) 6-2 6-1,5,R128,135
+2021-560,Us Open,Hard,G,134868,Tallon Griekspoor,105526,Jan Lennard Struff,2-6 7-6(3) 4-6 6-4 7-5,5,R128,218
+2021-560,Us Open,Hard,G,105453,Kei Nishikori,106099,Salvatore Caruso,6-1 6-1 5-7 6-3,5,R128,161
+2021-560,Us Open,Hard,G,111456,Mackenzie Mcdonald,105676,David Goffin,6-2 7-5 6-3,5,R128,128
+2021-560,Us Open,Hard,G,106234,Aslan Karatsev,144719,Jaume Munar,7-5 1-6 6-3 6-2,5,R128,187
+2021-560,Us Open,Hard,G,111442,Jordan Thompson,126149,Gianluca Mager,4-6 6-3 7-5 2-6 7-6(3),5,R128,210
+2021-560,Us Open,Hard,G,202385,Jenson Brooksby,144707,Mikael Ymer,7-5 6-2 5-7 6-3,5,R128,240
+2021-560,Us Open,Hard,G,126203,Taylor Fritz,200282,Alex De Minaur,7-6(4) 6-2 1-6 6-4,5,R128,182
+2021-560,Us Open,Hard,G,128034,Hubert Hurkacz,106078,Egor Gerasimov,6-3 6-4 6-3,5,R128,103
+2021-560,Us Open,Hard,G,104312,Andreas Seppi,105916,Marton Fucsovics,2-6 7-5 6-4 2-6 7-6(13),5,R128,244
+2021-560,Us Open,Hard,G,106045,Denis Kudla,111513,Laslo Djere,4-6 6-3 7-5 7-6(4),5,R128,205
+2021-560,Us Open,Hard,G,106214,Oscar Otte,132283,Lorenzo Sonego,6-7(8) 7-5 7-6(4) 7-6(1),5,R128,243
+2021-560,Us Open,Hard,G,105577,Vasek Pospisil,104926,Fabio Fognini,2-6 3-6 6-1 6-3 7-6(4),5,R128,198
+2021-560,Us Open,Hard,G,125802,Ilya Ivashka,105815,Tennys Sandgren,7-6(3) 6-3 6-4,5,R128,147
+2021-560,Us Open,Hard,G,144895,Corentin Moutet,105882,Stefano Travaglia,6-4 7-5 7-6(3),5,R128,160
+2021-560,Us Open,Hard,G,126610,Matteo Berrettini,104871,Jeremy Chardy,7-6(5) 7-6(7) 6-3,5,R128,151
+2021-560,Us Open,Hard,G,100644,Alexander Zverev,105023,Sam Querrey,6-4 7-5 6-2,5,R128,100
+2021-560,Us Open,Hard,G,105077,Albert Ramos,106298,Lucas Pouille,6-1 5-7 5-7 7-5 6-4,5,R128,221
+2021-560,Us Open,Hard,G,106058,Jack Sock,106415,Yoshihito Nishioka,6-7(5) 6-2 6-4 6-2,5,R128,172
+2021-560,Us Open,Hard,G,122330,Alexander Bublik,105870,Yannick Hanfmann,6-0 4-6 6-2 6-1,5,R128,116
+2021-560,Us Open,Hard,G,104792,Gael Monfils,105948,Federico Coria,6-3 6-2 6-2,5,R128,94
+2021-560,Us Open,Hard,G,105449,Steve Johnson,109739,Maximilian Marterer,5-7 7-6(8) 7-6(8) 6-3,5,R128,185
+2021-560,Us Open,Hard,G,208260,Zachary Svajda,106065,Marco Cecchinato,7-6(6) 5-7 6-4 6-4,5,R128,182
+2021-560,Us Open,Hard,G,206173,Jannik Sinner,126845,Max Purcell,6-4 6-2 4-6 6-2,5,R128,153
+2021-560,Us Open,Hard,G,202195,Maxime Cressy,105807,Pablo Carreno Busta,5-7 4-6 6-1 6-4 7-6(7),5,R128,213
+2021-560,Us Open,Hard,G,105932,Nikoloz Basilashvili,200624,Sebastian Korda,6-2 2-1 RET,5,R128,48
+2021-560,Us Open,Hard,G,207518,Lorenzo Musetti,207182,Emilio Nava,6-7(5) 6-4 6-1 6-3,5,R128,151
+2021-560,Us Open,Hard,G,124187,Reilly Opelka,126952,Soon Woo Kwon,7-6(3) 6-4 6-4,5,R128,133
+2021-560,Us Open,Hard,G,144750,Lloyd Harris,111575,Karen Khachanov,6-4 1-6 4-6 6-3 6-2,5,R128,187
+2021-560,Us Open,Hard,G,124014,Ernesto Escobedo,104655,Pablo Cuevas,6-1 6-3 6-1,5,R128,89
+2021-560,Us Open,Hard,G,106148,Roberto Carballes Baena,126205,Tommy Paul,7-6(5) 6-2 1-6 6-3,5,R128,185
+2021-560,Us Open,Hard,G,133430,Denis Shapovalov,105643,Federico Delbonis,6-2 6-2 6-3,5,R128,109
+2021-560,Us Open,Hard,G,126094,Andrey Rublev,103333,Ivo Karlovic,6-3 7-6(3) 6-3,5,R128,96
+2021-560,Us Open,Hard,G,124079,Pedro Martinez,105902,James Duckworth,4-6 4-6 7-6(7) 6-2 6-2,5,R128,261
+2021-560,Us Open,Hard,G,126207,Frances Tiafoe,111153,Christopher Eubanks,7-6(8) 5-7 6-3 6-4,5,R128,174
+2021-560,Us Open,Hard,G,105550,Guido Pella,105936,Filip Krajinovic,6-7(2) 6-3 6-2 6-2,5,R128,198
+2021-560,Us Open,Hard,G,105138,Roberto Bautista Agut,106401,Nick Kyrgios,6-3 6-4 6-0,5,R128,108
+2021-560,Us Open,Hard,G,200325,Emil Ruusuvuori,111794,Kamil Majchrzak,6-4 6-2 3-6 6-1,5,R128,157
+2021-560,Us Open,Hard,G,126523,Bernabe Zapata Miralles,103852,Feliciano Lopez,5-7 7-6(6) 4-6 6-3 6-3,5,R128,195
+2021-560,Us Open,Hard,G,200000,Felix Auger Aliassime,105539,Evgeny Donskoy,7-6(0) 3-6 7-6(1) 7-6(8),5,R128,240
+2021-560,Us Open,Hard,G,106426,Cristian Garin,105613,Norbert Gombos,6-3 4-6 6-4 7-6(4),5,R128,191
+2021-560,Us Open,Hard,G,105967,Henri Laaksonen,105357,John Millman,7-6(6) 7-6(2) 6-1,5,R128,148
+2021-560,Us Open,Hard,G,105583,Dusan Lajovic,105332,Benoit Paire,6-3 7-5 2-6 6-4,5,R128,153
+2021-560,Us Open,Hard,G,105376,Peter Gojowczyk,200005,Ugo Humbert,1-6 6-1 6-2 5-7 6-4,5,R128,177
+2021-560,Us Open,Hard,G,207989,Carlos Alcaraz,111815,Cameron Norrie,6-4 6-4 6-3,5,R128,114
+2021-560,Us Open,Hard,G,126239,Arthur Rinderknech,200175,Miomir Kecmanovic,6-7(10) 3-6 7-5 6-3 6-4,5,R128,260
+2021-560,Us Open,Hard,G,105173,Adrian Mannarino,105732,Pierre Hugues Herbert,3-6 4-6 6-4 6-3 6-3,5,R128,228
+2021-560,Us Open,Hard,G,126774,Stefanos Tsitsipas,104918,Andy Murray,2-6 7-6(7) 3-6 6-3 6-4,5,R128,289
+2021-560,Us Open,Hard,G,134770,Casper Ruud,105216,Yuichi Sugita,6-3 6-2 6-2,5,R128,109
+2021-560,Us Open,Hard,G,122298,Botic Van De Zandschulp,126535,Carlos Taberner,2-6 3-6 6-4 7-5 6-3,5,R128,214
+2021-560,Us Open,Hard,G,105487,Facundo Bagnis,106121,Taro Daniel,6-3 6-3 6-3,5,R128,123
+2021-560,Us Open,Hard,G,105477,Marco Trungelliti,200221,Alejandro Davidovich Fokina,5-7 6-3 7-5 6-7(3) 6-4,5,R128,267
+2021-560,Us Open,Hard,G,206909,Brandon Nakashima,104545,John Isner,7-6(7) 7-6(6) 6-3,5,R128,146
+2021-560,Us Open,Hard,G,144684,Alex Molcan,117356,Cem Ilkel,4-6 6-3 6-1 6-1,5,R128,140
+2021-560,Us Open,Hard,G,104731,Kevin Anderson,106210,Jiri Vesely,7-6(1) 4-6 3-6 7-6(5) 7-6(4),5,R128,262
+2021-560,Us Open,Hard,G,106043,Diego Schwartzman,105575,Ricardas Berankis,7-5 6-3 6-3,5,R128,142
+2021-560,Us Open,Hard,G,105777,Grigor Dimitrov,200589,Sam Riffice,6-1 7-6(3) 6-3,5,R128,125
+2021-560,Us Open,Hard,G,200615,Alexei Popyrin,105430,Radu Albot,6-3 6-7(3) 6-3 6-3,5,R128,157
+2021-560,Us Open,Hard,G,106218,Marcos Giron,126156,Antoine Hoang,6-3 6-4 7-5,5,R128,149
+2021-560,Us Open,Hard,G,105554,Daniel Evans,106329,Thiago Monteiro,6-3 6-7(6) 6-4 6-1,5,R128,214
+2021-560,Us Open,Hard,G,104259,Philipp Kohlschreiber,105227,Marin Cilic,6-7(4) 6-7(3) 6-2 6-1 2-0 RET,5,R128,219
+2021-560,Us Open,Hard,G,104665,Pablo Andujar,105062,Mikhail Kukushkin,3-6 4-6 6-4 6-4 6-2,5,R128,254
+2021-560,Us Open,Hard,G,136440,Dominik Koepfer,111460,Quentin Halys,6-4 3-6 4-6 6-3 6-4,5,R128,211
+2021-560,Us Open,Hard,G,106421,Daniil Medvedev,104755,Richard Gasquet,6-4 6-3 6-1,5,R128,117
+2021-560,Us Open,Hard,G,104925,Novak Djokovic,134868,Tallon Griekspoor,6-2 6-3 6-2,5,R64,99
+2021-560,Us Open,Hard,G,105453,Kei Nishikori,111456,Mackenzie Mcdonald,7-6(3) 6-3 6-7(5) 2-6 6-3,5,R64,237
+2021-560,Us Open,Hard,G,106234,Aslan Karatsev,111442,Jordan Thompson,3-6 3-6 7-5 7-6(9) 6-1,5,R64,280
+2021-560,Us Open,Hard,G,202385,Jenson Brooksby,126203,Taylor Fritz,6-7(7) 7-6(10) 7-5 6-2,5,R64,246
+2021-560,Us Open,Hard,G,104312,Andreas Seppi,128034,Hubert Hurkacz,2-6 6-4 6-4 7-6(6),5,R64,170
+2021-560,Us Open,Hard,G,106214,Oscar Otte,106045,Denis Kudla,6-4 6-4 6-2,5,R64,120
+2021-560,Us Open,Hard,G,125802,Ilya Ivashka,105577,Vasek Pospisil,6-3 6-4 7-6(5),5,R64,142
+2021-560,Us Open,Hard,G,126610,Matteo Berrettini,144895,Corentin Moutet,7-6(2) 4-6 6-4 6-3,5,R64,201
+2021-560,Us Open,Hard,G,100644,Alexander Zverev,105077,Albert Ramos,6-1 6-0 6-3,5,R64,74
+2021-560,Us Open,Hard,G,106058,Jack Sock,122330,Alexander Bublik,7-6(3) 6-7(2) 6-4 4-6 6-3,5,R64,212
+2021-560,Us Open,Hard,G,104792,Gael Monfils,105449,Steve Johnson,7-5 4-6 6-4 6-4,5,R64,173
+2021-560,Us Open,Hard,G,206173,Jannik Sinner,208260,Zachary Svajda,6-3 7-6(2) 6-7(6) 6-4,5,R64,214
+2021-560,Us Open,Hard,G,105932,Nikoloz Basilashvili,202195,Maxime Cressy,7-6(3) 6-3 7-5,5,R64,131
+2021-560,Us Open,Hard,G,124187,Reilly Opelka,207518,Lorenzo Musetti,7-6(1) 7-5 6-4,5,R64,142
+2021-560,Us Open,Hard,G,144750,Lloyd Harris,124014,Ernesto Escobedo,6-4 6-4 6-2,5,R64,119
+2021-560,Us Open,Hard,G,133430,Denis Shapovalov,106148,Roberto Carballes Baena,7-6(7) 6-3 6-0,5,R64,127
+2021-560,Us Open,Hard,G,126094,Andrey Rublev,124079,Pedro Martinez,7-6(2) 6-7(5) 6-1 6-1,5,R64,172
+2021-560,Us Open,Hard,G,126207,Frances Tiafoe,105550,Guido Pella,6-1 6-2 7-5,5,R64,112
+2021-560,Us Open,Hard,G,105138,Roberto Bautista Agut,200325,Emil Ruusuvuori,6-1 6-3 6-2,5,R64,101
+2021-560,Us Open,Hard,G,200000,Felix Auger Aliassime,126523,Bernabe Zapata Miralles,7-6(5) 6-3 6-2,5,R64,133
+2021-560,Us Open,Hard,G,105967,Henri Laaksonen,106426,Cristian Garin,3-6 7-6(5) 6-2 6-4,5,R64,188
+2021-560,Us Open,Hard,G,105376,Peter Gojowczyk,105583,Dusan Lajovic,2-6 6-4 2-6 7-5 6-4,5,R64,189
+2021-560,Us Open,Hard,G,207989,Carlos Alcaraz,126239,Arthur Rinderknech,7-6(6) 4-6 6-1 6-4,5,R64,178
+2021-560,Us Open,Hard,G,126774,Stefanos Tsitsipas,105173,Adrian Mannarino,6-3 6-4 6-7(4) 6-0,5,R64,161
+2021-560,Us Open,Hard,G,122298,Botic Van De Zandschulp,134770,Casper Ruud,3-6 6-4 6-3 6-4,5,R64,185
+2021-560,Us Open,Hard,G,105487,Facundo Bagnis,105477,Marco Trungelliti,7-6(4) 4-6 6-3 6-3,5,R64,178
+2021-560,Us Open,Hard,G,144684,Alex Molcan,206909,Brandon Nakashima,6-3 3-6 1-6 6-2 6-4,5,R64,199
+2021-560,Us Open,Hard,G,106043,Diego Schwartzman,104731,Kevin Anderson,7-6(4) 6-3 6-4,5,R64,192
+2021-560,Us Open,Hard,G,200615,Alexei Popyrin,105777,Grigor Dimitrov,7-6(4) 7-6(4) 4-0 RET,5,R64,137
+2021-560,Us Open,Hard,G,105554,Daniel Evans,106218,Marcos Giron,6-4 7-6(3) 2-6 6-3,5,R64,165
+2021-560,Us Open,Hard,G,104665,Pablo Andujar,104259,Philipp Kohlschreiber,6-4 6-3 6-1,5,R64,125
+2021-560,Us Open,Hard,G,106421,Daniil Medvedev,136440,Dominik Koepfer,6-4 6-1 6-2,5,R64,108
+2021-560,Us Open,Hard,G,104925,Novak Djokovic,105453,Kei Nishikori,6-7(4) 6-3 6-3 6-2,5,R32,212
+2021-560,Us Open,Hard,G,202385,Jenson Brooksby,106234,Aslan Karatsev,6-2 3-6 2-6 6-3 6-3,5,R32,230
+2021-560,Us Open,Hard,G,106214,Oscar Otte,104312,Andreas Seppi,6-3 6-4 2-6 7-5,5,R32,149
+2021-560,Us Open,Hard,G,126610,Matteo Berrettini,125802,Ilya Ivashka,6-7(5) 6-2 6-4 2-6 6-3,5,R32,226
+2021-560,Us Open,Hard,G,100644,Alexander Zverev,106058,Jack Sock,3-6 6-2 6-3 2-1 RET,5,R32,118
+2021-560,Us Open,Hard,G,206173,Jannik Sinner,104792,Gael Monfils,7-6(1) 6-2 4-6 4-6 6-4,5,R32,222
+2021-560,Us Open,Hard,G,124187,Reilly Opelka,105932,Nikoloz Basilashvili,7-6(5) 6-3 6-4,5,R32,135
+2021-560,Us Open,Hard,G,144750,Lloyd Harris,133430,Denis Shapovalov,6-4 6-4 6-4,5,R32,132
+2021-560,Us Open,Hard,G,126207,Frances Tiafoe,126094,Andrey Rublev,4-6 6-3 7-6(6) 4-6 6-1,5,R32,225
+2021-560,Us Open,Hard,G,200000,Felix Auger Aliassime,105138,Roberto Bautista Agut,6-3 6-4 4-6 3-6 6-3,5,R32,235
+2021-560,Us Open,Hard,G,105376,Peter Gojowczyk,105967,Henri Laaksonen,3-6 6-3 6-1 6-4,5,R32,128
+2021-560,Us Open,Hard,G,207989,Carlos Alcaraz,126774,Stefanos Tsitsipas,6-3 4-6 7-6(2) 0-6 7-6(5),5,R32,247
+2021-560,Us Open,Hard,G,122298,Botic Van De Zandschulp,105487,Facundo Bagnis,3-6 6-0 6-2 6-2,5,R32,150
+2021-560,Us Open,Hard,G,106043,Diego Schwartzman,144684,Alex Molcan,6-4 6-3 6-3,5,R32,125
+2021-560,Us Open,Hard,G,105554,Daniel Evans,200615,Alexei Popyrin,4-6 3-6 6-3 6-4 7-6(1),5,R32,243
+2021-560,Us Open,Hard,G,106421,Daniil Medvedev,104665,Pablo Andujar,6-0 6-4 6-3,5,R32,116
+2021-560,Us Open,Hard,G,104925,Novak Djokovic,202385,Jenson Brooksby,1-6 6-3 6-2 6-2,5,R16,179
+2021-560,Us Open,Hard,G,126610,Matteo Berrettini,106214,Oscar Otte,6-4 3-6 6-3 6-2,5,R16,144
+2021-560,Us Open,Hard,G,100644,Alexander Zverev,206173,Jannik Sinner,6-4 6-4 7-6(7),5,R16,145
+2021-560,Us Open,Hard,G,144750,Lloyd Harris,124187,Reilly Opelka,6-7(6) 6-4 6-1 6-3,5,R16,151
+2021-560,Us Open,Hard,G,200000,Felix Auger Aliassime,126207,Frances Tiafoe,4-6 6-2 7-6(6) 6-4,5,R16,204
+2021-560,Us Open,Hard,G,207989,Carlos Alcaraz,105376,Peter Gojowczyk,5-7 6-1 5-7 6-2 6-0,5,R16,211
+2021-560,Us Open,Hard,G,122298,Botic Van De Zandschulp,106043,Diego Schwartzman,6-3 6-4 5-7 5-7 6-1,5,R16,260
+2021-560,Us Open,Hard,G,106421,Daniil Medvedev,105554,Daniel Evans,6-3 6-4 6-3,5,R16,103
+2021-560,Us Open,Hard,G,104925,Novak Djokovic,126610,Matteo Berrettini,5-7 6-2 6-2 6-3,5,QF,207
+2021-560,Us Open,Hard,G,100644,Alexander Zverev,144750,Lloyd Harris,7-6(6) 6-3 6-4,5,QF,126
+2021-560,Us Open,Hard,G,200000,Felix Auger Aliassime,207989,Carlos Alcaraz,6-3 3-1 RET,5,QF,68
+2021-560,Us Open,Hard,G,106421,Daniil Medvedev,122298,Botic Van De Zandschulp,6-3 6-0 4-6 7-5,5,QF,143
+2021-560,Us Open,Hard,G,104925,Novak Djokovic,100644,Alexander Zverev,4-6 6-2 6-4 4-6 6-2,5,SF,214
+2021-560,Us Open,Hard,G,106421,Daniil Medvedev,200000,Felix Auger Aliassime,6-4 7-5 6-2,5,SF,124
+2021-560,Us Open,Hard,G,106421,Daniil Medvedev,104925,Novak Djokovic,6-4 6-4 6-4,5,F,136
+2021-580,Australian Open,Hard,G,104925,Novak Djokovic,104871,Jeremy Chardy,6-3 6-1 6-2,5,R128,91
+2021-580,Australian Open,Hard,G,126207,Frances Tiafoe,105882,Stefano Travaglia,7-6(5) 6-2 6-2,5,R128,111
+2021-580,Australian Open,Hard,G,124187,Reilly Opelka,104229,Yen Hsun Lu,6-3 7-6(2) 6-3,5,R128,115
+2021-580,Australian Open,Hard,G,126203,Taylor Fritz,105077,Albert Ramos,7-6(6) 3-6 6-2 7-6(6),5,R128,203
+2021-580,Australian Open,Hard,G,104527,Stan Wawrinka,105155,Pedro Sousa,6-3 6-2 6-4,5,R128,96
+2021-580,Australian Open,Hard,G,105916,Marton Fucsovics,117360,Marc Polmans,4-6 6-3 6-1 6-7(3) 6-3,5,R128,252
+2021-580,Australian Open,Hard,G,144895,Corentin Moutet,105357,John Millman,6-4 6-7(4) 3-6 6-2 6-3,5,R128,225
+2021-580,Australian Open,Hard,G,105683,Milos Raonic,105948,Federico Coria,6-3 6-3 6-2,5,R128,95
+2021-580,Australian Open,Hard,G,200325,Emil Ruusuvuori,104792,Gael Monfils,3-6 6-4 7-5 3-6 6-3,5,R128,226
+2021-580,Australian Open,Hard,G,124079,Pedro Martinez,106415,Yoshihito Nishioka,6-7(3) 6-1 6-1 6-1,5,R128,159
+2021-580,Australian Open,Hard,G,122330,Alexander Bublik,105379,Aljaz Bedene,6-4 7-5 5-7 6-4,5,R128,156
+2021-580,Australian Open,Hard,G,105583,Dusan Lajovic,104660,Sergiy Stakhovsky,5-7 6-4 6-3 5-7 6-4,5,R128,204
+2021-580,Australian Open,Hard,G,105173,Adrian Mannarino,110602,Dennis Novak,6-2 6-4 7-6(2),5,R128,141
+2021-580,Australian Open,Hard,G,200175,Miomir Kecmanovic,111794,Kamil Majchrzak,6-2 6-4 6-3,5,R128,104
+2021-580,Australian Open,Hard,G,202195,Maxime Cressy,106121,Taro Daniel,7-6(1) 7-6(3) 6-4,5,R128,147
+2021-580,Australian Open,Hard,G,100644,Alexander Zverev,106218,Marcos Giron,6-7(8) 7-6(5) 6-3 6-2,5,R128,162
+2021-580,Australian Open,Hard,G,106233,Dominic Thiem,105062,Mikhail Kukushkin,7-6(2) 6-2 6-3,5,R128,160
+2021-580,Australian Open,Hard,G,136440,Dominik Koepfer,106198,Hugo Dellien,7-5 6-2 6-4,5,R128,104
+2021-580,Australian Open,Hard,G,106401,Nick Kyrgios,106393,Frederico Ferreira Silva,6-4 6-4 6-4,5,R128,119
+2021-580,Australian Open,Hard,G,200005,Ugo Humbert,106034,Yasutaka Uchiyama,6-3 6-4 6-7(3) 6-3,5,R128,166
+2021-580,Australian Open,Hard,G,105777,Grigor Dimitrov,105227,Marin Cilic,6-4 6-2 7-6(5),5,R128,128
+2021-580,Australian Open,Hard,G,106109,Alex Bolt,105613,Norbert Gombos,6-2 6-2 4-6 6-3,5,R128,134
+2021-580,Australian Open,Hard,G,106210,Jiri Vesely,106293,Kimmer Coppejans,6-4 3-6 6-7(3) 6-3 6-3,5,R128,208
+2021-580,Australian Open,Hard,G,105807,Pablo Carreno Busta,105453,Kei Nishikori,7-5 7-6(4) 6-2,5,R128,143
+2021-580,Australian Open,Hard,G,133430,Denis Shapovalov,206173,Jannik Sinner,3-6 6-3 6-2 4-6 6-4,5,R128,235
+2021-580,Australian Open,Hard,G,106071,Bernard Tomic,105216,Yuichi Sugita,3-6 6-1 4-1 RET,5,R128,86
+2021-580,Australian Open,Hard,G,105902,James Duckworth,106000,Damir Dzumhur,6-3 6-2 6-4,5,R128,100
+2021-580,Australian Open,Hard,G,200000,Felix Auger Aliassime,105649,Cedrik Marcel Stebe,6-2 6-4 6-2,5,R128,100
+2021-580,Australian Open,Hard,G,106078,Egor Gerasimov,105332,Benoit Paire,6-2 2-6 7-6(5) 7-5,5,R128,192
+2021-580,Australian Open,Hard,G,106234,Aslan Karatsev,126149,Gianluca Mager,6-3 6-3 6-4,5,R128,98
+2021-580,Australian Open,Hard,G,124186,Alexandre Muller,106228,Juan Ignacio Londero,4-6 6-3 6-0 6-3,5,R128,150
+2021-580,Australian Open,Hard,G,106043,Diego Schwartzman,111200,Elias Ymer,7-6(3) 6-4 2-6 6-2,5,R128,187
+2021-580,Australian Open,Hard,G,126094,Andrey Rublev,105870,Yannick Hanfmann,6-3 6-3 6-4,5,R128,102
+2021-580,Australian Open,Hard,G,106329,Thiago Monteiro,105413,Andrej Martin,7-6(6) 6-1 6-2,5,R128,112
+2021-580,Australian Open,Hard,G,103852,Feliciano Lopez,111454,Li Tu,6-7(1) 6-4 7-6(4) 6-4,5,R128,166
+2021-580,Australian Open,Hard,G,132283,Lorenzo Sonego,105023,Sam Querrey,7-5 6-4 6-4,5,R128,131
+2021-580,Australian Open,Hard,G,134770,Casper Ruud,111442,Jordan Thompson,6-3 6-3 2-1 RET,5,R128,92
+2021-580,Australian Open,Hard,G,126205,Tommy Paul,105932,Nikoloz Basilashvili,6-4 7-6(0) 6-4,5,R128,130
+2021-580,Australian Open,Hard,G,106331,Christopher Oconnell,105526,Jan Lennard Struff,7-6(2) 7-6(5) 6-1,5,R128,122
+2021-580,Australian Open,Hard,G,105430,Radu Albot,105138,Roberto Bautista Agut,6-7(1) 6-0 6-4 7-6(5),5,R128,195
+2021-580,Australian Open,Hard,G,200615,Alexei Popyrin,105676,David Goffin,3-6 6-4 6-7(4) 7-6(6) 6-3,5,R128,223
+2021-580,Australian Open,Hard,G,144750,Lloyd Harris,111453,Mikael Torpegaard,4-6 6-3 6-2 6-2,5,R128,145
+2021-580,Australian Open,Hard,G,111456,Mackenzie Mcdonald,106065,Marco Cecchinato,3-6 6-3 6-2 6-2,5,R128,132
+2021-580,Australian Open,Hard,G,106432,Borna Coric,105550,Guido Pella,6-3 7-6(5) 7-5,5,R128,143
+2021-580,Australian Open,Hard,G,105936,Filip Krajinovic,104898,Robin Haase,7-6(4) 6-3 4-6 6-2,5,R128,134
+2021-580,Australian Open,Hard,G,104665,Pablo Andujar,111460,Quentin Halys,6-4 7-5 7-5,5,R128,134
+2021-580,Australian Open,Hard,G,106148,Roberto Carballes Baena,105226,Attila Balazs,7-5 3-6 6-2 6-3,5,R128,158
+2021-580,Australian Open,Hard,G,106421,Daniil Medvedev,105577,Vasek Pospisil,6-2 6-2 6-4,5,R128,107
+2021-580,Australian Open,Hard,G,126774,Stefanos Tsitsipas,104468,Gilles Simon,6-1 6-2 6-1,5,R128,92
+2021-580,Australian Open,Hard,G,106423,Thanasi Kokkinakis,126952,Soon Woo Kwon,6-4 6-1 6-1,5,R128,93
+2021-580,Australian Open,Hard,G,207989,Carlos Alcaraz,122298,Botic Van De Zandschulp,6-1 6-4 6-4,5,R128,114
+2021-580,Australian Open,Hard,G,144707,Mikael Ymer,128034,Hubert Hurkacz,3-6 6-3 3-6 7-5 6-3,5,R128,224
+2021-580,Australian Open,Hard,G,111575,Karen Khachanov,126846,Aleksandar Vukic,6-3 6-7(4) 7-6(2) 6-4,5,R128,186
+2021-580,Australian Open,Hard,G,105575,Ricardas Berankis,111576,Sumit Nagal,6-2 7-5 6-3,5,R128,130
+2021-580,Australian Open,Hard,G,207830,Tomas Machac,106408,Mario Vilella Martinez,6-7(5) 7-5 6-0 3-0 RET,5,R128,152
+2021-580,Australian Open,Hard,G,126610,Matteo Berrettini,104731,Kevin Anderson,7-6(9) 7-5 6-3,5,R128,143
+2021-580,Australian Open,Hard,G,104926,Fabio Fognini,105732,Pierre Hugues Herbert,6-4 6-2 6-3,5,R128,114
+2021-580,Australian Open,Hard,G,106099,Salvatore Caruso,105967,Henri Laaksonen,6-2 6-4 6-3,5,R128,107
+2021-580,Australian Open,Hard,G,104655,Pablo Cuevas,104312,Andreas Seppi,6-4 4-6 6-2 6-2,5,R128,140
+2021-580,Australian Open,Hard,G,200282,Alex De Minaur,105815,Tennys Sandgren,7-5 6-1 6-1,5,R128,108
+2021-580,Australian Open,Hard,G,111815,Cameron Norrie,105554,Daniel Evans,6-4 4-6 6-4 7-5,5,R128,207
+2021-580,Australian Open,Hard,G,126128,Roman Safiullin,125802,Ilya Ivashka,6-4 6-3 6-4,5,R128,126
+2021-580,Australian Open,Hard,G,111581,Michael Mmoh,104678,Viktor Troicki,7-6(3) 6-7(3) 3-6 7-6(3) 7-5,5,R128,246
+2021-580,Australian Open,Hard,G,104745,Rafael Nadal,111513,Laslo Djere,6-3 6-4 6-1,5,R128,112
+2021-580,Australian Open,Hard,G,104925,Novak Djokovic,126207,Frances Tiafoe,6-3 6-7(3) 7-6(2) 6-3,5,R64,210
+2021-580,Australian Open,Hard,G,126203,Taylor Fritz,124187,Reilly Opelka,4-6 7-6(6) 6-7(4) 7-6(5) 6-2,5,R64,247
+2021-580,Australian Open,Hard,G,105916,Marton Fucsovics,104527,Stan Wawrinka,7-5 6-1 4-6 2-6 7-6(9),5,R64,239
+2021-580,Australian Open,Hard,G,105683,Milos Raonic,144895,Corentin Moutet,6-7(1) 6-1 6-1 6-4,5,R64,145
+2021-580,Australian Open,Hard,G,124079,Pedro Martinez,200325,Emil Ruusuvuori,1-6 6-3 6-2 7-6(5),5,R64,189
+2021-580,Australian Open,Hard,G,105583,Dusan Lajovic,122330,Alexander Bublik,6-4 7-6(4) 4-6 6-3,5,R64,185
+2021-580,Australian Open,Hard,G,105173,Adrian Mannarino,200175,Miomir Kecmanovic,6-1 6-2 6-4,5,R64,110
+2021-580,Australian Open,Hard,G,100644,Alexander Zverev,202195,Maxime Cressy,7-5 6-4 6-3,5,R64,124
+2021-580,Australian Open,Hard,G,106233,Dominic Thiem,136440,Dominik Koepfer,6-4 6-0 6-2,5,R64,99
+2021-580,Australian Open,Hard,G,106401,Nick Kyrgios,200005,Ugo Humbert,5-7 6-4 3-6 7-6(2) 6-4,5,R64,205
+2021-580,Australian Open,Hard,G,105777,Grigor Dimitrov,106109,Alex Bolt,7-6(1) 6-1 6-2,5,R64,110
+2021-580,Australian Open,Hard,G,105807,Pablo Carreno Busta,106210,Jiri Vesely,6-3 7-6(3) 2-6 6-4,5,R64,153
+2021-580,Australian Open,Hard,G,133430,Denis Shapovalov,106071,Bernard Tomic,6-1 6-3 6-2,5,R64,107
+2021-580,Australian Open,Hard,G,200000,Felix Auger Aliassime,105902,James Duckworth,6-4 6-1 6-2,5,R64,105
+2021-580,Australian Open,Hard,G,106234,Aslan Karatsev,106078,Egor Gerasimov,6-0 6-1 6-0,5,R64,93
+2021-580,Australian Open,Hard,G,106043,Diego Schwartzman,124186,Alexandre Muller,6-2 6-0 6-3,5,R64,92
+2021-580,Australian Open,Hard,G,126094,Andrey Rublev,106329,Thiago Monteiro,6-4 6-4 7-6(8),5,R64,128
+2021-580,Australian Open,Hard,G,103852,Feliciano Lopez,132283,Lorenzo Sonego,5-7 3-6 6-3 7-5 6-4,5,R64,198
+2021-580,Australian Open,Hard,G,134770,Casper Ruud,126205,Tommy Paul,3-6 6-2 6-4 7-5,5,R64,163
+2021-580,Australian Open,Hard,G,105430,Radu Albot,106331,Christopher Oconnell,6-2 7-5 7-6(8),5,R64,140
+2021-580,Australian Open,Hard,G,144750,Lloyd Harris,200615,Alexei Popyrin,6-2 1-6 6-3 6-7(5) 6-3,5,R64,180
+2021-580,Australian Open,Hard,G,111456,Mackenzie Mcdonald,106432,Borna Coric,6-4 6-2 4-6 6-4,5,R64,149
+2021-580,Australian Open,Hard,G,105936,Filip Krajinovic,104665,Pablo Andujar,6-2 5-7 6-1 6-4,5,R64,177
+2021-580,Australian Open,Hard,G,106421,Daniil Medvedev,106148,Roberto Carballes Baena,6-2 7-5 6-1,5,R64,104
+2021-580,Australian Open,Hard,G,126774,Stefanos Tsitsipas,106423,Thanasi Kokkinakis,6-7(5) 6-4 6-1 6-7(5) 6-4,5,R64,272
+2021-580,Australian Open,Hard,G,144707,Mikael Ymer,207989,Carlos Alcaraz,2-6 6-4 6-4 7-6(5),5,R64,188
+2021-580,Australian Open,Hard,G,111575,Karen Khachanov,105575,Ricardas Berankis,6-2 6-4 6-4,5,R64,117
+2021-580,Australian Open,Hard,G,126610,Matteo Berrettini,207830,Tomas Machac,6-3 6-2 4-6 6-3,5,R64,159
+2021-580,Australian Open,Hard,G,104926,Fabio Fognini,106099,Salvatore Caruso,4-6 6-2 2-6 6-3 7-6(12),5,R64,236
+2021-580,Australian Open,Hard,G,200282,Alex De Minaur,104655,Pablo Cuevas,6-3 6-3 7-5,5,R64,119
+2021-580,Australian Open,Hard,G,111815,Cameron Norrie,126128,Roman Safiullin,3-6 7-5 6-3 7-6(3),5,R64,211
+2021-580,Australian Open,Hard,G,104745,Rafael Nadal,111581,Michael Mmoh,6-1 6-4 6-2,5,R64,107
+2021-580,Australian Open,Hard,G,104925,Novak Djokovic,126203,Taylor Fritz,7-6(1) 6-4 3-6 4-6 6-2,5,R32,205
+2021-580,Australian Open,Hard,G,105683,Milos Raonic,105916,Marton Fucsovics,7-6(2) 5-7 6-2 6-2,5,R32,193
+2021-580,Australian Open,Hard,G,105583,Dusan Lajovic,124079,Pedro Martinez,6-7(6) 7-5 6-1 6-4,5,R32,193
+2021-580,Australian Open,Hard,G,100644,Alexander Zverev,105173,Adrian Mannarino,6-3 6-3 6-1,5,R32,103
+2021-580,Australian Open,Hard,G,106233,Dominic Thiem,106401,Nick Kyrgios,4-6 4-6 6-3 6-4 6-4,5,R32,201
+2021-580,Australian Open,Hard,G,105777,Grigor Dimitrov,105807,Pablo Carreno Busta,6-0 1-0 RET,5,R32,38
+2021-580,Australian Open,Hard,G,200000,Felix Auger Aliassime,133430,Denis Shapovalov,7-5 7-5 6-3,5,R32,148
+2021-580,Australian Open,Hard,G,106234,Aslan Karatsev,106043,Diego Schwartzman,6-3 6-3 6-3,5,R32,112
+2021-580,Australian Open,Hard,G,126094,Andrey Rublev,103852,Feliciano Lopez,7-5 6-2 6-3,5,R32,92
+2021-580,Australian Open,Hard,G,134770,Casper Ruud,105430,Radu Albot,6-1 5-7 6-4 6-4,5,R32,178
+2021-580,Australian Open,Hard,G,111456,Mackenzie Mcdonald,144750,Lloyd Harris,7-6(7) 6-1 6-4,5,R32,121
+2021-580,Australian Open,Hard,G,106421,Daniil Medvedev,105936,Filip Krajinovic,6-3 6-3 4-6 3-6 6-0,5,R32,186
+2021-580,Australian Open,Hard,G,126774,Stefanos Tsitsipas,144707,Mikael Ymer,6-4 6-1 6-1,5,R32,94
+2021-580,Australian Open,Hard,G,126610,Matteo Berrettini,111575,Karen Khachanov,7-6(1) 7-6(5) 7-6(5),5,R32,179
+2021-580,Australian Open,Hard,G,104926,Fabio Fognini,200282,Alex De Minaur,6-4 6-3 6-4,5,R32,128
+2021-580,Australian Open,Hard,G,104745,Rafael Nadal,111815,Cameron Norrie,7-5 6-2 7-5,5,R32,134
+2021-580,Australian Open,Hard,G,104925,Novak Djokovic,105683,Milos Raonic,7-6(4) 4-6 6-1 6-4,5,R16,176
+2021-580,Australian Open,Hard,G,100644,Alexander Zverev,105583,Dusan Lajovic,6-4 7-6(5) 6-3,5,R16,141
+2021-580,Australian Open,Hard,G,105777,Grigor Dimitrov,106233,Dominic Thiem,6-4 6-4 6-0,5,R16,121
+2021-580,Australian Open,Hard,G,106234,Aslan Karatsev,200000,Felix Auger Aliassime,3-6 1-6 6-3 6-3 6-4,5,R16,205
+2021-580,Australian Open,Hard,G,126094,Andrey Rublev,134770,Casper Ruud,6-2 7-6(3) 0-0 RET,5,R16,77
+2021-580,Australian Open,Hard,G,106421,Daniil Medvedev,111456,Mackenzie Mcdonald,6-4 6-2 6-3,5,R16,89
+2021-580,Australian Open,Hard,G,126774,Stefanos Tsitsipas,126610,Matteo Berrettini,W/O,5,R16,0
+2021-580,Australian Open,Hard,G,104745,Rafael Nadal,104926,Fabio Fognini,6-3 6-4 6-2,5,R16,136
+2021-580,Australian Open,Hard,G,104925,Novak Djokovic,100644,Alexander Zverev,6-7(6) 6-2 6-4 7-6(6),5,QF,210
+2021-580,Australian Open,Hard,G,106234,Aslan Karatsev,105777,Grigor Dimitrov,2-6 6-4 6-1 6-2,5,QF,152
+2021-580,Australian Open,Hard,G,106421,Daniil Medvedev,126094,Andrey Rublev,7-5 6-3 6-2,5,QF,125
+2021-580,Australian Open,Hard,G,126774,Stefanos Tsitsipas,104745,Rafael Nadal,3-6 2-6 7-6(4) 6-4 7-5,5,QF,245
+2021-580,Australian Open,Hard,G,104925,Novak Djokovic,106234,Aslan Karatsev,6-3 6-4 6-2,5,SF,113
+2021-580,Australian Open,Hard,G,106421,Daniil Medvedev,126774,Stefanos Tsitsipas,6-4 6-2 7-5,5,SF,129
+2021-580,Australian Open,Hard,G,104925,Novak Djokovic,106421,Daniil Medvedev,7-5 6-2 6-2,5,F,113
+2021-M-DC-2021-FLS-A-M-ESP-ECU-01,Davis Cup Finals RR: ESP vs ECU,Hard,D,103852,Feliciano Lopez,105933,Roberto Quiroz,6-3 6-3,3,RR,78
+2021-M-DC-2021-FLS-A-M-ESP-ECU-01,Davis Cup Finals RR: ESP vs ECU,Hard,D,105807,Pablo Carreno Busta,105877,Emilio Gomez,5-7 6-3 7-6(5),3,RR,155
+2021-M-DC-2021-FLS-A-M-ESP-RTF-01,Davis Cup Finals RR: ESP vs RTF,Hard,D,103852,Feliciano Lopez,126094,Andrey Rublev,2-6 6-3 6-4,3,RR,105
+2021-M-DC-2021-FLS-A-M-ESP-RTF-01,Davis Cup Finals RR: ESP vs RTF,Hard,D,106421,Daniil Medvedev,105807,Pablo Carreno Busta,6-2 7-6(3),3,RR,88
+2021-M-DC-2021-FLS-A-M-RTF-ECU-01,Davis Cup Finals RR: RTF vs ECU,Hard,D,126094,Andrey Rublev,105933,Roberto Quiroz,6-3 4-6 6-1,3,RR,88
+2021-M-DC-2021-FLS-A-M-RTF-ECU-01,Davis Cup Finals RR: RTF vs ECU,Hard,D,106421,Daniil Medvedev,105877,Emilio Gomez,6-0 6-2,3,RR,56
+2021-M-DC-2021-FLS-B-M-CAN-KAZ-01,Davis Cup Finals RR: CAN vs KAZ,Hard,D,105062,Mikhail Kukushkin,111790,Brayden Schnur,6-3 6-7(5) 7-5,3,RR,172
+2021-M-DC-2021-FLS-B-M-CAN-KAZ-01,Davis Cup Finals RR: CAN vs KAZ,Hard,D,122330,Alexander Bublik,105577,Vasek Pospisil,6-2 7-6(6),3,RR,59
+2021-M-DC-2021-FLS-B-M-CAN-SWE-01,Davis Cup Finals RR: CAN vs SWE,Hard,D,111200,Elias Ymer,105731,Steven Diez,6-4 6-2,3,RR,86
+2021-M-DC-2021-FLS-B-M-CAN-SWE-01,Davis Cup Finals RR: CAN vs SWE,Hard,D,144707,Mikael Ymer,105577,Vasek Pospisil,6-4 6-4,3,RR,88
+2021-M-DC-2021-FLS-B-M-KAZ-SWE-01,Davis Cup Finals RR: KAZ vs SWE,Hard,D,111200,Elias Ymer,105062,Mikhail Kukushkin,6-3 7-6(4),3,RR,110
+2021-M-DC-2021-FLS-B-M-KAZ-SWE-01,Davis Cup Finals RR: KAZ vs SWE,Hard,D,122330,Alexander Bublik,144707,Mikael Ymer,3-6 6-4 6-0,3,RR,94
+2021-M-DC-2021-FLS-C-M-FRA-CZE-01,Davis Cup Finals RR: FRA vs CZE,Hard,D,207830,Tomas Machac,104755,Richard Gasquet,7-6(3) 6-2,3,RR,93
+2021-M-DC-2021-FLS-C-M-FRA-CZE-01,Davis Cup Finals RR: FRA vs CZE,Hard,D,105173,Adrian Mannarino,106210,Jiri Vesely,6-7(1) 6-4 6-2,3,RR,152
+2021-M-DC-2021-FLS-C-M-FRA-GBR-01,Davis Cup Finals RR: FRA vs GBR,Hard,D,105554,Daniel Evans,105173,Adrian Mannarino,7-5 6-4,3,RR,114
+2021-M-DC-2021-FLS-C-M-FRA-GBR-01,Davis Cup Finals RR: FRA vs GBR,Hard,D,111815,Cameron Norrie,126239,Arthur Rinderknech,6-2 7-6(8),3,RR,126
+2021-M-DC-2021-FLS-C-M-GBR-CZE-01,Davis Cup Finals RR: GBR vs CZE,Hard,D,207830,Tomas Machac,105554,Daniel Evans,6-2 7-5,3,RR,93
+2021-M-DC-2021-FLS-C-M-GBR-CZE-01,Davis Cup Finals RR: GBR vs CZE,Hard,D,111815,Cameron Norrie,208103,Jiri Lehecka,6-1 2-6 6-1,3,RR,100
+2021-M-DC-2021-FLS-D-M-AUS-HUN-01,Davis Cup Finals RR: AUS vs HUN,Hard,D,200436,Zsombor Piros,105357,John Millman,4-6 6-4 6-3,3,RR,137
+2021-M-DC-2021-FLS-D-M-AUS-HUN-01,Davis Cup Finals RR: AUS vs HUN,Hard,D,200282,Alex De Minaur,105916,Marton Fucsovics,7-5 2-6 7-6(2),3,RR,184
+2021-M-DC-2021-FLS-D-M-CRO-AUS-01,Davis Cup Finals RR: CRO vs AUS,Hard,D,127339,Borna Gojo,200615,Alexei Popyrin,7-6(5) 7-5,3,RR,109
+2021-M-DC-2021-FLS-D-M-CRO-AUS-01,Davis Cup Finals RR: CRO vs AUS,Hard,D,105227,Marin Cilic,200282,Alex De Minaur,6-1 5-7 6-4,3,RR,118
+2021-M-DC-2021-FLS-D-M-CRO-HUN-01,Davis Cup Finals RR: CRO vs HUN,Hard,D,126120,Nino Serdarusic,206681,Fabian Marozsan,6-4 6-4,3,RR,70
+2021-M-DC-2021-FLS-D-M-CRO-HUN-01,Davis Cup Finals RR: CRO vs HUN,Hard,D,200436,Zsombor Piros,105227,Marin Cilic,4-6 7-5 6-4,3,RR,159
+2021-M-DC-2021-FLS-E-M-ITA-COL-01,Davis Cup Finals RR: ITA vs COL,Hard,D,132283,Lorenzo Sonego,200711,Nicolas Mejia,6-7(5) 6-4 6-2,3,RR,155
+2021-M-DC-2021-FLS-E-M-ITA-COL-01,Davis Cup Finals RR: ITA vs COL,Hard,D,206173,Jannik Sinner,123755,Daniel Elahi Galan,7-5 6-0,3,RR,78
+2021-M-DC-2021-FLS-E-M-USA-COL-01,Davis Cup Finals RR: USA vs COL,Hard,D,126207,Frances Tiafoe,200711,Nicolas Mejia,4-6 6-3 7-6(7),3,RR,158
+2021-M-DC-2021-FLS-E-M-USA-COL-01,Davis Cup Finals RR: USA vs COL,Hard,D,123755,Daniel Elahi Galan,104545,John Isner,6-3 3-6 7-6(5),3,RR,120
+2021-M-DC-2021-FLS-E-M-USA-ITA-01,Davis Cup Finals RR: USA vs ITA,Hard,D,132283,Lorenzo Sonego,124187,Reilly Opelka,6-3 7-6(4),3,RR,89
+2021-M-DC-2021-FLS-E-M-USA-ITA-01,Davis Cup Finals RR: USA vs ITA,Hard,D,206173,Jannik Sinner,104545,John Isner,6-2 6-0,3,RR,62
+2021-M-DC-2021-FLS-F-M-GER-AUT-01,Davis Cup Finals RR: GER vs AUT,Hard,D,200514,Jurij Rodionov,136440,Dominik Koepfer,6-1 7-5,3,RR,85
+2021-M-DC-2021-FLS-F-M-GER-AUT-01,Davis Cup Finals RR: GER vs AUT,Hard,D,105526,Jan Lennard Struff,110602,Dennis Novak,7-5 6-4,3,RR,72
+2021-M-DC-2021-FLS-F-M-SRB-AUT-01,Davis Cup Finals RR: SRB vs AUT,Hard,D,105583,Dusan Lajovic,105589,Gerald Melzer,7-6(5) 3-6 7-5,3,RR,161
+2021-M-DC-2021-FLS-F-M-SRB-AUT-01,Davis Cup Finals RR: SRB vs AUT,Hard,D,104925,Novak Djokovic,110602,Dennis Novak,6-3 6-2,3,RR,57
+2021-M-DC-2021-FLS-F-M-SRB-GER-01,Davis Cup Finals RR: SRB vs GER,Hard,D,136440,Dominik Koepfer,105936,Filip Krajinovic,7-6(4) 6-4,3,RR,119
+2021-M-DC-2021-FLS-F-M-SRB-GER-01,Davis Cup Finals RR: SRB vs GER,Hard,D,104925,Novak Djokovic,105526,Jan Lennard Struff,6-2 6-4,3,RR,72
+2021-M-DC-2021-FLS-M-CRO-SRB-01,Davis Cup Finals SF: CRO vs SRB,Hard,D,127339,Borna Gojo,105583,Dusan Lajovic,4-6 6-3 6-2,3,RR,117
+2021-M-DC-2021-FLS-M-CRO-SRB-01,Davis Cup Finals SF: CRO vs SRB,Hard,D,104925,Novak Djokovic,105227,Marin Cilic,6-4 6-2,3,RR,99
+2021-M-DC-2021-FLS-M-GBR-GER-01,Davis Cup Finals QF: GBR vs GER,Hard,D,105554,Daniel Evans,105376,Peter Gojowczyk,6-2 6-1,3,RR,55
+2021-M-DC-2021-FLS-M-GBR-GER-01,Davis Cup Finals QF: GBR vs GER,Hard,D,105526,Jan Lennard Struff,111815,Cameron Norrie,7-6(6) 3-6 6-2,3,RR,120
+2021-M-DC-2021-FLS-M-ITA-CRO-01,Davis Cup Finals QF: ITA vs CRO,Hard,D,127339,Borna Gojo,132283,Lorenzo Sonego,7-6(2) 2-6 6-2,3,RR,138
+2021-M-DC-2021-FLS-M-ITA-CRO-01,Davis Cup Finals QF: ITA vs CRO,Hard,D,206173,Jannik Sinner,105227,Marin Cilic,3-6 7-6(4) 6-3,3,RR,161
+2021-M-DC-2021-FLS-M-RTF-CRO-01,Davis Cup Finals F: RTF vs CRO,Hard,D,126094,Andrey Rublev,127339,Borna Gojo,6-4 7-6(5),3,RR,92
+2021-M-DC-2021-FLS-M-RTF-CRO-01,Davis Cup Finals F: RTF vs CRO,Hard,D,106421,Daniil Medvedev,105227,Marin Cilic,7-6(7) 6-2,3,RR,87
+2021-M-DC-2021-FLS-M-RTF-GER-01,Davis Cup Finals SF: RTF vs GER,Hard,D,126094,Andrey Rublev,136440,Dominik Koepfer,6-4 6-0,3,RR,48
+2021-M-DC-2021-FLS-M-RTF-GER-01,Davis Cup Finals SF: RTF vs GER,Hard,D,106421,Daniil Medvedev,105526,Jan Lennard Struff,6-4 6-4,3,RR,66
+2021-M-DC-2021-FLS-M-RTF-SWE-01,Davis Cup Finals QF: RTF vs SWE,Hard,D,126094,Andrey Rublev,111200,Elias Ymer,6-2 5-7 7-6(3),3,RR,130
+2021-M-DC-2021-FLS-M-RTF-SWE-01,Davis Cup Finals QF: RTF vs SWE,Hard,D,106421,Daniil Medvedev,144707,Mikael Ymer,6-4 6-4,3,RR,72
+2021-M-DC-2021-FLS-M-SRB-KAZ-01,Davis Cup Finals QF: SRB vs KAZ,Hard,D,105062,Mikhail Kukushkin,200175,Miomir Kecmanovic,7-6(5) 4-6 7-6(11),3,RR,197
+2021-M-DC-2021-FLS-M-SRB-KAZ-01,Davis Cup Finals QF: SRB vs KAZ,Hard,D,104925,Novak Djokovic,122330,Alexander Bublik,6-3 6-4,3,RR,76
+2021-M-DC-2021-WG1-KOPO-UKR-NOR-01,Davis Cup WG1 PO: UKR vs NOR,Hard,D,126340,Viktor Durasovic,105011,Illya Marchenko,6-3 6-0,3,RR,57
+2021-M-DC-2021-WG1-KOPO-UKR-NOR-01,Davis Cup WG1 PO: UKR vs NOR,Hard,D,134770,Casper Ruud,126964,Vitaliy Sachko,6-3 6-2,3,RR,76
+2021-M-DC-2021-WG1-KOPO-UKR-NOR-01,Davis Cup WG1 PO: UKR vs NOR,Hard,D,134770,Casper Ruud,104660,Sergiy Stakhovsky,4-6 6-3 7-6(4),3,RR,132
+2021-M-DC-2021-WG1-M-ARG-BLR-01,Davis Cup WG1 R1: ARG vs BLR,Clay,D,209867,Daniil Ostapenkov,106043,Diego Schwartzman,6-4 6-3,3,RR,96
+2021-M-DC-2021-WG1-M-ARG-BLR-01,Davis Cup WG1 R1: ARG vs BLR,Clay,D,105550,Guido Pella,210250,Erik Arutiunian,6-1 6-2,3,RR,71
+2021-M-DC-2021-WG1-M-ARG-BLR-01,Davis Cup WG1 R1: ARG vs BLR,Clay,D,106043,Diego Schwartzman,200310,Alexander Zgirovsky,6-1 6-2,3,RR,59
+2021-M-DC-2021-WG1-M-ARG-BLR-01,Davis Cup WG1 R1: ARG vs BLR,Clay,D,105948,Federico Coria,209867,Daniil Ostapenkov,6-3 6-1,3,RR,66
+2021-M-DC-2021-WG1-M-BEL-BOL-01,Davis Cup WG1 R1: BEL vs BOL,Clay,D,106198,Hugo Dellien,105074,Ruben Bemelmans,6-3 6-4,3,RR,77
+2021-M-DC-2021-WG1-M-BEL-BOL-01,Davis Cup WG1 R1: BEL vs BOL,Clay,D,123961,Murkel Alejandro Dellien Velasco,200267,Zizou Bergs,6-4 4-6 6-2,3,RR,142
+2021-M-DC-2021-WG1-M-BEL-BOL-01,Davis Cup WG1 R1: BEL vs BOL,Clay,D,126107,Michael Geerts,106198,Hugo Dellien,6-4 4-6 6-2,3,RR,147
+2021-M-DC-2021-WG1-M-BEL-BOL-01,Davis Cup WG1 R1: BEL vs BOL,Clay,D,105074,Ruben Bemelmans,123961,Murkel Alejandro Dellien Velasco,7-6(2) 6-2,3,RR,117
+2021-M-DC-2021-WG1-M-BIH-PER-01,Davis Cup WG1 R1: BIH vs PER,Clay,D,106000,Damir Dzumhur,126190,Nicolas Alvarez,6-2 6-7(4) 6-3,3,RR,141
+2021-M-DC-2021-WG1-M-BIH-PER-01,Davis Cup WG1 R1: BIH vs PER,Clay,D,122669,Juan Pablo Varillas,105806,Mirza Basic,7-5 7-6(7),3,RR,136
+2021-M-DC-2021-WG1-M-BIH-PER-01,Davis Cup WG1 R1: BIH vs PER,Clay,D,122669,Juan Pablo Varillas,106000,Damir Dzumhur,6-1 6-3,3,RR,64
+2021-M-DC-2021-WG1-M-BIH-PER-01,Davis Cup WG1 R1: BIH vs PER,Clay,D,126190,Nicolas Alvarez,123983,Nerman Fatic,7-6(4) 6-4,3,RR,125
+2021-M-DC-2021-WG1-M-BRA-LBN-01,Davis Cup WG1 R1: BRA vs LBN,Clay,D,126197,Orlando Luz,133975,Benjamin Hassan,6-4 6-4,3,RR,80
+2021-M-DC-2021-WG1-M-BRA-LBN-01,Davis Cup WG1 R1: BRA vs LBN,Clay,D,200335,Felipe Meligeni Alves,200273,Hady Habib,6-1 6-3,3,RR,73
+2021-M-DC-2021-WG1-M-BRA-LBN-01,Davis Cup WG1 R1: BRA vs LBN,Clay,D,207799,Matheus Pucinelli De Almeida,208317,Roey Tabet,6-0 6-1,3,RR,65
+2021-M-DC-2021-WG1-M-CHI-SVK-01,Davis Cup WG1 R1: CHI vs SVK,Hard,D,106426,Cristian Garin,144684,Alex Molcan,6-2 6-4,3,RR,73
+2021-M-DC-2021-WG1-M-CHI-SVK-01,Davis Cup WG1 R1: CHI vs SVK,Hard,D,105613,Norbert Gombos,111797,Nicolas Jarry,6-3 6-7(5) 6-3,3,RR,128
+2021-M-DC-2021-WG1-M-CHI-SVK-01,Davis Cup WG1 R1: CHI vs SVK,Hard,D,105613,Norbert Gombos,106426,Cristian Garin,6-0 6-1,3,RR,49
+2021-M-DC-2021-WG1-M-IND-FIN-01,Davis Cup WG1 R1: IND vs FIN,Hard,D,202261,Otto Virtanen,105432,Prajnesh Gunneswaran,6-3 7-6(1),3,RR,84
+2021-M-DC-2021-WG1-M-IND-FIN-01,Davis Cup WG1 R1: IND vs FIN,Hard,D,200325,Emil Ruusuvuori,106368,Ramkumar Ramanathan,6-4 7-5,3,RR,95
+2021-M-DC-2021-WG1-M-IND-FIN-01,Davis Cup WG1 R1: IND vs FIN,Hard,D,105432,Prajnesh Gunneswaran,126609,Patrik Niklas Salminen,6-3 7-5,3,RR,66
+2021-M-DC-2021-WG1-M-ISR-UKR-01,Davis Cup WG1 R1: ISR vs UKR,Hard,D,105011,Illya Marchenko,131951,Daniel Cukierman,1-6 6-3 6-2,3,RR,117
+2021-M-DC-2021-WG1-M-ISR-UKR-01,Davis Cup WG1 R1: ISR vs UKR,Hard,D,122548,Edan Leshem,104660,Sergiy Stakhovsky,6-3 3-6 6-2,3,RR,97
+2021-M-DC-2021-WG1-M-ISR-UKR-01,Davis Cup WG1 R1: ISR vs UKR,Hard,D,105011,Illya Marchenko,122548,Edan Leshem,6-3 6-2,3,RR,81
+2021-M-DC-2021-WG1-M-ISR-UKR-01,Davis Cup WG1 R1: ISR vs UKR,Hard,D,104660,Sergiy Stakhovsky,200075,Yshai Oliel,6-4 6-2,3,RR,69
+2021-M-DC-2021-WG1-M-JPN-PAK-01,Davis Cup WG1 R1: JPN vs PAK,Grass,D,133297,Yosuke Watanuki,103499,Aqeel Khan,6-3 6-2,3,RR,74
+2021-M-DC-2021-WG1-M-JPN-PAK-01,Davis Cup WG1 R1: JPN vs PAK,Grass,D,111187,Kaichi Uchida,103529,Aisam Ul Haq Qureshi,6-4 7-6(4),3,RR,92
+2021-M-DC-2021-WG1-M-JPN-PAK-01,Davis Cup WG1 R1: JPN vs PAK,Grass,D,202122,Yuta Shimizu,207836,Muzammil Murtaza,6-1 6-1,3,RR,41
+2021-M-DC-2021-WG1-M-KOR-NZL-01,Davis Cup WG1 R1: KOR vs NZL,Grass,D,106227,Ji Sung Nam,104907,Jose Rubin Statham,6-2 6-2,3,RR,58
+2021-M-DC-2021-WG1-M-KOR-NZL-01,Davis Cup WG1 R1: KOR vs NZL,Grass,D,126952,Soon Woo Kwon,207386,Finn Reynolds,7-6(1) 6-3,3,RR,90
+2021-M-DC-2021-WG1-M-KOR-NZL-01,Davis Cup WG1 R1: KOR vs NZL,Grass,D,126952,Soon Woo Kwon,104907,Jose Rubin Statham,6-3 6-3,3,RR,72
+2021-M-DC-2021-WG1-M-NED-URU-01,Davis Cup WG1 R1: NED vs URU,Clay,D,122298,Botic Van De Zandschulp,208028,Francisco Llanes,6-0 6-3,3,RR,69
+2021-M-DC-2021-WG1-M-NED-URU-01,Davis Cup WG1 R1: NED vs URU,Clay,D,134868,Tallon Griekspoor,105899,Martin Cuevas,6-4 7-6(6),3,RR,113
+2021-M-DC-2021-WG1-M-NED-URU-01,Davis Cup WG1 R1: NED vs URU,Clay,D,104898,Robin Haase,202378,Ignacio Carou,6-3 6-2,3,RR,63
+2021-M-DC-2021-WG1-M-POR-ROU-01,Davis Cup WG1 R1: POR vs ROU,Hard,D,105311,Joao Sousa,202262,Filip Cristian Jianu,6-3 7-5,3,RR,85
+2021-M-DC-2021-WG1-M-POR-ROU-01,Davis Cup WG1 R1: POR vs ROU,Hard,D,105657,Marius Copil,105671,Gastao Elias,6-4 6-3,3,RR,81
+2021-M-DC-2021-WG1-M-POR-ROU-01,Davis Cup WG1 R1: POR vs ROU,Hard,D,105657,Marius Copil,105311,Joao Sousa,6-3 2-6 6-4,3,RR,104
+2021-M-DC-2021-WG1-M-UZB-NOR-01,Davis Cup WG1 R1: UZB vs NOR,Hard,D,134770,Casper Ruud,126939,Khumoun Sultanov,6-3 6-3,3,RR,68
+2021-M-DC-2021-WG1-M-UZB-NOR-01,Davis Cup WG1 R1: UZB vs NOR,Hard,D,126340,Viktor Durasovic,104797,Denis Istomin,6-4 6-4,3,RR,86
+2021-M-DC-2021-WG1-M-UZB-NOR-01,Davis Cup WG1 R1: UZB vs NOR,Hard,D,134770,Casper Ruud,122109,Sanjar Fayziev,6-3 6-1,3,RR,75
+2021-M-DC-2021-WG2-KOPO-TUN-ZIM-01,Davis Cup WG2 PO: TUN vs ZIM,Clay,D,104291,Malek Jaziri,200250,Mehluli Don Ayanda Sibanda,6-0 6-1,3,RR,57
+2021-M-DC-2021-WG2-KOPO-TUN-ZIM-01,Davis Cup WG2 PO: TUN vs ZIM,Clay,D,144826,Aziz Dougaz,111761,Benjamin Lock,2-6 7-6(6) 7-5,3,RR,189
+2021-M-DC-2021-WG2-KOPO-TUN-ZIM-01,Davis Cup WG2 PO: TUN vs ZIM,Clay,D,200297,Aziz Ouakaa,208122,Thabo Ncube,6-4 6-0,3,RR,72
+2021-M-DC-2021-WG2-M-BAR-INA-01,Davis Cup WG2 R1: BAR vs INA,Hard,D,105985,Darian King,209870,Gunawan Trismuwantara,6-1 6-1,3,RR,53
+2021-M-DC-2021-WG2-M-BAR-INA-01,Davis Cup WG2 R1: BAR vs INA,Hard,D,202269,Justin Barki,209868,Kaipo Marshall,6-2 6-4,3,RR,90
+2021-M-DC-2021-WG2-M-BAR-INA-01,Davis Cup WG2 R1: BAR vs INA,Hard,D,105985,Darian King,202269,Justin Barki,6-2 6-4,3,RR,65
+2021-M-DC-2021-WG2-M-DOM-TUN-01,Davis Cup WG2 R1: DOM vs TUN,Hard,D,200572,Nick Hardt,104291,Malek Jaziri,4-6 6-1 6-5 RET,3,RR,142
+2021-M-DC-2021-WG2-M-DOM-TUN-01,Davis Cup WG2 R1: DOM vs TUN,Hard,D,144826,Aziz Dougaz,106232,Roberto Cid,6-2 6-4,3,RR,93
+2021-M-DC-2021-WG2-M-DOM-TUN-01,Davis Cup WG2 R1: DOM vs TUN,Hard,D,106232,Roberto Cid,200297,Aziz Ouakaa,6-4 6-2,3,RR,88
+2021-M-DC-2021-WG2-M-DOM-TUN-01,Davis Cup WG2 R1: DOM vs TUN,Hard,D,144826,Aziz Dougaz,200572,Nick Hardt,6-3 6-4,3,RR,72
+2021-M-DC-2021-WG2-M-LTU-GRE-01,Davis Cup WG2 R1: LTU vs GRE,Hard,D,105575,Ricardas Berankis,202065,Petros Tsitsipas,6-1 6-3,3,RR,75
+2021-M-DC-2021-WG2-M-LTU-GRE-01,Davis Cup WG2 R1: LTU vs GRE,Hard,D,105827,Laurynas Grigelis,133018,Michail Pervolarakis,7-6(6) 3-6 7-5,3,RR,187
+2021-M-DC-2021-WG2-M-LTU-GRE-01,Davis Cup WG2 R1: LTU vs GRE,Hard,D,207249,Alexandros Skorilas,209147,Vilius Gaubas,6-4 6-4,3,RR,90
+2021-M-DC-2021-WG2-M-MEX-BUL-01,Davis Cup WG2 R1: MEX vs BUL,Hard,D,106220,Dimitar Kuzmanov,106250,Luis Patino,6-1 6-1,3,RR,
+2021-M-DC-2021-WG2-M-MEX-BUL-01,Davis Cup WG2 R1: MEX vs BUL,Hard,D,126204,Gerardo Lopez Villasenor,202090,Adrian Andreev,3-6 6-1 6-2,3,RR,
+2021-M-DC-2021-WG2-M-MEX-BUL-01,Davis Cup WG2 R1: MEX vs BUL,Hard,D,126204,Gerardo Lopez Villasenor,106220,Dimitar Kuzmanov,7-6(6) 4-6 7-6(5),3,RR,
+2021-M-DC-2021-WG2-M-POL-ESA-01,Davis Cup WG2 R1: POL vs ESA,Hard,D,200390,Kacper Zuk,105656,Marcelo Arevalo,7-6(5) 6-1,3,RR,
+2021-M-DC-2021-WG2-M-POL-ESA-01,Davis Cup WG2 R1: POL vs ESA,Hard,D,111794,Kamil Majchrzak,207976,Lluis Miralles,6-0 6-0,3,RR,
+2021-M-DC-2021-WG2-M-POL-ESA-01,Davis Cup WG2 R1: POL vs ESA,Hard,D,105656,Marcelo Arevalo,207457,Wojciech Marek,6-4 6-2,3,RR,
+2021-M-DC-2021-WG2-M-RSA-VEN-01,Davis Cup WG2 R1: RSA vs VEN,Hard,D,144750,Lloyd Harris,207738,Brandon Perez,6-0 6-0,3,RR,37
+2021-M-DC-2021-WG2-M-RSA-VEN-01,Davis Cup WG2 R1: RSA vs VEN,Hard,D,202475,Philip Henning,106175,Ricardo Rodriguez,6-4 6-4,3,RR,88
+2021-M-DC-2021-WG2-M-RSA-VEN-01,Davis Cup WG2 R1: RSA vs VEN,Hard,D,105434,Ruan Roelofse,208367,Dimitri Badra,6-4 7-6(5),3,RR,76
+2021-M-DC-2021-WG2-M-SLO-PAR-01,Davis Cup WG2 R1: SLO vs PAR,Clay,D,105587,Tom Kocevar Desman,209226,Adolfo Daniel Vallejo,6-2 6-2,3,RR,59
+2021-M-DC-2021-WG2-M-SLO-PAR-01,Davis Cup WG2 R1: SLO vs PAR,Clay,D,210107,Bor Artnak,209225,Martin Antonio Vergara Del Puerto,1-6 6-3 6-2,3,RR,127
+2021-M-DC-2021-WG2-M-SLO-PAR-01,Davis Cup WG2 R1: SLO vs PAR,Clay,D,200622,Hernando Jose Escurra Isnardi,210274,Sebastian Dominko,4-6 6-3 [7-10],3,RR,86
+2021-M-DC-2021-WG2-M-SUI-EST-01,Davis Cup WG2 R1: SUI vs EST,Hard,D,208502,Dominic Stricker,104901,Vladimir Ivanov,6-3 6-4,3,RR,74
+2021-M-DC-2021-WG2-M-SUI-EST-01,Davis Cup WG2 R1: SUI vs EST,Hard,D,105967,Henri Laaksonen,144940,Mattias Siimar,6-4 6-0,3,RR,53
+2021-M-DC-2021-WG2-M-SUI-EST-01,Davis Cup WG2 R1: SUI vs EST,Hard,D,105967,Henri Laaksonen,206750,Daniil Glinka,7-6(3) 6-4,3,RR,80
+2021-M-DC-2021-WG2-M-SUI-EST-01,Davis Cup WG2 R1: SUI vs EST,Hard,D,208843,Jerome Kym,207826,Siim Troost,6-3 6-1,3,RR,70
+2021-M-DC-2021-WG2-M-THA-DEN-01,Davis Cup WG2 R1: THA vs DEN,Hard,D,144841,Christian Sigsgaard,106397,Wishaya Trongcharoenchaikul,6-3 6-2,3,RR,80
+2021-M-DC-2021-WG2-M-THA-DEN-01,Davis Cup WG2 R1: THA vs DEN,Hard,D,200416,August Holmgren,208937,Kasidit Samrej,3-6 7-5 6-2,3,RR,140
+2021-M-DC-2021-WG2-M-THA-DEN-01,Davis Cup WG2 R1: THA vs DEN,Hard,D,200416,August Holmgren,106397,Wishaya Trongcharoenchaikul,6-4 6-4,3,RR,90
+2021-M-DC-2021-WG2-M-THA-DEN-01,Davis Cup WG2 R1: THA vs DEN,Hard,D,208937,Kasidit Samrej,134087,Johannes Ingildsen,7-5 6-3,3,RR,88
+2021-M-DC-2021-WG2-M-TUR-LAT-01,Davis Cup WG2 R1: TUR vs LAT,Hard,D,123795,Altug Celikbilek,207669,Robert Strombachs,7-6(4) 6-4,3,RR,124
+2021-M-DC-2021-WG2-M-TUR-LAT-01,Davis Cup WG2 R1: TUR vs LAT,Hard,D,117356,Cem Ilkel,105208,Ernests Gulbis,6-4 6-1,3,RR,65
+2021-M-DC-2021-WG2-M-TUR-LAT-01,Davis Cup WG2 R1: TUR vs LAT,Hard,D,144985,Ergi Kirkin,120270,Edgars Manusis,6-1 6-2,3,RR,48

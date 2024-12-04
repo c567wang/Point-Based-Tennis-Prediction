@@ -1,0 +1,575 @@
+---
+title: "Overlay"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Code for two layer and three layer overlays. Taken from code at the end of notebook 4.
+
+```{r}
+two.layer <- function(l1,l2){
+  # l1/l2, e.g., in H2H/G, H2H is l1 and G is l2
+  l1.valid <- which(!(l1==-1))
+  res <- l2
+  res[l1.valid] <- l1[l1.valid]
+  mean(res)
+}
+three.layer <- function(l1,l2,l3){
+  # same as above, l3 is bottom layer with full coverage
+  l1.valid <- which(!(l1==-1))
+  l2.valid <- which(!(l2==-1))
+  res <- l3
+  res[l2.valid] <- l2[l2.valid]
+  res[l1.valid] <- l1[l1.valid]
+  mean(res)
+}
+```
+
+# Loading Data
+
+Ctrl+F and replace all for "resyy" where "yy" is year - 14, 18, or 22.
+
+```{r}
+res14atp.1yr.h2h.ns <- readRDS("res14atp_1yr_h2h_ns.rds")
+res14atp.1yr.h2h.s <- readRDS("res14atp_1yr_h2h_s.rds")
+res14atp.3yr.h2h.ns <- readRDS("res14atp_3yr_h2h_ns.rds")
+res14atp.3yr.h2h.s <- readRDS("res14atp_3yr_h2h_s.rds")
+res14atp.1yr.co.ns <- readRDS("res14atp_1yr_co_ns.rds")
+res14atp.1yr.co.s <- readRDS("res14atp_1yr_co_s.rds")
+res14atp.3yr.co.ns <- readRDS("res14atp_3yr_co_ns.rds")
+res14atp.3yr.co.s <- readRDS("res14atp_3yr_co_s.rds")
+res14atp.1yr.cooaf.ns <- readRDS("res14atp_1yr_cooaf_ns.rds")
+res14atp.1yr.cooaf.s <- readRDS("res14atp_1yr_cooaf_s.rds")
+res14atp.3yr.cooaf.ns <- readRDS("res14atp_3yr_cooaf_ns.rds")
+res14atp.3yr.cooaf.s <- readRDS("res14atp_3yr_cooaf_s.rds")
+res14atp.1yr.oaf.ns <- readRDS("res14atp_1yr_oaf_ns.rds")
+res14atp.1yr.oaf.s <- readRDS("res14atp_1yr_oaf_s.rds")
+res14atp.3yr.oaf.ns <- readRDS("res14atp_3yr_oaf_ns.rds")
+res14atp.3yr.oaf.s <- readRDS("res14atp_3yr_oaf_s.rds")
+res14atp.1yr.g.ns <- readRDS("res14atp_1yr_g_ns.rds")
+res14atp.1yr.g.s <- readRDS("res14atp_1yr_g_s.rds")
+res14atp.3yr.g.ns <- readRDS("res14atp_3yr_g_ns.rds")
+res14atp.3yr.g.s <- readRDS("res14atp_3yr_g_s.rds")
+res14atp.1yr.co2 <- readRDS("res14atp_1yr_co2.rds")
+res14atp.3yr.co2 <- readRDS("res14atp_3yr_co2.rds")
+res14wta.1yr.h2h.ns <- readRDS("res14wta_1yr_h2h_ns.rds")
+res14wta.1yr.h2h.s <- readRDS("res14wta_1yr_h2h_s.rds")
+res14wta.3yr.h2h.ns <- readRDS("res14wta_3yr_h2h_ns.rds")
+res14wta.3yr.h2h.s <- readRDS("res14wta_3yr_h2h_s.rds")
+res14wta.1yr.co.ns <- readRDS("res14wta_1yr_co_ns.rds")
+res14wta.1yr.co.s <- readRDS("res14wta_1yr_co_s.rds")
+res14wta.3yr.co.ns <- readRDS("res14wta_3yr_co_ns.rds")
+res14wta.3yr.co.s <- readRDS("res14wta_3yr_co_s.rds")
+res14wta.1yr.oaf.ns <- readRDS("res14wta_1yr_oaf_ns.rds")
+res14wta.1yr.oaf.s <- readRDS("res14wta_1yr_oaf_s.rds")
+res14wta.3yr.oaf.ns <- readRDS("res14wta_3yr_oaf_ns.rds")
+res14wta.3yr.oaf.s <- readRDS("res14wta_3yr_oaf_s.rds")
+res14wta.1yr.g.ns <- readRDS("res14wta_1yr_g_ns.rds")
+res14wta.1yr.g.s <- readRDS("res14wta_1yr_g_s.rds")
+res14wta.3yr.g.ns <- readRDS("res14wta_3yr_g_ns.rds")
+res14wta.3yr.g.s <- readRDS("res14wta_3yr_g_s.rds")
+res14wta.1yr.cooaf.ns <- readRDS("res14wta_1yr_cooaf_ns.rds")
+res14wta.1yr.cooaf.s <- readRDS("res14wta_1yr_cooaf_s.rds")
+res14wta.3yr.cooaf.ns <- readRDS("res14wta_3yr_cooaf_ns.rds")
+res14wta.3yr.cooaf.s <- readRDS("res14wta_3yr_cooaf_s.rds")
+res14wta.1yr.co2 <- readRDS("res14wta_1yr_co2.rds")
+res14wta.3yr.co2 <- readRDS("res14wta_3yr_co2.rds")
+```
+
+# Results
+
+## H2H/G
+
+```{r}
+two.layer(res14atp.1yr.h2h.ns,res14atp.1yr.g.ns)
+two.layer(res14atp.1yr.h2h.s,res14atp.1yr.g.s)
+two.layer(res14atp.3yr.h2h.ns,res14atp.3yr.g.ns)
+two.layer(res14atp.3yr.h2h.s,res14atp.3yr.g.s)
+two.layer(res14wta.1yr.h2h.ns,res14wta.1yr.g.ns)
+two.layer(res14wta.1yr.h2h.s,res14wta.1yr.g.s)
+two.layer(res14wta.3yr.h2h.ns,res14wta.3yr.g.ns)
+two.layer(res14wta.3yr.h2h.s,res14wta.3yr.g.s)
+```
+
+## H2H/OAF
+
+```{r}
+two.layer(res14atp.1yr.h2h.ns,res14atp.1yr.oaf.ns)
+two.layer(res14atp.1yr.h2h.s,res14atp.1yr.oaf.s)
+two.layer(res14atp.3yr.h2h.ns,res14atp.3yr.oaf.ns)
+two.layer(res14atp.3yr.h2h.s,res14atp.3yr.oaf.s)
+two.layer(res14wta.1yr.h2h.ns,res14wta.1yr.oaf.ns)
+two.layer(res14wta.1yr.h2h.s,res14wta.1yr.oaf.s)
+two.layer(res14wta.3yr.h2h.ns,res14wta.3yr.oaf.ns)
+two.layer(res14wta.3yr.h2h.s,res14wta.3yr.oaf.s)
+```
+
+## CO/G
+
+```{r}
+two.layer(res14atp.1yr.co.ns,res14atp.1yr.g.ns)
+two.layer(res14atp.1yr.co.s,res14atp.1yr.g.s)
+two.layer(res14atp.3yr.co.ns,res14atp.3yr.g.ns)
+two.layer(res14atp.3yr.co.s,res14atp.3yr.g.s)
+two.layer(res14wta.1yr.co.ns,res14wta.1yr.g.ns)
+two.layer(res14wta.1yr.co.s,res14wta.1yr.g.s)
+two.layer(res14wta.3yr.co.ns,res14wta.3yr.g.ns)
+two.layer(res14wta.3yr.co.s,res14wta.3yr.g.s)
+```
+
+## CO/OAF
+
+```{r}
+two.layer(res14atp.1yr.co.ns,res14atp.1yr.oaf.ns)
+two.layer(res14atp.1yr.co.s,res14atp.1yr.oaf.s)
+two.layer(res14atp.3yr.co.ns,res14atp.3yr.oaf.ns)
+two.layer(res14atp.3yr.co.s,res14atp.3yr.oaf.s)
+two.layer(res14wta.1yr.co.ns,res14wta.1yr.oaf.ns)
+two.layer(res14wta.1yr.co.s,res14wta.1yr.oaf.s)
+two.layer(res14wta.3yr.co.ns,res14wta.3yr.oaf.ns)
+two.layer(res14wta.3yr.co.s,res14wta.3yr.oaf.s)
+```
+
+## CO(OAF)/G
+
+```{r}
+two.layer(res14atp.1yr.cooaf.ns,res14atp.1yr.g.ns)
+two.layer(res14atp.1yr.cooaf.s,res14atp.1yr.g.s)
+two.layer(res14atp.3yr.cooaf.ns,res14atp.3yr.g.ns)
+two.layer(res14atp.3yr.cooaf.s,res14atp.3yr.g.s)
+two.layer(res14wta.1yr.cooaf.ns,res14wta.1yr.g.ns)
+two.layer(res14wta.1yr.cooaf.s,res14wta.1yr.g.s)
+two.layer(res14wta.3yr.cooaf.ns,res14wta.3yr.g.ns)
+two.layer(res14wta.3yr.cooaf.s,res14wta.3yr.g.s)
+```
+
+## CO(OAF)/OAF
+
+```{r}
+two.layer(res14atp.1yr.cooaf.ns,res14atp.1yr.oaf.ns)
+two.layer(res14atp.1yr.cooaf.s,res14atp.1yr.oaf.s)
+two.layer(res14atp.3yr.cooaf.ns,res14atp.3yr.oaf.ns)
+two.layer(res14atp.3yr.cooaf.s,res14atp.3yr.oaf.s)
+two.layer(res14wta.1yr.cooaf.ns,res14wta.1yr.oaf.ns)
+two.layer(res14wta.1yr.cooaf.s,res14wta.1yr.oaf.s)
+two.layer(res14wta.3yr.cooaf.ns,res14wta.3yr.oaf.ns)
+two.layer(res14wta.3yr.cooaf.s,res14wta.3yr.oaf.s)
+```
+
+## H2H/CO/G
+
+```{r}
+three.layer(res14atp.1yr.h2h.ns,res14atp.1yr.co.ns,res14atp.1yr.g.ns)
+three.layer(res14atp.1yr.h2h.s,res14atp.1yr.co.s,res14atp.1yr.g.s)
+three.layer(res14atp.3yr.h2h.ns,res14atp.3yr.co.ns,res14atp.3yr.g.ns)
+three.layer(res14atp.3yr.h2h.s,res14atp.3yr.co.s,res14atp.3yr.g.s)
+three.layer(res14wta.1yr.h2h.ns,res14wta.1yr.co.ns,res14wta.1yr.g.ns)
+three.layer(res14wta.1yr.h2h.s,res14wta.1yr.co.s,res14wta.1yr.g.s)
+three.layer(res14wta.3yr.h2h.ns,res14wta.3yr.co.ns,res14wta.3yr.g.ns)
+three.layer(res14wta.3yr.h2h.s,res14wta.3yr.co.s,res14wta.3yr.g.s)
+```
+
+## H2H/CO/OAF
+
+```{r}
+three.layer(res14atp.1yr.h2h.ns,res14atp.1yr.co.ns,res14atp.1yr.oaf.ns)
+three.layer(res14atp.1yr.h2h.s,res14atp.1yr.co.s,res14atp.1yr.oaf.s)
+three.layer(res14atp.3yr.h2h.ns,res14atp.3yr.co.ns,res14atp.3yr.oaf.ns)
+three.layer(res14atp.3yr.h2h.s,res14atp.3yr.co.s,res14atp.3yr.oaf.s)
+three.layer(res14wta.1yr.h2h.ns,res14wta.1yr.co.ns,res14wta.1yr.oaf.ns)
+three.layer(res14wta.1yr.h2h.s,res14wta.1yr.co.s,res14wta.1yr.oaf.s)
+three.layer(res14wta.3yr.h2h.ns,res14wta.3yr.co.ns,res14wta.3yr.oaf.ns)
+three.layer(res14wta.3yr.h2h.s,res14wta.3yr.co.s,res14wta.3yr.oaf.s)
+```
+
+## H2H/CO(OAF)/G
+
+```{r}
+three.layer(res14atp.1yr.h2h.ns,res14atp.1yr.cooaf.ns,res14atp.1yr.g.ns)
+three.layer(res14atp.1yr.h2h.s,res14atp.1yr.cooaf.s,res14atp.1yr.g.s)
+three.layer(res14atp.3yr.h2h.ns,res14atp.3yr.cooaf.ns,res14atp.3yr.g.ns)
+three.layer(res14atp.3yr.h2h.s,res14atp.3yr.cooaf.s,res14atp.3yr.g.s)
+three.layer(res14wta.1yr.h2h.ns,res14wta.1yr.cooaf.ns,res14wta.1yr.g.ns)
+three.layer(res14wta.1yr.h2h.s,res14wta.1yr.cooaf.s,res14wta.1yr.g.s)
+three.layer(res14wta.3yr.h2h.ns,res14wta.3yr.cooaf.ns,res14wta.3yr.g.ns)
+three.layer(res14wta.3yr.h2h.s,res14wta.3yr.cooaf.s,res14wta.3yr.g.s)
+```
+
+## H2H/CO(OAF)/OAF
+
+```{r}
+three.layer(res14atp.1yr.h2h.ns,res14atp.1yr.cooaf.ns,res14atp.1yr.oaf.ns)
+three.layer(res14atp.1yr.h2h.s,res14atp.1yr.cooaf.s,res14atp.1yr.oaf.s)
+three.layer(res14atp.3yr.h2h.ns,res14atp.3yr.cooaf.ns,res14atp.3yr.oaf.ns)
+three.layer(res14atp.3yr.h2h.s,res14atp.3yr.cooaf.s,res14atp.3yr.oaf.s)
+three.layer(res14wta.1yr.h2h.ns,res14wta.1yr.cooaf.ns,res14wta.1yr.oaf.ns)
+three.layer(res14wta.1yr.h2h.s,res14wta.1yr.cooaf.s,res14wta.1yr.oaf.s)
+three.layer(res14wta.3yr.h2h.ns,res14wta.3yr.cooaf.ns,res14wta.3yr.oaf.ns)
+three.layer(res14wta.3yr.h2h.s,res14wta.3yr.cooaf.s,res14wta.3yr.oaf.s)
+```
+
+## CO2/G
+
+```{r}
+two.layer(res14atp.1yr.co2,res14atp.1yr.g.s)
+two.layer(res14atp.3yr.co2,res14atp.3yr.g.s)
+two.layer(res14wta.1yr.co2,res14wta.1yr.g.s)
+two.layer(res14wta.3yr.co2,res14wta.3yr.g.s)
+```
+
+## CO2/OAF
+
+```{r}
+two.layer(res14atp.1yr.co2,res14atp.1yr.oaf.s)
+two.layer(res14atp.3yr.co2,res14atp.3yr.oaf.s)
+two.layer(res14wta.1yr.co2,res14wta.1yr.oaf.s)
+two.layer(res14wta.3yr.co2,res14wta.3yr.oaf.s)
+```
+
+## H2H/CO2/G
+
+```{r}
+three.layer(res14atp.1yr.h2h.s,res14atp.1yr.co2,res14atp.1yr.g.s)
+three.layer(res14atp.3yr.h2h.s,res14atp.3yr.co2,res14atp.3yr.g.s)
+three.layer(res14wta.1yr.h2h.s,res14wta.1yr.co2,res14wta.1yr.g.s)
+three.layer(res14wta.3yr.h2h.s,res14wta.3yr.co2,res14wta.3yr.g.s)
+```
+
+## H2H/CO2/OAF
+
+```{r}
+three.layer(res14atp.1yr.h2h.s,res14atp.1yr.co2,res14atp.1yr.oaf.s)
+three.layer(res14atp.3yr.h2h.s,res14atp.3yr.co2,res14atp.3yr.oaf.s)
+three.layer(res14wta.1yr.h2h.s,res14wta.1yr.co2,res14wta.1yr.oaf.s)
+three.layer(res14wta.3yr.h2h.s,res14wta.3yr.co2,res14wta.3yr.oaf.s)
+```
+
+# Experimental Combinations for H2H
+
+```{r}
+e.res14atp.1yr.h2h.ns <- readRDS("p_est_exact_probs/atp2018_1y_ns_h2h.rds")
+e.res14atp.1yr.h2h.s <- readRDS("p_est_exact_probs/atp2018_1y_s_h2h.rds")
+e.res14atp.3yr.h2h.ns <- readRDS("p_est_exact_probs/atp2018_3y_ns_h2h.rds")
+e.res14atp.3yr.h2h.s <- readRDS("p_est_exact_probs/atp2018_3y_s_h2h.rds")
+e.res14atp.1yr.co.ns <- readRDS("p_est_exact_probs/atp2018_1y_ns_co.rds")
+e.res14atp.1yr.co.s <- readRDS("p_est_exact_probs/atp2018_1y_s_co.rds")
+e.res14atp.3yr.co.ns <- readRDS("p_est_exact_probs/atp2018_3y_ns_co.rds")
+e.res14atp.3yr.co.s <- readRDS("p_est_exact_probs/atp2018_3y_s_co.rds")
+e.res14atp.1yr.oaf.ns <- readRDS("p_est_exact_probs/atp2018_1y_ns_oaf_exact.rds")
+e.res14atp.1yr.oaf.s <- readRDS("p_est_exact_probs/atp2018_1y_s_oaf_exact.rds")
+e.res14atp.3yr.oaf.ns <- readRDS("p_est_exact_probs/atp2018_3y_ns_oaf_exact.rds")
+e.res14atp.3yr.oaf.s <- readRDS("p_est_exact_probs/atp2018_3y_s_oaf_exact.rds")
+e.res14atp.1yr.cooaf.ns <- readRDS("p_est_exact_probs/atp2018_1y_ns_cooaf.rds")
+e.res14atp.1yr.cooaf.s <- readRDS("p_est_exact_probs/atp2018_1y_s_cooaf.rds")
+e.res14atp.3yr.cooaf.ns <- readRDS("p_est_exact_probs/atp2018_3y_ns_cooaf.rds")
+e.res14atp.3yr.cooaf.s <- readRDS("p_est_exact_probs/atp2018_3y_s_cooaf.rds")
+e.res14wta.1yr.h2h.ns <- readRDS("p_est_exact_probs/wta2018_1y_ns_h2h.rds")
+e.res14wta.1yr.h2h.s <- readRDS("p_est_exact_probs/wta2018_1y_s_h2h.rds")
+e.res14wta.3yr.h2h.ns <- readRDS("p_est_exact_probs/wta2018_3y_ns_h2h.rds")
+e.res14wta.3yr.h2h.s <- readRDS("p_est_exact_probs/wta2018_3y_s_h2h.rds")
+e.res14wta.1yr.co.ns <- readRDS("p_est_exact_probs/wta2018_1y_ns_co.rds")
+e.res14wta.1yr.co.s <- readRDS("p_est_exact_probs/wta2018_1y_s_co.rds")
+e.res14wta.3yr.co.ns <- readRDS("p_est_exact_probs/wta2018_3y_ns_co.rds")
+e.res14wta.3yr.co.s <- readRDS("p_est_exact_probs/wta2018_3y_s_co.rds")
+e.res14wta.1yr.oaf.ns <- readRDS("p_est_exact_probs/wta2018_1y_ns_oaf_exact.rds")
+e.res14wta.1yr.oaf.s <- readRDS("p_est_exact_probs/wta2018_1y_s_oaf_exact.rds")
+e.res14wta.3yr.oaf.ns <- readRDS("p_est_exact_probs/wta2018_3y_ns_oaf_exact.rds")
+e.res14wta.3yr.oaf.s <- readRDS("p_est_exact_probs/wta2018_3y_s_oaf_exact.rds")
+e.res14wta.1yr.cooaf.ns <- readRDS("p_est_exact_probs/wta2018_1y_ns_cooaf.rds")
+e.res14wta.1yr.cooaf.s <- readRDS("p_est_exact_probs/wta2018_1y_s_cooaf.rds")
+e.res14wta.3yr.cooaf.ns <- readRDS("p_est_exact_probs/wta2018_3y_ns_cooaf.rds")
+e.res14wta.3yr.cooaf.s <- readRDS("p_est_exact_probs/wta2018_3y_s_cooaf.rds")
+```
+
+```{r}
+add.when.valid.2 <- function(res1,res2){
+  n <- length(res1)
+  res <- rep(0,n)
+  for (i in 1:n){
+    if (res1[i]==-1){
+      res[i] <- res2[i]
+    } else if (res2[i]==-1){
+      res[i] <- res1[i]
+    } else {
+      res[i] <- (res1[i]+res2[i])/2
+    }
+  }
+  return(res)
+}
+
+add.when.valid.3 <- function(res1,res2,res3){
+  n <- length(res1)
+  res <- rep(0,n)
+  for (i in 1:n){
+    if (res1[i]==-1){
+      res[i] <- add.when.valid.2(res2[i],res3[i])
+    } else if (res2[i]==-1){
+      res[i] <- add.when.valid.2(res1[i],res3[i])
+    } else if (res3[i]==-1){
+      res[i] <- add.when.valid.2(res1[i],res2[i])
+    } else {
+      res[i] <- mean(res1[i],res2[i],res3[i])
+    }
+  }
+  return(res)
+}
+```
+
+## H2H + CO
+
+```{r}
+a <- add.when.valid.2(e.res14atp.1yr.h2h.ns,e.res14atp.1yr.co.ns)
+b <- add.when.valid.2(e.res14atp.1yr.h2h.s,e.res14atp.1yr.co.s)
+c <- add.when.valid.2(e.res14atp.3yr.h2h.ns,e.res14atp.3yr.co.ns)
+d <- add.when.valid.2(e.res14atp.3yr.h2h.s,e.res14atp.3yr.co.s)
+e <- add.when.valid.2(e.res14wta.1yr.h2h.ns,e.res14wta.1yr.co.ns)
+f <- add.when.valid.2(e.res14wta.1yr.h2h.s,e.res14wta.1yr.co.s)
+g <- add.when.valid.2(e.res14wta.3yr.h2h.ns,e.res14wta.3yr.co.ns)
+h <- add.when.valid.2(e.res14wta.3yr.h2h.s,e.res14wta.3yr.co.s)
+mean(a[which(a>=0)]>0.5)
+mean(b[which(b>=0)]>0.5)
+mean(c[which(c>=0)]>0.5)
+mean(d[which(d>=0)]>0.5)
+mean(e[which(e>=0)]>0.5)
+mean(f[which(f>=0)]>0.5)
+mean(g[which(g>=0)]>0.5)
+mean(h[which(h>=0)]>0.5)
+```
+
+## H2H+OAF
+
+```{r}
+a <- add.when.valid.2(e.res14atp.1yr.h2h.ns,e.res14atp.1yr.oaf.ns)
+b <- add.when.valid.2(e.res14atp.1yr.h2h.s,e.res14atp.1yr.oaf.s)
+c <- add.when.valid.2(e.res14atp.3yr.h2h.ns,e.res14atp.3yr.oaf.ns)
+d <- add.when.valid.2(e.res14atp.3yr.h2h.s,e.res14atp.3yr.oaf.s)
+e <- add.when.valid.2(e.res14wta.1yr.h2h.ns,e.res14wta.1yr.oaf.ns)
+f <- add.when.valid.2(e.res14wta.1yr.h2h.s,e.res14wta.1yr.oaf.s)
+g <- add.when.valid.2(e.res14wta.3yr.h2h.ns,e.res14wta.3yr.oaf.ns)
+h <- add.when.valid.2(e.res14wta.3yr.h2h.s,e.res14wta.3yr.oaf.s)
+mean(a[which(a>=0)]>0.5)
+mean(b[which(b>=0)]>0.5)
+mean(c[which(c>=0)]>0.5)
+mean(d[which(d>=0)]>0.5)
+mean(e[which(e>=0)]>0.5)
+mean(f[which(f>=0)]>0.5)
+mean(g[which(g>=0)]>0.5)
+mean(h[which(h>=0)]>0.5)
+```
+
+## H2H+CO(OAF)
+
+```{r}
+a <- add.when.valid.2(e.res14atp.1yr.h2h.ns,e.res14atp.1yr.cooaf.ns)
+b <- add.when.valid.2(e.res14atp.1yr.h2h.s,e.res14atp.1yr.cooaf.s)
+c <- add.when.valid.2(e.res14atp.3yr.h2h.ns,e.res14atp.3yr.cooaf.ns)
+d <- add.when.valid.2(e.res14atp.3yr.h2h.s,e.res14atp.3yr.cooaf.s)
+e <- add.when.valid.2(e.res14wta.1yr.h2h.ns,e.res14wta.1yr.cooaf.ns)
+f <- add.when.valid.2(e.res14wta.1yr.h2h.s,e.res14wta.1yr.cooaf.s)
+g <- add.when.valid.2(e.res14wta.3yr.h2h.ns,e.res14wta.3yr.cooaf.ns)
+h <- add.when.valid.2(e.res14wta.3yr.h2h.s,e.res14wta.3yr.cooaf.s)
+mean(a[which(a>=0)]>0.5)
+mean(b[which(b>=0)]>0.5)
+mean(c[which(c>=0)]>0.5)
+mean(d[which(d>=0)]>0.5)
+mean(e[which(e>=0)]>0.5)
+mean(f[which(f>=0)]>0.5)
+mean(g[which(g>=0)]>0.5)
+mean(h[which(h>=0)]>0.5)
+```
+
+## H2H+CO+OAF
+
+```{r}
+a <- add.when.valid.3(e.res14atp.1yr.h2h.ns,e.res14atp.1yr.co.ns,e.res14atp.1yr.oaf.ns)
+b <- add.when.valid.3(e.res14atp.1yr.h2h.s,e.res14atp.1yr.co.s,e.res14atp.1yr.oaf.s)
+c <- add.when.valid.3(e.res14atp.3yr.h2h.ns,e.res14atp.3yr.co.ns,e.res14atp.3yr.oaf.ns)
+d <- add.when.valid.3(e.res14atp.3yr.h2h.s,e.res14atp.3yr.co.s,e.res14atp.3yr.oaf.s)
+e <- add.when.valid.3(e.res14wta.1yr.h2h.ns,e.res14wta.1yr.co.ns,e.res14wta.1yr.oaf.ns)
+f <- add.when.valid.3(e.res14wta.1yr.h2h.s,e.res14wta.1yr.co.s,e.res14wta.1yr.oaf.s)
+g <- add.when.valid.3(e.res14wta.3yr.h2h.ns,e.res14wta.3yr.co.ns,e.res14wta.3yr.oaf.ns)
+h <- add.when.valid.3(e.res14wta.3yr.h2h.s,e.res14wta.3yr.co.s,e.res14wta.3yr.oaf.s)
+mean(a[which(a>=0)]>0.5)
+mean(b[which(b>=0)]>0.5)
+mean(c[which(c>=0)]>0.5)
+mean(d[which(d>=0)]>0.5)
+mean(e[which(e>=0)]>0.5)
+mean(f[which(f>=0)]>0.5)
+mean(g[which(g>=0)]>0.5)
+mean(h[which(h>=0)]>0.5)
+```
+
+## CO+OAF
+
+```{r}
+a <- add.when.valid.2(e.res14atp.1yr.co.ns,e.res14atp.1yr.oaf.ns)
+b <- add.when.valid.2(e.res14atp.1yr.co.s,e.res14atp.1yr.oaf.s)
+c <- add.when.valid.2(e.res14atp.3yr.co.ns,e.res14atp.3yr.oaf.ns)
+d <- add.when.valid.2(e.res14atp.3yr.co.s,e.res14atp.3yr.oaf.s)
+e <- add.when.valid.2(e.res14wta.1yr.co.ns,e.res14wta.1yr.oaf.ns)
+f <- add.when.valid.2(e.res14wta.1yr.co.s,e.res14wta.1yr.oaf.s)
+g <- add.when.valid.2(e.res14wta.3yr.co.ns,e.res14wta.3yr.oaf.ns)
+h <- add.when.valid.2(e.res14wta.3yr.co.s,e.res14wta.3yr.oaf.s)
+mean(a[which(a>=0)]>0.5)
+mean(b[which(b>=0)]>0.5)
+mean(c[which(c>=0)]>0.5)
+mean(d[which(d>=0)]>0.5)
+mean(e[which(e>=0)]>0.5)
+mean(f[which(f>=0)]>0.5)
+mean(g[which(g>=0)]>0.5)
+mean(h[which(h>=0)]>0.5)
+```
+
+## CO+CO(OAF)
+
+```{r}
+a <- add.when.valid.2(e.res14atp.1yr.co.ns,e.res14atp.1yr.cooaf.ns)
+b <- add.when.valid.2(e.res14atp.1yr.co.s,e.res14atp.1yr.cooaf.s)
+c <- add.when.valid.2(e.res14atp.3yr.co.ns,e.res14atp.3yr.cooaf.ns)
+d <- add.when.valid.2(e.res14atp.3yr.co.s,e.res14atp.3yr.cooaf.s)
+e <- add.when.valid.2(e.res14wta.1yr.co.ns,e.res14wta.1yr.cooaf.ns)
+f <- add.when.valid.2(e.res14wta.1yr.co.s,e.res14wta.1yr.cooaf.s)
+g <- add.when.valid.2(e.res14wta.3yr.co.ns,e.res14wta.3yr.cooaf.ns)
+h <- add.when.valid.2(e.res14wta.3yr.co.s,e.res14wta.3yr.cooaf.s)
+mean(a[which(a>=0)]>0.5)
+mean(b[which(b>=0)]>0.5)
+mean(c[which(c>=0)]>0.5)
+mean(d[which(d>=0)]>0.5)
+mean(e[which(e>=0)]>0.5)
+mean(f[which(f>=0)]>0.5)
+mean(g[which(g>=0)]>0.5)
+mean(h[which(h>=0)]>0.5)
+```
+
+## OAF+CO(OAF)
+
+```{r}
+a <- add.when.valid.2(e.res14atp.1yr.oaf.ns,e.res14atp.1yr.cooaf.ns)
+b <- add.when.valid.2(e.res14atp.1yr.oaf.s,e.res14atp.1yr.cooaf.s)
+c <- add.when.valid.2(e.res14atp.3yr.oaf.ns,e.res14atp.3yr.cooaf.ns)
+d <- add.when.valid.2(e.res14atp.3yr.oaf.s,e.res14atp.3yr.cooaf.s)
+e <- add.when.valid.2(e.res14wta.1yr.oaf.ns,e.res14wta.1yr.cooaf.ns)
+f <- add.when.valid.2(e.res14wta.1yr.oaf.s,e.res14wta.1yr.cooaf.s)
+g <- add.when.valid.2(e.res14wta.3yr.oaf.ns,e.res14wta.3yr.cooaf.ns)
+h <- add.when.valid.2(e.res14wta.3yr.oaf.s,e.res14wta.3yr.cooaf.s)
+mean(a[which(a>=0)]>0.5)
+mean(b[which(b>=0)]>0.5)
+mean(c[which(c>=0)]>0.5)
+mean(d[which(d>=0)]>0.5)
+mean(e[which(e>=0)]>0.5)
+mean(f[which(f>=0)]>0.5)
+mean(g[which(g>=0)]>0.5)
+mean(h[which(h>=0)]>0.5)
+```
+
+# Only merges with full support (denote with '&')
+
+```{r}
+only.agrees <- function(res1,res2){
+  ind <- res1==res2 & res1>=0
+  print(sum(ind))
+  mean(res1[ind])
+}
+
+only.agrees.3 <- function(res1,res2,res3){
+  ind <- res1==res2 & res2==res3 & res1>=0
+  print(sum(ind))
+  mean(res1[ind])
+}
+```
+
+## H2H&CO
+
+```{r}
+only.agrees(res14atp.1yr.co.ns,res14atp.1yr.h2h.ns)
+only.agrees(res14atp.1yr.co.s,res14atp.1yr.h2h.s)
+only.agrees(res14atp.3yr.co.ns,res14atp.3yr.h2h.ns)
+only.agrees(res14atp.3yr.co.s,res14atp.3yr.h2h.s)
+only.agrees(res14wta.1yr.co.ns,res14wta.1yr.h2h.ns)
+only.agrees(res14wta.1yr.co.s,res14wta.1yr.h2h.s)
+only.agrees(res14wta.3yr.co.ns,res14wta.3yr.h2h.ns)
+only.agrees(res14wta.3yr.co.s,res14wta.3yr.h2h.s)
+```
+
+## H2H&OAF
+
+```{r}
+only.agrees(res14atp.1yr.oaf.ns,res14atp.1yr.h2h.ns)
+only.agrees(res14atp.1yr.oaf.s,res14atp.1yr.h2h.s)
+only.agrees(res14atp.3yr.oaf.ns,res14atp.3yr.h2h.ns)
+only.agrees(res14atp.3yr.oaf.s,res14atp.3yr.h2h.s)
+only.agrees(res14wta.1yr.oaf.ns,res14wta.1yr.h2h.ns)
+only.agrees(res14wta.1yr.oaf.s,res14wta.1yr.h2h.s)
+only.agrees(res14wta.3yr.oaf.ns,res14wta.3yr.h2h.ns)
+only.agrees(res14wta.3yr.oaf.s,res14wta.3yr.h2h.s)
+```
+
+## H2H&CO(OAF)
+
+```{r}
+only.agrees(res14atp.1yr.cooaf.ns,res14atp.1yr.h2h.ns)
+only.agrees(res14atp.1yr.cooaf.s,res14atp.1yr.h2h.s)
+only.agrees(res14atp.3yr.cooaf.ns,res14atp.3yr.h2h.ns)
+only.agrees(res14atp.3yr.cooaf.s,res14atp.3yr.h2h.s)
+only.agrees(res14wta.1yr.cooaf.ns,res14wta.1yr.h2h.ns)
+only.agrees(res14wta.1yr.cooaf.s,res14wta.1yr.h2h.s)
+only.agrees(res14wta.3yr.cooaf.ns,res14wta.3yr.h2h.ns)
+only.agrees(res14wta.3yr.cooaf.s,res14wta.3yr.h2h.s)
+```
+
+## CO&OAF
+
+```{r}
+only.agrees(res14atp.1yr.co.ns,res14atp.1yr.oaf.ns)
+only.agrees(res14atp.1yr.co.s,res14atp.1yr.oaf.s)
+only.agrees(res14atp.3yr.co.ns,res14atp.3yr.oaf.ns)
+only.agrees(res14atp.3yr.co.s,res14atp.3yr.oaf.s)
+only.agrees(res14wta.1yr.co.ns,res14wta.1yr.oaf.ns)
+only.agrees(res14wta.1yr.co.s,res14wta.1yr.oaf.s)
+only.agrees(res14wta.3yr.co.ns,res14wta.3yr.oaf.ns)
+only.agrees(res14wta.3yr.co.s,res14wta.3yr.oaf.s)
+```
+
+## CO&CO(OAF)
+
+```{r}
+only.agrees(res14atp.1yr.co.ns,res14atp.1yr.cooaf.ns)
+only.agrees(res14atp.1yr.co.s,res14atp.1yr.cooaf.s)
+only.agrees(res14atp.3yr.co.ns,res14atp.3yr.cooaf.ns)
+only.agrees(res14atp.3yr.co.s,res14atp.3yr.cooaf.s)
+only.agrees(res14wta.1yr.co.ns,res14wta.1yr.cooaf.ns)
+only.agrees(res14wta.1yr.co.s,res14wta.1yr.cooaf.s)
+only.agrees(res14wta.3yr.co.ns,res14wta.3yr.cooaf.ns)
+only.agrees(res14wta.3yr.co.s,res14wta.3yr.cooaf.s)
+```
+
+## OAF&CO(OAF)
+
+```{r}
+only.agrees(res14atp.1yr.oaf.ns,res14atp.1yr.cooaf.ns)
+only.agrees(res14atp.1yr.oaf.s,res14atp.1yr.cooaf.s)
+only.agrees(res14atp.3yr.oaf.ns,res14atp.3yr.cooaf.ns)
+only.agrees(res14atp.3yr.oaf.s,res14atp.3yr.cooaf.s)
+only.agrees(res14wta.1yr.oaf.ns,res14wta.1yr.cooaf.ns)
+only.agrees(res14wta.1yr.oaf.s,res14wta.1yr.cooaf.s)
+only.agrees(res14wta.3yr.oaf.ns,res14wta.3yr.cooaf.ns)
+only.agrees(res14wta.3yr.oaf.s,res14wta.3yr.cooaf.s)
+```
+
+## H2H&CO&OAF
+
+```{r}
+only.agrees.3(res14atp.1yr.h2h.ns,res14atp.1yr.co.ns,res14atp.1yr.oaf.ns)
+only.agrees.3(res14atp.1yr.h2h.s,res14atp.1yr.co.s,res14atp.1yr.oaf.s)
+only.agrees.3(res14atp.3yr.h2h.ns,res14atp.3yr.co.ns,res14atp.3yr.oaf.ns)
+only.agrees.3(res14atp.3yr.h2h.s,res14atp.3yr.co.s,res14atp.3yr.oaf.s)
+only.agrees.3(res14wta.1yr.h2h.ns,res14wta.1yr.co.ns,res14wta.1yr.oaf.ns)
+only.agrees.3(res14wta.1yr.h2h.s,res14wta.1yr.co.s,res14wta.1yr.oaf.s)
+only.agrees.3(res14wta.3yr.h2h.ns,res14wta.3yr.co.ns,res14wta.3yr.oaf.ns)
+only.agrees.3(res14wta.3yr.h2h.s,res14wta.3yr.co.s,res14wta.3yr.oaf.s)
+```
+
+
