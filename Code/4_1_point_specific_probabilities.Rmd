@@ -319,13 +319,13 @@ upwards.experiment <- function(starting.states,P,testset,atp,previous.scores,
 
 plot.path.score <- function(n.down,dat.down,n.up,dat.up,
                       P, test.set, atp=TRUE, main="Score",
-                      ylim.lower=0.55,ylim.upper=0.7,hide.axis=FALSE){
+                      ylim.lower=0.55,ylim.upper=0.7,hide.axis=FALSE,test.year=0){
   # n - length of path given
   # dat - data saved containing paths
   # ylim.lower(upper) - ylim for plot, set to around 0(20) for type=2
   
-  baseline.down <- conduct.experiment(c(),P,test.set,atp)$score
-  baseline.up <- conduct.experiment(1:19,P,test.set,atp)$score
+  baseline.down <- conduct.experiment(c(),P,test.set,atp,test.year)$score
+  baseline.up <- conduct.experiment(1:19,P,test.set,atp,test.year)$score
   
   if (hide.axis) {
     plot(0:n.up,c(baseline.up,dat.up[[1]][[1]]),'l',
@@ -559,6 +559,13 @@ for (i in 1:ncol(wta.P.90.21)){
 ```
 ```{r}
 rm(list=c("pbp.12","pbp.123","pbp.56","pbp.567","pbp.90","pbp.901"))
+rm (list=c("atp.names.2013","atp.names.2014","atp.names.2017","atp.names.2018",
+           "atp.names.2021","atp.names.2022","wta.names.2013","wta.names.2014",
+           "wta.names.2017","wta.names.2018","wta.names.2021","wta.names.2022"))
+# removing the following as well after settling on train-test-validation approach
+rm(list=c("atp.P.123.13","atp.P.12.14","atp.P.567.17","atp.P.56.18",
+          "atp.P.901.21","atp.P.90.22","wta.P.123.13","wta.P.12.14",
+          "wta.P.567.17","wta.P.56.18","wta.P.901.21","wta.P.90.22"))
 ```
 
 # State Selection / Validation
@@ -660,11 +667,11 @@ Activate 12, deactivate 11 (or 19)
 ## WTA 22
 
 ```{r}
-# d <- downwards.experiment(c(),wta.P.90.21,wta.val.2021,FALSE,c(),depth=5,test.year=0)
+# d <- downwards.experiment(c(),wta.P.90.21,wta.val.2021,FALSE,c(),depth=5,test.year=2)
 # saveRDS(d, file="plateaus/d5_wta_2022.rds")
 ```
 ```{r}
-# u <- upwards.experiment(c(),wta.P.90.21,wta.val.2021,FALSE,c(),depth=5,test.year=0)
+# u <- upwards.experiment(c(),wta.P.90.21,wta.val.2021,FALSE,c(),depth=5,test.year=2)
 # saveRDS(u, file="plateaus/u5_wta_2022.rds")
 ```
 ```{r}
@@ -672,7 +679,8 @@ d5.wta22 <- readRDS("plateaus/d5_wta_2022.rds")
 u5.wta22 <- readRDS("plateaus/u5_wta_2022.rds")
 ```
 ```{r}
-plot.path.score(5,d5.wta22,5,u5.wta22,wta.P.90.21,wta.val.2021,atp=FALSE,main="WTA 2022")
+plot.path.score(5,d5.wta22,5,u5.wta22,wta.P.90.21,wta.val.2021,
+                atp=FALSE,main="WTA 2022",test.year=2)
 ```
 ```{r}
 plot.path.state(5,d5.wta22,5,u5.wta22,main="WTA 2022")
@@ -683,11 +691,11 @@ Activate 9 (&6), deactivate 16
 ## ATP 22
 
 ```{r}
-# d <- downwards.experiment(c(),atp.P.90.21,atp.val.2021,TRUE,c(),depth=5,test.year=0)
+# d <- downwards.experiment(c(),atp.P.90.21,atp.val.2021,TRUE,c(),depth=5,test.year=2)
 # saveRDS(d, file="plateaus/d5_atp_2022.rds")
 ```
 ```{r}
-# u <- upwards.experiment(c(),atp.P.90.21,atp.val.2021,TRUE,c(),depth=5,test.year=0)
+# u <- upwards.experiment(c(),atp.P.90.21,atp.val.2021,TRUE,c(),depth=5,test.year=2)
 # saveRDS(u, file="plateaus/u5_atp_2022.rds")
 ```
 ```{r}
@@ -695,7 +703,8 @@ d5.atp22 <- readRDS("plateaus/d5_atp_2022.rds")
 u5.atp22 <- readRDS("plateaus/u5_atp_2022.rds")
 ```
 ```{r}
-plot.path.score(5,d5.atp22,5,u5.atp22,atp.P.90.21,atp.val.2021,atp=TRUE,main="ATP 2022")
+plot.path.score(5,d5.atp22,5,u5.atp22,atp.P.90.21,atp.val.2021,
+                atp=TRUE,main="ATP 2022",test.year=2)
 ```
 ```{r}
 plot.path.state(5,d5.atp22,5,u5.atp22,main="ATP 2022")
@@ -757,26 +766,240 @@ conduct.experiment((1:19)[-c(12)],atp.P.567.18,atp.test.2018,atp=TRUE,test.year=
 
 ```{r}
 # baseline with no activations
-conduct.experiment(1:19,wta.P.901.22,wta.test.2022,atp=FALSE,test.year=0)$score
+conduct.experiment(1:19,wta.P.901.22,wta.test.2022,atp=FALSE,test.year=2)$score
 
 # deactivate 16
-conduct.experiment(c(16),wta.P.901.22,wta.test.2022,atp=FALSE,test.year=0)$score
+conduct.experiment(c(16),wta.P.901.22,wta.test.2022,atp=FALSE,test.year=2)$score
 # activate 9 (&6 if better) => 9
-conduct.experiment((1:19)[-c(9)],wta.P.901.22,wta.test.2022,atp=FALSE,test.year=0)$score
+conduct.experiment((1:19)[-c(9)],wta.P.901.22,wta.test.2022,atp=FALSE,test.year=2)$score
 ```
 
 ## ATP 22
 
 ```{r}
 # baseline with no activations
-conduct.experiment(1:19,atp.P.901.22,atp.test.2022,atp=TRUE,test.year=0)$score
+conduct.experiment(1:19,atp.P.901.22,atp.test.2022,atp=TRUE,test.year=2)$score
 
 # deactivate 12 (or 13 if better) => 12
-conduct.experiment(c(12),atp.P.901.22,atp.test.2022,atp=TRUE,test.year=0)$score
+conduct.experiment(c(12),atp.P.901.22,atp.test.2022,atp=TRUE,test.year=2)$score
 # activate 2
-conduct.experiment((1:19)[-c(2)],atp.P.901.22,atp.test.2022,atp=TRUE,test.year=0)$score
+conduct.experiment((1:19)[-c(2)],atp.P.901.22,atp.test.2022,atp=TRUE,test.year=2)$score
 ```
 
 # Significance of Validation Plateau Jumps
 
+## WTA 14
+
+```{r}
+# H0: accuracy after activation(deactivation) is less than or equal to initial
+#     accuracy with all states deactivated(activated)
+n <- nrow(wta.val.2013)
+prop.test(c(sum(conduct.experiment(1:19,wta.P.12.13,wta.val.2013,atp=FALSE,test.year=0)$res),
+            u5.wta14[[1]][[1]][1]*n),
+          c(n,n),alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(conduct.experiment(c(),wta.P.12.13,wta.val.2013,atp=FALSE,test.year=0)$res),
+            d5.wta14[[1]][[1]][1]*n),
+          c(n,n),alternative="less",correct=FALSE)$p.value
+```
+
+## ATP 14
+
+```{r}
+# H0: accuracy after activation(deactivation) is less than or equal to initial
+#     accuracy with all states deactivated(activated)
+n <- nrow(atp.val.2013)
+prop.test(c(sum(conduct.experiment(1:19,atp.P.12.13,atp.val.2013,atp=TRUE,test.year=0)$res),
+            u5.atp14[[1]][[1]][1]*n),
+          c(n,n),alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(conduct.experiment(c(),atp.P.12.13,atp.val.2013,atp=TRUE,test.year=0)$res),
+            d5.atp14[[1]][[1]][1]*n),
+          c(n,n),alternative="less",correct=FALSE)$p.value
+```
+
+## WTA 18
+
+```{r}
+# H0: accuracy after activation(deactivation) is less than or equal to initial
+#     accuracy with all states deactivated(activated)
+n <- nrow(wta.val.2017)
+prop.test(c(sum(conduct.experiment(1:19,wta.P.56.17,wta.val.2017,atp=FALSE,test.year=0)$res),
+            u5.wta18[[1]][[1]][1]*n),
+          c(n,n),alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(conduct.experiment(c(),wta.P.56.17,wta.val.2017,atp=FALSE,test.year=0)$res),
+            d5.wta18[[1]][[1]][1]*n),
+          c(n,n),alternative="less",correct=FALSE)$p.value
+```
+
+## ATP 18
+
+```{r}
+# H0: accuracy after activation(deactivation) is less than or equal to initial
+#     accuracy with all states deactivated(activated)
+n <- nrow(atp.val.2017)
+prop.test(c(sum(conduct.experiment(1:19,atp.P.56.17,atp.val.2017,atp=TRUE,test.year=0)$res),
+            u5.atp18[[1]][[1]][1]*n),
+          c(n,n),alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(conduct.experiment(c(),atp.P.56.17,atp.val.2017,atp=TRUE,test.year=0)$res),
+            d5.atp18[[1]][[1]][1]*n),
+          c(n,n),alternative="less",correct=FALSE)$p.value
+```
+
+## WTA 22
+
+```{r}
+# H0: accuracy after activation(deactivation) is less than or equal to initial
+#     accuracy with all states deactivated(activated)
+n <- nrow(wta.val.2021)
+prop.test(c(sum(conduct.experiment(1:19,wta.P.90.21,wta.val.2021,atp=FALSE,test.year=2)$res),
+            u5.wta22[[1]][[1]][1]*n),
+          c(n,n),alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(conduct.experiment(c(),wta.P.90.21,wta.val.2021,atp=FALSE,test.year=2)$res),
+            d5.wta22[[1]][[1]][1]*n),
+          c(n,n),alternative="less",correct=FALSE)$p.value
+```
+
+## ATP 22
+
+```{r}
+# H0: accuracy after activation(deactivation) is less than or equal to initial
+#     accuracy with all states deactivated(activated)
+n <- nrow(atp.val.2021)
+prop.test(c(sum(conduct.experiment(1:19,atp.P.90.21,atp.val.2021,atp=TRUE,test.year=2)$res),
+            u5.atp22[[1]][[1]][1]*n),
+          c(n,n),alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(conduct.experiment(c(),atp.P.90.21,atp.val.2021,atp=TRUE,test.year=2)$res),
+            d5.atp22[[1]][[1]][1]*n),
+          c(n,n),alternative="less",correct=FALSE)$p.value
+```
+
 # Significance of Testing Results
+
+Baseline compared with is the same as the others methods, so not the "bottoms of the plateaus" above which are estimated using only grand slam data, but the basic accuracies with inputation in 3_1.
+
+```{r}
+atp14.basic <- readRDS("../Results/Individual/atp14_basic")
+wta14.basic <- readRDS("../Results/Individual/wta14_basic")
+atp18.basic <- readRDS("../Results/Individual/atp18_basic")
+wta18.basic <- readRDS("../Results/Individual/wta18_basic")
+atp22.basic <- readRDS("../Results/Individual/atp22_basic")
+wta22.basic <- readRDS("../Results/Individual/wta22_basic")
+```
+
+## WTA 14
+
+```{r}
+# get and save testing results
+# activate 1
+wta14.up <- conduct.experiment((1:19)[-c(1)],wta.P.123.14,wta.test.2014,
+                                   atp=FALSE,test.year=0)$exact
+saveRDS(wta14.up,"../Results/Individual/wta14_ps_up")
+# deactivate 7 (& 10 if better) => 7
+wta14.down <- conduct.experiment(c(7),wta.P.123.14,wta.test.2014,atp=FALSE,test.year=0)$exact
+saveRDS(wta14.down,"../Results/Individual/wta14_ps_down")
+```
+```{r}
+# H0: point-specific less than or equal to basic
+prop.test(c(sum(wta14.basic>0.5),sum(wta14.up>0.5)),rep(nrow(wta.test.2014),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.basic>0.5),sum(wta14.down>0.5)),rep(nrow(wta.test.2014),2),
+          alternative="less",correct=FALSE)$p.value
+```
+## ATP 14
+
+```{r}
+# get and save testing results
+# activate 1
+atp14.up <- conduct.experiment((1:19)[-c(1)],atp.P.123.14,atp.test.2014,
+                                   atp=TRUE,test.year=0)$exact
+saveRDS(atp14.up,"../Results/Individual/atp14_ps_up")
+# deactivate 2
+atp14.down <- conduct.experiment(c(2),atp.P.123.14,atp.test.2014,atp=TRUE,test.year=0)$exact
+saveRDS(atp14.down,"../Results/Individual/atp14_ps_down")
+```
+```{r}
+# H0: point-specific less than or equal to basic
+prop.test(c(sum(atp14.basic>0.5),sum(atp14.up>0.5)),rep(nrow(atp.test.2014),2),
+          alternative="less",correct=TRUE)$p.value
+prop.test(c(sum(atp14.basic>0.5),sum(atp14.down>0.5)),rep(nrow(atp.test.2014),2),
+          alternative="less",correct=TRUE)$p.value
+```
+## WTA 18
+
+```{r}
+# get and save testing results
+# activate 9
+wta18.up <- conduct.experiment((1:19)[-c(9)],wta.P.567.18,wta.test.2018,
+                                   atp=FALSE,test.year=0)$exact
+saveRDS(wta18.up,"../Results/Individual/wta18_ps_up")
+# deactivate 16
+wta18.down <- conduct.experiment(c(16),wta.P.567.18,wta.test.2018,atp=FALSE,test.year=0)$exact
+saveRDS(wta18.down,"../Results/Individual/wta18_ps_down")
+```
+```{r}
+# H0: point-specific less than or equal to basic
+prop.test(c(sum(wta18.basic>0.5),sum(wta18.up>0.5)),rep(nrow(wta.test.2018),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.basic>0.5),sum(wta18.down>0.5)),rep(nrow(wta.test.2018),2),
+          alternative="less",correct=FALSE)$p.value
+```
+
+## ATP 18
+
+```{r}
+# get and save testing results
+# activate 12
+atp18.up <- conduct.experiment((1:19)[-c(12)],atp.P.567.18,atp.test.2018,
+                                   atp=TRUE,test.year=0)$exact
+saveRDS(atp18.up,"../Results/Individual/atp18_ps_up")
+# deactivate 11 (or 19 if better) => 11
+atp18.down <- conduct.experiment(c(11),atp.P.567.18,atp.test.2018,atp=TRUE,test.year=0)$exact
+saveRDS(atp18.down,"../Results/Individual/atp18_ps_down")
+```
+```{r}
+# H0: point-specific less than or equal to basic
+prop.test(c(sum(atp18.basic>0.5),sum(atp18.up>0.5)),rep(nrow(atp.test.2018),2),
+          alternative="less",correct=TRUE)$p.value
+prop.test(c(sum(atp18.basic>0.5),sum(atp18.down>0.5)),rep(nrow(atp.test.2018),2),
+          alternative="less",correct=TRUE)$p.value
+```
+
+## WTA 22
+
+```{r}
+# get and save testing results
+# activate 9 (&6 if better) => 9
+wta22.up <- conduct.experiment((1:19)[-c(9)],wta.P.901.22,wta.test.2022,
+                                   atp=FALSE,test.year=2)$exact
+saveRDS(wta22.up,"../Results/Individual/wta22_ps_up")
+# deactivate 16
+wta22.down <- conduct.experiment(c(16),wta.P.901.22,wta.test.2022,atp=FALSE,test.year=2)$exact
+saveRDS(wta22.down,"../Results/Individual/wta22_ps_down")
+```
+```{r}
+# H0: point-specific less than or equal to basic
+prop.test(c(sum(wta22.basic>0.5),sum(wta22.up>0.5)),rep(nrow(wta.test.2022),2),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta22.basic>0.5),sum(wta22.down>0.5)),rep(nrow(wta.test.2022),2),
+          alternative="less",correct=FALSE)$p.value
+```
+
+## ATP 22
+
+```{r}
+# get and save testing results
+# activate 2
+atp22.up <- conduct.experiment((1:19)[-c(2)],atp.P.901.22,atp.test.2022,
+                                   atp=TRUE,test.year=2)$exact
+saveRDS(atp22.up,"../Results/Individual/atp22_ps_up")
+# deactivate 12 (or 13 if better) => 12
+atp22.down <- conduct.experiment(c(12),atp.P.901.22,atp.test.2022,atp=TRUE,test.year=2)$exact
+saveRDS(atp22.down,"../Results/Individual/atp22_ps_down")
+```
+```{r}
+# H0: point-specific less than or equal to basic
+prop.test(c(sum(atp22.basic>0.5),sum(atp22.up>0.5)),rep(nrow(atp.test.2022),2),
+          alternative="less",correct=TRUE)$p.value
+prop.test(c(sum(atp22.basic>0.5),sum(atp22.down>0.5)),rep(nrow(atp.test.2022),2),
+          alternative="less",correct=TRUE)$p.value
+```
+
