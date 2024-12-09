@@ -11,9 +11,9 @@ Note get.prob function has to be changed according to whether test set is pre or
 
 ```{r}
 source("2_1_hierarchical_model_probabilities.R")
-grand.slams <- c("Australian Open","Roland Garros","Wimbledon","Us Open")
+grand.slams <- c("Australian Open","Roland Garros","Wimbledon","Us Open","US Open")
 # "Us Open" specific to 2022 test sets
-get.prob.pre.2022 <- function(p1,p2,match,atp=TRUE){
+get.prob.pre.2022 <- function(p1,p2,match,atp=FALSE){
   if (is.na(p1)||is.na(p2)){
     return(NA)
   }
@@ -28,7 +28,7 @@ get.prob.pre.2022 <- function(p1,p2,match,atp=TRUE){
   }
   return(ret)
 }
-get.prob.post.2022 <- function(p1,p2,match,atp=TRUE){
+get.prob.post.2022 <- function(p1,p2,match,atp=FALSE){
   if (is.na(p1)||is.na(p2)){
     return(NA)
   }
@@ -49,8 +49,8 @@ get.prob.post.2022 <- function(p1,p2,match,atp=TRUE){
 # Warning: type 29 is unimplemented in 'type2char'Error in pmatch(rw, c("read", "write"), 0L) : 
 # INTEGER() can only be applied to a 'integer', not a 'unknown type #29'
 # just run again
-atp.test <- read.csv('../New Data/atp/atp_testing_2022.csv')
-wta.test <- read.csv('../New Data/wta/wta_testing_2022.csv')
+atp.test <- read.csv('../New Data/atp/atp_testing_2014.csv')
+wta.test <- read.csv('../New Data/wta/wta_testing_2014.csv')
 ```
 ```{r}
 # following function highlights matches that were incomplete
@@ -62,12 +62,12 @@ ic.wta <- ic.match(wta.test$score)
 ```
 ```{r}
 # training data
-atp.basic <- read.csv('../New Data/atp/2019-2021_atp_individual.csv')
-wta.basic <- read.csv('../New Data/wta/2019-2021_wta_individual.csv')
-atp.h2h <- read.csv('../New Data/atp/2019-2021_atp_h2h.csv')
-wta.h2h <- read.csv('../New Data/wta/2019-2021_wta_h2h.csv')
-atp.co <- read.csv('../New Data/atp/2019-2021_atp_co.csv')
-wta.co <- read.csv('../New Data/wta/2019-2021_wta_co.csv')
+atp.basic <- read.csv('../New Data/atp/2011-2013_atp_individual.csv')
+wta.basic <- read.csv('../New Data/wta/2011-2013_wta_individual.csv')
+atp.h2h <- read.csv('../New Data/atp/2011-2013_atp_h2h.csv')
+wta.h2h <- read.csv('../New Data/wta/2011-2013_wta_h2h.csv')
+atp.co <- read.csv('../New Data/atp/2011-2013_atp_co.csv')
+wta.co <- read.csv('../New Data/wta/2011-2013_wta_co.csv')
 # for the match specific datasets, they also need ic entries removed
 atp.h2h <- atp.h2h[-ic.atp,]
 wta.h2h <- wta.h2h[-ic.wta,]
@@ -152,11 +152,11 @@ for (i in 1:n){
   winner.idx <- which(atp.basic$player_id==winner)
   loser.idx <- which(atp.basic$player_id==loser)
   if (atp.basic$p.estimate[winner.idx]>atp.basic$p.estimate[loser.idx]) res1[i]<-1
-  exact.res1[i] <- get.prob.post.2022(atp.basic$p.estimate[winner.idx],
+  exact.res1[i] <- get.prob.pre.2022(atp.basic$p.estimate[winner.idx],
                                      atp.basic$p.estimate[loser.idx],
                                      atp.test$tourney_name[i],atp=TRUE)
 }
-saveRDS(exact.res1,"../Results/Individual/atp22_basic")
+saveRDS(exact.res1,"../Results/Individual/atp14_basic")
 mean(res1)
 ```
 
@@ -172,11 +172,11 @@ for (i in 1:n){
   winner.idx <- which(wta.basic$player_id==winner)
   loser.idx <- which(wta.basic$player_id==loser)
   if (wta.basic$p.estimate[winner.idx]>wta.basic$p.estimate[loser.idx]) res2[i]<-1
-  exact.res2[i] <- get.prob.post.2022(wta.basic$p.estimate[winner.idx],
+  exact.res2[i] <- get.prob.pre.2022(wta.basic$p.estimate[winner.idx],
                                      wta.basic$p.estimate[loser.idx],
-                                     wta.test$tourney_name[i])
+                                     wta.test$tourney_name[i],atp=FALSE)
 }
-saveRDS(exact.res2,"../Results/Individual/wta22_basic")
+saveRDS(exact.res2,"../Results/Individual/wta14_basic")
 mean(res2)
 ```
 
@@ -215,11 +215,11 @@ for (i in 1:n){
   winner.adj.p <- atp.basic$p.estimate[winner.idx]-(atp.basic$q.estimate[loser.idx]-q.bar)
   loser.adj.p <- atp.basic$p.estimate[loser.idx]-(atp.basic$q.estimate[winner.idx]-q.bar)
   res3[i] <- winner.adj.p > loser.adj.p
-  exact.res3[i] <- get.prob.post.2022(winner.adj.p,loser.adj.p,                         
+  exact.res3[i] <- get.prob.pre.2022(winner.adj.p,loser.adj.p,                         
                                       atp.test$tourney_name[i],atp=TRUE)
 }
 mean(res3)
-saveRDS(exact.res3,"../Results/Individual/atp22_oaf")
+saveRDS(exact.res3,"../Results/Individual/atp14_oaf")
 ```
 
 ATP 2022 (0.6516393) / ATP 2018 (0.6395706) / ATP 2014 (0.6383459)
@@ -255,11 +255,11 @@ for (i in 1:n){
   winner.adj.p <- wta.basic$p.estimate[winner.idx]-(wta.basic$q.estimate[loser.idx]-q.bar)
   loser.adj.p <- wta.basic$p.estimate[loser.idx]-(wta.basic$q.estimate[winner.idx]-q.bar)
   res4[i] <- winner.adj.p > loser.adj.p
-  exact.res4[i] <- get.prob.post.2022(winner.adj.p,loser.adj.p,                         
-                                      wta.test$tourney_name[i])
+  exact.res4[i] <- get.prob.pre.2022(winner.adj.p,loser.adj.p,                         
+                                      wta.test$tourney_name[i],atp=FALSE)
 }
 mean(res4)
-saveRDS(exact.res4,"../Results/Individual/wta22_oaf")
+saveRDS(exact.res4,"../Results/Individual/wta14_oaf")
 ```
 
 WTA 2022 (0.6316557) / WTA 2018 (0.6300618) / WTA 2014 (0.6625767)
@@ -284,7 +284,7 @@ res5 <- rep(0,length(h2h.valid))
 exact.res5 <- rep(0,length(h2h.valid))
 for (i in 1:length(h2h.valid)){
   res5[i] <- atp.h2h$w_p[h2h.valid[i]] > atp.h2h$l_p[h2h.valid[i]]
-  exact.res5[i] <- get.prob.post.2022(atp.h2h$w_p[h2h.valid[i]],atp.h2h$l_p[h2h.valid[i]],
+  exact.res5[i] <- get.prob.pre.2022(atp.h2h$w_p[h2h.valid[i]],atp.h2h$l_p[h2h.valid[i]],
                                       atp.test$tourney_name[h2h.valid[i]],atp=TRUE)
 }
 mean(res5)
@@ -297,8 +297,8 @@ res5.sv <- rep(-1,nrow(atp.test))
 res5.sv[h2h.valid] <- res5
 exact.res5.sv <- rep(-1,nrow(atp.test))
 exact.res5.sv[h2h.valid] <- exact.res5
-saveRDS(res5.sv,"../Results/Individual/atp22_h2h_binary")
-saveRDS(exact.res5.sv,"../Results/Individual/atp22_h2h")
+saveRDS(res5.sv,"../Results/Individual/atp14_h2h_binary")
+saveRDS(exact.res5.sv,"../Results/Individual/atp14_h2h")
 ```
 
 ```{r}
@@ -319,7 +319,7 @@ res6 <- rep(0,length(h2h.valid))
 exact.res6 <- rep(0,length(h2h.valid))
 for (i in 1:length(h2h.valid)){
   res6[i] <- wta.h2h$w_p[h2h.valid[i]] > wta.h2h$l_p[h2h.valid[i]]
-  exact.res6[i] <- get.prob.post.2022(wta.h2h$w_p[h2h.valid[i]],wta.h2h$l_p[h2h.valid[i]],
+  exact.res6[i] <- get.prob.pre.2022(wta.h2h$w_p[h2h.valid[i]],wta.h2h$l_p[h2h.valid[i]],
                                       wta.test$tourney_name[h2h.valid[i]])
 }
 mean(res6)
@@ -332,8 +332,8 @@ res6.sv <- rep(-1,nrow(wta.test))
 res6.sv[h2h.valid] <- res6
 exact.res6.sv <- rep(-1,nrow(wta.test))
 exact.res6.sv[h2h.valid] <- exact.res6
-saveRDS(res6.sv,"../Results/Individual/wta22_h2h_binary")
-saveRDS(exact.res6.sv,"../Results/Individual/wta22_h2h")
+saveRDS(res6.sv,"../Results/Individual/wta14_h2h_binary")
+saveRDS(exact.res6.sv,"../Results/Individual/wta14_h2h")
 ```
 
 ### Common Opponents (No Surface Filtering)
@@ -356,7 +356,7 @@ res7 <- rep(0,length(co.valid))
 exact.res7 <- rep(0,length(co.valid))
 for (i in 1:length(co.valid)){
   res7[i] <- atp.co$w_p[co.valid[i]] > atp.co$l_p[co.valid[i]]
-  exact.res7[i] <- get.prob.post.2022(atp.co$w_p[co.valid[i]],atp.co$l_p[co.valid[i]],
+  exact.res7[i] <- get.prob.pre.2022(atp.co$w_p[co.valid[i]],atp.co$l_p[co.valid[i]],
                                       atp.test$tourney_name[co.valid[i]],atp=TRUE)
 }
 mean(res7)
@@ -369,8 +369,8 @@ res7.sv <- rep(-1,nrow(atp.test))
 res7.sv[co.valid] <- res7
 exact.res7.sv <- rep(-1,nrow(atp.test))
 exact.res7.sv[co.valid] <- exact.res7
-saveRDS(res7.sv,"../Results/Individual/atp22_co_binary")
-saveRDS(exact.res7.sv,"../Results/Individual/atp22_co")
+saveRDS(res7.sv,"../Results/Individual/atp14_co_binary")
+saveRDS(exact.res7.sv,"../Results/Individual/atp14_co")
 ```
 
 ```{r}
@@ -391,7 +391,7 @@ res8 <- rep(0,length(co.valid))
 exact.res8 <- rep(0,length(co.valid))
 for (i in 1:length(co.valid)){
   res8[i] <- wta.co$w_p[co.valid[i]] > wta.co$l_p[co.valid[i]]
-  exact.res8[i] <- get.prob.post.2022(wta.co$w_p[co.valid[i]],wta.co$l_p[co.valid[i]],
+  exact.res8[i] <- get.prob.pre.2022(wta.co$w_p[co.valid[i]],wta.co$l_p[co.valid[i]],
                                       wta.test$tourney_name[co.valid[i]])
 }
 mean(res8)
@@ -404,8 +404,8 @@ res8.sv <- rep(-1,nrow(wta.test))
 res8.sv[co.valid] <- res8
 exact.res8.sv <- rep(-1,nrow(wta.test))
 exact.res8.sv[co.valid] <- exact.res8
-saveRDS(res8.sv,"../Results/Individual/wta22_co_binary")
-saveRDS(exact.res8.sv,"../Results/Individual/wta22_co")
+saveRDS(res8.sv,"../Results/Individual/wta14_co_binary")
+saveRDS(exact.res8.sv,"../Results/Individual/wta14_co")
 ```
 
 ### Common Opponents with Opponent-Adjusted Formula
@@ -442,7 +442,7 @@ co.valid <- which(!is.na(atp.co$w_p) & !is.na(atp.co$l_p))
 resY <- rep(0,length(co.valid))
 exact.resY <- rep(0,length(co.valid))
 for (i in 1:length(co.valid)){
-  exact.resY[i] <- get.prob.post.2022(atp.co$w_p[co.valid[i]]-(atp.co$l_q[co.valid[i]]-q.bar),
+  exact.resY[i] <- get.prob.pre.2022(atp.co$w_p[co.valid[i]]-(atp.co$l_q[co.valid[i]]-q.bar),
                                       atp.co$l_p[co.valid[i]]-(atp.co$w_q[co.valid[i]]-q.bar),
                                       atp.test$tourney_name[co.valid[i]],atp=TRUE)
   resY[i] <- exact.resY[i] > 0.5
@@ -457,8 +457,8 @@ resY.sv <- rep(-1,nrow(atp.test))
 resY.sv[co.valid] <- resY
 exact.resY.sv <- rep(-1,nrow(atp.test))
 exact.resY.sv[co.valid] <- exact.resY
-saveRDS(resY.sv,"../Results/Ensembles/atp22_co(oaf)_binary")
-saveRDS(exact.resY.sv,"../Results/Ensembles/atp22_co(oaf)")
+saveRDS(resY.sv,"../Results/Ensembles/atp14_co(oaf)_binary")
+saveRDS(exact.resY.sv,"../Results/Ensembles/atp14_co(oaf)")
 ```
 
 ```{r}
@@ -493,7 +493,7 @@ co.valid <- which(!is.na(wta.co$w_p) & !is.na(wta.co$l_p))
 resX <- rep(0,length(co.valid))
 exact.resX <- rep(0,length(co.valid))
 for (i in 1:length(co.valid)){
-  exact.resX[i] <- get.prob.post.2022(wta.co$w_p[co.valid[i]]-(wta.co$l_q[co.valid[i]]-q.bar),
+  exact.resX[i] <- get.prob.pre.2022(wta.co$w_p[co.valid[i]]-(wta.co$l_q[co.valid[i]]-q.bar),
                                       wta.co$l_p[co.valid[i]]-(wta.co$w_q[co.valid[i]]-q.bar),
                                       wta.test$tourney_name[co.valid[i]])
   resX[i] <- exact.resX[i] > 0.5
@@ -508,8 +508,8 @@ resX.sv <- rep(-1,nrow(wta.test))
 resX.sv[co.valid] <- resX
 exact.resX.sv <- rep(-1,nrow(wta.test))
 exact.resX.sv[co.valid] <- exact.resX
-saveRDS(resX.sv,"../Results/Ensembles/wta22_co(oaf)_binary")
-saveRDS(exact.resX.sv,"../Results/Ensembles/wta22_co(oaf)")
+saveRDS(resX.sv,"../Results/Ensembles/wta14_co(oaf)_binary")
+saveRDS(exact.resX.sv,"../Results/Ensembles/wta14_co(oaf)")
 ```
 
 ### Below may move to surface/time horizon notebook later
@@ -525,7 +525,7 @@ res9 <- rep(0,length(co.valid))
 # exact.res7 <- rep(0,length(co.valid))
 for (i in 1:length(co.valid)){
   res9[i] <- atp.co$w_p_2nsf[co.valid[i]] > atp.co$l_p_2nsf[co.valid[i]]
-  # exact.res7[i] <- get.prob.post.2022(atp.co$w_p[co.valid[i]],atp.co$l_p[co.valid[i]],
+  # exact.res7[i] <- get.prob.pre.2022(atp.co$w_p[co.valid[i]],atp.co$l_p[co.valid[i]],
   #                                     atp.test$tourney_name[co.valid[i]],atp=TRUE)
 }
 mean(res9)
@@ -542,7 +542,7 @@ res10 <- rep(0,length(co.valid))
 # exact.res7 <- rep(0,length(co.valid))
 for (i in 1:length(co.valid)){
   res10[i] <- wta.co$w_p_2nsf[co.valid[i]] > wta.co$l_p_2nsf[co.valid[i]]
-  # exact.res7[i] <- get.prob.post.2022(wta.co$w_p[co.valid[i]],wta.co$l_p[co.valid[i]],
+  # exact.res7[i] <- get.prob.pre.2022(wta.co$w_p[co.valid[i]],wta.co$l_p[co.valid[i]],
   #                                     wta.test$tourney_name[co.valid[i]])
 }
 mean(res10)
@@ -579,3 +579,138 @@ mean(res12)
 ```
 
 WTA 2022 (0.5650485) / WTA 2018 (0.5759866) / WTA 2014 (0.618231)
+
+## Addended Basic/OAF without Imputation
+
+### Basic Pure
+
+```{r}
+# augmentations to training set
+atp.basic.pure <- atp.basic
+atp.basic.pure$total_pts_served <- atp.basic.pure$grass_pts_served + 
+  atp.basic.pure$clay_pts_served + atp.basic.pure$hard_pts_served
+atp.basic.pure$total_service_pts_won <- atp.basic.pure$grass_service_pts_won +
+  atp.basic.pure$hard_service_pts_won + atp.basic.pure$clay_service_pts_won
+atp.basic.pure$p.estimate <- atp.basic.pure$total_service_pts_won/atp.basic.pure$total_pts_served
+wta.basic.pure <- wta.basic
+wta.basic.pure$total_pts_served <- wta.basic.pure$grass_pts_served + 
+  wta.basic.pure$clay_pts_served + wta.basic.pure$hard_pts_served
+wta.basic.pure$total_service_pts_won <- wta.basic.pure$grass_service_pts_won +
+  wta.basic.pure$hard_service_pts_won + wta.basic.pure$clay_service_pts_won
+wta.basic.pure$p.estimate <- wta.basic.pure$total_service_pts_won/wta.basic.pure$total_pts_served
+```
+
+```{r}
+n <- nrow(atp.test)
+res1p <- rep(0,n)
+exact.res1p <- rep(0,n) # for merges etc.
+for (i in 1:n){
+  winner <- atp.test$winner_id[i]
+  loser <- atp.test$loser_id[i]
+  winner.idx <- which(atp.basic.pure$player_id==winner)
+  loser.idx <- which(atp.basic.pure$player_id==loser)
+  res1p[i] <- atp.basic.pure$p.estimate[winner.idx]>atp.basic.pure$p.estimate[loser.idx]
+  exact.res1p[i] <- get.prob.pre.2022(atp.basic.pure$p.estimate[winner.idx],
+                                       atp.basic.pure$p.estimate[loser.idx],
+                                       atp.test$tourney_name[i],atp=TRUE)
+}
+exact.res1p[which(is.na(exact.res1p))] <- -1
+saveRDS(exact.res1p,"../Results/Individual/atp14_basic_pure")
+mean(res1p[which(!is.na(res1p))])
+```
+
+ATP 2014 (0.6272242) / ATP 2018 (0.6262626) / ATP 2022 (0.6138614)
+
+```{r}
+n <- nrow(wta.test)
+res2p <- rep(0,n)
+exact.res2p <- rep(0,n) # for merges etc.
+for (i in 1:n){
+  winner <- wta.test$winner_id[i]
+  loser <- wta.test$loser_id[i]
+  winner.idx <- which(wta.basic.pure$player_id==winner)
+  loser.idx <- which(wta.basic.pure$player_id==loser)
+  res2p[i] <- wta.basic.pure$p.estimate[winner.idx]>wta.basic.pure$p.estimate[loser.idx]
+  exact.res2p[i] <- get.prob.pre.2022(wta.basic.pure$p.estimate[winner.idx],
+                                       wta.basic.pure$p.estimate[loser.idx],
+                                       wta.test$tourney_name[i],atp=FALSE)
+}
+exact.res2p[which(is.na(exact.res2p))] <- -1
+saveRDS(exact.res2p,"../Results/Individual/wta14_basic_pure")
+mean(res2p[which(!is.na(res2p))])
+```
+
+WTA 2014 (0.6128335) / WTA 2018 (0.5981831) / WTA 2022 (0.5960961)
+
+### OAF Pure
+
+```{r}
+atp.basic.pure$total_pts_served <- atp.basic.pure$grass_pts_served + 
+  atp.basic.pure$clay_pts_served + atp.basic.pure$hard_pts_served
+atp.basic.pure$total_service_pts_won <- atp.basic.pure$grass_service_pts_won +
+  atp.basic.pure$hard_service_pts_won + atp.basic.pure$clay_service_pts_won
+atp.basic.pure$p.estimate <- atp.basic.pure$total_service_pts_won/atp.basic.pure$total_pts_served
+# get q estimates as well
+atp.basic.pure$total_pts_received <- atp.basic.pure$grass_pts_received +
+  atp.basic.pure$hard_pts_received + atp.basic.pure$clay_pts_received
+atp.basic.pure$total_receiving_pts_won <- atp.basic.pure$grass_receiving_pts_won +
+  atp.basic.pure$hard_receiving_pts_won + atp.basic.pure$clay_receiving_pts_won
+atp.basic.pure$q.estimate <- atp.basic.pure$total_receiving_pts_won/atp.basic.pure$total_pts_received
+q.bar <- mean(atp.basic.pure$q.estimate[-which(is.na(atp.basic.pure$q.estimate))])
+
+n <- nrow(atp.test)
+res3p <- rep(0,n)
+exact.res3p <- rep(0,n) # for merges etc.
+for (i in 1:n){
+  winner <- atp.test$winner_id[i]
+  loser <- atp.test$loser_id[i]
+  winner.idx <- which(atp.basic.pure$player_id==winner)
+  loser.idx <- which(atp.basic.pure$player_id==loser)
+  winner.adj.p <- atp.basic.pure$p.estimate[winner.idx]-(atp.basic.pure$q.estimate[loser.idx]-q.bar)
+  loser.adj.p <- atp.basic.pure$p.estimate[loser.idx]-(atp.basic.pure$q.estimate[winner.idx]-q.bar)
+  res3p[i] <- winner.adj.p > loser.adj.p
+  exact.res3p[i] <- get.prob.pre.2022(winner.adj.p,loser.adj.p,                         
+                                      atp.test$tourney_name[i],atp=TRUE)
+}
+exact.res3p[which(is.na(exact.res3p))] <- -1
+mean(res3p[which(!is.na(res3p))])
+saveRDS(exact.res3p,"../Results/Individual/atp14_oaf_pure")
+```
+
+ATP 2014 (0.6841637) / ATP 2018 (0.6464646) / ATP 2022 (0.6579658)
+
+```{r}
+wta.basic.pure$total_pts_served <- wta.basic.pure$grass_pts_served + 
+  wta.basic.pure$clay_pts_served + wta.basic.pure$hard_pts_served
+wta.basic.pure$total_service_pts_won <- wta.basic.pure$grass_service_pts_won +
+  wta.basic.pure$hard_service_pts_won + wta.basic.pure$clay_service_pts_won
+wta.basic.pure$p.estimate <- wta.basic.pure$total_service_pts_won/wta.basic.pure$total_pts_served
+# get q estimates as well
+wta.basic.pure$total_pts_received <- wta.basic.pure$grass_pts_received +
+  wta.basic.pure$hard_pts_received + wta.basic.pure$clay_pts_received
+wta.basic.pure$total_receiving_pts_won <- wta.basic.pure$grass_receiving_pts_won +
+  wta.basic.pure$hard_receiving_pts_won + wta.basic.pure$clay_receiving_pts_won
+wta.basic.pure$q.estimate <- wta.basic.pure$total_receiving_pts_won/wta.basic.pure$total_pts_received
+q.bar <- mean(wta.basic.pure$q.estimate[-which(is.na(wta.basic.pure$q.estimate))])
+
+n <- nrow(wta.test)
+res4p <- rep(0,n)
+exact.res4p <- rep(0,n) # for merges etc.
+for (i in 1:n){
+  winner <- wta.test$winner_id[i]
+  loser <- wta.test$loser_id[i]
+  winner.idx <- which(wta.basic.pure$player_id==winner)
+  loser.idx <- which(wta.basic.pure$player_id==loser)
+  winner.adj.p <- wta.basic.pure$p.estimate[winner.idx]-(wta.basic.pure$q.estimate[loser.idx]-q.bar)
+  loser.adj.p <- wta.basic.pure$p.estimate[loser.idx]-(wta.basic.pure$q.estimate[winner.idx]-q.bar)
+  res4p[i] <- winner.adj.p > loser.adj.p
+  exact.res4p[i] <- get.prob.pre.2022(winner.adj.p,loser.adj.p,                         
+                                      wta.test$tourney_name[i])
+}
+exact.res4p[which(is.na(exact.res4p))] <- -1
+mean(res4p[which(!is.na(res4p))])
+saveRDS(exact.res4p,"../Results/Individual/wta14_oaf_pure")
+```
+
+WTA 2014 (0.6560923) / WTA 2018 (0.6261356) / WTA 2022 (0.6283784)
+
