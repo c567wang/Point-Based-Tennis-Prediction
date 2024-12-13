@@ -1,0 +1,110 @@
+---
+title: "Coverage of Various Methods"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Data
+
+```{r}
+atp14.basic <- readRDS("../Results/Individual/atp14_basic")
+atp14.oaf <- readRDS("../Results/Individual/atp14_oaf")
+atp14.co <- readRDS("../Results/Individual/atp14_co")
+atp14.co.binary <- readRDS("../Results/Individual/atp14_co_binary")
+atp14.h2h <- readRDS("../Results/Individual/atp14_h2h")
+atp14.h2h.binary <- readRDS("../Results/Individual/atp14_h2h_binary")
+wta14.basic <- readRDS("../Results/Individual/wta14_basic")
+wta14.oaf <- readRDS("../Results/Individual/wta14_oaf")
+wta14.co <- readRDS("../Results/Individual/wta14_co")
+wta14.co.binary <- readRDS("../Results/Individual/wta14_co_binary")
+wta14.h2h <- readRDS("../Results/Individual/wta14_h2h")
+wta14.h2h.binary <- readRDS("../Results/Individual/wta14_h2h_binary")
+
+atp18.basic <- readRDS("../Results/Individual/atp18_basic")
+atp18.oaf <- readRDS("../Results/Individual/atp18_oaf")
+atp18.co <- readRDS("../Results/Individual/atp18_co")
+atp18.co.binary <- readRDS("../Results/Individual/atp18_co_binary")
+atp18.h2h <- readRDS("../Results/Individual/atp18_h2h")
+atp18.h2h.binary <- readRDS("../Results/Individual/atp18_h2h_binary")
+wta18.basic <- readRDS("../Results/Individual/wta18_basic")
+wta18.oaf <- readRDS("../Results/Individual/wta18_oaf")
+wta18.co <- readRDS("../Results/Individual/wta18_co")
+wta18.co.binary <- readRDS("../Results/Individual/wta18_co_binary")
+wta18.h2h <- readRDS("../Results/Individual/wta18_h2h")
+wta18.h2h.binary <- readRDS("../Results/Individual/wta18_h2h_binary")
+
+atp22.basic <- readRDS("../Results/Individual/atp22_basic")
+atp22.oaf <- readRDS("../Results/Individual/atp22_oaf")
+atp22.co <- readRDS("../Results/Individual/atp22_co")
+atp22.co.binary <- readRDS("../Results/Individual/atp22_co_binary")
+atp22.h2h <- readRDS("../Results/Individual/atp22_h2h")
+atp22.h2h.binary <- readRDS("../Results/Individual/atp22_h2h_binary")
+wta22.basic <- readRDS("../Results/Individual/wta22_basic")
+wta22.oaf <- readRDS("../Results/Individual/wta22_oaf")
+wta22.co <- readRDS("../Results/Individual/wta22_co")
+wta22.co.binary <- readRDS("../Results/Individual/wta22_co_binary")
+wta22.h2h <- readRDS("../Results/Individual/wta22_h2h")
+wta22.h2h.binary <- readRDS("../Results/Individual/wta22_h2h_binary")
+
+atp14.basic.pure <- readRDS("../Results/Individual/atp14_basic_pure")
+wta14.basic.pure <- readRDS("../Results/Individual/wta14_basic_pure")
+atp18.basic.pure <- readRDS("../Results/Individual/atp18_basic_pure")
+wta18.basic.pure <- readRDS("../Results/Individual/wta18_basic_pure")
+atp22.basic.pure <- readRDS("../Results/Individual/atp22_basic_pure")
+wta22.basic.pure <- readRDS("../Results/Individual/wta22_basic_pure")
+atp14.oaf.pure <- readRDS("../Results/Individual/atp14_oaf_pure")
+wta14.oaf.pure <- readRDS("../Results/Individual/wta14_oaf_pure")
+atp18.oaf.pure <- readRDS("../Results/Individual/atp18_oaf_pure")
+wta18.oaf.pure <- readRDS("../Results/Individual/wta18_oaf_pure")
+atp22.oaf.pure <- readRDS("../Results/Individual/atp22_oaf_pure")
+wta22.oaf.pure <- readRDS("../Results/Individual/wta22_oaf_pure")
+```
+
+# Basic Pure
+
+```{r}
+length(which(atp14.basic.pure>=0))
+length(which(wta14.basic.pure>=0))
+length(which(atp18.basic.pure>=0))
+length(which(wta18.basic.pure>=0))
+length(which(atp22.basic.pure>=0))
+length(which(wta22.basic.pure>=0))
+```
+
+# OAF Pure
+
+```{r}
+length(which(atp14.oaf.pure>=0))
+length(which(wta14.oaf.pure>=0))
+length(which(atp18.oaf.pure>=0))
+length(which(wta18.oaf.pure>=0))
+length(which(atp22.oaf.pure>=0))
+length(which(wta22.oaf.pure>=0))
+```
+Same as Basic Pure as expected.
+
+# CO
+
+```{r}
+length(which(atp14.co>=0))
+length(which(wta14.co>=0))
+length(which(atp18.co>=0))
+length(which(wta18.co>=0))
+length(which(atp22.co>=0))
+length(which(wta22.co>=0))
+```
+
+# H2H
+
+```{r}
+length(which(atp14.h2h>=0))
+length(which(wta14.h2h>=0))
+length(which(atp18.h2h>=0))
+length(which(wta18.h2h>=0))
+length(which(atp22.h2h>=0))
+length(which(wta22.h2h>=0))
+```
+
