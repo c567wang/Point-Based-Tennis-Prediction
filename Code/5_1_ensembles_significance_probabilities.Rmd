@@ -530,46 +530,46 @@ prop.test(c(sum(wta22.basic>0.5),sum(wta22.oaf>0.5)),c
 ```
 
 ```{r}
-# H0: CO less than or equal to basic
-prop.test(c(sum(atp14.basic>0.5),sum(atp14.co.valid>0.5)),
-          c(length(atp14.basic),length(atp14.co.valid)),
+# H0: CO less than or equal to basic pure
+prop.test(c(sum(atp14.basic.pure.valid>0.5),sum(atp14.co.valid>0.5)),
+          c(length(atp14.basic.pure.valid),length(atp14.co.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(wta14.basic>0.5),sum(wta14.co.valid>0.5)),
-          c(length(wta14.basic),length(wta14.co.valid)),
+prop.test(c(sum(wta14.basic.pure.valid>0.5),sum(wta14.co.valid>0.5)),
+          c(length(wta14.basic.pure.valid),length(wta14.co.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(atp18.basic>0.5),sum(atp18.co.valid>0.5)),
-          c(length(atp18.basic),length(atp18.co.valid)),
+prop.test(c(sum(atp18.basic.pure.valid>0.5),sum(atp18.co.valid>0.5)),
+          c(length(atp18.basic.pure.valid),length(atp18.co.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(wta18.basic>0.5),sum(wta18.co.valid>0.5)),
-          c(length(wta18.basic),length(wta18.co.valid)),
+prop.test(c(sum(wta18.basic.pure.valid>0.5),sum(wta18.co.valid>0.5)),
+          c(length(wta18.basic.pure.valid),length(wta18.co.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(atp22.basic>0.5),sum(atp22.co.valid>0.5)),
-          c(length(atp22.basic),length(atp22.co.valid)),
+prop.test(c(sum(atp22.basic.pure.valid>0.5),sum(atp22.co.valid>0.5)),
+          c(length(atp22.basic.pure.valid),length(atp22.co.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(wta22.basic>0.5),sum(wta22.co.valid>0.5)),
-          c(length(wta22.basic),length(wta22.co.valid)),
+prop.test(c(sum(wta22.basic.pure.valid>0.5),sum(wta22.co.valid>0.5)),
+          c(length(wta22.basic.pure.valid),length(wta22.co.valid)),
           alternative="less",correct=FALSE)$p.value
 ```
 
 ```{r}
-# H0: H2H less than or equal to basic
-prop.test(c(sum(atp14.basic>0.5),sum(atp14.h2h.valid>0.5)),
-          c(length(atp14.basic),length(atp14.h2h.valid)),
+# H0: H2H less than or equal to basic pure
+prop.test(c(sum(atp14.basic.pure.valid>0.5),sum(atp14.h2h.valid>0.5)),
+          c(length(atp14.basic.pure.valid),length(atp14.h2h.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(wta14.basic>0.5),sum(wta14.h2h.valid>0.5)),
-          c(length(wta14.basic),length(wta14.h2h.valid)),
+prop.test(c(sum(wta14.basic.pure.valid>0.5),sum(wta14.h2h.valid>0.5)),
+          c(length(wta14.basic.pure.valid),length(wta14.h2h.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(atp18.basic>0.5),sum(atp18.h2h.valid>0.5)),
-          c(length(atp18.basic),length(atp18.h2h.valid)),
+prop.test(c(sum(atp18.basic.pure.valid>0.5),sum(atp18.h2h.valid>0.5)),
+          c(length(atp18.basic.pure.valid),length(atp18.h2h.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(wta18.basic>0.5),sum(wta18.h2h.valid>0.5)),
-          c(length(wta18.basic),length(wta18.h2h.valid)),
+prop.test(c(sum(wta18.basic.pure.valid>0.5),sum(wta18.h2h.valid>0.5)),
+          c(length(wta18.basic.pure.valid),length(wta18.h2h.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(atp22.basic>0.5),sum(atp22.h2h.valid>0.5)),
-          c(length(atp22.basic),length(atp22.h2h.valid)),
+prop.test(c(sum(atp22.basic.pure.valid>0.5),sum(atp22.h2h.valid>0.5)),
+          c(length(atp22.basic.pure.valid),length(atp22.h2h.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(wta22.basic>0.5),sum(wta22.h2h.valid>0.5)),
-          c(length(wta22.basic),length(wta22.h2h.valid)),
+prop.test(c(sum(wta22.basic.pure.valid>0.5),sum(wta22.h2h.valid>0.5)),
+          c(length(wta22.basic.pure.valid),length(wta22.h2h.valid)),
           alternative="less",correct=FALSE)$p.value
 ```
 
@@ -578,45 +578,45 @@ Since the one.sided p-values add to one for the less than, greater than in H0, w
 ## CO(OAF) and Significance (to Basic then OAF)
 
 ```{r}
-# H0: CO(OAF) less than or equal to basic
-prop.test(c(sum(atp14.basic>0.5),sum(atp14.co.oaf.valid>0.5)),
-          c(length(atp14.basic),length(atp14.co.oaf.valid)),
+# H0: CO(OAF) less than or equal to basic pure
+prop.test(c(sum(atp14.basic.pure.valid>0.5),sum(atp14.co.oaf.valid>0.5)),
+          c(length(atp14.basic.pure.valid),length(atp14.co.oaf.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(wta14.basic>0.5),sum(wta14.co.oaf.valid>0.5)),
-          c(length(wta14.basic),length(wta14.co.oaf.valid)),
+prop.test(c(sum(wta14.basic.pure.valid>0.5),sum(wta14.co.oaf.valid>0.5)),
+          c(length(wta14.basic.pure.valid),length(wta14.co.oaf.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(atp18.basic>0.5),sum(atp18.co.oaf.valid>0.5)),
-          c(length(atp18.basic),length(atp18.co.oaf.valid)),
+prop.test(c(sum(atp18.basic.pure.valid>0.5),sum(atp18.co.oaf.valid>0.5)),
+          c(length(atp18.basic.pure.valid),length(atp18.co.oaf.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(wta18.basic>0.5),sum(wta18.co.oaf.valid>0.5)),
-          c(length(wta18.basic),length(wta18.co.oaf.valid)),
+prop.test(c(sum(wta18.basic.pure.valid>0.5),sum(wta18.co.oaf.valid>0.5)),
+          c(length(wta18.basic.pure.valid),length(wta18.co.oaf.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(atp22.basic>0.5),sum(atp22.co.oaf.valid>0.5)),
-          c(length(atp22.basic),length(atp22.co.oaf.valid)),
+prop.test(c(sum(atp22.basic.pure.valid>0.5),sum(atp22.co.oaf.valid>0.5)),
+          c(length(atp22.basic.pure.valid),length(atp22.co.oaf.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(wta22.basic>0.5),sum(wta22.co.oaf.valid>0.5)),
-          c(length(wta22.basic),length(wta22.co.oaf.valid)),
+prop.test(c(sum(wta22.basic.pure.valid>0.5),sum(wta22.co.oaf.valid>0.5)),
+          c(length(wta22.basic.pure.valid),length(wta22.co.oaf.valid)),
           alternative="less",correct=FALSE)$p.value
 ```
 ```{r}
-# H0: CO(OAF) less than or equal to OAF
-prop.test(c(sum(atp14.oaf>0.5),sum(atp14.co.oaf.valid>0.5)),
-          c(length(atp14.oaf),length(atp14.co.oaf.valid)),
+# H0: CO(OAF) less than or equal to OAF valid
+prop.test(c(sum(atp14.oaf.pure.valid>0.5),sum(atp14.co.oaf.valid>0.5)),
+          c(length(atp14.oaf.pure.valid),length(atp14.co.oaf.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(wta14.oaf>0.5),sum(wta14.co.oaf.valid>0.5)),
-          c(length(wta14.oaf),length(wta14.co.oaf.valid)),
+prop.test(c(sum(wta14.oaf.pure.valid>0.5),sum(wta14.co.oaf.valid>0.5)),
+          c(length(wta14.oaf.pure.valid),length(wta14.co.oaf.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(atp18.oaf>0.5),sum(atp18.co.oaf.valid>0.5)),
-          c(length(atp18.oaf),length(atp18.co.oaf.valid)),
+prop.test(c(sum(atp18.oaf.pure.valid>0.5),sum(atp18.co.oaf.valid>0.5)),
+          c(length(atp18.oaf.pure.valid),length(atp18.co.oaf.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(wta18.oaf>0.5),sum(wta18.co.oaf.valid>0.5)),
-          c(length(wta18.oaf),length(wta18.co.oaf.valid)),
+prop.test(c(sum(wta18.oaf.pure.valid>0.5),sum(wta18.co.oaf.valid>0.5)),
+          c(length(wta18.oaf.pure.valid),length(wta18.co.oaf.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(atp22.oaf>0.5),sum(atp22.co.oaf.valid>0.5)),
-          c(length(atp22.oaf),length(atp22.co.oaf.valid)),
+prop.test(c(sum(atp22.oaf.pure.valid>0.5),sum(atp22.co.oaf.valid>0.5)),
+          c(length(atp22.oaf.pure.valid),length(atp22.co.oaf.valid)),
           alternative="less",correct=FALSE)$p.value
-prop.test(c(sum(wta22.oaf>0.5),sum(wta22.co.oaf.valid>0.5)),
-          c(length(wta22.oaf),length(wta22.co.oaf.valid)),
+prop.test(c(sum(wta22.oaf.pure.valid>0.5),sum(wta22.co.oaf.valid>0.5)),
+          c(length(wta22.oaf.pure.valid),length(wta22.co.oaf.valid)),
           alternative="less",correct=FALSE)$p.value
 ```
 

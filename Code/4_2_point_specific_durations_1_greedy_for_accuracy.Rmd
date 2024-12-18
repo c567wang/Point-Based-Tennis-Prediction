@@ -1,0 +1,600 @@
+---
+title: "Point Specific Durations I. Greedy for Accuracy"
+output: pdf_document
+date: "2024-12-18"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+When we still go after high accuracy scores with the greedy approach, the states selected for activation/deactivation will be the same as in 4_1, so we just need slightly alter some functions to work with durations to be able to activate/deactivate states to obtain new duration estimates.
+
+```{r}
+mu.atp14 <- 0.5753121363701876
+mu.wta18 <- 0.581537649060811
+mu.atp18 <- 0.5586784508135149
+mu.wta22 <- 0.588497149403478
+mu.atp22 <- 0.6354581848475032
+```
+
+# Prep Functions
+
+```{r functions}
+# main function is match.win.prob
+source("2_2_hierarchical_model_durations.R")
+
+# 3 helper functions
+
+get.unique.players <- function(testset){
+  # takes the players in the test set and returns vector
+  # containing unique players in the test set
+  names <- c(testset$winner_name,testset$loser_name)
+  names <- unique(names)
+  return(names)
+}
+
+get.equiv.names <- function(fullname){
+  # returns vector of equivalent names in different formats
+  # according to the fullname given
+  # fullname ideally from get.unique.players output
+  # More special examples:
+  #   Alejandro Davidovich Fokina -> A Davidovich Fokina & A. Davidovich Fokina
+  #   Pierre Hugues Herbert -> P Herbert & Ph Herbert & P. Herbert
+  #   Alex De Minaur -> A. De Minaur & Alex de Minaur & A De Minaur
+  #   Karolina Pliskova -> K. Pliskova & Ka. Pliskova & Ka Pliskova
+  #   Kristyna Pliskova -> K. Pliskova & Kr. Pliskova & Kr Pliskova
+  #   some cases manually remediated (see misc. google doc)
+  #   but quick manual remediation can't help if player in test set has middle name
+  #   and full name isn't in pbp training set.
+  #   Function tries to account for this as follows.
+  
+  # Alex Bee Caine -> c("A. Caine", "A Caine", "A. Bee Caine", "A Bee Caine",
+  #                     "Ab Caine", "A Bee-Caine", "A. Bee-Caine")
+  
+  # This method risks picking up on players with same last name and first letter
+  # But this is unlikely as the pbp training set only 1 case of this - Kr&Ka Pliskova
+  # And this was picked up since there were 2 characters before the space
+  
+  parts <- strsplit(fullname,split=" ")[[1]]
+  n <- length(parts)
+  first.letter <- substr(parts[1],1,1)
+  equiv <- c(fullname,
+             paste(first.letter," ",parts[n],sep=""),
+             paste(first.letter,"."," ",parts[n],sep=""))
+  if (n > 2){
+    rest <- ""
+    rest.dash <- ""
+    for (i in 1:(n-1)){
+      rest <- paste(rest," ",parts[i+1],sep="")
+      rest.dash <- paste(rest.dash,parts[i+1],sep="-")
+    }
+    rest.dash <- substr(rest.dash,2,nchar(rest.dash)) # get rid of first dash
+    first.middle.name.letter <- tolower(substr(parts[2],1,1))
+    rest.more <- "" # for if the name has four or more parts
+    for (i in 1:(n-2)){
+      rest.more <- paste(rest.more," ",parts[i+2],sep="")
+    }
+    # rest contains the first space, rest.dash doesn't
+    equiv <- c(equiv, paste(first.letter,rest,sep=""),
+               paste(first.letter,".",rest,sep=""),
+               paste(first.letter," ",rest.dash,sep=""),
+               paste(first.letter,"."," ",rest.dash,sep=""),
+               paste(first.letter,first.middle.name.letter,rest.more,sep=""))
+  }
+  return(equiv)
+}
+
+get.aggr.by.state <- function(entry){
+  # extract serve won & serve total fields for a player
+  # without surface distinction
+  ret <- rep(0,38)
+  for (i in 1:18){
+    # odd indices for pts won, even for total
+    ret[2*i-1] <- entry[[3+4*i]]
+    ret[2*i] <- entry[[2+4*i]]
+  }
+  ret[37] <- entry[[3]]
+  ret[38] <- entry[[2]]
+  return(ret)
+}
+
+create.p.vector <- function(tst.names,pbp){
+  # returns a dataframe with the rows in the order of names,
+  # the columns being p's for states 1-18 and then t (tiebreak)
+  # final column is overall p regardless of state by taking total won / total serve
+  # names usually from get.unique.players on test data set
+  # pbp is the point-by-point data given
+  # note p-vectors not surface specific
+  
+  n <- length(tst.names)
+  m <- nrow(pbp)
+  pbp.name <- pbp$name
+  aggr <- matrix(0,nrow=n,ncol=38) # 38=2x19, taking won & total to divide later
+  for (i in 1:n){
+    equiv <- get.equiv.names(tst.names[i])
+    p <- length(equiv)
+    for (j in 1:p){
+      for (l in 1:m){
+        # check 1 by 1 since pbp has non-unique names after manual remediation
+        if (tolower(equiv[j])==tolower(pbp.name[l])){
+          more.aggr <- get.aggr.by.state(pbp[l,])
+          aggr[i,] <- aggr[i,]+more.aggr
+        }
+      }
+    }
+  }
+  # now divide odd cols by even cols to obtain p's
+  output <- matrix(0,nrow=n,ncol=20)
+  output <- data.frame(output, row.names=tst.names)
+  for (i in 1:n){
+    for (j in 1:19){
+      output[i,j] <- aggr[i,2*j-1]/aggr[i,2*j]
+    } # note below first seq() output will end at 37
+    output[i,20] <- sum(aggr[i,seq(1,38,by=2)])/sum(aggr[i,seq(2,38,by=2)])
+  }
+  return(output)
+}
+
+grand.slams <- c("Australian Open","Roland Garros","Wimbledon","US Open","Us Open")
+get.time.pre.2022 <- function(p1,p2,match,mu,atp=TRUE){
+  if (match %in% grand.slams){
+    if (match=="US Open"||match=="Us Open"){
+      ret <- match.duration.pw(p1,p2,mu,format=0+atp)
+    } else {
+      ret <- match.duration.pw(p1,p2,mu,format=4+atp)
+    }
+  } else {
+    ret <- match.duration.pw(p1,p2,mu,format=0)
+  }
+  return(ret)
+}
+get.time.post.2022 <- function(p1,p2,match,mu,atp=TRUE){
+  if (match %in% grand.slams){
+    ret <- match.duration.pw(p1,p2,mu,format=2+atp)
+  } else {
+    ret <- match.duration.pw(p1,p2,mu,format=0)
+  }
+  return(ret)
+}
+
+# overall function to do experiments with
+conduct.experiment <- function(inactive.states, P, test.set, mu, atp=TRUE, test.year=0){
+  # inactive.states:
+  #   vector containing states (19 for tiebreak) to deactivate, i.e. 
+  #   replace the state's unique p with the player's overall p
+  # P:
+  #   data.frame containing players' individual p vectors
+  #   usually obtained via create.p.vector output
+  # test.set:
+  #   data set used to test accuracy of prediction
+  # atp:
+  #   boolean defaulted to true if test.set is ATP data
+  # test.year:
+  #   three valid values: 0,1,2
+  #   0 for up to 2018, 1 for 2019 to 2021 inclusive, 2 for 2022 beyond
+  #   no testing year actually falls between 2019-2021, this new version
+  #   just depreicates this, so 1 is not an actual valid input for test.year
+  
+  # make copy of P and change copy to align with specified inactive.states
+  cP <- P[,1:19]
+  cP[,inactive.states] <- P[,20]
+  
+  # record duration estimates
+  n <- nrow(test.set)
+  n.tot <- n
+  exact <- rep(0,n)
+  sse <- 0
+  
+  # experiment begins
+  pbp.names <- rownames(cP)
+  for (i in 1:n){
+    matchup <- test.set[i,]
+    winner <- matchup$winner_name
+    loser <- matchup$loser_name
+    inds <- match(c(winner,loser),pbp.names)
+    winner.P <- unname(unlist(cP[inds[1],]))
+    loser.P <- unname(unlist(cP[inds[2],]))
+    if (test.year==0){
+      exact[i] <- get.time.pre.2022(p1=winner.P,p2=loser.P,
+                                    matchup$tourney_name,mu,atp)
+    } else {
+      exact[i] <- get.time.post.2022(p1=winner.P,p2=loser.P,
+                                    matchup$tourney_name,mu,atp)
+    }
+    if (is.na(matchup$minutes)){
+      n.tot <- n.tot-1
+    } else {
+      sse <- sse + (matchup$minutes-exact[i])^2
+    }
+  }
+  return(list("score"=sqrt(sse/n.tot),"exact"=exact))
+}
+```
+
+# Data
+
+```{r}
+# Testing data
+# if Error: no more error handlers available (recursive errors?); invoking 'abort' restart
+# Warning: type 29 is unimplemented in 'type2char'Error in pmatch(rw, c("read", "write"), 0L) : 
+# INTEGER() can only be applied to a 'integer', not a 'unknown type #29'
+# just run again
+atp.test.2014 <- read.csv('../New Data/atp/atp_testing_2014.csv')
+wta.test.2014 <- read.csv('../New Data/wta/wta_testing_2014.csv')
+atp.test.2018 <- read.csv('../New Data/atp/atp_testing_2018.csv')
+wta.test.2018 <- read.csv('../New Data/wta/wta_testing_2018.csv')
+atp.test.2022 <- read.csv('../New Data/atp/atp_testing_2022.csv')
+wta.test.2022 <- read.csv('../New Data/wta/wta_testing_2022.csv')
+# following function highlights matches that were incomplete
+# this is determined by if the score has letters ("W/O","Def.","RET" etc.)
+# takes as input the score column of a dataset and returns indexes
+ic.match <- function(score) grep("[A-Za-z]",score)
+atp.test.2014 <- atp.test.2014[-ic.match(atp.test.2014$score),]
+wta.test.2014 <- wta.test.2014[-ic.match(wta.test.2014$score),]
+atp.test.2018 <- atp.test.2018[-ic.match(atp.test.2018$score),]
+wta.test.2018 <- wta.test.2018[-ic.match(wta.test.2018$score),]
+atp.test.2022 <- atp.test.2022[-ic.match(atp.test.2022$score),]
+wta.test.2022 <- wta.test.2022[-ic.match(wta.test.2022$score),]
+row.names(atp.test.2014) <- NULL
+row.names(wta.test.2014) <- NULL
+row.names(atp.test.2018) <- NULL
+row.names(wta.test.2018) <- NULL
+row.names(atp.test.2022) <- NULL
+row.names(wta.test.2022) <- NULL
+# Validation data
+atp.val.2013 <- read.csv('../New Data/atp/atp_val_2013.csv')
+wta.val.2013 <- read.csv('../New Data/wta/wta_val_2013.csv')
+atp.val.2017 <- read.csv('../New Data/atp/atp_val_2017.csv')
+wta.val.2017 <- read.csv('../New Data/wta/wta_val_2017.csv')
+atp.val.2021 <- read.csv('../New Data/atp/atp_val_2021.csv')
+wta.val.2021 <- read.csv('../New Data/wta/wta_val_2021.csv')
+atp.val.2013 <- atp.val.2013[-ic.match(atp.val.2013$score),]
+wta.val.2013 <- wta.val.2013[-ic.match(wta.val.2013$score),]
+atp.val.2017 <- atp.val.2017[-ic.match(atp.val.2017$score),]
+wta.val.2017 <- wta.val.2017[-ic.match(wta.val.2017$score),]
+atp.val.2021 <- atp.val.2021[-ic.match(atp.val.2021$score),]
+wta.val.2021 <- wta.val.2021[-ic.match(wta.val.2021$score),]
+row.names(atp.val.2013) <- NULL
+row.names(wta.val.2013) <- NULL
+row.names(atp.val.2017) <- NULL
+row.names(wta.val.2017) <- NULL
+row.names(atp.val.2021) <- NULL
+row.names(wta.val.2021) <- NULL
+# Point-by-Point data
+pbp.123 <- read.csv('../New Data/pbp/2011-2013_pbp_individual.csv')
+pbp.567 <- read.csv('../New Data/pbp/2015-2017_pbp_individual.csv')
+pbp.901 <- read.csv('../New Data/pbp/2019-2021_pbp_individual.csv')
+pbp.12 <- read.csv('../New Data/pbp/2011-2012_pbp_individual.csv')
+pbp.56 <- read.csv('../New Data/pbp/2015-2016_pbp_individual.csv')
+pbp.90 <- read.csv('../New Data/pbp/2019-2020_pbp_individual.csv')
+# Getting unique names
+atp.names.2014 <- get.unique.players(atp.test.2014)
+atp.names.2018 <- get.unique.players(atp.test.2018)
+atp.names.2022 <- get.unique.players(atp.test.2022)
+wta.names.2014 <- get.unique.players(wta.test.2014)
+wta.names.2018 <- get.unique.players(wta.test.2018)
+wta.names.2022 <- get.unique.players(wta.test.2022)
+atp.names.2013 <- get.unique.players(atp.val.2013)
+atp.names.2017 <- get.unique.players(atp.val.2017)
+atp.names.2021 <- get.unique.players(atp.val.2021)
+wta.names.2013 <- get.unique.players(wta.val.2013)
+wta.names.2017 <- get.unique.players(wta.val.2017)
+wta.names.2021 <- get.unique.players(wta.val.2021)
+# create p vectors
+atp.P.123.14 <- create.p.vector(atp.names.2014,pbp.123)
+atp.P.567.18 <- create.p.vector(atp.names.2018,pbp.567)
+atp.P.901.22 <- create.p.vector(atp.names.2022,pbp.901)
+wta.P.123.14 <- create.p.vector(wta.names.2014,pbp.123)
+wta.P.567.18 <- create.p.vector(wta.names.2018,pbp.567)
+wta.P.901.22 <- create.p.vector(wta.names.2022,pbp.901)
+atp.P.12.14 <- create.p.vector(atp.names.2014,pbp.12)
+atp.P.56.18 <- create.p.vector(atp.names.2018,pbp.56)
+atp.P.90.22 <- create.p.vector(atp.names.2022,pbp.90)
+wta.P.12.14 <- create.p.vector(wta.names.2014,pbp.12)
+wta.P.56.18 <- create.p.vector(wta.names.2018,pbp.56)
+wta.P.90.22 <- create.p.vector(wta.names.2022,pbp.90)
+atp.P.123.13 <- create.p.vector(atp.names.2013,pbp.123)
+atp.P.567.17 <- create.p.vector(atp.names.2017,pbp.567)
+atp.P.901.21 <- create.p.vector(atp.names.2021,pbp.901)
+wta.P.123.13 <- create.p.vector(wta.names.2013,pbp.123)
+wta.P.567.17 <- create.p.vector(wta.names.2017,pbp.567)
+wta.P.901.21 <- create.p.vector(wta.names.2021,pbp.901)
+atp.P.12.13 <- create.p.vector(atp.names.2013,pbp.12)
+atp.P.56.17 <- create.p.vector(atp.names.2017,pbp.56)
+atp.P.90.21 <- create.p.vector(atp.names.2021,pbp.90)
+wta.P.12.13 <- create.p.vector(wta.names.2013,pbp.12)
+wta.P.56.17 <- create.p.vector(wta.names.2017,pbp.56)
+wta.P.90.21 <- create.p.vector(wta.names.2021,pbp.90)
+for (i in 1:ncol(atp.P.123.14)){
+  atp.P.123.14[which(is.na(atp.P.123.14[,i])),i] <- 
+    mean(atp.P.123.14[-which(is.na(atp.P.123.14[,i])),i])
+}
+for (i in 1:ncol(atp.P.567.18)){
+  atp.P.567.18[which(is.na(atp.P.567.18[,i])),i] <- 
+    mean(atp.P.567.18[-which(is.na(atp.P.567.18[,i])),i])
+}
+for (i in 1:ncol(atp.P.901.22)){
+  atp.P.901.22[which(is.na(atp.P.901.22[,i])),i] <- 
+    mean(atp.P.901.22[-which(is.na(atp.P.901.22[,i])),i])
+}
+for (i in 1:ncol(wta.P.123.14)){
+  wta.P.123.14[which(is.na(wta.P.123.14[,i])),i] <- 
+    mean(wta.P.123.14[-which(is.na(wta.P.123.14[,i])),i])
+}
+for (i in 1:ncol(wta.P.567.18)){
+  wta.P.567.18[which(is.na(wta.P.567.18[,i])),i] <- 
+    mean(wta.P.567.18[-which(is.na(wta.P.567.18[,i])),i])
+}
+for (i in 1:ncol(wta.P.901.22)){
+  wta.P.901.22[which(is.na(wta.P.901.22[,i])),i] <- 
+    mean(wta.P.901.22[-which(is.na(wta.P.901.22[,i])),i])
+}
+for (i in 1:ncol(atp.P.12.14)){
+  atp.P.12.14[which(is.na(atp.P.12.14[,i])),i] <- 
+    mean(atp.P.12.14[-which(is.na(atp.P.12.14[,i])),i])
+}
+for (i in 1:ncol(atp.P.56.18)){
+  atp.P.56.18[which(is.na(atp.P.56.18[,i])),i] <- 
+    mean(atp.P.56.18[-which(is.na(atp.P.56.18[,i])),i])
+}
+for (i in 1:ncol(atp.P.90.22)){
+  atp.P.90.22[which(is.na(atp.P.90.22[,i])),i] <- 
+    mean(atp.P.90.22[-which(is.na(atp.P.90.22[,i])),i])
+}
+for (i in 1:ncol(wta.P.12.14)){
+  wta.P.12.14[which(is.na(wta.P.12.14[,i])),i] <- 
+    mean(wta.P.12.14[-which(is.na(wta.P.12.14[,i])),i])
+}
+for (i in 1:ncol(wta.P.56.18)){
+  wta.P.56.18[which(is.na(wta.P.56.18[,i])),i] <- 
+    mean(wta.P.56.18[-which(is.na(wta.P.56.18[,i])),i])
+}
+for (i in 1:ncol(wta.P.90.22)){
+  wta.P.90.22[which(is.na(wta.P.90.22[,i])),i] <- 
+    mean(wta.P.90.22[-which(is.na(wta.P.90.22[,i])),i])
+}
+
+for (i in 1:ncol(atp.P.123.13)){
+  atp.P.123.13[which(is.na(atp.P.123.13[,i])),i] <- 
+    mean(atp.P.123.13[-which(is.na(atp.P.123.13[,i])),i])
+}
+for (i in 1:ncol(atp.P.567.17)){
+  atp.P.567.17[which(is.na(atp.P.567.17[,i])),i] <- 
+    mean(atp.P.567.17[-which(is.na(atp.P.567.17[,i])),i])
+}
+for (i in 1:ncol(atp.P.901.21)){
+  atp.P.901.21[which(is.na(atp.P.901.21[,i])),i] <- 
+    mean(atp.P.901.21[-which(is.na(atp.P.901.21[,i])),i])
+}
+for (i in 1:ncol(wta.P.123.13)){
+  wta.P.123.13[which(is.na(wta.P.123.13[,i])),i] <- 
+    mean(wta.P.123.13[-which(is.na(wta.P.123.13[,i])),i])
+}
+for (i in 1:ncol(wta.P.567.17)){
+  wta.P.567.17[which(is.na(wta.P.567.17[,i])),i] <- 
+    mean(wta.P.567.17[-which(is.na(wta.P.567.17[,i])),i])
+}
+for (i in 1:ncol(wta.P.901.21)){
+  wta.P.901.21[which(is.na(wta.P.901.21[,i])),i] <- 
+    mean(wta.P.901.21[-which(is.na(wta.P.901.21[,i])),i])
+}
+for (i in 1:ncol(atp.P.12.13)){
+  atp.P.12.13[which(is.na(atp.P.12.13[,i])),i] <- 
+    mean(atp.P.12.13[-which(is.na(atp.P.12.13[,i])),i])
+}
+for (i in 1:ncol(atp.P.56.17)){
+  atp.P.56.17[which(is.na(atp.P.56.17[,i])),i] <- 
+    mean(atp.P.56.17[-which(is.na(atp.P.56.17[,i])),i])
+}
+for (i in 1:ncol(atp.P.90.21)){
+  atp.P.90.21[which(is.na(atp.P.90.21[,i])),i] <- 
+    mean(atp.P.90.21[-which(is.na(atp.P.90.21[,i])),i])
+}
+for (i in 1:ncol(wta.P.12.13)){
+  wta.P.12.13[which(is.na(wta.P.12.13[,i])),i] <- 
+    mean(wta.P.12.13[-which(is.na(wta.P.12.13[,i])),i])
+}
+for (i in 1:ncol(wta.P.56.17)){
+  wta.P.56.17[which(is.na(wta.P.56.17[,i])),i] <- 
+    mean(wta.P.56.17[-which(is.na(wta.P.56.17[,i])),i])
+}
+for (i in 1:ncol(wta.P.90.21)){
+  wta.P.90.21[which(is.na(wta.P.90.21[,i])),i] <- 
+    mean(wta.P.90.21[-which(is.na(wta.P.90.21[,i])),i])
+}
+```
+```{r}
+rm(list=c("pbp.12","pbp.123","pbp.56","pbp.567","pbp.90","pbp.901"))
+rm (list=c("atp.names.2013","atp.names.2014","atp.names.2017","atp.names.2018",
+           "atp.names.2021","atp.names.2022","wta.names.2013","wta.names.2014",
+           "wta.names.2017","wta.names.2018","wta.names.2021","wta.names.2022"))
+# removing the following as well after settling on train-test-validation approach
+rm(list=c("atp.P.123.13","atp.P.12.14","atp.P.567.17","atp.P.56.18",
+          "atp.P.901.21","atp.P.90.22","wta.P.123.13","wta.P.12.14",
+          "wta.P.567.17","wta.P.56.18","wta.P.901.21","wta.P.90.22"))
+```
+
+# Test
+
+## Baselines
+
+```{r}
+atp14.base <- readRDS("../Results/Individual/t_atp14_basic")
+wta18.base <- readRDS("../Results/Individual/t_wta18_basic")
+atp18.base <- readRDS("../Results/Individual/t_atp18_basic")
+wta22.base <- readRDS("../Results/Individual/t_wta22_basic")
+atp22.base <- readRDS("../Results/Individual/t_atp22_basic")
+```
+
+## ATP 14
+
+```{r}
+# baseline with no activations
+conduct.experiment(1:19,atp.P.123.14,atp.test.2014,
+                   mu=mu.atp14,atp=TRUE,test.year=0)$score
+# activate 1
+res.u <- conduct.experiment((1:19)[-c(1)],atp.P.123.14,atp.test.2014,
+                            mu=mu.atp14,atp=TRUE,test.year=0)
+saveRDS(res.u$exact,"../Results/Individual/t_atp14_psu_accuracy")
+res.u$score
+# deactivate 2
+res.d <- conduct.experiment(c(2),atp.P.123.14,atp.test.2014,
+                            mu=mu.atp14,atp=TRUE,test.year=0)
+saveRDS(res.d$exact,"../Results/Individual/t_atp14_psd_accuracy")
+res.d$score
+```
+
+```{r}
+# Hypothesis test with overall basic baseline
+ind <- which(!is.na(atp.test.2014$minutes))
+t.test(((atp14.base-atp.test.2014$minutes)^2)[ind],
+       ((res.u$exact-atp.test.2014$minutes)^2)[ind],
+       var.equal=TRUE,alternative="greater")$p.value
+# added to see if overall we're overestimating or underestimating
+summary((res.u$exact-atp.test.2014$minutes)[ind])
+t.test(((atp14.base-atp.test.2014$minutes)^2)[ind],
+       ((res.d$exact-atp.test.2014$minutes)^2)[ind],
+       var.equal=TRUE,alternative="greater")$p.value
+# added to see if overall we're overestimating or underestimating
+summary((res.d$exact-atp.test.2014$minutes)[ind])
+```
+Both overestimate
+
+## WTA 18
+
+```{r}
+# baseline with no activations
+conduct.experiment(1:19,wta.P.567.18,wta.test.2018,
+                   mu=mu.wta18,atp=FALSE,test.year=0)$score
+# activate 9
+res.u <- conduct.experiment((1:19)[-c(9)],wta.P.567.18,wta.test.2018,
+                            mu=mu.wta18,atp=FALSE,test.year=0)
+saveRDS(res.u$exact,"../Results/Individual/t_wta18_psu_accuracy")
+res.u$score
+# deactivate 16
+res.d <- conduct.experiment(c(16),wta.P.567.18,wta.test.2018,
+                            mu=mu.wta18,atp=FALSE,test.year=0)
+saveRDS(res.d$exact,"../Results/Individual/t_wta18_psd_accuracy")
+res.d$score
+```
+
+```{r}
+# Hypothesis test with overall basic baseline
+ind <- which(!is.na(wta.test.2018$minutes))
+t.test(((wta18.base-wta.test.2018$minutes)^2)[ind],
+       ((res.u$exact-wta.test.2018$minutes)^2)[ind],
+       var.equal=TRUE,alternative="greater")$p.value
+# added to see if overall we're overestimating or underestimating
+summary((res.u$exact-wta.test.2018$minutes)[ind])
+t.test(((wta18.base-wta.test.2018$minutes)^2)[ind],
+       ((res.d$exact-wta.test.2018$minutes)^2)[ind],
+       var.equal=TRUE,alternative="greater")$p.value
+# added to see if overall we're overestimating or underestimating
+summary((res.d$exact-wta.test.2018$minutes)[ind])
+```
+
+Both overestimate
+
+## ATP 18
+
+```{r}
+# baseline with no activations
+conduct.experiment(1:19,atp.P.567.18,atp.test.2018,
+                   mu=mu.atp18,atp=TRUE,test.year=0)$score
+# activate 12
+res.u <- conduct.experiment((1:19)[-c(12)],atp.P.567.18,atp.test.2018,
+                            mu=mu.atp18,atp=TRUE,test.year=0)
+saveRDS(res.u$exact,"../Results/Individual/t_atp18_psu_accuracy")
+res.u$score
+# deactivate 11
+res.d <- conduct.experiment(c(11),atp.P.567.18,atp.test.2018,
+                            mu=mu.atp18,atp=TRUE,test.year=0)
+saveRDS(res.d$exact,"../Results/Individual/t_atp18_psd_accuracy")
+res.d$score
+```
+
+```{r}
+# Hypothesis test with overall basic baseline
+ind <- which(!is.na(atp.test.2018$minutes))
+t.test(((atp18.base-atp.test.2018$minutes)^2)[ind],
+       ((res.u$exact-atp.test.2018$minutes)^2)[ind],
+       var.equal=TRUE,alternative="greater")$p.value
+# added to see if overall we're overestimating or underestimating
+summary((res.u$exact-atp.test.2018$minutes)[ind])
+t.test(((atp18.base-atp.test.2018$minutes)^2)[ind],
+       ((res.d$exact-atp.test.2018$minutes)^2)[ind],
+       var.equal=TRUE,alternative="greater")$p.value
+# added to see if overall we're overestimating or underestimating
+summary((res.d$exact-atp.test.2018$minutes)[ind])
+```
+
+Both overestimate
+
+## WTA 22
+
+```{r}
+# baseline with no activations
+conduct.experiment(1:19,wta.P.901.22,wta.test.2022,
+                   mu=mu.wta22,atp=FALSE,test.year=2)$score
+# activate 9
+res.u <- conduct.experiment((1:19)[-c(9)],wta.P.901.22,wta.test.2022,
+                            mu=mu.wta22,atp=FALSE,test.year=2)
+saveRDS(res.u$exact,"../Results/Individual/t_wta22_psu_accuracy")
+res.u$score
+# deactivate 16
+res.d <- conduct.experiment(c(16),wta.P.901.22,wta.test.2022,
+                            mu=mu.wta22,atp=FALSE,test.year=2)
+saveRDS(res.d$exact,"../Results/Individual/t_wta22_psd_accuracy")
+res.d$score
+```
+
+```{r}
+# Hypothesis test with overall basic baseline
+ind <- which(!is.na(wta.test.2022$minutes))
+t.test(((wta22.base-wta.test.2022$minutes)^2)[ind],
+       ((res.u$exact-wta.test.2022$minutes)^2)[ind],
+       var.equal=TRUE,alternative="greater")$p.value
+# added to see if overall we're overestimating or underestimating
+summary((res.u$exact-wta.test.2022$minutes)[ind])
+t.test(((wta22.base-wta.test.2022$minutes)^2)[ind],
+       ((res.d$exact-wta.test.2022$minutes)^2)[ind],
+       var.equal=TRUE,alternative="greater")$p.value
+# added to see if overall we're overestimating or underestimating
+summary((res.d$exact-wta.test.2022$minutes)[ind])
+```
+
+Both overestimate
+
+## ATP 22
+
+```{r}
+# baseline with no activations
+conduct.experiment(1:19,atp.P.901.22,atp.test.2022,
+                   mu=mu.atp22,atp=TRUE,test.year=2)$score
+# activate 2
+res.u <- conduct.experiment((1:19)[-c(2)],atp.P.901.22,atp.test.2022,
+                            mu=mu.atp22,atp=TRUE,test.year=2)
+saveRDS(res.u$exact,"../Results/Individual/t_atp22_psu_accuracy")
+res.u$score
+# deactivate 12
+res.d <- conduct.experiment(c(12),atp.P.901.22,atp.test.2022,
+                            mu=mu.atp22,atp=TRUE,test.year=2)
+saveRDS(res.d$exact,"../Results/Individual/t_atp22_psd_accuracy")
+res.d$score
+```
+
+```{r}
+# Hypothesis test with overall basic baseline
+ind <- which(!is.na(atp.test.2022$minutes))
+t.test(((atp22.base-atp.test.2022$minutes)^2)[ind],
+       ((res.u$exact-atp.test.2022$minutes)^2)[ind],
+       var.equal=TRUE,alternative="greater")$p.value
+# added to see if overall we're overestimating or underestimating
+summary((res.u$exact-atp.test.2022$minutes)[ind])
+t.test(((atp22.base-atp.test.2022$minutes)^2)[ind],
+       ((res.d$exact-atp.test.2022$minutes)^2)[ind],
+       var.equal=TRUE,alternative="greater")$p.value
+# added to see if overall we're overestimating or underestimating
+summary((res.d$exact-atp.test.2022$minutes)[ind])
+```

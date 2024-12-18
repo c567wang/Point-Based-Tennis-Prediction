@@ -1,0 +1,6 @@
+List of names with special characters which prevented 4_1, 4_2, 4_3 to properly run.
+They can be more systematically remediated via code with Unicode and regex but here we manually remediated them in the uploaded data sets.
+
+Names: Carla Suárez Navarro, Garbiñe Muguruza, Alizé Cornet, Lourdes Domi­nguez Lino, Daniel Muñoz de la Nava, Mariana Duque-Marino
+
+Special case: 2014 Stanislas Wawrinka -> Stan Wawrinka
