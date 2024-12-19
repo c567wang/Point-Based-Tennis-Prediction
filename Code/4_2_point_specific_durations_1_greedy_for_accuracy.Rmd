@@ -598,3 +598,5 @@ t.test(((atp22.base-atp.test.2022$minutes)^2)[ind],
 # added to see if overall we're overestimating or underestimating
 summary((res.d$exact-atp.test.2022$minutes)[ind])
 ```
+
+Both overestimate

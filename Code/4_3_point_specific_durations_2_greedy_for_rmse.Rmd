@@ -211,39 +211,37 @@ conduct.experiment <- function(inactive.states, P, test.set, mu, atp=TRUE, test.
   return(list("score"=sqrt(sse/n.tot),"exact"=exact))
 }
 
-# --- below still needs to be retooled for duration
-
-downwards.wrapper <- function(deactivate,P,testset,atp,test.year){
+downwards.wrapper <- function(deactivate,P,testset,mu,atp,test.year){
   # atp is boolean for if testset is for ATP
-  scores <- rep(0,19)
+  scores <- rep(1000,19) # initial value would ideally be infinity, raise if not enough
   if (length(deactivate)==0){
     options <- 1:19
   } else {
     options <- (1:19)[-deactivate]
   }
   for (i in options){
-    scores[i] <- conduct.experiment(c(i,deactivate),P,testset,atp,test.year)$score
+    scores[i] <- conduct.experiment(c(i,deactivate),P,testset,mu,atp,test.year)$score
     # so deactivated state's indices will have 0
   }
-  return(list("max"=max(scores),"candidates"=which(scores==max(scores))))
+  return(list("min"=min(scores),"candidates"=which(scores==min(scores))))
 }
-upwards.wrapper <- function(activate,P,testset,atp,test.year){
+upwards.wrapper <- function(activate,P,testset,mu,atp,test.year){
   # atp is boolean for if testset is for ATP
   if (length(activate)==0){
     deactivate <- 1:19
   } else {
     deactivate <- (1:19)[-activate]
   }
-  scores <- rep(0,19)
+  scores <- rep(1000,19) # initial value would ideally be infinity, raise if not enough
   for (i in deactivate){
     deactivate.no.i <- (1:19)[-c(activate,i)]
-    scores[i] <- conduct.experiment(deactivate.no.i,P,testset,atp,test.year)$score
+    scores[i] <- conduct.experiment(deactivate.no.i,P,testset,mu,atp,test.year)$score
     # activated state's indices will have 0
   }
-  return(list("max"=max(scores),"candidates"=which(scores==max(scores))))
+  return(list("min"=min(scores),"candidates"=which(scores==min(scores))))
 }
 
-downwards.experiment <- function(starting.states,P,testset,atp,previous.scores,
+downwards.experiment <- function(starting.states,P,testset,mu,atp,previous.scores,
                                  depth=18,test.year=2){
   
   diverge.lists <- c()
@@ -263,8 +261,8 @@ downwards.experiment <- function(starting.states,P,testset,atp,previous.scores,
   
   while(length(deactivate) < depth){
     
-    res <- downwards.wrapper(deactivate,P,testset,atp,test.year)
-    score <- res$max
+    res <- downwards.wrapper(deactivate,P,testset,mu,atp,test.year)
+    score <- res$min
     cands <- res$candidates
     scores.sofar <- c(path[[1]],score)
     
@@ -274,7 +272,7 @@ downwards.experiment <- function(starting.states,P,testset,atp,previous.scores,
       for (i in 2:l){
         diverge.lists <- c(
           diverge.lists,
-          downwards.experiment(c(deactivate,cands[i]),P,testset,atp,scores.sofar,
+          downwards.experiment(c(deactivate,cands[i]),P,testset,mu,atp,scores.sofar,
                                depth,test.year))
       }
     }
@@ -289,7 +287,7 @@ downwards.experiment <- function(starting.states,P,testset,atp,previous.scores,
   return(ovr.list)
 }
 
-upwards.experiment <- function(starting.states,P,testset,atp,previous.scores,
+upwards.experiment <- function(starting.states,P,testset,mu,atp,previous.scores,
                                depth=18,test.year=2){
   
   diverge.lists <- c()
@@ -309,8 +307,8 @@ upwards.experiment <- function(starting.states,P,testset,atp,previous.scores,
   
   while(length(activate) < depth){
     
-    res <- upwards.wrapper(activate,P,testset,atp,test.year)
-    score <- res$max
+    res <- upwards.wrapper(activate,P,testset,mu,atp,test.year)
+    score <- res$min
     cands <- res$candidates
     scores.sofar <- c(path[[1]],score)
     
@@ -320,7 +318,7 @@ upwards.experiment <- function(starting.states,P,testset,atp,previous.scores,
       for (i in 2:l){
         diverge.lists <- c(
           diverge.lists,
-          upwards.experiment(c(activate,cands[i]),P,testset,atp,scores.sofar,
+          upwards.experiment(c(activate,cands[i]),P,testset,mu,atp,scores.sofar,
                              depth,test.year))
       }
     }
@@ -336,14 +334,14 @@ upwards.experiment <- function(starting.states,P,testset,atp,previous.scores,
 }
 
 plot.path.score <- function(n.down,dat.down,n.up,dat.up,
-                      P, test.set, atp=TRUE, main="Score",
-                      ylim.lower=0.55,ylim.upper=0.7,hide.axis=FALSE,test.year=0){
+                      P, test.set, mu, atp=TRUE, main="Score",
+                      ylim.lower=30,ylim.upper=50,hide.axis=FALSE,test.year=0){
   # n - length of path given
   # dat - data saved containing paths
   # ylim.lower(upper) - ylim for plot, set to around 0(20) for type=2
   
-  baseline.down <- conduct.experiment(c(),P,test.set,atp,test.year)$score
-  baseline.up <- conduct.experiment(1:19,P,test.set,atp,test.year)$score
+  baseline.down <- conduct.experiment(c(),P,test.set,mu,atp,test.year)$score
+  baseline.up <- conduct.experiment(1:19,P,test.set,mu,atp,test.year)$score
   
   if (hide.axis) {
     plot(0:n.up,c(baseline.up,dat.up[[1]][[1]]),'l',
@@ -586,6 +584,132 @@ rm(list=c("atp.P.123.13","atp.P.12.14","atp.P.567.17","atp.P.56.18",
           "wta.P.567.17","wta.P.56.18","wta.P.901.21","wta.P.90.22"))
 ```
 
+# State Selection / Validation
+
+## ATP 14
+
+```{r}
+# d <- downwards.experiment(c(),atp.P.12.13,atp.val.2013,
+#                           mu.atp14,TRUE,c(),depth=5,test.year=0)
+# saveRDS(d, file="plateaus/td5_atp_2014.rds")
+```
+```{r}
+# u <- upwards.experiment(c(),atp.P.12.13,atp.val.2013,
+#                         mu.atp14,TRUE,c(),depth=5,test.year=0)
+# saveRDS(u, file="plateaus/tu5_atp_2014.rds")
+```
+```{r}
+d5.atp14 <- readRDS("plateaus/td5_atp_2014.rds")
+u5.atp14 <- readRDS("plateaus/tu5_atp_2014.rds")
+```
+```{r}
+plot.path.score(5,d5.atp14,5,u5.atp14,atp.P.12.13,atp.val.2013,
+                mu=mu.atp14,atp=TRUE,main="ATP 2014")
+```
+```{r}
+plot.path.state(5,d5.atp14,5,u5.atp14,main="ATP 2014")
+```
+
+No significant pit/inverse plateau effect, no need to test pit significance later; activate 18, deactivate 5. (Strengthens previous plateau observations, and makes sense -- the activation/deactivations are toggling the relative strengths of the players, which has a much more direct relationship to match outcome compared to match duration.)
+
+## WTA 18
+
+```{r}
+# d <- downwards.experiment(c(),wta.P.56.17,wta.val.2017,
+#                           mu.wta18,FALSE,c(),depth=5,test.year=0)
+# saveRDS(d, file="plateaus/td5_wta_2018.rds")
+```
+```{r}
+# u <- upwards.experiment(c(),wta.P.56.17,wta.val.2017,
+#                         mu.wta18,FALSE,c(),depth=5,test.year=0)
+# saveRDS(u, file="plateaus/tu5_wta_2018.rds")
+```
+```{r}
+d5.wta18 <- readRDS("plateaus/td5_wta_2018.rds")
+u5.wta18 <- readRDS("plateaus/tu5_wta_2018.rds")
+```
+```{r}
+plot.path.score(5,d5.wta18,5,u5.wta18,wta.P.56.17,wta.val.2017,
+                mu=mu.wta18,atp=FALSE,main="WTA 2018")
+```
+```{r}
+plot.path.state(5,d5.wta18,5,u5.wta18,main="WTA 2018")
+```
+
+activate 11, deactivate 16
+
+## ATP 18
+
+```{r}
+# d <- downwards.experiment(c(),atp.P.56.17,atp.val.2017,
+#                           mu.atp18,TRUE,c(),depth=5,test.year=0)
+# saveRDS(d, file="plateaus/td5_atp_2018.rds")
+```
+```{r}
+# u <- upwards.experiment(c(),atp.P.56.17,atp.val.2017,
+#                        mu.atp18,TRUE,c(),depth=5,test.year=0)
+# saveRDS(u, file="plateaus/tu5_atp_2018.rds")
+```
+```{r}
+d5.atp18 <- readRDS("plateaus/td5_atp_2018.rds")
+u5.atp18 <- readRDS("plateaus/tu5_atp_2018.rds")
+```
+```{r}
+plot.path.score(5,d5.atp18,5,u5.atp18,atp.P.56.17,atp.val.2017,
+                mu=mu.atp18,atp=TRUE,main="ATP 2018")
+plot.path.state(5,d5.atp18,5,u5.atp18,main="ATP 2018")
+```
+
+activate 15, deactivate 17
+
+## WTA 22
+
+```{r}
+# d <- downwards.experiment(c(),wta.P.90.21,wta.val.2021,
+#                           mu.wta22,FALSE,c(),depth=5,test.year=2)
+# saveRDS(d, file="plateaus/td5_wta_2022.rds")
+```
+```{r}
+# u <- upwards.experiment(c(),wta.P.90.21,wta.val.2021,
+#                         mu.wta22,FALSE,c(),depth=5,test.year=2)
+# saveRDS(u, file="plateaus/tu5_wta_2022.rds")
+```
+```{r}
+d5.wta22 <- readRDS("plateaus/td5_wta_2022.rds")
+u5.wta22 <- readRDS("plateaus/tu5_wta_2022.rds")
+```
+```{r}
+plot.path.score(5,d5.wta22,5,u5.wta22,wta.P.90.21,wta.val.2021,
+                mu=mu.wta22,atp=FALSE,main="WTA 2022",test.year=2)
+plot.path.state(5,d5.wta22,5,u5.wta22,main="WTA 2022")
+```
+
+activate 11, deactivate 5
+
+## ATP 22
+
+```{r}
+# d <- downwards.experiment(c(),atp.P.90.21,atp.val.2021,
+#                           mu.atp22,TRUE,c(),depth=5,test.year=2)
+# saveRDS(d, file="plateaus/td5_atp_2022.rds")
+```
+```{r}
+# u <- upwards.experiment(c(),atp.P.90.21,atp.val.2021,
+#                        mu.atp22,TRUE,c(),depth=5,test.year=2)
+# saveRDS(u, file="plateaus/tu5_atp_2022.rds")
+```
+```{r}
+d5.atp22 <- readRDS("plateaus/td5_atp_2022.rds")
+u5.atp22 <- readRDS("plateaus/tu5_atp_2022.rds")
+```
+```{r}
+plot.path.score(5,d5.atp22,5,u5.atp22,atp.P.90.21,atp.val.2021,
+                mu=mu.atp22,atp=TRUE,main="ATP 2022",test.year=2)
+plot.path.state(5,d5.atp22,5,u5.atp22,main="ATP 2022")
+```
+
+activate 18, deactivate 17
+
 # Test
 
 ## Baselines
@@ -604,13 +728,13 @@ atp22.base <- readRDS("../Results/Individual/t_atp22_basic")
 # baseline with no activations
 conduct.experiment(1:19,atp.P.123.14,atp.test.2014,
                    mu=mu.atp14,atp=TRUE,test.year=0)$score
-# activate
-res.u <- conduct.experiment((1:19)[-c()],atp.P.123.14,atp.test.2014,
+# activate 18
+res.u <- conduct.experiment((1:19)[-c(18)],atp.P.123.14,atp.test.2014,
                             mu=mu.atp14,atp=TRUE,test.year=0)
 saveRDS(res.u$exact,"../Results/Individual/t_atp14_psu_rmse")
 res.u$score
-# deactivate
-res.d <- conduct.experiment(c(),atp.P.123.14,atp.test.2014,
+# deactivate 5
+res.d <- conduct.experiment(c(5),atp.P.123.14,atp.test.2014,
                             mu=mu.atp14,atp=TRUE,test.year=0)
 saveRDS(res.d$exact,"../Results/Individual/t_atp14_psd_rmse")
 res.d$score
@@ -638,13 +762,13 @@ Both overestimate
 # baseline with no activations
 conduct.experiment(1:19,wta.P.567.18,wta.test.2018,
                    mu=mu.wta18,atp=FALSE,test.year=0)$score
-# activate 
-res.u <- conduct.experiment((1:19)[-c()],wta.P.567.18,wta.test.2018,
+# activate 11
+res.u <- conduct.experiment((1:19)[-c(11)],wta.P.567.18,wta.test.2018,
                             mu=mu.wta18,atp=FALSE,test.year=0)
 saveRDS(res.u$exact,"../Results/Individual/t_wta18_psu_rmse")
 res.u$score
-# deactivate 
-res.d <- conduct.experiment(c(),wta.P.567.18,wta.test.2018,
+# deactivate 16
+res.d <- conduct.experiment(c(16),wta.P.567.18,wta.test.2018,
                             mu=mu.wta18,atp=FALSE,test.year=0)
 saveRDS(res.d$exact,"../Results/Individual/t_wta18_psd_rmse")
 res.d$score
@@ -673,13 +797,13 @@ Both overestimate
 # baseline with no activations
 conduct.experiment(1:19,atp.P.567.18,atp.test.2018,
                    mu=mu.atp18,atp=TRUE,test.year=0)$score
-# activate 
-res.u <- conduct.experiment((1:19)[-c()],atp.P.567.18,atp.test.2018,
+# activate 15
+res.u <- conduct.experiment((1:19)[-c(15)],atp.P.567.18,atp.test.2018,
                             mu=mu.atp18,atp=TRUE,test.year=0)
 saveRDS(res.u$exact,"../Results/Individual/t_atp18_psu_rmse")
 res.u$score
-# deactivate 
-res.d <- conduct.experiment(c(),atp.P.567.18,atp.test.2018,
+# deactivate 17
+res.d <- conduct.experiment(c(17),atp.P.567.18,atp.test.2018,
                             mu=mu.atp18,atp=TRUE,test.year=0)
 saveRDS(res.d$exact,"../Results/Individual/t_atp18_psd_rmse")
 res.d$score
@@ -708,13 +832,13 @@ Both overestimate
 # baseline with no activations
 conduct.experiment(1:19,wta.P.901.22,wta.test.2022,
                    mu=mu.wta22,atp=FALSE,test.year=2)$score
-# activate 
-res.u <- conduct.experiment((1:19)[-c()],wta.P.901.22,wta.test.2022,
+# activate 11
+res.u <- conduct.experiment((1:19)[-c(11)],wta.P.901.22,wta.test.2022,
                             mu=mu.wta22,atp=FALSE,test.year=2)
 saveRDS(res.u$exact,"../Results/Individual/t_wta22_psu_rmse")
 res.u$score
-# deactivate 
-res.d <- conduct.experiment(c(),wta.P.901.22,wta.test.2022,
+# deactivate 5
+res.d <- conduct.experiment(c(5),wta.P.901.22,wta.test.2022,
                             mu=mu.wta22,atp=FALSE,test.year=2)
 saveRDS(res.d$exact,"../Results/Individual/t_wta22_psd_rmse")
 res.d$score
@@ -743,13 +867,13 @@ Both overestimate
 # baseline with no activations
 conduct.experiment(1:19,atp.P.901.22,atp.test.2022,
                    mu=mu.atp22,atp=TRUE,test.year=2)$score
-# activate 
-res.u <- conduct.experiment((1:19)[-c()],atp.P.901.22,atp.test.2022,
+# activate 18
+res.u <- conduct.experiment((1:19)[-c(18)],atp.P.901.22,atp.test.2022,
                             mu=mu.atp22,atp=TRUE,test.year=2)
 saveRDS(res.u$exact,"../Results/Individual/t_atp22_psu_rmse")
 res.u$score
-# deactivate 
-res.d <- conduct.experiment(c(),atp.P.901.22,atp.test.2022,
+# deactivate 17
+res.d <- conduct.experiment(c(17),atp.P.901.22,atp.test.2022,
                             mu=mu.atp22,atp=TRUE,test.year=2)
 saveRDS(res.d$exact,"../Results/Individual/t_atp22_psd_rmse")
 res.d$score
@@ -769,3 +893,4 @@ t.test(((atp22.base-atp.test.2022$minutes)^2)[ind],
 # added to see if overall we're overestimating or underestimating
 summary((res.d$exact-atp.test.2022$minutes)[ind])
 ```
+Both overestimate

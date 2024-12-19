@@ -6,7 +6,7 @@ Now organized into chapters which can be independently run.
 
 ## New Data
 
-"New" relative to the data in the archive directory. All from [Jeff Sackmann’s GitHub](https://github.com/JeffSackmann). Title of directory cannot be changed without making corresponding changes in the Jupyter notebooks under the Code directory.
+"New" relative to the data in the archive directory. All from [Jeff Sackmann’s GitHub](https://github.com/JeffSackmann). Sackmann’s data is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/). According to its ShareAlike term, data provided here falls under the same license. The title of the data directory cannot be changed without making corresponding changes in the Jupyter notebooks under the Code directory.
 
 ## Misc.
 
