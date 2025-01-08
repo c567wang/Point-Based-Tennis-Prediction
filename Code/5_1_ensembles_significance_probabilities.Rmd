@@ -473,17 +473,18 @@ merge <- function(...){
   res <- c()
   N <- length(x[[1]]) # length of one component
   for (i in 1:N){
-    sum <- 0
-    incomplete <- FALSE # flag for when merge should not be conducted
+    sum <- 0 # running sum for averaging
+    num <- 0 # number of given lists that have coverage for this entry
+    no.coverage <- TRUE # flag for when merge should not be conducted
     for (j in 1:n){
-      if (x[[j]][i]<0){
-        incomplete <- TRUE
-        break
+      if (x[[j]][i]>=0){
+        sum <- sum+x[[j]][i]
+        num <- num+1
+        no.coverage <- FALSE
       }
-      sum <- sum+x[[j]][i]
     }
-    if (incomplete) next
-    res <- c(res,sum/n)
+    if (no.coverage) next
+    res <- c(res,sum/num)
   }
   res <- res>=0.5
   return(res)
