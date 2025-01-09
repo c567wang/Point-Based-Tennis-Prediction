@@ -1,0 +1,35 @@
+---
+title: "Correlation between Accuracies and RMSEs for Individual Results"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# manual accuracy and duration rmse scores from results spreadsheet
+accuracy <- c(0.59023,0.63835,0.63415,0.64340, # atp 14
+              0.60124,0.63006,0.58138,0.59070, # wta 18
+              0.61733,0.63957,0.63395,0.64122, # atp 18
+              0.60175,0.63166,0.59055,0.52372, # wta 22
+              0.60820,0.65164,0.61471,0.61674) # atp 22
+rmse <- c(42.83261,40.92694,42.1763,40.73772,  # atp 14
+          49.37423,49.09437,50.28881,64.90247, # wta 18
+          43.18453,42.71323,43.56084,46.78802, # atp 18
+          33.01183,33.07469,32.77271,34.18973, # wta 22
+          45.13423,44.65613,44.83542,46.22931) # atp 22
+```
+
+```{r}
+cor.test(accuracy,rmse,method="pearson")
+cor.test(accuracy,rmse,method="kendall")
+cor.test(accuracy,rmse,method="spearman")
+```
+We prioritize Kendall'a tau for this data, but in any case none are signficant.
+
+```{r}
+cor.test(accuracy,rmse,alternative="less",method="kendall")
+```
+
+Despite some overall similarities, most notably OAF performing best overall, there is no significant negative correlation between the two sets of results.
