@@ -621,7 +621,7 @@ prop.test(c(sum(wta22.oaf.pure.valid>0.5),sum(wta22.co.oaf.valid>0.5)),
           alternative="less",correct=FALSE)$p.value
 ```
 
-## Significance of Pure Basic and Overlays w/out Imputations
+## Significance of Pure Basic and OAF w/out Imputations vs With
 
 ```{r}
 # H0: basic pure less than or equal to basic
@@ -664,6 +664,30 @@ prop.test(c(sum(atp22.oaf>0.5),sum(atp22.oaf.pure.valid>0.5)),
           alternative="less",correct=FALSE)$p.value
 prop.test(c(sum(wta22.oaf>0.5),sum(wta22.oaf.pure.valid>0.5)),
           c(length(wta22.oaf),length(wta22.oaf.pure.valid)),
+          alternative="less",correct=FALSE)$p.value
+```
+
+## Significance of OAF Pure over Basic Pure
+
+```{r}
+# H0: OAF pure less than or equal to Basic pure
+prop.test(c(sum(atp14.basic.pure.valid>0.5),sum(atp14.oaf.pure.valid>0.5)),
+          c(length(atp14.basic.pure.valid),length(atp14.oaf.pure.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta14.basic.pure.valid>0.5),sum(wta14.oaf.pure.valid>0.5)),
+          c(length(wta14.basic.pure.valid),length(wta14.oaf.pure.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp18.basic.pure.valid>0.5),sum(atp18.oaf.pure.valid>0.5)),
+          c(length(atp18.basic.pure.valid),length(atp18.oaf.pure.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta18.basic.pure.valid>0.5),sum(wta18.oaf.pure.valid>0.5)),
+          c(length(wta18.basic.pure.valid),length(wta18.oaf.pure.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(atp22.basic.pure.valid>0.5),sum(atp22.oaf.pure.valid>0.5)),
+          c(length(atp22.basic.pure.valid),length(atp22.oaf.pure.valid)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(wta22.basic.pure.valid>0.5),sum(wta22.oaf.pure.valid>0.5)),
+          c(length(wta22.basic.pure.valid),length(wta22.oaf.pure.valid)),
           alternative="less",correct=FALSE)$p.value
 ```
 
