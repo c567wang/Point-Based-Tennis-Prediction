@@ -1,0 +1,54 @@
+---
+title: "Additional Figures"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Figure 3A - Consensus Coverage vs. Accuracy & Significance
+
+```{r}
+dat.3a <- read.csv("../New Data/misc/ens_consensus_aggregate.csv")
+cov.3a <- as.numeric(sub("%","",dat.3a$Coverage))
+```
+
+```{r}
+fit.3a.acc <- lm(dat.3a$Mean.Accuracy~cov.3a)
+```
+
+```{r}
+plot(cov.3a,dat.3a$Mean.Accuracy)
+```
+
+```{r}
+fit.3a.sig <- lm(dat.3a$Mean.Significance~cov.3a)
+```
+
+```{r}
+plot(cov.3a,dat.3a$Mean.Significance)
+```
+
+## Figure 3B - Majority Coverage vs. Accuracy & Significance
+
+```{r}
+dat.3b <- read.csv("../New Data/misc/ens_majority_aggregate.csv")
+cov.3b <- as.numeric(sub("%","",dat.3b$Coverage))
+```
+
+```{r}
+fit.3b.acc <- lm(dat.3b$Mean.Accuracy~cov.3b)
+```
+
+```{r}
+plot(cov.3b,dat.3b$Mean.Accuracy)
+```
+
+```{r}
+fit.3b.sig <- lm(dat.3b$Mean.Significance~cov.3b)
+```
+
+```{r}
+plot(cov.3b,dat.3b$Mean.Significance)
+```
