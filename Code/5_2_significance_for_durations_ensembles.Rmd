@@ -100,47 +100,73 @@ atp22.h2h <- atp22.h2h[ind.atp22]
 atp22.co <- atp22.co[ind.atp22]
 atp22.cooaf <- atp22.cooaf[ind.atp22]
 
-atp14.psu <- readRDS("../Results/Individual/t_atp14_psu_accuracy")
-atp14.psu <- atp14.psu[ind.atp14]
-wta18.psu <- readRDS("../Results/Individual/t_wta18_psu_accuracy")
-wta18.psu <- wta18.psu[ind.wta18]
-atp18.psu <- readRDS("../Results/Individual/t_atp18_psu_accuracy")
-atp18.psu <- atp18.psu[ind.atp18]
-wta22.psu <- readRDS("../Results/Individual/t_wta22_psu_accuracy")
-wta22.psu <- wta22.psu[ind.wta22]
-atp22.psu <- readRDS("../Results/Individual/t_atp22_psu_accuracy")
-atp22.psu <- atp22.psu[ind.atp22]
-atp14.psd <- readRDS("../Results/Individual/t_atp14_psd_accuracy")
-atp14.psd <- atp14.psd[ind.atp14]
-wta18.psd <- readRDS("../Results/Individual/t_wta18_psd_accuracy")
-wta18.psd <- wta18.psd[ind.wta18]
-atp18.psd <- readRDS("../Results/Individual/t_atp18_psd_accuracy")
-atp18.psd <- atp18.psd[ind.atp18]
-wta22.psd <- readRDS("../Results/Individual/t_wta22_psd_accuracy")
-wta22.psd <- wta22.psd[ind.wta22]
-atp22.psd <- readRDS("../Results/Individual/t_atp22_psd_accuracy")
-atp22.psd <- atp22.psd[ind.atp22]
+atp14.psu.a <- readRDS("../Results/Individual/t_atp14_psu_accuracy")
+atp14.psu.a <- atp14.psu.a[ind.atp14]
+wta18.psu.a <- readRDS("../Results/Individual/t_wta18_psu_accuracy")
+wta18.psu.a <- wta18.psu.a[ind.wta18]
+atp18.psu.a <- readRDS("../Results/Individual/t_atp18_psu_accuracy")
+atp18.psu.a <- atp18.psu.a[ind.atp18]
+wta22.psu.a <- readRDS("../Results/Individual/t_wta22_psu_accuracy")
+wta22.psu.a <- wta22.psu.a[ind.wta22]
+atp22.psu.a <- readRDS("../Results/Individual/t_atp22_psu_accuracy")
+atp22.psu.a <- atp22.psu.a[ind.atp22]
+atp14.psd.a <- readRDS("../Results/Individual/t_atp14_psd_accuracy")
+atp14.psd.a <- atp14.psd.a[ind.atp14]
+wta18.psd.a <- readRDS("../Results/Individual/t_wta18_psd_accuracy")
+wta18.psd.a <- wta18.psd.a[ind.wta18]
+atp18.psd.a <- readRDS("../Results/Individual/t_atp18_psd_accuracy")
+atp18.psd.a <- atp18.psd.a[ind.atp18]
+wta22.psd.a <- readRDS("../Results/Individual/t_wta22_psd_accuracy")
+wta22.psd.a <- wta22.psd.a[ind.wta22]
+atp22.psd.a <- readRDS("../Results/Individual/t_atp22_psd_accuracy")
+atp22.psd.a <- atp22.psd.a[ind.atp22]
+
+atp14.psu.e <- readRDS("../Results/Individual/t_atp14_psu_rmse")
+atp14.psu.e <- atp14.psu.e[ind.atp14]
+wta18.psu.e <- readRDS("../Results/Individual/t_wta18_psu_rmse")
+wta18.psu.e <- wta18.psu.e[ind.wta18]
+atp18.psu.e <- readRDS("../Results/Individual/t_atp18_psu_rmse")
+atp18.psu.e <- atp18.psu.e[ind.atp18]
+wta22.psu.e <- readRDS("../Results/Individual/t_wta22_psu_rmse")
+wta22.psu.e <- wta22.psu.e[ind.wta22]
+atp22.psu.e <- readRDS("../Results/Individual/t_atp22_psu_rmse")
+atp22.psu.e <- atp22.psu.e[ind.atp22]
+atp14.psd.e <- readRDS("../Results/Individual/t_atp14_psd_rmse")
+atp14.psd.e <- atp14.psd.e[ind.atp14]
+wta18.psd.e <- readRDS("../Results/Individual/t_wta18_psd_rmse")
+wta18.psd.e <- wta18.psd.e[ind.wta18]
+atp18.psd.e <- readRDS("../Results/Individual/t_atp18_psd_rmse")
+atp18.psd.e <- atp18.psd.e[ind.atp18]
+wta22.psd.e <- readRDS("../Results/Individual/t_wta22_psd_rmse")
+wta22.psd.e <- wta22.psd.e[ind.wta22]
+atp22.psd.e <- readRDS("../Results/Individual/t_atp22_psd_rmse")
+atp22.psd.e <- atp22.psd.e[ind.atp22]
 ```
 
 ## Dataframes
 
 ```{r}
 # column order of df's must be in order of tags below
-tag <- c("H2H","CO","OAF","CO(OAF)","PSU","PSD")
+tag <- c("H2H","CO","OAF","CO(OAF)","PSU.A","PSD.A","PSU.E","PSD.E")
 atp14.df <- data.frame(cbind(atp14.h2h,atp14.co,atp14.oaf,
-                             atp14.cooaf,atp14.psu,atp14.psd))
+                             atp14.cooaf,atp14.psu.a,atp14.psd.a,
+                             atp14.psu.e,atp14.psd.e))
 colnames(atp14.df) <- tag
 atp18.df <- data.frame(cbind(atp18.h2h,atp18.co,atp18.oaf,
-                             atp18.cooaf,atp18.psu,atp18.psd))
+                             atp18.cooaf,atp18.psu.a,atp18.psd.a,
+                             atp18.psu.e,atp18.psd.e))
 colnames(atp18.df) <- tag
 wta18.df <- data.frame(cbind(wta18.h2h,wta18.co,wta18.oaf,
-                             wta18.cooaf,wta18.psu,wta18.psd))
+                             wta18.cooaf,wta18.psu.a,wta18.psd.a,
+                             wta18.psu.e,wta18.psd.e))
 colnames(wta18.df) <- tag
 atp22.df <- data.frame(cbind(atp22.h2h,atp22.co,atp22.oaf,
-                             atp22.cooaf,atp22.psu,atp22.psd))
+                             atp22.cooaf,atp22.psu.a,atp22.psd.a,
+                             atp22.psu.e,atp22.psd.e))
 colnames(atp22.df) <- tag
 wta22.df <- data.frame(cbind(wta22.h2h,wta22.co,wta22.oaf,
-                             wta22.cooaf,wta22.psu,wta22.psd))
+                             wta22.cooaf,wta22.psu.a,wta22.psd.a,
+                             wta22.psu.e,wta22.psd.e))
 colnames(wta22.df) <- tag
 ```
 
@@ -194,13 +220,14 @@ ensemble.results <- function(df,df.id,approach,sep="+"){
     test <- atp22.test$minutes
   }
   
-  res <- data.frame(matrix(0,nrow=57,ncol=3)) # nrow=57=6c2+6c3+6c4+6c5+6c6
+  # nrow=247=8c2+8c3+8c4+8c5+8c6+8c7+8c8=2^8-8-1
+  res <- data.frame(matrix(0,nrow=247,ncol=3))
   colnames(res) <- c("score","p-value","coverage")
   row.idx <- 1
   
-  # 6c2
-  for (i in 1:5){
-    for (j in (i+1):6){
+  # 8c2
+  for (i in 1:7){
+    for (j in (i+1):8){
       ens <- approach(df[,i],df[,j])
       sqr.err <- (test-ens)^2
       sqr.err <- sqr.err[which(!is.na(sqr.err))]
@@ -212,10 +239,10 @@ ensemble.results <- function(df,df.id,approach,sep="+"){
       row.idx <- row.idx+1
     }
   }
-  # 6c3
-  for (i in 1:4){
-    for (j in (i+1):5){
-      for (k in (j+1):6){
+  # 8c3
+  for (i in 1:6){
+    for (j in (i+1):7){
+      for (k in (j+1):8){
         ens <- approach(df[,i],df[,j],df[,k])
         sqr.err <- (test-ens)^2
         sqr.err <- sqr.err[which(!is.na(sqr.err))]
@@ -228,9 +255,43 @@ ensemble.results <- function(df,df.id,approach,sep="+"){
       }
     }
   }
-  # 6c4
+  # 8c4
   for (i in 1:5){
     for (j in (i+1):6){
+      for (k in (j+1):7){
+        for (l in (k+1):8){
+          ens <- approach(df[,i],df[,j],df[,k],df[,l])
+          sqr.err <- (test-ens)^2
+          sqr.err <- sqr.err[which(!is.na(sqr.err))]
+          res[row.idx,1] <- sqrt(mean(sqr.err))
+          res[row.idx,2] <- t.test((test-basic.comp)^2,sqr.err,
+                                   var.equal=TRUE,alternative="greater")$p.value
+          res[row.idx,3] <- length(sqr.err)
+          rownames(res)[row.idx] <- paste(tag[i],tag[j],tag[k],tag[l],sep=sep)
+          row.idx <- row.idx+1
+        }
+      }
+    }
+  }
+  # 8c5
+  for (i in 1:6){
+    for (j in (i+1):7){
+      for (k in (j+1):8){
+        ens <- approach(as.list(df[,-c(i,j,k)]))
+        sqr.err <- (test-ens)^2
+        sqr.err <- sqr.err[which(!is.na(sqr.err))]
+        res[row.idx,1] <- sqrt(mean(sqr.err))
+        res[row.idx,2] <- t.test((test-basic.comp)^2,sqr.err,
+                                 var.equal=TRUE,alternative="greater")$p.value
+        res[row.idx,3] <- length(sqr.err)
+        rownames(res)[row.idx] <- paste(tag[-c(i,j,k)],collapse=sep)
+        row.idx <- row.idx+1
+      }
+    }
+  }
+  # 8c6
+  for (i in 1:7){
+    for (j in (i+1):8){
       ens <- approach(as.list(df[,-c(i,j)]))
       sqr.err <- (test-ens)^2
       sqr.err <- sqr.err[which(!is.na(sqr.err))]
@@ -242,8 +303,8 @@ ensemble.results <- function(df,df.id,approach,sep="+"){
       row.idx <- row.idx+1
     }
   }
-  # 6c5
-  for (i in 1:6){
+  # 8c7
+  for (i in 1:8){
     ens <- approach(as.list(df[,-c(i)]))
     sqr.err <- (test-ens)^2
     sqr.err <- sqr.err[which(!is.na(sqr.err))]
