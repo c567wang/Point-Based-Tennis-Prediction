@@ -1,0 +1,507 @@
+---
+title: "Appendix B Tests (Preliminary Study)"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Note get.prob function has to be changed according to whether test set is pre or post 2022.
+
+```{r}
+source("2_1_hierarchical_model_probabilities.R")
+grand.slams <- c("Australian Open","Roland Garros","Wimbledon","Us Open","US Open")
+# "Us Open" specific to 2022 test sets
+get.prob.pre.2022 <- function(p1,p2,match,atp=FALSE){
+  if (is.na(p1)||is.na(p2)){
+    return(NA)
+  }
+  if (match %in% grand.slams){
+    if (match=="US Open"){
+      ret <- match.win.prob.nonpw(p1,p2,format=0+atp)
+    } else {
+      ret <- match.win.prob.nonpw(p1,p2,format=4+atp)
+    }
+  } else {
+    ret <- match.win.prob.nonpw(p1,p2,format=0)
+  }
+  return(ret)
+}
+get.prob.post.2022 <- function(p1,p2,match,atp=FALSE){
+  if (is.na(p1)||is.na(p2)){
+    return(NA)
+  }
+  if (match %in% grand.slams){
+    ret <- match.win.prob.nonpw(p1,p2,format=2+atp)
+  } else {
+    ret <- match.win.prob.nonpw(p1,p2,format=0)
+  }
+  return(ret)
+}
+```
+
+## Data
+
+```{r}
+# testing data
+# if Error: no more error handlers available (recursive errors?); invoking 'abort' restart
+# Warning: type 29 is unimplemented in 'type2char'Error in pmatch(rw, c("read", "write"), 0L) : 
+# INTEGER() can only be applied to a 'integer', not a 'unknown type #29'
+# just run again
+atp.test <- read.csv('../New Data/atp/atp_testing_2014.csv')
+wta.test <- read.csv('../New Data/wta/wta_testing_2014.csv')
+```
+```{r}
+# following function highlights matches that were incomplete
+# this is determined by if the score has letters ("W/O","Def.","RET" etc.)
+# takes as input the score column of a dataset and returns indexes
+ic.match <- function(score) grep("[A-Za-z]",score)
+ic.atp <- ic.match(atp.test$score)
+ic.wta <- ic.match(wta.test$score)
+```
+```{r}
+# training data
+atp.basic.1 <- read.csv('../New Data/misc/atp/2013_atp_individual.csv')
+wta.basic.1 <- read.csv('../New Data/misc/wta/2013_wta_individual.csv')
+atp.co.1 <- read.csv('../New Data/misc/atp/2013_atp_co.csv')
+wta.co.1 <- read.csv('../New Data/misc/wta/2013_wta_co.csv')
+atp.basic.3 <- read.csv('../New Data/atp/2011-2013_atp_individual.csv')
+wta.basic.3 <- read.csv('../New Data/wta/2011-2013_wta_individual.csv')
+atp.co.3 <- read.csv('../New Data/misc/atp/2013_atp_co.csv')
+wta.co.3 <- read.csv('../New Data/misc/wta/2013_wta_co.csv')
+# for the match specific datasets, they also need ic entries removed
+atp.co.1 <- atp.co.1[-ic.atp,]
+wta.co.1 <- wta.co.1[-ic.wta,]
+atp.co.3 <- atp.co.3[-ic.atp,]
+wta.co.3 <- wta.co.3[-ic.wta,]
+# remove incomplete matches for test sets
+atp.test <- atp.test[-ic.atp,]
+wta.test <- wta.test[-ic.wta,]
+# reset indices after row removals
+row.names(atp.co.1) <- NULL
+row.names(atp.co.3) <- NULL
+row.names(wta.co.1) <- NULL
+row.names(wta.co.3) <- NULL
+row.names(atp.test) <- NULL
+row.names(wta.test) <- NULL
+```
+
+## Experiments
+
+```{r}
+# augmentations to training set
+# 1 year
+atp.basic.1$total_pts_served <- atp.basic.1$grass_pts_served + 
+  atp.basic.1$clay_pts_served + atp.basic.1$hard_pts_served
+atp.basic.1$total_service_pts_won <- atp.basic.1$grass_service_pts_won +
+  atp.basic.1$hard_service_pts_won + atp.basic.1$clay_service_pts_won
+atp.basic.1$p.estimate <- atp.basic.1$total_service_pts_won/atp.basic.1$total_pts_served
+# since using id's we have all players, most have NA p estimates
+# plug in average of other p's
+atp.basic.1$p.estimate[which(is.na(atp.basic.1$p.estimate))] <-
+  mean(atp.basic.1$p.estimate[-which(is.na(atp.basic.1$p.estimate))])
+wta.basic.1$total_pts_served <- wta.basic.1$grass_pts_served + 
+  wta.basic.1$clay_pts_served + wta.basic.1$hard_pts_served
+wta.basic.1$total_service_pts_won <- wta.basic.1$grass_service_pts_won +
+  wta.basic.1$hard_service_pts_won + wta.basic.1$clay_service_pts_won
+wta.basic.1$p.estimate <- wta.basic.1$total_service_pts_won/wta.basic.1$total_pts_served
+# since using id's we have all players, most have NA p estimates
+# plug in average of other p's
+wta.basic.1$p.estimate[which(is.na(wta.basic.1$p.estimate))] <-
+  mean(wta.basic.1$p.estimate[-which(is.na(wta.basic.1$p.estimate))])
+# 3 year
+atp.basic.3$total_pts_served <- atp.basic.3$grass_pts_served + 
+  atp.basic.3$clay_pts_served + atp.basic.3$hard_pts_served
+atp.basic.3$total_service_pts_won <- atp.basic.3$grass_service_pts_won +
+  atp.basic.3$hard_service_pts_won + atp.basic.3$clay_service_pts_won
+atp.basic.3$p.estimate <- atp.basic.3$total_service_pts_won/atp.basic.3$total_pts_served
+# since using id's we have all players, most have NA p estimates
+# plug in average of other p's
+atp.basic.3$p.estimate[which(is.na(atp.basic.3$p.estimate))] <-
+  mean(atp.basic.3$p.estimate[-which(is.na(atp.basic.3$p.estimate))])
+wta.basic.3$total_pts_served <- wta.basic.3$grass_pts_served + 
+  wta.basic.3$clay_pts_served + wta.basic.3$hard_pts_served
+wta.basic.3$total_service_pts_won <- wta.basic.3$grass_service_pts_won +
+  wta.basic.3$hard_service_pts_won + wta.basic.3$clay_service_pts_won
+wta.basic.3$p.estimate <- wta.basic.3$total_service_pts_won/wta.basic.3$total_pts_served
+# since using id's we have all players, most have NA p estimates
+# plug in average of other p's
+wta.basic.3$p.estimate[which(is.na(wta.basic.3$p.estimate))] <-
+  mean(wta.basic.3$p.estimate[-which(is.na(wta.basic.3$p.estimate))])
+
+## Surface filtered versions
+atp.basic.1$grass_p <- atp.basic.1$grass_service_pts_won/
+  atp.basic.1$grass_pts_served
+atp.basic.1$hard_p <- atp.basic.1$hard_service_pts_won/
+  atp.basic.1$hard_pts_served
+atp.basic.1$clay_p <- atp.basic.1$clay_service_pts_won/
+  atp.basic.1$clay_pts_served
+# like before, filling in NaNs (slightly more now, since some players did not play that
+# surface in 2021) with corresponding averages
+atp.basic.1$grass_p[which(is.na(atp.basic.1$grass_p))] <- 
+  mean(atp.basic.1$grass_p[-which(is.na(atp.basic.1$grass_p))])
+atp.basic.1$hard_p[which(is.na(atp.basic.1$hard_p))] <- 
+  mean(atp.basic.1$hard_p[-which(is.na(atp.basic.1$hard_p))])
+atp.basic.1$clay_p[which(is.na(atp.basic.1$clay_p))] <- 
+  mean(atp.basic.1$clay_p[-which(is.na(atp.basic.1$clay_p))])
+atp.basic.3$grass_p <- atp.basic.3$grass_service_pts_won/
+  atp.basic.3$grass_pts_served
+atp.basic.3$hard_p <- atp.basic.3$hard_service_pts_won/
+  atp.basic.3$hard_pts_served
+atp.basic.3$clay_p <- atp.basic.3$clay_service_pts_won/
+  atp.basic.3$clay_pts_served
+# like before, filling in NaNs (slightly more now, since some players did not play that
+# surface in 2021) with corresponding averages
+atp.basic.3$grass_p[which(is.na(atp.basic.3$grass_p))] <- 
+  mean(atp.basic.3$grass_p[-which(is.na(atp.basic.3$grass_p))])
+atp.basic.3$hard_p[which(is.na(atp.basic.3$hard_p))] <- 
+  mean(atp.basic.3$hard_p[-which(is.na(atp.basic.3$hard_p))])
+atp.basic.3$clay_p[which(is.na(atp.basic.3$clay_p))] <- 
+  mean(atp.basic.3$clay_p[-which(is.na(atp.basic.3$clay_p))])
+wta.basic.1$grass_p <- wta.basic.1$grass_service_pts_won/
+  wta.basic.1$grass_pts_served
+wta.basic.1$hard_p <- wta.basic.1$hard_service_pts_won/
+  wta.basic.1$hard_pts_served
+wta.basic.1$clay_p <- wta.basic.1$clay_service_pts_won/
+  wta.basic.1$clay_pts_served
+# like before, filling in NaNs (slightly more now, since some players did not play that
+# surface in 2021) with corresponding averages
+wta.basic.1$grass_p[which(is.na(wta.basic.1$grass_p))] <- 
+  mean(wta.basic.1$grass_p[-which(is.na(wta.basic.1$grass_p))])
+wta.basic.1$hard_p[which(is.na(wta.basic.1$hard_p))] <- 
+  mean(wta.basic.1$hard_p[-which(is.na(wta.basic.1$hard_p))])
+wta.basic.1$clay_p[which(is.na(wta.basic.1$clay_p))] <- 
+  mean(wta.basic.1$clay_p[-which(is.na(wta.basic.1$clay_p))])
+wta.basic.3$grass_p <- wta.basic.3$grass_service_pts_won/
+  wta.basic.3$grass_pts_served
+wta.basic.3$hard_p <- wta.basic.3$hard_service_pts_won/
+  wta.basic.3$hard_pts_served
+wta.basic.3$clay_p <- wta.basic.3$clay_service_pts_won/
+  wta.basic.3$clay_pts_served
+# like before, filling in NaNs (slightly more now, since some players did not play that
+# surface in 2021) with corresponding averages
+wta.basic.3$grass_p[which(is.na(wta.basic.3$grass_p))] <- 
+  mean(wta.basic.3$grass_p[-which(is.na(wta.basic.3$grass_p))])
+wta.basic.3$hard_p[which(is.na(wta.basic.3$hard_p))] <- 
+  mean(wta.basic.3$hard_p[-which(is.na(wta.basic.3$hard_p))])
+wta.basic.3$clay_p[which(is.na(wta.basic.3$clay_p))] <- 
+  mean(wta.basic.3$clay_p[-which(is.na(wta.basic.3$clay_p))])
+
+## get q estimates in addition to serve section (which should be run first)
+atp.basic.1$total_pts_received <- atp.basic.1$grass_pts_received +
+  atp.basic.1$hard_pts_received + atp.basic.1$clay_pts_received
+atp.basic.1$total_receiving_pts_won <- atp.basic.1$grass_receiving_pts_won +
+  atp.basic.1$hard_receiving_pts_won + atp.basic.1$clay_receiving_pts_won
+atp.basic.1$q.estimate <- atp.basic.1$total_receiving_pts_won/
+  atp.basic.1$total_pts_received
+q.bar.atp.1 <- mean(atp.basic.1$q.estimate[-which(is.na(atp.basic.1$q.estimate))])
+atp.basic.1$q.estimate[which(is.na(atp.basic.1$q.estimate))] <- q.bar.atp.1
+atp.basic.3$total_pts_received <- atp.basic.3$grass_pts_received +
+  atp.basic.3$hard_pts_received + atp.basic.3$clay_pts_received
+atp.basic.3$total_receiving_pts_won <- atp.basic.3$grass_receiving_pts_won +
+  atp.basic.3$hard_receiving_pts_won + atp.basic.3$clay_receiving_pts_won
+atp.basic.3$q.estimate <- atp.basic.3$total_receiving_pts_won/
+  atp.basic.3$total_pts_received
+q.bar.atp.3 <- mean(atp.basic.3$q.estimate[-which(is.na(atp.basic.3$q.estimate))])
+atp.basic.3$q.estimate[which(is.na(atp.basic.3$q.estimate))] <- q.bar.atp.3
+wta.basic.1$total_pts_received <- wta.basic.1$grass_pts_received +
+  wta.basic.1$hard_pts_received + wta.basic.1$clay_pts_received
+wta.basic.1$total_receiving_pts_won <- wta.basic.1$grass_receiving_pts_won +
+  wta.basic.1$hard_receiving_pts_won + wta.basic.1$clay_receiving_pts_won
+wta.basic.1$q.estimate <- wta.basic.1$total_receiving_pts_won/
+  wta.basic.1$total_pts_received
+q.bar.wta.1 <- mean(wta.basic.1$q.estimate[-which(is.na(wta.basic.1$q.estimate))])
+wta.basic.1$q.estimate[which(is.na(wta.basic.1$q.estimate))] <- q.bar.wta.1
+wta.basic.3$total_pts_received <- wta.basic.3$grass_pts_received +
+  wta.basic.3$hard_pts_received + wta.basic.3$clay_pts_received
+wta.basic.3$total_receiving_pts_won <- wta.basic.3$grass_receiving_pts_won +
+  wta.basic.3$hard_receiving_pts_won + wta.basic.3$clay_receiving_pts_won
+wta.basic.3$q.estimate <- wta.basic.3$total_receiving_pts_won/
+  wta.basic.3$total_pts_received
+q.bar.wta.3 <- mean(wta.basic.3$q.estimate[-which(is.na(wta.basic.3$q.estimate))])
+wta.basic.3$q.estimate[which(is.na(wta.basic.3$q.estimate))] <- q.bar.wta.3
+# surface filtered return
+atp.basic.1$grass_q<- atp.basic.1$grass_receiving_pts_won/
+  atp.basic.1$grass_pts_received
+atp.basic.1$hard_q<- atp.basic.1$hard_receiving_pts_won/
+  atp.basic.1$hard_pts_received
+atp.basic.1$clay_q<- atp.basic.1$clay_receiving_pts_won/
+  atp.basic.1$clay_pts_received
+# like before, filling in NaNs (slightly more now, since some players did not play that
+# surface in 2021) with corresponding averages
+atp.basic.1$grass_q[which(is.na(atp.basic.1$grass_q))] <- 
+  mean(atp.basic.1$grass_q[-which(is.na(atp.basic.1$grass_q))])
+atp.basic.1$hard_q[which(is.na(atp.basic.1$hard_q))] <- 
+  mean(atp.basic.1$hard_q[-which(is.na(atp.basic.1$hard_q))])
+atp.basic.1$clay_q[which(is.na(atp.basic.1$clay_q))] <- 
+  mean(atp.basic.1$clay_q[-which(is.na(atp.basic.1$clay_q))])
+atp.basic.3$grass_q<- atp.basic.3$grass_receiving_pts_won/
+  atp.basic.3$grass_pts_received
+atp.basic.3$hard_q<- atp.basic.3$hard_receiving_pts_won/
+  atp.basic.3$hard_pts_received
+atp.basic.3$clay_q<- atp.basic.3$clay_receiving_pts_won/
+  atp.basic.3$clay_pts_received
+# like before, filling in NaNs (slightly more now, since some players did not play that
+# surface in 2021) with corresponding averages
+atp.basic.3$grass_q[which(is.na(atp.basic.3$grass_q))] <- 
+  mean(atp.basic.3$grass_q[-which(is.na(atp.basic.3$grass_q))])
+atp.basic.3$hard_q[which(is.na(atp.basic.3$hard_q))] <- 
+  mean(atp.basic.3$hard_q[-which(is.na(atp.basic.3$hard_q))])
+atp.basic.3$clay_q[which(is.na(atp.basic.3$clay_q))] <- 
+  mean(atp.basic.3$clay_q[-which(is.na(atp.basic.3$clay_q))])
+q.bar.grass.atp.1 <- mean(atp.basic.1$grass_q)
+q.bar.hard.atp.1 <- mean(atp.basic.1$hard_q)
+q.bar.clay.atp.1 <- mean(atp.basic.1$clay_q)
+q.bar.grass.atp.3 <- mean(atp.basic.3$grass_q)
+q.bar.hard.atp.3 <- mean(atp.basic.3$hard_q)
+q.bar.clay.atp.3 <- mean(atp.basic.3$clay_q)
+wta.basic.1$grass_q<- wta.basic.1$grass_receiving_pts_won/
+  wta.basic.1$grass_pts_received
+wta.basic.1$hard_q<- wta.basic.1$hard_receiving_pts_won/
+  wta.basic.1$hard_pts_received
+wta.basic.1$clay_q<- wta.basic.1$clay_receiving_pts_won/
+  wta.basic.1$clay_pts_received
+# like before, filling in NaNs (slightly more now, since some players did not play that
+# surface in 2021) with corresponding averages
+wta.basic.1$grass_q[which(is.na(wta.basic.1$grass_q))] <- 
+  mean(wta.basic.1$grass_q[-which(is.na(wta.basic.1$grass_q))])
+wta.basic.1$hard_q[which(is.na(wta.basic.1$hard_q))] <- 
+  mean(wta.basic.1$hard_q[-which(is.na(wta.basic.1$hard_q))])
+wta.basic.1$clay_q[which(is.na(wta.basic.1$clay_q))] <- 
+  mean(wta.basic.1$clay_q[-which(is.na(wta.basic.1$clay_q))])
+wta.basic.3$grass_q<- wta.basic.3$grass_receiving_pts_won/
+  wta.basic.3$grass_pts_received
+wta.basic.3$hard_q<- wta.basic.3$hard_receiving_pts_won/
+  wta.basic.3$hard_pts_received
+wta.basic.3$clay_q<- wta.basic.3$clay_receiving_pts_won/
+  wta.basic.3$clay_pts_received
+# like before, filling in NaNs (slightly more now, since some players did not play that
+# surface in 2021) with corresponding averages
+wta.basic.3$grass_q[which(is.na(wta.basic.3$grass_q))] <- 
+  mean(wta.basic.3$grass_q[-which(is.na(wta.basic.3$grass_q))])
+wta.basic.3$hard_q[which(is.na(wta.basic.3$hard_q))] <- 
+  mean(wta.basic.3$hard_q[-which(is.na(wta.basic.3$hard_q))])
+wta.basic.3$clay_q[which(is.na(wta.basic.3$clay_q))] <- 
+  mean(wta.basic.3$clay_q[-which(is.na(wta.basic.3$clay_q))])
+q.bar.grass.wta.1 <- mean(wta.basic.1$grass_q)
+q.bar.hard.wta.1 <- mean(wta.basic.1$hard_q)
+q.bar.clay.wta.1 <- mean(wta.basic.1$clay_q)
+q.bar.grass.wta.3 <- mean(wta.basic.3$grass_q)
+q.bar.hard.wta.3 <- mean(wta.basic.3$hard_q)
+q.bar.clay.wta.3 <- mean(wta.basic.3$clay_q)
+```
+
+### Basic 1 year / 3 years
+
+```{r}
+n <- nrow(atp.test)
+res.atp.basic.1 <- rep(0,n)
+res.atp.basic.3 <- rep(0,n)
+res.atp.basic.1.sf <- rep(0,n)
+res.atp.basic.3.sf <- rep(0,n)
+for (i in 1:n){
+  winner <- atp.test$winner_id[i]
+  loser <- atp.test$loser_id[i]
+  # same ids for 1/3 year(s) data sets
+  winner.idx <- which(atp.basic.1$player_id==winner)
+  loser.idx <- which(atp.basic.1$player_id==loser)
+  surf <- atp.test$surface[i]
+  res.atp.basic.1[i] <- atp.basic.1$p.estimate[winner.idx]>
+    atp.basic.1$p.estimate[loser.idx]
+  res.atp.basic.3[i] <- atp.basic.3$p.estimate[winner.idx]>
+    atp.basic.3$p.estimate[loser.idx]
+  if (surf=="Grass") {
+    res.atp.basic.1.sf[i] <- atp.basic.1$grass_p[winner.idx] >
+      atp.basic.1$grass_p[loser.idx]
+    res.atp.basic.3.sf[i] <- atp.basic.3$grass_p[winner.idx] >
+      atp.basic.3$grass_p[loser.idx]
+  } else if (surf=="Hard"){
+    res.atp.basic.1.sf[i] <- atp.basic.1$hard_p[winner.idx] >
+      atp.basic.1$hard_p[loser.idx]
+    res.atp.basic.3.sf[i] <- atp.basic.3$hard_p[winner.idx] >
+      atp.basic.3$hard_p[loser.idx]
+  } else if (surf=="Clay"){
+    res.atp.basic.1.sf[i] <- atp.basic.1$clay_p[winner.idx] >
+      atp.basic.1$clay_p[loser.idx]
+    res.atp.basic.3.sf[i] <- atp.basic.3$clay_p[winner.idx] >
+      atp.basic.3$clay_p[loser.idx]
+  }
+}
+mean(res.atp.basic.1)
+mean(res.atp.basic.1.sf)
+mean(res.atp.basic.3)
+mean(res.atp.basic.3.sf)
+```
+
+```{r}
+n <- nrow(wta.test)
+res.wta.basic.1 <- rep(0,n)
+res.wta.basic.3 <- rep(0,n)
+res.wta.basic.1.sf <- rep(0,n)
+res.wta.basic.3.sf <- rep(0,n)
+for (i in 1:n){
+  winner <- wta.test$winner_id[i]
+  loser <- wta.test$loser_id[i]
+  # same ids for 1/3 year(s) data sets
+  winner.idx <- which(wta.basic.1$player_id==winner)
+  loser.idx <- which(wta.basic.1$player_id==loser)
+  surf <- wta.test$surface[i]
+  res.wta.basic.1[i] <- wta.basic.1$p.estimate[winner.idx]>
+    wta.basic.1$p.estimate[loser.idx]
+  res.wta.basic.3[i] <- wta.basic.3$p.estimate[winner.idx]>
+    wta.basic.3$p.estimate[loser.idx]
+  if (surf=="Grass") {
+    res.wta.basic.1.sf[i] <- wta.basic.1$grass_p[winner.idx] >
+      wta.basic.1$grass_p[loser.idx]
+    res.wta.basic.3.sf[i] <- wta.basic.3$grass_p[winner.idx] >
+      wta.basic.3$grass_p[loser.idx]
+  } else if (surf=="Hard"){
+    res.wta.basic.1.sf[i] <- wta.basic.1$hard_p[winner.idx] >
+      wta.basic.1$hard_p[loser.idx]
+    res.wta.basic.3.sf[i] <- wta.basic.3$hard_p[winner.idx] >
+      wta.basic.3$hard_p[loser.idx]
+  } else if (surf=="Clay"){
+    res.wta.basic.1.sf[i] <- wta.basic.1$clay_p[winner.idx] >
+      wta.basic.1$clay_p[loser.idx]
+    res.wta.basic.3.sf[i] <- wta.basic.3$clay_p[winner.idx] >
+      wta.basic.3$clay_p[loser.idx]
+  }
+}
+mean(res.wta.basic.1)
+mean(res.wta.basic.1.sf)
+mean(res.wta.basic.3)
+mean(res.wta.basic.3.sf)
+```
+
+### OAF 1 year / 3 years
+
+```{r}
+n <- nrow(atp.test)
+res.atp.oaf.1 <- rep(0,n)
+res.atp.oaf.3 <- rep(0,n)
+res.atp.oaf.1.sf <- rep(0,n)
+res.atp.oaf.3.sf <- rep(0,n)
+for (i in 1:n){
+  winner <- atp.test$winner_id[i]
+  loser <- atp.test$loser_id[i]
+  # same ids for 1/3 year(s) data sets
+  winner.idx <- which(atp.basic.1$player_id==winner)
+  loser.idx <- which(atp.basic.1$player_id==loser)
+  winner.adj.p <- atp.basic.1$p.estimate[winner.idx]-
+    (atp.basic.1$q.estimate[loser.idx]-q.bar.atp.1)
+  loser.adj.p <- atp.basic.3$p.estimate[loser.idx]-
+    (atp.basic.1$q.estimate[winner.idx]-q.bar.atp.1)
+  res.atp.oaf.1[i] <- winner.adj.p > loser.adj.p
+  winner.adj.p <- atp.basic.3$p.estimate[winner.idx]-
+    (atp.basic.3$q.estimate[loser.idx]-q.bar.atp.3)
+  loser.adj.p <- atp.basic.3$p.estimate[loser.idx]-
+    (atp.basic.3$q.estimate[winner.idx]-q.bar.atp.3)
+  res.atp.oaf.3[i] <- winner.adj.p > loser.adj.p
+  if (surf=="Grass") {
+    winner.adj.p <- atp.basic.1$grass_p[winner.idx] - 
+      (atp.basic.1$grass_q[loser.idx] - q.bar.grass.atp.1)
+    loser.adj.p <- atp.basic.1$grass_p[loser.idx] - 
+      (atp.basic.1$grass_q[winner.idx] - q.bar.grass.atp.1)
+    res.atp.oaf.1.sf[i] <- winner.adj.p > loser.adj.p
+    winner.adj.p <- atp.basic.3$grass_p[winner.idx] - 
+      (atp.basic.3$grass_q[loser.idx] - q.bar.grass.atp.3)
+    loser.adj.p <- atp.basic.3$grass_p[loser.idx] - 
+      (atp.basic.3$grass_q[winner.idx] - q.bar.grass.atp.3)
+    res.atp.oaf.3.sf[i] <- winner.adj.p > loser.adj.p
+  } else if (surf=="Hard"){
+    winner.adj.p <- atp.basic.1$hard_p[winner.idx] - 
+      (atp.basic.1$hard_q[loser.idx] - q.bar.hard.atp.1)
+    loser.adj.p <- atp.basic.1$hard_p[loser.idx] - 
+      (atp.basic.1$hard_q[winner.idx] - q.bar.hard.atp.1)
+    res.atp.oaf.1.sf[i] <- winner.adj.p > loser.adj.p
+    winner.adj.p <- atp.basic.3$hard_p[winner.idx] - 
+      (atp.basic.3$hard_q[loser.idx] - q.bar.hard.atp.3)
+    loser.adj.p <- atp.basic.3$hard_p[loser.idx] - 
+      (atp.basic.3$hard_q[winner.idx] - q.bar.hard.atp.3)
+    res.atp.oaf.3.sf[i] <- winner.adj.p > loser.adj.p
+  } else if (surf=="Clay"){
+    winner.adj.p <- atp.basic.1$clay_p[winner.idx] - 
+      (atp.basic.1$clay_q[loser.idx] - q.bar.clay.atp.1)
+    loser.adj.p <- atp.basic.1$clay_p[loser.idx] - 
+      (atp.basic.1$clay_q[winner.idx] - q.bar.clay.atp.1)
+    res.atp.oaf.1.sf[i] <- winner.adj.p > loser.adj.p
+    winner.adj.p <- atp.basic.3$clay_p[winner.idx] - 
+      (atp.basic.3$clay_q[loser.idx] - q.bar.clay.atp.3)
+    loser.adj.p <- atp.basic.3$clay_p[loser.idx] - 
+      (atp.basic.3$clay_q[winner.idx] - q.bar.clay.atp.3)
+    res.atp.oaf.3.sf[i] <- winner.adj.p > loser.adj.p
+  }
+}
+mean(res.atp.oaf.1)
+mean(res.atp.oaf.1.sf)
+mean(res.atp.oaf.3)
+mean(res.atp.oaf.3.sf)
+```
+
+```{r}
+n <- nrow(wta.test)
+res.wta.oaf.1 <- rep(0,n)
+res.wta.oaf.3 <- rep(0,n)
+res.wta.oaf.1.sf <- rep(0,n)
+res.wta.oaf.3.sf <- rep(0,n)
+for (i in 1:n){
+  winner <- wta.test$winner_id[i]
+  loser <- wta.test$loser_id[i]
+  # same ids for 1/3 year(s) data sets
+  winner.idx <- which(wta.basic.1$player_id==winner)
+  loser.idx <- which(wta.basic.1$player_id==loser)
+  winner.adj.p <- wta.basic.1$p.estimate[winner.idx]-
+    (wta.basic.1$q.estimate[loser.idx]-q.bar.wta.1)
+  loser.adj.p <- wta.basic.3$p.estimate[loser.idx]-
+    (wta.basic.1$q.estimate[winner.idx]-q.bar.wta.1)
+  res.wta.oaf.1[i] <- winner.adj.p > loser.adj.p
+  winner.adj.p <- wta.basic.3$p.estimate[winner.idx]-
+    (wta.basic.3$q.estimate[loser.idx]-q.bar.wta.3)
+  loser.adj.p <- wta.basic.3$p.estimate[loser.idx]-
+    (wta.basic.3$q.estimate[winner.idx]-q.bar.wta.3)
+  res.wta.oaf.3[i] <- winner.adj.p > loser.adj.p
+  if (surf=="Grass") {
+    winner.adj.p <- wta.basic.1$grass_p[winner.idx] - 
+      (wta.basic.1$grass_q[loser.idx] - q.bar.grass.wta.1)
+    loser.adj.p <- wta.basic.1$grass_p[loser.idx] - 
+      (wta.basic.1$grass_q[winner.idx] - q.bar.grass.wta.1)
+    res.wta.oaf.1.sf[i] <- winner.adj.p > loser.adj.p
+    winner.adj.p <- wta.basic.3$grass_p[winner.idx] - 
+      (wta.basic.3$grass_q[loser.idx] - q.bar.grass.wta.3)
+    loser.adj.p <- wta.basic.3$grass_p[loser.idx] - 
+      (wta.basic.3$grass_q[winner.idx] - q.bar.grass.wta.3)
+    res.wta.oaf.3.sf[i] <- winner.adj.p > loser.adj.p
+  } else if (surf=="Hard"){
+    winner.adj.p <- wta.basic.1$hard_p[winner.idx] - 
+      (wta.basic.1$hard_q[loser.idx] - q.bar.hard.wta.1)
+    loser.adj.p <- wta.basic.1$hard_p[loser.idx] - 
+      (wta.basic.1$hard_q[winner.idx] - q.bar.hard.wta.1)
+    res.wta.oaf.1.sf[i] <- winner.adj.p > loser.adj.p
+    winner.adj.p <- wta.basic.3$hard_p[winner.idx] - 
+      (wta.basic.3$hard_q[loser.idx] - q.bar.hard.wta.3)
+    loser.adj.p <- wta.basic.3$hard_p[loser.idx] - 
+      (wta.basic.3$hard_q[winner.idx] - q.bar.hard.wta.3)
+    res.wta.oaf.3.sf[i] <- winner.adj.p > loser.adj.p
+  } else if (surf=="Clay"){
+    winner.adj.p <- wta.basic.1$clay_p[winner.idx] - 
+      (wta.basic.1$clay_q[loser.idx] - q.bar.clay.wta.1)
+    loser.adj.p <- wta.basic.1$clay_p[loser.idx] - 
+      (wta.basic.1$clay_q[winner.idx] - q.bar.clay.wta.1)
+    res.wta.oaf.1.sf[i] <- winner.adj.p > loser.adj.p
+    winner.adj.p <- wta.basic.3$clay_p[winner.idx] - 
+      (wta.basic.3$clay_q[loser.idx] - q.bar.clay.wta.3)
+    loser.adj.p <- wta.basic.3$clay_p[loser.idx] - 
+      (wta.basic.3$clay_q[winner.idx] - q.bar.clay.wta.3)
+    res.wta.oaf.3.sf[i] <- winner.adj.p > loser.adj.p
+  }
+}
+mean(res.wta.oaf.1)
+mean(res.wta.oaf.1.sf)
+mean(res.wta.oaf.3)
+mean(res.wta.oaf.3.sf)
+```
+
+### CO
+
+
