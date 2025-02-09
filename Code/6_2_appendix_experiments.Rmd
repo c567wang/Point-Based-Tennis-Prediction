@@ -7,40 +7,6 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Note get.prob function has to be changed according to whether test set is pre or post 2022.
-
-```{r}
-source("2_1_hierarchical_model_probabilities.R")
-grand.slams <- c("Australian Open","Roland Garros","Wimbledon","Us Open","US Open")
-# "Us Open" specific to 2022 test sets
-get.prob.pre.2022 <- function(p1,p2,match,atp=FALSE){
-  if (is.na(p1)||is.na(p2)){
-    return(NA)
-  }
-  if (match %in% grand.slams){
-    if (match=="US Open"){
-      ret <- match.win.prob.nonpw(p1,p2,format=0+atp)
-    } else {
-      ret <- match.win.prob.nonpw(p1,p2,format=4+atp)
-    }
-  } else {
-    ret <- match.win.prob.nonpw(p1,p2,format=0)
-  }
-  return(ret)
-}
-get.prob.post.2022 <- function(p1,p2,match,atp=FALSE){
-  if (is.na(p1)||is.na(p2)){
-    return(NA)
-  }
-  if (match %in% grand.slams){
-    ret <- match.win.prob.nonpw(p1,p2,format=2+atp)
-  } else {
-    ret <- match.win.prob.nonpw(p1,p2,format=0)
-  }
-  return(ret)
-}
-```
-
 ## Data
 
 ```{r}
@@ -49,8 +15,8 @@ get.prob.post.2022 <- function(p1,p2,match,atp=FALSE){
 # Warning: type 29 is unimplemented in 'type2char'Error in pmatch(rw, c("read", "write"), 0L) : 
 # INTEGER() can only be applied to a 'integer', not a 'unknown type #29'
 # just run again
-atp.test <- read.csv('../New Data/atp/atp_testing_2014.csv')
-wta.test <- read.csv('../New Data/wta/wta_testing_2014.csv')
+atp.test <- read.csv('../New Data/atp/atp_testing_2022.csv')
+wta.test <- read.csv('../New Data/wta/wta_testing_2022.csv')
 ```
 ```{r}
 # following function highlights matches that were incomplete
@@ -62,14 +28,14 @@ ic.wta <- ic.match(wta.test$score)
 ```
 ```{r}
 # training data
-atp.basic.1 <- read.csv('../New Data/misc/atp/2013_atp_individual.csv')
-wta.basic.1 <- read.csv('../New Data/misc/wta/2013_wta_individual.csv')
-atp.co.1 <- read.csv('../New Data/misc/atp/2013_atp_co.csv')
-wta.co.1 <- read.csv('../New Data/misc/wta/2013_wta_co.csv')
-atp.basic.3 <- read.csv('../New Data/atp/2011-2013_atp_individual.csv')
-wta.basic.3 <- read.csv('../New Data/wta/2011-2013_wta_individual.csv')
-atp.co.3 <- read.csv('../New Data/misc/atp/2013_atp_co.csv')
-wta.co.3 <- read.csv('../New Data/misc/wta/2013_wta_co.csv')
+atp.basic.1 <- read.csv('../New Data/misc/atp/2021_atp_individual.csv')
+wta.basic.1 <- read.csv('../New Data/misc/wta/2021_wta_individual.csv')
+atp.co.1 <- read.csv('../New Data/misc/atp/2021_atp_co.csv')
+wta.co.1 <- read.csv('../New Data/misc/wta/2021_wta_co.csv')
+atp.basic.3 <- read.csv('../New Data/atp/2019-2021_atp_individual.csv')
+wta.basic.3 <- read.csv('../New Data/wta/2019-2021_wta_individual.csv')
+atp.co.3 <- read.csv('../New Data/atp/2019-2021_atp_co.csv')
+wta.co.3 <- read.csv('../New Data/wta/2019-2021_wta_co.csv')
 # for the match specific datasets, they also need ic entries removed
 atp.co.1 <- atp.co.1[-ic.atp,]
 wta.co.1 <- wta.co.1[-ic.wta,]
@@ -292,7 +258,7 @@ q.bar.hard.wta.3 <- mean(wta.basic.3$hard_q)
 q.bar.clay.wta.3 <- mean(wta.basic.3$clay_q)
 ```
 
-### Basic 1 year / 3 years
+### Basic
 
 ```{r}
 n <- nrow(atp.test)
@@ -374,7 +340,7 @@ mean(res.wta.basic.3)
 mean(res.wta.basic.3.sf)
 ```
 
-### OAF 1 year / 3 years
+### OAF
 
 ```{r}
 n <- nrow(atp.test)
@@ -502,6 +468,430 @@ mean(res.wta.oaf.3)
 mean(res.wta.oaf.3.sf)
 ```
 
-### CO
+### CO (NSF to CO list)
 
+```{r}
+atp.co.1$w_total_pts_served <- atp.co.1$grass_pts_served1 + 
+  atp.co.1$hard_pts_served1 + atp.co.1$clay_pts_served1
+atp.co.1$w_total_service_pts_won <- atp.co.1$grass_service_pts_won1 +
+  atp.co.1$hard_service_pts_won1 + atp.co.1$clay_service_pts_won1
+atp.co.1$w_p <- atp.co.1$w_total_service_pts_won/atp.co.1$w_total_pts_served
+atp.co.1$l_total_pts_served <- atp.co.1$grass_pts_served2 + 
+  atp.co.1$hard_pts_served2 + atp.co.1$clay_pts_served2
+atp.co.1$l_total_service_pts_won <- atp.co.1$grass_service_pts_won2 +
+  atp.co.1$hard_service_pts_won2 + atp.co.1$clay_service_pts_won2
+atp.co.1$l_p <- atp.co.1$l_total_service_pts_won/atp.co.1$l_total_pts_served
+atp.co.1$w_g_co <- atp.co.1$grass_service_pts_won1/atp.co.1$grass_pts_served1
+atp.co.1$w_h_co <- atp.co.1$hard_service_pts_won1/atp.co.1$hard_pts_served1
+atp.co.1$w_c_co <- atp.co.1$clay_service_pts_won1/atp.co.1$clay_pts_served1
+atp.co.1$l_g_co <- atp.co.1$grass_service_pts_won2/atp.co.1$grass_pts_served2
+atp.co.1$l_h_co <- atp.co.1$hard_service_pts_won2/atp.co.1$hard_pts_served2
+atp.co.1$l_c_co <- atp.co.1$clay_service_pts_won2/atp.co.1$clay_pts_served2
+# first see accuracy for entries where co data is available
+co.valid <- which(!is.na(atp.co.1$w_p) & !is.na(atp.co.1$l_p))
+res.atp.co.1 <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res.atp.co.1[i] <- atp.co.1$w_p[co.valid[i]] > atp.co.1$l_p[co.valid[i]]
+}
+# surface filtered version not as straightforward to find valid
+res.atp.co.1.sf <- c()
+for (i in 1:nrow(atp.test)){
+  if (atp.test$surface[i]=="Grass" &
+      !is.na(atp.co.1$w_g_co[i]) & !is.na(atp.co.1$l_g_co[i])){
+    res.atp.co.1.sf <- c(res.atp.co.1.sf, atp.co.1$w_g_co[i] > atp.co.1$l_g_co[i])
+  } else if (atp.test$surface[i]=="Hard" &
+             !is.na(atp.co.1$w_h_co[i]) & !is.na(atp.co.1$l_h_co[i])){
+    res.atp.co.1.sf <- c(res.atp.co.1.sf, atp.co.1$w_h_co[i] > atp.co.1$l_h_co[i])
+  } else if (atp.test$surface[i]=="Clay" & 
+             !is.na(atp.co.1$w_c_co[i]) & !is.na(atp.co.1$l_c_co[i])){
+    res.atp.co.1.sf <- c(res.atp.co.1.sf, atp.co.1$w_c_co[i] > atp.co.1$l_c_co[i])
+  }
+}
+
+atp.co.3$w_total_pts_served <- atp.co.3$grass_pts_served1 + 
+  atp.co.3$hard_pts_served1 + atp.co.3$clay_pts_served1
+atp.co.3$w_total_service_pts_won <- atp.co.3$grass_service_pts_won1 +
+  atp.co.3$hard_service_pts_won1 + atp.co.3$clay_service_pts_won1
+atp.co.3$w_p <- atp.co.3$w_total_service_pts_won/atp.co.3$w_total_pts_served
+atp.co.3$l_total_pts_served <- atp.co.3$grass_pts_served2 + 
+  atp.co.3$hard_pts_served2 + atp.co.3$clay_pts_served2
+atp.co.3$l_total_service_pts_won <- atp.co.3$grass_service_pts_won2 +
+  atp.co.3$hard_service_pts_won2 + atp.co.3$clay_service_pts_won2
+atp.co.3$l_p <- atp.co.3$l_total_service_pts_won/atp.co.3$l_total_pts_served
+atp.co.3$w_g_co <- atp.co.3$grass_service_pts_won1/atp.co.3$grass_pts_served1
+atp.co.3$w_h_co <- atp.co.3$hard_service_pts_won1/atp.co.3$hard_pts_served1
+atp.co.3$w_c_co <- atp.co.3$clay_service_pts_won1/atp.co.3$clay_pts_served1
+atp.co.3$l_g_co <- atp.co.3$grass_service_pts_won2/atp.co.3$grass_pts_served2
+atp.co.3$l_h_co <- atp.co.3$hard_service_pts_won2/atp.co.3$hard_pts_served2
+atp.co.3$l_c_co <- atp.co.3$clay_service_pts_won2/atp.co.3$clay_pts_served2
+# first see accuracy for entries where co data is available
+co.valid <- which(!is.na(atp.co.3$w_p) & !is.na(atp.co.3$l_p))
+res.atp.co.3 <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res.atp.co.3[i] <- atp.co.3$w_p[co.valid[i]] > atp.co.3$l_p[co.valid[i]]
+}
+# surface filtered version not as straightforward to find valid
+res.atp.co.3.sf <- c()
+for (i in 1:nrow(atp.test)){
+  if (atp.test$surface[i]=="Grass" &
+      !is.na(atp.co.3$w_g_co[i]) & !is.na(atp.co.3$l_g_co[i])){
+    res.atp.co.3.sf <- c(res.atp.co.3.sf, atp.co.3$w_g_co[i] > atp.co.3$l_g_co[i])
+  } else if (atp.test$surface[i]=="Hard" &
+             !is.na(atp.co.3$w_h_co[i]) & !is.na(atp.co.3$l_h_co[i])){
+    res.atp.co.3.sf <- c(res.atp.co.3.sf, atp.co.3$w_h_co[i] > atp.co.3$l_h_co[i])
+  } else if (atp.test$surface[i]=="Clay" & 
+             !is.na(atp.co.3$w_c_co[i]) & !is.na(atp.co.3$l_c_co[i])){
+    res.atp.co.3.sf <- c(res.atp.co.3.sf, atp.co.3$w_c_co[i] > atp.co.3$l_c_co[i])
+  }
+}
+
+wta.co.1$w_total_pts_served <- wta.co.1$grass_pts_served1 + 
+  wta.co.1$hard_pts_served1 + wta.co.1$clay_pts_served1
+wta.co.1$w_total_service_pts_won <- wta.co.1$grass_service_pts_won1 +
+  wta.co.1$hard_service_pts_won1 + wta.co.1$clay_service_pts_won1
+wta.co.1$w_p <- wta.co.1$w_total_service_pts_won/wta.co.1$w_total_pts_served
+wta.co.1$l_total_pts_served <- wta.co.1$grass_pts_served2 + 
+  wta.co.1$hard_pts_served2 + wta.co.1$clay_pts_served2
+wta.co.1$l_total_service_pts_won <- wta.co.1$grass_service_pts_won2 +
+  wta.co.1$hard_service_pts_won2 + wta.co.1$clay_service_pts_won2
+wta.co.1$l_p <- wta.co.1$l_total_service_pts_won/wta.co.1$l_total_pts_served
+wta.co.1$w_g_co <- wta.co.1$grass_service_pts_won1/wta.co.1$grass_pts_served1
+wta.co.1$w_h_co <- wta.co.1$hard_service_pts_won1/wta.co.1$hard_pts_served1
+wta.co.1$w_c_co <- wta.co.1$clay_service_pts_won1/wta.co.1$clay_pts_served1
+wta.co.1$l_g_co <- wta.co.1$grass_service_pts_won2/wta.co.1$grass_pts_served2
+wta.co.1$l_h_co <- wta.co.1$hard_service_pts_won2/wta.co.1$hard_pts_served2
+wta.co.1$l_c_co <- wta.co.1$clay_service_pts_won2/wta.co.1$clay_pts_served2
+# first see accuracy for entries where co data is available
+co.valid <- which(!is.na(wta.co.1$w_p) & !is.na(wta.co.1$l_p))
+res.wta.co.1 <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res.wta.co.1[i] <- wta.co.1$w_p[co.valid[i]] > wta.co.1$l_p[co.valid[i]]
+}
+# surface filtered version not as straightforward to find valid
+res.wta.co.1.sf <- c()
+for (i in 1:nrow(wta.test)){
+  if (wta.test$surface[i]=="Grass" &
+      !is.na(wta.co.1$w_g_co[i]) & !is.na(wta.co.1$l_g_co[i])){
+    res.wta.co.1.sf <- c(res.wta.co.1.sf, wta.co.1$w_g_co[i] > wta.co.1$l_g_co[i])
+  } else if (wta.test$surface[i]=="Hard" &
+             !is.na(wta.co.1$w_h_co[i]) & !is.na(wta.co.1$l_h_co[i])){
+    res.wta.co.1.sf <- c(res.wta.co.1.sf, wta.co.1$w_h_co[i] > wta.co.1$l_h_co[i])
+  } else if (wta.test$surface[i]=="Clay" & 
+             !is.na(wta.co.1$w_c_co[i]) & !is.na(wta.co.1$l_c_co[i])){
+    res.wta.co.1.sf <- c(res.wta.co.1.sf, wta.co.1$w_c_co[i] > wta.co.1$l_c_co[i])
+  }
+}
+
+wta.co.3$w_total_pts_served <- wta.co.3$grass_pts_served1 + 
+  wta.co.3$hard_pts_served1 + wta.co.3$clay_pts_served1
+wta.co.3$w_total_service_pts_won <- wta.co.3$grass_service_pts_won1 +
+  wta.co.3$hard_service_pts_won1 + wta.co.3$clay_service_pts_won1
+wta.co.3$w_p <- wta.co.3$w_total_service_pts_won/wta.co.3$w_total_pts_served
+wta.co.3$l_total_pts_served <- wta.co.3$grass_pts_served2 + 
+  wta.co.3$hard_pts_served2 + wta.co.3$clay_pts_served2
+wta.co.3$l_total_service_pts_won <- wta.co.3$grass_service_pts_won2 +
+  wta.co.3$hard_service_pts_won2 + wta.co.3$clay_service_pts_won2
+wta.co.3$l_p <- wta.co.3$l_total_service_pts_won/wta.co.3$l_total_pts_served
+wta.co.3$w_g_co <- wta.co.3$grass_service_pts_won1/wta.co.3$grass_pts_served1
+wta.co.3$w_h_co <- wta.co.3$hard_service_pts_won1/wta.co.3$hard_pts_served1
+wta.co.3$w_c_co <- wta.co.3$clay_service_pts_won1/wta.co.3$clay_pts_served1
+wta.co.3$l_g_co <- wta.co.3$grass_service_pts_won2/wta.co.3$grass_pts_served2
+wta.co.3$l_h_co <- wta.co.3$hard_service_pts_won2/wta.co.3$hard_pts_served2
+wta.co.3$l_c_co <- wta.co.3$clay_service_pts_won2/wta.co.3$clay_pts_served2
+# first see accuracy for entries where co data is available
+co.valid <- which(!is.na(wta.co.3$w_p) & !is.na(wta.co.3$l_p))
+res.wta.co.3 <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res.wta.co.3[i] <- wta.co.3$w_p[co.valid[i]] > wta.co.3$l_p[co.valid[i]]
+}
+# surface filtered version not as straightforward to find valid
+res.wta.co.3.sf <- c()
+for (i in 1:nrow(wta.test)){
+  if (wta.test$surface[i]=="Grass" &
+      !is.na(wta.co.3$w_g_co[i]) & !is.na(wta.co.3$l_g_co[i])){
+    res.wta.co.3.sf <- c(res.wta.co.3.sf, wta.co.3$w_g_co[i] > wta.co.3$l_g_co[i])
+  } else if (wta.test$surface[i]=="Hard" &
+             !is.na(wta.co.3$w_h_co[i]) & !is.na(wta.co.3$l_h_co[i])){
+    res.wta.co.3.sf <- c(res.wta.co.3.sf, wta.co.3$w_h_co[i] > wta.co.3$l_h_co[i])
+  } else if (wta.test$surface[i]=="Clay" & 
+             !is.na(wta.co.3$w_c_co[i]) & !is.na(wta.co.3$l_c_co[i])){
+    res.wta.co.3.sf <- c(res.wta.co.3.sf, wta.co.3$w_c_co[i] > wta.co.3$l_c_co[i])
+  }
+}
+
+```
+```{r}
+mean(res.atp.co.1)
+mean(res.atp.co.1.sf)
+mean(res.atp.co.3)
+mean(res.atp.co.3.sf)
+mean(res.wta.co.1)
+mean(res.wta.co.1.sf)
+mean(res.wta.co.3)
+mean(res.wta.co.3.sf)
+```
+```{r}
+length(res.atp.co.1)
+length(res.atp.co.1.sf)
+length(res.atp.co.3)
+length(res.atp.co.3.sf)
+length(res.wta.co.1)
+length(res.wta.co.1.sf)
+length(res.wta.co.3)
+length(res.wta.co.3.sf)
+```
+
+
+### CO (SF to CO list)
+
+```{r}
+atp.co.1$w_p_2nsf <- atp.co.1$co2nsf_service_pts_won1/atp.co.1$co2nsf_pts_served1
+atp.co.1$l_p_2nsf <- atp.co.1$co2nsf_service_pts_won2/atp.co.1$co2nsf_pts_served2
+# first see accuracy for entries where co data is available
+co.valid <- which(!is.na(atp.co.1$w_p_2nsf) & !is.na(atp.co.1$l_p_2nsf))
+res.atp.co2.1 <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res.atp.co2.1[i] <- atp.co.1$w_p_2nsf[co.valid[i]] > atp.co.1$l_p_2nsf[co.valid[i]]
+}
+atp.co.1$w_p_2 <- atp.co.1$co2_service_pts_won1/atp.co.1$co2_pts_served1
+atp.co.1$l_p_2 <- atp.co.1$co2_service_pts_won2/atp.co.1$co2_pts_served2
+# first see accuracy for entries where co data is available
+co.valid <- which(!is.na(atp.co.1$w_p_2) & !is.na(atp.co.1$l_p_2))
+res.atp.co2.1.sf <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res.atp.co2.1.sf[i] <- atp.co.1$w_p_2[co.valid[i]] > atp.co.1$l_p_2[co.valid[i]]
+}
+atp.co.3$w_p_2nsf <- atp.co.3$co2nsf_service_pts_won1/atp.co.3$co2nsf_pts_served1
+atp.co.3$l_p_2nsf <- atp.co.3$co2nsf_service_pts_won2/atp.co.3$co2nsf_pts_served2
+# first see accuracy for entries where co data is available
+co.valid <- which(!is.na(atp.co.3$w_p_2nsf) & !is.na(atp.co.3$l_p_2nsf))
+res.atp.co2.3 <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res.atp.co2.3[i] <- atp.co.3$w_p_2nsf[co.valid[i]] > atp.co.3$l_p_2nsf[co.valid[i]]
+}
+atp.co.3$w_p_2 <- atp.co.3$co2_service_pts_won1/atp.co.3$co2_pts_served1
+atp.co.3$l_p_2 <- atp.co.3$co2_service_pts_won2/atp.co.3$co2_pts_served2
+# first see accuracy for entries where co data is available
+co.valid <- which(!is.na(atp.co.3$w_p_2) & !is.na(atp.co.3$l_p_2))
+res.atp.co2.3.sf <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res.atp.co2.3.sf[i] <- atp.co.3$w_p_2[co.valid[i]] > atp.co.3$l_p_2[co.valid[i]]
+}
+
+wta.co.1$w_p_2nsf <- wta.co.1$co2nsf_service_pts_won1/wta.co.1$co2nsf_pts_served1
+wta.co.1$l_p_2nsf <- wta.co.1$co2nsf_service_pts_won2/wta.co.1$co2nsf_pts_served2
+# first see accuracy for entries where co data is available
+co.valid <- which(!is.na(wta.co.1$w_p_2nsf) & !is.na(wta.co.1$l_p_2nsf))
+res.wta.co2.1 <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res.wta.co2.1[i] <- wta.co.1$w_p_2nsf[co.valid[i]] > wta.co.1$l_p_2nsf[co.valid[i]]
+}
+wta.co.1$w_p_2 <- wta.co.1$co2_service_pts_won1/wta.co.1$co2_pts_served1
+wta.co.1$l_p_2 <- wta.co.1$co2_service_pts_won2/wta.co.1$co2_pts_served2
+# first see accuracy for entries where co data is available
+co.valid <- which(!is.na(wta.co.1$w_p_2) & !is.na(wta.co.1$l_p_2))
+res.wta.co2.1.sf <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res.wta.co2.1.sf[i] <- wta.co.1$w_p_2[co.valid[i]] > wta.co.1$l_p_2[co.valid[i]]
+}
+wta.co.3$w_p_2nsf <- wta.co.3$co2nsf_service_pts_won1/wta.co.3$co2nsf_pts_served1
+wta.co.3$l_p_2nsf <- wta.co.3$co2nsf_service_pts_won2/wta.co.3$co2nsf_pts_served2
+# first see accuracy for entries where co data is available
+co.valid <- which(!is.na(wta.co.3$w_p_2nsf) & !is.na(wta.co.3$l_p_2nsf))
+res.wta.co2.3 <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res.wta.co2.3[i] <- wta.co.3$w_p_2nsf[co.valid[i]] > wta.co.3$l_p_2nsf[co.valid[i]]
+}
+wta.co.3$w_p_2 <- wta.co.3$co2_service_pts_won1/wta.co.3$co2_pts_served1
+wta.co.3$l_p_2 <- wta.co.3$co2_service_pts_won2/wta.co.3$co2_pts_served2
+# first see accuracy for entries where co data is available
+co.valid <- which(!is.na(wta.co.3$w_p_2) & !is.na(wta.co.3$l_p_2))
+res.wta.co2.3.sf <- rep(0,length(co.valid))
+for (i in 1:length(co.valid)){
+  res.wta.co2.3.sf[i] <- wta.co.3$w_p_2[co.valid[i]] > wta.co.3$l_p_2[co.valid[i]]
+}
+```
+
+```{r}
+mean(res.atp.co2.1)
+mean(res.atp.co2.1.sf)
+mean(res.atp.co2.3)
+mean(res.atp.co2.3.sf)
+mean(res.wta.co2.1)
+mean(res.wta.co2.1.sf)
+mean(res.wta.co2.3)
+mean(res.wta.co2.3.sf)
+```
+
+```{r}
+length(res.atp.co2.1)
+length(res.atp.co2.1.sf)
+length(res.atp.co2.3)
+length(res.atp.co2.3.sf)
+length(res.wta.co2.1)
+length(res.wta.co2.1.sf)
+length(res.wta.co2.3)
+length(res.wta.co2.3.sf)
+```
+
+## Significance Testing
+
+### Time Horizons
+
+```{r}
+prop.test(c(sum(res.atp.basic.1),sum(res.atp.basic.3)),
+          c(length(res.atp.basic.1),length(res.atp.basic.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.atp.basic.1.sf),sum(res.atp.basic.3.sf)),
+          c(length(res.atp.basic.1.sf),length(res.atp.basic.3.sf)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.atp.oaf.1),sum(res.atp.oaf.3)),
+          c(length(res.atp.oaf.1),length(res.atp.oaf.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.atp.oaf.1.sf),sum(res.atp.oaf.3.sf)),
+          c(length(res.atp.oaf.1.sf),length(res.atp.oaf.3.sf)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.atp.co.1),sum(res.atp.co.3)),
+          c(length(res.atp.co.1),length(res.atp.co.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.atp.co.1.sf),sum(res.atp.co.3.sf)),
+          c(length(res.atp.co.1.sf),length(res.atp.co.3.sf)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.atp.co2.1),sum(res.atp.co2.3)),
+          c(length(res.atp.co2.1),length(res.atp.co2.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.atp.co2.1.sf),sum(res.atp.co2.3.sf)),
+          c(length(res.atp.co2.1.sf),length(res.atp.co2.3.sf)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.basic.1),sum(res.wta.basic.3)),
+          c(length(res.wta.basic.1),length(res.wta.basic.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.basic.1.sf),sum(res.wta.basic.3.sf)),
+          c(length(res.wta.basic.1.sf),length(res.wta.basic.3.sf)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.oaf.1),sum(res.wta.oaf.3)),
+          c(length(res.wta.oaf.1),length(res.wta.oaf.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.oaf.1.sf),sum(res.wta.oaf.3.sf)),
+          c(length(res.wta.oaf.1.sf),length(res.wta.oaf.3.sf)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.co.1),sum(res.wta.co.3)),
+          c(length(res.wta.co.1),length(res.wta.co.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.co.1.sf),sum(res.wta.co.3.sf)),
+          c(length(res.wta.co.1.sf),length(res.wta.co.3.sf)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.co2.1),sum(res.wta.co2.3)),
+          c(length(res.wta.co2.1),length(res.wta.co2.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.co2.1.sf),sum(res.wta.co2.3.sf)),
+          c(length(res.wta.co2.1.sf),length(res.wta.co2.3.sf)),
+          alternative="less",correct=FALSE)$p.value
+```
+
+2014: 12/16 decreases, none under 0.1
+2018: 15/16 decreases, 4 under 0.1, 1 under 0.05
+2022: 8/16 decreases, 1 under 0.1
+
+### Surface Filtering
+
+```{r}
+prop.test(c(sum(res.atp.basic.1.sf),sum(res.atp.basic.1)),
+          c(length(res.atp.basic.1.sf),length(res.atp.basic.1)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.atp.basic.3.sf),sum(res.atp.basic.3)),
+          c(length(res.atp.basic.3.sf),length(res.atp.basic.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.atp.oaf.1.sf),sum(res.atp.oaf.1)),
+          c(length(res.atp.oaf.1.sf),length(res.atp.oaf.1)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.atp.oaf.3.sf),sum(res.atp.oaf.3)),
+          c(length(res.atp.oaf.3.sf),length(res.atp.oaf.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.atp.co.1.sf),sum(res.atp.co.1)),
+          c(length(res.atp.co.1.sf),length(res.atp.co.1)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.atp.co.3.sf),sum(res.atp.co.3)),
+          c(length(res.atp.co.3.sf),length(res.atp.co.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.atp.co2.1.sf),sum(res.atp.co2.1)),
+          c(length(res.atp.co2.1.sf),length(res.atp.co2.1)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.atp.co2.3.sf),sum(res.atp.co2.3)),
+          c(length(res.atp.co2.3.sf),length(res.atp.co2.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.basic.1.sf),sum(res.wta.basic.1)),
+          c(length(res.wta.basic.1.sf),length(res.wta.basic.1)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.basic.3.sf),sum(res.wta.basic.3)),
+          c(length(res.wta.basic.3.sf),length(res.wta.basic.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.oaf.1.sf),sum(res.wta.oaf.1)),
+          c(length(res.wta.oaf.1.sf),length(res.wta.oaf.1)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.oaf.3.sf),sum(res.wta.oaf.3)),
+          c(length(res.wta.oaf.3.sf),length(res.wta.oaf.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.co.1.sf),sum(res.wta.co.1)),
+          c(length(res.wta.co.1.sf),length(res.wta.co.1)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.co.3.sf),sum(res.wta.co.3)),
+          c(length(res.wta.co.3.sf),length(res.wta.co.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.co2.1.sf),sum(res.wta.co2.1)),
+          c(length(res.wta.co2.1.sf),length(res.wta.co2.1)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.co2.3.sf),sum(res.wta.co2.3)),
+          c(length(res.wta.co2.3.sf),length(res.wta.co2.3)),
+          alternative="less",correct=FALSE)$p.value
+```
+
+2014: 12/16 decreases, 1 significant under alpha 0.01, 2 under 0.05, 3 under 0.1
+2018: 13/16 decreases, 1 under 0.01, 2 under 0.1
+2022: 14/16 decreases, 4 under 0.1, 2 under 0.05
+
+### CO Variations
+
+```{r}
+prop.test(c(sum(res.atp.co.1.sf),sum(res.atp.co.1)),
+          c(length(res.atp.co.1.sf),length(res.atp.co.1)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.atp.co2.1),sum(res.atp.co.1)),
+          c(length(res.atp.co2.1),length(res.atp.co.1)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.atp.co2.1.sf),sum(res.atp.co.1)),
+          c(length(res.atp.co2.1.sf),length(res.atp.co.1)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.atp.co.3.sf),sum(res.atp.co.3)),
+          c(length(res.atp.co.3.sf),length(res.atp.co.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.atp.co2.3),sum(res.atp.co.3)),
+          c(length(res.atp.co2.3),length(res.atp.co.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.atp.co2.3.sf),sum(res.atp.co.3)),
+          c(length(res.atp.co2.3.sf),length(res.atp.co.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.co.1.sf),sum(res.wta.co.1)),
+          c(length(res.wta.co.1.sf),length(res.wta.co.1)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.co2.1),sum(res.wta.co.1)),
+          c(length(res.wta.co2.1),length(res.wta.co.1)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.co2.1.sf),sum(res.wta.co.1)),
+          c(length(res.wta.co2.1.sf),length(res.wta.co.1)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.co.3.sf),sum(res.wta.co.3)),
+          c(length(res.wta.co.3.sf),length(res.wta.co.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.co2.3),sum(res.wta.co.3)),
+          c(length(res.wta.co2.3),length(res.wta.co.3)),
+          alternative="less",correct=FALSE)$p.value
+prop.test(c(sum(res.wta.co2.3.sf),sum(res.wta.co.3)),
+          c(length(res.wta.co2.3.sf),length(res.wta.co.3)),
+          alternative="less",correct=FALSE)$p.value
+```
+
+2014: 6/12 better
+2018: 9/12 better, 3 significant with p under 0.1
+2022: 11/12 better, 3 under 0.1, 2 under 0.05
 
