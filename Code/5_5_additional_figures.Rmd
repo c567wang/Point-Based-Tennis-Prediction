@@ -132,48 +132,51 @@ gg
 ggsave('figures/fig2.jpg', gg, dpi=300)
 ```
 
-## Figure 3A - Consensus Coverage vs. Accuracy & Significance
+## Figure 3 - Consensus Coverage vs. Accuracy & Significance
 
 ```{r}
-dat.3a <- read.csv("../New Data/misc/ens_consensus_aggregate.csv")
-cov.3a <- as.numeric(sub("%","",dat.3a$Coverage))
+consensus <- read.csv("../New Data/misc/ens_consensus_aggregate.csv")
+consensus.coverage <- as.numeric(sub("%","",consensus$Coverage))
+fit.3a <- lm(consensus$Mean.Accuracy~consensus.coverage)
+fib.3b <- lm(consensus$Mean.Significance~consensus.coverage)
+majority <- read.csv("../New Data/misc/ens_majority_aggregate.csv")
+majority.coverage <- as.numeric(sub("%","",majority$Coverage))
+fit.3c <- lm(majority$Mean.Accuracy~majority.coverage)
+fib.3d <- lm(majority$Mean.Significance~majority.coverage)
 ```
-
 ```{r}
-fit.3a.acc <- lm(dat.3a$Mean.Accuracy~cov.3a)
+# library(ggplot2)
+data.ab <- data.frame(x=consensus.coverage,
+                      y=consensus$Mean.Accuracy,
+                      z=consensus$Mean.Significance)
+gga <- ggplot(data=data.ab,aes(x,y))+
+  geom_smooth(method='lm',formula=y~x,color="red")+
+  geom_point()+xlab("Coverage (%)")+ylab("Accuracy (%)")+
+  ggtitle("(a)")+
+  theme(plot.title = element_text(hjust = 0.5))
+ggb <- ggplot(data=data.ab,aes(x,z))+
+  geom_smooth(method='lm',formula=y~x,color="red")+
+  geom_point()+xlab("Coverage (%)")+ylab("Significance")+
+  ggtitle("(b)")+
+  theme(plot.title = element_text(hjust = 0.5))
+data.cd <- data.frame(x=majority.coverage,
+                      y=majority$Mean.Accuracy,
+                      z=majority$Mean.Significance)
+ggc <- ggplot(data=data.cd,aes(x,y))+
+  geom_smooth(method='lm',formula=y~x,color="red")+
+  geom_point()+xlab("Coverage (%)")+ylab("Accuracy (%)")+
+  ggtitle("(c)")+
+  theme(plot.title = element_text(hjust = 0.5))
+ggd <- ggplot(data=data.cd,aes(x,z))+
+  geom_smooth(method='lm',formula=y~x,color="red")+
+  geom_point()+xlab("Coverage (%)")+ylab("Significance")+
+  ggtitle("(d)")+
+  theme(plot.title = element_text(hjust = 0.5))
+# library(patchwork)
+gg3 <- gga+ggb+ggc+ggd
+gg3
 ```
-
 ```{r}
-plot(cov.3a,dat.3a$Mean.Accuracy)
+ggsave('figures/figure3.jpg', gg3, dpi=300)
 ```
 
-```{r}
-fit.3a.sig <- lm(dat.3a$Mean.Significance~cov.3a)
-```
-
-```{r}
-plot(cov.3a,dat.3a$Mean.Significance)
-```
-
-## Figure 3B - Majority Coverage vs. Accuracy & Significance
-
-```{r}
-dat.3b <- read.csv("../New Data/misc/ens_majority_aggregate.csv")
-cov.3b <- as.numeric(sub("%","",dat.3b$Coverage))
-```
-
-```{r}
-fit.3b.acc <- lm(dat.3b$Mean.Accuracy~cov.3b)
-```
-
-```{r}
-plot(cov.3b,dat.3b$Mean.Accuracy)
-```
-
-```{r}
-fit.3b.sig <- lm(dat.3b$Mean.Significance~cov.3b)
-```
-
-```{r}
-plot(cov.3b,dat.3b$Mean.Significance)
-```
