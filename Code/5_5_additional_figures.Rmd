@@ -7,6 +7,131 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Figure 2 - Accuracy score plots corresponding to activations and deactivations of states in the point-to-game DTMC.
+
+Want dotted line for the pure basic baselines, significance markings for plateau significance with footnote explaining notation, and the states activated/deactivated marked near the points as well.
+
+```{r data}
+u5.atp14 <- readRDS("plateaus/u5_atp_2014.rds")
+d5.atp14 <- readRDS("plateaus/d5_atp_2014.rds")
+u5.wta14 <- readRDS("plateaus/u5_wta_2014.rds")
+d5.wta14 <- readRDS("plateaus/d5_wta_2014.rds")
+u5.atp18 <- readRDS("plateaus/u5_atp_2018.rds")
+d5.atp18 <- readRDS("plateaus/d5_atp_2018.rds")
+u5.wta18 <- readRDS("plateaus/u5_wta_2018.rds")
+d5.wta18 <- readRDS("plateaus/d5_wta_2018.rds")
+u5.atp22 <- readRDS("plateaus/u5_atp_2022.rds")
+d5.atp22 <- readRDS("plateaus/d5_atp_2022.rds")
+u5.wta22 <- readRDS("plateaus/u5_wta_2022.rds")
+d5.wta22 <- readRDS("plateaus/d5_wta_2022.rds")
+
+# the all/none activated scores are manually inputted here so the 
+# big point-specific machinery doesn't need to be all moved here
+
+# ATP 2013
+# A: 1, D: 2
+# A: 0.5619403, D: 0.5522388
+
+# WTA 2013
+# A: 1, D: 7
+# A: 0.6468144, D: 0.6371191
+
+# ATP 2017
+# A: 12, D: 11
+# A: 0.5458045, D: 0.6428022
+
+# WTA 2017
+# A: 9, D: 16
+# A: 0.5730909, D: 0.5687273
+
+# ATP 2021
+# A: 2, D: 12
+# A: 0.5797872, D: 0.5797872
+
+# WTA 2021
+# A: 9, D: 16
+# A: 0.6037609, D: 0.5990598
+```
+
+```{r plotting}
+get.gg.score <- function(u.res,d.res,u.base,d.base,ylim.lower=0.6,ylim.upper=0.7){
+  n.paths <- length(u.res)+length(d.res)
+  u.depth <- length(u.res[[1]][[1]])
+  d.depth <- length(d.res[[1]][[1]])
+  df <- matrix(0,nrow=length(d.res)*d.depth+length(u.res)*u.depth+2,ncol=3)
+  row.ptr <- 3
+  # # states activated \ Path ID \ Score
+  df[1,] <- c(0,1,u.base)
+  df[2,] <- c(20,n.paths,d.base)
+  for (i in 1:length(u.res)){
+    for (j in 1:u.depth){
+      df[row.ptr,] <- c(j,i,u.res[[i]][[1]][j])
+      row.ptr <- row.ptr + 1
+    }
+  }
+  for (i in 1:length(d.res)){
+    for (j in 1:d.depth){
+      df[row.ptr,] <- c(20-j,i+length(u.res),d.res[[i]][[1]][j])
+      row.ptr <- row.ptr + 1
+    }
+  }
+  df <- data.frame(df)
+  gg <- ggplot(data=df,aes(x=X1,y=X3,group=X2)) +
+    geom_line() +
+    xlab("Number of States Activated") +
+    ylab("Score") +
+    ylim(ylim.lower,ylim.upper)
+    # scale_y_continuous(
+    #   breaks = round(seq(min(df$X3),max(df$X3),length.out=3),2)-c(0,0,0.01))
+}
+```
+
+```{r}
+# library(ggplot2)
+gg.a13 <- get.gg.score(u5.atp14,d5.atp14,0.5619403,0.5522388,ylim.lower=0.55)+
+  annotate("text",x=2,y=0.68,label="*** (State 1)",hjust=0)+
+  annotate("text",x=18,y=0.65,label="*** (State 2)",hjust=1)+
+  theme(axis.title.x=element_blank())+ggtitle("ATP 2013")+
+  theme(plot.title = element_text(hjust = 0.5))
+  # geom_hline(yintercept=0.5902256, linetype='dashed', col = 'red')
+gg.w13 <- get.gg.score(u5.wta14,d5.wta14,0.6468144,0.6371191,
+                       ylim.lower=0.62,ylim.upper=0.67)+
+  annotate("text",x=0.5,y=0.66,label="(State 1)",hjust=0)+
+  annotate("text",x=20,y=0.635,label="(State 7)",hjust=1)+
+  ggtitle("WTA 2013")+
+  theme(plot.title = element_text(hjust = 0.5))
+gg.a17 <- get.gg.score(u5.atp18,d5.atp18,0.5458045,0.6428022,ylim.lower=0.53)+
+  annotate("text",x=1,y=0.675,label="*** (State 12)",hjust=0)+
+  annotate("text",x=20,y=0.63,label="(State 11)",hjust=1)+
+  theme(axis.title.x=element_blank(),axis.title.y=element_blank())+ggtitle("ATP 2017")+
+  theme(plot.title = element_text(hjust = 0.5))
+gg.w17 <- get.gg.score(u5.wta18,d5.wta18,0.5730909,0.5687273,
+                       ylim.lower=0.565,ylim.upper=0.61)+
+  annotate("text",x=1,y=0.585,label="(State 9)",hjust=0)+
+  annotate("text",x=18.9,y=0.605,label="(State 16)",hjust=1)+
+  theme(axis.title.y=element_blank())+ggtitle("WTA 2017")+
+  theme(plot.title = element_text(hjust = 0.5))
+gg.a21 <- get.gg.score(u5.atp22,d5.atp22,0.5797872,0.5797872,
+                       ylim.lower=0.579,ylim.upper=0.65)+
+  annotate("text",x=1,y=0.645,label="** (State 2)",hjust=0)+
+  annotate("text",x=20,y=0.635,label="** (State 12)",hjust=1)+
+  theme(axis.title.x=element_blank(),axis.title.y=element_blank())+ggtitle("ATP 2021")+
+  theme(plot.title = element_text(hjust = 0.5))
+gg.w21 <- get.gg.score(u5.wta22,d5.wta22,0.6037609,0.5990598,
+                       ylim.lower=0.595,ylim.upper=0.635)+
+  annotate("text",x=0,y=0.63,label="(State 9)",hjust=0)+
+  annotate("text",x=20,y=0.625,label="(State 16)",hjust=1)+
+  theme(axis.title.y=element_blank())+ggtitle("WTA 2021")+
+  theme(plot.title = element_text(hjust = 0.5))
+# library(patchwork)
+gg <- gg.a13 + gg.a17 + gg.a21 + gg.w13 + gg.w17 + gg.w21
+gg
+```
+
+```{r}
+ggsave('figures/fig2.jpg', gg, dpi=300)
+```
+
 ## Figure 3A - Consensus Coverage vs. Accuracy & Significance
 
 ```{r}
