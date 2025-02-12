@@ -150,12 +150,12 @@ data.ab <- data.frame(x=consensus.coverage,
                       y=consensus$Mean.Accuracy,
                       z=consensus$Mean.Significance)
 gga <- ggplot(data=data.ab,aes(x,y))+
-  geom_smooth(method='lm',formula=y~x,color="red")+
+  geom_smooth(method='lm',formula=y~x,color="black")+
   geom_point()+xlab("Coverage (%)")+ylab("Accuracy (%)")+
   ggtitle("(a)")+
   theme(plot.title = element_text(hjust = 0.5))
 ggb <- ggplot(data=data.ab,aes(x,z))+
-  geom_smooth(method='lm',formula=y~x,color="red")+
+  geom_smooth(method='lm',formula=y~x,color="black")+
   geom_point()+xlab("Coverage (%)")+ylab("Significance")+
   ggtitle("(b)")+
   theme(plot.title = element_text(hjust = 0.5))
@@ -163,12 +163,12 @@ data.cd <- data.frame(x=majority.coverage,
                       y=majority$Mean.Accuracy,
                       z=majority$Mean.Significance)
 ggc <- ggplot(data=data.cd,aes(x,y))+
-  geom_smooth(method='lm',formula=y~x,color="red")+
+  geom_smooth(method='lm',formula=y~x,color="black")+
   geom_point()+xlab("Coverage (%)")+ylab("Accuracy (%)")+
   ggtitle("(c)")+
   theme(plot.title = element_text(hjust = 0.5))
 ggd <- ggplot(data=data.cd,aes(x,z))+
-  geom_smooth(method='lm',formula=y~x,color="red")+
+  geom_smooth(method='lm',formula=y~x,color="black")+
   geom_point()+xlab("Coverage (%)")+ylab("Significance")+
   ggtitle("(d)")+
   theme(plot.title = element_text(hjust = 0.5))
