@@ -7,6 +7,10 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Initial Pass
+
+First, check for correlation of individual methods.
+
 ```{r}
 # manual accuracy and duration rmse scores from results spreadsheet
 accuracy <- c(0.59023,0.63835,0.63415,0.64340, # atp 14
@@ -26,10 +30,104 @@ cor.test(accuracy,rmse,method="pearson")
 cor.test(accuracy,rmse,method="kendall")
 cor.test(accuracy,rmse,method="spearman")
 ```
-We prioritize Kendall'a tau for this data, but in any case none are signficant.
+We prioritize Kendall's tau for this data, but in any case none are signficant.
 
 ```{r}
 cor.test(accuracy,rmse,alternative="less",method="kendall")
 ```
 
 Despite some overall similarities, most notably OAF performing best overall, there is no significant negative correlation between the two sets of results.
+
+Next, correlation of mean duration with outcome prediction ensembling counterparts.
+
+```{r}
+ens_corr <- read.csv("../New Data/misc/ensemble_corr.csv",)
+mean.duration <- c(ens_corr$D.ATP14,ens_corr$D.WTA18,ens_corr$D.ATP18,
+                   ens_corr$D.WTA22,ens_corr$D.ATP22)
+consensus <- c(ens_corr$C.ATP14,ens_corr$C.WTA18,ens_corr$C.ATP18,
+               ens_corr$C.WTA22,ens_corr$C.ATP22)
+```
+```{r}
+cor.test(mean.duration,consensus,method="kendall")
+cor.test(mean.duration,consensus,alternative="less",method="kendall")
+```
+Extremely significant negative Kendall's tau between consensus ensembles and mean durations.
+
+If we were to plot the two, we find the negative correlation is much clearer if not for WTA 2022 which has much lower RMSE than other data sets, and also much lower accuracy. However, within just WTA 2022 itself, the negative correlation is also clear.
+
+```{r}
+plot(consensus,mean.duration)
+plot(ens_corr$D.WTA22,ens_corr$C.WTA22)
+```
+
+Could this be true for the individual models as well?
+
+```{r}
+cor.test(accuracy[-c(13:16)],rmse[-c(13:16)],alternative="less",method="kendall")
+cor.test(accuracy[c(13:16)],rmse[c(13:16)],alternative="less",method="kendall")
+```
+
+```{r}
+cor.test(accuracy[-c(13:16)],rmse[-c(13:16)],alternative="less",method="pearson")
+cor.test(accuracy[c(13:16)],rmse[c(13:16)],alternative="less",method="pearson")
+```
+
+## Normalized Pass
+
+Indeed! So if we were to normalize all data with respect to their dataset and then calculate correlation (both Kendall and Pearson), we expect heavy correlation.
+
+```{r}
+# normalization
+for (i in 1:5){
+  s <- 4*i-3
+  e <- 4*i
+  accuracy[s:e] <- (accuracy[s:e]-mean(accuracy[s:e]))/sd(accuracy[s:e])
+  rmse[s:e] <- (rmse[s:e]-mean(rmse[s:e]))/sd(rmse[s:e])
+}
+for (i in 2:21){
+  valid.idx <- which(!is.na(ens_corr[,i]))
+  ens_corr[valid.idx,i] <- (ens_corr[valid.idx,i]-mean(ens_corr[valid.idx,i]))/
+    sd(ens_corr[valid.idx,i])
+}
+mean.duration <- c(ens_corr$D.ATP14,ens_corr$D.WTA18,ens_corr$D.ATP18,
+                   ens_corr$D.WTA22,ens_corr$D.ATP22)
+maj.idx <- which(!is.na(ens_corr$M.ATP14))
+ens_corr.inc <- ens_corr[maj.idx,]
+mean.duration.inc <- c(ens_corr.inc$D.ATP14,ens_corr.inc$D.WTA18,
+                       ens_corr.inc$D.ATP18,ens_corr.inc$D.WTA22,
+                       ens_corr.inc$D.ATP22)
+consensus <- c(ens_corr$C.ATP14,ens_corr$C.WTA18,ens_corr$C.ATP18,
+               ens_corr$C.WTA22,ens_corr$C.ATP22)
+majority <- c(ens_corr.inc$M.ATP14,ens_corr.inc$M.WTA18,
+              ens_corr.inc$M.ATP18,ens_corr.inc$M.WTA22,
+              ens_corr.inc$M.ATP22)
+merges <- c(ens_corr$E.ATP14,ens_corr$E.WTA18,ens_corr$E.ATP18,
+           ens_corr$E.WTA22,ens_corr$E.ATP22)
+```
+
+### Individual Models
+
+```{r}
+cor.test(accuracy,rmse,alternative="less",method="pearson")
+cor.test(accuracy,rmse,alternative="less",method="kendall")
+```
+### Mean Duration and Consensus Ensembles
+
+```{r}
+cor.test(mean.duration,consensus,alternative="less",method="pearson")
+cor.test(mean.duration,consensus,alternative="less",method="kendall")
+```
+
+### Mean Duration and Majority Ensembles
+
+```{r}
+cor.test(mean.duration.inc,majority,alternative="less",method="pearson")
+cor.test(mean.duration.inc,majority,alternative="less",method="kendall")
+```
+
+### Mean Duration and Merges Ensembles
+
+```{r}
+cor.test(mean.duration,merges,alternative="less",method="pearson")
+cor.test(mean.duration,merges,alternative="less",method="kendall")
+```
