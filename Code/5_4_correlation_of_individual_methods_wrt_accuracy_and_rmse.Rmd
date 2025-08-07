@@ -13,16 +13,16 @@ First, check for correlation of individual methods.
 
 ```{r}
 # manual accuracy and duration rmse scores from results spreadsheet
-accuracy <- c(0.59023,0.63835,0.63415,0.64340, # atp 14
-              0.60124,0.63006,0.58138,0.59070, # wta 18
-              0.61733,0.63957,0.63395,0.64122, # atp 18
-              0.60175,0.63166,0.59055,0.52372, # wta 22
-              0.60820,0.65164,0.61471,0.61674) # atp 22
-rmse <- c(42.83261,40.92694,42.1763,40.73772,  # atp 14
-          49.37423,49.09437,50.28881,64.90247, # wta 18
-          43.18453,42.71323,43.56084,46.78802, # atp 18
-          33.01183,33.07469,32.77271,34.18973, # wta 22
-          45.13423,44.65613,44.83542,46.22931) # atp 22
+accuracy <- c(0.59023,0.63835,0.63415,0.64340,0.5699248, # atp 14
+              0.60124,0.63006,0.58138,0.59070,0.5827042, # wta 18
+              0.61733,0.63957,0.63395,0.64122,0.5789877, # atp 18
+              0.60175,0.63166,0.59055,0.52372,0.5776805, # wta 22
+              0.60820,0.65164,0.61471,0.61674,0.554918) # atp 22
+rmse <- c(42.83261,40.92694,42.1763,40.73772,40.95182,  # atp 14
+          49.37423,49.09437,50.28881,64.90247,49.14777, # wta 18
+          43.18453,42.71323,43.56084,46.78802,42.50824, # atp 18
+          33.01183,33.07469,32.77271,34.18973,33.0457, # wta 22
+          45.13423,44.65613,44.83542,46.22931,44.37147) # atp 22
 ```
 
 ```{r}
@@ -63,13 +63,13 @@ plot(ens_corr$D.WTA22,ens_corr$C.WTA22)
 Could this be true for the individual models as well?
 
 ```{r}
-cor.test(accuracy[-c(13:16)],rmse[-c(13:16)],alternative="less",method="kendall")
-cor.test(accuracy[c(13:16)],rmse[c(13:16)],alternative="less",method="kendall")
+cor.test(accuracy[-c(16:20)],rmse[-c(16:20)],alternative="less",method="kendall")
+cor.test(accuracy[c(16:20)],rmse[c(16:20)],alternative="less",method="kendall")
 ```
 
 ```{r}
-cor.test(accuracy[-c(13:16)],rmse[-c(13:16)],alternative="less",method="pearson")
-cor.test(accuracy[c(13:16)],rmse[c(13:16)],alternative="less",method="pearson")
+cor.test(accuracy[-c(16:20)],rmse[-c(16:20)],alternative="less",method="pearson")
+cor.test(accuracy[c(16:20)],rmse[c(16:20)],alternative="less",method="pearson")
 ```
 
 ## Normalized Pass
@@ -79,8 +79,8 @@ Indeed! So if we were to normalize all data with respect to their dataset and th
 ```{r}
 # normalization
 for (i in 1:5){
-  s <- 4*i-3
-  e <- 4*i
+  s <- 5*i-3
+  e <- 5*i
   accuracy[s:e] <- (accuracy[s:e]-mean(accuracy[s:e]))/sd(accuracy[s:e])
   rmse[s:e] <- (rmse[s:e]-mean(rmse[s:e]))/sd(rmse[s:e])
 }
@@ -111,6 +111,47 @@ merges <- c(ens_corr$E.ATP14,ens_corr$E.WTA18,ens_corr$E.ATP18,
 cor.test(accuracy,rmse,alternative="less",method="pearson")
 cor.test(accuracy,rmse,alternative="less",method="kendall")
 ```
+
+Now just Basic.
+
+```{r}
+idx <- c(1,6,11,16,21)
+cor.test(accuracy[idx],rmse[idx],alternative="less",method="pearson")
+cor.test(accuracy[idx],rmse[idx],alternative="less",method="kendall")
+```
+
+OAF.
+
+```{r}
+idx <- idx+1
+cor.test(accuracy[idx],rmse[idx],alternative="less",method="pearson")
+cor.test(accuracy[idx],rmse[idx],alternative="less",method="kendall")
+```
+
+CO.
+
+```{r}
+idx <- idx+1
+cor.test(accuracy[idx],rmse[idx],alternative="less",method="pearson")
+cor.test(accuracy[idx],rmse[idx],alternative="less",method="kendall")
+```
+
+H2H.
+
+```{r}
+idx <- idx+1
+cor.test(accuracy[idx],rmse[idx],alternative="less",method="pearson")
+cor.test(accuracy[idx],rmse[idx],alternative="less",method="kendall")
+```
+
+PSD.
+
+```{r}
+idx <- idx+1
+cor.test(accuracy[idx],rmse[idx],alternative="less",method="pearson")
+cor.test(accuracy[idx],rmse[idx],alternative="less",method="kendall")
+```
+
 ### Mean Duration and Consensus Ensembles
 
 ```{r}
